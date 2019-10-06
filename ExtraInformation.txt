@@ -1,6 +1,0 @@
-If not valid, what is the new/Extra information from Marketing/Product Owner?
-
-●	Is the light saber multiple light output or single output? (refer to Darth Maul’s saber and common light saber for example)
-●	Does the light saber have a constant power consumption for all materials or the required power increases depending on the object to cut? So does for power consumption when stand by, does it require the same amount of energy when the saber cuts as when it is only turn on? 
-●	What are the average temperature values of the crystal when the saber is used?
-●	How many crystals do the light saber has?
