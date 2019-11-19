@@ -5,7 +5,7 @@
 #define _XTAL_FREQ  4000000 //Frecuencia de 4MHz  
 
 void UARTconfi (void); 
-uint8_t UARTRead(void);
+uint8_t UARTRead(void);     //hola
 void UARTWrite(uint8_t txData);
 void BITSCONFI(uint8_t X);
 
@@ -40,11 +40,11 @@ void UARTconfi (void) {
     
     TXSTAbits.TX9 = 0; // Transmision de 8 bits
     RCSTAbits.RX9 = 0; //Recepcion a 8 bits 
-    TXSTAbits.TXEN = 1; //  Habilita Transmisión.
-    TXSTAbits.SYNC = 0; //  Modo-Asíncrono	Full Duplex
+    TXSTAbits.TXEN = 1; //  Habilita Transmisiï¿½n.
+    TXSTAbits.SYNC = 0; //  Modo-Asï¿½ncrono	Full Duplex
     TXSTAbits.BRGH = 1; //  Modo-Baja Velocidad de Baudios.
     BAUDCONbits.BRG16 = 1; //  Baudios modo-16bits.
-    RCSTAbits.SPEN = 1; //  Hbilita el Módulo SSP como UART.
+    RCSTAbits.SPEN = 1; //  Hbilita el Mï¿½dulo SSP como UART.
     RCSTAbits.CREN = 1; //Habilita recibir
     //  Escribe el valor necesario para configurar los Baudios a 9600.
     SPBRGH1:SPBRG1 = 103;
@@ -52,8 +52,8 @@ void UARTconfi (void) {
 
 void UARTWrite(uint8_t txData) {
     while (!TXSTAbits.TRMT) {
-    } //  espera a que el registro de transmisión este disponible o vacio.            
-    TXREG = txData;//  escribe el dato que se enviará a través de TX.
+    } //  espera a que el registro de transmisiï¿½n este disponible o vacio.            
+    TXREG = txData;//  escribe el dato que se enviarï¿½ a travï¿½s de TX.
 }
 
 uint8_t UARTRead(void) {
