@@ -10,16 +10,7 @@
 #include "EEPROM.h"
 #include "ConfigurationEEPROM.h"
 
-
-#define _XTAL_FREQ 20000000L
-
-/*void main(void) {
-    Write_EEPROM('H', 1);
-    Read_EEPROM(1);
-    return;
-}*/
-
-void main(void) {
+void main(){
     return;
 }
 
