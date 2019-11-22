@@ -42,4 +42,3 @@ coordinates(){
    printf("\nCoordenada en y= %d", y);
 
 }
-
