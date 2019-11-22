@@ -12,14 +12,25 @@ void main(void) {
     return;
 }
 
-int Read_EEPROM(int x_coordinate){
-    EEADR = x_coordinate;
-    EECON1bits.EEPGD = 0;
+int Read_EEPROM(int AddressToRead){
+    EEADR = AddressToRead;               //read from what address
+    EECON1bits.EEPGD = 0;               //Determines if the access will be to program or data memory
+    EECON1bits.RD = 1;     
     EECON1bits.CFGS = 0;
-    EECON1bits.RD = 1;
     
-    //BCF EECON1, EEPGD ; Point to DATA memory
-    //BCF EECON1, CFGS ; Access EEPROM
-    //BSF EECON1, RD ; EEPROM Read
-    //MOVF EEDATA, W ; W = EEDATA
+    return;
 }
+
+
+int Write_EEPROM(char ContentToWrite, int AddressToWrite){
+    EEADR = AddressToWrite;                 //
+    EEDATA = ContentToWrite;
+    EECON1bits.EEPGD = 0;                   // EEPGD = 0, access data EEPROM memory
+    EECON1bits.CFGS = 0;                    //Access Flash program or data memory EEPROM
+    EECON1bits.WREN = 1;                    //WREN = 1, Allows write cycles to data EEPROM
+    EECON2 = 0x55;
+    NOP();
+    EECON2 = 0xAA;
+    EECON1bits.WR = 1;
+    
+}  
