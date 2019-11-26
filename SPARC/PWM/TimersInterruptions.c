@@ -15,45 +15,16 @@
 # include <time.h>
 # include <pic18f4550.h>
 
-void myHighPriorityInterruptCode(void);
+#define _XTAL_FREQ 4000000
 
-__interrupt(high_priority)void high_isr(void){
-     myHighPriorityInterruptCode();
-   
-}
-// High Priority ISR declaration.
-
-
-void MoveX(void);
-void MoveY(void);
-
-void myHighPriorityInterruptCode (void){
-    if (INTCONbits.TMR0IF==1) // If timer0 flag is 1 interruption occurs
-    {
-        INTCONbits.TMR0IF=0;
-        MoveX();
-        TMR0L=30;
-    }
-    if (PIR1bits.TMR1IF==1) // If timer1 flag is 1 interruption occurs
-    {
-        PIR1bits.TMR1IF=0;
-        MoveY();
-    }
-}
-//=================================================
-# define NumPasos 5
-# define adelante 1
-# define atras 0
-
-//=================================================
 // DECLARACION DE VARIABLES
 // Coordenadas anteriores
 
     unsigned int CoordAntX=0;
     unsigned int CoordAntY=0;
     // Coordenadas absolutas dadas por el usuario
-    unsigned int CoordNewY;
-    unsigned int CoordNewX;
+    unsigned int CoordNewY=100;
+    unsigned int CoordNewX=60;
     // Coordenadas relativas
     int CoordRelatX;
     int CoordRelatY;
@@ -64,11 +35,52 @@ void myHighPriorityInterruptCode (void){
     unsigned int dirA;
     unsigned int dirB;
 // Pasos de motores
-    unsigned int pasosA;
-    unsigned int pasosB;
-    // LEDs de prueba pulsos
-    unsigned int LedIsOn2;
-    unsigned int LedIsOn1;
+    volatile unsigned int pasosA;
+    volatile unsigned int pasosB;
+        
+// Pasos actuales de motores
+    unsigned int PasosActualesA;
+    unsigned int PasosActualesB;
+//    // LEDs de prueba pulsos
+   unsigned int LedIsOn2;
+   unsigned int LedIsOn1;
+
+void myHighPriorityInterruptCode(void);
+
+__interrupt(high_priority)void high_isr(void){
+     myHighPriorityInterruptCode();
+   
+}
+// High Priority ISR declaration.
+
+
+void MoveA(void);
+void MoveB(volatile unsigned int pasosB);
+
+void myHighPriorityInterruptCode (void){
+    if (INTCONbits.TMR0IF==1) // If timer0 flag is 1 interruption occurs
+    {
+	INTCONbits.TMR0IF=0;
+        MoveA();
+        TMR0L=30; 
+        
+    }
+    if (PIR1bits.TMR1IF==1) // If timer1 flag is 1 interruption occurs
+    {
+        MoveB(pasosB);
+        PIR1bits.TMR1IF=0;
+    }
+}
+//=================================================
+# define NumPasos 5
+# define adelante 1
+# define atras 0
+# define HIGH 1
+# define LOW 0
+# define pulsosA PORTCbits.RC0
+# define pulsosB PORTCbits.RC1
+//=================================================
+
 
 void main(void){
     
@@ -110,6 +122,7 @@ void main(void){
     //Configuramos Timer1
     // El timer 1 tiene un frecuencia de 15.26 Hz
     //Por lo tanto, activa la interrupciÃ³n cada 0.0655s
+    
     PIE1bits.TMR1IE=1;                  // enable timer1 overflow interrupt
     IPR1bits.TMR1IP=1;                  // priority set to high
     
@@ -118,14 +131,20 @@ void main(void){
     
     T1CONbits.T1OSCEN=0;                // turn off separate oscillator that is internal to timer 1
     T1CONbits.TMR1CS=0;                 // use internal clock to increment timer 1
-                                        // end of configuration timer 1
-   //Solo voy a activar timer cuando ya tenga las coordenadas listas y la direccion del motor establecidas
-   // Inicializo la suma en 0 y dentro de movex le pongo un if si ya llego a la cuenta , voy actualizando la posicion y cuando ya llegue, apago el if y el on
-   //Prendo timers 
-   //================================
+					// end of configuration timer 1
     T0CONbits.TMR0ON=1; 
     T1CONbits.TMR1ON=1;
-    
+					
+   //////////////////////////////////////////////////////////////////////////////////////////////////////// 
+   
+    while(1){  
+       
+       
+    //Apagamos enable de la interrupción
+     PORTCbits.RC4=0; 
+       
+    INTCONbits.TMR0IE=0;                // disable interrupt
+    PIE1bits.TMR1IE=0;                  // disable timer1 overflow interrupt 
     //===============================================
     CoordRelatX=CoordNewX-CoordAntX;
     CoordRelatY=CoordNewY-CoordAntY;
@@ -152,29 +171,29 @@ void main(void){
     //Con 5 pasos recorre 1mm (distancia*5)
     pasosA= (MovMotorA*NumPasos);
     pasosB= (MovMotorB*NumPasos);
-     
-      while(1){
-        
-    }
     
+    __delay_ms(1000);
+    PORTCbits.RC4=1;
+           
+   ///Encendemos enable de la interrupción
+   //================================
+    INTCONbits.TMR0IE=1;                // enable interrupt
+    PIE1bits.TMR1IE=1;                  // enable timer1 overflow interrupt
+    __delay_ms(3000);
+       
+    } 
 }
-void MoveX(void){
-   if(LedIsOn1==0) {
-       PORTCbits.RC1=1;
-       LedIsOn1=1;
-   }
-   else if(LedIsOn1==1){
-        PORTCbits.RC1=0;
-       LedIsOn1=0;
-   }
+void MoveA(void){
+       if(LedIsOn1==0) { 
+       PORTCbits.RC1=dirB; 
+       LedIsOn1=dirB; 
+       } 
+   else if(LedIsOn1==1){ 
+        PORTCbits.RC1=dirA; 
+       LedIsOn1=dirA; 
+       } 
+    return;
 }
-void MoveY(void){
-       if(LedIsOn2==0) {
-       PORTCbits.RC0=1;
-       LedIsOn2=1;
-   }
-   else if(LedIsOn2==1){
-        PORTCbits.RC0=0;
-       LedIsOn2=0;
-   }
+void MoveB(volatile unsigned int pasosB){
+    
 }
