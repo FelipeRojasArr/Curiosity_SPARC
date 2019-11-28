@@ -18,16 +18,11 @@
 // 0000 0111 1101 00
 //CCPR1L= 0x7D hex
 
+/*Valores de configuracion PWM*/
 #define PR2VALUE 0xF9 /*PR2 VALUE*/
 #define CCPRXL 0x7D    /*CCPR1L VALUE*/
 
-int PWMx (int distancia);
-int PWMy (int distancia);
-int ContarPulsos(int pasos);
-
-void OneShot(void);
-void ResetOneShot(void);
-
+/*Valores de salida de PWM*/
 # define NumPasos 5
 # define positivo 1
 # define negativo 0
@@ -35,41 +30,38 @@ void ResetOneShot(void);
 # define LOW 0
 # define INPUT 1
 # define OUTPUT 0
+
+/*PUERTO DE PWM*/
 # define salidaDirA PORTDbits.RD0 /*Salida del dirA*/
 # define salidaDirB PORTDbits.RD1 /*Salida del dirB*/
 
 # define pulsosA PORTCbits.RC1 /*Salida del PWM1*/
 # define pulsosB PORTCbits.RC2 /*Salida del PWM2*/
+
 # define enableA PORTCbits.RC6 /*Enable del PWM1*/
-# define enableB PORTCbits.RC7 /*Enablr del PWM2*/
-# define bit PORTCbits.RC0 /*bit de prueba*/
+# define enableB PORTCbits.RC7 /*Enable del PWM2*/
 
-// DECLARACION DE VARIABLES
-// Coordenadas anteriores
+/*FUNCIONES PWM*/
+void PWM(void)
+int PWMx (int distancia);
+int PWMy (int distancia);
+int ContarPulsos(int pasos);
+void OneShot(void);
+void ResetOneShot(void);
 
+/* DECLARACION DE VARIABLES */
+
+    /*Coordenadas anteriores*/
     unsigned int CoordAntX;
     unsigned int CoordAntY;
-    // Coordenadas absolutas dadas por el usuario
-    unsigned int CoordNewY;
-    unsigned int CoordNewX;
-    // Coordenadas relativas
+    
+    /*Coordenadas relativas*/
     int CoordRelatX;
     int CoordRelatY;
-    // Movimiento de motores
-    int MovMotorA;
-    int MovMotorB;
-    // Direccion de motores
-    unsigned int dirA;
-    unsigned int dirB;
-// Pasos de motores
-    unsigned int pasosA;
-    unsigned int pasosB;
-        
-// Pasos actuales de motores
-    unsigned int PasosActualesA;
-    unsigned int PasosActualesB;
-//    // LEDs de prueba pulsos
-   unsigned int LedIsOn2;
-   unsigned int LedIsOn1;
-   unsigned int ons;
- 
+    
+    /*Contador de pasos recorridos*/
+    int pasosRecorridos;
+    
+     /*Pasos actuales*/
+    unsigned int PasosActuales;
+  
