@@ -11,10 +11,6 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\MLS\AppData\Local\Temp\sg4s.o
-idloc IDLOC 0 200000 200000 8 1
-init CODE 0 0 0 4 1
-config CONFIG 0 300000 300000 E 1
 $dist/default/production\PWMAppliedYa.X.production.o
 cinit CODE 0 7E3C 7E3C 12 1
 text0 CODE 0 7F88 7F88 78 1
@@ -26,6 +22,10 @@ text5 CODE 0 7E78 7E78 32 1
 nvCOMRAM COMRAM 1 2A 2A 6 1
 cstackCOMRAM COMRAM 1 21 21 9 1
 bssCOMRAM COMRAM 1 1 1 20 1
+$C:\Users\angie\AppData\Local\Temp\seak.o
+idloc IDLOC 0 200000 200000 8 1
+init CODE 0 0 0 4 1
+config CONFIG 0 300000 300000 E 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -64,83 +64,83 @@ MEDIUMCONST 800-7E3B 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\PWMAppliedYa.X.production.o
-7E78 text5 CODE >148:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7E78 text5 CODE >149:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7E8E text5 CODE >150:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7E9C text5 CODE >152:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7EA0 text5 CODE >153:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7EA8 text5 CODE >155:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7E4E text4 CODE >156:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7E4E text4 CODE >157:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7E60 text4 CODE >158:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7E76 text4 CODE >159:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7F20 text3 CODE >135:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7F20 text3 CODE >136:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7F28 text3 CODE >137:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7F30 text3 CODE >138:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7F32 text3 CODE >139:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7F36 text3 CODE >141:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7F48 text3 CODE >142:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7F5E text3 CODE >139:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7F7C text3 CODE >145:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7F7E text3 CODE >146:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7F86 text3 CODE >147:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7EE0 text2 CODE >108:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7EE0 text2 CODE >109:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7EEE text2 CODE >110:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7EF0 text2 CODE >111:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7EF2 text2 CODE >112:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7EFA text2 CODE >113:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7EFE text2 CODE >114:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7EFE text2 CODE >115:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7F00 text2 CODE >116:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7F02 text2 CODE >118:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7F16 text2 CODE >119:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7F1E text2 CODE >120:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7EAA text1 CODE >68:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7EAA text1 CODE >71:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7EAE text1 CODE >75:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7EB0 text1 CODE >76:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7EB2 text1 CODE >77:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7EB6 text1 CODE >82:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7EB8 text1 CODE >83:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7EBA text1 CODE >85:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7EBE text1 CODE >88:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7EC2 text1 CODE >89:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7EC6 text1 CODE >92:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7ECA text1 CODE >93:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7ECE text1 CODE >96:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7ED2 text1 CODE >97:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7ED6 text1 CODE >98:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7ED8 text1 CODE >103:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7EDA text1 CODE >104:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7EDC text1 CODE >105:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7EDE text1 CODE >106:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7F88 text0 CODE >40:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7F88 text0 CODE >41:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7F8C text0 CODE >42:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7F94 text0 CODE >43:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7F9C text0 CODE >44:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7FA4 text0 CODE >45:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7FAC text0 CODE >48:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7FC0 text0 CODE >52:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7FCC text0 CODE >53:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7FCC text0 CODE >62:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7FE2 text0 CODE >63:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7FFA text0 CODE >64:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7FFC text0 CODE >66:C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
-7E3C cinit CODE >581:C:\Users\MLS\AppData\Local\Temp\sg4s.s
-7E3C cinit CODE >583:C:\Users\MLS\AppData\Local\Temp\sg4s.s
-7E3C cinit CODE >586:C:\Users\MLS\AppData\Local\Temp\sg4s.s
-7E3C cinit CODE >656:C:\Users\MLS\AppData\Local\Temp\sg4s.s
-7E40 cinit CODE >657:C:\Users\MLS\AppData\Local\Temp\sg4s.s
-7E42 cinit CODE >658:C:\Users\MLS\AppData\Local\Temp\sg4s.s
-7E42 cinit CODE >659:C:\Users\MLS\AppData\Local\Temp\sg4s.s
-7E44 cinit CODE >660:C:\Users\MLS\AppData\Local\Temp\sg4s.s
-7E46 cinit CODE >661:C:\Users\MLS\AppData\Local\Temp\sg4s.s
-7E48 cinit CODE >667:C:\Users\MLS\AppData\Local\Temp\sg4s.s
-7E48 cinit CODE >669:C:\Users\MLS\AppData\Local\Temp\sg4s.s
-7E4A cinit CODE >670:C:\Users\MLS\AppData\Local\Temp\sg4s.s
+7E78 text5 CODE >148:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7E78 text5 CODE >149:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7E8E text5 CODE >150:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7E9C text5 CODE >152:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7EA0 text5 CODE >153:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7EA8 text5 CODE >155:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7E4E text4 CODE >156:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7E4E text4 CODE >157:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7E60 text4 CODE >158:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7E76 text4 CODE >159:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7F20 text3 CODE >135:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7F20 text3 CODE >136:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7F28 text3 CODE >137:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7F30 text3 CODE >138:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7F32 text3 CODE >139:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7F36 text3 CODE >141:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7F48 text3 CODE >142:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7F5E text3 CODE >139:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7F7C text3 CODE >145:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7F7E text3 CODE >146:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7F86 text3 CODE >147:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7EE0 text2 CODE >108:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7EE0 text2 CODE >109:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7EEE text2 CODE >110:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7EF0 text2 CODE >111:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7EF2 text2 CODE >112:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7EFA text2 CODE >113:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7EFE text2 CODE >114:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7EFE text2 CODE >115:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7F00 text2 CODE >116:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7F02 text2 CODE >118:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7F16 text2 CODE >119:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7F1E text2 CODE >120:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7EAA text1 CODE >68:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7EAA text1 CODE >71:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7EAE text1 CODE >75:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7EB0 text1 CODE >76:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7EB2 text1 CODE >77:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7EB6 text1 CODE >82:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7EB8 text1 CODE >83:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7EBA text1 CODE >85:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7EBE text1 CODE >88:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7EC2 text1 CODE >89:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7EC6 text1 CODE >92:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7ECA text1 CODE >93:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7ECE text1 CODE >96:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7ED2 text1 CODE >97:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7ED6 text1 CODE >98:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7ED8 text1 CODE >103:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7EDA text1 CODE >104:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7EDC text1 CODE >105:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7EDE text1 CODE >106:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7F88 text0 CODE >40:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7F88 text0 CODE >41:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7F8C text0 CODE >42:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7F94 text0 CODE >43:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7F9C text0 CODE >44:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7FA4 text0 CODE >45:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7FAC text0 CODE >48:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7FC0 text0 CODE >52:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7FCC text0 CODE >53:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7FCC text0 CODE >62:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7FE2 text0 CODE >63:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7FFA text0 CODE >64:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7FFC text0 CODE >66:C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
+7E3C cinit CODE >581:C:\Users\angie\AppData\Local\Temp\seak.s
+7E3C cinit CODE >583:C:\Users\angie\AppData\Local\Temp\seak.s
+7E3C cinit CODE >586:C:\Users\angie\AppData\Local\Temp\seak.s
+7E3C cinit CODE >656:C:\Users\angie\AppData\Local\Temp\seak.s
+7E40 cinit CODE >657:C:\Users\angie\AppData\Local\Temp\seak.s
+7E42 cinit CODE >658:C:\Users\angie\AppData\Local\Temp\seak.s
+7E42 cinit CODE >659:C:\Users\angie\AppData\Local\Temp\seak.s
+7E44 cinit CODE >660:C:\Users\angie\AppData\Local\Temp\seak.s
+7E46 cinit CODE >661:C:\Users\angie\AppData\Local\Temp\seak.s
+7E48 cinit CODE >667:C:\Users\angie\AppData\Local\Temp\seak.s
+7E48 cinit CODE >669:C:\Users\angie\AppData\Local\Temp\seak.s
+7E4A cinit CODE >670:C:\Users\angie\AppData\Local\Temp\seak.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -160,16 +160,16 @@ __Hspace_1 30 0 ABS 0 - dist/default/production\PWMAppliedYa.X.production.o
 __Hspace_2 0 0 ABS 0 - dist/default/production\PWMAppliedYa.X.production.o
 __CFG_IESO$OFF 0 0 ABS 0 - dist/default/production\PWMAppliedYa.X.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\PWMAppliedYa.X.production.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\MLS\AppData\Local\Temp\sg4s.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\angie\AppData\Local\Temp\seak.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\PWMAppliedYa.X.production.o
 __Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\PWMAppliedYa.X.production.o
 _PWMx 7EE0 0 CODE 0 text2 dist/default/production\PWMAppliedYa.X.production.o
 _TMR2 FCC 0 ABS 0 - dist/default/production\PWMAppliedYa.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\MLS\AppData\Local\Temp\sg4s.o
+___sp 0 0 STACK 2 stack C:\Users\angie\AppData\Local\Temp\seak.o
 _dirA 13 0 COMRAM 1 bssCOMRAM dist/default/production\PWMAppliedYa.X.production.o
 _dirB 11 0 COMRAM 1 bssCOMRAM dist/default/production\PWMAppliedYa.X.production.o
 _main 7F88 0 CODE 0 text0 dist/default/production\PWMAppliedYa.X.production.o
-start 0 0 CODE 0 init C:\Users\MLS\AppData\Local\Temp\sg4s.o
+start 0 0 CODE 0 init C:\Users\angie\AppData\Local\Temp\seak.o
 __size_of_PWMx 0 0 ABS 0 - dist/default/production\PWMAppliedYa.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\PWMAppliedYa.X.production.o
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\PWMAppliedYa.X.production.o
@@ -179,11 +179,11 @@ _CoordNewX 19 0 COMRAM 1 bssCOMRAM dist/default/production\PWMAppliedYa.X.produc
 _CoordNewY 1B 0 COMRAM 1 bssCOMRAM dist/default/production\PWMAppliedYa.X.production.o
 __Hpowerup 0 0 CODE 0 powerup dist/default/production\PWMAppliedYa.X.production.o
 __LnvCOMRAM 0 0 ABS 0 nvCOMRAM dist/default/production\PWMAppliedYa.X.production.o
-__accesstop 60 0 ABS 0 - C:\Users\MLS\AppData\Local\Temp\sg4s.o
-intlevel0 0 0 CODE 0 text C:\Users\MLS\AppData\Local\Temp\sg4s.o
-intlevel1 0 0 CODE 0 text C:\Users\MLS\AppData\Local\Temp\sg4s.o
-intlevel2 0 0 CODE 0 text C:\Users\MLS\AppData\Local\Temp\sg4s.o
-intlevel3 0 0 CODE 0 text C:\Users\MLS\AppData\Local\Temp\sg4s.o
+__accesstop 60 0 ABS 0 - C:\Users\angie\AppData\Local\Temp\seak.o
+intlevel0 0 0 CODE 0 text C:\Users\angie\AppData\Local\Temp\seak.o
+intlevel1 0 0 CODE 0 text C:\Users\angie\AppData\Local\Temp\seak.o
+intlevel2 0 0 CODE 0 text C:\Users\angie\AppData\Local\Temp\seak.o
+intlevel3 0 0 CODE 0 text C:\Users\angie\AppData\Local\Temp\seak.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\PWMAppliedYa.X.production.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\PWMAppliedYa.X.production.o
 __CFG_EBTR0$OFF 0 0 ABS 0 - dist/default/production\PWMAppliedYa.X.production.o
@@ -195,8 +195,8 @@ __Hifardata 0 0 CODE 0 ifardata dist/default/production\PWMAppliedYa.X.productio
 _CVRCONbits FB5 0 ABS 0 - dist/default/production\PWMAppliedYa.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext dist/default/production\PWMAppliedYa.X.production.o
 _ADCON1 FC1 0 ABS 0 - dist/default/production\PWMAppliedYa.X.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\MLS\AppData\Local\Temp\sg4s.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\MLS\AppData\Local\Temp\sg4s.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\angie\AppData\Local\Temp\seak.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\angie\AppData\Local\Temp\seak.o
 _CCPR1L FBE 0 ABS 0 - dist/default/production\PWMAppliedYa.X.production.o
 _CCPR2L FBB 0 ABS 0 - dist/default/production\PWMAppliedYa.X.production.o
 __Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\PWMAppliedYa.X.production.o
@@ -249,7 +249,7 @@ __Htext4 0 0 ABS 0 text4 dist/default/production\PWMAppliedYa.X.production.o
 __Htext5 0 0 ABS 0 text5 dist/default/production\PWMAppliedYa.X.production.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\PWMAppliedYa.X.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\PWMAppliedYa.X.production.o
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\MLS\AppData\Local\Temp\sg4s.o
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\angie\AppData\Local\Temp\seak.o
 __Hcomram 0 0 ABS 0 comram dist/default/production\PWMAppliedYa.X.production.o
 __Hconfig 30000E 0 CONFIG 0 config dist/default/production\PWMAppliedYa.X.production.o
 __CFG_LPT1OSC$OFF 0 0 ABS 0 - dist/default/production\PWMAppliedYa.X.production.o
@@ -327,8 +327,8 @@ __Lconfig 300000 0 CONFIG 0 config dist/default/production\PWMAppliedYa.X.produc
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\PWMAppliedYa.X.production.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\PWMAppliedYa.X.production.o
 __CFG_CCP2MX$ON 0 0 ABS 0 - dist/default/production\PWMAppliedYa.X.production.o
-stackhi 7FF 0 ABS 0 - C:\Users\MLS\AppData\Local\Temp\sg4s.o
-stacklo 60 0 ABS 0 - C:\Users\MLS\AppData\Local\Temp\sg4s.o
+stackhi 7FF 0 ABS 0 - C:\Users\angie\AppData\Local\Temp\seak.o
+stacklo 60 0 ABS 0 - C:\Users\angie\AppData\Local\Temp\seak.o
 __Lintcode 0 0 CODE 0 intcode dist/default/production\PWMAppliedYa.X.production.o
 __Lintret 0 0 ABS 0 intret dist/default/production\PWMAppliedYa.X.production.o
 __Lirdata 0 0 CODE 0 irdata dist/default/production\PWMAppliedYa.X.production.o
@@ -360,7 +360,7 @@ __ptext4 7E4E 0 CODE 0 text4 dist/default/production\PWMAppliedYa.X.production.o
 __ptext5 7E78 0 CODE 0 text5 dist/default/production\PWMAppliedYa.X.production.o
 __Lstruct 0 0 COMRAM 1 struct dist/default/production\PWMAppliedYa.X.production.o
 _ResetOneShot 7E4E 0 CODE 0 text4 dist/default/production\PWMAppliedYa.X.production.o
-__ramtop 800 0 RAM 0 ramtop C:\Users\MLS\AppData\Local\Temp\sg4s.o
+__ramtop 800 0 RAM 0 ramtop C:\Users\angie\AppData\Local\Temp\seak.o
 __Lpowerup 0 0 CODE 0 powerup dist/default/production\PWMAppliedYa.X.production.o
 ?_ContarPulsos 21 0 COMRAM 1 cstackCOMRAM dist/default/production\PWMAppliedYa.X.production.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\PWMAppliedYa.X.production.o

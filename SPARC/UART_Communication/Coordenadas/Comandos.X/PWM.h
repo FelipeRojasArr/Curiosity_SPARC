@@ -64,4 +64,4 @@ void ResetOneShot(void);
     
      /*Pasos actuales*/
     unsigned int PasosActuales;
-  
+   unsigned int ons;

@@ -27,7 +27,7 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"40 C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
+"40 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
 [v _main main `(v  1 e 1 0 ]
 "68
 [v _SetUp SetUp `(v  1 e 1 0 ]
@@ -39,7 +39,7 @@
 [v _OneShot OneShot `(v  1 e 1 0 ]
 "156
 [v _ResetOneShot ResetOneShot `(v  1 e 1 0 ]
-"21 C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X/Variables.h
+"21 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X/Variables.h
 [v _CoordAntX CoordAntX `ui  1 e 2 0 ]
 "27
 [v _CoordRelatX CoordRelatX `i  1 e 2 0 ]
@@ -165,7 +165,7 @@
 [v _TRISC1 TRISC1 `VEb  1 e 0 @31905 ]
 "10932
 [v _TRISC2 TRISC2 `VEb  1 e 0 @31906 ]
-"35 C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
+"35 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\PWM\PWMAppliedYa.X\PWMAppliedYa.c
 [v _pasosRecorridos pasosRecorridos `i  1 e 2 0 ]
 "36
 [v _PasosActuales PasosActuales `i  1 e 2 0 ]

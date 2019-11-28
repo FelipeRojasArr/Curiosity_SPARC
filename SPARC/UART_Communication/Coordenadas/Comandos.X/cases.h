@@ -25,7 +25,7 @@ uint8_t cmd(void);
 uint8_t Par_Validated(void);
 uint8_t Ins_Validated(void);
 uint8_t Coord_Validated(void);
-uint8_t end(void);
+void end(void);
 
 systemState NextState;
 
