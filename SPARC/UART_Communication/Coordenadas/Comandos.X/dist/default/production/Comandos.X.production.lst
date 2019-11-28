@@ -1,0 +1,2089 @@
+
+
+Microchip MPLAB XC8 Assembler V2.10 build 88905656 
+                                                                                               Wed Nov 27 18:31:03 2019
+
+Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1 
+     1                           	processor	18F4550
+     2                           	fnconf	rparam,??,?,0
+     3                           	opt	pw 120
+     4                           	opt	flic
+     5                           	psect	idataCOMRAM,global,class=CODE,delta=1,noexec
+     6                           	psect	cinit,global,reloc=2,class=CODE,delta=1
+     7                           	psect	bssCOMRAM,global,class=COMRAM,space=1,delta=1,noexec
+     8                           	psect	dataCOMRAM,global,class=COMRAM,space=1,delta=1,noexec
+     9                           	psect	cstackCOMRAM,global,class=COMRAM,space=1,delta=1,noexec
+    10                           	psect	text0,global,reloc=2,class=CODE,delta=1
+    11                           	psect	text1,global,reloc=2,class=CODE,delta=1
+    12                           	psect	text2,global,reloc=2,class=CODE,delta=1
+    13                           	psect	text3,global,reloc=2,class=CODE,delta=1
+    14                           	psect	text4,global,reloc=2,class=CODE,delta=1
+    15                           	psect	text5,global,reloc=2,class=CODE,delta=1
+    16                           	psect	text6,global,reloc=2,class=CODE,delta=1
+    17                           	psect	text7,global,reloc=2,class=CODE,delta=1,group=1
+    18                           	psect	text8,global,reloc=2,class=CODE,delta=1
+    19                           	psect	text9,global,reloc=2,class=CODE,delta=1
+    20                           	psect	text10,global,reloc=2,class=CODE,delta=1
+    21                           	psect	text11,global,reloc=2,class=CODE,delta=1
+    22                           	psect	text12,global,reloc=2,class=CODE,delta=1
+    23                           	psect	intsave_regs,global,class=BIGRAM,space=1,delta=1,noexec
+    24                           	psect	rparam,global,class=COMRAM,space=1,delta=1,noexec
+    25  0000                     
+    26                           ; Version 2.10
+    27                           ; Generated 31/07/2019 GMT
+    28                           ; 
+    29                           ; Copyright © 2019, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    30                           ; All rights reserved.
+    31                           ; 
+    32                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    33                           ; 
+    34                           ; Redistribution and use in source and binary forms, with or without modification, are
+    35                           ; permitted provided that the following conditions are met:
+    36                           ; 
+    37                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    38                           ;        conditions and the following disclaimer.
+    39                           ; 
+    40                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    41                           ;        of conditions and the following disclaimer in the documentation and/or other
+    42                           ;        materials provided with the distribution.
+    43                           ; 
+    44                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    45                           ;        software without specific prior written permission.
+    46                           ; 
+    47                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    48                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    49                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    50                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    51                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    52                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    53                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    54                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    55                           ; 
+    56                           ; 
+    57                           ; Code-generator required, PIC18F4550 Definitions
+    58                           ; 
+    59                           ; SFR Addresses
+    60  0000                     
+    61                           	psect	idataCOMRAM
+    62  0079D6                     __pidataCOMRAM:
+    63                           	opt callstack 0
+    64                           
+    65                           ;initializer for _e_c
+    66  0079D6  45                 	db	69
+    67  0079D7  6E                 	db	110
+    68  0079D8  74                 	db	116
+    69  0079D9  65                 	db	101
+    70  0079DA  72                 	db	114
+    71  0079DB  5F                 	db	95
+    72  0079DC  63                 	db	99
+    73  0079DD  6F                 	db	111
+    74  0079DE  6D                 	db	109
+    75  0079DF  6D                 	db	109
+    76  0079E0  61                 	db	97
+    77  0079E1  6E                 	db	110
+    78  0079E2  64                 	db	100
+    79                           
+    80                           ;initializer for _init
+    81  0079E3  57                 	db	87
+    82  0079E4  61                 	db	97
+    83  0079E5  69                 	db	105
+    84  0079E6  74                 	db	116
+    85  0079E7  69                 	db	105
+    86  0079E8  6E                 	db	110
+    87  0079E9  67                 	db	103
+    88  0079EA  2E                 	db	46
+    89  0079EB  2E                 	db	46
+    90  0079EC  2E                 	db	46
+    91                           
+    92                           ;initializer for _Error
+    93  0079ED  45                 	db	69
+    94  0079EE  72                 	db	114
+    95  0079EF  72                 	db	114
+    96  0079F0  6F                 	db	111
+    97  0079F1  72                 	db	114
+    98                           
+    99                           ;initializer for _okay
+   100  0079F2  4F                 	db	79
+   101  0079F3  6B                 	db	107
+   102  0079F4  61                 	db	97
+   103  0079F5  79                 	db	121
+   104  0000                     _TRISC	set	3988
+   105  0000                     _OSCCON	set	4051
+   106  0000                     _RCREG	set	4014
+   107  0000                     _TXREG	set	4013
+   108  0000                     _PIR1bits	set	3998
+   109  0000                     _RCSTAbits	set	4011
+   110  0000                     _TXSTAbits	set	4012
+   111  0000                     _SPBRG	set	4015
+   112  0000                     _TRISCbits	set	3988
+   113  0000                     _PORTC	set	3970
+   114  0000                     _RCIF	set	31989
+   115                           
+   116                           ; #config settings
+   117  0000                     
+   118                           	psect	cinit
+   119  0079F6                     __pcinit:
+   120                           	opt callstack 0
+   121  0079F6                     start_initialization:
+   122                           	opt callstack 0
+   123  0079F6                     __initialization:
+   124                           	opt callstack 0
+   125                           
+   126                           ; Initialize objects allocated to COMRAM (32 bytes)
+   127                           ; load TBLPTR registers with __pidataCOMRAM
+   128  0079F6  0ED6               	movlw	low __pidataCOMRAM
+   129  0079F8  6EF6               	movwf	tblptrl,c
+   130  0079FA  0E79               	movlw	high __pidataCOMRAM
+   131  0079FC  6EF7               	movwf	tblptrh,c
+   132  0079FE  0E00               	movlw	low (__pidataCOMRAM shr (0+16))
+   133  007A00  6EF8               	movwf	tblptru,c
+   134  007A02  EE00  F001         	lfsr	0,__pdataCOMRAM
+   135  007A06  EE10 F020          	lfsr	1,32
+   136  007A0A                     copy_data0:
+   137  007A0A  0009               	tblrd		*+
+   138  007A0C  CFF5 FFEE          	movff	tablat,postinc0
+   139  007A10  50E5               	movf	postdec1,w,c
+   140  007A12  50E1               	movf	fsr1l,w,c
+   141  007A14  E1FA               	bnz	copy_data0
+   142                           
+   143                           ; Clear objects allocated to COMRAM (8 bytes)
+   144  007A16  EE00  F03F         	lfsr	0,__pbssCOMRAM
+   145  007A1A  0E08               	movlw	8
+   146  007A1C                     clear_0:
+   147  007A1C  6AEE               	clrf	postinc0,c
+   148  007A1E  06E8               	decf	wreg,f,c
+   149  007A20  E1FD               	bnz	clear_0
+   150  007A22                     end_of_initialization:
+   151                           	opt callstack 0
+   152  007A22                     __end_of__initialization:
+   153                           	opt callstack 0
+   154  007A22  0E00               	movlw	low (__Lmediumconst shr (0+16))
+   155  007A24  6EF8               	movwf	tblptru,c
+   156  007A26  0100               	movlb	0
+   157  007A28  EFB5  F03E         	goto	_main	;jump to C main() function
+   158                           
+   159                           	psect	bssCOMRAM
+   160  00003F                     __pbssCOMRAM:
+   161                           	opt callstack 0
+   162  00003F                     _NextState:
+   163                           	opt callstack 0
+   164  00003F                     	ds	1
+   165  000040                     _cord_y:
+   166                           	opt callstack 0
+   167  000040                     	ds	2
+   168  000042                     _cord_x:
+   169                           	opt callstack 0
+   170  000042                     	ds	2
+   171  000044                     _Par2:
+   172                           	opt callstack 0
+   173  000044                     	ds	1
+   174  000045                     _letter:
+   175                           	opt callstack 0
+   176  000045                     	ds	1
+   177  000046                     _Par1:
+   178                           	opt callstack 0
+   179  000046                     	ds	1
+   180                           
+   181                           	psect	dataCOMRAM
+   182  000001                     __pdataCOMRAM:
+   183                           	opt callstack 0
+   184  000001                     _e_c:
+   185                           	opt callstack 0
+   186  000001                     	ds	13
+   187  00000E                     _init:
+   188                           	opt callstack 0
+   189  00000E                     	ds	10
+   190  000018                     _Error:
+   191                           	opt callstack 0
+   192  000018                     	ds	5
+   193  00001D                     _okay:
+   194                           	opt callstack 0
+   195  00001D                     	ds	4
+   196                           
+   197                           	psect	cstackCOMRAM
+   198  000021                     __pcstackCOMRAM:
+   199                           	opt callstack 0
+   200  000021                     ?___aldiv:
+   201                           	opt callstack 0
+   202  000021                     UARTWrite@data:
+   203                           	opt callstack 0
+   204  000021                     delay@i:
+   205                           	opt callstack 0
+   206  000021                     coord@P1:
+   207                           	opt callstack 0
+   208  000021                     ___aldiv@dividend:
+   209                           	opt callstack 0
+   210                           
+   211                           ; 4 bytes @ 0x0
+   212  000021                     	ds	2
+   213  000023                     delay@j:
+   214                           	opt callstack 0
+   215  000023                     coord@L:
+   216                           	opt callstack 0
+   217                           
+   218                           ; 2 bytes @ 0x2
+   219  000023                     	ds	2
+   220  000025                     start@i:
+   221                           	opt callstack 0
+   222  000025                     Par_Validated@i:
+   223                           	opt callstack 0
+   224  000025                     Ins_Validated@i:
+   225                           	opt callstack 0
+   226  000025                     Coord_Validated@i:
+   227                           	opt callstack 0
+   228  000025                     end@i:
+   229                           	opt callstack 0
+   230  000025                     coord@x:
+   231                           	opt callstack 0
+   232  000025                     ___aldiv@divisor:
+   233                           	opt callstack 0
+   234                           
+   235                           ; 4 bytes @ 0x4
+   236  000025                     	ds	2
+   237  000027                     coord@y:
+   238                           	opt callstack 0
+   239                           
+   240                           ; 2 bytes @ 0x6
+   241  000027                     	ds	2
+   242  000029                     ___aldiv@counter:
+   243                           	opt callstack 0
+   244  000029                     coord@P2:
+   245                           	opt callstack 0
+   246                           
+   247                           ; 2 bytes @ 0x8
+   248  000029                     	ds	1
+   249  00002A                     ___aldiv@sign:
+   250                           	opt callstack 0
+   251                           
+   252                           ; 1 bytes @ 0x9
+   253  00002A                     	ds	1
+   254  00002B                     ??_coord:
+   255  00002B                     ___aldiv@quotient:
+   256                           	opt callstack 0
+   257                           
+   258                           ; 4 bytes @ 0xA
+   259  00002B                     	ds	4
+   260  00002F                     UARTConfi@BAUD:
+   261                           	opt callstack 0
+   262  00002F                     coord@buffer:
+   263                           	opt callstack 0
+   264                           
+   265                           ; 9 bytes @ 0xE
+   266  00002F                     	ds	2
+   267  000031                     _UARTConfi$955:
+   268                           	opt callstack 0
+   269                           
+   270                           ; 4 bytes @ 0x10
+   271  000031                     	ds	7
+   272  000038                     coord@read:
+   273                           	opt callstack 0
+   274                           
+   275                           ; 1 bytes @ 0x17
+   276  000038                     	ds	1
+   277  000039                     coord@i:
+   278                           	opt callstack 0
+   279                           
+   280                           ; 2 bytes @ 0x18
+   281  000039                     	ds	2
+   282  00003B                     cmd@i:
+   283                           	opt callstack 0
+   284                           
+   285                           ; 2 bytes @ 0x1A
+   286  00003B                     	ds	2
+   287  00003D                     ??_main:
+   288                           
+   289                           ; 1 bytes @ 0x1C
+   290  00003D                     	ds	2
+   291                           
+   292 ;;
+   293 ;;Main: autosize = 0, tempsize = 2, incstack = 0, save=0
+   294 ;;
+   295 ;; *************** function _main *****************
+   296 ;; Defined at:
+   297 ;;		line 19 in file "coordenadas.c"
+   298 ;; Parameters:    Size  Location     Type
+   299 ;;		None
+   300 ;; Auto vars:     Size  Location     Type
+   301 ;;		None
+   302 ;; Return value:  Size  Location     Type
+   303 ;;                  1    wreg      void 
+   304 ;; Registers used:
+   305 ;;		wreg, fsr2l, fsr2h, status,2, status,0, prodl, prodh, cstack
+   306 ;; Tracked objects:
+   307 ;;		On entry : 0/0
+   308 ;;		On exit  : 0/0
+   309 ;;		Unchanged: 0/0
+   310 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   311 ;;      Params:         0       0       0       0       0       0       0       0       0
+   312 ;;      Locals:         0       0       0       0       0       0       0       0       0
+   313 ;;      Temps:          2       0       0       0       0       0       0       0       0
+   314 ;;      Totals:         2       0       0       0       0       0       0       0       0
+   315 ;;Total ram usage:        2 bytes
+   316 ;; Hardware stack levels required when called:    3
+   317 ;; This function calls:
+   318 ;;		_Coord_Validated
+   319 ;;		_Ins_Validated
+   320 ;;		_Par_Validated
+   321 ;;		_UARTConfi
+   322 ;;		_cmd
+   323 ;;		_end
+   324 ;;		_start
+   325 ;; This function is called by:
+   326 ;;		Startup code after reset
+   327 ;; This function uses a non-reentrant model
+   328 ;;
+   329                           
+   330                           	psect	text0
+   331  007D6A                     __ptext0:
+   332                           	opt callstack 0
+   333  007D6A                     _main:
+   334                           	opt callstack 28
+   335  007D6A                     
+   336                           ;coordenadas.c: 20:     OSCCON=0x72;
+   337  007D6A  0E72               	movlw	114
+   338  007D6C  6ED3               	movwf	211,c	;volatile
+   339  007D6E                     
+   340                           ;coordenadas.c: 21:     UARTConfi(9600);
+   341  007D6E  0E25               	movlw	37
+   342  007D70  6E30               	movwf	(UARTConfi@BAUD+1)^0,c
+   343  007D72  0E80               	movlw	128
+   344  007D74  6E2F               	movwf	UARTConfi@BAUD^0,c
+   345  007D76  EC83  F03D         	call	_UARTConfi	;wreg free
+   346  007D7A                     
+   347                           ;coordenadas.c: 22:     TRISC=0X00;
+   348  007D7A  0E00               	movlw	0
+   349  007D7C  6E94               	movwf	148,c	;volatile
+   350  007D7E                     
+   351                           ;coordenadas.c: 25:     NextState = iddle_State;
+   352  007D7E  0E00               	movlw	0
+   353  007D80  6E3F               	movwf	_NextState^0,c
+   354  007D82  EFE1  F03E         	goto	l1270
+   355  007D86                     l1256:
+   356                           
+   357                           ;coordenadas.c: 33:                 NextState= start();
+   358  007D86  EC38  F03D         	call	_start	;wreg free
+   359  007D8A  6E3F               	movwf	_NextState^0,c
+   360                           
+   361                           ;coordenadas.c: 34:             }break;
+   362  007D8C  EFE1  F03E         	goto	l1270
+   363  007D90                     l1258:
+   364                           
+   365                           ;coordenadas.c: 37:                 NextState=cmd();
+   366  007D90  ECBC  F03D         	call	_cmd	;wreg free
+   367  007D94  6E3F               	movwf	_NextState^0,c
+   368                           
+   369                           ;coordenadas.c: 38:             }break;
+   370  007D96  EFE1  F03E         	goto	l1270
+   371  007D9A                     l1260:
+   372                           
+   373                           ;coordenadas.c: 41:                 NextState=Par_Validated();
+   374  007D9A  EC35  F03E         	call	_Par_Validated	;wreg free
+   375  007D9E  6E3F               	movwf	_NextState^0,c
+   376                           
+   377                           ;coordenadas.c: 42:             }break;
+   378  007DA0  EFE1  F03E         	goto	l1270
+   379  007DA4                     l1262:
+   380                           
+   381                           ;coordenadas.c: 45:                 NextState=Ins_Validated();
+   382  007DA4  ECF7  F03D         	call	_Ins_Validated	;wreg free
+   383  007DA8  6E3F               	movwf	_NextState^0,c
+   384                           
+   385                           ;coordenadas.c: 46:             }break;
+   386  007DAA  EFE1  F03E         	goto	l1270
+   387  007DAE                     l1264:
+   388                           
+   389                           ;coordenadas.c: 49:                 NextState=Coord_Validated();
+   390  007DAE  EC73  F03E         	call	_Coord_Validated	;wreg free
+   391  007DB2  6E3F               	movwf	_NextState^0,c
+   392                           
+   393                           ;coordenadas.c: 50:             }break;
+   394  007DB4  EFE1  F03E         	goto	l1270
+   395  007DB8                     l1266:
+   396                           
+   397                           ;coordenadas.c: 53:                 NextState=end();
+   398  007DB8  EC16  F03D         	call	_end	;wreg free
+   399  007DBC  6E3F               	movwf	_NextState^0,c
+   400                           
+   401                           ;coordenadas.c: 54:             }break;
+   402  007DBE  EFE1  F03E         	goto	l1270
+   403  007DC2                     l143:
+   404  007DC2                     l1270:
+   405  007DC2  503F               	movf	_NextState^0,w,c
+   406  007DC4  6E3D               	movwf	??_main^0,c
+   407  007DC6  6A3E               	clrf	(??_main+1)^0,c
+   408                           
+   409                           ; Switch on 2 bytes has been partitioned into a top level switch of size 1, and 1 sub-sw
+      +                          itches
+   410                           ; Switch size 1, requested type "simple"
+   411                           ; Number of cases is 1, Range of values is 0 to 0
+   412                           ; switch strategies available:
+   413                           ; Name         Instructions Cycles
+   414                           ; simple_byte            4     3 (average)
+   415                           ;	Chosen strategy is simple_byte
+   416  007DC8  503E               	movf	(??_main+1)^0,w,c
+   417  007DCA  0A00               	xorlw	0	; case 0
+   418  007DCC  B4D8               	btfsc	status,2,c
+   419  007DCE  EFEB  F03E         	goto	l1280
+   420  007DD2  EFE1  F03E         	goto	l143
+   421  007DD6                     l1280:
+   422                           
+   423                           ; Switch size 1, requested type "simple"
+   424                           ; Number of cases is 6, Range of values is 0 to 6
+   425                           ; switch strategies available:
+   426                           ; Name         Instructions Cycles
+   427                           ; simple_byte           19    10 (average)
+   428                           ;	Chosen strategy is simple_byte
+   429  007DD6  503D               	movf	??_main^0,w,c
+   430  007DD8  0A00               	xorlw	0	; case 0
+   431  007DDA  B4D8               	btfsc	status,2,c
+   432  007DDC  EFC3  F03E         	goto	l1256
+   433  007DE0  0A01               	xorlw	1	; case 1
+   434  007DE2  B4D8               	btfsc	status,2,c
+   435  007DE4  EFC8  F03E         	goto	l1258
+   436  007DE8  0A03               	xorlw	3	; case 2
+   437  007DEA  B4D8               	btfsc	status,2,c
+   438  007DEC  EFCD  F03E         	goto	l1260
+   439  007DF0  0A01               	xorlw	1	; case 3
+   440  007DF2  B4D8               	btfsc	status,2,c
+   441  007DF4  EFD2  F03E         	goto	l1262
+   442  007DF8  0A07               	xorlw	7	; case 4
+   443  007DFA  B4D8               	btfsc	status,2,c
+   444  007DFC  EFD7  F03E         	goto	l1264
+   445  007E00  0A02               	xorlw	2	; case 6
+   446  007E02  B4D8               	btfsc	status,2,c
+   447  007E04  EFDC  F03E         	goto	l1266
+   448  007E08  EFE1  F03E         	goto	l143
+   449  007E0C  EF00  F000         	goto	start
+   450  007E10                     __end_of_main:
+   451                           	opt callstack 0
+   452                           
+   453 ;; *************** function _start *****************
+   454 ;; Defined at:
+   455 ;;		line 25 in file "cases.c"
+   456 ;; Parameters:    Size  Location     Type
+   457 ;;		None
+   458 ;; Auto vars:     Size  Location     Type
+   459 ;;  i               2    4[COMRAM] int 
+   460 ;; Return value:  Size  Location     Type
+   461 ;;                  1    wreg      unsigned char 
+   462 ;; Registers used:
+   463 ;;		wreg, fsr2l, fsr2h, status,2, status,0, cstack
+   464 ;; Tracked objects:
+   465 ;;		On entry : 0/0
+   466 ;;		On exit  : 0/0
+   467 ;;		Unchanged: 0/0
+   468 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   469 ;;      Params:         0       0       0       0       0       0       0       0       0
+   470 ;;      Locals:         2       0       0       0       0       0       0       0       0
+   471 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   472 ;;      Totals:         2       0       0       0       0       0       0       0       0
+   473 ;;Total ram usage:        2 bytes
+   474 ;; Hardware stack levels used:    1
+   475 ;; Hardware stack levels required when called:    1
+   476 ;; This function calls:
+   477 ;;		_UARTWrite
+   478 ;;		_delay
+   479 ;; This function is called by:
+   480 ;;		_main
+   481 ;; This function uses a non-reentrant model
+   482 ;;
+   483                           
+   484                           	psect	text1
+   485  007A70                     __ptext1:
+   486                           	opt callstack 0
+   487  007A70                     _start:
+   488                           	opt callstack 29
+   489  007A70                     
+   490                           ;cases.c: 26:      for(int i=0;i<10;i++){
+   491  007A70  0E00               	movlw	0
+   492  007A72  6E26               	movwf	(start@i+1)^0,c
+   493  007A74  0E00               	movlw	0
+   494  007A76  6E25               	movwf	start@i^0,c
+   495  007A78                     l930:
+   496                           
+   497                           ;cases.c: 27:         UARTWrite(init[i]);
+   498  007A78  0E0E               	movlw	low _init
+   499  007A7A  2425               	addwf	start@i^0,w,c
+   500  007A7C  6ED9               	movwf	fsr2l,c
+   501  007A7E  0E00               	movlw	high _init
+   502  007A80  2026               	addwfc	(start@i+1)^0,w,c
+   503  007A82  6EDA               	movwf	fsr2h,c
+   504  007A84  50DF               	movf	indf2,w,c
+   505  007A86  ECE0  F03C         	call	_UARTWrite
+   506  007A8A                     
+   507                           ;cases.c: 28:     }
+   508  007A8A  4A25               	infsnz	start@i^0,f,c
+   509  007A8C  2A26               	incf	(start@i+1)^0,f,c
+   510  007A8E  BE26               	btfsc	(start@i+1)^0,7,c
+   511  007A90  EF53  F03D         	goto	u121
+   512  007A94  5026               	movf	(start@i+1)^0,w,c
+   513  007A96  E109               	bnz	u120
+   514  007A98  0E0A               	movlw	10
+   515  007A9A  5C25               	subwf	start@i^0,w,c
+   516  007A9C  A0D8               	btfss	status,0,c
+   517  007A9E  EF53  F03D         	goto	u121
+   518  007AA2  EF55  F03D         	goto	u120
+   519  007AA6                     u121:
+   520  007AA6  EF3C  F03D         	goto	l930
+   521  007AAA                     u120:
+   522  007AAA                     
+   523                           ;cases.c: 29:      PORTC = 0xff;
+   524  007AAA  6882               	setf	130,c	;volatile
+   525  007AAC                     
+   526                           ;cases.c: 30:      delay();
+   527  007AAC  EC5A  F03D         	call	_delay	;wreg free
+   528  007AB0                     
+   529                           ;cases.c: 31:      return wait_cmd_State;
+   530  007AB0  0E01               	movlw	1
+   531  007AB2  0012               	return		;funcret
+   532  007AB4                     __end_of_start:
+   533                           	opt callstack 0
+   534                           
+   535 ;; *************** function _end *****************
+   536 ;; Defined at:
+   537 ;;		line 98 in file "cases.c"
+   538 ;; Parameters:    Size  Location     Type
+   539 ;;		None
+   540 ;; Auto vars:     Size  Location     Type
+   541 ;;  i               2    4[COMRAM] int 
+   542 ;; Return value:  Size  Location     Type
+   543 ;;                  1    wreg      unsigned char 
+   544 ;; Registers used:
+   545 ;;		wreg, fsr2l, fsr2h, status,2, status,0, cstack
+   546 ;; Tracked objects:
+   547 ;;		On entry : 0/0
+   548 ;;		On exit  : 0/0
+   549 ;;		Unchanged: 0/0
+   550 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   551 ;;      Params:         0       0       0       0       0       0       0       0       0
+   552 ;;      Locals:         2       0       0       0       0       0       0       0       0
+   553 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   554 ;;      Totals:         2       0       0       0       0       0       0       0       0
+   555 ;;Total ram usage:        2 bytes
+   556 ;; Hardware stack levels used:    1
+   557 ;; Hardware stack levels required when called:    1
+   558 ;; This function calls:
+   559 ;;		_UARTWrite
+   560 ;;		_delay
+   561 ;; This function is called by:
+   562 ;;		_main
+   563 ;; This function uses a non-reentrant model
+   564 ;;
+   565                           
+   566                           	psect	text2
+   567  007A2C                     __ptext2:
+   568                           	opt callstack 0
+   569  007A2C                     _end:
+   570                           	opt callstack 29
+   571  007A2C                     
+   572                           ;cases.c: 99:     for(int i=0;i<4;i++){
+   573  007A2C  0E00               	movlw	0
+   574  007A2E  6E26               	movwf	(end@i+1)^0,c
+   575  007A30  0E00               	movlw	0
+   576  007A32  6E25               	movwf	end@i^0,c
+   577  007A34                     l1080:
+   578                           
+   579                           ;cases.c: 100:         UARTWrite(okay[i]);
+   580  007A34  0E1D               	movlw	low _okay
+   581  007A36  2425               	addwf	end@i^0,w,c
+   582  007A38  6ED9               	movwf	fsr2l,c
+   583  007A3A  0E00               	movlw	high _okay
+   584  007A3C  2026               	addwfc	(end@i+1)^0,w,c
+   585  007A3E  6EDA               	movwf	fsr2h,c
+   586  007A40  50DF               	movf	indf2,w,c
+   587  007A42  ECE0  F03C         	call	_UARTWrite
+   588  007A46                     
+   589                           ;cases.c: 101:     }
+   590  007A46  4A25               	infsnz	end@i^0,f,c
+   591  007A48  2A26               	incf	(end@i+1)^0,f,c
+   592  007A4A  BE26               	btfsc	(end@i+1)^0,7,c
+   593  007A4C  EF31  F03D         	goto	u231
+   594  007A50  5026               	movf	(end@i+1)^0,w,c
+   595  007A52  E109               	bnz	u230
+   596  007A54  0E04               	movlw	4
+   597  007A56  5C25               	subwf	end@i^0,w,c
+   598  007A58  A0D8               	btfss	status,0,c
+   599  007A5A  EF31  F03D         	goto	u231
+   600  007A5E  EF33  F03D         	goto	u230
+   601  007A62                     u231:
+   602  007A62  EF1A  F03D         	goto	l1080
+   603  007A66                     u230:
+   604  007A66                     
+   605                           ;cases.c: 102:     PORTC=0XFF;
+   606  007A66  6882               	setf	130,c	;volatile
+   607  007A68                     
+   608                           ;cases.c: 103:     delay();
+   609  007A68  EC5A  F03D         	call	_delay	;wreg free
+   610  007A6C                     
+   611                           ;cases.c: 104:     return wait_cmd_State;
+   612  007A6C  0E01               	movlw	1
+   613  007A6E  0012               	return		;funcret
+   614  007A70                     __end_of_end:
+   615                           	opt callstack 0
+   616                           
+   617 ;; *************** function _cmd *****************
+   618 ;; Defined at:
+   619 ;;		line 35 in file "cases.c"
+   620 ;; Parameters:    Size  Location     Type
+   621 ;;		None
+   622 ;; Auto vars:     Size  Location     Type
+   623 ;;  i               2   26[COMRAM] int 
+   624 ;; Return value:  Size  Location     Type
+   625 ;;                  1    wreg      unsigned char 
+   626 ;; Registers used:
+   627 ;;		wreg, fsr2l, fsr2h, status,2, status,0, prodl, prodh, cstack
+   628 ;; Tracked objects:
+   629 ;;		On entry : 0/0
+   630 ;;		On exit  : 0/0
+   631 ;;		Unchanged: 0/0
+   632 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   633 ;;      Params:         0       0       0       0       0       0       0       0       0
+   634 ;;      Locals:         2       0       0       0       0       0       0       0       0
+   635 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   636 ;;      Totals:         2       0       0       0       0       0       0       0       0
+   637 ;;Total ram usage:        2 bytes
+   638 ;; Hardware stack levels used:    1
+   639 ;; Hardware stack levels required when called:    2
+   640 ;; This function calls:
+   641 ;;		_UARTWrite
+   642 ;;		_coord
+   643 ;; This function is called by:
+   644 ;;		_main
+   645 ;; This function uses a non-reentrant model
+   646 ;;
+   647                           
+   648                           	psect	text3
+   649  007B78                     __ptext3:
+   650                           	opt callstack 0
+   651  007B78                     _cmd:
+   652                           	opt callstack 28
+   653  007B78                     
+   654                           ;cases.c: 36:     UARTWrite(13);
+   655  007B78  0E0D               	movlw	13
+   656  007B7A  ECE0  F03C         	call	_UARTWrite
+   657  007B7E                     
+   658                           ;cases.c: 37:     PORTC = 0x00;
+   659  007B7E  0E00               	movlw	0
+   660  007B80  6E82               	movwf	130,c	;volatile
+   661  007B82                     
+   662                           ;cases.c: 38:     for(int i=0;i<10;i++){
+   663  007B82  0E00               	movlw	0
+   664  007B84  6E3C               	movwf	(cmd@i+1)^0,c
+   665  007B86  0E00               	movlw	0
+   666  007B88  6E3B               	movwf	cmd@i^0,c
+   667  007B8A                     l1216:
+   668                           
+   669                           ;cases.c: 39:         UARTWrite(e_c[i]);
+   670  007B8A  0E01               	movlw	low _e_c
+   671  007B8C  243B               	addwf	cmd@i^0,w,c
+   672  007B8E  6ED9               	movwf	fsr2l,c
+   673  007B90  0E00               	movlw	high _e_c
+   674  007B92  203C               	addwfc	(cmd@i+1)^0,w,c
+   675  007B94  6EDA               	movwf	fsr2h,c
+   676  007B96  50DF               	movf	indf2,w,c
+   677  007B98  ECE0  F03C         	call	_UARTWrite
+   678  007B9C                     
+   679                           ;cases.c: 40:     }
+   680  007B9C  4A3B               	infsnz	cmd@i^0,f,c
+   681  007B9E  2A3C               	incf	(cmd@i+1)^0,f,c
+   682  007BA0  BE3C               	btfsc	(cmd@i+1)^0,7,c
+   683  007BA2  EFDC  F03D         	goto	u311
+   684  007BA6  503C               	movf	(cmd@i+1)^0,w,c
+   685  007BA8  E109               	bnz	u310
+   686  007BAA  0E0A               	movlw	10
+   687  007BAC  5C3B               	subwf	cmd@i^0,w,c
+   688  007BAE  A0D8               	btfss	status,0,c
+   689  007BB0  EFDC  F03D         	goto	u311
+   690  007BB4  EFDE  F03D         	goto	u310
+   691  007BB8                     u311:
+   692  007BB8  EFC5  F03D         	goto	l1216
+   693  007BBC                     u310:
+   694  007BBC                     
+   695                           ;cases.c: 41:     coord(&Par1,&letter,&cord_x, &cord_y, &Par2);
+   696  007BBC  0E46               	movlw	low _Par1
+   697  007BBE  6E21               	movwf	coord@P1^0,c
+   698  007BC0  0E00               	movlw	high _Par1
+   699  007BC2  6E22               	movwf	(coord@P1+1)^0,c
+   700  007BC4  0E45               	movlw	low _letter
+   701  007BC6  6E23               	movwf	coord@L^0,c
+   702  007BC8  0E00               	movlw	high _letter
+   703  007BCA  6E24               	movwf	(coord@L+1)^0,c
+   704  007BCC  0E42               	movlw	low _cord_x
+   705  007BCE  6E25               	movwf	coord@x^0,c
+   706  007BD0  0E00               	movlw	high _cord_x
+   707  007BD2  6E26               	movwf	(coord@x+1)^0,c
+   708  007BD4  0E40               	movlw	low _cord_y
+   709  007BD6  6E27               	movwf	coord@y^0,c
+   710  007BD8  0E00               	movlw	high _cord_y
+   711  007BDA  6E28               	movwf	(coord@y+1)^0,c
+   712  007BDC  0E44               	movlw	low _Par2
+   713  007BDE  6E29               	movwf	coord@P2^0,c
+   714  007BE0  0E00               	movlw	high _Par2
+   715  007BE2  6E2A               	movwf	(coord@P2+1)^0,c
+   716  007BE4  EC08  F03F         	call	_coord	;wreg free
+   717  007BE8                     
+   718                           ;cases.c: 42:     PORTC =0Xff;
+   719  007BE8  6882               	setf	130,c	;volatile
+   720  007BEA                     
+   721                           ;cases.c: 43:     return validate_Par_State;
+   722  007BEA  0E02               	movlw	2
+   723  007BEC  0012               	return		;funcret
+   724  007BEE                     __end_of_cmd:
+   725                           	opt callstack 0
+   726                           
+   727 ;; *************** function _coord *****************
+   728 ;; Defined at:
+   729 ;;		line 108 in file "cases.c"
+   730 ;; Parameters:    Size  Location     Type
+   731 ;;  P1              2    0[COMRAM] PTR unsigned char 
+   732 ;;		 -> Par1(1), 
+   733 ;;  L               2    2[COMRAM] PTR unsigned char 
+   734 ;;		 -> letter(1), 
+   735 ;;  x               2    4[COMRAM] PTR unsigned short 
+   736 ;;		 -> cord_x(2), 
+   737 ;;  y               2    6[COMRAM] PTR unsigned short 
+   738 ;;		 -> cord_y(2), 
+   739 ;;  P2              2    8[COMRAM] PTR unsigned char 
+   740 ;;		 -> Par2(1), 
+   741 ;; Auto vars:     Size  Location     Type
+   742 ;;  i               2   24[COMRAM] int 
+   743 ;;  buffer          9   14[COMRAM] unsigned char [9]
+   744 ;;  read            1   23[COMRAM] unsigned char 
+   745 ;; Return value:  Size  Location     Type
+   746 ;;                  2    0[COMRAM] int 
+   747 ;; Registers used:
+   748 ;;		wreg, fsr2l, fsr2h, status,2, status,0, prodl, prodh, cstack
+   749 ;; Tracked objects:
+   750 ;;		On entry : 0/0
+   751 ;;		On exit  : 0/0
+   752 ;;		Unchanged: 0/0
+   753 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   754 ;;      Params:        10       0       0       0       0       0       0       0       0
+   755 ;;      Locals:        12       0       0       0       0       0       0       0       0
+   756 ;;      Temps:          4       0       0       0       0       0       0       0       0
+   757 ;;      Totals:        26       0       0       0       0       0       0       0       0
+   758 ;;Total ram usage:       26 bytes
+   759 ;; Hardware stack levels used:    1
+   760 ;; Hardware stack levels required when called:    1
+   761 ;; This function calls:
+   762 ;;		_UARTRead
+   763 ;; This function is called by:
+   764 ;;		_cmd
+   765 ;; This function uses a non-reentrant model
+   766 ;;
+   767                           
+   768                           	psect	text4
+   769  007E10                     __ptext4:
+   770                           	opt callstack 0
+   771  007E10                     _coord:
+   772                           	opt callstack 28
+   773  007E10                     
+   774                           ;cases.c: 109:   char buffer [9];;cases.c: 110:         char read;;cases.c: 112:        
+      +                           for(int i=0; i<=8; i++){
+   775  007E10  0E00               	movlw	0
+   776  007E12  6E3A               	movwf	(coord@i+1)^0,c
+   777  007E14  0E00               	movlw	0
+   778  007E16  6E39               	movwf	coord@i^0,c
+   779  007E18                     l1148:
+   780                           
+   781                           ;cases.c: 113:             read= UARTRead();
+   782  007E18  ECD7  F03C         	call	_UARTRead	;wreg free
+   783  007E1C  6E38               	movwf	coord@read^0,c
+   784  007E1E                     
+   785                           ;cases.c: 114:             buffer[i]=read;
+   786  007E1E  0E2F               	movlw	low coord@buffer
+   787  007E20  2439               	addwf	coord@i^0,w,c
+   788  007E22  6ED9               	movwf	fsr2l,c
+   789  007E24  0E00               	movlw	high coord@buffer
+   790  007E26  203A               	addwfc	(coord@i+1)^0,w,c
+   791  007E28  6EDA               	movwf	fsr2h,c
+   792  007E2A  C038  FFDF         	movff	coord@read,indf2
+   793  007E2E                     
+   794                           ;cases.c: 115:         }
+   795  007E2E  4A39               	infsnz	coord@i^0,f,c
+   796  007E30  2A3A               	incf	(coord@i+1)^0,f,c
+   797  007E32  BE3A               	btfsc	(coord@i+1)^0,7,c
+   798  007E34  EF25  F03F         	goto	u241
+   799  007E38  503A               	movf	(coord@i+1)^0,w,c
+   800  007E3A  E109               	bnz	u240
+   801  007E3C  0E09               	movlw	9
+   802  007E3E  5C39               	subwf	coord@i^0,w,c
+   803  007E40  A0D8               	btfss	status,0,c
+   804  007E42  EF25  F03F         	goto	u241
+   805  007E46  EF27  F03F         	goto	u240
+   806  007E4A                     u241:
+   807  007E4A  EF0C  F03F         	goto	l1148
+   808  007E4E                     u240:
+   809  007E4E                     
+   810                           ;cases.c: 116:         *P1= buffer[0];
+   811  007E4E  C021  FFD9         	movff	coord@P1,fsr2l
+   812  007E52  C022  FFDA         	movff	coord@P1+1,fsr2h
+   813  007E56  C02F  FFDF         	movff	coord@buffer,indf2
+   814                           
+   815                           ;cases.c: 117:         *L= buffer[1];
+   816  007E5A  C023  FFD9         	movff	coord@L,fsr2l
+   817  007E5E  C024  FFDA         	movff	coord@L+1,fsr2h
+   818  007E62  C030  FFDF         	movff	coord@buffer+1,indf2
+   819  007E66                     
+   820                           ;cases.c: 118:   *x = 1*(buffer[4]-48) + 10*(buffer[3]-48) + 100*(buffer[2]-48);
+   821  007E66  0E30               	movlw	48
+   822  007E68  6E2B               	movwf	??_coord^0,c
+   823  007E6A  0EEB               	movlw	235
+   824  007E6C  6E2C               	movwf	(??_coord+1)^0,c
+   825  007E6E  5031               	movf	(coord@buffer+2)^0,w,c
+   826  007E70  0D64               	mullw	100
+   827  007E72  CFF3 F02D          	movff	prodl,??_coord+2
+   828  007E76  CFF4 F02E          	movff	prodh,??_coord+3
+   829  007E7A  5032               	movf	(coord@buffer+3)^0,w,c
+   830  007E7C  0D0A               	mullw	10
+   831  007E7E  50F3               	movf	243,w,c
+   832  007E80  262D               	addwf	(??_coord+2)^0,f,c
+   833  007E82  50F4               	movf	244,w,c
+   834  007E84  222E               	addwfc	(??_coord+3)^0,f,c
+   835  007E86  5033               	movf	(coord@buffer+4)^0,w,c
+   836  007E88  262D               	addwf	(??_coord+2)^0,f,c
+   837  007E8A  0E00               	movlw	0
+   838  007E8C  222E               	addwfc	(??_coord+3)^0,f,c
+   839  007E8E  502B               	movf	??_coord^0,w,c
+   840  007E90  262D               	addwf	(??_coord+2)^0,f,c
+   841  007E92  502C               	movf	(??_coord+1)^0,w,c
+   842  007E94  222E               	addwfc	(??_coord+3)^0,f,c
+   843  007E96  C025  FFD9         	movff	coord@x,fsr2l
+   844  007E9A  C026  FFDA         	movff	coord@x+1,fsr2h
+   845  007E9E  C02D  FFDE         	movff	??_coord+2,postinc2
+   846  007EA2  C02E  FFDD         	movff	??_coord+3,postdec2
+   847  007EA6                     
+   848                           ;cases.c: 119:   *y = 1*(buffer[7]-48) + 10*(buffer[6]-48) + 100*(buffer[5]-48);
+   849  007EA6  0E30               	movlw	48
+   850  007EA8  6E2B               	movwf	??_coord^0,c
+   851  007EAA  0EEB               	movlw	235
+   852  007EAC  6E2C               	movwf	(??_coord+1)^0,c
+   853  007EAE  5034               	movf	(coord@buffer+5)^0,w,c
+   854  007EB0  0D64               	mullw	100
+   855  007EB2  CFF3 F02D          	movff	prodl,??_coord+2
+   856  007EB6  CFF4 F02E          	movff	prodh,??_coord+3
+   857  007EBA  5035               	movf	(coord@buffer+6)^0,w,c
+   858  007EBC  0D0A               	mullw	10
+   859  007EBE  50F3               	movf	243,w,c
+   860  007EC0  262D               	addwf	(??_coord+2)^0,f,c
+   861  007EC2  50F4               	movf	244,w,c
+   862  007EC4  222E               	addwfc	(??_coord+3)^0,f,c
+   863  007EC6  5036               	movf	(coord@buffer+7)^0,w,c
+   864  007EC8  262D               	addwf	(??_coord+2)^0,f,c
+   865  007ECA  0E00               	movlw	0
+   866  007ECC  222E               	addwfc	(??_coord+3)^0,f,c
+   867  007ECE  502B               	movf	??_coord^0,w,c
+   868  007ED0  262D               	addwf	(??_coord+2)^0,f,c
+   869  007ED2  502C               	movf	(??_coord+1)^0,w,c
+   870  007ED4  222E               	addwfc	(??_coord+3)^0,f,c
+   871  007ED6  C027  FFD9         	movff	coord@y,fsr2l
+   872  007EDA  C028  FFDA         	movff	coord@y+1,fsr2h
+   873  007EDE  C02D  FFDE         	movff	??_coord+2,postinc2
+   874  007EE2  C02E  FFDD         	movff	??_coord+3,postdec2
+   875                           
+   876                           ;cases.c: 120:   *P2= buffer[8];
+   877  007EE6  C029  FFD9         	movff	coord@P2,fsr2l
+   878  007EEA  C02A  FFDA         	movff	coord@P2+1,fsr2h
+   879  007EEE  C037  FFDF         	movff	coord@buffer+8,indf2
+   880  007EF2  0012               	return		;funcret
+   881  007EF4                     __end_of_coord:
+   882                           	opt callstack 0
+   883                           
+   884 ;; *************** function _UARTRead *****************
+   885 ;; Defined at:
+   886 ;;		line 30 in file "UART.c"
+   887 ;; Parameters:    Size  Location     Type
+   888 ;;		None
+   889 ;; Auto vars:     Size  Location     Type
+   890 ;;		None
+   891 ;; Return value:  Size  Location     Type
+   892 ;;                  1    wreg      unsigned char 
+   893 ;; Registers used:
+   894 ;;		wreg, status,2
+   895 ;; Tracked objects:
+   896 ;;		On entry : 0/0
+   897 ;;		On exit  : 0/0
+   898 ;;		Unchanged: 0/0
+   899 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   900 ;;      Params:         0       0       0       0       0       0       0       0       0
+   901 ;;      Locals:         0       0       0       0       0       0       0       0       0
+   902 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   903 ;;      Totals:         0       0       0       0       0       0       0       0       0
+   904 ;;Total ram usage:        0 bytes
+   905 ;; Hardware stack levels used:    1
+   906 ;; This function calls:
+   907 ;;		Nothing
+   908 ;; This function is called by:
+   909 ;;		_coord
+   910 ;; This function uses a non-reentrant model
+   911 ;;
+   912                           
+   913                           	psect	text5
+   914  0079AE                     __ptext5:
+   915                           	opt callstack 0
+   916  0079AE                     _UARTRead:
+   917                           	opt callstack 28
+   918  0079AE                     l104:
+   919  0079AE  AA9E               	btfss	3998,5,c	;volatile
+   920  0079B0  EFDC  F03C         	goto	u11
+   921  0079B4  EFDE  F03C         	goto	u10
+   922  0079B8                     u11:
+   923  0079B8  EFD7  F03C         	goto	l104
+   924  0079BC                     u10:
+   925  0079BC                     
+   926                           ;UART.c: 32:     return RCREG;
+   927  0079BC  50AE               	movf	174,w,c	;volatile
+   928  0079BE  0012               	return		;funcret
+   929  0079C0                     __end_of_UARTRead:
+   930                           	opt callstack 0
+   931                           
+   932 ;; *************** function _UARTConfi *****************
+   933 ;; Defined at:
+   934 ;;		line 5 in file "UART.c"
+   935 ;; Parameters:    Size  Location     Type
+   936 ;;  BAUD            2   14[COMRAM] int 
+   937 ;; Auto vars:     Size  Location     Type
+   938 ;;		None
+   939 ;; Return value:  Size  Location     Type
+   940 ;;                  1    wreg      void 
+   941 ;; Registers used:
+   942 ;;		wreg, status,2, status,0, cstack
+   943 ;; Tracked objects:
+   944 ;;		On entry : 0/0
+   945 ;;		On exit  : 0/0
+   946 ;;		Unchanged: 0/0
+   947 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   948 ;;      Params:         2       0       0       0       0       0       0       0       0
+   949 ;;      Locals:         4       0       0       0       0       0       0       0       0
+   950 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   951 ;;      Totals:         6       0       0       0       0       0       0       0       0
+   952 ;;Total ram usage:        6 bytes
+   953 ;; Hardware stack levels used:    1
+   954 ;; Hardware stack levels required when called:    1
+   955 ;; This function calls:
+   956 ;;		___aldiv
+   957 ;; This function is called by:
+   958 ;;		_main
+   959 ;; This function uses a non-reentrant model
+   960 ;;
+   961                           
+   962                           	psect	text6
+   963  007B06                     __ptext6:
+   964                           	opt callstack 0
+   965  007B06                     _UARTConfi:
+   966                           	opt callstack 29
+   967  007B06                     
+   968                           ;UART.c: 7:     TRISCbits.RC6=0;
+   969  007B06  9C94               	bcf	148,6,c	;volatile
+   970                           
+   971                           ;UART.c: 8:     TRISCbits.RC7=1;
+   972  007B08  8E94               	bsf	148,7,c	;volatile
+   973  007B0A                     
+   974                           ;UART.c: 10:     SPBRG = (unsigned char)((8000000L/BAUD)/64)-1;
+   975  007B0A  C02F  F025         	movff	UARTConfi@BAUD,___aldiv@divisor
+   976  007B0E  C030  F026         	movff	UARTConfi@BAUD+1,___aldiv@divisor+1
+   977  007B12  0E00               	movlw	0
+   978  007B14  BE26               	btfsc	(___aldiv@divisor+1)^0,7,c
+   979  007B16  0EFF               	movlw	-1
+   980  007B18  6E27               	movwf	(___aldiv@divisor+2)^0,c
+   981  007B1A  6E28               	movwf	(___aldiv@divisor+3)^0,c
+   982  007B1C  0E00               	movlw	0
+   983  007B1E  6E21               	movwf	___aldiv@dividend^0,c
+   984  007B20  0E12               	movlw	18
+   985  007B22  6E22               	movwf	(___aldiv@dividend+1)^0,c
+   986  007B24  0E7A               	movlw	122
+   987  007B26  6E23               	movwf	(___aldiv@dividend+2)^0,c
+   988  007B28  0E00               	movlw	0
+   989  007B2A  6E24               	movwf	(___aldiv@dividend+3)^0,c
+   990  007B2C  EC7A  F03F         	call	___aldiv	;wreg free
+   991  007B30  C021  F031         	movff	?___aldiv,_UARTConfi$955
+   992  007B34  C022  F032         	movff	?___aldiv+1,_UARTConfi$955+1
+   993  007B38  C023  F033         	movff	?___aldiv+2,_UARTConfi$955+2
+   994  007B3C  C024  F034         	movff	?___aldiv+3,_UARTConfi$955+3
+   995                           
+   996                           ;UART.c: 10:     SPBRG = (unsigned char)((8000000L/BAUD)/64)-1;
+   997  007B40  C031  F021         	movff	_UARTConfi$955,___aldiv@dividend
+   998  007B44  C032  F022         	movff	_UARTConfi$955+1,___aldiv@dividend+1
+   999  007B48  C033  F023         	movff	_UARTConfi$955+2,___aldiv@dividend+2
+  1000  007B4C  C034  F024         	movff	_UARTConfi$955+3,___aldiv@dividend+3
+  1001  007B50  0E40               	movlw	64
+  1002  007B52  6E25               	movwf	___aldiv@divisor^0,c
+  1003  007B54  0E00               	movlw	0
+  1004  007B56  6E26               	movwf	(___aldiv@divisor+1)^0,c
+  1005  007B58  0E00               	movlw	0
+  1006  007B5A  6E27               	movwf	(___aldiv@divisor+2)^0,c
+  1007  007B5C  0E00               	movlw	0
+  1008  007B5E  6E28               	movwf	(___aldiv@divisor+3)^0,c
+  1009  007B60  EC7A  F03F         	call	___aldiv	;wreg free
+  1010  007B64  0421               	decf	?___aldiv^0,w,c
+  1011  007B66  6EAF               	movwf	175,c	;volatile
+  1012  007B68                     
+  1013                           ;UART.c: 11:     TXSTAbits.BRGH = 0;
+  1014  007B68  94AC               	bcf	172,2,c	;volatile
+  1015  007B6A                     
+  1016                           ;UART.c: 12:     TXSTAbits.SYNC = 0;
+  1017  007B6A  98AC               	bcf	172,4,c	;volatile
+  1018  007B6C                     
+  1019                           ;UART.c: 13:     RCSTAbits.SPEN = 1;
+  1020  007B6C  8EAB               	bsf	171,7,c	;volatile
+  1021  007B6E                     
+  1022                           ;UART.c: 16:     TXSTAbits.TX9 = 0;
+  1023  007B6E  9CAC               	bcf	172,6,c	;volatile
+  1024  007B70                     
+  1025                           ;UART.c: 17:     TXSTAbits.TXEN = 1;
+  1026  007B70  8AAC               	bsf	172,5,c	;volatile
+  1027  007B72                     
+  1028                           ;UART.c: 20:     RCSTAbits.RC9 = 0;
+  1029  007B72  9CAB               	bcf	171,6,c	;volatile
+  1030  007B74                     
+  1031                           ;UART.c: 21:     RCSTAbits.CREN = 1;
+  1032  007B74  88AB               	bsf	171,4,c	;volatile
+  1033  007B76  0012               	return		;funcret
+  1034  007B78                     __end_of_UARTConfi:
+  1035                           	opt callstack 0
+  1036                           
+  1037 ;; *************** function ___aldiv *****************
+  1038 ;; Defined at:
+  1039 ;;		line 7 in file "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c"
+  1040 ;; Parameters:    Size  Location     Type
+  1041 ;;  dividend        4    0[COMRAM] long 
+  1042 ;;  divisor         4    4[COMRAM] long 
+  1043 ;; Auto vars:     Size  Location     Type
+  1044 ;;  quotient        4   10[COMRAM] long 
+  1045 ;;  sign            1    9[COMRAM] unsigned char 
+  1046 ;;  counter         1    8[COMRAM] unsigned char 
+  1047 ;; Return value:  Size  Location     Type
+  1048 ;;                  4    0[COMRAM] long 
+  1049 ;; Registers used:
+  1050 ;;		wreg, status,2, status,0
+  1051 ;; Tracked objects:
+  1052 ;;		On entry : 0/0
+  1053 ;;		On exit  : 0/0
+  1054 ;;		Unchanged: 0/0
+  1055 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  1056 ;;      Params:         8       0       0       0       0       0       0       0       0
+  1057 ;;      Locals:         6       0       0       0       0       0       0       0       0
+  1058 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  1059 ;;      Totals:        14       0       0       0       0       0       0       0       0
+  1060 ;;Total ram usage:       14 bytes
+  1061 ;; Hardware stack levels used:    1
+  1062 ;; This function calls:
+  1063 ;;		Nothing
+  1064 ;; This function is called by:
+  1065 ;;		_UARTConfi
+  1066 ;; This function uses a non-reentrant model
+  1067 ;;
+  1068                           
+  1069                           	psect	text7
+  1070  007EF4                     __ptext7:
+  1071                           	opt callstack 0
+  1072  007EF4                     ___aldiv:
+  1073                           	opt callstack 29
+  1074  007EF4  0E00               	movlw	0
+  1075  007EF6  6E2A               	movwf	___aldiv@sign^0,c
+  1076  007EF8  BE28               	btfsc	(___aldiv@divisor+3)^0,7,c
+  1077  007EFA  EF83  F03F         	goto	u250
+  1078  007EFE  EF81  F03F         	goto	u251
+  1079  007F02                     u251:
+  1080  007F02  EF8D  F03F         	goto	l1170
+  1081  007F06                     u250:
+  1082  007F06  1E28               	comf	(___aldiv@divisor+3)^0,f,c
+  1083  007F08  1E27               	comf	(___aldiv@divisor+2)^0,f,c
+  1084  007F0A  1E26               	comf	(___aldiv@divisor+1)^0,f,c
+  1085  007F0C  6C25               	negf	___aldiv@divisor^0,c
+  1086  007F0E  0E00               	movlw	0
+  1087  007F10  2226               	addwfc	(___aldiv@divisor+1)^0,f,c
+  1088  007F12  2227               	addwfc	(___aldiv@divisor+2)^0,f,c
+  1089  007F14  2228               	addwfc	(___aldiv@divisor+3)^0,f,c
+  1090  007F16  0E01               	movlw	1
+  1091  007F18  6E2A               	movwf	___aldiv@sign^0,c
+  1092  007F1A                     l1170:
+  1093  007F1A  BE24               	btfsc	(___aldiv@dividend+3)^0,7,c
+  1094  007F1C  EF94  F03F         	goto	u260
+  1095  007F20  EF92  F03F         	goto	u261
+  1096  007F24                     u261:
+  1097  007F24  EF9E  F03F         	goto	l1176
+  1098  007F28                     u260:
+  1099  007F28  1E24               	comf	(___aldiv@dividend+3)^0,f,c
+  1100  007F2A  1E23               	comf	(___aldiv@dividend+2)^0,f,c
+  1101  007F2C  1E22               	comf	(___aldiv@dividend+1)^0,f,c
+  1102  007F2E  6C21               	negf	___aldiv@dividend^0,c
+  1103  007F30  0E00               	movlw	0
+  1104  007F32  2222               	addwfc	(___aldiv@dividend+1)^0,f,c
+  1105  007F34  2223               	addwfc	(___aldiv@dividend+2)^0,f,c
+  1106  007F36  2224               	addwfc	(___aldiv@dividend+3)^0,f,c
+  1107  007F38  0E01               	movlw	1
+  1108  007F3A  1A2A               	xorwf	___aldiv@sign^0,f,c
+  1109  007F3C                     l1176:
+  1110  007F3C  0E00               	movlw	0
+  1111  007F3E  6E2B               	movwf	___aldiv@quotient^0,c
+  1112  007F40  0E00               	movlw	0
+  1113  007F42  6E2C               	movwf	(___aldiv@quotient+1)^0,c
+  1114  007F44  0E00               	movlw	0
+  1115  007F46  6E2D               	movwf	(___aldiv@quotient+2)^0,c
+  1116  007F48  0E00               	movlw	0
+  1117  007F4A  6E2E               	movwf	(___aldiv@quotient+3)^0,c
+  1118  007F4C  5025               	movf	___aldiv@divisor^0,w,c
+  1119  007F4E  1026               	iorwf	(___aldiv@divisor+1)^0,w,c
+  1120  007F50  1027               	iorwf	(___aldiv@divisor+2)^0,w,c
+  1121  007F52  1028               	iorwf	(___aldiv@divisor+3)^0,w,c
+  1122  007F54  B4D8               	btfsc	status,2,c
+  1123  007F56  EFAF  F03F         	goto	u271
+  1124  007F5A  EFB1  F03F         	goto	u270
+  1125  007F5E                     u271:
+  1126  007F5E  EFE7  F03F         	goto	l1198
+  1127  007F62                     u270:
+  1128  007F62  0E01               	movlw	1
+  1129  007F64  6E29               	movwf	___aldiv@counter^0,c
+  1130  007F66  EFBB  F03F         	goto	l1184
+  1131  007F6A                     l1182:
+  1132  007F6A  90D8               	bcf	status,0,c
+  1133  007F6C  3625               	rlcf	___aldiv@divisor^0,f,c
+  1134  007F6E  3626               	rlcf	(___aldiv@divisor+1)^0,f,c
+  1135  007F70  3627               	rlcf	(___aldiv@divisor+2)^0,f,c
+  1136  007F72  3628               	rlcf	(___aldiv@divisor+3)^0,f,c
+  1137  007F74  2A29               	incf	___aldiv@counter^0,f,c
+  1138  007F76                     l1184:
+  1139  007F76  AE28               	btfss	(___aldiv@divisor+3)^0,7,c
+  1140  007F78  EFC0  F03F         	goto	u281
+  1141  007F7C  EFC2  F03F         	goto	u280
+  1142  007F80                     u281:
+  1143  007F80  EFB5  F03F         	goto	l1182
+  1144  007F84                     u280:
+  1145  007F84                     l1186:
+  1146  007F84  90D8               	bcf	status,0,c
+  1147  007F86  362B               	rlcf	___aldiv@quotient^0,f,c
+  1148  007F88  362C               	rlcf	(___aldiv@quotient+1)^0,f,c
+  1149  007F8A  362D               	rlcf	(___aldiv@quotient+2)^0,f,c
+  1150  007F8C  362E               	rlcf	(___aldiv@quotient+3)^0,f,c
+  1151  007F8E  5025               	movf	___aldiv@divisor^0,w,c
+  1152  007F90  5C21               	subwf	___aldiv@dividend^0,w,c
+  1153  007F92  5026               	movf	(___aldiv@divisor+1)^0,w,c
+  1154  007F94  5822               	subwfb	(___aldiv@dividend+1)^0,w,c
+  1155  007F96  5027               	movf	(___aldiv@divisor+2)^0,w,c
+  1156  007F98  5823               	subwfb	(___aldiv@dividend+2)^0,w,c
+  1157  007F9A  5028               	movf	(___aldiv@divisor+3)^0,w,c
+  1158  007F9C  5824               	subwfb	(___aldiv@dividend+3)^0,w,c
+  1159  007F9E  A0D8               	btfss	status,0,c
+  1160  007FA0  EFD4  F03F         	goto	u291
+  1161  007FA4  EFD6  F03F         	goto	u290
+  1162  007FA8                     u291:
+  1163  007FA8  EFDF  F03F         	goto	l1194
+  1164  007FAC                     u290:
+  1165  007FAC  5025               	movf	___aldiv@divisor^0,w,c
+  1166  007FAE  5E21               	subwf	___aldiv@dividend^0,f,c
+  1167  007FB0  5026               	movf	(___aldiv@divisor+1)^0,w,c
+  1168  007FB2  5A22               	subwfb	(___aldiv@dividend+1)^0,f,c
+  1169  007FB4  5027               	movf	(___aldiv@divisor+2)^0,w,c
+  1170  007FB6  5A23               	subwfb	(___aldiv@dividend+2)^0,f,c
+  1171  007FB8  5028               	movf	(___aldiv@divisor+3)^0,w,c
+  1172  007FBA  5A24               	subwfb	(___aldiv@dividend+3)^0,f,c
+  1173  007FBC  802B               	bsf	___aldiv@quotient^0,0,c
+  1174  007FBE                     l1194:
+  1175  007FBE  90D8               	bcf	status,0,c
+  1176  007FC0  3228               	rrcf	(___aldiv@divisor+3)^0,f,c
+  1177  007FC2  3227               	rrcf	(___aldiv@divisor+2)^0,f,c
+  1178  007FC4  3226               	rrcf	(___aldiv@divisor+1)^0,f,c
+  1179  007FC6  3225               	rrcf	___aldiv@divisor^0,f,c
+  1180  007FC8  2E29               	decfsz	___aldiv@counter^0,f,c
+  1181  007FCA  EFC2  F03F         	goto	l1186
+  1182  007FCE                     l1198:
+  1183  007FCE  502A               	movf	___aldiv@sign^0,w,c
+  1184  007FD0  B4D8               	btfsc	status,2,c
+  1185  007FD2  EFED  F03F         	goto	u301
+  1186  007FD6  EFEF  F03F         	goto	u300
+  1187  007FDA                     u301:
+  1188  007FDA  EFF7  F03F         	goto	l1202
+  1189  007FDE                     u300:
+  1190  007FDE  1E2E               	comf	(___aldiv@quotient+3)^0,f,c
+  1191  007FE0  1E2D               	comf	(___aldiv@quotient+2)^0,f,c
+  1192  007FE2  1E2C               	comf	(___aldiv@quotient+1)^0,f,c
+  1193  007FE4  6C2B               	negf	___aldiv@quotient^0,c
+  1194  007FE6  0E00               	movlw	0
+  1195  007FE8  222C               	addwfc	(___aldiv@quotient+1)^0,f,c
+  1196  007FEA  222D               	addwfc	(___aldiv@quotient+2)^0,f,c
+  1197  007FEC  222E               	addwfc	(___aldiv@quotient+3)^0,f,c
+  1198  007FEE                     l1202:
+  1199  007FEE  C02B  F021         	movff	___aldiv@quotient,?___aldiv
+  1200  007FF2  C02C  F022         	movff	___aldiv@quotient+1,?___aldiv+1
+  1201  007FF6  C02D  F023         	movff	___aldiv@quotient+2,?___aldiv+2
+  1202  007FFA  C02E  F024         	movff	___aldiv@quotient+3,?___aldiv+3
+  1203  007FFE  0012               	return		;funcret
+  1204  008000                     __end_of___aldiv:
+  1205                           	opt callstack 0
+  1206                           
+  1207 ;; *************** function _Par_Validated *****************
+  1208 ;; Defined at:
+  1209 ;;		line 46 in file "cases.c"
+  1210 ;; Parameters:    Size  Location     Type
+  1211 ;;		None
+  1212 ;; Auto vars:     Size  Location     Type
+  1213 ;;  i               2    4[COMRAM] int 
+  1214 ;; Return value:  Size  Location     Type
+  1215 ;;                  1    wreg      unsigned char 
+  1216 ;; Registers used:
+  1217 ;;		wreg, fsr2l, fsr2h, status,2, status,0, cstack
+  1218 ;; Tracked objects:
+  1219 ;;		On entry : 0/0
+  1220 ;;		On exit  : 0/0
+  1221 ;;		Unchanged: 0/0
+  1222 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  1223 ;;      Params:         0       0       0       0       0       0       0       0       0
+  1224 ;;      Locals:         2       0       0       0       0       0       0       0       0
+  1225 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  1226 ;;      Totals:         2       0       0       0       0       0       0       0       0
+  1227 ;;Total ram usage:        2 bytes
+  1228 ;; Hardware stack levels used:    1
+  1229 ;; Hardware stack levels required when called:    1
+  1230 ;; This function calls:
+  1231 ;;		_UARTWrite
+  1232 ;;		_delay
+  1233 ;; This function is called by:
+  1234 ;;		_main
+  1235 ;; This function uses a non-reentrant model
+  1236 ;;
+  1237                           
+  1238                           	psect	text8
+  1239  007C6A                     __ptext8:
+  1240                           	opt callstack 0
+  1241  007C6A                     _Par_Validated:
+  1242                           	opt callstack 29
+  1243  007C6A                     
+  1244                           ;cases.c: 47:         PORTC=0x00;
+  1245  007C6A  0E00               	movlw	0
+  1246  007C6C  6E82               	movwf	130,c	;volatile
+  1247  007C6E                     
+  1248                           ;cases.c: 48:     if(Par1==0X60 && Par2==0x62){
+  1249  007C6E  0E60               	movlw	96
+  1250  007C70  1846               	xorwf	_Par1^0,w,c
+  1251  007C72  A4D8               	btfss	status,2,c
+  1252  007C74  EF3E  F03E         	goto	u141
+  1253  007C78  EF40  F03E         	goto	u140
+  1254  007C7C                     u141:
+  1255  007C7C  EF50  F03E         	goto	l982
+  1256  007C80                     u140:
+  1257  007C80  0E62               	movlw	98
+  1258  007C82  1844               	xorwf	_Par2^0,w,c
+  1259  007C84  A4D8               	btfss	status,2,c
+  1260  007C86  EF47  F03E         	goto	u151
+  1261  007C8A  EF49  F03E         	goto	u150
+  1262  007C8E                     u151:
+  1263  007C8E  EF50  F03E         	goto	l982
+  1264  007C92                     u150:
+  1265  007C92                     
+  1266                           ;cases.c: 49:         PORTC=0X02;
+  1267  007C92  0E02               	movlw	2
+  1268  007C94  6E82               	movwf	130,c	;volatile
+  1269  007C96                     
+  1270                           ;cases.c: 50:         delay();
+  1271  007C96  EC5A  F03D         	call	_delay	;wreg free
+  1272  007C9A                     
+  1273                           ;cases.c: 51:         return validate_Instruct_State;
+  1274  007C9A  0E03               	movlw	3
+  1275  007C9C  EF72  F03E         	goto	l47
+  1276  007CA0                     l982:
+  1277                           
+  1278                           ;cases.c: 54:         for(int i=0;i<5;i++){
+  1279  007CA0  0E00               	movlw	0
+  1280  007CA2  6E26               	movwf	(Par_Validated@i+1)^0,c
+  1281  007CA4  0E00               	movlw	0
+  1282  007CA6  6E25               	movwf	Par_Validated@i^0,c
+  1283  007CA8                     l988:
+  1284                           
+  1285                           ;cases.c: 55:             UARTWrite(Error[i]);
+  1286  007CA8  0E18               	movlw	low _Error
+  1287  007CAA  2425               	addwf	Par_Validated@i^0,w,c
+  1288  007CAC  6ED9               	movwf	fsr2l,c
+  1289  007CAE  0E00               	movlw	high _Error
+  1290  007CB0  2026               	addwfc	(Par_Validated@i+1)^0,w,c
+  1291  007CB2  6EDA               	movwf	fsr2h,c
+  1292  007CB4  50DF               	movf	indf2,w,c
+  1293  007CB6  ECE0  F03C         	call	_UARTWrite
+  1294  007CBA                     
+  1295                           ;cases.c: 56:         }
+  1296  007CBA  4A25               	infsnz	Par_Validated@i^0,f,c
+  1297  007CBC  2A26               	incf	(Par_Validated@i+1)^0,f,c
+  1298  007CBE  BE26               	btfsc	(Par_Validated@i+1)^0,7,c
+  1299  007CC0  EF6B  F03E         	goto	u161
+  1300  007CC4  5026               	movf	(Par_Validated@i+1)^0,w,c
+  1301  007CC6  E109               	bnz	u160
+  1302  007CC8  0E05               	movlw	5
+  1303  007CCA  5C25               	subwf	Par_Validated@i^0,w,c
+  1304  007CCC  A0D8               	btfss	status,0,c
+  1305  007CCE  EF6B  F03E         	goto	u161
+  1306  007CD2  EF6D  F03E         	goto	u160
+  1307  007CD6                     u161:
+  1308  007CD6  EF54  F03E         	goto	l988
+  1309  007CDA                     u160:
+  1310  007CDA                     
+  1311                           ;cases.c: 57:         PORTC= 0X04;
+  1312  007CDA  0E04               	movlw	4
+  1313  007CDC  6E82               	movwf	130,c	;volatile
+  1314  007CDE                     
+  1315                           ;cases.c: 58:         delay();
+  1316  007CDE  EC5A  F03D         	call	_delay	;wreg free
+  1317  007CE2                     
+  1318                           ;cases.c: 59:         return wait_cmd_State;
+  1319  007CE2  0E01               	movlw	1
+  1320  007CE4                     l47:
+  1321  007CE4  0012               	return		;funcret
+  1322  007CE6                     __end_of_Par_Validated:
+  1323                           	opt callstack 0
+  1324                           
+  1325 ;; *************** function _Ins_Validated *****************
+  1326 ;; Defined at:
+  1327 ;;		line 63 in file "cases.c"
+  1328 ;; Parameters:    Size  Location     Type
+  1329 ;;		None
+  1330 ;; Auto vars:     Size  Location     Type
+  1331 ;;  i               2    4[COMRAM] int 
+  1332 ;; Return value:  Size  Location     Type
+  1333 ;;                  1    wreg      unsigned char 
+  1334 ;; Registers used:
+  1335 ;;		wreg, fsr2l, fsr2h, status,2, status,0, cstack
+  1336 ;; Tracked objects:
+  1337 ;;		On entry : 0/0
+  1338 ;;		On exit  : 0/0
+  1339 ;;		Unchanged: 0/0
+  1340 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  1341 ;;      Params:         0       0       0       0       0       0       0       0       0
+  1342 ;;      Locals:         2       0       0       0       0       0       0       0       0
+  1343 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  1344 ;;      Totals:         2       0       0       0       0       0       0       0       0
+  1345 ;;Total ram usage:        2 bytes
+  1346 ;; Hardware stack levels used:    1
+  1347 ;; Hardware stack levels required when called:    1
+  1348 ;; This function calls:
+  1349 ;;		_UARTWrite
+  1350 ;;		_delay
+  1351 ;; This function is called by:
+  1352 ;;		_main
+  1353 ;; This function uses a non-reentrant model
+  1354 ;;
+  1355                           
+  1356                           	psect	text9
+  1357  007BEE                     __ptext9:
+  1358                           	opt callstack 0
+  1359  007BEE                     _Ins_Validated:
+  1360                           	opt callstack 29
+  1361  007BEE                     
+  1362                           ;cases.c: 64:     PORTC=0x00;
+  1363  007BEE  0E00               	movlw	0
+  1364  007BF0  6E82               	movwf	130,c	;volatile
+  1365  007BF2                     
+  1366                           ;cases.c: 65:     if(letter==0x67 || letter== 0x83){
+  1367  007BF2  0E67               	movlw	103
+  1368  007BF4  1845               	xorwf	_letter^0,w,c
+  1369  007BF6  B4D8               	btfsc	status,2,c
+  1370  007BF8  EF00  F03E         	goto	u171
+  1371  007BFC  EF02  F03E         	goto	u170
+  1372  007C00                     u171:
+  1373  007C00  EF0B  F03E         	goto	l1008
+  1374  007C04                     u170:
+  1375  007C04  0E83               	movlw	131
+  1376  007C06  1845               	xorwf	_letter^0,w,c
+  1377  007C08  A4D8               	btfss	status,2,c
+  1378  007C0A  EF09  F03E         	goto	u181
+  1379  007C0E  EF0B  F03E         	goto	u180
+  1380  007C12                     u181:
+  1381  007C12  EF12  F03E         	goto	l1018
+  1382  007C16                     u180:
+  1383  007C16                     l1008:
+  1384                           
+  1385                           ;cases.c: 66:         PORTC=0X02;
+  1386  007C16  0E02               	movlw	2
+  1387  007C18  6E82               	movwf	130,c	;volatile
+  1388  007C1A                     
+  1389                           ;cases.c: 67:         delay();
+  1390  007C1A  EC5A  F03D         	call	_delay	;wreg free
+  1391  007C1E                     
+  1392                           ;cases.c: 68:         return validate_Coord_State;
+  1393  007C1E  0E04               	movlw	4
+  1394  007C20  EF34  F03E         	goto	l56
+  1395  007C24                     l1018:
+  1396                           
+  1397                           ;cases.c: 71:         for(int i=0;i<5;i++){
+  1398  007C24  0E00               	movlw	0
+  1399  007C26  6E26               	movwf	(Ins_Validated@i+1)^0,c
+  1400  007C28  0E00               	movlw	0
+  1401  007C2A  6E25               	movwf	Ins_Validated@i^0,c
+  1402  007C2C                     l1024:
+  1403                           
+  1404                           ;cases.c: 72:             UARTWrite(Error[i]);
+  1405  007C2C  0E18               	movlw	low _Error
+  1406  007C2E  2425               	addwf	Ins_Validated@i^0,w,c
+  1407  007C30  6ED9               	movwf	fsr2l,c
+  1408  007C32  0E00               	movlw	high _Error
+  1409  007C34  2026               	addwfc	(Ins_Validated@i+1)^0,w,c
+  1410  007C36  6EDA               	movwf	fsr2h,c
+  1411  007C38  50DF               	movf	indf2,w,c
+  1412  007C3A  ECE0  F03C         	call	_UARTWrite
+  1413  007C3E                     
+  1414                           ;cases.c: 73:         }
+  1415  007C3E  4A25               	infsnz	Ins_Validated@i^0,f,c
+  1416  007C40  2A26               	incf	(Ins_Validated@i+1)^0,f,c
+  1417  007C42  BE26               	btfsc	(Ins_Validated@i+1)^0,7,c
+  1418  007C44  EF2D  F03E         	goto	u191
+  1419  007C48  5026               	movf	(Ins_Validated@i+1)^0,w,c
+  1420  007C4A  E109               	bnz	u190
+  1421  007C4C  0E05               	movlw	5
+  1422  007C4E  5C25               	subwf	Ins_Validated@i^0,w,c
+  1423  007C50  A0D8               	btfss	status,0,c
+  1424  007C52  EF2D  F03E         	goto	u191
+  1425  007C56  EF2F  F03E         	goto	u190
+  1426  007C5A                     u191:
+  1427  007C5A  EF16  F03E         	goto	l1024
+  1428  007C5E                     u190:
+  1429  007C5E                     
+  1430                           ;cases.c: 74:         PORTC= 0X04;
+  1431  007C5E  0E04               	movlw	4
+  1432  007C60  6E82               	movwf	130,c	;volatile
+  1433  007C62                     
+  1434                           ;cases.c: 75:         delay();
+  1435  007C62  EC5A  F03D         	call	_delay	;wreg free
+  1436  007C66                     
+  1437                           ;cases.c: 76:         return wait_cmd_State;
+  1438  007C66  0E01               	movlw	1
+  1439  007C68                     l56:
+  1440  007C68  0012               	return		;funcret
+  1441  007C6A                     __end_of_Ins_Validated:
+  1442                           	opt callstack 0
+  1443                           
+  1444 ;; *************** function _Coord_Validated *****************
+  1445 ;; Defined at:
+  1446 ;;		line 80 in file "cases.c"
+  1447 ;; Parameters:    Size  Location     Type
+  1448 ;;		None
+  1449 ;; Auto vars:     Size  Location     Type
+  1450 ;;  i               2    4[COMRAM] int 
+  1451 ;; Return value:  Size  Location     Type
+  1452 ;;                  1    wreg      unsigned char 
+  1453 ;; Registers used:
+  1454 ;;		wreg, fsr2l, fsr2h, status,2, status,0, cstack
+  1455 ;; Tracked objects:
+  1456 ;;		On entry : 0/0
+  1457 ;;		On exit  : 0/0
+  1458 ;;		Unchanged: 0/0
+  1459 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  1460 ;;      Params:         0       0       0       0       0       0       0       0       0
+  1461 ;;      Locals:         2       0       0       0       0       0       0       0       0
+  1462 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  1463 ;;      Totals:         2       0       0       0       0       0       0       0       0
+  1464 ;;Total ram usage:        2 bytes
+  1465 ;; Hardware stack levels used:    1
+  1466 ;; Hardware stack levels required when called:    1
+  1467 ;; This function calls:
+  1468 ;;		_UARTWrite
+  1469 ;;		_delay
+  1470 ;; This function is called by:
+  1471 ;;		_main
+  1472 ;; This function uses a non-reentrant model
+  1473 ;;
+  1474                           
+  1475                           	psect	text10
+  1476  007CE6                     __ptext10:
+  1477                           	opt callstack 0
+  1478  007CE6                     _Coord_Validated:
+  1479                           	opt callstack 29
+  1480  007CE6                     
+  1481                           ;cases.c: 81:     PORTC=0x00;
+  1482  007CE6  0E00               	movlw	0
+  1483  007CE8  6E82               	movwf	130,c	;volatile
+  1484  007CEA                     
+  1485                           ;cases.c: 82:     if(cord_x<=300 && cord_y<=300){
+  1486  007CEA  0E2D               	movlw	45
+  1487  007CEC  5C42               	subwf	_cord_x^0,w,c
+  1488  007CEE  0E01               	movlw	1
+  1489  007CF0  5843               	subwfb	(_cord_x+1)^0,w,c
+  1490  007CF2  B0D8               	btfsc	status,0,c
+  1491  007CF4  EF7E  F03E         	goto	u201
+  1492  007CF8  EF80  F03E         	goto	u200
+  1493  007CFC                     u201:
+  1494  007CFC  EF92  F03E         	goto	l1054
+  1495  007D00                     u200:
+  1496  007D00  0E2D               	movlw	45
+  1497  007D02  5C40               	subwf	_cord_y^0,w,c
+  1498  007D04  0E01               	movlw	1
+  1499  007D06  5841               	subwfb	(_cord_y+1)^0,w,c
+  1500  007D08  B0D8               	btfsc	status,0,c
+  1501  007D0A  EF89  F03E         	goto	u211
+  1502  007D0E  EF8B  F03E         	goto	u210
+  1503  007D12                     u211:
+  1504  007D12  EF92  F03E         	goto	l1054
+  1505  007D16                     u210:
+  1506  007D16                     
+  1507                           ;cases.c: 83:         PORTC=0X02;
+  1508  007D16  0E02               	movlw	2
+  1509  007D18  6E82               	movwf	130,c	;volatile
+  1510  007D1A                     
+  1511                           ;cases.c: 84:         delay();
+  1512  007D1A  EC5A  F03D         	call	_delay	;wreg free
+  1513  007D1E                     
+  1514                           ;cases.c: 85:         return end_State;
+  1515  007D1E  0E06               	movlw	6
+  1516  007D20  EFB4  F03E         	goto	l63
+  1517  007D24                     l1054:
+  1518                           
+  1519                           ;cases.c: 88:         for(int i=0;i<5;i++){
+  1520  007D24  0E00               	movlw	0
+  1521  007D26  6E26               	movwf	(Coord_Validated@i+1)^0,c
+  1522  007D28  0E00               	movlw	0
+  1523  007D2A  6E25               	movwf	Coord_Validated@i^0,c
+  1524  007D2C                     l1060:
+  1525                           
+  1526                           ;cases.c: 89:             UARTWrite(Error[i]);
+  1527  007D2C  0E18               	movlw	low _Error
+  1528  007D2E  2425               	addwf	Coord_Validated@i^0,w,c
+  1529  007D30  6ED9               	movwf	fsr2l,c
+  1530  007D32  0E00               	movlw	high _Error
+  1531  007D34  2026               	addwfc	(Coord_Validated@i+1)^0,w,c
+  1532  007D36  6EDA               	movwf	fsr2h,c
+  1533  007D38  50DF               	movf	indf2,w,c
+  1534  007D3A  ECE0  F03C         	call	_UARTWrite
+  1535  007D3E                     
+  1536                           ;cases.c: 90:         }
+  1537  007D3E  4A25               	infsnz	Coord_Validated@i^0,f,c
+  1538  007D40  2A26               	incf	(Coord_Validated@i+1)^0,f,c
+  1539  007D42  BE26               	btfsc	(Coord_Validated@i+1)^0,7,c
+  1540  007D44  EFAD  F03E         	goto	u221
+  1541  007D48  5026               	movf	(Coord_Validated@i+1)^0,w,c
+  1542  007D4A  E109               	bnz	u220
+  1543  007D4C  0E05               	movlw	5
+  1544  007D4E  5C25               	subwf	Coord_Validated@i^0,w,c
+  1545  007D50  A0D8               	btfss	status,0,c
+  1546  007D52  EFAD  F03E         	goto	u221
+  1547  007D56  EFAF  F03E         	goto	u220
+  1548  007D5A                     u221:
+  1549  007D5A  EF96  F03E         	goto	l1060
+  1550  007D5E                     u220:
+  1551  007D5E                     
+  1552                           ;cases.c: 91:         PORTC= 0X04;
+  1553  007D5E  0E04               	movlw	4
+  1554  007D60  6E82               	movwf	130,c	;volatile
+  1555  007D62                     
+  1556                           ;cases.c: 92:         delay();
+  1557  007D62  EC5A  F03D         	call	_delay	;wreg free
+  1558  007D66                     
+  1559                           ;cases.c: 93:         return wait_cmd_State;
+  1560  007D66  0E01               	movlw	1
+  1561  007D68                     l63:
+  1562  007D68  0012               	return		;funcret
+  1563  007D6A                     __end_of_Coord_Validated:
+  1564                           	opt callstack 0
+  1565                           
+  1566 ;; *************** function _delay *****************
+  1567 ;; Defined at:
+  1568 ;;		line 16 in file "cases.c"
+  1569 ;; Parameters:    Size  Location     Type
+  1570 ;;		None
+  1571 ;; Auto vars:     Size  Location     Type
+  1572 ;;  j               2    2[COMRAM] int 
+  1573 ;;  i               2    0[COMRAM] int 
+  1574 ;; Return value:  Size  Location     Type
+  1575 ;;                  1    wreg      void 
+  1576 ;; Registers used:
+  1577 ;;		wreg, status,2, status,0
+  1578 ;; Tracked objects:
+  1579 ;;		On entry : 0/0
+  1580 ;;		On exit  : 0/0
+  1581 ;;		Unchanged: 0/0
+  1582 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  1583 ;;      Params:         0       0       0       0       0       0       0       0       0
+  1584 ;;      Locals:         4       0       0       0       0       0       0       0       0
+  1585 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  1586 ;;      Totals:         4       0       0       0       0       0       0       0       0
+  1587 ;;Total ram usage:        4 bytes
+  1588 ;; Hardware stack levels used:    1
+  1589 ;; This function calls:
+  1590 ;;		Nothing
+  1591 ;; This function is called by:
+  1592 ;;		_start
+  1593 ;;		_Par_Validated
+  1594 ;;		_Ins_Validated
+  1595 ;;		_Coord_Validated
+  1596 ;;		_end
+  1597 ;; This function uses a non-reentrant model
+  1598 ;;
+  1599                           
+  1600                           	psect	text11
+  1601  007AB4                     __ptext11:
+  1602                           	opt callstack 0
+  1603  007AB4                     _delay:
+  1604                           	opt callstack 29
+  1605  007AB4                     
+  1606                           ;cases.c: 17:     int i, j;;cases.c: 18:     for(i=0;i<5000;i++)
+  1607  007AB4  0E00               	movlw	0
+  1608  007AB6  6E22               	movwf	(delay@i+1)^0,c
+  1609  007AB8  0E00               	movlw	0
+  1610  007ABA  6E21               	movwf	delay@i^0,c
+  1611  007ABC                     l842:
+  1612                           
+  1613                           ;cases.c: 19:     {;cases.c: 20:         for(j=0;j<70;j++){}
+  1614  007ABC  0E00               	movlw	0
+  1615  007ABE  6E24               	movwf	(delay@j+1)^0,c
+  1616  007AC0  0E00               	movlw	0
+  1617  007AC2  6E23               	movwf	delay@j^0,c
+  1618  007AC4                     l848:
+  1619  007AC4  4A23               	infsnz	delay@j^0,f,c
+  1620  007AC6  2A24               	incf	(delay@j+1)^0,f,c
+  1621  007AC8  BE24               	btfsc	(delay@j+1)^0,7,c
+  1622  007ACA  EF70  F03D         	goto	u21
+  1623  007ACE  5024               	movf	(delay@j+1)^0,w,c
+  1624  007AD0  E109               	bnz	u20
+  1625  007AD2  0E46               	movlw	70
+  1626  007AD4  5C23               	subwf	delay@j^0,w,c
+  1627  007AD6  A0D8               	btfss	status,0,c
+  1628  007AD8  EF70  F03D         	goto	u21
+  1629  007ADC  EF72  F03D         	goto	u20
+  1630  007AE0                     u21:
+  1631  007AE0  EF62  F03D         	goto	l848
+  1632  007AE4                     u20:
+  1633  007AE4                     
+  1634                           ;cases.c: 21:     }
+  1635  007AE4  4A21               	infsnz	delay@i^0,f,c
+  1636  007AE6  2A22               	incf	(delay@i+1)^0,f,c
+  1637  007AE8  BE22               	btfsc	(delay@i+1)^0,7,c
+  1638  007AEA  EF80  F03D         	goto	u31
+  1639  007AEE  0E88               	movlw	136
+  1640  007AF0  5C21               	subwf	delay@i^0,w,c
+  1641  007AF2  0E13               	movlw	19
+  1642  007AF4  5822               	subwfb	(delay@i+1)^0,w,c
+  1643  007AF6  A0D8               	btfss	status,0,c
+  1644  007AF8  EF80  F03D         	goto	u31
+  1645  007AFC  EF82  F03D         	goto	u30
+  1646  007B00                     u31:
+  1647  007B00  EF5E  F03D         	goto	l842
+  1648  007B04                     u30:
+  1649  007B04  0012               	return		;funcret
+  1650  007B06                     __end_of_delay:
+  1651                           	opt callstack 0
+  1652                           
+  1653 ;; *************** function _UARTWrite *****************
+  1654 ;; Defined at:
+  1655 ;;		line 24 in file "UART.c"
+  1656 ;; Parameters:    Size  Location     Type
+  1657 ;;  data            1    wreg     unsigned char 
+  1658 ;; Auto vars:     Size  Location     Type
+  1659 ;;  data            1    0[COMRAM] unsigned char 
+  1660 ;; Return value:  Size  Location     Type
+  1661 ;;                  1    wreg      void 
+  1662 ;; Registers used:
+  1663 ;;		wreg
+  1664 ;; Tracked objects:
+  1665 ;;		On entry : 0/0
+  1666 ;;		On exit  : 0/0
+  1667 ;;		Unchanged: 0/0
+  1668 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  1669 ;;      Params:         0       0       0       0       0       0       0       0       0
+  1670 ;;      Locals:         1       0       0       0       0       0       0       0       0
+  1671 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  1672 ;;      Totals:         1       0       0       0       0       0       0       0       0
+  1673 ;;Total ram usage:        1 bytes
+  1674 ;; Hardware stack levels used:    1
+  1675 ;; This function calls:
+  1676 ;;		Nothing
+  1677 ;; This function is called by:
+  1678 ;;		_start
+  1679 ;;		_cmd
+  1680 ;;		_Par_Validated
+  1681 ;;		_Ins_Validated
+  1682 ;;		_Coord_Validated
+  1683 ;;		_end
+  1684 ;; This function uses a non-reentrant model
+  1685 ;;
+  1686                           
+  1687                           	psect	text12
+  1688  0079C0                     __ptext12:
+  1689                           	opt callstack 0
+  1690  0079C0                     _UARTWrite:
+  1691                           	opt callstack 29
+  1692                           
+  1693                           ;incstack = 0
+  1694                           ;UARTWrite@data stored from wreg
+  1695  0079C0  6E21               	movwf	UARTWrite@data^0,c
+  1696  0079C2                     l98:
+  1697  0079C2  A89E               	btfss	158,4,c	;volatile
+  1698  0079C4  EFE6  F03C         	goto	u41
+  1699  0079C8  EFE8  F03C         	goto	u40
+  1700  0079CC                     u41:
+  1701  0079CC  EFE1  F03C         	goto	l98
+  1702  0079D0                     u40:
+  1703  0079D0                     
+  1704                           ;UART.c: 26:     TXREG= data;
+  1705  0079D0  C021  FFAD         	movff	UARTWrite@data,4013	;volatile
+  1706  0079D4  0012               	return		;funcret
+  1707  0079D6                     __end_of_UARTWrite:
+  1708                           	opt callstack 0
+  1709  0000                     
+  1710                           	psect	rparam
+  1711  0000                     tosu	equ	0xFFF
+  1712                           tosh	equ	0xFFE
+  1713                           tosl	equ	0xFFD
+  1714                           stkptr	equ	0xFFC
+  1715                           pclatu	equ	0xFFB
+  1716                           pclath	equ	0xFFA
+  1717                           pcl	equ	0xFF9
+  1718                           tblptru	equ	0xFF8
+  1719                           tblptrh	equ	0xFF7
+  1720                           tblptrl	equ	0xFF6
+  1721                           tablat	equ	0xFF5
+  1722                           prodh	equ	0xFF4
+  1723                           prodl	equ	0xFF3
+  1724                           indf0	equ	0xFEF
+  1725                           postinc0	equ	0xFEE
+  1726                           postdec0	equ	0xFED
+  1727                           preinc0	equ	0xFEC
+  1728                           plusw0	equ	0xFEB
+  1729                           fsr0h	equ	0xFEA
+  1730                           fsr0l	equ	0xFE9
+  1731                           wreg	equ	0xFE8
+  1732                           indf1	equ	0xFE7
+  1733                           postinc1	equ	0xFE6
+  1734                           postdec1	equ	0xFE5
+  1735                           preinc1	equ	0xFE4
+  1736                           plusw1	equ	0xFE3
+  1737                           fsr1h	equ	0xFE2
+  1738                           fsr1l	equ	0xFE1
+  1739                           bsr	equ	0xFE0
+  1740                           indf2	equ	0xFDF
+  1741                           postinc2	equ	0xFDE
+  1742                           postdec2	equ	0xFDD
+  1743                           preinc2	equ	0xFDC
+  1744                           plusw2	equ	0xFDB
+  1745                           fsr2h	equ	0xFDA
+  1746                           fsr2l	equ	0xFD9
+  1747                           status	equ	0xFD8
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        32
+    BSS         8
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMRAM           95     30      70
+    BANK0           160      0       0
+    BANK1           256      0       0
+    BANK2           256      0       0
+    BANK3           256      0       0
+    BANK4           256      0       0
+    BANK5           256      0       0
+    BANK6           256      0       0
+    BANK7           256      0       0
+
+Pointer List with Targets:
+
+    coord@P2	PTR unsigned char  size(2) Largest target is 1
+		 -> Par2(COMRAM[1]), 
+
+    coord@y	PTR unsigned short  size(2) Largest target is 2
+		 -> cord_y(COMRAM[2]), 
+
+    coord@x	PTR unsigned short  size(2) Largest target is 2
+		 -> cord_x(COMRAM[2]), 
+
+    coord@L	PTR unsigned char  size(2) Largest target is 1
+		 -> letter(COMRAM[1]), 
+
+    coord@P1	PTR unsigned char  size(2) Largest target is 1
+		 -> Par1(COMRAM[1]), 
+
+
+Critical Paths under _main in COMRAM
+
+    _main->_cmd
+    _start->_delay
+    _end->_delay
+    _cmd->_coord
+    _UARTConfi->___aldiv
+    _Par_Validated->_delay
+    _Ins_Validated->_delay
+    _Coord_Validated->_delay
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _main in BANK4
+
+    None.
+
+Critical Paths under _main in BANK5
+
+    None.
+
+Critical Paths under _main in BANK6
+
+    None.
+
+Critical Paths under _main in BANK7
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 2     2      0    2219
+                                             28 COMRAM     2     2      0
+                    _Coord_Validated
+                      _Ins_Validated
+                      _Par_Validated
+                          _UARTConfi
+                                _cmd
+                                _end
+                              _start
+ ---------------------------------------------------------------------------------
+ (1) _start                                                2     2      0     120
+                                              4 COMRAM     2     2      0
+                          _UARTWrite
+                              _delay
+ ---------------------------------------------------------------------------------
+ (1) _end                                                  2     2      0     120
+                                              4 COMRAM     2     2      0
+                          _UARTWrite
+                              _delay
+ ---------------------------------------------------------------------------------
+ (1) _cmd                                                  2     2      0     894
+                                             26 COMRAM     2     2      0
+                          _UARTWrite
+                              _coord
+ ---------------------------------------------------------------------------------
+ (2) _coord                                               26    16     10     811
+                                              0 COMRAM    26    16     10
+                           _UARTRead
+ ---------------------------------------------------------------------------------
+ (3) _UARTRead                                             0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _UARTConfi                                            6     4      2     725
+                                             14 COMRAM     6     4      2
+                            ___aldiv
+ ---------------------------------------------------------------------------------
+ (2) ___aldiv                                             14     6      8     604
+                                              0 COMRAM    14     6      8
+ ---------------------------------------------------------------------------------
+ (1) _Par_Validated                                        2     2      0     120
+                                              4 COMRAM     2     2      0
+                          _UARTWrite
+                              _delay
+ ---------------------------------------------------------------------------------
+ (1) _Ins_Validated                                        2     2      0     120
+                                              4 COMRAM     2     2      0
+                          _UARTWrite
+                              _delay
+ ---------------------------------------------------------------------------------
+ (1) _Coord_Validated                                      2     2      0     120
+                                              4 COMRAM     2     2      0
+                          _UARTWrite
+                              _delay
+ ---------------------------------------------------------------------------------
+ (2) _delay                                                4     4      0      60
+                                              0 COMRAM     4     4      0
+ ---------------------------------------------------------------------------------
+ (2) _UARTWrite                                            1     1      0      15
+                                              0 COMRAM     1     1      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 3
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _Coord_Validated
+     _UARTWrite
+     _delay
+   _Ins_Validated
+     _UARTWrite
+     _delay
+   _Par_Validated
+     _UARTWrite
+     _delay
+   _UARTConfi
+     ___aldiv
+   _cmd
+     _UARTWrite
+     _coord
+       _UARTRead
+   _end
+     _UARTWrite
+     _delay
+   _start
+     _UARTWrite
+     _delay
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BIGRAM             7FF      0       0      21        0.0%
+EEDATA             100      0       0       0        0.0%
+BITBANK7           100      0       0      18        0.0%
+BANK7              100      0       0      19        0.0%
+BITBANK6           100      0       0      16        0.0%
+BANK6              100      0       0      17        0.0%
+BITBANK5           100      0       0      14        0.0%
+BANK5              100      0       0      15        0.0%
+BITBANK4           100      0       0      12        0.0%
+BANK4              100      0       0      13        0.0%
+BITBANK3           100      0       0      10        0.0%
+BANK3              100      0       0      11        0.0%
+BITBANK2           100      0       0       8        0.0%
+BANK2              100      0       0       9        0.0%
+BITBANK1           100      0       0       6        0.0%
+BANK1              100      0       0       7        0.0%
+BITBANK0            A0      0       0       4        0.0%
+BANK0               A0      0       0       5        0.0%
+BITCOMRAM           5F      0       0       0        0.0%
+COMRAM              5F     1E      46       1       73.7%
+BITSFR               0      0       0     200        0.0%
+SFR                  0      0       0     200        0.0%
+STACK                0      0       0       2        0.0%
+NULL                 0      0       0       0        0.0%
+ABS                  0      0      46      20        0.0%
+DATA                 0      0      46       3        0.0%
+CODE                 0      0       0       0        0.0%
+
+
+Microchip Technology PIC18 Macro Assembler V2.10 build 88905656 
+Symbol Table                                                                                   Wed Nov 27 18:31:03 2019
+
+                      l33 7B04                        l43 7BEC                        l37 7AAA  
+                      l70 7A66                        l38 7AB2                        l63 7D68  
+                      l47 7CE4                        l71 7A6E                        l56 7C68  
+                      l76 7EF2                        l95 7B76                        l98 79C2  
+                      u10 79BC                        u11 79B8                        u20 7AE4  
+                      u21 7AE0                        u30 7B04                        u31 7B00  
+                      u40 79D0                        u41 79CC                       l101 79D4  
+                     l104 79AE                       l107 79BE                       l143 7DC2  
+                     l236 7FFE                       l830 79AE                       l832 79BC  
+                     l850 7AC8                       l842 7ABC                       l930 7A78  
+                     l852 7AE4                       l836 7AB4                       l932 7A8A  
+                     l924 7A70                       l854 7AE8                       l934 7A8E  
+                     l856 79C2                       l848 7AC4                       l936 7AAC  
+                     l858 79D0                       l970 7C80                       l938 7AB0  
+                     l972 7C92                       l990 7CBA                       l974 7C96  
+                     l982 7CA0                       l966 7C6A                       l992 7CBE  
+                     l976 7C9A                       l968 7C6E                       l994 7CDA  
+                     l996 7CDE                       l988 7CA8                       l998 7CE2  
+                     u200 7D00                       u120 7AAA                       u201 7CFC  
+                     u121 7AA6                       u210 7D16                       u211 7D12  
+                     u220 7D5E                       u140 7C80                       u300 7FDE  
+                     u221 7D5A                       u141 7C7C                       u301 7FDA  
+                     u150 7C92                       u310 7BBC                       u230 7A66  
+                     u151 7C8E                       u311 7BB8                       u231 7A62  
+                     u160 7CDA                       u240 7E4E                       u161 7CD6  
+                     u241 7E4A                       u170 7C04                       u250 7F06  
+                     u171 7C00                       u251 7F02                       u180 7C16  
+                     u260 7F28                       u181 7C12                       u261 7F24  
+                     u190 7C5E                       u270 7F62                       u191 7C5A  
+                     u271 7F5E                       u280 7F84                       u281 7F80  
+                     u290 7FAC                       u291 7FA8                       _e_c 0001  
+                     _cmd 7B78                       _end 7A2C                       wreg 000FE8  
+            __CFG_LVP$OFF 000000               coord@buffer 002F              __CFG_WDT$OFF 000000  
+                    l1010 7C1A                      l1002 7BEE                      l1012 7C1E  
+                    l1004 7BF2                      l1030 7C5E                      l1006 7C04  
+                    l1040 7CEA                      l1032 7C62                      l1024 7C2C  
+                    l1008 7C16                      l1200 7FDE                      l1042 7D00  
+                    l1034 7C66                      l1026 7C3E                      l1018 7C24  
+                    l1202 7FEE                      l1210 7B82                      l1060 7D2C  
+                    l1044 7D16                      l1028 7C42                      l1220 7BA0  
+                    l1070 7D66                      l1062 7D3E                      l1046 7D1A  
+                    l1054 7D24                      l1038 7CE6                      l1230 7B06  
+                    l1150 7E1E                      l1142 7E10                      l1222 7BBC  
+                    l1206 7B78                      l1064 7D42                      l1048 7D1E  
+                    l1240 7B6E                      l1232 7B0A                      l1160 7EA6  
+                    l1152 7E2E                      l1224 7BE8                      l1216 7B8A  
+                    l1208 7B7E                      l1080 7A34                      l1066 7D5E  
+                    l1170 7F1A                      l1162 7EF4                      l1242 7B70  
+                    l1234 7B68                      l1154 7E32                      l1226 7BEA  
+                    l1218 7B9C                      l1082 7A46                      l1074 7A2C  
+                    l1250 7D6E                      l1068 7D62                      l1180 7F62  
+                    l1172 7F28                      l1164 7EF8                      l1244 7B72  
+                    l1236 7B6A                      l1156 7E4E                      l1148 7E18  
+                    l1084 7A4A                      l1260 7D9A                      l1252 7D7A  
+                    l1190 7FAC                      l1182 7F6A                      l1174 7F38  
+                    l1166 7F06                      l1246 7B74                      l1238 7B6C  
+                    l1158 7E66                      l1086 7A68                      l1262 7DA4  
+                    l1270 7DC2                      l1254 7D7E                      l1192 7FBC  
+                    l1184 7F76                      l1176 7F3C                      l1168 7F16  
+                    l1088 7A6C                      l1280 7DD6                      l1264 7DAE  
+                    l1256 7D86                      l1248 7D6A                      l1194 7FBE  
+                    l1186 7F84                      l1178 7F4C                      l1266 7DB8  
+                    l1258 7D90                      ?_cmd 0021                      l1196 7FC8  
+                    l1188 7F8E                      l1198 7FCE                      ?_end 0021  
+                    _RCIF 007CF5                      _Par1 0046                      _Par2 0044  
+                    cmd@i 003B                      _main 7D6A                      _init 000E  
+                    end@i 0025                      _okay 001D                      fsr2h 000FDA  
+                    indf2 000FDF                      fsr1l 000FE1                      fsr2l 000FD9  
+       ??_Coord_Validated 0025                      prodh 000FF4                      prodl 000FF3  
+                    start 0000              ___param_bank 000000             _Ins_Validated 7BEE  
+                   ??_cmd 003B                     ??_end 0025             __CFG_PLLDIV$2 000000  
+         __end_of___aldiv 8000                     ?_main 0021                     _RCREG 000FAE  
+           _Par_Validated 7C6A                     _SPBRG 000FAF                     _PORTC 000F82  
+                   _TRISC 000F94                     _TXREG 000FAD        __size_of_UARTConfi 0072  
+                   _Error 0018          __end_of_UARTRead 79C0        __size_of_UARTWrite 0016  
+                   _delay 7AB4                     _coord 7E10                     _start 7A70  
+                   tablat 000FF5                     status 000FD8            __CFG_MCLRE$OFF 000000  
+         __initialization 79F6              __end_of_main 7E10            ?_Ins_Validated 0021  
+                  ??_main 003D            ?_Par_Validated 0021             __activetblptr 000002  
+                  ?_delay 0021                    ?_coord 0021                    ?_start 0021  
+                  _OSCCON 000FD3         __end_of_UARTConfi 7B78                 ??___aldiv 0029  
+       __end_of_UARTWrite 79D6                    _cord_x 0042                    _cord_y 0040  
+                  delay@i 0021                    delay@j 0023                    _letter 0045  
+                  clear_0 7A1C                    coord@L 0023                    coord@i 0039  
+                  coord@x 0025                    coord@y 0027              __pdataCOMRAM 0001  
+                  tblptrh 000FF7                    tblptrl 000FF6                    tblptru 000FF8  
+                  start@i 0025                __accesstop 0060   __end_of__initialization 7A22  
+         __CFG_PBADEN$OFF 000000             ___rparam_used 000001           ??_Ins_Validated 0025  
+          __pcstackCOMRAM 0021                 ?_UARTRead 0021             __end_of_delay 7B06  
+           __end_of_coord 7EF4             __end_of_start 7AB4           ??_Par_Validated 0025  
+         _Coord_Validated 7CE6                   ??_delay 0021                   ??_coord 002B  
+                 ??_start 0025                ??_UARTRead 0021          Coord_Validated@i 0025  
+                 __Hparam 0000                   __Lparam 0000                   ___aldiv 7EF4  
+                 __pcinit 79F6                   __ramtop 0800                   __ptext0 7D6A  
+                 __ptext1 7A70                   __ptext2 7A2C                   __ptext3 7B78  
+                 __ptext4 7E10                   __ptext5 79AE                   __ptext6 7B06  
+                 __ptext7 7EF4                   __ptext8 7C6A                   __ptext9 7BEE  
+ __end_of_Coord_Validated 7D6A              __size_of_cmd 0076              __size_of_end 0044  
+        ___aldiv@dividend 0021                   coord@P1 0021                   coord@P2 0029  
+    end_of_initialization 7A22             __Lmediumconst 0000                 _RCSTAbits 000FAB  
+        ___aldiv@quotient 002B                   postdec1 000FE5                   postdec2 000FDD  
+                 postinc0 000FEE                   postinc2 000FDE                 _UARTConfi 7B06  
+               _UARTWrite 79C0                 _TRISCbits 000F94                 _TXSTAbits 000FAC  
+              ?_UARTConfi 002F             __pidataCOMRAM 79D6         __size_of_UARTRead 0012  
+              ?_UARTWrite 0021          ?_Coord_Validated 0021       start_initialization 79F6  
+             __end_of_cmd 7BEE               __end_of_end 7A70             UARTConfi@BAUD 002F  
+               _NextState 003F     __end_of_Ins_Validated 7C6A     __end_of_Par_Validated 7CE6  
+             __pbssCOMRAM 003F             _UARTConfi$955 0031                  ?___aldiv 0021  
+             ??_UARTConfi 0031               ??_UARTWrite 0021            __size_of_delay 0052  
+          __size_of_coord 00E4            __size_of_start 0044           ___aldiv@divisor 0025  
+         ___aldiv@counter 0029                  _PIR1bits 000F9E                  _UARTRead 79AE  
+               coord@read 0038             UARTWrite@data 0021                 copy_data0 7A0A  
+                __Hrparam 0000                  __Lrparam 0000          __size_of___aldiv 010C  
+                __ptext10 7CE6                  __ptext11 7AB4                  __ptext12 79C0  
+          Ins_Validated@i 0025             __size_of_main 00A6            Par_Validated@i 0025  
+__size_of_Coord_Validated 0084       __CFG_FOSC$INTOSC_HS 000000              ___aldiv@sign 002A  
+  __size_of_Ins_Validated 007C    __size_of_Par_Validated 007C  

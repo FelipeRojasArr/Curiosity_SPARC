@@ -1,0 +1,5 @@
+#define FREC_CRISTAL 8000000L
+#define INITIAL_FRAME 0X60
+#define ENDING_FRAME 0x62
+#define LETTER_C   0x67
+#define LETTER_S   0x83
