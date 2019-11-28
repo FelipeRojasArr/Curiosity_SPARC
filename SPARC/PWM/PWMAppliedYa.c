@@ -53,16 +53,12 @@ void main(void){
         if (CoordRelatX>0) CoordAntX=CoordAntX+pasosRecorridos;
     }
 //    //PWM en Y
-//    pasosRecorridos=PWM(CoordRelatY);
-//    
-//    if(CoordRelatY<0) CoordAntY= CoordAntY-pasosRecorridos; //Si la distancia es negativa se resta
-//    else{ 
-//        if (CoordAntY>0) CoordAntY=CoordAntY+pasosRecorridos;
-//    }
-    if (CoordAntX==200) PORTCbits.RC0=1;
-    __delay_ms(450);
-    PORTCbits.RC0=0;
- 
+    pasosRecorridos=PWMy(CoordRelatY);
+    
+    if(CoordRelatY<0) CoordAntY= CoordAntY-pasosRecorridos; //Si la distancia es negativa se resta
+    else{ 
+        if (CoordAntY>0) CoordAntY=CoordAntY+pasosRecorridos;
+   }
     
 }
 
