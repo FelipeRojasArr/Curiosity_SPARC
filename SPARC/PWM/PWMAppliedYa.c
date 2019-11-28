@@ -25,14 +25,48 @@
 #define PR2value 0xF9 /*PR2 VALUE*/
 #define CCPRXL 0x7D    /*CCPR1L VALUE*/
 
-unsigned int ContarPulsos(unsigned int pasosA);
-void Calculos(void);
+void SetUp(void);
+int PWMx (int distancia);
+int PWMy (int distancia);
+int ContarPulsos(int pasos);
+
 void OneShot(void);
 void ResetOneShot(void);
+int pasosRecorridos;
+int PasosActuales;
+
+
 
 void main(void){
+    SetUp();
+    CoordRelatX=(200);// Recorrido total requerido 
+    CoordRelatY=800;
+    CoordAntX=0;
+    CoordAntX=0;
     
-   //CLOCK FREQUENCY CONFIGURATION
+    //PWM en X
+    pasosRecorridos=PWMx(CoordRelatX);
+      
+    if(CoordRelatX<0) CoordAntX= CoordAntX-pasosRecorridos; //Si la distancia es negativa se resta
+    else{ 
+        if (CoordRelatX>0) CoordAntX=CoordAntX+pasosRecorridos;
+    }
+//    //PWM en Y
+//    pasosRecorridos=PWM(CoordRelatY);
+//    
+//    if(CoordRelatY<0) CoordAntY= CoordAntY-pasosRecorridos; //Si la distancia es negativa se resta
+//    else{ 
+//        if (CoordAntY>0) CoordAntY=CoordAntY+pasosRecorridos;
+//    }
+ 
+    if (CoordAntX==200) bit=1;
+    __delay_ms(350);
+    bit=0;
+    
+}
+
+void SetUp(void){
+    //CLOCK FREQUENCY CONFIGURATION
    //============================
    OSCCON = 0x60;                       // 4 MHz internal oscillator
 
@@ -63,83 +97,63 @@ void main(void){
     TMR2 = 0;		/* Clear Timer2 initially */
     TMR2ON = 1;		/* Timer ON for start counting*/
     ////////////////////////////////////////////////////////////////////
-    PORTD = 0x00;
-    LATD = 0x00;
-    TRISD = 0x00;
     
     //================================================
     /*DEFINIMOS COMO OUTPUTS LOS PINES DE LOS ENABLES*/
     TRISCbits.RC6 = OUTPUT;	/*EnableA*/	
     TRISCbits.RC7 = OUTPUT;	/*Enable B*/
     TRISCbits.RC0 = OUTPUT; /*Bit de prueba*/
-    
-    
-    while(1){
-             
-        //Calculos();
-        pasosA=200;
-        PasosActualesA= ContarPulsos(pasosA); 
-        if (PasosActualesA==200) bit=HIGH;
-        __delay_ms(250);
-        bit=LOW;
+}
+
+int PWMx (int distancia){
+    if (distancia<0){
+        salidaDirA=0;
+        salidaDirB=0;
+        distancia=distancia*(-1);
     }
-    
+    else {
+        salidaDirA=1;
+        salidaDirB=1;
+    } 
+    int pasos= ContarPulsos(distancia);
+    return(pasos);   
 }
 
-
-
-void Calculos(void){      
-    CoordRelatX=CoordNewX-CoordAntX;
-    CoordRelatY=CoordNewY-CoordAntY;
-    
-    //MovMotorA y MovMotorB son delta del motor A y delta del motor B para saber cuanto los tenemos que mover
-    MovMotorA=CoordRelatX+CoordRelatY;
-    MovMotorB=CoordRelatX-CoordRelatY;
-    //Si el delta es negativo la direccion es 1
-    if(MovMotorA<0)  dirA=adelante;
-         else dirA=atras;
-
-    if (MovMotorB<0) dirB=adelante;
-    else dirB=atras;
-    
-    //Guardamos las coordenadas actuales para usarlas posteriormente
-    CoordAntX=CoordNewX;
-    CoordAntY=CoordNewY;
-
-    //Si el delta es negativo lo multiplicamos por -1 para volverlo positivo
-    if (MovMotorA<0) MovMotorA=MovMotorA*(-1);
-    if (MovMotorB<0) MovMotorB=MovMotorB*(-1);
-
-    //Regla de tres para obtener pasos necesarios
-    //Con 5 pasos recorre 1mm (distancia*5)
-    pasosA= (MovMotorA*NumPasos);
-    pasosB= (MovMotorB*NumPasos);
-    
-    salidaDirA=dirA;
-    salidaDirB=dirB;
+int PWMy (int distancia){
+    if (distancia<0){
+        salidaDirA=0;
+        salidaDirB=1;
+        distancia=distancia*(-1);
+    }
+    else {
+        salidaDirA=1;
+        salidaDirB=1;
+    } 
+   int pasos= ContarPulsos(distancia);
+    return(pasos);   
 }
-
-unsigned int ContarPulsos(unsigned int pasosA){
-    
-    PasosActualesA=0;
+int ContarPulsos(int pasos){
+    PasosActuales=0;
     ons=0;
-    enableA=LOW;
-    while(PasosActualesA<pasosA)
+    enableA=0;
+    while(PasosActuales<= pasos)
     {
         if (PORTCbits.CCP1==1) OneShot();
         if(ons==1) ResetOneShot();
     }
     
-    enableA=HIGH;    
+    enableA=1;
+    return(PasosActuales);  
 }
 void OneShot(void){
     if(ons==1) return;
-    PasosActualesA++;
-    ons=1;
-    return;
+    if(PORTCbits.CCP1==1)
+    {
+        PasosActuales++;
+        ons=1;
+    }
 }
 void ResetOneShot(void){
     if(PORTCbits.CCP1==1)return;
     if(PORTCbits.CCP1==0)ons=0;
-    return;
 }
