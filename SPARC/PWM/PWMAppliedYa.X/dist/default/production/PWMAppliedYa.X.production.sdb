@@ -1,0 +1,206 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4550 ]
+[d frameptr 4065 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"40 C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
+[v _main main `(v  1 e 1 0 ]
+"68
+[v _SetUp SetUp `(v  1 e 1 0 ]
+"108
+[v _PWMx PWMx `(i  1 e 2 0 ]
+"135
+[v _ContarPulsos ContarPulsos `(i  1 e 2 0 ]
+"148
+[v _OneShot OneShot `(v  1 e 1 0 ]
+"156
+[v _ResetOneShot ResetOneShot `(v  1 e 1 0 ]
+"21 C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X/Variables.h
+[v _CoordAntX CoordAntX `ui  1 e 2 0 ]
+"27
+[v _CoordRelatX CoordRelatX `i  1 e 2 0 ]
+"28
+[v _CoordRelatY CoordRelatY `i  1 e 2 0 ]
+"45
+[v _ons ons `ui  1 e 2 0 ]
+[s S33 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+"2605 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
+[s S42 . 1 `uc 1 T1OSO 1 0 :1:0 
+`uc 1 T1OSI 1 0 :1:1 
+`uc 1 CCP1 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 TX 1 0 :1:6 
+`uc 1 RX 1 0 :1:7 
+]
+[s S49 . 1 `uc 1 T13CKI 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 P1A 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 CK 1 0 :1:6 
+`uc 1 DT 1 0 :1:7 
+]
+[s S56 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 CCP2 1 0 :1:1 
+`uc 1 PA1 1 0 :1:2 
+]
+[s S60 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 PA2 1 0 :1:1 
+]
+[u S63 . 1 `S33 1 . 1 0 `S42 1 . 1 0 `S49 1 . 1 0 `S56 1 . 1 0 `S60 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES63  1 e 1 @3970 ]
+[s S186 . 1 `uc 1 RD0 1 0 :1:0 
+`uc 1 RD1 1 0 :1:1 
+`uc 1 RD2 1 0 :1:2 
+`uc 1 RD3 1 0 :1:3 
+`uc 1 RD4 1 0 :1:4 
+`uc 1 RD5 1 0 :1:5 
+`uc 1 RD6 1 0 :1:6 
+`uc 1 RD7 1 0 :1:7 
+]
+"2736
+[s S195 . 1 `uc 1 SPP0 1 0 :1:0 
+`uc 1 SPP1 1 0 :1:1 
+`uc 1 SPP2 1 0 :1:2 
+`uc 1 SPP3 1 0 :1:3 
+`uc 1 SPP4 1 0 :1:4 
+`uc 1 SPP5 1 0 :1:5 
+`uc 1 SPP6 1 0 :1:6 
+`uc 1 SPP7 1 0 :1:7 
+]
+[s S204 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 SS2 1 0 :1:7 
+]
+[u S207 . 1 `S186 1 . 1 0 `S195 1 . 1 0 `S204 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES207  1 e 1 @3971 ]
+[s S154 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"3875
+[s S161 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+[u S168 . 1 `S154 1 . 1 0 `S161 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES168  1 e 1 @3988 ]
+"5587
+[v _CMCON CMCON `VEuc  1 e 1 @4020 ]
+[s S108 . 1 `uc 1 CVR 1 0 :4:0 
+`uc 1 CVRSS 1 0 :1:4 
+`uc 1 CVRR 1 0 :1:5 
+`uc 1 CVROE 1 0 :1:6 
+`uc 1 CVREN 1 0 :1:7 
+]
+"5702
+[s S114 . 1 `uc 1 CVR0 1 0 :1:0 
+`uc 1 CVR1 1 0 :1:1 
+`uc 1 CVR2 1 0 :1:2 
+`uc 1 CVR3 1 0 :1:3 
+`uc 1 CVREF 1 0 :1:4 
+]
+[s S120 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 CVROEN 1 0 :1:6 
+]
+[u S123 . 1 `S108 1 . 1 0 `S114 1 . 1 0 `S120 1 . 1 0 ]
+[v _CVRCONbits CVRCONbits `VES123  1 e 1 @4021 ]
+"6242
+[v _CCP2CON CCP2CON `VEuc  1 e 1 @4026 ]
+"6313
+[v _CCPR2L CCPR2L `VEuc  1 e 1 @4027 ]
+"6327
+[v _CCP1CON CCP1CON `VEuc  1 e 1 @4029 ]
+"6496
+[v _CCPR1L CCPR1L `VEuc  1 e 1 @4030 ]
+"6581
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
+"7200
+[v _T2CON T2CON `VEuc  1 e 1 @4042 ]
+"7298
+[v _PR2 PR2 `VEuc  1 e 1 @4043 ]
+"7408
+[v _TMR2 TMR2 `VEuc  1 e 1 @4044 ]
+"7986
+[v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
+"10848
+[v _TMR2ON TMR2ON `VEb  1 e 0 @32338 ]
+"10929
+[v _TRISC1 TRISC1 `VEb  1 e 0 @31905 ]
+"10932
+[v _TRISC2 TRISC2 `VEb  1 e 0 @31906 ]
+"35 C:\Users\MLS\MPLABXProjects\PWMAppliedYa.X\PWMAppliedYa.c
+[v _pasosRecorridos pasosRecorridos `i  1 e 2 0 ]
+"36
+[v _PasosActuales PasosActuales `i  1 e 2 0 ]
+"40
+[v _main main `(v  1 e 1 0 ]
+{
+"66
+} 0
+"68
+[v _SetUp SetUp `(v  1 e 1 0 ]
+{
+"106
+} 0
+"108
+[v _PWMx PWMx `(i  1 e 2 0 ]
+{
+"118
+[v PWMx@pasos pasos `i  1 a 2 5 ]
+"108
+[v PWMx@distancia distancia `i  1 p 2 3 ]
+"120
+} 0
+"135
+[v _ContarPulsos ContarPulsos `(i  1 e 2 0 ]
+{
+[v ContarPulsos@pasos pasos `i  1 p 2 0 ]
+"147
+} 0
+"156
+[v _ResetOneShot ResetOneShot `(v  1 e 1 0 ]
+{
+"159
+} 0
+"148
+[v _OneShot OneShot `(v  1 e 1 0 ]
+{
+"155
+} 0
