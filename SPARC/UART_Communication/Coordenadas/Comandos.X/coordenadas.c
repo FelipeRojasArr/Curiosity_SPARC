@@ -1,21 +1,11 @@
-   /*
- * File:   stepperWASD.c
- * Author: Rulo
- *
- * Created on October 24, 2019, 3:00 PM
- */
-
-
-
-//systemState NextState;
-
 #include <pic18f4550.h>
 #include <xc.h>
 #include <string.h>
 #include <stdlib.h>
 #include <stdint.h>
-#include "CONFIGURACION1.h"
-#include "USARTLIBRERIA.h"
+#include "config.h"
+#include "UART.h"
+#include "cases.h"
 uint8_t start(void);
 uint8_t cmd(void);
 uint8_t Par_Validated(void);
@@ -28,7 +18,7 @@ systemState NextState;
 
 void main(void) {
     OSCCON=0x72;
-    USARTConfi(9600);
+    UARTConfi(9600);
     TRISC=0X00;
     
     

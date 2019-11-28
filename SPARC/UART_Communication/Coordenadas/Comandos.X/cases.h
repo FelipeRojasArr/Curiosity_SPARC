@@ -1,6 +1,3 @@
-void USARTConfi(long BAUD);
-void USARTWrite(char data);
-char USARTRead();
 int coord(char* P1, char* L, unsigned short* x, unsigned short* y, char* P2);
 
 char Par1;

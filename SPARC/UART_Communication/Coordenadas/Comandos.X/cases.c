@@ -1,25 +1,15 @@
-/*
- * File:   cases.c
- * Author: angie
- *
- * Created on 26 de noviembre de 2019, 09:57 PM
- */
-
-
 #include <xc.h>
 #include <stdint.h>
 #include <string.h>
-#include "CONFIGURACION1.h"
-#include "USARTLIBRERIA.h"
+#include "config.h"
+#include "UART.h"
+#include "cases.h"
 
 char init[10]="Waiting...";
 char e_c[13]="Enter_command";
 char Error[5]="Error";
-char par[8]="Par_okay";
 char okay[4]="Okay" ;
-char ins[8]="Ins_okay" ;
-char nope[4]="Nope" ;
-char extra[5]="ANGIE";
+
 
 
 
@@ -34,7 +24,7 @@ void delay(void){
 
 uint8_t start(){
      for(int i=0;i<10;i++){
-        USARTWrite(init[i]);
+        UARTWrite(init[i]);
     }
      PORTC = 0xff;
      delay();
@@ -43,10 +33,10 @@ uint8_t start(){
 
 
 uint8_t cmd(){
-    USARTWrite(13);
+    UARTWrite(13);
     PORTC = 0x00;
     for(int i=0;i<10;i++){
-        USARTWrite(e_c[i]);
+        UARTWrite(e_c[i]);
     }
     coord(&Par1,&letter,&cord_x, &cord_y, &Par2);
     PORTC =0Xff;
@@ -55,14 +45,14 @@ uint8_t cmd(){
 
 uint8_t Par_Validated(){
         PORTC=0x00;
-    if(Par1==60 && Par2==62){
+    if(Par1==INITIAL_FRAME && Par2==ENDING_FRAME){
         PORTC=0X02;
         delay();
         return validate_Instruct_State;
     }
     else{
         for(int i=0;i<5;i++){
-            USARTWrite(Error[i]);
+            UARTWrite(Error[i]);
         }
         PORTC= 0X04;
         delay();
@@ -72,14 +62,14 @@ uint8_t Par_Validated(){
 
 uint8_t Ins_Validated(){
     PORTC=0x00;
-    if(letter==99 || letter==67 || letter ==115 || letter== 83){
+    if(letter==LETTER_C || letter== LETTER_S){
         PORTC=0X02;
         delay();
         return validate_Coord_State;
     }
     else{
         for(int i=0;i<5;i++){
-            USARTWrite(Error[i]);
+            UARTWrite(Error[i]);
         }
         PORTC= 0X04;
         delay();
@@ -96,7 +86,7 @@ uint8_t Coord_Validated(void){
     }
     else{
         for(int i=0;i<5;i++){
-            USARTWrite(Error[i]);
+            UARTWrite(Error[i]);
         }
         PORTC= 0X04;
         delay();
@@ -107,7 +97,7 @@ uint8_t Coord_Validated(void){
 
 uint8_t end(){
     for(int i=0;i<4;i++){
-        USARTWrite(okay[i]);
+        UARTWrite(okay[i]);
     }
     PORTC=0XFF;
     delay();
@@ -120,7 +110,7 @@ int coord(char* P1, char*L, uint16_t* x , uint16_t* y , char*P2){
         char read;
         //printf("\nComando:");
         for(int i=0; i<=8; i++){
-            read= USARTRead(); //scanf("%c", &read);
+            read= UARTRead(); //scanf("%c", &read);
             buffer[i]=read;
         }
         *P1= buffer[0];
