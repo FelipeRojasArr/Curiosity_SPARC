@@ -5733,7 +5733,7 @@ uint8_t cmd(void);
 uint8_t Par_Validated(void);
 uint8_t Ins_Validated(void);
 uint8_t Coord_Validated(void);
-uint8_t end(void);
+void end(void);
 
 systemState NextState;
 
@@ -5743,11 +5743,7 @@ uint8_t click;
 
 void verification(void){
     NextState = iddle_State;
-
-    while(1){
-
-
-        switch(NextState)
+    switch(NextState)
   {
             case iddle_State:{
                 NextState= start();
@@ -5770,11 +5766,10 @@ void verification(void){
             }break;
 
             case end_State:{
-                NextState=end();
+                end();
+                return;
             }break;
 
             default: break;
-
-        }
     }
 }
