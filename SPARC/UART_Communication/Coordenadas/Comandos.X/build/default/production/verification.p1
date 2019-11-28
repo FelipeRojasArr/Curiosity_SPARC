@@ -1,25 +1,25 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"30 ./cases.h
-[; ;./cases.h: 30: systemState NextState;
+"31 ./cases.h
+[; ;./cases.h: 31: systemState NextState;
 [c E3202 0 1 2 3 4 5 6 .. ]
 [n E3202 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State validate_Actuator_State end_State  ]
-"23
-[; ;./cases.h: 23: uint8_t start(void);
-[v _start `(uc ~T0 @X0 0 ef ]
 "24
-[; ;./cases.h: 24: uint8_t cmd(void);
-[v _cmd `(uc ~T0 @X0 0 ef ]
+[; ;./cases.h: 24: uint8_t start(void);
+[v _start `(uc ~T0 @X0 0 ef ]
 "25
-[; ;./cases.h: 25: uint8_t Par_Validated(void);
-[v _Par_Validated `(uc ~T0 @X0 0 ef ]
+[; ;./cases.h: 25: uint8_t cmd(void);
+[v _cmd `(uc ~T0 @X0 0 ef ]
 "26
-[; ;./cases.h: 26: uint8_t Ins_Validated(void);
-[v _Ins_Validated `(uc ~T0 @X0 0 ef ]
+[; ;./cases.h: 26: uint8_t Par_Validated(void);
+[v _Par_Validated `(uc ~T0 @X0 0 ef ]
 "27
-[; ;./cases.h: 27: uint8_t Coord_Validated(void);
-[v _Coord_Validated `(uc ~T0 @X0 0 ef ]
+[; ;./cases.h: 27: uint8_t Ins_Validated(void);
+[v _Ins_Validated `(uc ~T0 @X0 0 ef ]
 "28
-[; ;./cases.h: 28: void end(void);
+[; ;./cases.h: 28: uint8_t Coord_Validated(void);
+[v _Coord_Validated `(uc ~T0 @X0 0 ef ]
+"29
+[; ;./cases.h: 29: void end(void);
 [v _end `(v ~T0 @X0 0 ef ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
@@ -531,26 +531,26 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8893
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"5 ./cases.h
-[; ;./cases.h: 5: char Par1;
+"6 ./cases.h
+[; ;./cases.h: 6: char Par1;
 [v _Par1 `uc ~T0 @X0 1 e ]
-"6
-[; ;./cases.h: 6: char letter;
-[v _letter `uc ~T0 @X0 1 e ]
 "7
-[; ;./cases.h: 7: unsigned short cord_x;
-[v _cord_x `us ~T0 @X0 1 e ]
+[; ;./cases.h: 7: char letter;
+[v _letter `uc ~T0 @X0 1 e ]
 "8
-[; ;./cases.h: 8: unsigned short cord_y;
-[v _cord_y `us ~T0 @X0 1 e ]
+[; ;./cases.h: 8: unsigned short cord_x;
+[v _cord_x `us ~T0 @X0 1 e ]
 "9
-[; ;./cases.h: 9: char Par2;
+[; ;./cases.h: 9: unsigned short cord_y;
+[v _cord_y `us ~T0 @X0 1 e ]
+"10
+[; ;./cases.h: 10: char Par2;
 [v _Par2 `uc ~T0 @X0 1 e ]
-"30
-[; ;./cases.h: 30: systemState NextState;
+"31
+[; ;./cases.h: 31: systemState NextState;
 [v _NextState `E3202 ~T0 @X0 1 e ]
-"32
-[; ;./cases.h: 32: uint8_t click;
+"33
+[; ;./cases.h: 33: uint8_t click;
 [v _click `uc ~T0 @X0 1 e ]
 "6 verification.c
 [; ;verification.c: 6: void verification(void){
@@ -575,9 +575,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;verification.c: 11:                 NextState= start();
 [e = _NextState -> ( _start ..  `E3202 ]
 "12
-[; ;verification.c: 12:             }break;
+[; ;verification.c: 12:             }
 }
-[e $U 368  ]
 "14
 [; ;verification.c: 14:             case wait_cmd_State:{
 [e :U 371 ]
@@ -586,9 +585,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;verification.c: 15:                 NextState=cmd();
 [e = _NextState -> ( _cmd ..  `E3202 ]
 "16
-[; ;verification.c: 16:             }break;
+[; ;verification.c: 16:             }
 }
-[e $U 368  ]
 "18
 [; ;verification.c: 18:             case validate_Par_State:{
 [e :U 372 ]
@@ -597,9 +595,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;verification.c: 19:                 NextState=Par_Validated();
 [e = _NextState -> ( _Par_Validated ..  `E3202 ]
 "20
-[; ;verification.c: 20:             }break;
+[; ;verification.c: 20:             }
 }
-[e $U 368  ]
 "22
 [; ;verification.c: 22:             case validate_Instruct_State:{
 [e :U 373 ]
@@ -608,9 +605,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;verification.c: 23:                 NextState=Ins_Validated();
 [e = _NextState -> ( _Ins_Validated ..  `E3202 ]
 "24
-[; ;verification.c: 24:             }break;
+[; ;verification.c: 24:             }
 }
-[e $U 368  ]
 "26
 [; ;verification.c: 26:             case validate_Coord_State:{
 [e :U 374 ]
@@ -619,9 +615,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;verification.c: 27:                 NextState=Coord_Validated();
 [e = _NextState -> ( _Coord_Validated ..  `E3202 ]
 "28
-[; ;verification.c: 28:             }break;
+[; ;verification.c: 28:             }
 }
-[e $U 368  ]
 "30
 [; ;verification.c: 30:             case end_State:{
 [e :U 375 ]
@@ -630,18 +625,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;verification.c: 31:                 end();
 [e ( _end ..  ]
 "32
-[; ;verification.c: 32:                 return;
-[e $UE 367  ]
-"33
-[; ;verification.c: 33:             }break;
+[; ;verification.c: 32:             }break;
 }
 [e $U 368  ]
-"35
-[; ;verification.c: 35:             default: break;
+"34
+[; ;verification.c: 34:             default: break;
 [e :U 376 ]
 [e $U 368  ]
-"36
-[; ;verification.c: 36:     }
+"35
+[; ;verification.c: 35:     }
 }
 [e $U 368  ]
 [e :U 369 ]
@@ -653,7 +645,7 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> . `E3202 6 `ui 375
  376 ]
 [e :U 368 ]
-"37
-[; ;verification.c: 37: }
+"36
+[; ;verification.c: 36: }
 [e :UE 367 ]
 }

@@ -1,4 +1,3 @@
-//=======================================================
 //PWM Period = [(PR2) + 1] ? 4 ? TOSC ?(TMR2 Prescale Value)
 //(PWM Period/( 4 ? TOSC ?(TMR2 Prescale Value)))-1 = PR2//Periodo=1/8KHz
 // Prescaler=16
@@ -42,7 +41,7 @@
 # define enableB PORTCbits.RC7 /*Enable del PWM2*/
 
 /*FUNCIONES PWM*/
-void PWM(void)
+void PWM(void);
 int PWMx (int distancia);
 int PWMy (int distancia);
 int ContarPulsos(int pasos);
@@ -64,4 +63,4 @@ void ResetOneShot(void);
     
      /*Pasos actuales*/
     unsigned int PasosActuales;
-   unsigned int ons;
+    unsigned int ons;

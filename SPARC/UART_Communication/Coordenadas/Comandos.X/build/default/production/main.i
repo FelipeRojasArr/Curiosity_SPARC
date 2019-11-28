@@ -5773,6 +5773,7 @@ char UARTRead(void);
 # 7 "main.c" 2
 
 # 1 "./cases.h" 1
+
 void verification(void);
 
 int coord(char* P1, char* L, unsigned short* x, unsigned short* y, char* P2);
@@ -5814,4 +5815,5 @@ void main(void) {
     UARTConfi(9600);
     TRISC=0X00;
     verification();
+
 }

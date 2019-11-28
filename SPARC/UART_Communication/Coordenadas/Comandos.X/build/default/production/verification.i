@@ -5706,6 +5706,7 @@ typedef uint32_t uint_fast32_t;
 # 3 "verification.c" 2
 
 # 1 "./cases.h" 1
+
 void verification(void);
 
 int coord(char* P1, char* L, unsigned short* x, unsigned short* y, char* P2);
@@ -5747,27 +5748,26 @@ void verification(void){
   {
             case iddle_State:{
                 NextState= start();
-            }break;
+            }
 
             case wait_cmd_State:{
                 NextState=cmd();
-            }break;
+            }
 
             case validate_Par_State:{
                 NextState=Par_Validated();
-            }break;
+            }
 
             case validate_Instruct_State:{
                 NextState=Ins_Validated();
-            }break;
+            }
 
             case validate_Coord_State:{
                 NextState=Coord_Validated();
-            }break;
+            }
 
             case end_State:{
                 end();
-                return;
             }break;
 
             default: break;

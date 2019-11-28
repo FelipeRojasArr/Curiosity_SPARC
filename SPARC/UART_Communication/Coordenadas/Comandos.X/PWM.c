@@ -1,4 +1,7 @@
-
+#include "PWM.h"
+#include <xc.h>
+#include "config.h"
+#include "cases.h"
 /*En el main una vez que hayamos obtenido las coordenadas vamos a tener que:
  - Llamar PWM();*/
 
@@ -17,18 +20,18 @@ void PWM(void){
     }
     
     /* PWM en Y*/    
-    pasosRecorridos=PWM(CoordRelatY);
+    pasosRecorridos=PWMy(CoordRelatY);
     
     /*ACTUALIZAMOS COORDENADA Y */    
-    if(CoordRelatY<0) CoordAntY= CoordAntY-pasosRecorridos; //Si la distancia es negativa se resta
+    if(CoordRelatY<0){
+        CoordAntY = CoordAntY-pasosRecorridos; 
+    }//Si la distancia es negativa se resta
     else{ 
         if (CoordAntY>0) CoordAntY=CoordAntY+pasosRecorridos;
     }
  
 }
-#include "PWM.h"
-#include <xc.h>
-#include "config.h"
+
 int PWMx (int distancia){
     if (distancia<0){
         salidaDirA=0;

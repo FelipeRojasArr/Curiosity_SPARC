@@ -8,39 +8,30 @@
 # 2 "<built-in>" 2
 # 1 "PWM.c" 2
 # 1 "./PWM.h" 1
-# 24 "./PWM.h"
+# 44 "./PWM.h"
+void PWM(void);
 int PWMx (int distancia);
 int PWMy (int distancia);
 int ContarPulsos(int pasos);
-
 void OneShot(void);
 void ResetOneShot(void);
-# 50 "./PWM.h"
+
+
+
+
     unsigned int CoordAntX;
     unsigned int CoordAntY;
 
-    unsigned int CoordNewY;
-    unsigned int CoordNewX;
 
     int CoordRelatX;
     int CoordRelatY;
 
-    int MovMotorA;
-    int MovMotorB;
 
-    unsigned int dirA;
-    unsigned int dirB;
-
-    unsigned int pasosA;
-    unsigned int pasosB;
+    int pasosRecorridos;
 
 
     unsigned int PasosActuales;
-    unsigned int PasosActualesB;
-
-   unsigned int LedIsOn2;
-   unsigned int LedIsOn1;
-   unsigned int ons;
+    unsigned int ons;
 # 1 "PWM.c" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 1 3
@@ -5659,6 +5650,156 @@ extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 1 "./config.h" 1
 # 3 "PWM.c" 2
 
+# 1 "./cases.h" 1
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 1 3
+# 22 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 127 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned long uintptr_t;
+# 142 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long intptr_t;
+# 158 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef signed char int8_t;
+
+
+
+
+typedef short int16_t;
+# 173 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long int32_t;
+
+
+
+
+
+typedef long long int64_t;
+# 188 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long long intmax_t;
+
+
+
+
+
+typedef unsigned char uint8_t;
+
+
+
+
+typedef unsigned short uint16_t;
+# 209 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned long uint32_t;
+
+
+
+
+
+typedef unsigned long long uint64_t;
+# 229 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned long long uintmax_t;
+# 22 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 2 3
+
+
+typedef int8_t int_fast8_t;
+
+typedef int64_t int_fast64_t;
+
+
+typedef int8_t int_least8_t;
+typedef int16_t int_least16_t;
+
+typedef int24_t int_least24_t;
+
+typedef int32_t int_least32_t;
+
+typedef int64_t int_least64_t;
+
+
+typedef uint8_t uint_fast8_t;
+
+typedef uint64_t uint_fast64_t;
+
+
+typedef uint8_t uint_least8_t;
+typedef uint16_t uint_least16_t;
+
+typedef uint24_t uint_least24_t;
+
+typedef uint32_t uint_least32_t;
+
+typedef uint64_t uint_least64_t;
+# 139 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/stdint.h" 1 3
+typedef int32_t int_fast16_t;
+typedef int32_t int_fast32_t;
+typedef uint32_t uint_fast16_t;
+typedef uint32_t uint_fast32_t;
+# 139 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 2 3
+# 1 "./cases.h" 2
+
+void verification(void);
+
+int coord(char* P1, char* L, unsigned short* x, unsigned short* y, char* P2);
+
+char Par1;
+char letter;
+unsigned short cord_x;
+unsigned short cord_y;
+char Par2;
+
+typedef enum
+{
+    iddle_State,
+ wait_cmd_State,
+ validate_Par_State,
+ validate_Instruct_State,
+ validate_Coord_State,
+ validate_Actuator_State,
+ end_State,
+
+}systemState;
+
+uint8_t start(void);
+uint8_t cmd(void);
+uint8_t Par_Validated(void);
+uint8_t Ins_Validated(void);
+uint8_t Coord_Validated(void);
+void end(void);
+
+systemState NextState;
+
+uint8_t click;
+# 4 "PWM.c" 2
+
+
+
+
+void PWM(void){
+
+    CoordRelatX=CoordAntX-cord_x;
+    CoordRelatX=CoordAntX-cord_x;
+
+
+    pasosRecorridos=PWMx(CoordRelatX);
+
+
+    if(CoordRelatX<0) CoordAntX= CoordAntX-pasosRecorridos;
+    else{
+        if (CoordRelatX>0) CoordAntX=CoordAntX+pasosRecorridos;
+    }
+
+
+    pasosRecorridos=PWMy(CoordRelatY);
+
+
+    if(CoordRelatY<0){
+        CoordAntY = CoordAntY-pasosRecorridos;
+    }
+    else{
+        if (CoordAntY>0) CoordAntY=CoordAntY+pasosRecorridos;
+    }
+
+}
+
 int PWMx (int distancia){
     if (distancia<0){
         PORTDbits.RD0=0;
@@ -5710,4 +5851,9 @@ void OneShot(void){
 void ResetOneShot(void){
     if(PORTCbits.CCP1==1)return;
     if(PORTCbits.CCP1==0)ons=0;
+}
+
+void ObtenerDistancia(){
+    CoordRelatX=CoordAntX-cord_x;
+    CoordRelatY=CoordAntY-cord_y;
 }

@@ -5772,6 +5772,7 @@ char UARTRead(void);
 # 5 "cases.c" 2
 
 # 1 "./cases.h" 1
+
 void verification(void);
 
 int coord(char* P1, char* L, unsigned short* x, unsigned short* y, char* P2);
@@ -5811,8 +5812,6 @@ char init[10]="Waiting...";
 char e_c[13]="Enter_command";
 char Error[5]="Error";
 char okay[4]="Okay" ;
-
-
 
 
 uint8_t start(){
