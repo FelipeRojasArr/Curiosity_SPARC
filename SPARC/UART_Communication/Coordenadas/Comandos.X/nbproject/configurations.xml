@@ -19,6 +19,7 @@
       <itemPath>cases.c</itemPath>
       <itemPath>UART.c</itemPath>
       <itemPath>coordenadas.c</itemPath>
+      <itemPath>main.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

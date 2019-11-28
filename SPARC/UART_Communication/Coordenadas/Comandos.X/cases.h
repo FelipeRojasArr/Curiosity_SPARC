@@ -16,6 +16,5 @@ typedef enum
 	validate_Actuator_State,
 	end_State,
 
-
 }systemState;
 

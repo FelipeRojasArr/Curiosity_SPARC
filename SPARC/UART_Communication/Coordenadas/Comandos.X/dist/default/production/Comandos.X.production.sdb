@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 18F4550 ]
 [d frameptr 4065 ]
-"31 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+"23 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
 [e E3373 . `uc
 iddle_State 0
 wait_cmd_State 1
@@ -13,7 +13,7 @@ validate_Coord_State 4
 validate_Actuator_State 5
 end_State 6
 ]
-"17 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
+"18 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
 [e E3373 . `uc
 iddle_State 0
 wait_cmd_State 1
@@ -49,23 +49,21 @@ end_State 6
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"16 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-[v _delay delay `(v  1 e 1 0 ]
-"25
+"18 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
 [v _start start `(uc  1 e 1 0 ]
-"35
+"27
 [v _cmd cmd `(uc  1 e 1 0 ]
-"46
+"38
 [v _Par_Validated Par_Validated `(uc  1 e 1 0 ]
-"63
+"53
 [v _Ins_Validated Ins_Validated `(uc  1 e 1 0 ]
-"80
+"68
 [v _Coord_Validated Coord_Validated `(uc  1 e 1 0 ]
-"98
+"84
 [v _end end `(uc  1 e 1 0 ]
-"108
+"9 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
 [v _coord coord `(i  1 e 2 0 ]
-"19 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
+"20 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
 [v _main main `(v  1 e 1 0 ]
 "5 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
 [v _UARTConfi UARTConfi `(v  1 e 1 0 ]
@@ -87,7 +85,7 @@ end_State 6
 [v _PORTC PORTC `VEuc  1 e 1 @3970 ]
 "3847
 [v _TRISC TRISC `VEuc  1 e 1 @3988 ]
-[s S85 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S70 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
@@ -95,16 +93,16 @@ end_State 6
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "3875
-[s S92 . 1 `uc 1 RC0 1 0 :1:0 
+[s S77 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 RC6 1 0 :1:6 
 `uc 1 RC7 1 0 :1:7 
 ]
-[u S99 . 1 `S85 1 . 1 0 `S92 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES99  1 e 1 @3988 ]
-[s S224 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[u S84 . 1 `S70 1 . 1 0 `S77 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES84  1 e 1 @3988 ]
+[s S209 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 SSPIF 1 0 :1:3 
@@ -114,15 +112,15 @@ end_State 6
 `uc 1 SPPIF 1 0 :1:7 
 ]
 "4492
-[s S233 . 1 `uc 1 . 1 0 :4:0 
+[s S218 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TX1IF 1 0 :1:4 
 `uc 1 RC1IF 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 PSPIF 1 0 :1:7 
 ]
-[u S239 . 1 `S224 1 . 1 0 `S233 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES239  1 e 1 @3998 ]
-[s S170 . 1 `uc 1 RX9D 1 0 :1:0 
+[u S224 . 1 `S209 1 . 1 0 `S218 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES224  1 e 1 @3998 ]
+[s S155 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -132,23 +130,23 @@ end_State 6
 `uc 1 SPEN 1 0 :1:7 
 ]
 "4977
-[s S179 . 1 `uc 1 . 1 0 :3:0 
+[s S164 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 ADEN 1 0 :1:3 
 ]
-[s S182 . 1 `uc 1 . 1 0 :5:0 
+[s S167 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 SRENA 1 0 :1:5 
 ]
-[s S185 . 1 `uc 1 . 1 0 :6:0 
+[s S170 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC8_9 1 0 :1:6 
 ]
-[s S188 . 1 `uc 1 . 1 0 :6:0 
+[s S173 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC9 1 0 :1:6 
 ]
-[s S191 . 1 `uc 1 RCD8 1 0 :1:0 
+[s S176 . 1 `uc 1 RCD8 1 0 :1:0 
 ]
-[u S193 . 1 `S170 1 . 1 0 `S179 1 . 1 0 `S182 1 . 1 0 `S185 1 . 1 0 `S188 1 . 1 0 `S191 1 . 1 0 ]
-[v _RCSTAbits RCSTAbits `VES193  1 e 1 @4011 ]
-[s S118 . 1 `uc 1 TX9D 1 0 :1:0 
+[u S178 . 1 `S155 1 . 1 0 `S164 1 . 1 0 `S167 1 . 1 0 `S170 1 . 1 0 `S173 1 . 1 0 `S176 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES178  1 e 1 @4011 ]
+[s S103 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -158,7 +156,7 @@ end_State 6
 `uc 1 CSRC 1 0 :1:7 
 ]
 "5185
-[s S127 . 1 `uc 1 TX9D1 1 0 :1:0 
+[s S112 . 1 `uc 1 TX9D1 1 0 :1:0 
 `uc 1 TRMT1 1 0 :1:1 
 `uc 1 BRGH1 1 0 :1:2 
 `uc 1 SENDB1 1 0 :1:3 
@@ -167,13 +165,13 @@ end_State 6
 `uc 1 TX91 1 0 :1:6 
 `uc 1 CSRC1 1 0 :1:7 
 ]
-[s S136 . 1 `uc 1 . 1 0 :6:0 
+[s S121 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TX8_9 1 0 :1:6 
 ]
-[s S139 . 1 `uc 1 TXD8 1 0 :1:0 
+[s S124 . 1 `uc 1 TXD8 1 0 :1:0 
 ]
-[u S141 . 1 `S118 1 . 1 0 `S127 1 . 1 0 `S136 1 . 1 0 `S139 1 . 1 0 ]
-[v _TXSTAbits TXSTAbits `VES141  1 e 1 @4012 ]
+[u S126 . 1 `S103 1 . 1 0 `S112 1 . 1 0 `S121 1 . 1 0 `S124 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES126  1 e 1 @4012 ]
 "5402
 [v _TXREG TXREG `VEuc  1 e 1 @4013 ]
 "5414
@@ -189,53 +187,55 @@ end_State 6
 "9
 [v _e_c e_c `[13]uc  1 e 13 0 ]
 "10
-[v _Error Error `[5]uc  1 e 5 0 ]
+[v _Error Error `[6]uc  1 e 6 0 ]
 "11
+[v _Error2 Error2 `[6]uc  1 e 6 0 ]
+"13
 [v _okay okay `[4]uc  1 e 4 0 ]
-"17 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
+"18 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
 [v _NextState NextState `E3373  1 e 1 0 ]
-"19
+"20
 [v _main main `(v  1 e 1 0 ]
 {
-"62
+"63
 } 0
-"25 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+"18 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
 [v _start start `(uc  1 e 1 0 ]
 {
-"26
-[v start@i i `i  1 a 2 4 ]
-"32
+"19
+[v start@i i `i  1 a 2 1 ]
+"24
 } 0
-"98
+"84
 [v _end end `(uc  1 e 1 0 ]
 {
-"99
-[v end@i i `i  1 a 2 4 ]
-"106
+"85
+[v end@i i `i  1 a 2 1 ]
+"91
 } 0
-"35
+"27
 [v _cmd cmd `(uc  1 e 1 0 ]
 {
-"38
+"30
 [v cmd@i i `i  1 a 2 26 ]
-"44
+"36
 } 0
-"108
+"9 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
 [v _coord coord `(i  1 e 2 0 ]
 {
-"112
+"13
 [v coord@i i `i  1 a 2 24 ]
-"109
+"10
 [v coord@buffer buffer `[9]uc  1 a 9 14 ]
-"110
+"11
 [v coord@read read `uc  1 a 1 23 ]
-"108
+"9
 [v coord@P1 P1 `*.39uc  1 p 2 0 ]
 [v coord@L L `*.39uc  1 p 2 2 ]
 [v coord@x x `*.39us  1 p 2 4 ]
 [v coord@y y `*.39us  1 p 2 6 ]
 [v coord@P2 P2 `*.39uc  1 p 2 8 ]
-"122
+"23
 } 0
 "30 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
 [v _UARTRead UARTRead `(uc  1 e 1 0 ]
@@ -261,34 +261,26 @@ end_State 6
 [v ___aldiv@divisor divisor `l  1 p 4 4 ]
 "41
 } 0
-"46 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+"38 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
 [v _Par_Validated Par_Validated `(uc  1 e 1 0 ]
 {
-"54
-[v Par_Validated@i i `i  1 a 2 4 ]
-"61
+"45
+[v Par_Validated@i i `i  1 a 2 1 ]
+"51
 } 0
-"63
+"53
 [v _Ins_Validated Ins_Validated `(uc  1 e 1 0 ]
 {
-"71
-[v Ins_Validated@i i `i  1 a 2 4 ]
-"78
+"60
+[v Ins_Validated@i i `i  1 a 2 1 ]
+"66
 } 0
-"80
+"68
 [v _Coord_Validated Coord_Validated `(uc  1 e 1 0 ]
 {
-"88
-[v Coord_Validated@i i `i  1 a 2 4 ]
-"96
-} 0
-"16
-[v _delay delay `(v  1 e 1 0 ]
-{
-"17
-[v delay@j j `i  1 a 2 2 ]
-[v delay@i i `i  1 a 2 0 ]
-"22
+"75
+[v Coord_Validated@i i `i  1 a 2 1 ]
+"82
 } 0
 "24 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
 [v _UARTWrite UARTWrite `(v  1 e 1 0 ]

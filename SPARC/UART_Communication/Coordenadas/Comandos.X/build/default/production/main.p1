@@ -1,7 +1,36 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"3 ./UART.h
-[; ;./UART.h: 3: char UARTRead(void);
-[v _UARTRead `(uc ~T0 @X0 0 ef ]
+"18 main.c
+[; ;main.c: 18: systemState NextState;
+[c E3373 0 1 2 3 4 5 6 .. ]
+[n E3373 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State validate_Actuator_State end_State  ]
+[p mainexit ]
+"7986 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 7986: extern volatile unsigned char OSCCON __attribute__((address(0xFD3)));
+[v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
+"1 ./UART.h
+[; ;./UART.h: 1: void UARTConfi(int BAUD);
+[v _UARTConfi `(v ~T0 @X0 0 ef1`i ]
+"3847 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 3847: extern volatile unsigned char TRISC __attribute__((address(0xF94)));
+[v _TRISC `Vuc ~T0 @X0 0 e@3988 ]
+"10 main.c
+[; ;main.c: 10: uint8_t start(void);
+[v _start `(uc ~T0 @X0 0 ef ]
+"11
+[; ;main.c: 11: uint8_t cmd(void);
+[v _cmd `(uc ~T0 @X0 0 ef ]
+"12
+[; ;main.c: 12: uint8_t Par_Validated(void);
+[v _Par_Validated `(uc ~T0 @X0 0 ef ]
+"13
+[; ;main.c: 13: uint8_t Ins_Validated(void);
+[v _Ins_Validated `(uc ~T0 @X0 0 ef ]
+"14
+[; ;main.c: 14: uint8_t Coord_Validated(void);
+[v _Coord_Validated `(uc ~T0 @X0 0 ef ]
+"15
+[; ;main.c: 15: uint8_t end(void);
+[v _end `(uc ~T0 @X0 0 ef ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -527,61 +556,131 @@ Version 4.0 HI-TECH Software Intermediate Code
 "7
 [; ;./cases.h: 7: char Par2;
 [v _Par2 `uc ~T0 @X0 1 e ]
-"9 coordenadas.c
-[; ;coordenadas.c: 9: int coord(char* P1, char*L, uint16_t* x , uint16_t* y , char*P2){
-[v _coord `(i ~T0 @X0 1 ef5`*uc`*uc`*us`*us`*uc ]
-{
-[e :U _coord ]
-[v _P1 `*uc ~T0 @X0 1 r1 ]
-[v _L `*uc ~T0 @X0 1 r2 ]
-[v _x `*us ~T0 @X0 1 r3 ]
-[v _y `*us ~T0 @X0 1 r4 ]
-[v _P2 `*uc ~T0 @X0 1 r5 ]
-[f ]
-"10
-[; ;coordenadas.c: 10:   char buffer [9];
-[v _buffer `uc ~T0 @X0 -> 9 `i a ]
-"11
-[; ;coordenadas.c: 11:         char read;
-[v _read `uc ~T0 @X0 1 a ]
-"13
-[; ;coordenadas.c: 13:         for(int i=0; i<=8; i++){
-{
-[v _i `i ~T0 @X0 1 a ]
-[e = _i -> 0 `i ]
-[e $ <= _i -> 8 `i 368  ]
-[e $U 369  ]
-[e :U 368 ]
-{
-"14
-[; ;coordenadas.c: 14:             read= UARTRead();
-[e = _read ( _UARTRead ..  ]
-"15
-[; ;coordenadas.c: 15:             buffer[i]=read;
-[e = *U + &U _buffer * -> -> _i `ui `ux -> -> # *U &U _buffer `ui `ux _read ]
-"16
-[; ;coordenadas.c: 16:         }
-}
-[e ++ _i -> 1 `i ]
-[e $ <= _i -> 8 `i 368  ]
-[e :U 369 ]
-}
-"17
-[; ;coordenadas.c: 17:         *P1= buffer[0];
-[e = *U _P1 *U + &U _buffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _buffer `ui `ux ]
-"18
-[; ;coordenadas.c: 18:         *L= buffer[1];
-[e = *U _L *U + &U _buffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _buffer `ui `ux ]
-"19
-[; ;coordenadas.c: 19:   *x = 1*(buffer[4]-48) + 10*(buffer[3]-48) + 100*(buffer[2]-48);
-[e = *U _x -> + + * -> 1 `i - -> *U + &U _buffer * -> -> -> 4 `i `ui `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 10 `i - -> *U + &U _buffer * -> -> -> 3 `i `ui `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 100 `i - -> *U + &U _buffer * -> -> -> 2 `i `ui `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i `us ]
+"18 main.c
+[; ;main.c: 18: systemState NextState;
+[v _NextState `E3373 ~T0 @X0 1 e ]
+[v $root$_main `(v ~T0 @X0 0 e ]
 "20
-[; ;coordenadas.c: 20:   *y = 1*(buffer[7]-48) + 10*(buffer[6]-48) + 100*(buffer[5]-48);
-[e = *U _y -> + + * -> 1 `i - -> *U + &U _buffer * -> -> -> 7 `i `ui `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 10 `i - -> *U + &U _buffer * -> -> -> 6 `i `ui `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 100 `i - -> *U + &U _buffer * -> -> -> 5 `i `ui `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i `us ]
+[; ;main.c: 20: void main(void) {
+[v _main `(v ~T0 @X0 1 ef ]
+{
+[e :U _main ]
+[f ]
 "21
-[; ;coordenadas.c: 21:   *P2= buffer[8];
-[e = *U _P2 *U + &U _buffer * -> -> -> 8 `i `ui `ux -> -> # *U &U _buffer `ui `ux ]
+[; ;main.c: 21:     OSCCON=0x72;
+[e = _OSCCON -> -> 114 `i `uc ]
+"22
+[; ;main.c: 22:     UARTConfi(9600);
+[e ( _UARTConfi (1 -> 9600 `i ]
 "23
-[; ;coordenadas.c: 23: }
-[e :UE 367 ]
+[; ;main.c: 23:     TRISC=0X00;
+[e = _TRISC -> -> 0 `i `uc ]
+"26
+[; ;main.c: 26:     NextState = iddle_State;
+[e = _NextState . `E3373 0 ]
+"28
+[; ;main.c: 28:     while(1){
+[e :U 370 ]
+{
+"31
+[; ;main.c: 31:         switch(NextState)
+[e $U 373  ]
+"32
+[; ;main.c: 32:   {
+{
+"33
+[; ;main.c: 33:             case iddle_State:{
+[e :U 374 ]
+{
+"34
+[; ;main.c: 34:                 NextState= start();
+[e = _NextState -> ( _start ..  `E3373 ]
+"35
+[; ;main.c: 35:             }break;
+}
+[e $U 372  ]
+"37
+[; ;main.c: 37:             case wait_cmd_State:{
+[e :U 375 ]
+{
+"38
+[; ;main.c: 38:                 NextState=cmd();
+[e = _NextState -> ( _cmd ..  `E3373 ]
+"39
+[; ;main.c: 39:             }break;
+}
+[e $U 372  ]
+"41
+[; ;main.c: 41:             case validate_Par_State:{
+[e :U 376 ]
+{
+"42
+[; ;main.c: 42:                 NextState=Par_Validated();
+[e = _NextState -> ( _Par_Validated ..  `E3373 ]
+"43
+[; ;main.c: 43:             }break;
+}
+[e $U 372  ]
+"45
+[; ;main.c: 45:             case validate_Instruct_State:{
+[e :U 377 ]
+{
+"46
+[; ;main.c: 46:                 NextState=Ins_Validated();
+[e = _NextState -> ( _Ins_Validated ..  `E3373 ]
+"47
+[; ;main.c: 47:             }break;
+}
+[e $U 372  ]
+"49
+[; ;main.c: 49:             case validate_Coord_State:{
+[e :U 378 ]
+{
+"50
+[; ;main.c: 50:                 NextState=Coord_Validated();
+[e = _NextState -> ( _Coord_Validated ..  `E3373 ]
+"51
+[; ;main.c: 51:             }break;
+}
+[e $U 372  ]
+"53
+[; ;main.c: 53:             case end_State:{
+[e :U 379 ]
+{
+"54
+[; ;main.c: 54:                 NextState=end();
+[e = _NextState -> ( _end ..  `E3373 ]
+"55
+[; ;main.c: 55:             }break;
+}
+[e $U 372  ]
+"57
+[; ;main.c: 57:             default: break;
+[e :U 380 ]
+[e $U 372  ]
+"59
+[; ;main.c: 59:         }
+}
+[e $U 372  ]
+[e :U 373 ]
+[e [\ -> _NextState `ui , $ -> . `E3373 0 `ui 374
+ , $ -> . `E3373 1 `ui 375
+ , $ -> . `E3373 2 `ui 376
+ , $ -> . `E3373 3 `ui 377
+ , $ -> . `E3373 4 `ui 378
+ , $ -> . `E3373 6 `ui 379
+ 380 ]
+[e :U 372 ]
+"60
+[; ;main.c: 60:     }
+}
+[e :U 369 ]
+[e $U 370  ]
+[e :U 371 ]
+"62
+[; ;main.c: 62:     return;
+[e $UE 368  ]
+"63
+[; ;main.c: 63: }
+[e :UE 368 ]
 }
