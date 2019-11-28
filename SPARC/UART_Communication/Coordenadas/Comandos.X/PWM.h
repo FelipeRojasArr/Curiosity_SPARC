@@ -66,7 +66,7 @@ void ResetOneShot(void);
     unsigned int pasosB;
         
 // Pasos actuales de motores
-    unsigned int PasosActualesA;
+    unsigned int PasosActuales;
     unsigned int PasosActualesB;
 //    // LEDs de prueba pulsos
    unsigned int LedIsOn2;

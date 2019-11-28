@@ -86,14 +86,12 @@ uint8_t Coord_Validated(){
    
 }
 
-uint8_t end(){
+void end(){
     for(int i=0;i<4;i++){
         UARTWrite(okay[i]);
     }
     PORTC=0XFF;
-    // lo ideal seria: PWM(cord_x,cord_y);
-    
-    return wait_cmd_State;
+    return;
     
 }
 

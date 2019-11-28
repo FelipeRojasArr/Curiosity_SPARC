@@ -1,3 +1,6 @@
+#include "PWM.h"
+#include <xc.h>
+#include "config.h"
 int PWMx (int distancia){
     if (distancia<0){
         salidaDirA=0;
