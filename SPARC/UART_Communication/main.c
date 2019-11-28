@@ -1,83 +1,123 @@
-#include <xc.h>
+	error_Par_State,
+#include <stdio.h>
 #include <stdint.h>
+//Different state of ATM machine
+typedef enum
+{
+    Iddle_State,
+	wait_cmd_State,
+	validate_Par_State,
+	validate_Instruct_State,
+	error_Instruct_State,
+	validate_Coord_State,
+	error_Coord_State,
+	validate_Actuator_State,
+	error_Actuator_State,
+	end_State,
 
-#define  BAUD 9600
-#define _XTAL_FREQ  4000000 //Frecuencia de 4MHz  
+}systemState;
 
-void UARTconfi (void); 
-uint8_t UARTRead(void);
-void UARTWrite(uint8_t txData);
-void BITSCONFI(uint8_t X);
 
-unsigned char init=0;//caracter de inicializacion
-unsigned char Enviar;
+int main() {
 
-void main(void) {
-    OSCCON = 0x60; //Reloj interno a 4MHz
-    UARTconfi (); //9600 BAUD, Tranmitir y recibir
-    uint8_t rv; //receive value
-    int cx;
-    int cy;
-    while(1){
-        rv= UARTRead();//scanf("%c", &rv );
+	systemState NextState = Iddle_State;
 
-        if((rv==73 || rv == 105)) {
+    int Par1,letter,cord_x, cord_y,Par2;
+		while(1)
+	{
+		switch(NextState)
+		{
+            case Iddle_State:
 
-            coord(&cx, &cy);
-        //printf("\nCoordenada en x= %d", cx);
-        //printf("\nCoordenada en y= %d", cy);
+                {
+                    NextState=wait_cmd_State;
+                }
+                break;
+            case wait_cmd_State:
+                {
+                    coord(&Par1,&letter,&cord_x, &cord_y, &Par2);
+                    printf("\nIngresa un comando:\n");
+                    NextState=validate_Par_State;
+                }
+
+                break;
+                {
+            case validate_Par_State:
+                        if(Par1==60 && Par2==62){
+                        NextState=validate_Instruct_State;
+                    }
+                    else{
+                        printf("\n\nError. Debe tener la forma <>");
+                        NextState=error_Par_State;
+                    }
+                }
+                break;
+            case error_Par_State:
+                {
+                         printf("\n\nSe prende Led de parentesis");
+                         NextState=wait_cmd_State;
+                }
+            case validate_Instruct_State:
+                break;
+                {
+                     if(letter==99 || letter==67 || letter ==115 || letter== 83) {
+                        NextState=validate_Coord_State;
+                     }
+                     else{
+                        printf("\nInstruccion desconocida. Escriba C para click o S para slide");
+                        NextState=error_Instruct_State;
+                     }
+                }
+                break;
+            case error_Instruct_State:
+                {
+                         printf("\n\nSe prende Led de instruccion");
+                         NextState=wait_cmd_State;
+                }
+            case validate_Coord_State:
+                {
+                    if(cord_x<=300 && cord_y<=300){
+                    }
+                        NextState=end_State;
+                    else{printf("\nError. Coordenada mayor a 300.");
+
+                        NextState=error_Coord_State;
+                    }
+                }
+            case error_Coord_State:
+                {
+                    printf("\n Se prende led coordenada");
+                }
+            case end_State:
+                {
+                    printf("\nComando correcto. Ahora los motores.");
+                    NextState=wait_cmd_State;
+                }
+            default:
+                break;
 
         }
-       /* else{
-            printf("\nwaiting...");
-        }*/
-   }
-}
-
-void UARTconfi (void) { 
-    ADCON1 = 0x0F; //COnfigurar los pin a digitales
-    LATB=0; //Los pines b inicializados en 0
-    TRISB=0x00; //Todo el puerto B es salida
-    
-    TRISCbits.RC6 = 0; //  Pin RC6 como salida digital para TX.
-    TRISCbits.RC7 = 1; //  Pin RC7 como entrada digital para RX.
-    
-    TXSTAbits.TX9 = 0; // Transmision de 8 bits
-    RCSTAbits.RX9 = 0; //Recepcion a 8 bits 
-    TXSTAbits.TXEN = 1; //  Habilita Transmisi?n.
-    TXSTAbits.SYNC = 0; //  Modo-As?ncrono	Full Duplex
-    TXSTAbits.BRGH = 1; //  Modo-Baja Velocidad de Baudios.
-    BAUDCONbits.BRG16 = 1; //  Baudios modo-16bits.
-    RCSTAbits.SPEN = 1; //  Hbilita el M?dulo SSP como UART.
-    RCSTAbits.CREN = 1; //Habilita recibir
-    //  Escribe el valor necesario para configurar los Baudios a 9600.
-    SPBRGH1:SPBRG1 = 103;
-}
-
-uint8_t UARTRead(void) {
-    uint8_t X;
-    if (PIR1bits.RCIF == 1){ // Si RCREG esta lleno (llego informacion)
-        X = RCREG1; // se guarda lo que llego de RCREG1 en la variable de inicio
-        RCREG1 = 0; //Se resetea el registro recibidor
     }
-    return X;
+coord(int* P1, int*L, int* x, int* y, int*P2)
 }
+{
 
-coord(int* x, int* y){
-	*x=301;
-	*y=301;
+	// a is stored in the address pointed
 
-	while(*x>300 || *y>300){ //para que se repita si x o y son mayores a 300
-		uint8_t buffer [8];
+		// by the pointer variable *add_great
+		uint8_t buffer [9];
         uint8_t read;
-        for(int i=0; i<=7; i++){
-            read=UARTRead();//scanf("%c", &read);
-            buffer[i]=read-48;
+        printf("\nComando:");
+            scanf("%c", &read);
+        for(int i=0; i<=8; i++){
+            buffer[i]=read;
         }
-        
-		*x = 1*buffer[3] + 10*buffer[2] + 100*buffer[1];
-		*y = 1*buffer[7] + 10*buffer[6] + 100*buffer[5];
+        *P1= buffer[0];
+        *L= buffer[1];
+		*x = 1*(buffer[4]-48) + 10*(buffer[3]-48) + 100*(buffer[2]-48);
+		*y = 1*(buffer[7]-48) + 10*(buffer[6]-48) + 100*(buffer[5]-48);
+		*P2= buffer[8];
 
-		//if(*x>300 || *y>300){ printf("\nError. Ingrese de nuevo.\n");}
-        }
+
+
 }
