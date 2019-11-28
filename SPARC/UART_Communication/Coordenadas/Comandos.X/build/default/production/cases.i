@@ -5772,6 +5772,8 @@ char UARTRead(void);
 # 5 "cases.c" 2
 
 # 1 "./cases.h" 1
+void verification(void);
+
 int coord(char* P1, char* L, unsigned short* x, unsigned short* y, char* P2);
 
 char Par1;
@@ -5791,14 +5793,23 @@ typedef enum
  end_State,
 
 }systemState;
+
+uint8_t start(void);
+uint8_t cmd(void);
+uint8_t Par_Validated(void);
+uint8_t Ins_Validated(void);
+uint8_t Coord_Validated(void);
+uint8_t end(void);
+
+systemState NextState;
+
+uint8_t click;
 # 6 "cases.c" 2
 
 
 char init[10]="Waiting...";
 char e_c[13]="Enter_command";
-char Error[6]="Error1";
-char Error2[6]="Error2";
-char Error3[6]="Error3";
+char Error[5]="Error";
 char okay[4]="Okay" ;
 
 
@@ -5831,7 +5842,7 @@ uint8_t Par_Validated(){
         return validate_Instruct_State;
     }
     else{
-        for(int i=0;i<6;i++){
+        for(int i=0;i<5;i++){
             UARTWrite(Error[i]);
         }
         PORTC= 0X04;
@@ -5841,28 +5852,35 @@ uint8_t Par_Validated(){
 
 uint8_t Ins_Validated(){
     PORTC=0x00;
-    if(letter==0x43 || letter== 0x53){
+    if(letter==0x43){
         PORTC=0X02;
+        click=1;
+        return validate_Coord_State;
+
+    }
+    else if(letter== 0x53){
+        PORTC=0X02;
+        click=0;
         return validate_Coord_State;
     }
     else{
-        for(int i=0;i<6;i++){
-            UARTWrite(Error2[i]);
+        for(int i=0;i<5;i++){
+            UARTWrite(Error[i]);
         }
         PORTC= 0X04;
         return wait_cmd_State;
     }
 }
 
-uint8_t Coord_Validated(void){
+uint8_t Coord_Validated(){
     PORTC=0x00;
     if(cord_x<=300 && cord_y<=300){
         PORTC=0X02;
         return end_State;
     }
     else{
-        for(int i=0;i<6;i++){
-            UARTWrite(Error2[i]);
+        for(int i=0;i<5;i++){
+            UARTWrite(Error[i]);
         }
         PORTC= 0X04;
        return wait_cmd_State;
@@ -5875,6 +5893,8 @@ uint8_t end(){
         UARTWrite(okay[i]);
     }
     PORTC=0XFF;
+
+
     return wait_cmd_State;
 
 }

@@ -5773,6 +5773,8 @@ char UARTRead(void);
 # 7 "main.c" 2
 
 # 1 "./cases.h" 1
+void verification(void);
+
 int coord(char* P1, char* L, unsigned short* x, unsigned short* y, char* P2);
 
 char Par1;
@@ -5792,8 +5794,6 @@ typedef enum
  end_State,
 
 }systemState;
-# 8 "main.c" 2
-
 
 uint8_t start(void);
 uint8_t cmd(void);
@@ -5802,50 +5802,16 @@ uint8_t Ins_Validated(void);
 uint8_t Coord_Validated(void);
 uint8_t end(void);
 
-
 systemState NextState;
+
+uint8_t click;
+# 8 "main.c" 2
+
+
 
 void main(void) {
     OSCCON=0x72;
     UARTConfi(9600);
     TRISC=0X00;
-
-
-    NextState = iddle_State;
-
-    while(1){
-
-
-        switch(NextState)
-  {
-            case iddle_State:{
-                NextState= start();
-            }break;
-
-            case wait_cmd_State:{
-                NextState=cmd();
-            }break;
-
-            case validate_Par_State:{
-                NextState=Par_Validated();
-            }break;
-
-            case validate_Instruct_State:{
-                NextState=Ins_Validated();
-            }break;
-
-            case validate_Coord_State:{
-                NextState=Coord_Validated();
-            }break;
-
-            case end_State:{
-                NextState=end();
-            }break;
-
-            default: break;
-
-        }
-    }
-
-    return;
+    verification();
 }

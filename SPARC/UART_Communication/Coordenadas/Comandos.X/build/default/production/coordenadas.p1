@@ -1,4 +1,8 @@
 Version 4.0 HI-TECH Software Intermediate Code
+"30 ./cases.h
+[; ;./cases.h: 30: systemState NextState;
+[c E3207 0 1 2 3 4 5 6 .. ]
+[n E3207 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State validate_Actuator_State end_State  ]
 "3 ./UART.h
 [; ;./UART.h: 3: char UARTRead(void);
 [v _UARTRead `(uc ~T0 @X0 0 ef ]
@@ -512,21 +516,27 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8893
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"3 ./cases.h
-[; ;./cases.h: 3: char Par1;
+"5 ./cases.h
+[; ;./cases.h: 5: char Par1;
 [v _Par1 `uc ~T0 @X0 1 e ]
-"4
-[; ;./cases.h: 4: char letter;
-[v _letter `uc ~T0 @X0 1 e ]
-"5
-[; ;./cases.h: 5: unsigned short cord_x;
-[v _cord_x `us ~T0 @X0 1 e ]
 "6
-[; ;./cases.h: 6: unsigned short cord_y;
-[v _cord_y `us ~T0 @X0 1 e ]
+[; ;./cases.h: 6: char letter;
+[v _letter `uc ~T0 @X0 1 e ]
 "7
-[; ;./cases.h: 7: char Par2;
+[; ;./cases.h: 7: unsigned short cord_x;
+[v _cord_x `us ~T0 @X0 1 e ]
+"8
+[; ;./cases.h: 8: unsigned short cord_y;
+[v _cord_y `us ~T0 @X0 1 e ]
+"9
+[; ;./cases.h: 9: char Par2;
 [v _Par2 `uc ~T0 @X0 1 e ]
+"30
+[; ;./cases.h: 30: systemState NextState;
+[v _NextState `E3207 ~T0 @X0 1 e ]
+"32
+[; ;./cases.h: 32: uint8_t click;
+[v _click `uc ~T0 @X0 1 e ]
 "9 coordenadas.c
 [; ;coordenadas.c: 9: int coord(char* P1, char*L, uint16_t* x , uint16_t* y , char*P2){
 [v _coord `(i ~T0 @X0 1 ef5`*uc`*uc`*us`*us`*uc ]

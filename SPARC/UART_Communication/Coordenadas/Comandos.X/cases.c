@@ -7,9 +7,7 @@
 
 char init[10]="Waiting...";
 char e_c[13]="Enter_command";
-char Error[6]="Error1";
-char Error2[6]="Error2";
-char Error3[6]="Error3";
+char Error[5]="Error";
 char okay[4]="Okay" ;
 
 
@@ -42,7 +40,7 @@ uint8_t Par_Validated(){
         return validate_Instruct_State;
     }
     else{
-        for(int i=0;i<6;i++){
+        for(int i=0;i<5;i++){
             UARTWrite(Error[i]);
         }
         PORTC= 0X04;
@@ -52,28 +50,35 @@ uint8_t Par_Validated(){
 
 uint8_t Ins_Validated(){
     PORTC=0x00;
-    if(letter==LETTER_C || letter== LETTER_S){
+    if(letter==LETTER_C){
         PORTC=0X02;
+        click=1;
+        return validate_Coord_State;
+        
+    }
+    else if(letter== LETTER_S){
+        PORTC=0X02;
+        click=0;
         return validate_Coord_State;
     }
     else{
-        for(int i=0;i<6;i++){
-            UARTWrite(Error2[i]);
+        for(int i=0;i<5;i++){
+            UARTWrite(Error[i]);
         }
         PORTC= 0X04;
         return wait_cmd_State;
     }
 }
 
-uint8_t Coord_Validated(void){
+uint8_t Coord_Validated(){
     PORTC=0x00;
     if(cord_x<=300 && cord_y<=300){
         PORTC=0X02;
         return end_State;
     }
     else{
-        for(int i=0;i<6;i++){
-            UARTWrite(Error2[i]);
+        for(int i=0;i<5;i++){
+            UARTWrite(Error[i]);
         }
         PORTC= 0X04;
        return wait_cmd_State;
@@ -86,6 +91,8 @@ uint8_t end(){
         UARTWrite(okay[i]);
     }
     PORTC=0XFF;
+    // lo ideal seria: PWM(cord_x,cord_y);
+    
     return wait_cmd_State;
     
 }

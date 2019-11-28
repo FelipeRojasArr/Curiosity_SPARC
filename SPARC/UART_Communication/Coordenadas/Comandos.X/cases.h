@@ -1,3 +1,5 @@
+void verification(void);
+
 int coord(char* P1, char* L, unsigned short* x, unsigned short* y, char* P2);
 
 char Par1;
@@ -18,3 +20,13 @@ typedef enum
 
 }systemState;
 
+uint8_t start(void);
+uint8_t cmd(void);
+uint8_t Par_Validated(void);
+uint8_t Ins_Validated(void);
+uint8_t Coord_Validated(void);
+uint8_t end(void);
+
+systemState NextState;
+
+uint8_t click;
