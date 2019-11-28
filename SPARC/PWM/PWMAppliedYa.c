@@ -34,7 +34,7 @@ void OneShot(void);
 void ResetOneShot(void);
 int pasosRecorridos;
 int PasosActuales;
-
+ 
 
 
 void main(void){
@@ -43,9 +43,10 @@ void main(void){
     CoordRelatY=800;
     CoordAntX=0;
     CoordAntX=0;
-    
+
     //PWM en X
     pasosRecorridos=PWMx(CoordRelatX);
+    
       
     if(CoordRelatX<0) CoordAntX= CoordAntX-pasosRecorridos; //Si la distancia es negativa se resta
     else{ 
@@ -58,10 +59,10 @@ void main(void){
 //    else{ 
 //        if (CoordAntY>0) CoordAntY=CoordAntY+pasosRecorridos;
 //    }
+    if (CoordAntX==200) PORTCbits.RC0=1;
+    __delay_ms(450);
+    PORTCbits.RC0=0;
  
-    if (CoordAntX==200) bit=1;
-    __delay_ms(350);
-    bit=0;
     
 }
 
@@ -136,7 +137,7 @@ int ContarPulsos(int pasos){
     PasosActuales=0;
     ons=0;
     enableA=0;
-    while(PasosActuales<= pasos)
+    while(PasosActuales<pasos)
     {
         if (PORTCbits.CCP1==1) OneShot();
         if(ons==1) ResetOneShot();
