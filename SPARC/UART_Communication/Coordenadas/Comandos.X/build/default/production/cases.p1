@@ -1,6 +1,6 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"30 ./cases.h
-[; ;./cases.h: 30: systemState NextState;
+"31 ./cases.h
+[; ;./cases.h: 31: systemState NextState;
 [c E3374 0 1 2 3 4 5 6 .. ]
 [n E3374 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State validate_Actuator_State end_State  ]
 "2 ./UART.h
@@ -9,8 +9,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2563 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 2563: extern volatile unsigned char PORTC __attribute__((address(0xF82)));
 [v _PORTC `Vuc ~T0 @X0 0 e@3970 ]
-"3 ./cases.h
-[; ;./cases.h: 3: int coord(char* P1, char* L, unsigned short* x, unsigned short* y, char* P2);
+"4 ./cases.h
+[; ;./cases.h: 4: int coord(char* P1, char* L, unsigned short* x, unsigned short* y, char* P2);
 [v _coord `(i ~T0 @X0 0 ef5`*uc`*uc`*us`*us`*uc ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
@@ -522,26 +522,26 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8893
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"5 ./cases.h
-[; ;./cases.h: 5: char Par1;
+"6 ./cases.h
+[; ;./cases.h: 6: char Par1;
 [v _Par1 `uc ~T0 @X0 1 e ]
-"6
-[; ;./cases.h: 6: char letter;
-[v _letter `uc ~T0 @X0 1 e ]
 "7
-[; ;./cases.h: 7: unsigned short cord_x;
-[v _cord_x `us ~T0 @X0 1 e ]
+[; ;./cases.h: 7: char letter;
+[v _letter `uc ~T0 @X0 1 e ]
 "8
-[; ;./cases.h: 8: unsigned short cord_y;
-[v _cord_y `us ~T0 @X0 1 e ]
+[; ;./cases.h: 8: unsigned short cord_x;
+[v _cord_x `us ~T0 @X0 1 e ]
 "9
-[; ;./cases.h: 9: char Par2;
+[; ;./cases.h: 9: unsigned short cord_y;
+[v _cord_y `us ~T0 @X0 1 e ]
+"10
+[; ;./cases.h: 10: char Par2;
 [v _Par2 `uc ~T0 @X0 1 e ]
-"30
-[; ;./cases.h: 30: systemState NextState;
+"31
+[; ;./cases.h: 31: systemState NextState;
 [v _NextState `E3374 ~T0 @X0 1 e ]
-"32
-[; ;./cases.h: 32: uint8_t click;
+"33
+[; ;./cases.h: 33: uint8_t click;
 [v _click `uc ~T0 @X0 1 e ]
 "8 cases.c
 [; ;cases.c: 8: char init[10]="Waiting...";
@@ -603,14 +603,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 121 `c
 ..
 ]
-"16
-[; ;cases.c: 16: uint8_t start(){
+"14
+[; ;cases.c: 14: uint8_t start(){
 [v _start `(uc ~T0 @X0 1 ef ]
 {
 [e :U _start ]
 [f ]
-"17
-[; ;cases.c: 17:      for(int i=0;i<10;i++){
+"15
+[; ;cases.c: 15:      for(int i=0;i<10;i++){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -618,41 +618,41 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 370  ]
 [e :U 369 ]
 {
-"18
-[; ;cases.c: 18:         UARTWrite(init[i]);
+"16
+[; ;cases.c: 16:         UARTWrite(init[i]);
 [e ( _UARTWrite (1 *U + &U _init * -> -> _i `ui `ux -> -> # *U &U _init `ui `ux ]
-"19
-[; ;cases.c: 19:     }
+"17
+[; ;cases.c: 17:     }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 10 `i 369  ]
 [e :U 370 ]
 }
-"20
-[; ;cases.c: 20:      PORTC = 0xff;
+"18
+[; ;cases.c: 18:      PORTC = 0xff;
 [e = _PORTC -> -> 255 `i `uc ]
-"21
-[; ;cases.c: 21:      return wait_cmd_State;
+"19
+[; ;cases.c: 19:      return wait_cmd_State;
 [e ) -> . `E3374 1 `uc ]
 [e $UE 368  ]
-"22
-[; ;cases.c: 22: }
+"20
+[; ;cases.c: 20: }
 [e :UE 368 ]
 }
-"25
-[; ;cases.c: 25: uint8_t cmd(){
+"23
+[; ;cases.c: 23: uint8_t cmd(){
 [v _cmd `(uc ~T0 @X0 1 ef ]
 {
 [e :U _cmd ]
 [f ]
-"26
-[; ;cases.c: 26:     UARTWrite(13);
+"24
+[; ;cases.c: 24:     UARTWrite(13);
 [e ( _UARTWrite (1 -> -> 13 `i `uc ]
-"27
-[; ;cases.c: 27:     PORTC = 0x00;
+"25
+[; ;cases.c: 25:     PORTC = 0x00;
 [e = _PORTC -> -> 0 `i `uc ]
-"28
-[; ;cases.c: 28:     for(int i=0;i<10;i++){
+"26
+[; ;cases.c: 26:     for(int i=0;i<10;i++){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -660,60 +660,60 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 374  ]
 [e :U 373 ]
 {
-"29
-[; ;cases.c: 29:         UARTWrite(e_c[i]);
+"27
+[; ;cases.c: 27:         UARTWrite(e_c[i]);
 [e ( _UARTWrite (1 *U + &U _e_c * -> -> _i `ui `ux -> -> # *U &U _e_c `ui `ux ]
-"30
-[; ;cases.c: 30:     }
+"28
+[; ;cases.c: 28:     }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 10 `i 373  ]
 [e :U 374 ]
 }
-"31
-[; ;cases.c: 31:     coord(&Par1,&letter,&cord_x, &cord_y, &Par2);
+"29
+[; ;cases.c: 29:     coord(&Par1,&letter,&cord_x, &cord_y, &Par2);
 [e ( _coord (4 , , , , &U _Par1 &U _letter &U _cord_x &U _cord_y &U _Par2 ]
-"32
-[; ;cases.c: 32:     PORTC =0Xff;
+"30
+[; ;cases.c: 30:     PORTC =0Xff;
 [e = _PORTC -> -> 255 `i `uc ]
-"33
-[; ;cases.c: 33:     return validate_Par_State;
+"31
+[; ;cases.c: 31:     return validate_Par_State;
 [e ) -> . `E3374 2 `uc ]
 [e $UE 372  ]
-"34
-[; ;cases.c: 34: }
+"32
+[; ;cases.c: 32: }
 [e :UE 372 ]
 }
-"36
-[; ;cases.c: 36: uint8_t Par_Validated(){
+"34
+[; ;cases.c: 34: uint8_t Par_Validated(){
 [v _Par_Validated `(uc ~T0 @X0 1 ef ]
 {
 [e :U _Par_Validated ]
 [f ]
-"37
-[; ;cases.c: 37:     PORTC=0x00;
+"35
+[; ;cases.c: 35:     PORTC=0x00;
 [e = _PORTC -> -> 0 `i `uc ]
-"38
-[; ;cases.c: 38:     if(Par1==0X3C && Par2==0x3E){
+"36
+[; ;cases.c: 36:     if(Par1==0X3C && Par2==0x3E){
 [e $ ! && == -> _Par1 `i -> 60 `i == -> _Par2 `i -> 62 `i 377  ]
 {
-"39
-[; ;cases.c: 39:         PORTC=0X02;
+"37
+[; ;cases.c: 37:         PORTC=0X02;
 [e = _PORTC -> -> 2 `i `uc ]
-"40
-[; ;cases.c: 40:         return validate_Instruct_State;
+"38
+[; ;cases.c: 38:         return validate_Instruct_State;
 [e ) -> . `E3374 3 `uc ]
 [e $UE 376  ]
-"41
-[; ;cases.c: 41:     }
+"39
+[; ;cases.c: 39:     }
 }
 [e $U 378  ]
-"42
-[; ;cases.c: 42:     else{
+"40
+[; ;cases.c: 40:     else{
 [e :U 377 ]
 {
-"43
-[; ;cases.c: 43:         for(int i=0;i<5;i++){
+"41
+[; ;cases.c: 41:         for(int i=0;i<5;i++){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -721,83 +721,83 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 380  ]
 [e :U 379 ]
 {
-"44
-[; ;cases.c: 44:             UARTWrite(Error[i]);
+"42
+[; ;cases.c: 42:             UARTWrite(Error[i]);
 [e ( _UARTWrite (1 *U + &U _Error * -> -> _i `ui `ux -> -> # *U &U _Error `ui `ux ]
-"45
-[; ;cases.c: 45:         }
+"43
+[; ;cases.c: 43:         }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 5 `i 379  ]
 [e :U 380 ]
 }
-"46
-[; ;cases.c: 46:         PORTC= 0X04;
+"44
+[; ;cases.c: 44:         PORTC= 0X04;
 [e = _PORTC -> -> 4 `i `uc ]
-"47
-[; ;cases.c: 47:         return wait_cmd_State;
+"45
+[; ;cases.c: 45:         return wait_cmd_State;
 [e ) -> . `E3374 1 `uc ]
 [e $UE 376  ]
-"48
-[; ;cases.c: 48:     }
+"46
+[; ;cases.c: 46:     }
 }
 [e :U 378 ]
-"49
-[; ;cases.c: 49: }
+"47
+[; ;cases.c: 47: }
 [e :UE 376 ]
 }
-"51
-[; ;cases.c: 51: uint8_t Ins_Validated(){
+"49
+[; ;cases.c: 49: uint8_t Ins_Validated(){
 [v _Ins_Validated `(uc ~T0 @X0 1 ef ]
 {
 [e :U _Ins_Validated ]
 [f ]
-"52
-[; ;cases.c: 52:     PORTC=0x00;
+"50
+[; ;cases.c: 50:     PORTC=0x00;
 [e = _PORTC -> -> 0 `i `uc ]
-"53
-[; ;cases.c: 53:     if(letter==0x43){
+"51
+[; ;cases.c: 51:     if(letter==0x43){
 [e $ ! == -> _letter `i -> 67 `i 383  ]
 {
-"54
-[; ;cases.c: 54:         PORTC=0X02;
+"52
+[; ;cases.c: 52:         PORTC=0X02;
 [e = _PORTC -> -> 2 `i `uc ]
-"55
-[; ;cases.c: 55:         click=1;
+"53
+[; ;cases.c: 53:         click=1;
 [e = _click -> -> 1 `i `uc ]
-"56
-[; ;cases.c: 56:         return validate_Coord_State;
+"54
+[; ;cases.c: 54:         return validate_Coord_State;
 [e ) -> . `E3374 4 `uc ]
 [e $UE 382  ]
-"58
-[; ;cases.c: 58:     }
+"56
+[; ;cases.c: 56:     }
 }
 [e $U 384  ]
-"59
-[; ;cases.c: 59:     else if(letter== 0x53){
+"57
+[; ;cases.c: 57:     else if(letter== 0x53){
 [e :U 383 ]
 [e $ ! == -> _letter `i -> 83 `i 385  ]
 {
-"60
-[; ;cases.c: 60:         PORTC=0X02;
+"58
+[; ;cases.c: 58:         PORTC=0X02;
 [e = _PORTC -> -> 2 `i `uc ]
-"61
-[; ;cases.c: 61:         click=0;
+"59
+[; ;cases.c: 59:         click=0;
 [e = _click -> -> 0 `i `uc ]
-"62
-[; ;cases.c: 62:         return validate_Coord_State;
+"60
+[; ;cases.c: 60:         return validate_Coord_State;
 [e ) -> . `E3374 4 `uc ]
 [e $UE 382  ]
-"63
-[; ;cases.c: 63:     }
+"61
+[; ;cases.c: 61:     }
 }
 [e $U 386  ]
-"64
-[; ;cases.c: 64:     else{
+"62
+[; ;cases.c: 62:     else{
 [e :U 385 ]
 {
-"65
-[; ;cases.c: 65:         for(int i=0;i<5;i++){
+"63
+[; ;cases.c: 63:         for(int i=0;i<5;i++){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -805,62 +805,62 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 388  ]
 [e :U 387 ]
 {
-"66
-[; ;cases.c: 66:             UARTWrite(Error[i]);
+"64
+[; ;cases.c: 64:             UARTWrite(Error[i]);
 [e ( _UARTWrite (1 *U + &U _Error * -> -> _i `ui `ux -> -> # *U &U _Error `ui `ux ]
-"67
-[; ;cases.c: 67:         }
+"65
+[; ;cases.c: 65:         }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 5 `i 387  ]
 [e :U 388 ]
 }
-"68
-[; ;cases.c: 68:         PORTC= 0X04;
+"66
+[; ;cases.c: 66:         PORTC= 0X04;
 [e = _PORTC -> -> 4 `i `uc ]
-"69
-[; ;cases.c: 69:         return wait_cmd_State;
+"67
+[; ;cases.c: 67:         return wait_cmd_State;
 [e ) -> . `E3374 1 `uc ]
 [e $UE 382  ]
-"70
-[; ;cases.c: 70:     }
+"68
+[; ;cases.c: 68:     }
 }
 [e :U 386 ]
 [e :U 384 ]
-"71
-[; ;cases.c: 71: }
+"69
+[; ;cases.c: 69: }
 [e :UE 382 ]
 }
-"73
-[; ;cases.c: 73: uint8_t Coord_Validated(){
+"71
+[; ;cases.c: 71: uint8_t Coord_Validated(){
 [v _Coord_Validated `(uc ~T0 @X0 1 ef ]
 {
 [e :U _Coord_Validated ]
 [f ]
-"74
-[; ;cases.c: 74:     PORTC=0x00;
+"72
+[; ;cases.c: 72:     PORTC=0x00;
 [e = _PORTC -> -> 0 `i `uc ]
-"75
-[; ;cases.c: 75:     if(cord_x<=300 && cord_y<=300){
+"73
+[; ;cases.c: 73:     if(cord_x<=300 && cord_y<=300){
 [e $ ! && <= -> _cord_x `ui -> -> 300 `i `ui <= -> _cord_y `ui -> -> 300 `i `ui 391  ]
 {
-"76
-[; ;cases.c: 76:         PORTC=0X02;
+"74
+[; ;cases.c: 74:         PORTC=0X02;
 [e = _PORTC -> -> 2 `i `uc ]
-"77
-[; ;cases.c: 77:         return end_State;
+"75
+[; ;cases.c: 75:         return end_State;
 [e ) -> . `E3374 6 `uc ]
 [e $UE 390  ]
-"78
-[; ;cases.c: 78:     }
+"76
+[; ;cases.c: 76:     }
 }
 [e $U 392  ]
-"79
-[; ;cases.c: 79:     else{
+"77
+[; ;cases.c: 77:     else{
 [e :U 391 ]
 {
-"80
-[; ;cases.c: 80:         for(int i=0;i<5;i++){
+"78
+[; ;cases.c: 78:         for(int i=0;i<5;i++){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -868,39 +868,39 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 394  ]
 [e :U 393 ]
 {
-"81
-[; ;cases.c: 81:             UARTWrite(Error[i]);
+"79
+[; ;cases.c: 79:             UARTWrite(Error[i]);
 [e ( _UARTWrite (1 *U + &U _Error * -> -> _i `ui `ux -> -> # *U &U _Error `ui `ux ]
-"82
-[; ;cases.c: 82:         }
+"80
+[; ;cases.c: 80:         }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 5 `i 393  ]
 [e :U 394 ]
 }
-"83
-[; ;cases.c: 83:         PORTC= 0X04;
+"81
+[; ;cases.c: 81:         PORTC= 0X04;
 [e = _PORTC -> -> 4 `i `uc ]
-"84
-[; ;cases.c: 84:        return wait_cmd_State;
+"82
+[; ;cases.c: 82:        return wait_cmd_State;
 [e ) -> . `E3374 1 `uc ]
 [e $UE 390  ]
-"85
-[; ;cases.c: 85:     }
+"83
+[; ;cases.c: 83:     }
 }
 [e :U 392 ]
-"87
-[; ;cases.c: 87: }
+"85
+[; ;cases.c: 85: }
 [e :UE 390 ]
 }
-"89
-[; ;cases.c: 89: void end(){
+"87
+[; ;cases.c: 87: void end(){
 [v _end `(v ~T0 @X0 1 ef ]
 {
 [e :U _end ]
 [f ]
-"90
-[; ;cases.c: 90:     for(int i=0;i<4;i++){
+"88
+[; ;cases.c: 88:     for(int i=0;i<4;i++){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -908,23 +908,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 398  ]
 [e :U 397 ]
 {
-"91
-[; ;cases.c: 91:         UARTWrite(okay[i]);
+"89
+[; ;cases.c: 89:         UARTWrite(okay[i]);
 [e ( _UARTWrite (1 *U + &U _okay * -> -> _i `ui `ux -> -> # *U &U _okay `ui `ux ]
-"92
-[; ;cases.c: 92:     }
+"90
+[; ;cases.c: 90:     }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 4 `i 397  ]
 [e :U 398 ]
 }
-"93
-[; ;cases.c: 93:     PORTC=0XFF;
+"91
+[; ;cases.c: 91:     PORTC=0XFF;
 [e = _PORTC -> -> 255 `i `uc ]
-"94
-[; ;cases.c: 94:     return;
+"92
+[; ;cases.c: 92:     return;
 [e $UE 396  ]
-"96
-[; ;cases.c: 96: }
+"94
+[; ;cases.c: 94: }
 [e :UE 396 ]
 }

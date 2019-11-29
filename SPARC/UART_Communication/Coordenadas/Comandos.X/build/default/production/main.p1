@@ -1,6 +1,6 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"30 ./cases.h
-[; ;./cases.h: 30: systemState NextState;
+"31 ./cases.h
+[; ;./cases.h: 31: systemState NextState;
 [c E3374 0 1 2 3 4 5 6 .. ]
 [n E3374 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State validate_Actuator_State end_State  ]
 [p mainexit ]
@@ -13,8 +13,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3847 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 3847: extern volatile unsigned char TRISC __attribute__((address(0xF94)));
 [v _TRISC `Vuc ~T0 @X0 0 e@3988 ]
-"1 ./cases.h
-[; ;./cases.h: 1: void verification(void);
+"2 ./cases.h
+[; ;./cases.h: 2: void verification(void);
 [v _verification `(v ~T0 @X0 0 ef ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
@@ -526,26 +526,26 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8893
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"5 ./cases.h
-[; ;./cases.h: 5: char Par1;
+"6 ./cases.h
+[; ;./cases.h: 6: char Par1;
 [v _Par1 `uc ~T0 @X0 1 e ]
-"6
-[; ;./cases.h: 6: char letter;
-[v _letter `uc ~T0 @X0 1 e ]
 "7
-[; ;./cases.h: 7: unsigned short cord_x;
-[v _cord_x `us ~T0 @X0 1 e ]
+[; ;./cases.h: 7: char letter;
+[v _letter `uc ~T0 @X0 1 e ]
 "8
-[; ;./cases.h: 8: unsigned short cord_y;
-[v _cord_y `us ~T0 @X0 1 e ]
+[; ;./cases.h: 8: unsigned short cord_x;
+[v _cord_x `us ~T0 @X0 1 e ]
 "9
-[; ;./cases.h: 9: char Par2;
+[; ;./cases.h: 9: unsigned short cord_y;
+[v _cord_y `us ~T0 @X0 1 e ]
+"10
+[; ;./cases.h: 10: char Par2;
 [v _Par2 `uc ~T0 @X0 1 e ]
-"30
-[; ;./cases.h: 30: systemState NextState;
+"31
+[; ;./cases.h: 31: systemState NextState;
 [v _NextState `E3374 ~T0 @X0 1 e ]
-"32
-[; ;./cases.h: 32: uint8_t click;
+"33
+[; ;./cases.h: 33: uint8_t click;
 [v _click `uc ~T0 @X0 1 e ]
 [v $root$_main `(v ~T0 @X0 0 e ]
 "11 main.c
@@ -566,7 +566,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "15
 [; ;main.c: 15:     verification();
 [e ( _verification ..  ]
-"16
-[; ;main.c: 16: }
+"17
+[; ;main.c: 17: }
 [e :UE 368 ]
 }

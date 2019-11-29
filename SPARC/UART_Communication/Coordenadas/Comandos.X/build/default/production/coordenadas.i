@@ -5713,6 +5713,7 @@ char UARTRead(void);
 # 4 "coordenadas.c" 2
 
 # 1 "./cases.h" 1
+
 void verification(void);
 
 int coord(char* P1, char* L, unsigned short* x, unsigned short* y, char* P2);

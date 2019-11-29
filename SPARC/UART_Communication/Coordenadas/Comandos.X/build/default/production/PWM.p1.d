@@ -1,4 +1,5 @@
 build/default/production/PWM.p1:  \
 PWM.c  \
 PWM.h  \
-config.h 
+config.h  \
+cases.h 

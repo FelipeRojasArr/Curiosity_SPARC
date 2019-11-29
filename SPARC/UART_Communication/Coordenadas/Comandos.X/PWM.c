@@ -1,6 +1,37 @@
 #include "PWM.h"
 #include <xc.h>
 #include "config.h"
+#include "cases.h"
+/*En el main una vez que hayamos obtenido las coordenadas vamos a tener que:
+ - Llamar PWM();*/
+
+void PWM(void){
+    /*Obtenemos coordenadas relativas*/
+    CoordRelatX=CoordAntX-cord_x;
+    CoordRelatX=CoordAntX-cord_x; 
+    
+    /*PWM en X*/
+    pasosRecorridos=PWMx(CoordRelatX);
+    
+    /*ACTUALIZAMOS COORDENADA X */      
+    if(CoordRelatX<0) CoordAntX= CoordAntX-pasosRecorridos; //Si la distancia es negativa se resta
+    else{ 
+        if (CoordRelatX>0) CoordAntX=CoordAntX+pasosRecorridos;
+    }
+    
+    /* PWM en Y*/    
+    pasosRecorridos=PWMy(CoordRelatY);
+    
+    /*ACTUALIZAMOS COORDENADA Y */    
+    if(CoordRelatY<0){
+        CoordAntY = CoordAntY-pasosRecorridos; 
+    }//Si la distancia es negativa se resta
+    else{ 
+        if (CoordAntY>0) CoordAntY=CoordAntY+pasosRecorridos;
+    }
+ 
+}
+
 int PWMx (int distancia){
     if (distancia<0){
         salidaDirA=0;
@@ -52,4 +83,9 @@ void OneShot(void){
 void ResetOneShot(void){
     if(PORTCbits.CCP1==1)return;
     if(PORTCbits.CCP1==0)ons=0;
+}
+
+void ObtenerDistancia(){
+    CoordRelatX=CoordAntX-cord_x;
+    CoordRelatY=CoordAntY-cord_y;
 }

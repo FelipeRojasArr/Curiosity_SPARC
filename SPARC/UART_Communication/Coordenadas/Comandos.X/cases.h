@@ -1,3 +1,4 @@
+#include <stdint.h>
 void verification(void);
 
 int coord(char* P1, char* L, unsigned short* x, unsigned short* y, char* P2);

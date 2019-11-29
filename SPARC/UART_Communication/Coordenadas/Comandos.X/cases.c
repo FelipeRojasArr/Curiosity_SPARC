@@ -11,8 +11,6 @@ char Error[5]="Error";
 char okay[4]="Okay" ;
 
 
-
-
 uint8_t start(){
      for(int i=0;i<10;i++){
         UARTWrite(init[i]);
