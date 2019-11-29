@@ -14,15 +14,11 @@
 #define BUTTON_MOTORX PORTBbits.RB2
 #define _XTAL_FREQ 4000000
 
-
-void main(void) {
-    return;
-}
-
-void __interrupt() INT_ISR(void)
+//Instrucction to be added to the main
+/*void __interrupt() INT_ISR(void)
 {
-    
-}
+    doSomething();
+}*/
 
 
 void interruptsConfiguration()
@@ -38,9 +34,9 @@ void interruptsConfiguration()
     INTCON3bits.INT1IE = ON;            //Enables INT1 external interrupt
             
     // MUST BE CLEARES WHEN AN EXTERNAL INTERRUPTION HAPPENS
-    INTCONbits.INT0IF = OFF;          //External interrupt flag for INT0
-    INTCON3bits.INT1IF = OFF;          //External interrupt flag for INT0
-    INTCON3bits.INT2IF = OFF;          //External interrupt flag for INT0
+    //INTCONbits.INT0IF = OFF;          //External interrupt flag for INT0
+    //INTCON3bits.INT1IF = OFF;          //External interrupt flag for INT0
+    //INTCON3bits.INT2IF = OFF;          //External interrupt flag for INT0
 }
 void buttonConfiguration(void)
 {
