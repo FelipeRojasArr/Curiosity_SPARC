@@ -24,10 +24,10 @@ void PWM(void){
     
     /*ACTUALIZAMOS COORDENADA Y */    
     if(CoordRelatY<0){
-        CoordAntY = CoordAntY-pasosRecorridos; 
-    }//Si la distancia es negativa se resta
+        CoordAntY = CoordAntY-pasosRecorridos; //Si la distancia es negativa se resta
+    }
     else{ 
-        if (CoordAntY>0) CoordAntY=CoordAntY+pasosRecorridos;
+        if (CoordAntY>0) CoordAntY=CoordAntY+pasosRecorridos;// SI es positiva se suma
     }
  
 }
@@ -83,9 +83,4 @@ void OneShot(void){
 void ResetOneShot(void){
     if(PORTCbits.CCP1==1)return;
     if(PORTCbits.CCP1==0)ons=0;
-}
-
-void ObtenerDistancia(){
-    CoordRelatX=CoordAntX-cord_x;
-    CoordRelatY=CoordAntY-cord_y;
 }
