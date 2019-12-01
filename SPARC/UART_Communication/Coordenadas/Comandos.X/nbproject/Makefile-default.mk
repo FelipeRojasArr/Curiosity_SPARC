@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=cases.c UART.c coordenadas.c main.c PWM.c verification.c Movimiento.c
+SOURCEFILES_QUOTED_IF_SPACED=cases.c UART.c coordenadas.c main.c PWM.c verification.c Movimiento.c Interruptions.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/cases.p1 ${OBJECTDIR}/UART.p1 ${OBJECTDIR}/coordenadas.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/PWM.p1 ${OBJECTDIR}/verification.p1 ${OBJECTDIR}/Movimiento.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/cases.p1.d ${OBJECTDIR}/UART.p1.d ${OBJECTDIR}/coordenadas.p1.d ${OBJECTDIR}/main.p1.d ${OBJECTDIR}/PWM.p1.d ${OBJECTDIR}/verification.p1.d ${OBJECTDIR}/Movimiento.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/cases.p1 ${OBJECTDIR}/UART.p1 ${OBJECTDIR}/coordenadas.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/PWM.p1 ${OBJECTDIR}/verification.p1 ${OBJECTDIR}/Movimiento.p1 ${OBJECTDIR}/Interruptions.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/cases.p1.d ${OBJECTDIR}/UART.p1.d ${OBJECTDIR}/coordenadas.p1.d ${OBJECTDIR}/main.p1.d ${OBJECTDIR}/PWM.p1.d ${OBJECTDIR}/verification.p1.d ${OBJECTDIR}/Movimiento.p1.d ${OBJECTDIR}/Interruptions.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/cases.p1 ${OBJECTDIR}/UART.p1 ${OBJECTDIR}/coordenadas.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/PWM.p1 ${OBJECTDIR}/verification.p1 ${OBJECTDIR}/Movimiento.p1
+OBJECTFILES=${OBJECTDIR}/cases.p1 ${OBJECTDIR}/UART.p1 ${OBJECTDIR}/coordenadas.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/PWM.p1 ${OBJECTDIR}/verification.p1 ${OBJECTDIR}/Movimiento.p1 ${OBJECTDIR}/Interruptions.p1
 
 # Source Files
-SOURCEFILES=cases.c UART.c coordenadas.c main.c PWM.c verification.c Movimiento.c
+SOURCEFILES=cases.c UART.c coordenadas.c main.c PWM.c verification.c Movimiento.c Interruptions.c
 
 
 
@@ -150,6 +150,14 @@ ${OBJECTDIR}/Movimiento.p1: Movimiento.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/Movimiento.d ${OBJECTDIR}/Movimiento.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/Movimiento.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+${OBJECTDIR}/Interruptions.p1: Interruptions.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Interruptions.p1.d 
+	@${RM} ${OBJECTDIR}/Interruptions.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/Interruptions.p1 Interruptions.c 
+	@-${MV} ${OBJECTDIR}/Interruptions.d ${OBJECTDIR}/Interruptions.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/Interruptions.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
 else
 ${OBJECTDIR}/cases.p1: cases.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
@@ -206,6 +214,14 @@ ${OBJECTDIR}/Movimiento.p1: Movimiento.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/Movimiento.p1 Movimiento.c 
 	@-${MV} ${OBJECTDIR}/Movimiento.d ${OBJECTDIR}/Movimiento.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/Movimiento.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/Interruptions.p1: Interruptions.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Interruptions.p1.d 
+	@${RM} ${OBJECTDIR}/Interruptions.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/Interruptions.p1 Interruptions.c 
+	@-${MV} ${OBJECTDIR}/Interruptions.d ${OBJECTDIR}/Interruptions.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/Interruptions.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 
