@@ -7,8 +7,27 @@
 #include "cases.h"
 #include "Definiciones.h"
 #include "Configuracion.h"
+#include "Interruptions.h"
 
-
+void __interrupt() INT_ISR(void)
+{
+    if(INTCON3bits.INT2IF = ON)
+    {
+        __delay_ms(15);
+        while(INTCON3bits.INT2IF = ON)
+        {
+            HaltMotors();
+        }
+        if(STOP_SWITCH = OFF)
+        {
+            __delay_ms(15);
+            if(STOP_SWITCH = OFF)
+            {
+                INTCON3bits.INT2IF = OFF;
+            }
+        }
+    }
+}
 void main(void) {
     Configuracion();
     verification(); 

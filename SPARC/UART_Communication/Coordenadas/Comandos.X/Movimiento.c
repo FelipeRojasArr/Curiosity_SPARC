@@ -19,3 +19,10 @@ int Movimiento(void) {
         SOLENOIDE=LOW;
     }
 }
+
+
+void HaltMotors()
+{
+    ENABLE_A = HIGH;
+    ENABLE_B = HIGH;
+}
