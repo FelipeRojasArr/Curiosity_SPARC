@@ -5,6 +5,7 @@ int PWMy (int distancia);
 int ContarPulsos(int pasos);
 void OneShot(void);
 void ResetOneShot(void);
+int Movimiento(void);
 
 /* DECLARACION DE VARIABLES */
 

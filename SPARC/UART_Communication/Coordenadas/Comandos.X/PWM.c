@@ -43,13 +43,13 @@ void PWM(void){
 
 int PWMx (int distancia){
     if (distancia<0){
-        salidaDirA=0;
-        salidaDirB=0;
+        DIR_A=0;
+        DIR_B=0;
         distancia=distancia*(-1);
     }
     else {
-        salidaDirA=1;
-        salidaDirB=1;
+        DIR_A=1;
+        DIR_B=1;
     } 
     int pasos= ContarPulsos(distancia);
     return(pasos);   
@@ -57,13 +57,13 @@ int PWMx (int distancia){
 
 int PWMy (int distancia){
     if (distancia<0){
-        salidaDirA=0;
-        salidaDirB=1;
+        DIR_A=0;
+        DIR_B=1;
         distancia=distancia*(-1);
     }
     else {
-        salidaDirA=1;
-        salidaDirB=1;
+        DIR_A=1;
+        DIR_B=1;
     } 
    int pasos= ContarPulsos(distancia);
     return(pasos);   
@@ -71,14 +71,14 @@ int PWMy (int distancia){
 int ContarPulsos(int pasos){
     PasosActuales=0;
     ons=0;
-    enableA=0;
+    ENABLE_A=0;
     while(PasosActuales<= pasos)
     {
         if (PORTCbits.CCP1==1) OneShot();
         if(ons==1) ResetOneShot();
     }
     
-    enableA=1;
+    ENABLE_A=1;
     return(PasosActuales);  
 }
 void OneShot(void){

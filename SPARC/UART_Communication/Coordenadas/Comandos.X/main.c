@@ -14,6 +14,6 @@ void main(void) {
     UARTConfi(9600);
     TRISC=0X00;
     verification(); 
-    Movimiento():
+    Movimiento();
     
 }

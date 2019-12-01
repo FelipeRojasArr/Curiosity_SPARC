@@ -5741,6 +5741,25 @@ systemState NextState;
 uint8_t click;
 # 4 "verification.c" 2
 
+# 1 "./Definiciones.h" 1
+# 5 "verification.c" 2
+
+# 1 "./Configuracion.h" 1
+
+
+
+
+
+
+
+#pragma config PLLDIV = 2
+#pragma config FOSC = INTOSCIO_EC
+#pragma config WDT = OFF
+#pragma config PBADEN = OFF
+#pragma config LVP = OFF
+#pragma config MCLRE = OFF
+# 6 "verification.c" 2
+
 
 void verification(void){
     NextState = iddle_State;

@@ -1,91 +1,91 @@
 Version 4.0 HI-TECH Software Intermediate Code
 "3858 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 3858:     struct {
-[s S154 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S154 . TRISC0 TRISC1 TRISC2 . TRISC6 TRISC7 ]
+[s S149 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S149 . TRISC0 TRISC1 TRISC2 . TRISC6 TRISC7 ]
 "3866
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 3866:     struct {
-[s S155 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S155 . RC0 RC1 RC2 . RC6 RC7 ]
+[s S150 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S150 . RC0 RC1 RC2 . RC6 RC7 ]
 "3857
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 3857: typedef union {
-[u S153 `S154 1 `S155 1 ]
-[n S153 . . . ]
+[u S148 `S149 1 `S150 1 ]
+[n S148 . . . ]
 "3875
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 3875: extern volatile TRISCbits_t TRISCbits __attribute__((address(0xF94)));
-[v _TRISCbits `VS153 ~T0 @X0 0 e@3988 ]
+[v _TRISCbits `VS148 ~T0 @X0 0 e@3988 ]
 "5426
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5426: extern volatile unsigned char SPBRG __attribute__((address(0xFAF)));
 [v _SPBRG `Vuc ~T0 @X0 0 e@4015 ]
 "5157
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5157:     struct {
-[s S210 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S210 . TX9D TRMT BRGH SENDB SYNC TXEN TX9 CSRC ]
+[s S205 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S205 . TX9D TRMT BRGH SENDB SYNC TXEN TX9 CSRC ]
 "5167
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5167:     struct {
-[s S211 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S211 . TX9D1 TRMT1 BRGH1 SENDB1 SYNC1 TXEN1 TX91 CSRC1 ]
+[s S206 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S206 . TX9D1 TRMT1 BRGH1 SENDB1 SYNC1 TXEN1 TX91 CSRC1 ]
 "5177
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5177:     struct {
-[s S212 :6 `uc 1 :1 `uc 1 ]
-[n S212 . . TX8_9 ]
+[s S207 :6 `uc 1 :1 `uc 1 ]
+[n S207 . . TX8_9 ]
 "5181
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5181:     struct {
-[s S213 :1 `uc 1 ]
-[n S213 . TXD8 ]
+[s S208 :1 `uc 1 ]
+[n S208 . TXD8 ]
 "5156
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5156: typedef union {
-[u S209 `S210 1 `S211 1 `S212 1 `S213 1 ]
-[n S209 . . . . . ]
+[u S204 `S205 1 `S206 1 `S207 1 `S208 1 ]
+[n S204 . . . . . ]
 "5185
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5185: extern volatile TXSTAbits_t TXSTAbits __attribute__((address(0xFAC)));
-[v _TXSTAbits `VS209 ~T0 @X0 0 e@4012 ]
+[v _TXSTAbits `VS204 ~T0 @X0 0 e@4012 ]
 "4947
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4947:     struct {
-[s S196 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S196 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
+[s S191 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S191 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
 "4957
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4957:     struct {
-[s S197 :3 `uc 1 :1 `uc 1 ]
-[n S197 . . ADEN ]
+[s S192 :3 `uc 1 :1 `uc 1 ]
+[n S192 . . ADEN ]
 "4961
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4961:     struct {
-[s S198 :5 `uc 1 :1 `uc 1 ]
-[n S198 . . SRENA ]
+[s S193 :5 `uc 1 :1 `uc 1 ]
+[n S193 . . SRENA ]
 "4965
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4965:     struct {
-[s S199 :6 `uc 1 :1 `uc 1 ]
-[n S199 . . RC8_9 ]
+[s S194 :6 `uc 1 :1 `uc 1 ]
+[n S194 . . RC8_9 ]
 "4969
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4969:     struct {
-[s S200 :6 `uc 1 :1 `uc 1 ]
-[n S200 . . RC9 ]
+[s S195 :6 `uc 1 :1 `uc 1 ]
+[n S195 . . RC9 ]
 "4973
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4973:     struct {
-[s S201 :1 `uc 1 ]
-[n S201 . RCD8 ]
+[s S196 :1 `uc 1 ]
+[n S196 . RCD8 ]
 "4946
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4946: typedef union {
-[u S195 `S196 1 `S197 1 `S198 1 `S199 1 `S200 1 `S201 1 ]
-[n S195 . . . . . . . ]
+[u S190 `S191 1 `S192 1 `S193 1 `S194 1 `S195 1 `S196 1 ]
+[n S190 . . . . . . . ]
 "4977
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4977: extern volatile RCSTAbits_t RCSTAbits __attribute__((address(0xFAB)));
-[v _RCSTAbits `VS195 ~T0 @X0 0 e@4011 ]
+[v _RCSTAbits `VS190 ~T0 @X0 0 e@4011 ]
 "4474
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4474:     struct {
-[s S178 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S178 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF SPPIF ]
+[s S173 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S173 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF SPPIF ]
 "4484
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4484:     struct {
-[s S179 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S179 . . TX1IF RC1IF . PSPIF ]
+[s S174 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S174 . . TX1IF RC1IF . PSPIF ]
 "4473
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4473: typedef union {
-[u S177 `S178 1 `S179 1 ]
-[n S177 . . . ]
+[u S172 `S173 1 `S174 1 ]
+[n S172 . . . ]
 "4492
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4492: extern volatile PIR1bits_t PIR1bits __attribute__((address(0xF9E)));
-[v _PIR1bits `VS177 ~T0 @X0 0 e@3998 ]
+[v _PIR1bits `VS172 ~T0 @X0 0 e@3998 ]
 "5402
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5402: extern volatile unsigned char TXREG __attribute__((address(0xFAD)));
 [v _TXREG `Vuc ~T0 @X0 0 e@4013 ]
@@ -605,86 +605,98 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8893
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"5 UART.c
-[; ;UART.c: 5: void UARTConfi(int BAUD){
+"8 ./Configuracion.h
+[p x PLLDIV = 2 ]
+"9
+[p x FOSC = INTOSCIO_EC ]
+"10
+[p x WDT = OFF ]
+"11
+[p x PBADEN = OFF ]
+"12
+[p x LVP = OFF ]
+"13
+[p x MCLRE = OFF ]
+"7 UART.c
+[; ;UART.c: 7: void UARTConfi(int BAUD){
 [v _UARTConfi `(v ~T0 @X0 1 ef1`i ]
 {
 [e :U _UARTConfi ]
 [v _BAUD `i ~T0 @X0 1 r1 ]
 [f ]
-"7
-[; ;UART.c: 7:     TRISCbits.RC6=0;
+"9
+[; ;UART.c: 9:     TRISCbits.RC6=0;
 [e = . . _TRISCbits 1 4 -> -> 0 `i `uc ]
-"8
-[; ;UART.c: 8:     TRISCbits.RC7=1;
-[e = . . _TRISCbits 1 5 -> -> 1 `i `uc ]
 "10
-[; ;UART.c: 10:     SPBRG = (unsigned char)((8000000L/BAUD)/64)-1;
-[e = _SPBRG -> - -> -> / / -> 8000000 `l -> _BAUD `l -> -> 64 `i `l `uc `i -> 1 `i `uc ]
-"11
-[; ;UART.c: 11:     TXSTAbits.BRGH = 0;
-[e = . . _TXSTAbits 0 2 -> -> 0 `i `uc ]
+[; ;UART.c: 10:     TRISCbits.RC7=1;
+[e = . . _TRISCbits 1 5 -> -> 1 `i `uc ]
 "12
-[; ;UART.c: 12:     TXSTAbits.SYNC = 0;
-[e = . . _TXSTAbits 0 4 -> -> 0 `i `uc ]
+[; ;UART.c: 12:     SPBRG = (unsigned char)((4000000UL/BAUD)/64)-1;
+[e = _SPBRG -> - -> -> / / -> 4000000 `ul -> -> _BAUD `l `ul -> -> -> 64 `i `l `ul `uc `i -> 1 `i `uc ]
 "13
-[; ;UART.c: 13:     RCSTAbits.SPEN = 1;
+[; ;UART.c: 13:     TXSTAbits.BRGH = 0;
+[e = . . _TXSTAbits 0 2 -> -> 0 `i `uc ]
+"14
+[; ;UART.c: 14:     TXSTAbits.SYNC = 0;
+[e = . . _TXSTAbits 0 4 -> -> 0 `i `uc ]
+"15
+[; ;UART.c: 15:     RCSTAbits.SPEN = 1;
 [e = . . _RCSTAbits 0 7 -> -> 1 `i `uc ]
-"16
-[; ;UART.c: 16:     TXSTAbits.TX9 = 0;
+"18
+[; ;UART.c: 18:     TXSTAbits.TX9 = 0;
 [e = . . _TXSTAbits 0 6 -> -> 0 `i `uc ]
-"17
-[; ;UART.c: 17:     TXSTAbits.TXEN = 1;
+"19
+[; ;UART.c: 19:     TXSTAbits.TXEN = 1;
 [e = . . _TXSTAbits 0 5 -> -> 1 `i `uc ]
-"20
-[; ;UART.c: 20:     RCSTAbits.RC9 = 0;
-[e = . . _RCSTAbits 4 1 -> -> 0 `i `uc ]
-"21
-[; ;UART.c: 21:     RCSTAbits.CREN = 1;
-[e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
 "22
-[; ;UART.c: 22: }
+[; ;UART.c: 22:     RCSTAbits.RC9 = 0;
+[e = . . _RCSTAbits 4 1 -> -> 0 `i `uc ]
+"23
+[; ;UART.c: 23:     RCSTAbits.CREN = 1;
+[e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
+"24
+[; ;UART.c: 24: }
 [e :UE 367 ]
 }
-"24
-[; ;UART.c: 24: void UARTWrite(char data){
+"26
+[; ;UART.c: 26: void UARTWrite(char data){
 [v _UARTWrite `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _UARTWrite ]
 [v _data `uc ~T0 @X0 1 r1 ]
 [f ]
-"25
-[; ;UART.c: 25:     while(!PIR1bits.TXIF);
+"27
+[; ;UART.c: 27:     while(!PIR1bits.TXIF);
 [e $U 369  ]
 [e :U 370 ]
 [e :U 369 ]
 [e $ ! != -> . . _PIR1bits 0 4 `i -> 0 `i 370  ]
 [e :U 371 ]
-"26
-[; ;UART.c: 26:     TXREG= data;
-[e = _TXREG -> _data `uc ]
 "28
-[; ;UART.c: 28: }
+[; ;UART.c: 28:     TXREG= data;
+[e = _TXREG -> _data `uc ]
+"30
+[; ;UART.c: 30: }
 [e :UE 368 ]
 }
-"30
-[; ;UART.c: 30: char UARTRead(void){
+"32
+[; ;UART.c: 32: char UARTRead(void){
 [v _UARTRead `(uc ~T0 @X0 1 ef ]
 {
 [e :U _UARTRead ]
 [f ]
-"31
-[; ;UART.c: 31:     while(!RCIF);
+"33
+[; ;UART.c: 33:     while(!RCIF);
 [e $U 373  ]
 [e :U 374 ]
 [e :U 373 ]
 [e $ ! _RCIF 374  ]
 [e :U 375 ]
-"32
-[; ;UART.c: 32:     return RCREG;
+"34
+[; ;UART.c: 34:     return RCREG;
 [e ) -> _RCREG `uc ]
 [e $UE 372  ]
-"33
-[; ;UART.c: 33: }
+"35
+[; ;UART.c: 35: }
 [e :UE 372 ]
 }

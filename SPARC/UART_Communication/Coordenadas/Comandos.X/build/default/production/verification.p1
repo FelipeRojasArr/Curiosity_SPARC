@@ -552,88 +552,100 @@ Version 4.0 HI-TECH Software Intermediate Code
 "33
 [; ;./cases.h: 33: uint8_t click;
 [v _click `uc ~T0 @X0 1 e ]
-"6 verification.c
-[; ;verification.c: 6: void verification(void){
+"8 ./Configuracion.h
+[p x PLLDIV = 2 ]
+"9
+[p x FOSC = INTOSCIO_EC ]
+"10
+[p x WDT = OFF ]
+"11
+[p x PBADEN = OFF ]
+"12
+[p x LVP = OFF ]
+"13
+[p x MCLRE = OFF ]
+"8 verification.c
+[; ;verification.c: 8: void verification(void){
 [v _verification `(v ~T0 @X0 1 ef ]
 {
 [e :U _verification ]
 [f ]
-"7
-[; ;verification.c: 7:     NextState = iddle_State;
-[e = _NextState . `E3202 0 ]
-"8
-[; ;verification.c: 8:     switch(NextState)
-[e $U 369  ]
 "9
-[; ;verification.c: 9:   {
-{
+[; ;verification.c: 9:     NextState = iddle_State;
+[e = _NextState . `E3202 0 ]
 "10
-[; ;verification.c: 10:             case iddle_State:{
+[; ;verification.c: 10:     switch(NextState)
+[e $U 369  ]
+"11
+[; ;verification.c: 11:   {
+{
+"12
+[; ;verification.c: 12:             case iddle_State:{
 [e :U 370 ]
 {
-"11
-[; ;verification.c: 11:                 NextState= start();
+"13
+[; ;verification.c: 13:                 NextState= start();
 [e = _NextState -> ( _start ..  `E3202 ]
-"12
-[; ;verification.c: 12:             }
-}
 "14
-[; ;verification.c: 14:             case wait_cmd_State:{
+[; ;verification.c: 14:             }
+}
+"16
+[; ;verification.c: 16:             case wait_cmd_State:{
 [e :U 371 ]
 {
-"15
-[; ;verification.c: 15:                 NextState=cmd();
+"17
+[; ;verification.c: 17:                 NextState=cmd();
 [e = _NextState -> ( _cmd ..  `E3202 ]
-"16
-[; ;verification.c: 16:             }
-}
 "18
-[; ;verification.c: 18:             case validate_Par_State:{
+[; ;verification.c: 18:             }
+}
+"20
+[; ;verification.c: 20:             case validate_Par_State:{
 [e :U 372 ]
 {
-"19
-[; ;verification.c: 19:                 NextState=Par_Validated();
+"21
+[; ;verification.c: 21:                 NextState=Par_Validated();
 [e = _NextState -> ( _Par_Validated ..  `E3202 ]
-"20
-[; ;verification.c: 20:             }
-}
 "22
-[; ;verification.c: 22:             case validate_Instruct_State:{
+[; ;verification.c: 22:             }
+}
+"24
+[; ;verification.c: 24:             case validate_Instruct_State:{
 [e :U 373 ]
 {
-"23
-[; ;verification.c: 23:                 NextState=Ins_Validated();
+"25
+[; ;verification.c: 25:                 NextState=Ins_Validated();
 [e = _NextState -> ( _Ins_Validated ..  `E3202 ]
-"24
-[; ;verification.c: 24:             }
-}
 "26
-[; ;verification.c: 26:             case validate_Coord_State:{
+[; ;verification.c: 26:             }
+}
+"28
+[; ;verification.c: 28:             case validate_Coord_State:{
 [e :U 374 ]
 {
-"27
-[; ;verification.c: 27:                 NextState=Coord_Validated();
+"29
+[; ;verification.c: 29:                 NextState=Coord_Validated();
 [e = _NextState -> ( _Coord_Validated ..  `E3202 ]
-"28
-[; ;verification.c: 28:             }
-}
 "30
-[; ;verification.c: 30:             case end_State:{
+[; ;verification.c: 30:             }
+}
+"32
+[; ;verification.c: 32:             case end_State:{
 [e :U 375 ]
 {
-"31
-[; ;verification.c: 31:                 end();
+"33
+[; ;verification.c: 33:                 end();
 [e ( _end ..  ]
-"32
-[; ;verification.c: 32:             }break;
+"34
+[; ;verification.c: 34:             }break;
 }
 [e $U 368  ]
-"34
-[; ;verification.c: 34:             default: break;
+"36
+[; ;verification.c: 36:             default: break;
 [e :U 376 ]
 [e $U 368  ]
-"35
-[; ;verification.c: 35:     }
+"37
+[; ;verification.c: 37:     }
 }
 [e $U 368  ]
 [e :U 369 ]
@@ -645,7 +657,7 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> . `E3202 6 `ui 375
  376 ]
 [e :U 368 ]
-"36
-[; ;verification.c: 36: }
+"38
+[; ;verification.c: 38: }
 [e :UE 367 ]
 }

@@ -5,18 +5,17 @@
 #include "Definiciones.h"
 #include "Configuracion.h"
 
-void Movimiento(void) {
+int Movimiento(void) {
     if(click==1){
         PWM();
-        Solenoide=HIGH;
+        SOLENOIDE=HIGH;
         _delay_ms(100);
-        Solenoide=LOW;
+        SOLENOIDE=LOW;
         
     }
     else if(click==0){
-        Solenoide=HIGH;
+        SOLENOIDE=HIGH;
         PWM();
-        Solenoide=LOW;
+        SOLENOIDE=LOW;
     }
-    return;
 }

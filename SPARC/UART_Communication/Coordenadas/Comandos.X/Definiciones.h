@@ -2,27 +2,27 @@
 /****************PUERTOS*******************/
 
 /*PWM*/
-# define salidaDirA PORTDbits.RD0 /*Salida del dirA*/
-# define salidaDirB PORTDbits.RD1 /*Salida del dirB*/
+# define DIR_A PORTDbits.RD0 /*Salida del dirA*/
+# define DIR_B PORTDbits.RD1 /*Salida del dirB*/
 
-# define pulsosA PORTCbits.RC1 /*Salida del PWM1*/
-# define pulsosB PORTCbits.RC2 /*Salida del PWM2*/
+# define PULSOS_A PORTCbits.RC1 /*Salida del PWM1*/
+# define PULSOS_B PORTCbits.RC2 /*Salida del PWM2*/
 
-# define enableA PORTCbits.RD2 /*Enable del PWM1*/
-# define enableB PORTCbits.RD3 /*Enable del PWM2*/
+# define ENABLE_A PORTDbits.RD2 /*Enable del PWM1*/
+# define ENABLE_B PORTDbits.RD3 /*Enable del PWM2*/
 
 /*Switches*/
-# define LimitSwitch1 PORTCbits.RB0 
-# define LimitSwitch2 PORTCbits.RB1 
-# define SwitchParar  PORTCbits.RB2
+# define LIMIT_SWITCH_1 PORTBbits.RB0 
+# define LIMIT_SWITCH_2 PORTBbits.RB1 
+# define STOP_SWITCH  PORTBbits.RB2
 
 /*LED's*/
-# define LedRojo PORTCbits.RD4 
-# define LedVerde PORTCbits.RD5
-# define LedAzul PORTCbits.RD6
+# define RED_LED PORTDbits.RD4 
+# define GREEN_LED PORTDbits.RD5
+# define BLUE_LED PORTDbits.RD6
 
 /*Solenoide*/
-# define Solenoide PORTCbits.RD7  
+# define SOLENOIDE PORTDbits.RD7  
 
 /**********DEFINICIONES GLOBALES*************/
 # define HIGH 1
@@ -37,9 +37,9 @@
 #define CCPRXL 0x7D    /*CCPR1L VALUE*/
 
 /*Valores de salida de PWM*/
-# define NumPasos 5
-# define positivo 1
-# define negativo 0
+# define NUM_PASOS 5
+# define POSITIVE 1
+# define NEGATIVE 0
 
 /***************CALCULOS PWM***************/
 //PWM Period = [(PR2) + 1] ? 4 ? TOSC ?(TMR2 Prescale Value)
