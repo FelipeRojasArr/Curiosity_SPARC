@@ -2,6 +2,8 @@
 #include <xc.h>
 #include <stdint.h>
 #include "cases.h"
+#include "Definiciones.h"
+#include "Configuracion.h"
 
 void verification(void){ 
     NextState = iddle_State;

@@ -1,9 +1,11 @@
 #include <xc.h>
 #include <stdint.h>
 #include <string.h>
-#include "config.h"
 #include "UART.h"
 #include "cases.h"
+#include "Definiciones.h"
+#include "Configuracion.h"
+
 
 char init[10]="Waiting...";
 char e_c[13]="Enter_command";

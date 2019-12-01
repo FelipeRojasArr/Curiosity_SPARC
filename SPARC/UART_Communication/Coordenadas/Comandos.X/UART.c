@@ -1,6 +1,7 @@
 #include <xc.h>
-#include "config.h"
 #include "UART.h"
+#include "Definiciones.h"
+#include "Configuracion.h"
 
 void UARTConfi(int BAUD){
     //Configuracion de pines

@@ -28,6 +28,9 @@
 # define LedVerde PORTCbits.RD5
 # define LedAzul PORTCbits.RD6
 
+/*Solenoide*/
+# define Solenoide PORTCbits.RD7  
+
 /**********DEFINICIONES GLOBALES*************/
 # define HIGH 1
 # define LOW 0

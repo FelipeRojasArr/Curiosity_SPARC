@@ -3,6 +3,8 @@
 #include <stdint.h>
 #include "UART.h"
 #include "cases.h"
+#include "Definiciones.h"
+#include "Configuracion.h"
 
 
 

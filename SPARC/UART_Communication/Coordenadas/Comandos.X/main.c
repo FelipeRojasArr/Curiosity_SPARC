@@ -3,9 +3,10 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdint.h>
-#include "config.h"
 #include "UART.h"
 #include "cases.h"
+#include "Definiciones.h"
+#include "Configuracion.h"
 
 
 void main(void) {
@@ -13,5 +14,6 @@ void main(void) {
     UARTConfi(9600);
     TRISC=0X00;
     verification(); 
-    PWM(cord_x, cord_y);
+    Movimiento():
+    
 }

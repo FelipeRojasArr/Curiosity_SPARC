@@ -2,8 +2,17 @@
 #include <xc.h>
 #include "config.h"
 #include "cases.h"
-/*En el main una vez que hayamos obtenido las coordenadas vamos a tener que:
- - Llamar PWM();*/
+#include "Definiciones.h"
+#include "Configuracion.h"
+
+/*
+  La función de PWM:
+  - Obtiene la distancia total a recorrer.
+  - Determina la dirección de los motores.
+  - Activa los enables.
+  - Cuenta los pasos.
+  - Actualiza las coordenadas.
+ */
 
 void PWM(void){
     /*Obtenemos coordenadas relativas*/
