@@ -5792,7 +5792,7 @@ int Movimiento(void) {
     if(click==1){
         PWM();
         PORTDbits.RD7=1;
-        _delay_ms(100);
+        _delay((unsigned long)((100)*(4000000UL/4000.0)));
         PORTDbits.RD7=0;
 
     }

@@ -9,7 +9,7 @@ int Movimiento(void) {
     if(click==1){
         PWM();
         SOLENOIDE=HIGH;
-        _delay_ms(100);
+        __delay_ms(100);
         SOLENOIDE=LOW;
         
     }
