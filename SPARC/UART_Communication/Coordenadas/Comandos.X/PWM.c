@@ -1,6 +1,5 @@
 #include "PWM.h"
 #include <xc.h>
-#include "config.h"
 #include "cases.h"
 #include "Definiciones.h"
 #include "Configuracion.h"
@@ -38,7 +37,7 @@ void PWM(void){
     else{ 
         if (CoordAntY>0) CoordAntY=CoordAntY+pasosRecorridos;// SI es positiva se suma
     }
- 
+    return;
 }
 
 int PWMx (int distancia){
@@ -88,8 +87,10 @@ void OneShot(void){
         PasosActuales++;
         ons=1;
     }
+    return;
 }
 void ResetOneShot(void){
     if(PORTCbits.CCP1==1)return;
     if(PORTCbits.CCP1==0)ons=0;
+    return;
 }
