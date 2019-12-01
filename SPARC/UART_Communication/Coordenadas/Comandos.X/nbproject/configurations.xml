@@ -23,6 +23,7 @@
       <itemPath>main.c</itemPath>
       <itemPath>PWM.c</itemPath>
       <itemPath>verification.c</itemPath>
+      <itemPath>Solenoide.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

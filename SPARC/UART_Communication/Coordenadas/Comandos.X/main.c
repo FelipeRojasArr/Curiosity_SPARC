@@ -13,5 +13,5 @@ void main(void) {
     UARTConfi(9600);
     TRISC=0X00;
     verification(); 
-    //PWM(cord_x, cord_y);
+    PWM(cord_x, cord_y);
 }
