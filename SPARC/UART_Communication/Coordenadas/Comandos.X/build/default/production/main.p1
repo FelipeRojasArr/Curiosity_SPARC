@@ -1,14 +1,14 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"31 ./cases.h
-[; ;./cases.h: 31: systemState NextState;
-[c E3374 0 1 2 3 4 5 6 .. ]
-[n E3374 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State validate_Actuator_State end_State  ]
+"33 ./cases.h
+[; ;./cases.h: 33: systemState NextState;
+[c E3375 0 1 2 3 4 5 6 .. ]
+[n E3375 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State validate_Actuator_State end_State  ]
 [p mainexit ]
 "7986 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 7986: extern volatile unsigned char OSCCON __attribute__((address(0xFD3)));
 [v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
 "1 ./UART.h
-[; ;./UART.h: 1: void UARTConfi(int BAUD);
+[; ;./UART.h: 1: void UARTConfi(int Baud);
 [v _UARTConfi `(v ~T0 @X0 0 ef1`i ]
 "3847 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 3847: extern volatile unsigned char TRISC __attribute__((address(0xF94)));
@@ -16,9 +16,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2 ./cases.h
 [; ;./cases.h: 2: void verification(void);
 [v _verification `(v ~T0 @X0 0 ef ]
-"17 main.c
-[; ;main.c: 17:     Movimiento();
-[v _Movimiento `(i ~T0 @X0 0 e? ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -544,11 +541,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "10
 [; ;./cases.h: 10: char Par2;
 [v _Par2 `uc ~T0 @X0 1 e ]
-"31
-[; ;./cases.h: 31: systemState NextState;
-[v _NextState `E3374 ~T0 @X0 1 e ]
+"12
+[; ;./cases.h: 12: int x;
+[v _x `i ~T0 @X0 1 e ]
 "33
-[; ;./cases.h: 33: uint8_t click;
+[; ;./cases.h: 33: systemState NextState;
+[v _NextState `E3375 ~T0 @X0 1 e ]
+"35
+[; ;./cases.h: 35: uint8_t click;
 [v _click `uc ~T0 @X0 1 e ]
 "8 ./Configuracion.h
 [p x PLLDIV = 2 ]
@@ -578,13 +578,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "15
 [; ;main.c: 15:     TRISC=0X00;
 [e = _TRISC -> -> 0 `i `uc ]
-"16
-[; ;main.c: 16:     verification();
-[e ( _verification ..  ]
-"17
-[; ;main.c: 17:     Movimiento();
-[e ( _Movimiento ..  ]
 "19
-[; ;main.c: 19: }
+[; ;main.c: 19:     x=1;
+[e = _x -> 1 `i ]
+"20
+[; ;main.c: 20:     verification();
+[e ( _verification ..  ]
+"23
+[; ;main.c: 23: }
 [e :UE 368 ]
 }

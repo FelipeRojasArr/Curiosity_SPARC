@@ -5763,7 +5763,7 @@ void *memccpy (void *restrict, const void *restrict, int, size_t);
 # 4 "cases.c" 2
 
 # 1 "./UART.h" 1
-void UARTConfi(int BAUD);
+void UARTConfi(int Baud);
 void UARTWrite(char data);
 char UARTRead(void);
 # 5 "cases.c" 2
@@ -5779,6 +5779,8 @@ char letter;
 unsigned short cord_x;
 unsigned short cord_y;
 char Par2;
+
+int x;
 
 typedef enum
 {
@@ -5828,10 +5830,11 @@ uint8_t click;
 char init[10]="Waiting...";
 char e_c[13]="Enter_command";
 char Error[5]="Error";
-char okay[4]="Okay" ;
+char gracias[7]="Gracias" ;
 
 
 uint8_t start(){
+     UARTWrite(13);
      for(int i=0;i<10;i++){
         UARTWrite(init[i]);
     }
@@ -5858,6 +5861,7 @@ uint8_t Par_Validated(){
         return validate_Instruct_State;
     }
     else{
+        UARTWrite(13);
         for(int i=0;i<5;i++){
             UARTWrite(Error[i]);
         }
@@ -5880,6 +5884,7 @@ uint8_t Ins_Validated(){
         return validate_Coord_State;
     }
     else{
+        UARTWrite(13);
         for(int i=0;i<5;i++){
             UARTWrite(Error[i]);
         }
@@ -5895,6 +5900,7 @@ uint8_t Coord_Validated(){
         return end_State;
     }
     else{
+        UARTWrite(13);
         for(int i=0;i<5;i++){
             UARTWrite(Error[i]);
         }
@@ -5905,10 +5911,10 @@ uint8_t Coord_Validated(){
 }
 
 void end(){
-    for(int i=0;i<4;i++){
-        UARTWrite(okay[i]);
+    UARTWrite(13);
+    for(int i=0;i<7;i++){
+            UARTWrite(gracias[i]);
     }
-    PORTC=0XFF;
+     x=0;
     return;
-
 }

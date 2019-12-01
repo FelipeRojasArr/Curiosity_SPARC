@@ -5707,7 +5707,7 @@ typedef uint32_t uint_fast32_t;
 # 4 "coordenadas.c" 2
 
 # 1 "./UART.h" 1
-void UARTConfi(int BAUD);
+void UARTConfi(int Baud);
 void UARTWrite(char data);
 char UARTRead(void);
 # 5 "coordenadas.c" 2
@@ -5723,6 +5723,8 @@ char letter;
 unsigned short cord_x;
 unsigned short cord_y;
 char Par2;
+
+int x;
 
 typedef enum
 {

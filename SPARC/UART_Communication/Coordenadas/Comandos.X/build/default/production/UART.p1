@@ -631,8 +631,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;UART.c: 10:     TRISCbits.RC7=1;
 [e = . . _TRISCbits 1 5 -> -> 1 `i `uc ]
 "12
-[; ;UART.c: 12:     SPBRG = (unsigned char)((4000000UL/BAUD)/64)-1;
-[e = _SPBRG -> - -> -> / / -> 4000000 `ul -> -> _BAUD `l `ul -> -> -> 64 `i `l `ul `uc `i -> 1 `i `uc ]
+[; ;UART.c: 12:     SPBRG = (unsigned char)((8000000L/BAUD)/64)-1;
+[e = _SPBRG -> - -> -> / / -> 8000000 `l -> _BAUD `l -> -> 64 `i `l `uc `i -> 1 `i `uc ]
 "13
 [; ;UART.c: 13:     TXSTAbits.BRGH = 0;
 [e = . . _TXSTAbits 0 2 -> -> 0 `i `uc ]

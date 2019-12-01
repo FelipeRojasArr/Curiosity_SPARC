@@ -5744,6 +5744,8 @@ unsigned short cord_x;
 unsigned short cord_y;
 char Par2;
 
+int x;
+
 typedef enum
 {
     iddle_State,
@@ -5792,7 +5794,11 @@ int Movimiento(void) {
     if(click==1){
         PWM();
         PORTDbits.RD7=1;
+<<<<<<< Updated upstream
         _delay((unsigned long)((100)*(4000000UL/4000.0)));
+=======
+
+>>>>>>> Stashed changes
         PORTDbits.RD7=0;
 
     }
