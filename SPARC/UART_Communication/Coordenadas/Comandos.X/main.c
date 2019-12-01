@@ -10,9 +10,7 @@
 
 
 void main(void) {
-    OSCCON=0x72; /*CAMBIAMOS A 4MHZ*/
-    UARTConfi(9600);
-    TRISC=0X00;
+    Configuracion();
     verification(); 
     Movimiento();
     

@@ -36,10 +36,11 @@
 #define PR2VALUE 0xF9 /*PR2 VALUE*/
 #define CCPRXL 0x7D    /*CCPR1L VALUE*/
 
+
 /*Valores de salida de PWM*/
 # define NUM_PASOS 5
-# define POSITIVE 1
-# define NEGATIVE 0
+# define POSITIVO 1
+# define NEGATIVO 0
 
 /***************CALCULOS PWM***************/
 //PWM Period = [(PR2) + 1] ? 4 ? TOSC ?(TMR2 Prescale Value)
