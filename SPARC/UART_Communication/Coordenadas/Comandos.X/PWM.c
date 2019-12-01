@@ -1,3 +1,4 @@
+#include <pic18f4550.h>
 #include "PWM.h"
 #include <xc.h>
 #include "cases.h"

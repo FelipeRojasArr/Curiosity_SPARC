@@ -1,3 +1,4 @@
+#include <pic18f4550.h>
 #include <xc.h>
 #include "UART.h"
 #include "Definiciones.h"
