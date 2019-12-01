@@ -3,8 +3,8 @@
 [d edition pro ]
 [d chip 18F4550 ]
 [d frameptr 4065 ]
-"31 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X/cases.h
-[e E3374 . `uc
+"33 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X/cases.h
+[e E3375 . `uc
 iddle_State 0
 wait_cmd_State 1
 validate_Par_State 2
@@ -13,7 +13,7 @@ validate_Coord_State 4
 validate_Actuator_State 5
 end_State 6
 ]
-[e E3207 . `uc
+[e E3208 . `uc
 iddle_State 0
 wait_cmd_State 1
 validate_Par_State 2
@@ -22,7 +22,7 @@ validate_Coord_State 4
 validate_Actuator_State 5
 end_State 6
 ]
-[e E3374 . `uc
+[e E3375 . `uc
 iddle_State 0
 wait_cmd_State 1
 validate_Par_State 2
@@ -31,7 +31,7 @@ validate_Coord_State 4
 validate_Actuator_State 5
 end_State 6
 ]
-[e E3219 . `uc
+[e E3220 . `uc
 iddle_State 0
 wait_cmd_State 1
 validate_Par_State 2
@@ -40,7 +40,7 @@ validate_Coord_State 4
 validate_Actuator_State 5
 end_State 6
 ]
-[e E3202 . `uc
+[e E3203 . `uc
 iddle_State 0
 wait_cmd_State 1
 validate_Par_State 2
@@ -49,7 +49,7 @@ validate_Coord_State 4
 validate_Actuator_State 5
 end_State 6
 ]
-[e E3219 . `uc
+[e E3220 . `uc
 iddle_State 0
 wait_cmd_State 1
 validate_Par_State 2
@@ -58,8 +58,8 @@ validate_Coord_State 4
 validate_Actuator_State 5
 end_State 6
 ]
-"7 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\__lldiv.c
-[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"7 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
 "4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
 "62 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\float.c
@@ -86,22 +86,20 @@ end_State 6
 [v ___omul __omul `(uo  1 e 8 0 ]
 "17 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
 [v _start start `(uc  1 e 1 0 ]
-"26
+"27
 [v _cmd cmd `(uc  1 e 1 0 ]
-"37
+"38
 [v _Par_Validated Par_Validated `(uc  1 e 1 0 ]
-"52
+"54
 [v _Ins_Validated Ins_Validated `(uc  1 e 1 0 ]
-"74
+"77
 [v _Coord_Validated Coord_Validated `(uc  1 e 1 0 ]
-"90
+"94
 [v _end end `(v  1 e 1 0 ]
 "12 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
 [v _coord coord `(i  1 e 2 0 ]
 "12 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"8 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
-[v _Movimiento Movimiento `(i  1 e 2 0 ]
 "17 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
 [v _PWM PWM `(v  1 e 1 0 ]
 "44
@@ -132,9 +130,11 @@ end_State 6
 [v _cord_y cord_y `us  1 e 2 0 ]
 "10
 [v _Par2 Par2 `uc  1 e 1 0 ]
-"31
-[v _NextState NextState `E3374  1 e 1 0 ]
+"12
+[v _x x `i  1 e 2 0 ]
 "33
+[v _NextState NextState `E3375  1 e 1 0 ]
+"35
 [v _click click `uc  1 e 1 0 ]
 "13 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X/PWM.h
 [v _CoordAntX CoordAntX `ui  1 e 2 0 ]
@@ -150,7 +150,7 @@ end_State 6
 [v _ons ons `ui  1 e 2 0 ]
 "2563 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [v _PORTC PORTC `VEuc  1 e 1 @3970 ]
-[s S411 . 1 `uc 1 RC0 1 0 :1:0 
+[s S410 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -160,30 +160,30 @@ end_State 6
 `uc 1 RC7 1 0 :1:7 
 ]
 "2605
-[s S420 . 1 `uc 1 T1OSO 1 0 :1:0 
+[s S419 . 1 `uc 1 T1OSO 1 0 :1:0 
 `uc 1 T1OSI 1 0 :1:1 
 `uc 1 CCP1 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 TX 1 0 :1:6 
 `uc 1 RX 1 0 :1:7 
 ]
-[s S427 . 1 `uc 1 T13CKI 1 0 :1:0 
+[s S426 . 1 `uc 1 T13CKI 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 P1A 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 CK 1 0 :1:6 
 `uc 1 DT 1 0 :1:7 
 ]
-[s S434 . 1 `uc 1 . 1 0 :1:0 
+[s S433 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 CCP2 1 0 :1:1 
 `uc 1 PA1 1 0 :1:2 
 ]
-[s S438 . 1 `uc 1 . 1 0 :1:0 
+[s S437 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 PA2 1 0 :1:1 
 ]
-[u S441 . 1 `S411 1 . 1 0 `S420 1 . 1 0 `S427 1 . 1 0 `S434 1 . 1 0 `S438 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES441  1 e 1 @3970 ]
-[s S359 . 1 `uc 1 RD0 1 0 :1:0 
+[u S440 . 1 `S410 1 . 1 0 `S419 1 . 1 0 `S426 1 . 1 0 `S433 1 . 1 0 `S437 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES440  1 e 1 @3970 ]
+[s S358 . 1 `uc 1 RD0 1 0 :1:0 
 `uc 1 RD1 1 0 :1:1 
 `uc 1 RD2 1 0 :1:2 
 `uc 1 RD3 1 0 :1:3 
@@ -193,7 +193,7 @@ end_State 6
 `uc 1 RD7 1 0 :1:7 
 ]
 "2736
-[s S368 . 1 `uc 1 SPP0 1 0 :1:0 
+[s S367 . 1 `uc 1 SPP0 1 0 :1:0 
 `uc 1 SPP1 1 0 :1:1 
 `uc 1 SPP2 1 0 :1:2 
 `uc 1 SPP3 1 0 :1:3 
@@ -202,14 +202,14 @@ end_State 6
 `uc 1 SPP6 1 0 :1:6 
 `uc 1 SPP7 1 0 :1:7 
 ]
-[s S377 . 1 `uc 1 . 1 0 :7:0 
+[s S376 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 SS2 1 0 :1:7 
 ]
-[u S380 . 1 `S359 1 . 1 0 `S368 1 . 1 0 `S377 1 . 1 0 ]
-[v _PORTDbits PORTDbits `VES380  1 e 1 @3971 ]
+[u S379 . 1 `S358 1 . 1 0 `S367 1 . 1 0 `S376 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES379  1 e 1 @3971 ]
 "3847
 [v _TRISC TRISC `VEuc  1 e 1 @3988 ]
-[s S70 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S71 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
@@ -217,16 +217,16 @@ end_State 6
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "3875
-[s S77 . 1 `uc 1 RC0 1 0 :1:0 
+[s S78 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 RC6 1 0 :1:6 
 `uc 1 RC7 1 0 :1:7 
 ]
-[u S84 . 1 `S70 1 . 1 0 `S77 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES84  1 e 1 @3988 ]
-[s S209 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[u S85 . 1 `S71 1 . 1 0 `S78 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES85  1 e 1 @3988 ]
+[s S210 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 SSPIF 1 0 :1:3 
@@ -236,15 +236,15 @@ end_State 6
 `uc 1 SPPIF 1 0 :1:7 
 ]
 "4492
-[s S218 . 1 `uc 1 . 1 0 :4:0 
+[s S219 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TX1IF 1 0 :1:4 
 `uc 1 RC1IF 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 PSPIF 1 0 :1:7 
 ]
-[u S224 . 1 `S209 1 . 1 0 `S218 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES224  1 e 1 @3998 ]
-[s S155 . 1 `uc 1 RX9D 1 0 :1:0 
+[u S225 . 1 `S210 1 . 1 0 `S219 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES225  1 e 1 @3998 ]
+[s S156 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -254,23 +254,23 @@ end_State 6
 `uc 1 SPEN 1 0 :1:7 
 ]
 "4977
-[s S164 . 1 `uc 1 . 1 0 :3:0 
+[s S165 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 ADEN 1 0 :1:3 
 ]
-[s S167 . 1 `uc 1 . 1 0 :5:0 
+[s S168 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 SRENA 1 0 :1:5 
 ]
-[s S170 . 1 `uc 1 . 1 0 :6:0 
+[s S171 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC8_9 1 0 :1:6 
 ]
-[s S173 . 1 `uc 1 . 1 0 :6:0 
+[s S174 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC9 1 0 :1:6 
 ]
-[s S176 . 1 `uc 1 RCD8 1 0 :1:0 
+[s S177 . 1 `uc 1 RCD8 1 0 :1:0 
 ]
-[u S178 . 1 `S155 1 . 1 0 `S164 1 . 1 0 `S167 1 . 1 0 `S170 1 . 1 0 `S173 1 . 1 0 `S176 1 . 1 0 ]
-[v _RCSTAbits RCSTAbits `VES178  1 e 1 @4011 ]
-[s S103 . 1 `uc 1 TX9D 1 0 :1:0 
+[u S179 . 1 `S156 1 . 1 0 `S165 1 . 1 0 `S168 1 . 1 0 `S171 1 . 1 0 `S174 1 . 1 0 `S177 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES179  1 e 1 @4011 ]
+[s S104 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -280,7 +280,7 @@ end_State 6
 `uc 1 CSRC 1 0 :1:7 
 ]
 "5185
-[s S112 . 1 `uc 1 TX9D1 1 0 :1:0 
+[s S113 . 1 `uc 1 TX9D1 1 0 :1:0 
 `uc 1 TRMT1 1 0 :1:1 
 `uc 1 BRGH1 1 0 :1:2 
 `uc 1 SENDB1 1 0 :1:3 
@@ -289,13 +289,13 @@ end_State 6
 `uc 1 TX91 1 0 :1:6 
 `uc 1 CSRC1 1 0 :1:7 
 ]
-[s S121 . 1 `uc 1 . 1 0 :6:0 
+[s S122 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TX8_9 1 0 :1:6 
 ]
-[s S124 . 1 `uc 1 TXD8 1 0 :1:0 
+[s S125 . 1 `uc 1 TXD8 1 0 :1:0 
 ]
-[u S126 . 1 `S103 1 . 1 0 `S112 1 . 1 0 `S121 1 . 1 0 `S124 1 . 1 0 ]
-[v _TXSTAbits TXSTAbits `VES126  1 e 1 @4012 ]
+[u S127 . 1 `S104 1 . 1 0 `S113 1 . 1 0 `S122 1 . 1 0 `S125 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES127  1 e 1 @4012 ]
 "5402
 [v _TXREG TXREG `VEuc  1 e 1 @4013 ]
 "5414
@@ -313,37 +313,37 @@ end_State 6
 "13
 [v _Error Error `[5]uc  1 e 5 0 ]
 "14
-[v _okay okay `[4]uc  1 e 4 0 ]
+[v _gracias gracias `[7]uc  1 e 7 0 ]
 "12 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"19
+"23
 } 0
 "8 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
 [v _verification verification `(v  1 e 1 0 ]
 {
-"38
+"39
 } 0
 "17 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
 [v _start start `(uc  1 e 1 0 ]
 {
-"18
+"19
 [v start@i i `i  1 a 2 1 ]
-"23
+"24
 } 0
-"90
+"94
 [v _end end `(v  1 e 1 0 ]
 {
-"91
+"96
 [v end@i i `i  1 a 2 1 ]
-"97
+"101
 } 0
-"26
+"27
 [v _cmd cmd `(uc  1 e 1 0 ]
 {
-"29
+"30
 [v cmd@i i `i  1 a 2 26 ]
-"35
+"36
 } 0
 "12 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
 [v _coord coord `(i  1 e 2 0 ]
@@ -367,26 +367,26 @@ end_State 6
 {
 "35
 } 0
-"37 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+"38 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
 [v _Par_Validated Par_Validated `(uc  1 e 1 0 ]
 {
-"44
+"46
 [v Par_Validated@i i `i  1 a 2 1 ]
-"50
-} 0
 "52
+} 0
+"54
 [v _Ins_Validated Ins_Validated `(uc  1 e 1 0 ]
 {
-"66
+"69
 [v Ins_Validated@i i `i  1 a 2 1 ]
-"72
+"75
 } 0
-"74
+"77
 [v _Coord_Validated Coord_Validated `(uc  1 e 1 0 ]
 {
-"81
+"85
 [v Coord_Validated@i i `i  1 a 2 1 ]
-"88
+"92
 } 0
 "26 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
 [v _UARTWrite UARTWrite `(v  1 e 1 0 ]
@@ -399,62 +399,19 @@ end_State 6
 "7
 [v _UARTConfi UARTConfi `(v  1 e 1 0 ]
 {
-[v UARTConfi@BAUD BAUD `i  1 p 2 13 ]
+[v UARTConfi@BAUD BAUD `i  1 p 2 14 ]
 "24
 } 0
-"7 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\__lldiv.c
-[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"7 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
 {
 "10
-[v ___lldiv@quotient quotient `ul  1 a 4 8 ]
+[v ___aldiv@quotient quotient `l  1 a 4 10 ]
 "11
-[v ___lldiv@counter counter `uc  1 a 1 12 ]
+[v ___aldiv@sign sign `uc  1 a 1 9 ]
+[v ___aldiv@counter counter `uc  1 a 1 8 ]
 "7
-[v ___lldiv@dividend dividend `ul  1 p 4 0 ]
-[v ___lldiv@divisor divisor `ul  1 p 4 4 ]
-"30
-} 0
-"8 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
-[v _Movimiento Movimiento `(i  1 e 2 0 ]
-{
-"21
-} 0
-"17 C:\Users\angie\OneDrive\Documentos\Semestre_i\Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-[v _PWM PWM `(v  1 e 1 0 ]
-{
-"42
-} 0
-"58
-[v _PWMy PWMy `(i  1 e 2 0 ]
-{
-"68
-[v PWMy@pasos pasos `i  1 a 2 4 ]
-"58
-[v PWMy@distancia distancia `i  1 p 2 2 ]
-"70
-} 0
-"44
-[v _PWMx PWMx `(i  1 e 2 0 ]
-{
-"54
-[v PWMx@pasos pasos `i  1 a 2 4 ]
-"44
-[v PWMx@distancia distancia `i  1 p 2 2 ]
-"56
-} 0
-"71
-[v _ContarPulsos ContarPulsos `(i  1 e 2 0 ]
-{
-[v ContarPulsos@pasos pasos `i  1 p 2 0 ]
-"83
-} 0
-"93
-[v _ResetOneShot ResetOneShot `(v  1 e 1 0 ]
-{
-"97
-} 0
-"84
-[v _OneShot OneShot `(v  1 e 1 0 ]
-{
-"92
+[v ___aldiv@dividend dividend `l  1 p 4 0 ]
+[v ___aldiv@divisor divisor `l  1 p 4 4 ]
+"41
 } 0

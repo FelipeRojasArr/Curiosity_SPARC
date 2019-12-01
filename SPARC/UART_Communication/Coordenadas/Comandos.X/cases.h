@@ -9,6 +9,8 @@ unsigned short cord_x;
 unsigned short cord_y;
 char Par2;
 
+int x;
+
 typedef enum
 {
     iddle_State,

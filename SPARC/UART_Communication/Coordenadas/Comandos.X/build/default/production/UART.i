@@ -5621,7 +5621,7 @@ extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 2 "UART.c" 2
 
 # 1 "./UART.h" 1
-void UARTConfi(int BAUD);
+void UARTConfi(int Baud);
 void UARTWrite(char data);
 char UARTRead(void);
 # 3 "UART.c" 2
@@ -5651,7 +5651,7 @@ void UARTConfi(int BAUD){
     TRISCbits.RC6=0;
     TRISCbits.RC7=1;
 
-    SPBRG = (unsigned char)((4000000UL/BAUD)/64)-1;
+    SPBRG = (unsigned char)((8000000L/BAUD)/64)-1;
     TXSTAbits.BRGH = 0;
     TXSTAbits.SYNC = 0;
     RCSTAbits.SPEN = 1;

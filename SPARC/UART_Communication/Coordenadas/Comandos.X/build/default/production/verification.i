@@ -5717,6 +5717,8 @@ unsigned short cord_x;
 unsigned short cord_y;
 char Par2;
 
+int x;
+
 typedef enum
 {
     iddle_State,
@@ -5763,32 +5765,33 @@ uint8_t click;
 
 void verification(void){
     NextState = iddle_State;
+    while(x==1){
     switch(NextState)
   {
             case iddle_State:{
                 NextState= start();
             }
-
+            break;
             case wait_cmd_State:{
                 NextState=cmd();
             }
-
+            break;
             case validate_Par_State:{
                 NextState=Par_Validated();
             }
-
+            break;
             case validate_Instruct_State:{
                 NextState=Ins_Validated();
             }
-
+            break;
             case validate_Coord_State:{
                 NextState=Coord_Validated();
             }
-
+            break;
             case end_State:{
                 end();
             }break;
 
-            default: break;
+        }
     }
 }

@@ -1,5 +1,5 @@
 /**************CONFIGURACION***************/
-#define _XTAL_FREQ 4000000UL
+#define _XTAL_FREQ 8000000L
 #define INITIAL_FRAME 0X3C
 #define ENDING_FRAME 0x3E
 #define LETTER_C   0x43

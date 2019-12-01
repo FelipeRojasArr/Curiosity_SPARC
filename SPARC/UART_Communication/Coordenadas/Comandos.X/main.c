@@ -31,6 +31,6 @@ void __interrupt() INT_ISR(void)
 void main(void) {
     Configuracion();
     verification(); 
-    Movimiento();
+   // Movimiento();
     
 }

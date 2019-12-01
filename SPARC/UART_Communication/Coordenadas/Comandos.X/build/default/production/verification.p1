@@ -1,25 +1,25 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"31 ./cases.h
-[; ;./cases.h: 31: systemState NextState;
-[c E3202 0 1 2 3 4 5 6 .. ]
-[n E3202 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State validate_Actuator_State end_State  ]
-"24
-[; ;./cases.h: 24: uint8_t start(void);
-[v _start `(uc ~T0 @X0 0 ef ]
-"25
-[; ;./cases.h: 25: uint8_t cmd(void);
-[v _cmd `(uc ~T0 @X0 0 ef ]
+"33 ./cases.h
+[; ;./cases.h: 33: systemState NextState;
+[c E3203 0 1 2 3 4 5 6 .. ]
+[n E3203 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State validate_Actuator_State end_State  ]
 "26
-[; ;./cases.h: 26: uint8_t Par_Validated(void);
-[v _Par_Validated `(uc ~T0 @X0 0 ef ]
+[; ;./cases.h: 26: uint8_t start(void);
+[v _start `(uc ~T0 @X0 0 ef ]
 "27
-[; ;./cases.h: 27: uint8_t Ins_Validated(void);
-[v _Ins_Validated `(uc ~T0 @X0 0 ef ]
+[; ;./cases.h: 27: uint8_t cmd(void);
+[v _cmd `(uc ~T0 @X0 0 ef ]
 "28
-[; ;./cases.h: 28: uint8_t Coord_Validated(void);
-[v _Coord_Validated `(uc ~T0 @X0 0 ef ]
+[; ;./cases.h: 28: uint8_t Par_Validated(void);
+[v _Par_Validated `(uc ~T0 @X0 0 ef ]
 "29
-[; ;./cases.h: 29: void end(void);
+[; ;./cases.h: 29: uint8_t Ins_Validated(void);
+[v _Ins_Validated `(uc ~T0 @X0 0 ef ]
+"30
+[; ;./cases.h: 30: uint8_t Coord_Validated(void);
+[v _Coord_Validated `(uc ~T0 @X0 0 ef ]
+"31
+[; ;./cases.h: 31: void end(void);
 [v _end `(v ~T0 @X0 0 ef ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
@@ -546,11 +546,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "10
 [; ;./cases.h: 10: char Par2;
 [v _Par2 `uc ~T0 @X0 1 e ]
-"31
-[; ;./cases.h: 31: systemState NextState;
-[v _NextState `E3202 ~T0 @X0 1 e ]
+"12
+[; ;./cases.h: 12: int x;
+[v _x `i ~T0 @X0 1 e ]
 "33
-[; ;./cases.h: 33: uint8_t click;
+[; ;./cases.h: 33: systemState NextState;
+[v _NextState `E3203 ~T0 @X0 1 e ]
+"35
+[; ;./cases.h: 35: uint8_t click;
 [v _click `uc ~T0 @X0 1 e ]
 "8 ./Configuracion.h
 [p x PLLDIV = 2 ]
@@ -572,92 +575,116 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "9
 [; ;verification.c: 9:     NextState = iddle_State;
-[e = _NextState . `E3202 0 ]
+[e = _NextState . `E3203 0 ]
 "10
-[; ;verification.c: 10:     switch(NextState)
-[e $U 369  ]
-"11
-[; ;verification.c: 11:   {
-{
-"12
-[; ;verification.c: 12:             case iddle_State:{
-[e :U 370 ]
-{
-"13
-[; ;verification.c: 13:                 NextState= start();
-[e = _NextState -> ( _start ..  `E3202 ]
-"14
-[; ;verification.c: 14:             }
-}
-"16
-[; ;verification.c: 16:             case wait_cmd_State:{
-[e :U 371 ]
-{
-"17
-[; ;verification.c: 17:                 NextState=cmd();
-[e = _NextState -> ( _cmd ..  `E3202 ]
-"18
-[; ;verification.c: 18:             }
-}
-"20
-[; ;verification.c: 20:             case validate_Par_State:{
-[e :U 372 ]
-{
-"21
-[; ;verification.c: 21:                 NextState=Par_Validated();
-[e = _NextState -> ( _Par_Validated ..  `E3202 ]
-"22
-[; ;verification.c: 22:             }
-}
-"24
-[; ;verification.c: 24:             case validate_Instruct_State:{
-[e :U 373 ]
-{
-"25
-[; ;verification.c: 25:                 NextState=Ins_Validated();
-[e = _NextState -> ( _Ins_Validated ..  `E3202 ]
-"26
-[; ;verification.c: 26:             }
-}
-"28
-[; ;verification.c: 28:             case validate_Coord_State:{
-[e :U 374 ]
-{
-"29
-[; ;verification.c: 29:                 NextState=Coord_Validated();
-[e = _NextState -> ( _Coord_Validated ..  `E3202 ]
-"30
-[; ;verification.c: 30:             }
-}
-"32
-[; ;verification.c: 32:             case end_State:{
-[e :U 375 ]
-{
-"33
-[; ;verification.c: 33:                 end();
-[e ( _end ..  ]
-"34
-[; ;verification.c: 34:             }break;
-}
-[e $U 368  ]
-"36
-[; ;verification.c: 36:             default: break;
-[e :U 376 ]
-[e $U 368  ]
-"37
-[; ;verification.c: 37:     }
-}
+[; ;verification.c: 10:     while(x==1){
 [e $U 368  ]
 [e :U 369 ]
-[e [\ -> _NextState `ui , $ -> . `E3202 0 `ui 370
- , $ -> . `E3202 1 `ui 371
- , $ -> . `E3202 2 `ui 372
- , $ -> . `E3202 3 `ui 373
- , $ -> . `E3202 4 `ui 374
- , $ -> . `E3202 6 `ui 375
- 376 ]
-[e :U 368 ]
+{
+"11
+[; ;verification.c: 11:     switch(NextState)
+[e $U 372  ]
+"12
+[; ;verification.c: 12:   {
+{
+"13
+[; ;verification.c: 13:             case iddle_State:{
+[e :U 373 ]
+{
+"14
+[; ;verification.c: 14:                 NextState= start();
+[e = _NextState -> ( _start ..  `E3203 ]
+"15
+[; ;verification.c: 15:             }
+}
+"16
+[; ;verification.c: 16:             break;
+[e $U 371  ]
+"17
+[; ;verification.c: 17:             case wait_cmd_State:{
+[e :U 374 ]
+{
+"18
+[; ;verification.c: 18:                 NextState=cmd();
+[e = _NextState -> ( _cmd ..  `E3203 ]
+"19
+[; ;verification.c: 19:             }
+}
+"20
+[; ;verification.c: 20:             break;
+[e $U 371  ]
+"21
+[; ;verification.c: 21:             case validate_Par_State:{
+[e :U 375 ]
+{
+"22
+[; ;verification.c: 22:                 NextState=Par_Validated();
+[e = _NextState -> ( _Par_Validated ..  `E3203 ]
+"23
+[; ;verification.c: 23:             }
+}
+"24
+[; ;verification.c: 24:             break;
+[e $U 371  ]
+"25
+[; ;verification.c: 25:             case validate_Instruct_State:{
+[e :U 376 ]
+{
+"26
+[; ;verification.c: 26:                 NextState=Ins_Validated();
+[e = _NextState -> ( _Ins_Validated ..  `E3203 ]
+"27
+[; ;verification.c: 27:             }
+}
+"28
+[; ;verification.c: 28:             break;
+[e $U 371  ]
+"29
+[; ;verification.c: 29:             case validate_Coord_State:{
+[e :U 377 ]
+{
+"30
+[; ;verification.c: 30:                 NextState=Coord_Validated();
+[e = _NextState -> ( _Coord_Validated ..  `E3203 ]
+"31
+[; ;verification.c: 31:             }
+}
+"32
+[; ;verification.c: 32:             break;
+[e $U 371  ]
+"33
+[; ;verification.c: 33:             case end_State:{
+[e :U 378 ]
+{
+"34
+[; ;verification.c: 34:                 end();
+[e ( _end ..  ]
+"35
+[; ;verification.c: 35:             }break;
+}
+[e $U 371  ]
+"37
+[; ;verification.c: 37:         }
+}
+[e $U 371  ]
+[e :U 372 ]
+[e [\ -> _NextState `ui , $ -> . `E3203 0 `ui 373
+ , $ -> . `E3203 1 `ui 374
+ , $ -> . `E3203 2 `ui 375
+ , $ -> . `E3203 3 `ui 376
+ , $ -> . `E3203 4 `ui 377
+ , $ -> . `E3203 6 `ui 378
+ 371 ]
+[e :U 371 ]
 "38
-[; ;verification.c: 38: }
+[; ;verification.c: 38:     }
+}
+[e :U 368 ]
+"10
+[; ;verification.c: 10:     while(x==1){
+[e $ == _x -> 1 `i 369  ]
+[e :U 370 ]
+"39
+[; ;verification.c: 39: }
 [e :UE 367 ]
 }
