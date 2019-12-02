@@ -21,8 +21,8 @@ int Movimiento(void) {
 }
 
 
-void HaltMotors()
-{
-    ENABLE_A = HIGH;
-    ENABLE_B = HIGH;
-}
+//void HaltMotors()
+//{
+//    ENABLE_A = HIGH;
+//    ENABLE_B = HIGH;
+//}

@@ -18,7 +18,6 @@ typedef enum
 	validate_Par_State,
 	validate_Instruct_State,
 	validate_Coord_State,
-	validate_Actuator_State,
 	end_State,
 
 }systemState;

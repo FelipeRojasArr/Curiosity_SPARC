@@ -17,7 +17,7 @@
 void PWM(void){
     /*Obtenemos coordenadas relativas*/
     CoordRelatX=CoordAntX-cord_x;
-    CoordRelatX=CoordAntX-cord_x; 
+    CoordRelatY=CoordAntY-cord_y; 
     
     /*PWM en X*/
     pasosRecorridos=PWMx(CoordRelatX);
