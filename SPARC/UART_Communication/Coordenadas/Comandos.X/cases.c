@@ -31,14 +31,12 @@ uint8_t cmd(){
         UARTWrite(e_c[i]);
     }
     coord(&Par1,&letter,&cord_x, &cord_y, &Par2);
-    PORTC =0Xff;
     return validate_Par_State;
 }
 
 uint8_t Par_Validated(){
     PORTC=0x00;
     if(Par1==INITIAL_FRAME && Par2==ENDING_FRAME){
-        PORTC=0X02;
         return validate_Instruct_State;
     }
     else{
@@ -46,7 +44,6 @@ uint8_t Par_Validated(){
         for(int i=0;i<5;i++){
             UARTWrite(Error[i]);
         }
-        PORTC= 0X04;
         return wait_cmd_State;
     } 
 }

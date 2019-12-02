@@ -8,6 +8,7 @@
 #include "Definiciones.h"
 #include "Configuracion.h"
 #include "Interruptions.h"
+#include "PWM.h"
 
 //void __interrupt() INT_ISR(void)
 //{
@@ -29,9 +30,24 @@
 //    }
 //}
 
+   
 void main(void) {
     Configuracion();
-    verification(); 
-    Movimiento();
+    CoordAntX=0;
+    CoordAntY=0;
+    ENABLE_A=1;
+    ENABLE_B=1;
+    
+    while(1){
+        x=1;
+       verification(); 
+       
+        Movimiento();
+       
+        CoordAntY = (unsigned char)CoordAntY;
+        CoordAntX = (unsigned char)CoordAntX;
+        UARTWrite(CoordAntX);
+        UARTWrite(CoordAntY);
+    }
     
 }

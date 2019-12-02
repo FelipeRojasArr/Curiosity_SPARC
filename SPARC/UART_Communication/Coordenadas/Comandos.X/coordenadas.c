@@ -21,5 +21,5 @@ int coord(char* P1, char*L, uint16_t* x , uint16_t* y , char*P2){
         *L= buffer[1];
 		*x = 1*(buffer[4]-48) + 10*(buffer[3]-48) + 100*(buffer[2]-48);
 		*y = 1*(buffer[7]-48) + 10*(buffer[6]-48) + 100*(buffer[5]-48);
-		*P2= buffer[8];      
+		*P2= buffer[8];
 }

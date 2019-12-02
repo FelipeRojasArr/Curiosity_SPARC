@@ -4,6 +4,8 @@
 #include "cases.h"
 #include "Definiciones.h"
 #include "Configuracion.h"
+#include "UART.h"
+
 
 /*
   La función de PWM:
@@ -64,7 +66,7 @@ int PWMy (int distancia){
     else {
         DIR_A=1;
         DIR_B=1;
-    } 
+     } 
    int pasos= ContarPulsos(distancia);
     return(pasos);   
 }
@@ -81,6 +83,7 @@ int ContarPulsos(int pasos){
     
     ENABLE_A=1;
     ENABLE_B=1;
+    
     return(PasosActuales);  
 }
 void OneShot(void){
