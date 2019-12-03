@@ -1,10 +1,14 @@
 #include <pic18f4550.h>
-#include "PWM.h"
 #include <xc.h>
+#include <string.h>
+#include <stdlib.h>
+#include <stdint.h>
+#include "UART.h"
 #include "cases.h"
 #include "Definiciones.h"
 #include "Configuracion.h"
-#include "UART.h"
+#include "Interruptions.h"
+#include "PWM.h"
 
 int Movimiento(void) {
     if(click==1){
@@ -28,10 +32,3 @@ int Movimiento(void) {
        }
     }
 }
-
-
-//void HaltMotors()
-//{
-//    ENABLE_A = HIGH;
-//    ENABLE_B = HIGH;
-//}

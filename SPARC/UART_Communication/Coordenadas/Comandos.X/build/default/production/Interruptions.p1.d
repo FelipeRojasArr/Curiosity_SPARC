@@ -4,4 +4,5 @@ UART.h  \
 cases.h  \
 Definiciones.h  \
 Configuracion.h  \
-Interruptions.h 
+Interruptions.h  \
+PWM.h 

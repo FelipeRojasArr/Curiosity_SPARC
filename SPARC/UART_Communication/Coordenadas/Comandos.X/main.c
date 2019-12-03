@@ -10,29 +10,61 @@
 #include "Interruptions.h"
 #include "PWM.h"
 
-/*void __interrupt() INT_ISR(void)
+void UARTErrorR1(void);
+void UARTErrorR0(void);
+
+void __interrupt() INT_ISR(void)
 {
-    if(INTCONbits.INT0IF == 1)
+    if(PORTBbits.RB0 == 1)
     {
         while(INTCONbits.INT0IF == 1)
         {
-            HaltMotors();
-            if(STOP_SWITCH == 0)
-        {
-            __delay_ms(15);
-            if(STOP_SWITCH == 0)
+            __delay_ms(250);
+            UARTErrorR0();
+            //HaltMotors();
+            if(PORTBbits.RB0 == 0)
             {
-                INTCON3bits.INT2IF = 0;
+                __delay_ms(15);
+                if(PORTBbits.RB0 == 0)
+                {
+                    INTCONbits.INT0IF = 0;
+                }
             }
         }
-        }
-        
     }
-}*/
-
+        
+    if(PORTBbits.RB1 == 1)
+    {
+        while(INTCON3bits.INT1IF == 1)
+        {
+            UARTErrorR1();      //cAMBIA ESTA FUNCIÓN A LO QUE QUIERAS
+            __delay_ms(250);
+            if(PORTBbits.RB1 == 0)
+            {
+                __delay_ms(15);
+                if(PORTBbits.RB1 == 0)
+                {
+                    INTCON3bits.INT1IF = 0;
+                }
+            }
+        }
+    }
+}
    
+void UARTErrorR0()
+{
+    UARTWrite(0x45);
+}
+
+void UARTErrorR1()
+{
+    UARTWrite(0x65);
+}
+
 void main(void) {
+  
     Configuracion();
+    InterruptionsConfiguration();
     CoordAntX=0;
     CoordAntY=0;
     ENABLE_A=1;

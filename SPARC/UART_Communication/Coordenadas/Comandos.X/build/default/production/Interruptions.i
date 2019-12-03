@@ -5462,7 +5462,8 @@ extern volatile __bit nW __attribute__((address(0x7E3A)));
 
 
 extern volatile __bit nWRITE __attribute__((address(0x7E3A)));
-# 2 "Interruptions.c" 2
+# 1 "Interruptions.c" 2
+
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -5617,7 +5618,8 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 32 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 2 3
-# 3 "Interruptions.c" 2
+# 2 "Interruptions.c" 2
+
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\string.h" 1 3
 # 25 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\string.h" 3
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 1 3
@@ -5673,7 +5675,8 @@ size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
 
 
 void *memccpy (void *restrict, const void *restrict, int, size_t);
-# 4 "Interruptions.c" 2
+# 3 "Interruptions.c" 2
+
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 1 3
 # 22 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 3
@@ -5758,12 +5761,14 @@ typedef int32_t int_fast32_t;
 typedef uint32_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 139 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 2 3
-# 6 "Interruptions.c" 2
+# 5 "Interruptions.c" 2
+
 # 1 "./UART.h" 1
 void UARTConfi(int Baud);
 void UARTWrite(char data);
 char UARTRead(void);
-# 7 "Interruptions.c" 2
+# 6 "Interruptions.c" 2
+
 # 1 "./cases.h" 1
 
 void verification(void);
@@ -5772,8 +5777,8 @@ int coord(char* P1, char* L, unsigned short* x, unsigned short* y, char* P2);
 
 char Par1;
 char letter;
-unsigned short cord_x;
-unsigned short cord_y;
+unsigned int cord_x;
+unsigned int cord_y;
 char Par2;
 
 int x;
@@ -5799,9 +5804,11 @@ void end(void);
 systemState NextState;
 
 uint8_t click;
-# 8 "Interruptions.c" 2
+# 7 "Interruptions.c" 2
+
 # 1 "./Definiciones.h" 1
-# 9 "Interruptions.c" 2
+# 8 "Interruptions.c" 2
+
 # 1 "./Configuracion.h" 1
 # 17 "./Configuracion.h"
 #pragma config FOSC = INTOSC_EC
@@ -5862,21 +5869,67 @@ uint8_t click;
 
 
 void Configuracion(void);
-# 10 "Interruptions.c" 2
+# 9 "Interruptions.c" 2
+
 # 1 "./Interruptions.h" 1
+
+
+
+
+
+
+void InterruptionsConfiguration(void);
+void buttonInterruptionConfiguration(void);
+# 10 "Interruptions.c" 2
+
+# 1 "./PWM.h" 1
+
+void PWM(void);
+int ContarPulsos(int pasos);
+void OneShot(void);
+void ResetOneShot(void);
+int Movimiento(void);
+void HaltMotors(void);
+
+
+
+
+    unsigned int CoordAntX;
+    unsigned int CoordAntY;
+
+
+    int CoordRelatX;
+    int CoordRelatY;
+
+
+    int pasosRecorridos;
+
+
+    unsigned int PasosActuales;
+    unsigned int ons;
+
+    unsigned int PasosX;
+    unsigned int PasosY;
+    unsigned int BanderaDisX;
+    unsigned int BanderaDisY;
 # 11 "Interruptions.c" 2
 
-void interruptsConfiguration()
+
+
+void InterruptionsConfiguration()
 {
     RCONbits.IPEN = 0;
-    INTCONbits.GIEH = 1;
+    INTCONbits.GIE = 1;
+    INTCONbits.INT0IF = 0;
     INTCONbits.INT0IE = 1;
-    INTCONbits.RBIE = 1;
+
     INTCON2bits.INTEDG0 = 1;
     INTCON2bits.INTEDG1 = 1;
-    INTCON2bits.INTEDG2 = 1;
-    INTCON3bits.INT2IE = 1;
+
+
     INTCON3bits.INT1IE = 1;
+
+    INTCON2bits.RBPU = 0;
 
 
 

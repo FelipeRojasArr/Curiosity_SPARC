@@ -5777,8 +5777,8 @@ int coord(char* P1, char* L, unsigned short* x, unsigned short* y, char* P2);
 
 char Par1;
 char letter;
-unsigned short cord_x;
-unsigned short cord_y;
+unsigned int cord_x;
+unsigned int cord_y;
 char Par2;
 
 int x;
@@ -5872,6 +5872,14 @@ void Configuracion(void);
 # 9 "main.c" 2
 
 # 1 "./Interruptions.h" 1
+
+
+
+
+
+
+void InterruptionsConfiguration(void);
+void buttonInterruptionConfiguration(void);
 # 10 "main.c" 2
 
 # 1 "./PWM.h" 1
@@ -5905,9 +5913,63 @@ void HaltMotors(void);
     unsigned int BanderaDisX;
     unsigned int BanderaDisY;
 # 11 "main.c" 2
-# 34 "main.c"
+
+
+void UARTErrorR1(void);
+void UARTErrorR0(void);
+
+void __attribute__((picinterrupt(("")))) INT_ISR(void)
+{
+    if(PORTBbits.RB0 == 1)
+    {
+        while(INTCONbits.INT0IF == 1)
+        {
+            _delay((unsigned long)((250)*(8000000L/4000.0)));
+            UARTErrorR0();
+
+            if(PORTBbits.RB0 == 0)
+            {
+                _delay((unsigned long)((15)*(8000000L/4000.0)));
+                if(PORTBbits.RB0 == 0)
+                {
+                    INTCONbits.INT0IF = 0;
+                }
+            }
+        }
+    }
+
+    if(PORTBbits.RB1 == 1)
+    {
+        while(INTCON3bits.INT1IF == 1)
+        {
+            UARTErrorR1();
+            _delay((unsigned long)((250)*(8000000L/4000.0)));
+            if(PORTBbits.RB1 == 0)
+            {
+                _delay((unsigned long)((15)*(8000000L/4000.0)));
+                if(PORTBbits.RB1 == 0)
+                {
+                    INTCON3bits.INT1IF = 0;
+                }
+            }
+        }
+    }
+}
+
+void UARTErrorR0()
+{
+    UARTWrite(0x45);
+}
+
+void UARTErrorR1()
+{
+    UARTWrite(0x65);
+}
+
 void main(void) {
+
     Configuracion();
+    InterruptionsConfiguration();
     CoordAntX=0;
     CoordAntY=0;
     PORTDbits.RD2=1;

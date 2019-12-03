@@ -8,33 +8,28 @@
 #include "Definiciones.h"
 #include "Configuracion.h"
 #include "Interruptions.h"
+#include "PWM.h"
 
-void interruptsConfiguration()
+
+void InterruptionsConfiguration()
 {
     RCONbits.IPEN = OFF;                //Disables priority
-    INTCONbits.GIEH = ON;               //All High priority
+    INTCONbits.GIE = ON;               //All samepriority
+    INTCONbits.INT0IF = OFF;          //External interrupt flag for INT0
     INTCONbits.INT0IE = ON;             //Enables INT0 external interruptions
-    INTCONbits.RBIE = ON;               //RB Port Change Interrupt Enable bit
+   // INTCONbits.RBIE = ON;               //RB Port Change Interrupt Enable bit
     INTCON2bits.INTEDG0 = ON;           //Rising Edge on external interrupt 0
     INTCON2bits.INTEDG1 = ON;           //Rising Edge on external interrupt 1
-    INTCON2bits.INTEDG2 = ON;           //Rising Edge on external interrupt 2
-    INTCON3bits.INT2IE = ON;            //Enables INT2 external interrupt
+  //  INTCON2bits.INTEDG2 = ON;           //Rising Edge on external interrupt 2
+   // INTCON3bits.INT2IE = ON;            //Enables INT2 external interrupt
     INTCON3bits.INT1IE = ON;            //Enables INT1 external interrupt
+    
+    INTCON2bits.RBPU = OFF;
             
     // MUST BE CLEARES WHEN AN EXTERNAL INTERRUPTION HAPPENS
-    //INTCONbits.INT0IF = OFF;          //External interrupt flag for INT0
+    
     //INTCON3bits.INT1IF = OFF;          //External interrupt flag for INT0
     //INTCON3bits.INT2IF = OFF;          //External interrupt flag for INT0
 }
-
-/*void buttonConfiguration(void)
-{
-    PORTB = 0;
-    LATB = 0;
-    TRISB = 0x07;
-    //TRISBbits.RB0 = ON;
-    //TRISBbits.RB1 = ON;
-    //TRISBbits.RB2 = ON;
-}*/
 
 

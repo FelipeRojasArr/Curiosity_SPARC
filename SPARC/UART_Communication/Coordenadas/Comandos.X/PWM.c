@@ -1,11 +1,14 @@
 #include <pic18f4550.h>
-#include "PWM.h"
 #include <xc.h>
+#include <string.h>
+#include <stdlib.h>
+#include <stdint.h>
+#include "UART.h"
 #include "cases.h"
 #include "Definiciones.h"
 #include "Configuracion.h"
-#include "UART.h"
-
+#include "Interruptions.h"
+#include "PWM.h"
 
 /*
   La función de PWM:
@@ -16,7 +19,7 @@
   - Actualiza las coordenadas.
  */
 
-void PWM(void){
+void PWM(){
     
     BanderaDisX= POSITIVO;
     BanderaDisY= POSITIVO;
@@ -40,13 +43,13 @@ void PWM(void){
             BanderaDisX= POSITIVO;
         } 
         
-    PasosX=CoordRelatX*NUM_PASOS;
+    PasosX=CoordRelatX*NUM_PASOS;                   //Relación 1mm a 5 pasos
     ContarPulsos(PasosX);
       
     /*ACTUALIZAMOS COORDENADA X */      
-    if(BanderaDisX= NEGATIVO) CoordAntX= CoordAntX-CoordRelatX; //Si la distancia es negativa se resta
+    if(BanderaDisX== NEGATIVO) CoordAntX= CoordAntX-CoordRelatX; //Si la distancia es negativa se resta
     else{ 
-        if (BanderaDisX= POSITIVO) CoordAntX=CoordAntX+CoordRelatX;
+        if (BanderaDisX== POSITIVO) CoordAntX=CoordAntX+CoordRelatX;
     }
         
     //*********************************************
@@ -72,9 +75,9 @@ void PWM(void){
     ContarPulsos(PasosY);
     
     /*ACTUALIZAMOS COORDENADA Y */    
-    if(BanderaDisY= NEGATIVO) CoordAntY= CoordAntY-CoordRelatY; //Si la distancia es negativa se resta
+    if(BanderaDisY== NEGATIVO) CoordAntY= CoordAntY-CoordRelatY; //Si la distancia es negativa se resta
     else{ 
-        if (BanderaDisY= POSITIVO) CoordAntY=CoordAntY+CoordRelatY;
+        if (BanderaDisY== POSITIVO) CoordAntY=CoordAntY+CoordRelatY;
     }
     
     return;
@@ -110,11 +113,11 @@ void ResetOneShot(void){
     return;
 }
 
-void HaltMotors(void)
+/*void HaltMotors(void)
 {
     ENABLE_A=1;
     ENABLE_B=1;
     UARTWrite(0x4B);
     TXSTAbits.TXEN = 0;
     RCSTAbits.CREN = 0;
-}
+}*/

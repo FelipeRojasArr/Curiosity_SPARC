@@ -1,8 +1,8 @@
 Version 4.0 HI-TECH Software Intermediate Code
 "32 ./cases.h
 [; ;./cases.h: 32: systemState NextState;
-[c E3208 0 1 2 3 4 5 .. ]
-[n E3208 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
+[c E3375 0 1 2 3 4 5 .. ]
+[n E3375 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
 "3 ./UART.h
 [; ;./UART.h: 3: char UARTRead(void);
 [v _UARTRead `(uc ~T0 @X0 0 ef ]
@@ -523,11 +523,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./cases.h: 7: char letter;
 [v _letter `uc ~T0 @X0 1 e ]
 "8
-[; ;./cases.h: 8: unsigned short cord_x;
-[v _cord_x `us ~T0 @X0 1 e ]
+[; ;./cases.h: 8: unsigned int cord_x;
+[v _cord_x `ui ~T0 @X0 1 e ]
 "9
-[; ;./cases.h: 9: unsigned short cord_y;
-[v _cord_y `us ~T0 @X0 1 e ]
+[; ;./cases.h: 9: unsigned int cord_y;
+[v _cord_y `ui ~T0 @X0 1 e ]
 "10
 [; ;./cases.h: 10: char Par2;
 [v _Par2 `uc ~T0 @X0 1 e ]
@@ -536,7 +536,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _x `i ~T0 @X0 1 e ]
 "32
 [; ;./cases.h: 32: systemState NextState;
-[v _NextState `E3208 ~T0 @X0 1 e ]
+[v _NextState `E3375 ~T0 @X0 1 e ]
 "34
 [; ;./cases.h: 34: uint8_t click;
 [v _click `uc ~T0 @X0 1 e ]
@@ -610,8 +610,41 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x EBTR3 = OFF ]
 "71
 [p x EBTRB = OFF ]
-"12 coordenadas.c
-[; ;coordenadas.c: 12: int coord(char* P1, char*L, uint16_t* x , uint16_t* y , char*P2){
+"12 ./PWM.h
+[; ;./PWM.h: 12:     unsigned int CoordAntX;
+[v _CoordAntX `ui ~T0 @X0 1 e ]
+"13
+[; ;./PWM.h: 13:     unsigned int CoordAntY;
+[v _CoordAntY `ui ~T0 @X0 1 e ]
+"16
+[; ;./PWM.h: 16:     int CoordRelatX;
+[v _CoordRelatX `i ~T0 @X0 1 e ]
+"17
+[; ;./PWM.h: 17:     int CoordRelatY;
+[v _CoordRelatY `i ~T0 @X0 1 e ]
+"20
+[; ;./PWM.h: 20:     int pasosRecorridos;
+[v _pasosRecorridos `i ~T0 @X0 1 e ]
+"23
+[; ;./PWM.h: 23:     unsigned int PasosActuales;
+[v _PasosActuales `ui ~T0 @X0 1 e ]
+"24
+[; ;./PWM.h: 24:     unsigned int ons;
+[v _ons `ui ~T0 @X0 1 e ]
+"26
+[; ;./PWM.h: 26:     unsigned int PasosX;
+[v _PasosX `ui ~T0 @X0 1 e ]
+"27
+[; ;./PWM.h: 27:     unsigned int PasosY;
+[v _PasosY `ui ~T0 @X0 1 e ]
+"28
+[; ;./PWM.h: 28:     unsigned int BanderaDisX;
+[v _BanderaDisX `ui ~T0 @X0 1 e ]
+"29
+[; ;./PWM.h: 29:     unsigned int BanderaDisY;
+[v _BanderaDisY `ui ~T0 @X0 1 e ]
+"14 coordenadas.c
+[; ;coordenadas.c: 14: int coord(char* P1, char*L, uint16_t* x , uint16_t* y , char*P2){
 [v _coord `(i ~T0 @X0 1 ef5`*uc`*uc`*us`*us`*uc ]
 {
 [e :U _coord ]
@@ -621,50 +654,54 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _y `*us ~T0 @X0 1 r4 ]
 [v _P2 `*uc ~T0 @X0 1 r5 ]
 [f ]
-"13
-[; ;coordenadas.c: 13:   char buffer [9];
+"15
+[; ;coordenadas.c: 15:   char buffer [9];
 [v _buffer `uc ~T0 @X0 -> 9 `i a ]
-"14
-[; ;coordenadas.c: 14:         char read;
-[v _read `uc ~T0 @X0 1 a ]
 "16
-[; ;coordenadas.c: 16:         for(int i=0; i<=8; i++){
+[; ;coordenadas.c: 16:         char read;
+[v _read `uc ~T0 @X0 1 a ]
+"18
+[; ;coordenadas.c: 18:         for(int i=0; i<=8; i++){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $ <= _i -> 8 `i 368  ]
-[e $U 369  ]
-[e :U 368 ]
+[e $ <= _i -> 8 `i 369  ]
+[e $U 370  ]
+[e :U 369 ]
 {
-"17
-[; ;coordenadas.c: 17:             read= UARTRead();
-[e = _read ( _UARTRead ..  ]
-"18
-[; ;coordenadas.c: 18:             buffer[i]=read;
-[e = *U + &U _buffer * -> -> _i `ui `ux -> -> # *U &U _buffer `ui `ux _read ]
 "19
-[; ;coordenadas.c: 19:         }
+[; ;coordenadas.c: 19:             read= UARTRead();
+[e = _read ( _UARTRead ..  ]
+"20
+[; ;coordenadas.c: 20:             buffer[i]=read;
+[e = *U + &U _buffer * -> -> _i `ui `ux -> -> # *U &U _buffer `ui `ux _read ]
+"21
+[; ;coordenadas.c: 21:         }
 }
 [e ++ _i -> 1 `i ]
-[e $ <= _i -> 8 `i 368  ]
-[e :U 369 ]
+[e $ <= _i -> 8 `i 369  ]
+[e :U 370 ]
 }
-"20
-[; ;coordenadas.c: 20:         *P1= buffer[0];
-[e = *U _P1 *U + &U _buffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _buffer `ui `ux ]
-"21
-[; ;coordenadas.c: 21:         *L= buffer[1];
-[e = *U _L *U + &U _buffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _buffer `ui `ux ]
 "22
-[; ;coordenadas.c: 22:   *x = 1*(buffer[4]-48) + 10*(buffer[3]-48) + 100*(buffer[2]-48);
-[e = *U _x -> + + * -> 1 `i - -> *U + &U _buffer * -> -> -> 4 `i `ui `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 10 `i - -> *U + &U _buffer * -> -> -> 3 `i `ui `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 100 `i - -> *U + &U _buffer * -> -> -> 2 `i `ui `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i `us ]
+[; ;coordenadas.c: 22:         *P1= buffer[0];
+[e = *U _P1 *U + &U _buffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _buffer `ui `ux ]
 "23
-[; ;coordenadas.c: 23:   *y = 1*(buffer[7]-48) + 10*(buffer[6]-48) + 100*(buffer[5]-48);
-[e = *U _y -> + + * -> 1 `i - -> *U + &U _buffer * -> -> -> 7 `i `ui `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 10 `i - -> *U + &U _buffer * -> -> -> 6 `i `ui `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 100 `i - -> *U + &U _buffer * -> -> -> 5 `i `ui `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i `us ]
+[; ;coordenadas.c: 23:         *L= buffer[1];
+[e = *U _L *U + &U _buffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _buffer `ui `ux ]
 "24
-[; ;coordenadas.c: 24:   *P2= buffer[8];
-[e = *U _P2 *U + &U _buffer * -> -> -> 8 `i `ui `ux -> -> # *U &U _buffer `ui `ux ]
+[; ;coordenadas.c: 24:   *x = 1*(buffer[4]-48) + 10*(buffer[3]-48) + 100*(buffer[2]-48);
+[e = *U _x -> + + * -> 1 `i - -> *U + &U _buffer * -> -> -> 4 `i `ui `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 10 `i - -> *U + &U _buffer * -> -> -> 3 `i `ui `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 100 `i - -> *U + &U _buffer * -> -> -> 2 `i `ui `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i `us ]
+"25
+[; ;coordenadas.c: 25:   *y = 1*(buffer[7]-48) + 10*(buffer[6]-48) + 100*(buffer[5]-48);
+[e = *U _y -> + + * -> 1 `i - -> *U + &U _buffer * -> -> -> 7 `i `ui `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 10 `i - -> *U + &U _buffer * -> -> -> 6 `i `ui `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 100 `i - -> *U + &U _buffer * -> -> -> 5 `i `ui `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i `us ]
 "26
-[; ;coordenadas.c: 26: }
-[e :UE 367 ]
+[; ;coordenadas.c: 26:   *P2= buffer[8];
+[e = *U _P2 *U + &U _buffer * -> -> -> 8 `i `ui `ux -> -> # *U &U _buffer `ui `ux ]
+"28
+[; ;coordenadas.c: 28:         return 0;
+[e ) -> 0 `i ]
+[e $UE 368  ]
+"29
+[; ;coordenadas.c: 29: }
+[e :UE 368 ]
 }

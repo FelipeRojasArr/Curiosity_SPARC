@@ -1,7 +1,8 @@
 build/default/production/Movimiento.p1:  \
 Movimiento.c  \
-PWM.h  \
+UART.h  \
 cases.h  \
 Definiciones.h  \
 Configuracion.h  \
-UART.h 
+Interruptions.h  \
+PWM.h 

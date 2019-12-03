@@ -5464,38 +5464,6 @@ extern volatile __bit nW __attribute__((address(0x7E3A)));
 extern volatile __bit nWRITE __attribute__((address(0x7E3A)));
 # 1 "PWM.c" 2
 
-# 1 "./PWM.h" 1
-
-void PWM(void);
-int ContarPulsos(int pasos);
-void OneShot(void);
-void ResetOneShot(void);
-int Movimiento(void);
-void HaltMotors(void);
-
-
-
-
-    unsigned int CoordAntX;
-    unsigned int CoordAntY;
-
-
-    int CoordRelatX;
-    int CoordRelatY;
-
-
-    int pasosRecorridos;
-
-
-    unsigned int PasosActuales;
-    unsigned int ons;
-
-    unsigned int PasosX;
-    unsigned int PasosY;
-    unsigned int BanderaDisX;
-    unsigned int BanderaDisY;
-# 2 "PWM.c" 2
-
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -5650,9 +5618,66 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 32 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 2 3
+# 2 "PWM.c" 2
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\string.h" 1 3
+# 25 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\string.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 411 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct __locale_struct * locale_t;
+# 25 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\string.h" 2 3
+
+
+void *memcpy (void *restrict, const void *restrict, size_t);
+void *memmove (void *, const void *, size_t);
+void *memset (void *, int, size_t);
+int memcmp (const void *, const void *, size_t);
+void *memchr (const void *, int, size_t);
+
+char *strcpy (char *restrict, const char *restrict);
+char *strncpy (char *restrict, const char *restrict, size_t);
+
+char *strcat (char *restrict, const char *restrict);
+char *strncat (char *restrict, const char *restrict, size_t);
+
+int strcmp (const char *, const char *);
+int strncmp (const char *, const char *, size_t);
+
+int strcoll (const char *, const char *);
+size_t strxfrm (char *restrict, const char *restrict, size_t);
+
+char *strchr (const char *, int);
+char *strrchr (const char *, int);
+
+size_t strcspn (const char *, const char *);
+size_t strspn (const char *, const char *);
+char *strpbrk (const char *, const char *);
+char *strstr (const char *, const char *);
+char *strtok (char *restrict, const char *restrict);
+
+size_t strlen (const char *);
+
+char *strerror (int);
+# 65 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\string.h" 3
+char *strtok_r (char *restrict, const char *restrict, char **restrict);
+int strerror_r (int, char *, size_t);
+char *stpcpy(char *restrict, const char *restrict);
+char *stpncpy(char *restrict, const char *restrict, size_t);
+size_t strnlen (const char *, size_t);
+char *strdup (const char *);
+char *strndup (const char *, size_t);
+char *strsignal(int);
+char *strerror_l (int, locale_t);
+int strcoll_l (const char *, const char *, locale_t);
+size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
+
+
+
+
+void *memccpy (void *restrict, const void *restrict, int, size_t);
 # 3 "PWM.c" 2
 
-# 1 "./cases.h" 1
+
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 1 3
 # 22 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 3
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 1 3
@@ -5736,7 +5761,15 @@ typedef int32_t int_fast32_t;
 typedef uint32_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 139 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 2 3
-# 1 "./cases.h" 2
+# 5 "PWM.c" 2
+
+# 1 "./UART.h" 1
+void UARTConfi(int Baud);
+void UARTWrite(char data);
+char UARTRead(void);
+# 6 "PWM.c" 2
+
+# 1 "./cases.h" 1
 
 void verification(void);
 
@@ -5744,8 +5777,8 @@ int coord(char* P1, char* L, unsigned short* x, unsigned short* y, char* P2);
 
 char Par1;
 char letter;
-unsigned short cord_x;
-unsigned short cord_y;
+unsigned int cord_x;
+unsigned int cord_y;
 char Par2;
 
 int x;
@@ -5771,10 +5804,10 @@ void end(void);
 systemState NextState;
 
 uint8_t click;
-# 4 "PWM.c" 2
+# 7 "PWM.c" 2
 
 # 1 "./Definiciones.h" 1
-# 5 "PWM.c" 2
+# 8 "PWM.c" 2
 
 # 1 "./Configuracion.h" 1
 # 17 "./Configuracion.h"
@@ -5836,15 +5869,52 @@ uint8_t click;
 
 
 void Configuracion(void);
-# 6 "PWM.c" 2
+# 9 "PWM.c" 2
 
-# 1 "./UART.h" 1
-void UARTConfi(int Baud);
-void UARTWrite(char data);
-char UARTRead(void);
-# 7 "PWM.c" 2
-# 19 "PWM.c"
-void PWM(void){
+# 1 "./Interruptions.h" 1
+
+
+
+
+
+
+void InterruptionsConfiguration(void);
+void buttonInterruptionConfiguration(void);
+# 10 "PWM.c" 2
+
+# 1 "./PWM.h" 1
+
+void PWM(void);
+int ContarPulsos(int pasos);
+void OneShot(void);
+void ResetOneShot(void);
+int Movimiento(void);
+void HaltMotors(void);
+
+
+
+
+    unsigned int CoordAntX;
+    unsigned int CoordAntY;
+
+
+    int CoordRelatX;
+    int CoordRelatY;
+
+
+    int pasosRecorridos;
+
+
+    unsigned int PasosActuales;
+    unsigned int ons;
+
+    unsigned int PasosX;
+    unsigned int PasosY;
+    unsigned int BanderaDisX;
+    unsigned int BanderaDisY;
+# 11 "PWM.c" 2
+# 22 "PWM.c"
+void PWM(){
 
     BanderaDisX= 1;
     BanderaDisY= 1;
@@ -5872,9 +5942,9 @@ void PWM(void){
     ContarPulsos(PasosX);
 
 
-    if(BanderaDisX= 0) CoordAntX= CoordAntX-CoordRelatX;
+    if(BanderaDisX== 0) CoordAntX= CoordAntX-CoordRelatX;
     else{
-        if (BanderaDisX= 1) CoordAntX=CoordAntX+CoordRelatX;
+        if (BanderaDisX== 1) CoordAntX=CoordAntX+CoordRelatX;
     }
 
 
@@ -5900,9 +5970,9 @@ void PWM(void){
     ContarPulsos(PasosY);
 
 
-    if(BanderaDisY= 0) CoordAntY= CoordAntY-CoordRelatY;
+    if(BanderaDisY== 0) CoordAntY= CoordAntY-CoordRelatY;
     else{
-        if (BanderaDisY= 1) CoordAntY=CoordAntY+CoordRelatY;
+        if (BanderaDisY== 1) CoordAntY=CoordAntY+CoordRelatY;
     }
 
     return;
@@ -5936,13 +6006,4 @@ void ResetOneShot(void){
     if(PORTCbits.CCP1==1)return;
     if(PORTCbits.CCP1==0)ons=0;
     return;
-}
-
-void HaltMotors(void)
-{
-    PORTDbits.RD2=1;
-    PORTDbits.RD3=1;
-    UARTWrite(0x4B);
-    TXSTAbits.TXEN = 0;
-    RCSTAbits.CREN = 0;
 }

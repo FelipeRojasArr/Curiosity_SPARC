@@ -602,11 +602,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./cases.h: 7: char letter;
 [v _letter `uc ~T0 @X0 1 e ]
 "8
-[; ;./cases.h: 8: unsigned short cord_x;
-[v _cord_x `us ~T0 @X0 1 e ]
+[; ;./cases.h: 8: unsigned int cord_x;
+[v _cord_x `ui ~T0 @X0 1 e ]
 "9
-[; ;./cases.h: 9: unsigned short cord_y;
-[v _cord_y `us ~T0 @X0 1 e ]
+[; ;./cases.h: 9: unsigned int cord_y;
+[v _cord_y `ui ~T0 @X0 1 e ]
 "10
 [; ;./cases.h: 10: char Par2;
 [v _Par2 `uc ~T0 @X0 1 e ]
@@ -689,85 +689,118 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x EBTR3 = OFF ]
 "71
 [p x EBTRB = OFF ]
-"10 CONFIGUR.c
-[; ;CONFIGUR.c: 10: void Configuracion(void) {
+"12 ./PWM.h
+[; ;./PWM.h: 12:     unsigned int CoordAntX;
+[v _CoordAntX `ui ~T0 @X0 1 e ]
+"13
+[; ;./PWM.h: 13:     unsigned int CoordAntY;
+[v _CoordAntY `ui ~T0 @X0 1 e ]
+"16
+[; ;./PWM.h: 16:     int CoordRelatX;
+[v _CoordRelatX `i ~T0 @X0 1 e ]
+"17
+[; ;./PWM.h: 17:     int CoordRelatY;
+[v _CoordRelatY `i ~T0 @X0 1 e ]
+"20
+[; ;./PWM.h: 20:     int pasosRecorridos;
+[v _pasosRecorridos `i ~T0 @X0 1 e ]
+"23
+[; ;./PWM.h: 23:     unsigned int PasosActuales;
+[v _PasosActuales `ui ~T0 @X0 1 e ]
+"24
+[; ;./PWM.h: 24:     unsigned int ons;
+[v _ons `ui ~T0 @X0 1 e ]
+"26
+[; ;./PWM.h: 26:     unsigned int PasosX;
+[v _PasosX `ui ~T0 @X0 1 e ]
+"27
+[; ;./PWM.h: 27:     unsigned int PasosY;
+[v _PasosY `ui ~T0 @X0 1 e ]
+"28
+[; ;./PWM.h: 28:     unsigned int BanderaDisX;
+[v _BanderaDisX `ui ~T0 @X0 1 e ]
+"29
+[; ;./PWM.h: 29:     unsigned int BanderaDisY;
+[v _BanderaDisY `ui ~T0 @X0 1 e ]
+"14 CONFIGUR.c
+[; ;CONFIGUR.c: 14: void Configuracion(void) {
 [v _Configuracion `(v ~T0 @X0 1 ef ]
 {
 [e :U _Configuracion ]
 [f ]
-"14
-[; ;CONFIGUR.c: 14:     OSCCON=0x72;
-[e = _OSCCON -> -> 114 `i `uc ]
 "18
-[; ;CONFIGUR.c: 18:    CMCON = 0xFF;
+[; ;CONFIGUR.c: 18:     OSCCON=0x72;
+[e = _OSCCON -> -> 114 `i `uc ]
+"22
+[; ;CONFIGUR.c: 22:    CMCON = 0xFF;
 [e = _CMCON -> -> 255 `i `uc ]
-"19
-[; ;CONFIGUR.c: 19:    CVRCONbits.CVREN = 0;
+"23
+[; ;CONFIGUR.c: 23:    CVRCONbits.CVREN = 0;
 [e = . . _CVRCONbits 0 4 -> -> 0 `i `uc ]
-"20
-[; ;CONFIGUR.c: 20:    ADCON1 = 0x0F;
-[e = _ADCON1 -> -> 15 `i `uc ]
 "24
-[; ;CONFIGUR.c: 24:    PORTD = 0x00;
-[e = _PORTD -> -> 0 `i `uc ]
-"25
-[; ;CONFIGUR.c: 25:    LATD = 0x00;
-[e = _LATD -> -> 0 `i `uc ]
-"26
-[; ;CONFIGUR.c: 26:    TRISD = 0xF0;
-[e = _TRISD -> -> 240 `i `uc ]
+[; ;CONFIGUR.c: 24:    ADCON1 = 0x0F;
+[e = _ADCON1 -> -> 15 `i `uc ]
 "28
-[; ;CONFIGUR.c: 28:    PORTC = 0x00;
-[e = _PORTC -> -> 0 `i `uc ]
+[; ;CONFIGUR.c: 28:    PORTD = 0x00;
+[e = _PORTD -> -> 0 `i `uc ]
 "29
-[; ;CONFIGUR.c: 29:    LATC= 0x00;
-[e = _LATC -> -> 0 `i `uc ]
+[; ;CONFIGUR.c: 29:    LATD = 0x00;
+[e = _LATD -> -> 0 `i `uc ]
 "30
-[; ;CONFIGUR.c: 30:    TRISC= 0x00;
-[e = _TRISC -> -> 0 `i `uc ]
+[; ;CONFIGUR.c: 30:    TRISD = 0xF0;
+[e = _TRISD -> -> 240 `i `uc ]
 "32
-[; ;CONFIGUR.c: 32:    PORTB = 0x00;
-[e = _PORTB -> -> 0 `i `uc ]
+[; ;CONFIGUR.c: 32:    PORTC = 0x00;
+[e = _PORTC -> -> 0 `i `uc ]
 "33
-[; ;CONFIGUR.c: 33:    LATB= 0x00;
-[e = _LATB -> -> 0 `i `uc ]
+[; ;CONFIGUR.c: 33:    LATC= 0x00;
+[e = _LATC -> -> 0 `i `uc ]
 "34
-[; ;CONFIGUR.c: 34:    TRISB= 0xFF;
-[e = _TRISB -> -> 255 `i `uc ]
-"38
-[; ;CONFIGUR.c: 38:    UARTConfi(9600);
-[e ( _UARTConfi (1 -> 9600 `i ]
-"39
-[; ;CONFIGUR.c: 39:     TRISC=0X00;
+[; ;CONFIGUR.c: 34:    TRISC= 0x00;
 [e = _TRISC -> -> 0 `i `uc ]
+"36
+[; ;CONFIGUR.c: 36:    PORTB = 0x00;
+[e = _PORTB -> -> 0 `i `uc ]
+"37
+[; ;CONFIGUR.c: 37:    LATB= 0x00;
+[e = _LATB -> -> 0 `i `uc ]
+"38
+[; ;CONFIGUR.c: 38:    TRISB= 0xFF;
+[e = _TRISB -> -> 255 `i `uc ]
+"42
+[; ;CONFIGUR.c: 42:    UARTConfi(9600);
+[e ( _UARTConfi (1 -> 9600 `i ]
 "43
-[; ;CONFIGUR.c: 43:      PR2 = 0xF9;
-[e = _PR2 -> -> 249 `i `uc ]
-"46
-[; ;CONFIGUR.c: 46:     CCP1CON = 0x0C;
-[e = _CCP1CON -> -> 12 `i `uc ]
+[; ;CONFIGUR.c: 43:     TRISC=0X00;
+[e = _TRISC -> -> 0 `i `uc ]
 "47
-[; ;CONFIGUR.c: 47:     CCPR1L = 0x7D;
-[e = _CCPR1L -> -> 125 `i `uc ]
+[; ;CONFIGUR.c: 47:      PR2 = 0xF9;
+[e = _PR2 -> -> 249 `i `uc ]
 "50
-[; ;CONFIGUR.c: 50:     CCP2CON = 0x0C;
-[e = _CCP2CON -> -> 12 `i `uc ]
+[; ;CONFIGUR.c: 50:     CCP1CON = 0x0C;
+[e = _CCP1CON -> -> 12 `i `uc ]
 "51
-[; ;CONFIGUR.c: 51:     CCPR2L = 0x7D;
-[e = _CCPR2L -> -> 125 `i `uc ]
+[; ;CONFIGUR.c: 51:     CCPR1L = 0x7D;
+[e = _CCPR1L -> -> 125 `i `uc ]
 "54
-[; ;CONFIGUR.c: 54:     T2CON = 0x03;
-[e = _T2CON -> -> 3 `i `uc ]
+[; ;CONFIGUR.c: 54:     CCP2CON = 0x0C;
+[e = _CCP2CON -> -> 12 `i `uc ]
 "55
-[; ;CONFIGUR.c: 55:     TMR2 = 0;
-[e = _TMR2 -> -> 0 `i `uc ]
-"56
-[; ;CONFIGUR.c: 56:     TMR2ON = 1;
-[e = _TMR2ON -> -> 1 `i `b ]
+[; ;CONFIGUR.c: 55:     CCPR2L = 0x7D;
+[e = _CCPR2L -> -> 125 `i `uc ]
 "58
-[; ;CONFIGUR.c: 58:     return;
-[e $UE 368  ]
+[; ;CONFIGUR.c: 58:     T2CON = 0x03;
+[e = _T2CON -> -> 3 `i `uc ]
 "59
-[; ;CONFIGUR.c: 59: }
+[; ;CONFIGUR.c: 59:     TMR2 = 0;
+[e = _TMR2 -> -> 0 `i `uc ]
+"60
+[; ;CONFIGUR.c: 60:     TMR2ON = 1;
+[e = _TMR2ON -> -> 1 `i `b ]
+"62
+[; ;CONFIGUR.c: 62:     return;
+[e $UE 368  ]
+"63
+[; ;CONFIGUR.c: 63: }
 [e :UE 368 ]
 }

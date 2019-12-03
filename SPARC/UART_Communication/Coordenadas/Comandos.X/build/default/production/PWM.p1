@@ -1,8 +1,8 @@
 Version 4.0 HI-TECH Software Intermediate Code
 "32 ./cases.h
 [; ;./cases.h: 32: systemState NextState;
-[c E3221 0 1 2 3 4 5 .. ]
-[n E3221 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
+[c E3375 0 1 2 3 4 5 .. ]
+[n E3375 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
 "2711 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 2711:     struct {
 [s S112 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -58,63 +58,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "5
 [; ;./PWM.h: 5: void ResetOneShot(void);
 [v _ResetOneShot `(v ~T0 @X0 0 ef ]
-"2 ./UART.h
-[; ;./UART.h: 2: void UARTWrite(char data);
-[v _UARTWrite `(v ~T0 @X0 0 ef1`uc ]
-"5157 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5157:     struct {
-[s S205 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S205 . TX9D TRMT BRGH SENDB SYNC TXEN TX9 CSRC ]
-"5167
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5167:     struct {
-[s S206 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S206 . TX9D1 TRMT1 BRGH1 SENDB1 SYNC1 TXEN1 TX91 CSRC1 ]
-"5177
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5177:     struct {
-[s S207 :6 `uc 1 :1 `uc 1 ]
-[n S207 . . TX8_9 ]
-"5181
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5181:     struct {
-[s S208 :1 `uc 1 ]
-[n S208 . TXD8 ]
-"5156
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5156: typedef union {
-[u S204 `S205 1 `S206 1 `S207 1 `S208 1 ]
-[n S204 . . . . . ]
-"5185
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5185: extern volatile TXSTAbits_t TXSTAbits __attribute__((address(0xFAC)));
-[v _TXSTAbits `VS204 ~T0 @X0 0 e@4012 ]
-"4947
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4947:     struct {
-[s S191 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S191 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
-"4957
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4957:     struct {
-[s S192 :3 `uc 1 :1 `uc 1 ]
-[n S192 . . ADEN ]
-"4961
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4961:     struct {
-[s S193 :5 `uc 1 :1 `uc 1 ]
-[n S193 . . SRENA ]
-"4965
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4965:     struct {
-[s S194 :6 `uc 1 :1 `uc 1 ]
-[n S194 . . RC8_9 ]
-"4969
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4969:     struct {
-[s S195 :6 `uc 1 :1 `uc 1 ]
-[n S195 . . RC9 ]
-"4973
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4973:     struct {
-[s S196 :1 `uc 1 ]
-[n S196 . RCD8 ]
-"4946
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4946: typedef union {
-[u S190 `S191 1 `S192 1 `S193 1 `S194 1 `S195 1 `S196 1 ]
-[n S190 . . . . . . . ]
-"4977
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4977: extern volatile RCSTAbits_t RCSTAbits __attribute__((address(0xFAB)));
-[v _RCSTAbits `VS190 ~T0 @X0 0 e@4011 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -625,39 +568,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8893
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"12 ./PWM.h
-[; ;./PWM.h: 12:     unsigned int CoordAntX;
-[v _CoordAntX `ui ~T0 @X0 1 e ]
-"13
-[; ;./PWM.h: 13:     unsigned int CoordAntY;
-[v _CoordAntY `ui ~T0 @X0 1 e ]
-"16
-[; ;./PWM.h: 16:     int CoordRelatX;
-[v _CoordRelatX `i ~T0 @X0 1 e ]
-"17
-[; ;./PWM.h: 17:     int CoordRelatY;
-[v _CoordRelatY `i ~T0 @X0 1 e ]
-"20
-[; ;./PWM.h: 20:     int pasosRecorridos;
-[v _pasosRecorridos `i ~T0 @X0 1 e ]
-"23
-[; ;./PWM.h: 23:     unsigned int PasosActuales;
-[v _PasosActuales `ui ~T0 @X0 1 e ]
-"24
-[; ;./PWM.h: 24:     unsigned int ons;
-[v _ons `ui ~T0 @X0 1 e ]
-"26
-[; ;./PWM.h: 26:     unsigned int PasosX;
-[v _PasosX `ui ~T0 @X0 1 e ]
-"27
-[; ;./PWM.h: 27:     unsigned int PasosY;
-[v _PasosY `ui ~T0 @X0 1 e ]
-"28
-[; ;./PWM.h: 28:     unsigned int BanderaDisX;
-[v _BanderaDisX `ui ~T0 @X0 1 e ]
-"29
-[; ;./PWM.h: 29:     unsigned int BanderaDisY;
-[v _BanderaDisY `ui ~T0 @X0 1 e ]
 "6 ./cases.h
 [; ;./cases.h: 6: char Par1;
 [v _Par1 `uc ~T0 @X0 1 e ]
@@ -665,11 +575,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./cases.h: 7: char letter;
 [v _letter `uc ~T0 @X0 1 e ]
 "8
-[; ;./cases.h: 8: unsigned short cord_x;
-[v _cord_x `us ~T0 @X0 1 e ]
+[; ;./cases.h: 8: unsigned int cord_x;
+[v _cord_x `ui ~T0 @X0 1 e ]
 "9
-[; ;./cases.h: 9: unsigned short cord_y;
-[v _cord_y `us ~T0 @X0 1 e ]
+[; ;./cases.h: 9: unsigned int cord_y;
+[v _cord_y `ui ~T0 @X0 1 e ]
 "10
 [; ;./cases.h: 10: char Par2;
 [v _Par2 `uc ~T0 @X0 1 e ]
@@ -678,7 +588,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _x `i ~T0 @X0 1 e ]
 "32
 [; ;./cases.h: 32: systemState NextState;
-[v _NextState `E3221 ~T0 @X0 1 e ]
+[v _NextState `E3375 ~T0 @X0 1 e ]
 "34
 [; ;./cases.h: 34: uint8_t click;
 [v _click `uc ~T0 @X0 1 e ]
@@ -752,306 +662,312 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x EBTR3 = OFF ]
 "71
 [p x EBTRB = OFF ]
-"19 PWM.c
-[; ;PWM.c: 19: void PWM(void){
+"12 ./PWM.h
+[; ;./PWM.h: 12:     unsigned int CoordAntX;
+[v _CoordAntX `ui ~T0 @X0 1 e ]
+"13
+[; ;./PWM.h: 13:     unsigned int CoordAntY;
+[v _CoordAntY `ui ~T0 @X0 1 e ]
+"16
+[; ;./PWM.h: 16:     int CoordRelatX;
+[v _CoordRelatX `i ~T0 @X0 1 e ]
+"17
+[; ;./PWM.h: 17:     int CoordRelatY;
+[v _CoordRelatY `i ~T0 @X0 1 e ]
+"20
+[; ;./PWM.h: 20:     int pasosRecorridos;
+[v _pasosRecorridos `i ~T0 @X0 1 e ]
+"23
+[; ;./PWM.h: 23:     unsigned int PasosActuales;
+[v _PasosActuales `ui ~T0 @X0 1 e ]
+"24
+[; ;./PWM.h: 24:     unsigned int ons;
+[v _ons `ui ~T0 @X0 1 e ]
+"26
+[; ;./PWM.h: 26:     unsigned int PasosX;
+[v _PasosX `ui ~T0 @X0 1 e ]
+"27
+[; ;./PWM.h: 27:     unsigned int PasosY;
+[v _PasosY `ui ~T0 @X0 1 e ]
+"28
+[; ;./PWM.h: 28:     unsigned int BanderaDisX;
+[v _BanderaDisX `ui ~T0 @X0 1 e ]
+"29
+[; ;./PWM.h: 29:     unsigned int BanderaDisY;
+[v _BanderaDisY `ui ~T0 @X0 1 e ]
+"22 PWM.c
+[; ;PWM.c: 22: void PWM(){
 [v _PWM `(v ~T0 @X0 1 ef ]
 {
 [e :U _PWM ]
 [f ]
-"21
-[; ;PWM.c: 21:     BanderaDisX= 1;
+"24
+[; ;PWM.c: 24:     BanderaDisX= 1;
 [e = _BanderaDisX -> -> 1 `i `ui ]
-"22
-[; ;PWM.c: 22:     BanderaDisY= 1;
+"25
+[; ;PWM.c: 25:     BanderaDisY= 1;
 [e = _BanderaDisY -> -> 1 `i `ui ]
-"27
-[; ;PWM.c: 27:     if (CoordAntX==0) CoordRelatX=cord_x;
-[e $ ! == _CoordAntX -> -> 0 `i `ui 368  ]
+"30
+[; ;PWM.c: 30:     if (CoordAntX==0) CoordRelatX=cord_x;
+[e $ ! == _CoordAntX -> -> 0 `i `ui 369  ]
 [e = _CoordRelatX -> _cord_x `i ]
-[e $U 369  ]
-"28
-[; ;PWM.c: 28:         else CoordRelatX=cord_x-CoordAntX;
-[e :U 368 ]
-[e = _CoordRelatX -> - -> _cord_x `ui _CoordAntX `i ]
-[e :U 369 ]
+[e $U 370  ]
 "31
-[; ;PWM.c: 31:     if (CoordRelatX<0){
-[e $ ! < _CoordRelatX -> 0 `i 370  ]
-{
-"32
-[; ;PWM.c: 32:         PORTDbits.RD0=0;
-[e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
-"33
-[; ;PWM.c: 33:         PORTDbits.RD1=0;
-[e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
-"34
-[; ;PWM.c: 34:         CoordRelatX=CoordRelatX*(-1);
-[e = _CoordRelatX * _CoordRelatX -U -> 1 `i ]
-"35
-[; ;PWM.c: 35:         BanderaDisX= 0;
-[e = _BanderaDisX -> -> 0 `i `ui ]
-"36
-[; ;PWM.c: 36:     }
-}
-[e $U 371  ]
-"37
-[; ;PWM.c: 37:         else {
+[; ;PWM.c: 31:         else CoordRelatX=cord_x-CoordAntX;
+[e :U 369 ]
+[e = _CoordRelatX -> - _cord_x _CoordAntX `i ]
 [e :U 370 ]
+"34
+[; ;PWM.c: 34:     if (CoordRelatX<0){
+[e $ ! < _CoordRelatX -> 0 `i 371  ]
 {
-"38
-[; ;PWM.c: 38:             PORTDbits.RD0=1;
-[e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
-"39
-[; ;PWM.c: 39:             PORTDbits.RD1=1;
-[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
-"40
-[; ;PWM.c: 40:             BanderaDisX= 1;
-[e = _BanderaDisX -> -> 1 `i `ui ]
-"41
-[; ;PWM.c: 41:         }
-}
-[e :U 371 ]
-"43
-[; ;PWM.c: 43:     PasosX=CoordRelatX*5;
-[e = _PasosX -> * _CoordRelatX -> 5 `i `ui ]
-"44
-[; ;PWM.c: 44:     ContarPulsos(PasosX);
-[e ( _ContarPulsos (1 -> _PasosX `i ]
-"47
-[; ;PWM.c: 47:     if(BanderaDisX= 0) CoordAntX= CoordAntX-CoordRelatX;
-[e $ ! != = _BanderaDisX -> -> 0 `i `ui -> -> 0 `i `ui 372  ]
-[e = _CoordAntX - _CoordAntX -> _CoordRelatX `ui ]
-[e $U 373  ]
-"48
-[; ;PWM.c: 48:     else{
-[e :U 372 ]
-{
-"49
-[; ;PWM.c: 49:         if (BanderaDisX= 1) CoordAntX=CoordAntX+CoordRelatX;
-[e $ ! != = _BanderaDisX -> -> 1 `i `ui -> -> 0 `i `ui 374  ]
-[e = _CoordAntX + _CoordAntX -> _CoordRelatX `ui ]
-[e :U 374 ]
-"50
-[; ;PWM.c: 50:     }
-}
-[e :U 373 ]
-"56
-[; ;PWM.c: 56:     if (CoordAntY==0) CoordRelatY=cord_y;
-[e $ ! == _CoordAntY -> -> 0 `i `ui 375  ]
-[e = _CoordRelatY -> _cord_y `i ]
-[e $U 376  ]
-"57
-[; ;PWM.c: 57:         else CoordRelatY=cord_y-CoordAntY;
-[e :U 375 ]
-[e = _CoordRelatY -> - -> _cord_y `ui _CoordAntY `i ]
-[e :U 376 ]
-"59
-[; ;PWM.c: 59:     if (CoordRelatY<0){
-[e $ ! < _CoordRelatY -> 0 `i 377  ]
-{
-"60
-[; ;PWM.c: 60:         PORTDbits.RD0=0;
+"35
+[; ;PWM.c: 35:         PORTDbits.RD0=0;
 [e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
-"61
-[; ;PWM.c: 61:         PORTDbits.RD1=1;
-[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
-"62
-[; ;PWM.c: 62:         CoordRelatY=CoordRelatY*(-1);
-[e = _CoordRelatY * _CoordRelatY -U -> 1 `i ]
-"63
-[; ;PWM.c: 63:         BanderaDisY= 0;
-[e = _BanderaDisY -> -> 0 `i `ui ]
-"64
-[; ;PWM.c: 64:     }
+"36
+[; ;PWM.c: 36:         PORTDbits.RD1=0;
+[e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
+"37
+[; ;PWM.c: 37:         CoordRelatX=CoordRelatX*(-1);
+[e = _CoordRelatX * _CoordRelatX -U -> 1 `i ]
+"38
+[; ;PWM.c: 38:         BanderaDisX= 0;
+[e = _BanderaDisX -> -> 0 `i `ui ]
+"39
+[; ;PWM.c: 39:     }
 }
-[e $U 378  ]
-"65
-[; ;PWM.c: 65:     else {
-[e :U 377 ]
+[e $U 372  ]
+"40
+[; ;PWM.c: 40:         else {
+[e :U 371 ]
 {
-"66
-[; ;PWM.c: 66:         PORTDbits.RD0=1;
+"41
+[; ;PWM.c: 41:             PORTDbits.RD0=1;
 [e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
-"67
-[; ;PWM.c: 67:         PORTDbits.RD1=1;
+"42
+[; ;PWM.c: 42:             PORTDbits.RD1=1;
 [e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
-"68
-[; ;PWM.c: 68:          BanderaDisY= 1;
-[e = _BanderaDisY -> -> 1 `i `ui ]
-"69
-[; ;PWM.c: 69:      }
+"43
+[; ;PWM.c: 43:             BanderaDisX= 1;
+[e = _BanderaDisX -> -> 1 `i `ui ]
+"44
+[; ;PWM.c: 44:         }
 }
-[e :U 378 ]
-"71
-[; ;PWM.c: 71:     PasosY=CoordRelatY*5;
-[e = _PasosY -> * _CoordRelatY -> 5 `i `ui ]
-"72
-[; ;PWM.c: 72:     ContarPulsos(PasosY);
-[e ( _ContarPulsos (1 -> _PasosY `i ]
-"75
-[; ;PWM.c: 75:     if(BanderaDisY= 0) CoordAntY= CoordAntY-CoordRelatY;
-[e $ ! != = _BanderaDisY -> -> 0 `i `ui -> -> 0 `i `ui 379  ]
-[e = _CoordAntY - _CoordAntY -> _CoordRelatY `ui ]
-[e $U 380  ]
-"76
-[; ;PWM.c: 76:     else{
-[e :U 379 ]
+[e :U 372 ]
+"46
+[; ;PWM.c: 46:     PasosX=CoordRelatX*5;
+[e = _PasosX -> * _CoordRelatX -> 5 `i `ui ]
+"47
+[; ;PWM.c: 47:     ContarPulsos(PasosX);
+[e ( _ContarPulsos (1 -> _PasosX `i ]
+"50
+[; ;PWM.c: 50:     if(BanderaDisX== 0) CoordAntX= CoordAntX-CoordRelatX;
+[e $ ! == _BanderaDisX -> -> 0 `i `ui 373  ]
+[e = _CoordAntX - _CoordAntX -> _CoordRelatX `ui ]
+[e $U 374  ]
+"51
+[; ;PWM.c: 51:     else{
+[e :U 373 ]
 {
-"77
-[; ;PWM.c: 77:         if (BanderaDisY= 1) CoordAntY=CoordAntY+CoordRelatY;
-[e $ ! != = _BanderaDisY -> -> 1 `i `ui -> -> 0 `i `ui 381  ]
-[e = _CoordAntY + _CoordAntY -> _CoordRelatY `ui ]
-[e :U 381 ]
+"52
+[; ;PWM.c: 52:         if (BanderaDisX== 1) CoordAntX=CoordAntX+CoordRelatX;
+[e $ ! == _BanderaDisX -> -> 1 `i `ui 375  ]
+[e = _CoordAntX + _CoordAntX -> _CoordRelatX `ui ]
+[e :U 375 ]
+"53
+[; ;PWM.c: 53:     }
+}
+[e :U 374 ]
+"59
+[; ;PWM.c: 59:     if (CoordAntY==0) CoordRelatY=cord_y;
+[e $ ! == _CoordAntY -> -> 0 `i `ui 376  ]
+[e = _CoordRelatY -> _cord_y `i ]
+[e $U 377  ]
+"60
+[; ;PWM.c: 60:         else CoordRelatY=cord_y-CoordAntY;
+[e :U 376 ]
+[e = _CoordRelatY -> - _cord_y _CoordAntY `i ]
+[e :U 377 ]
+"62
+[; ;PWM.c: 62:     if (CoordRelatY<0){
+[e $ ! < _CoordRelatY -> 0 `i 378  ]
+{
+"63
+[; ;PWM.c: 63:         PORTDbits.RD0=0;
+[e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
+"64
+[; ;PWM.c: 64:         PORTDbits.RD1=1;
+[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
+"65
+[; ;PWM.c: 65:         CoordRelatY=CoordRelatY*(-1);
+[e = _CoordRelatY * _CoordRelatY -U -> 1 `i ]
+"66
+[; ;PWM.c: 66:         BanderaDisY= 0;
+[e = _BanderaDisY -> -> 0 `i `ui ]
+"67
+[; ;PWM.c: 67:     }
+}
+[e $U 379  ]
+"68
+[; ;PWM.c: 68:     else {
+[e :U 378 ]
+{
+"69
+[; ;PWM.c: 69:         PORTDbits.RD0=1;
+[e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
+"70
+[; ;PWM.c: 70:         PORTDbits.RD1=1;
+[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
+"71
+[; ;PWM.c: 71:          BanderaDisY= 1;
+[e = _BanderaDisY -> -> 1 `i `ui ]
+"72
+[; ;PWM.c: 72:      }
+}
+[e :U 379 ]
+"74
+[; ;PWM.c: 74:     PasosY=CoordRelatY*5;
+[e = _PasosY -> * _CoordRelatY -> 5 `i `ui ]
+"75
+[; ;PWM.c: 75:     ContarPulsos(PasosY);
+[e ( _ContarPulsos (1 -> _PasosY `i ]
 "78
-[; ;PWM.c: 78:     }
-}
+[; ;PWM.c: 78:     if(BanderaDisY== 0) CoordAntY= CoordAntY-CoordRelatY;
+[e $ ! == _BanderaDisY -> -> 0 `i `ui 380  ]
+[e = _CoordAntY - _CoordAntY -> _CoordRelatY `ui ]
+[e $U 381  ]
+"79
+[; ;PWM.c: 79:     else{
 [e :U 380 ]
+{
 "80
-[; ;PWM.c: 80:     return;
-[e $UE 367  ]
+[; ;PWM.c: 80:         if (BanderaDisY== 1) CoordAntY=CoordAntY+CoordRelatY;
+[e $ ! == _BanderaDisY -> -> 1 `i `ui 382  ]
+[e = _CoordAntY + _CoordAntY -> _CoordRelatY `ui ]
+[e :U 382 ]
 "81
-[; ;PWM.c: 81: }
-[e :UE 367 ]
+[; ;PWM.c: 81:     }
 }
-"82
-[; ;PWM.c: 82: int ContarPulsos(int pasos){
+[e :U 381 ]
+"83
+[; ;PWM.c: 83:     return;
+[e $UE 368  ]
+"84
+[; ;PWM.c: 84: }
+[e :UE 368 ]
+}
+"85
+[; ;PWM.c: 85: int ContarPulsos(int pasos){
 [v _ContarPulsos `(i ~T0 @X0 1 ef1`i ]
 {
 [e :U _ContarPulsos ]
 [v _pasos `i ~T0 @X0 1 r1 ]
 [f ]
-"83
-[; ;PWM.c: 83:     PasosActuales=0;
-[e = _PasosActuales -> -> 0 `i `ui ]
-"84
-[; ;PWM.c: 84:     ons=0;
-[e = _ons -> -> 0 `i `ui ]
-"85
-[; ;PWM.c: 85:     PORTDbits.RD2=0;
-[e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
 "86
-[; ;PWM.c: 86:     PORTDbits.RD3=0;
-[e = . . _PORTDbits 0 3 -> -> 0 `i `uc ]
+[; ;PWM.c: 86:     PasosActuales=0;
+[e = _PasosActuales -> -> 0 `i `ui ]
 "87
-[; ;PWM.c: 87:     while(PasosActuales< pasos)
-[e $U 383  ]
-[e :U 384 ]
+[; ;PWM.c: 87:     ons=0;
+[e = _ons -> -> 0 `i `ui ]
 "88
-[; ;PWM.c: 88:     {
-{
+[; ;PWM.c: 88:     PORTDbits.RD2=0;
+[e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
 "89
-[; ;PWM.c: 89:         if (PORTCbits.CCP1==1) OneShot();
-[e $ ! == -> . . _PORTCbits 1 2 `i -> 1 `i 386  ]
-[e ( _OneShot ..  ]
-[e :U 386 ]
+[; ;PWM.c: 89:     PORTDbits.RD3=0;
+[e = . . _PORTDbits 0 3 -> -> 0 `i `uc ]
 "90
-[; ;PWM.c: 90:         if(ons==1) ResetOneShot();
-[e $ ! == _ons -> -> 1 `i `ui 387  ]
-[e ( _ResetOneShot ..  ]
-[e :U 387 ]
-"91
-[; ;PWM.c: 91:     }
-}
-[e :U 383 ]
-"87
-[; ;PWM.c: 87:     while(PasosActuales< pasos)
-[e $ < _PasosActuales -> _pasos `ui 384  ]
+[; ;PWM.c: 90:     while(PasosActuales< pasos)
+[e $U 384  ]
 [e :U 385 ]
+"91
+[; ;PWM.c: 91:     {
+{
+"92
+[; ;PWM.c: 92:         if (PORTCbits.CCP1==1) OneShot();
+[e $ ! == -> . . _PORTCbits 1 2 `i -> 1 `i 387  ]
+[e ( _OneShot ..  ]
+[e :U 387 ]
 "93
-[; ;PWM.c: 93:     PORTDbits.RD2=1;
-[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
+[; ;PWM.c: 93:         if(ons==1) ResetOneShot();
+[e $ ! == _ons -> -> 1 `i `ui 388  ]
+[e ( _ResetOneShot ..  ]
+[e :U 388 ]
 "94
-[; ;PWM.c: 94:     PORTDbits.RD3=1;
-[e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
-"96
-[; ;PWM.c: 96:     return(PasosActuales);
-[e ) -> _PasosActuales `i ]
-[e $UE 382  ]
-"97
-[; ;PWM.c: 97: }
-[e :UE 382 ]
+[; ;PWM.c: 94:     }
 }
-"98
-[; ;PWM.c: 98: void OneShot(void){
+[e :U 384 ]
+"90
+[; ;PWM.c: 90:     while(PasosActuales< pasos)
+[e $ < _PasosActuales -> _pasos `ui 385  ]
+[e :U 386 ]
+"96
+[; ;PWM.c: 96:     PORTDbits.RD2=1;
+[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
+"97
+[; ;PWM.c: 97:     PORTDbits.RD3=1;
+[e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
+"99
+[; ;PWM.c: 99:     return(PasosActuales);
+[e ) -> _PasosActuales `i ]
+[e $UE 383  ]
+"100
+[; ;PWM.c: 100: }
+[e :UE 383 ]
+}
+"101
+[; ;PWM.c: 101: void OneShot(void){
 [v _OneShot `(v ~T0 @X0 1 ef ]
 {
 [e :U _OneShot ]
 [f ]
-"99
-[; ;PWM.c: 99:     if(ons==1) return;
-[e $ ! == _ons -> -> 1 `i `ui 389  ]
-[e $UE 388  ]
-[e :U 389 ]
-"100
-[; ;PWM.c: 100:     if(PORTCbits.CCP1==1)
-[e $ ! == -> . . _PORTCbits 1 2 `i -> 1 `i 390  ]
-"101
-[; ;PWM.c: 101:     {
-{
 "102
-[; ;PWM.c: 102:         PasosActuales++;
-[e ++ _PasosActuales -> -> 1 `i `ui ]
-"103
-[; ;PWM.c: 103:         ons=1;
-[e = _ons -> -> 1 `i `ui ]
-"104
-[; ;PWM.c: 104:     }
-}
+[; ;PWM.c: 102:     if(ons==1) return;
+[e $ ! == _ons -> -> 1 `i `ui 390  ]
+[e $UE 389  ]
 [e :U 390 ]
+"103
+[; ;PWM.c: 103:     if(PORTCbits.CCP1==1)
+[e $ ! == -> . . _PORTCbits 1 2 `i -> 1 `i 391  ]
+"104
+[; ;PWM.c: 104:     {
+{
 "105
-[; ;PWM.c: 105:     return;
-[e $UE 388  ]
+[; ;PWM.c: 105:         PasosActuales++;
+[e ++ _PasosActuales -> -> 1 `i `ui ]
 "106
-[; ;PWM.c: 106: }
-[e :UE 388 ]
-}
+[; ;PWM.c: 106:         ons=1;
+[e = _ons -> -> 1 `i `ui ]
 "107
-[; ;PWM.c: 107: void ResetOneShot(void){
+[; ;PWM.c: 107:     }
+}
+[e :U 391 ]
+"108
+[; ;PWM.c: 108:     return;
+[e $UE 389  ]
+"109
+[; ;PWM.c: 109: }
+[e :UE 389 ]
+}
+"110
+[; ;PWM.c: 110: void ResetOneShot(void){
 [v _ResetOneShot `(v ~T0 @X0 1 ef ]
 {
 [e :U _ResetOneShot ]
 [f ]
-"108
-[; ;PWM.c: 108:     if(PORTCbits.CCP1==1)return;
-[e $ ! == -> . . _PORTCbits 1 2 `i -> 1 `i 392  ]
-[e $UE 391  ]
-[e :U 392 ]
-"109
-[; ;PWM.c: 109:     if(PORTCbits.CCP1==0)ons=0;
-[e $ ! == -> . . _PORTCbits 1 2 `i -> 0 `i 393  ]
-[e = _ons -> -> 0 `i `ui ]
-[e :U 393 ]
-"110
-[; ;PWM.c: 110:     return;
-[e $UE 391  ]
 "111
-[; ;PWM.c: 111: }
-[e :UE 391 ]
-}
+[; ;PWM.c: 111:     if(PORTCbits.CCP1==1)return;
+[e $ ! == -> . . _PORTCbits 1 2 `i -> 1 `i 393  ]
+[e $UE 392  ]
+[e :U 393 ]
+"112
+[; ;PWM.c: 112:     if(PORTCbits.CCP1==0)ons=0;
+[e $ ! == -> . . _PORTCbits 1 2 `i -> 0 `i 394  ]
+[e = _ons -> -> 0 `i `ui ]
+[e :U 394 ]
 "113
-[; ;PWM.c: 113: void HaltMotors(void)
-[v _HaltMotors `(v ~T0 @X0 1 ef ]
+[; ;PWM.c: 113:     return;
+[e $UE 392  ]
 "114
-[; ;PWM.c: 114: {
-{
-[e :U _HaltMotors ]
-[f ]
-"115
-[; ;PWM.c: 115:     PORTDbits.RD2=1;
-[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
-"116
-[; ;PWM.c: 116:     PORTDbits.RD3=1;
-[e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
-"117
-[; ;PWM.c: 117:     UARTWrite(0x4B);
-[e ( _UARTWrite (1 -> -> 75 `i `uc ]
-"118
-[; ;PWM.c: 118:     TXSTAbits.TXEN = 0;
-[e = . . _TXSTAbits 0 5 -> -> 0 `i `uc ]
-"119
-[; ;PWM.c: 119:     RCSTAbits.CREN = 0;
-[e = . . _RCSTAbits 0 4 -> -> 0 `i `uc ]
-"120
-[; ;PWM.c: 120: }
-[e :UE 394 ]
+[; ;PWM.c: 114: }
+[e :UE 392 ]
 }

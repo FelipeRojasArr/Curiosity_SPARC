@@ -612,11 +612,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./cases.h: 7: char letter;
 [v _letter `uc ~T0 @X0 1 e ]
 "8
-[; ;./cases.h: 8: unsigned short cord_x;
-[v _cord_x `us ~T0 @X0 1 e ]
+[; ;./cases.h: 8: unsigned int cord_x;
+[v _cord_x `ui ~T0 @X0 1 e ]
 "9
-[; ;./cases.h: 9: unsigned short cord_y;
-[v _cord_y `us ~T0 @X0 1 e ]
+[; ;./cases.h: 9: unsigned int cord_y;
+[v _cord_y `ui ~T0 @X0 1 e ]
 "10
 [; ;./cases.h: 10: char Par2;
 [v _Par2 `uc ~T0 @X0 1 e ]
@@ -699,42 +699,72 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x EBTR3 = OFF ]
 "71
 [p x EBTRB = OFF ]
-"12 Interruptions.c
-[; ;Interruptions.c: 12: void interruptsConfiguration()
-[v _interruptsConfiguration `(v ~T0 @X0 1 ef ]
+"12 ./PWM.h
+[; ;./PWM.h: 12:     unsigned int CoordAntX;
+[v _CoordAntX `ui ~T0 @X0 1 e ]
 "13
-[; ;Interruptions.c: 13: {
-{
-[e :U _interruptsConfiguration ]
-[f ]
-"14
-[; ;Interruptions.c: 14:     RCONbits.IPEN = 0;
-[e = . . _RCONbits 5 7 -> -> 0 `i `uc ]
-"15
-[; ;Interruptions.c: 15:     INTCONbits.GIEH = 1;
-[e = . . _INTCONbits 2 2 -> -> 1 `i `uc ]
+[; ;./PWM.h: 13:     unsigned int CoordAntY;
+[v _CoordAntY `ui ~T0 @X0 1 e ]
 "16
-[; ;Interruptions.c: 16:     INTCONbits.INT0IE = 1;
-[e = . . _INTCONbits 0 4 -> -> 1 `i `uc ]
+[; ;./PWM.h: 16:     int CoordRelatX;
+[v _CoordRelatX `i ~T0 @X0 1 e ]
 "17
-[; ;Interruptions.c: 17:     INTCONbits.RBIE = 1;
-[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-"18
-[; ;Interruptions.c: 18:     INTCON2bits.INTEDG0 = 1;
-[e = . . _INTCON2bits 1 6 -> -> 1 `i `uc ]
-"19
-[; ;Interruptions.c: 19:     INTCON2bits.INTEDG1 = 1;
-[e = . . _INTCON2bits 1 5 -> -> 1 `i `uc ]
+[; ;./PWM.h: 17:     int CoordRelatY;
+[v _CoordRelatY `i ~T0 @X0 1 e ]
 "20
-[; ;Interruptions.c: 20:     INTCON2bits.INTEDG2 = 1;
-[e = . . _INTCON2bits 1 4 -> -> 1 `i `uc ]
-"21
-[; ;Interruptions.c: 21:     INTCON3bits.INT2IE = 1;
-[e = . . _INTCON3bits 0 4 -> -> 1 `i `uc ]
-"22
-[; ;Interruptions.c: 22:     INTCON3bits.INT1IE = 1;
-[e = . . _INTCON3bits 0 3 -> -> 1 `i `uc ]
+[; ;./PWM.h: 20:     int pasosRecorridos;
+[v _pasosRecorridos `i ~T0 @X0 1 e ]
+"23
+[; ;./PWM.h: 23:     unsigned int PasosActuales;
+[v _PasosActuales `ui ~T0 @X0 1 e ]
+"24
+[; ;./PWM.h: 24:     unsigned int ons;
+[v _ons `ui ~T0 @X0 1 e ]
+"26
+[; ;./PWM.h: 26:     unsigned int PasosX;
+[v _PasosX `ui ~T0 @X0 1 e ]
+"27
+[; ;./PWM.h: 27:     unsigned int PasosY;
+[v _PasosY `ui ~T0 @X0 1 e ]
 "28
-[; ;Interruptions.c: 28: }
+[; ;./PWM.h: 28:     unsigned int BanderaDisX;
+[v _BanderaDisX `ui ~T0 @X0 1 e ]
+"29
+[; ;./PWM.h: 29:     unsigned int BanderaDisY;
+[v _BanderaDisY `ui ~T0 @X0 1 e ]
+"14 Interruptions.c
+[; ;Interruptions.c: 14: void InterruptionsConfiguration()
+[v _InterruptionsConfiguration `(v ~T0 @X0 1 ef ]
+"15
+[; ;Interruptions.c: 15: {
+{
+[e :U _InterruptionsConfiguration ]
+[f ]
+"16
+[; ;Interruptions.c: 16:     RCONbits.IPEN = 0;
+[e = . . _RCONbits 5 7 -> -> 0 `i `uc ]
+"17
+[; ;Interruptions.c: 17:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+"18
+[; ;Interruptions.c: 18:     INTCONbits.INT0IF = 0;
+[e = . . _INTCONbits 0 1 -> -> 0 `i `uc ]
+"19
+[; ;Interruptions.c: 19:     INTCONbits.INT0IE = 1;
+[e = . . _INTCONbits 0 4 -> -> 1 `i `uc ]
+"21
+[; ;Interruptions.c: 21:     INTCON2bits.INTEDG0 = 1;
+[e = . . _INTCON2bits 1 6 -> -> 1 `i `uc ]
+"22
+[; ;Interruptions.c: 22:     INTCON2bits.INTEDG1 = 1;
+[e = . . _INTCON2bits 1 5 -> -> 1 `i `uc ]
+"25
+[; ;Interruptions.c: 25:     INTCON3bits.INT1IE = 1;
+[e = . . _INTCON3bits 0 3 -> -> 1 `i `uc ]
+"27
+[; ;Interruptions.c: 27:     INTCON2bits.RBPU = 0;
+[e = . . _INTCON2bits 2 3 -> -> 0 `i `uc ]
+"33
+[; ;Interruptions.c: 33: }
 [e :UE 368 ]
 }
