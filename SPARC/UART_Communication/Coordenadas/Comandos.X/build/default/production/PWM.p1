@@ -23,8 +23,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 2736: extern volatile PORTDbits_t PORTDbits __attribute__((address(0xF83)));
 [v _PORTDbits `VS111 ~T0 @X0 0 e@3971 ]
 "3 ./PWM.h
-[; ;./PWM.h: 3: int ContarPulsos(int pasos);
-[v _ContarPulsos `(i ~T0 @X0 0 ef1`i ]
+[; ;./PWM.h: 3: void ContarPulsos(int pasos);
+[v _ContarPulsos `(v ~T0 @X0 0 ef1`i ]
 "2569 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 2569:     struct {
 [s S106 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -711,7 +711,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;PWM.c: 30:     if (CoordAntX==0) CoordRelatX=cord_x;
 [e $ ! == _CoordAntX -> -> 0 `i `ui 369  ]
 [e = _CoordRelatX -> _cord_x `i ]
+<<<<<<< HEAD
 [e $U 370  ]
+=======
+[e $U 369  ]
+"28
+[; ;PWM.c: 28:         else CoordRelatX=cord_x-CoordAntX;
+[e :U 368 ]
+[e = _CoordRelatX -> - _cord_x _CoordAntX `i ]
+[e :U 369 ]
+>>>>>>> master
 "31
 [; ;PWM.c: 31:         else CoordRelatX=cord_x-CoordAntX;
 [e :U 369 ]
@@ -758,20 +767,31 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;PWM.c: 46:     PasosX=CoordRelatX*5;
 [e = _PasosX -> * _CoordRelatX -> 5 `i `ui ]
 "47
+<<<<<<< HEAD
 [; ;PWM.c: 47:     ContarPulsos(PasosX);
 [e ( _ContarPulsos (1 -> _PasosX `i ]
 "50
 [; ;PWM.c: 50:     if(BanderaDisX== 0) CoordAntX= CoordAntX-CoordRelatX;
 [e $ ! == _BanderaDisX -> -> 0 `i `ui 373  ]
+=======
+[; ;PWM.c: 47:     if(BanderaDisX== 0) CoordAntX= CoordAntX-CoordRelatX;
+[e $ ! == _BanderaDisX -> -> 0 `i `ui 372  ]
+>>>>>>> master
 [e = _CoordAntX - _CoordAntX -> _CoordRelatX `ui ]
 [e $U 374  ]
 "51
 [; ;PWM.c: 51:     else{
 [e :U 373 ]
 {
+<<<<<<< HEAD
 "52
 [; ;PWM.c: 52:         if (BanderaDisX== 1) CoordAntX=CoordAntX+CoordRelatX;
 [e $ ! == _BanderaDisX -> -> 1 `i `ui 375  ]
+=======
+"49
+[; ;PWM.c: 49:         if (BanderaDisX== 1) CoordAntX=CoordAntX+CoordRelatX;
+[e $ ! == _BanderaDisX -> -> 1 `i `ui 374  ]
+>>>>>>> master
 [e = _CoordAntX + _CoordAntX -> _CoordRelatX `ui ]
 [e :U 375 ]
 "53
@@ -782,9 +802,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;PWM.c: 59:     if (CoordAntY==0) CoordRelatY=cord_y;
 [e $ ! == _CoordAntY -> -> 0 `i `ui 376  ]
 [e = _CoordRelatY -> _cord_y `i ]
+<<<<<<< HEAD
 [e $U 377  ]
 "60
 [; ;PWM.c: 60:         else CoordRelatY=cord_y-CoordAntY;
+=======
+[e $U 376  ]
+"57
+[; ;PWM.c: 57:         else CoordRelatY=cord_y-CoordAntY;
+[e :U 375 ]
+[e = _CoordRelatY -> - _cord_y _CoordAntY `i ]
+>>>>>>> master
 [e :U 376 ]
 [e = _CoordRelatY -> - _cord_y _CoordAntY `i ]
 [e :U 377 ]
@@ -829,8 +857,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;PWM.c: 74:     PasosY=CoordRelatY*5;
 [e = _PasosY -> * _CoordRelatY -> 5 `i `ui ]
 "75
+<<<<<<< HEAD
 [; ;PWM.c: 75:     ContarPulsos(PasosY);
 [e ( _ContarPulsos (1 -> _PasosY `i ]
+=======
+[; ;PWM.c: 75:     if(BanderaDisY== 0) CoordAntY= CoordAntY-CoordRelatY;
+[e $ ! == _BanderaDisY -> -> 0 `i `ui 379  ]
+[e = _CoordAntY - _CoordAntY -> _CoordRelatY `ui ]
+[e $U 380  ]
+"76
+[; ;PWM.c: 76:     else{
+[e :U 379 ]
+{
+"77
+[; ;PWM.c: 77:         if (BanderaDisY== 1) CoordAntY=CoordAntY+CoordRelatY;
+[e $ ! == _BanderaDisY -> -> 1 `i `ui 381  ]
+[e = _CoordAntY + _CoordAntY -> _CoordRelatY `ui ]
+[e :U 381 ]
+>>>>>>> master
 "78
 [; ;PWM.c: 78:     if(BanderaDisY== 0) CoordAntY= CoordAntY-CoordRelatY;
 [e $ ! == _BanderaDisY -> -> 0 `i `ui 380  ]
@@ -848,6 +892,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "81
 [; ;PWM.c: 81:     }
 }
+<<<<<<< HEAD
 [e :U 381 ]
 "83
 [; ;PWM.c: 83:     return;
@@ -859,6 +904,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "85
 [; ;PWM.c: 85: int ContarPulsos(int pasos){
 [v _ContarPulsos `(i ~T0 @X0 1 ef1`i ]
+=======
+"82
+[; ;PWM.c: 82: void ContarPulsos(int pasos){
+[v _ContarPulsos `(v ~T0 @X0 1 ef1`i ]
+>>>>>>> master
 {
 [e :U _ContarPulsos ]
 [v _pasos `i ~T0 @X0 1 r1 ]
@@ -901,8 +951,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ < _PasosActuales -> _pasos `ui 385  ]
 [e :U 386 ]
 "96
+<<<<<<< HEAD
 [; ;PWM.c: 96:     PORTDbits.RD2=1;
 [e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
+=======
+[; ;PWM.c: 96:     return;
+[e $UE 382  ]
+>>>>>>> master
 "97
 [; ;PWM.c: 97:     PORTDbits.RD3=1;
 [e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]

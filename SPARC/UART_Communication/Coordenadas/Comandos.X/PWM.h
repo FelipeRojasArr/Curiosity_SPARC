@@ -1,6 +1,6 @@
 /*FUNCIONES PWM*/
 void PWM(void);
-int ContarPulsos(int pasos);
+void ContarPulsos(int pasos);
 void OneShot(void);
 void ResetOneShot(void);
 int Movimiento(void);

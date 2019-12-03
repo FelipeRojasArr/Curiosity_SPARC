@@ -82,7 +82,7 @@ void PWM(){
     
     return;
 }
-int ContarPulsos(int pasos){
+void ContarPulsos(int pasos){
     PasosActuales=0;
     ons=0;
     ENABLE_A=0;
@@ -96,7 +96,7 @@ int ContarPulsos(int pasos){
     ENABLE_A=1;
     ENABLE_B=1;
     
-    return(PasosActuales);  
+    return;  
 }
 void OneShot(void){
     if(ons==1) return;

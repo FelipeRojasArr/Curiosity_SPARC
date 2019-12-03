@@ -17,7 +17,7 @@ void __interrupt() INT_ISR(void)
 {
     if(PORTBbits.RB0 == 1)
     {
-        while(INTCONbits.INT0IF == 1)
+        while(INTCON3bits.INT2IF == 1)
         {
             __delay_ms(250);
             UARTErrorR0();
@@ -37,7 +37,7 @@ void __interrupt() INT_ISR(void)
     {
         while(INTCON3bits.INT1IF == 1)
         {
-            UARTErrorR1();      //cAMBIA ESTA FUNCIÓN A LO QUE QUIERAS
+            UARTErrorR1();      //cAMBIA ESTA FUNCIï¿½N A LO QUE QUIERAS
             __delay_ms(250);
             if(PORTBbits.RB1 == 0)
             {
@@ -69,13 +69,14 @@ void main(void) {
     CoordAntY=0;
     ENABLE_A=1;
     ENABLE_B=1;
-    
-    while(1){
+    InicialY();
+    InicialX();
+        
+    while(1){ /*Programa principal*/
         x=1;
-       verification(); 
-       
+       verification();
         Movimiento();
-       
+       /*Imprimir en serial coordenada actualizada*/
         char a[3];
         char b[3];
 

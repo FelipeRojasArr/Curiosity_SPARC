@@ -5869,6 +5869,8 @@ uint8_t click;
 
 
 void Configuracion(void);
+void InicialX(void);
+void InicialY(void);
 # 9 "main.c" 2
 
 # 1 "./Interruptions.h" 1
@@ -5885,7 +5887,7 @@ void buttonInterruptionConfiguration(void);
 # 1 "./PWM.h" 1
 
 void PWM(void);
-int ContarPulsos(int pasos);
+void ContarPulsos(int pasos);
 void OneShot(void);
 void ResetOneShot(void);
 int Movimiento(void);
@@ -5913,6 +5915,7 @@ void HaltMotors(void);
     unsigned int BanderaDisX;
     unsigned int BanderaDisY;
 # 11 "main.c" 2
+<<<<<<< HEAD
 
 
 void UARTErrorR1(void);
@@ -5966,19 +5969,26 @@ void UARTErrorR1()
     UARTWrite(0x65);
 }
 
+=======
+# 33 "main.c"
+>>>>>>> master
 void main(void) {
 
     Configuracion();
+<<<<<<< HEAD
     InterruptionsConfiguration();
     CoordAntX=0;
     CoordAntY=0;
+=======
+>>>>>>> master
     PORTDbits.RD2=1;
     PORTDbits.RD3=1;
+    InicialY();
+    InicialX();
 
     while(1){
         x=1;
        verification();
-
         Movimiento();
 
         char a[3];

@@ -5869,6 +5869,7 @@ uint8_t click;
 
 
 void Configuracion(void);
+<<<<<<< HEAD
 # 9 "coordenadas.c" 2
 
 # 1 "./Interruptions.h" 1
@@ -5907,6 +5908,11 @@ void HaltMotors(void);
 
     unsigned int PasosActuales;
     unsigned int ons;
+=======
+void InicialX(void);
+void InicialY(void);
+# 8 "coordenadas.c" 2
+>>>>>>> master
 
     unsigned int PasosX;
     unsigned int PasosY;

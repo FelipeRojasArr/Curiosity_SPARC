@@ -13,6 +13,7 @@
 
 void InterruptionsConfiguration()
 {
+    INTCONbits.PEIE = ON;
     RCONbits.IPEN = OFF;                //Disables priority
     INTCONbits.GIE = ON;               //All samepriority
     INTCONbits.INT0IF = OFF;          //External interrupt flag for INT0

@@ -5869,8 +5869,14 @@ uint8_t click;
 
 
 void Configuracion(void);
+<<<<<<< HEAD
 # 9 "Interruptions.c" 2
 
+=======
+void InicialX(void);
+void InicialY(void);
+# 10 "Interruptions.c" 2
+>>>>>>> master
 # 1 "./Interruptions.h" 1
 
 
@@ -5918,8 +5924,10 @@ void HaltMotors(void);
 
 void InterruptionsConfiguration()
 {
+    INTCONbits.PEIE = 1;
     RCONbits.IPEN = 0;
     INTCONbits.GIE = 1;
+<<<<<<< HEAD
     INTCONbits.INT0IF = 0;
     INTCONbits.INT0IE = 1;
 
@@ -5928,6 +5936,15 @@ void InterruptionsConfiguration()
 
 
     INTCON3bits.INT1IE = 1;
+=======
+
+    INTCONbits.RBIE = 1;
+
+
+    INTCON2bits.INTEDG2 = 1;
+    INTCON3bits.INT2IE = 1;
+
+>>>>>>> master
 
     INTCON2bits.RBPU = 0;
 

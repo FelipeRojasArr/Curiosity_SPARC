@@ -691,8 +691,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "18
 [; ;Movimiento.c: 18:         PORTDbits.RD7=0;
 [e = . . _PORTDbits 0 7 -> -> 0 `i `uc ]
+<<<<<<< HEAD
 [v F3413 `uc ~T0 @X0 -> 5 `i s ]
 [i F3413
+=======
+[v F3246 `uc ~T0 @X0 -> 5 `i s ]
+[i F3246
+>>>>>>> master
 :U ..
 "19
 [; ;Movimiento.c: 19:         char loquequieras[5]="click";
@@ -704,9 +709,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _loquequieras `uc ~T0 @X0 -> 5 `i a ]
+<<<<<<< HEAD
 [e = _loquequieras F3413 ]
 "20
 [; ;Movimiento.c: 20:        for(int i=0;i<5;i++){
+=======
+[e = _loquequieras F3246 ]
+"16
+[; ;Movimiento.c: 16:        for(int i=0;i<5;i++){
+>>>>>>> master
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -742,8 +753,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "28
 [; ;Movimiento.c: 28:         PORTDbits.RD7=0;
 [e = . . _PORTDbits 0 7 -> -> 0 `i `uc ]
+<<<<<<< HEAD
 [v F3416 `uc ~T0 @X0 -> 5 `i s ]
 [i F3416
+=======
+[v F3249 `uc ~T0 @X0 -> 5 `i s ]
+[i F3249
+>>>>>>> master
 :U ..
 "29
 [; ;Movimiento.c: 29:         char loquequieras2[5]="slide";
@@ -755,9 +771,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _loquequieras2 `uc ~T0 @X0 -> 5 `i a ]
+<<<<<<< HEAD
 [e = _loquequieras2 F3416 ]
 "30
 [; ;Movimiento.c: 30:        for(int i=0;i<5;i++){
+=======
+[e = _loquequieras2 F3249 ]
+"26
+[; ;Movimiento.c: 26:        for(int i=0;i<5;i++){
+>>>>>>> master
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]

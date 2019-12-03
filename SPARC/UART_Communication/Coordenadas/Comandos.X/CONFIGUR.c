@@ -61,3 +61,31 @@ void Configuracion(void) {
      
     return; 
 } 
+void InicialX(void){ /*Movemos x hacia atr�s hasta que llegue a coordenada 0*/
+    /*Direcci�n hacia atr�s*/
+    DIR_A=0;
+    DIR_B=0;
+    /*Encendemos motores mientras la coordenada no sea 0*/    
+    do 
+    {
+    ENABLE_A=1;
+    ENABLE_B=1;
+    }while (CoordAntX!=0);
+    /*Cuando ya lleg�, se apagan motores*/
+    ENABLE_A=0;
+    ENABLE_B=0;
+}
+void InicialY(void){ /*Movemos y hacia atr�s hasta que llegue a coordenada 0*/
+    /*Direcci�n hacia atr�s*/
+    DIR_A=0;
+    DIR_B=1;  
+    /*Encendemos motores mientras la coordenada no sea 0*/
+    do{
+    ENABLE_A=1;
+    ENABLE_B=1;
+    }while (CoordAntY!=0);
+    /*Cuando ya lleg�, se apagan motores*/
+    ENABLE_A=0;
+    ENABLE_B=0;
+    
+}

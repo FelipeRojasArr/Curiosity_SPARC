@@ -5869,6 +5869,7 @@ uint8_t click;
 
 
 void Configuracion(void);
+<<<<<<< HEAD
 # 9 "verification.c" 2
 
 # 1 "./Interruptions.h" 1
@@ -5913,6 +5914,11 @@ void HaltMotors(void);
     unsigned int BanderaDisX;
     unsigned int BanderaDisY;
 # 11 "verification.c" 2
+=======
+void InicialX(void);
+void InicialY(void);
+# 6 "verification.c" 2
+>>>>>>> master
 
 
 void verification(void){

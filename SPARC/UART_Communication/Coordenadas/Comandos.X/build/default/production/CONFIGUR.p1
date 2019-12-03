@@ -85,6 +85,25 @@ Version 4.0 HI-TECH Software Intermediate Code
 "10848
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 10848: extern volatile __bit TMR2ON __attribute__((address(0x7E52)));
 [v _TMR2ON `Vb ~T0 @X0 0 e@32338 ]
+"2711
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 2711:     struct {
+[s S112 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S112 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
+"2721
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 2721:     struct {
+[s S113 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S113 . SPP0 SPP1 SPP2 SPP3 SPP4 SPP5 SPP6 SPP7 ]
+"2731
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 2731:     struct {
+[s S114 :7 `uc 1 :1 `uc 1 ]
+[n S114 . . SS2 ]
+"2710
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 2710: typedef union {
+[u S111 `S112 1 `S113 1 `S114 1 ]
+[n S111 . . . . ]
+"2736
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 2736: extern volatile PORTDbits_t PORTDbits __attribute__((address(0xF83)));
+[v _PORTDbits `VS111 ~T0 @X0 0 e@3971 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -722,12 +741,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 "29
 [; ;./PWM.h: 29:     unsigned int BanderaDisY;
 [v _BanderaDisY `ui ~T0 @X0 1 e ]
+<<<<<<< HEAD
 "14 CONFIGUR.c
 [; ;CONFIGUR.c: 14: void Configuracion(void) {
+=======
+"11 CONFIGUR.c
+[; ;CONFIGUR.c: 11: void Configuracion(void) {
+>>>>>>> master
 [v _Configuracion `(v ~T0 @X0 1 ef ]
 {
 [e :U _Configuracion ]
 [f ]
+<<<<<<< HEAD
 "18
 [; ;CONFIGUR.c: 18:     OSCCON=0x72;
 [e = _OSCCON -> -> 114 `i `uc ]
@@ -802,5 +827,157 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $UE 368  ]
 "63
 [; ;CONFIGUR.c: 63: }
+=======
+"15
+[; ;CONFIGUR.c: 15:     OSCCON=0x72;
+[e = _OSCCON -> -> 114 `i `uc ]
+"19
+[; ;CONFIGUR.c: 19:    CMCON = 0xFF;
+[e = _CMCON -> -> 255 `i `uc ]
+"20
+[; ;CONFIGUR.c: 20:    CVRCONbits.CVREN = 0;
+[e = . . _CVRCONbits 0 4 -> -> 0 `i `uc ]
+"21
+[; ;CONFIGUR.c: 21:    ADCON1 = 0x0F;
+[e = _ADCON1 -> -> 15 `i `uc ]
+"25
+[; ;CONFIGUR.c: 25:    PORTD = 0x00;
+[e = _PORTD -> -> 0 `i `uc ]
+"26
+[; ;CONFIGUR.c: 26:    LATD = 0x00;
+[e = _LATD -> -> 0 `i `uc ]
+"27
+[; ;CONFIGUR.c: 27:    TRISD = 0xF0;
+[e = _TRISD -> -> 240 `i `uc ]
+"29
+[; ;CONFIGUR.c: 29:    PORTC = 0x00;
+[e = _PORTC -> -> 0 `i `uc ]
+"30
+[; ;CONFIGUR.c: 30:    LATC= 0x00;
+[e = _LATC -> -> 0 `i `uc ]
+"31
+[; ;CONFIGUR.c: 31:    TRISC= 0x00;
+[e = _TRISC -> -> 0 `i `uc ]
+"33
+[; ;CONFIGUR.c: 33:    PORTB = 0x00;
+[e = _PORTB -> -> 0 `i `uc ]
+"34
+[; ;CONFIGUR.c: 34:    LATB= 0x00;
+[e = _LATB -> -> 0 `i `uc ]
+"35
+[; ;CONFIGUR.c: 35:    TRISB= 0xFF;
+[e = _TRISB -> -> 255 `i `uc ]
+"39
+[; ;CONFIGUR.c: 39:    UARTConfi(9600);
+[e ( _UARTConfi (1 -> 9600 `i ]
+"40
+[; ;CONFIGUR.c: 40:     TRISC=0X00;
+[e = _TRISC -> -> 0 `i `uc ]
+"44
+[; ;CONFIGUR.c: 44:      PR2 = 0xF9;
+[e = _PR2 -> -> 249 `i `uc ]
+"47
+[; ;CONFIGUR.c: 47:     CCP1CON = 0x0C;
+[e = _CCP1CON -> -> 12 `i `uc ]
+"48
+[; ;CONFIGUR.c: 48:     CCPR1L = 0x7D;
+[e = _CCPR1L -> -> 125 `i `uc ]
+"51
+[; ;CONFIGUR.c: 51:     CCP2CON = 0x0C;
+[e = _CCP2CON -> -> 12 `i `uc ]
+"52
+[; ;CONFIGUR.c: 52:     CCPR2L = 0x7D;
+[e = _CCPR2L -> -> 125 `i `uc ]
+"55
+[; ;CONFIGUR.c: 55:     T2CON = 0x03;
+[e = _T2CON -> -> 3 `i `uc ]
+"56
+[; ;CONFIGUR.c: 56:     TMR2 = 0;
+[e = _TMR2 -> -> 0 `i `uc ]
+"57
+[; ;CONFIGUR.c: 57:     TMR2ON = 1;
+[e = _TMR2ON -> -> 1 `i `b ]
+"59
+[; ;CONFIGUR.c: 59:     return;
+[e $UE 368  ]
+"60
+[; ;CONFIGUR.c: 60: }
+>>>>>>> master
 [e :UE 368 ]
+}
+"61
+[; ;CONFIGUR.c: 61: void InicialX(void){
+[v _InicialX `(v ~T0 @X0 1 ef ]
+{
+[e :U _InicialX ]
+[f ]
+"63
+[; ;CONFIGUR.c: 63:     PORTDbits.RD0=0;
+[e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
+"64
+[; ;CONFIGUR.c: 64:     PORTDbits.RD1=0;
+[e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
+"66
+[; ;CONFIGUR.c: 66:     do
+[e :U 372 ]
+"67
+[; ;CONFIGUR.c: 67:     {
+{
+"68
+[; ;CONFIGUR.c: 68:     PORTDbits.RD2=1;
+[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
+"69
+[; ;CONFIGUR.c: 69:     PORTDbits.RD3=1;
+[e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
+"70
+[; ;CONFIGUR.c: 70:     }while (CoordAntX!=0);
+}
+[e $ != _CoordAntX -> -> 0 `i `ui 372  ]
+[e :U 371 ]
+"72
+[; ;CONFIGUR.c: 72:     PORTDbits.RD2=0;
+[e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
+"73
+[; ;CONFIGUR.c: 73:     PORTDbits.RD3=0;
+[e = . . _PORTDbits 0 3 -> -> 0 `i `uc ]
+"74
+[; ;CONFIGUR.c: 74: }
+[e :UE 369 ]
+}
+"75
+[; ;CONFIGUR.c: 75: void InicialY(void){
+[v _InicialY `(v ~T0 @X0 1 ef ]
+{
+[e :U _InicialY ]
+[f ]
+"77
+[; ;CONFIGUR.c: 77:     PORTDbits.RD0=0;
+[e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
+"78
+[; ;CONFIGUR.c: 78:     PORTDbits.RD1=1;
+[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
+"80
+[; ;CONFIGUR.c: 80:     do{
+[e :U 376 ]
+{
+"81
+[; ;CONFIGUR.c: 81:     PORTDbits.RD2=1;
+[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
+"82
+[; ;CONFIGUR.c: 82:     PORTDbits.RD3=1;
+[e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
+"83
+[; ;CONFIGUR.c: 83:     }while (CoordAntY!=0);
+}
+[e $ != _CoordAntY -> -> 0 `i `ui 376  ]
+[e :U 375 ]
+"85
+[; ;CONFIGUR.c: 85:     PORTDbits.RD2=0;
+[e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
+"86
+[; ;CONFIGUR.c: 86:     PORTDbits.RD3=0;
+[e = . . _PORTDbits 0 3 -> -> 0 `i `uc ]
+"88
+[; ;CONFIGUR.c: 88: }
+[e :UE 373 ]
 }
