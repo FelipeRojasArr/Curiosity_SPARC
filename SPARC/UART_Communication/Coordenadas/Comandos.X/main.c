@@ -44,10 +44,24 @@ void main(void) {
        
         Movimiento();
        
-        CoordAntY = (unsigned char)CoordAntY;
-        CoordAntX = (unsigned char)CoordAntX;
-        UARTWrite(CoordAntX);
-        UARTWrite(CoordAntY);
+        char a[3];
+        char b[3];
+
+        a[0]=(CoordAntX/100)+48;
+        a[1]=((CoordAntX%100)/10)+48;
+        a[2]=((CoordAntX%100)%10)+48;
+
+        b[0]=(CoordAntY/100)+48;
+        b[1]=((CoordAntY%100)/10)+48;
+        b[2]=((CoordAntY%100)%10)+48;
+
+        for(int i=0; i<3; i++){
+
+            UARTWrite(a[i]);
+        }
+        for(int i=0; i<3; i++){
+
+            UARTWrite(b[i]);
+        }
     }
-    
 }

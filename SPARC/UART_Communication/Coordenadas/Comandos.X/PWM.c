@@ -17,65 +17,74 @@
  */
 
 void PWM(void){
-    /*Obtenemos coordenadas relativas*/
-    CoordRelatX=CoordAntX-cord_x;
-    CoordRelatY=CoordAntY-cord_y; 
     
-    /*PWM en X*/
-    pasosRecorridos=PWMx(CoordRelatX);
+    BanderaDisX= POSITIVO;
+    BanderaDisY= POSITIVO;
     
-    /*ACTUALIZAMOS COORDENADA X */      
-    if(CoordRelatX<0) CoordAntX= CoordAntX-pasosRecorridos; //Si la distancia es negativa se resta
-    else{ 
-        if (CoordRelatX>0) CoordAntX=CoordAntX+pasosRecorridos;
-    }
+    // Obtenemos coordenadas relativas //
     
-    /* PWM en Y*/    
-    pasosRecorridos=PWMy(CoordRelatY);
-    
-    /*ACTUALIZAMOS COORDENADA Y */    
-    if(CoordRelatY<0){
-        CoordAntY = CoordAntY-pasosRecorridos; //Si la distancia es negativa se resta
-    }
-    else{ 
-        if (CoordAntY>0) CoordAntY=CoordAntY+pasosRecorridos;// SI es positiva se suma
-    }
-    return;
-}
-
-int PWMx (int distancia){
-    if (distancia<0){
+    /*Si la coordenada X anterior es cero la coordenada deseada es igual a la relativa*/
+    if (CoordAntX==0) CoordRelatX=cord_x;
+        else CoordRelatX=cord_x-CoordAntX;
+        
+    /*Definimos las direcciones de los motores para x*/
+    if (CoordRelatX<0){
         DIR_A=0;
         DIR_B=0;
-        distancia=distancia*(-1);
+        CoordRelatX=CoordRelatX*(-1);
+        BanderaDisX= NEGATIVO;
     }
-    else {
-        DIR_A=1;
-        DIR_B=1;
-    } 
-    int pasos= ContarPulsos(distancia);
-    return(pasos);   
-}
-
-int PWMy (int distancia){
-    if (distancia<0){
+        else {
+            DIR_A=1;
+            DIR_B=1;
+            BanderaDisX= POSITIVO;
+        } 
+        
+    PasosX=CoordRelatX*NUM_PASOS;
+    ContarPulsos(PasosX);
+      
+    /*ACTUALIZAMOS COORDENADA X */      
+    if(BanderaDisX= NEGATIVO) CoordAntX= CoordAntX-CoordRelatX; //Si la distancia es negativa se resta
+    else{ 
+        if (BanderaDisX= POSITIVO) CoordAntX=CoordAntX+CoordRelatX;
+    }
+        
+    //*********************************************
+                         /* Y */
+    
+    /*Si la coordenada Y anterior es cero la coordenada deseada es igual a la relativa*/
+    if (CoordAntY==0) CoordRelatY=cord_y;
+        else CoordRelatY=cord_y-CoordAntY;
+    
+    if (CoordRelatY<0){
         DIR_A=0;
         DIR_B=1;
-        distancia=distancia*(-1);
+        CoordRelatY=CoordRelatY*(-1);
+        BanderaDisY= NEGATIVO;
     }
     else {
         DIR_A=1;
         DIR_B=1;
+         BanderaDisY= POSITIVO;  
      } 
-   int pasos= ContarPulsos(distancia);
-    return(pasos);   
+   
+    PasosY=CoordRelatY*NUM_PASOS;
+    ContarPulsos(PasosY);
+    
+    /*ACTUALIZAMOS COORDENADA Y */    
+    if(BanderaDisY= NEGATIVO) CoordAntY= CoordAntY-CoordRelatY; //Si la distancia es negativa se resta
+    else{ 
+        if (BanderaDisY= POSITIVO) CoordAntY=CoordAntY+CoordRelatY;
+    }
+    
+    return;
 }
 int ContarPulsos(int pasos){
     PasosActuales=0;
     ons=0;
     ENABLE_A=0;
     ENABLE_B=0;
-    while(PasosActuales<= pasos)
+    while(PasosActuales< pasos)
     {
         if (PORTCbits.CCP1==1) OneShot();
         if(ons==1) ResetOneShot();

@@ -1,25 +1,25 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"33 ./cases.h
-[; ;./cases.h: 33: systemState NextState;
-[c E3203 0 1 2 3 4 5 6 .. ]
-[n E3203 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State validate_Actuator_State end_State  ]
-"26
-[; ;./cases.h: 26: uint8_t start(void);
+"32 ./cases.h
+[; ;./cases.h: 32: systemState NextState;
+[c E3203 0 1 2 3 4 5 .. ]
+[n E3203 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
+"25
+[; ;./cases.h: 25: uint8_t start(void);
 [v _start `(uc ~T0 @X0 0 ef ]
-"27
-[; ;./cases.h: 27: uint8_t cmd(void);
+"26
+[; ;./cases.h: 26: uint8_t cmd(void);
 [v _cmd `(uc ~T0 @X0 0 ef ]
-"28
-[; ;./cases.h: 28: uint8_t Par_Validated(void);
+"27
+[; ;./cases.h: 27: uint8_t Par_Validated(void);
 [v _Par_Validated `(uc ~T0 @X0 0 ef ]
-"29
-[; ;./cases.h: 29: uint8_t Ins_Validated(void);
+"28
+[; ;./cases.h: 28: uint8_t Ins_Validated(void);
 [v _Ins_Validated `(uc ~T0 @X0 0 ef ]
-"30
-[; ;./cases.h: 30: uint8_t Coord_Validated(void);
+"29
+[; ;./cases.h: 29: uint8_t Coord_Validated(void);
 [v _Coord_Validated `(uc ~T0 @X0 0 ef ]
-"31
-[; ;./cases.h: 31: void end(void);
+"30
+[; ;./cases.h: 30: void end(void);
 [v _end `(v ~T0 @X0 0 ef ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
@@ -549,24 +549,82 @@ Version 4.0 HI-TECH Software Intermediate Code
 "12
 [; ;./cases.h: 12: int x;
 [v _x `i ~T0 @X0 1 e ]
-"33
-[; ;./cases.h: 33: systemState NextState;
+"32
+[; ;./cases.h: 32: systemState NextState;
 [v _NextState `E3203 ~T0 @X0 1 e ]
-"35
-[; ;./cases.h: 35: uint8_t click;
+"34
+[; ;./cases.h: 34: uint8_t click;
 [v _click `uc ~T0 @X0 1 e ]
-"8 ./Configuracion.h
-[p x PLLDIV = 2 ]
-"9
-[p x FOSC = INTOSCIO_EC ]
-"10
+"17 ./Configuracion.h
+[p x FOSC = INTOSC_EC ]
+"18
+[p x FCMEN = OFF ]
+"19
+[p x IESO = OFF ]
+"22
+[p x PWRT = OFF ]
+"23
+[p x BOR = ON ]
+"24
+[p x BORV = 3 ]
+"25
+[p x VREGEN = OFF ]
+"28
 [p x WDT = OFF ]
-"11
-[p x PBADEN = OFF ]
-"12
-[p x LVP = OFF ]
-"13
+"29
+[p x WDTPS = 32768 ]
+"32
+[p x CCP2MX = ON ]
+"33
+[p x PBADEN = ON ]
+"34
+[p x LPT1OSC = OFF ]
+"35
 [p x MCLRE = OFF ]
+"38
+[p x STVREN = ON ]
+"39
+[p x LVP = OFF ]
+"40
+[p x ICPRT = OFF ]
+"41
+[p x XINST = OFF ]
+"44
+[p x CP0 = OFF ]
+"45
+[p x CP1 = OFF ]
+"46
+[p x CP2 = OFF ]
+"47
+[p x CP3 = OFF ]
+"50
+[p x CPB = OFF ]
+"51
+[p x CPD = OFF ]
+"54
+[p x WRT0 = OFF ]
+"55
+[p x WRT1 = OFF ]
+"56
+[p x WRT2 = OFF ]
+"57
+[p x WRT3 = OFF ]
+"60
+[p x WRTC = OFF ]
+"61
+[p x WRTB = OFF ]
+"62
+[p x WRTD = OFF ]
+"65
+[p x EBTR0 = OFF ]
+"66
+[p x EBTR1 = OFF ]
+"67
+[p x EBTR2 = OFF ]
+"68
+[p x EBTR3 = OFF ]
+"71
+[p x EBTRB = OFF ]
 "8 verification.c
 [; ;verification.c: 8: void verification(void){
 [v _verification `(v ~T0 @X0 1 ef ]
@@ -673,7 +731,7 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> . `E3203 2 `ui 375
  , $ -> . `E3203 3 `ui 376
  , $ -> . `E3203 4 `ui 377
- , $ -> . `E3203 6 `ui 378
+ , $ -> . `E3203 5 `ui 378
  371 ]
 [e :U 371 ]
 "38

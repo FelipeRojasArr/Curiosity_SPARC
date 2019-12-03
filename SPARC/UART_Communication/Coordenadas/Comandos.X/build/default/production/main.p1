@@ -1,21 +1,39 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"33 ./cases.h
-[; ;./cases.h: 33: systemState NextState;
-[c E3375 0 1 2 3 4 5 6 .. ]
-[n E3375 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State validate_Actuator_State end_State  ]
+"32 ./cases.h
+[; ;./cases.h: 32: systemState NextState;
+[c E3375 0 1 2 3 4 5 .. ]
+[n E3375 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
 [p mainexit ]
-"7986 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 7986: extern volatile unsigned char OSCCON __attribute__((address(0xFD3)));
-[v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
-"1 ./UART.h
-[; ;./UART.h: 1: void UARTConfi(int Baud);
-[v _UARTConfi `(v ~T0 @X0 0 ef1`i ]
-"3847 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 3847: extern volatile unsigned char TRISC __attribute__((address(0xF94)));
-[v _TRISC `Vuc ~T0 @X0 0 e@3988 ]
+"74 ./Configuracion.h
+[v _Configuracion `(v ~T0 @X0 0 ef ]
+"2711 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 2711:     struct {
+[s S112 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S112 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
+"2721
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 2721:     struct {
+[s S113 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S113 . SPP0 SPP1 SPP2 SPP3 SPP4 SPP5 SPP6 SPP7 ]
+"2731
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 2731:     struct {
+[s S114 :7 `uc 1 :1 `uc 1 ]
+[n S114 . . SS2 ]
+"2710
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 2710: typedef union {
+[u S111 `S112 1 `S113 1 `S114 1 ]
+[n S111 . . . . ]
+"2736
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 2736: extern volatile PORTDbits_t PORTDbits __attribute__((address(0xF83)));
+[v _PORTDbits `VS111 ~T0 @X0 0 e@3971 ]
 "2 ./cases.h
 [; ;./cases.h: 2: void verification(void);
 [v _verification `(v ~T0 @X0 0 ef ]
+"6 ./PWM.h
+[; ;./PWM.h: 6: int Movimiento(void);
+[v _Movimiento `(i ~T0 @X0 0 ef ]
+"2 ./UART.h
+[; ;./UART.h: 2: void UARTWrite(char data);
+[v _UARTWrite `(v ~T0 @X0 0 ef1`uc ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -544,47 +562,219 @@ Version 4.0 HI-TECH Software Intermediate Code
 "12
 [; ;./cases.h: 12: int x;
 [v _x `i ~T0 @X0 1 e ]
-"33
-[; ;./cases.h: 33: systemState NextState;
+"32
+[; ;./cases.h: 32: systemState NextState;
 [v _NextState `E3375 ~T0 @X0 1 e ]
-"35
-[; ;./cases.h: 35: uint8_t click;
+"34
+[; ;./cases.h: 34: uint8_t click;
 [v _click `uc ~T0 @X0 1 e ]
-"8 ./Configuracion.h
-[p x PLLDIV = 2 ]
-"9
-[p x FOSC = INTOSCIO_EC ]
-"10
+"17 ./Configuracion.h
+[p x FOSC = INTOSC_EC ]
+"18
+[p x FCMEN = OFF ]
+"19
+[p x IESO = OFF ]
+"22
+[p x PWRT = OFF ]
+"23
+[p x BOR = ON ]
+"24
+[p x BORV = 3 ]
+"25
+[p x VREGEN = OFF ]
+"28
 [p x WDT = OFF ]
-"11
-[p x PBADEN = OFF ]
-"12
-[p x LVP = OFF ]
-"13
+"29
+[p x WDTPS = 32768 ]
+"32
+[p x CCP2MX = ON ]
+"33
+[p x PBADEN = ON ]
+"34
+[p x LPT1OSC = OFF ]
+"35
 [p x MCLRE = OFF ]
+"38
+[p x STVREN = ON ]
+"39
+[p x LVP = OFF ]
+"40
+[p x ICPRT = OFF ]
+"41
+[p x XINST = OFF ]
+"44
+[p x CP0 = OFF ]
+"45
+[p x CP1 = OFF ]
+"46
+[p x CP2 = OFF ]
+"47
+[p x CP3 = OFF ]
+"50
+[p x CPB = OFF ]
+"51
+[p x CPD = OFF ]
+"54
+[p x WRT0 = OFF ]
+"55
+[p x WRT1 = OFF ]
+"56
+[p x WRT2 = OFF ]
+"57
+[p x WRT3 = OFF ]
+"60
+[p x WRTC = OFF ]
+"61
+[p x WRTB = OFF ]
+"62
+[p x WRTD = OFF ]
+"65
+[p x EBTR0 = OFF ]
+"66
+[p x EBTR1 = OFF ]
+"67
+[p x EBTR2 = OFF ]
+"68
+[p x EBTR3 = OFF ]
+"71
+[p x EBTRB = OFF ]
+"11 ./PWM.h
+[; ;./PWM.h: 11:     unsigned int CoordAntX;
+[v _CoordAntX `ui ~T0 @X0 1 e ]
+"12
+[; ;./PWM.h: 12:     unsigned int CoordAntY;
+[v _CoordAntY `ui ~T0 @X0 1 e ]
+"15
+[; ;./PWM.h: 15:     int CoordRelatX;
+[v _CoordRelatX `i ~T0 @X0 1 e ]
+"16
+[; ;./PWM.h: 16:     int CoordRelatY;
+[v _CoordRelatY `i ~T0 @X0 1 e ]
+"19
+[; ;./PWM.h: 19:     int pasosRecorridos;
+[v _pasosRecorridos `i ~T0 @X0 1 e ]
+"22
+[; ;./PWM.h: 22:     unsigned int PasosActuales;
+[v _PasosActuales `ui ~T0 @X0 1 e ]
+"23
+[; ;./PWM.h: 23:     unsigned int ons;
+[v _ons `ui ~T0 @X0 1 e ]
+"25
+[; ;./PWM.h: 25:     unsigned int PasosX;
+[v _PasosX `ui ~T0 @X0 1 e ]
+"26
+[; ;./PWM.h: 26:     unsigned int PasosY;
+[v _PasosY `ui ~T0 @X0 1 e ]
+"27
+[; ;./PWM.h: 27:     unsigned int BanderaDisX;
+[v _BanderaDisX `ui ~T0 @X0 1 e ]
+"28
+[; ;./PWM.h: 28:     unsigned int BanderaDisY;
+[v _BanderaDisY `ui ~T0 @X0 1 e ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"12 main.c
-[; ;main.c: 12: void main(void) {
+"34 main.c
+[; ;main.c: 34: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"13
-[; ;main.c: 13:     OSCCON=0x72;
-[e = _OSCCON -> -> 114 `i `uc ]
-"14
-[; ;main.c: 14:     UARTConfi(9600);
-[e ( _UARTConfi (1 -> 9600 `i ]
-"15
-[; ;main.c: 15:     TRISC=0X00;
-[e = _TRISC -> -> 0 `i `uc ]
-"19
-[; ;main.c: 19:     x=1;
+"35
+[; ;main.c: 35:     Configuracion();
+[e ( _Configuracion ..  ]
+"36
+[; ;main.c: 36:     CoordAntX=0;
+[e = _CoordAntX -> -> 0 `i `ui ]
+"37
+[; ;main.c: 37:     CoordAntY=0;
+[e = _CoordAntY -> -> 0 `i `ui ]
+"38
+[; ;main.c: 38:     PORTDbits.RD2=1;
+[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
+"39
+[; ;main.c: 39:     PORTDbits.RD3=1;
+[e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
+"41
+[; ;main.c: 41:     while(1){
+[e :U 370 ]
+{
+"42
+[; ;main.c: 42:         x=1;
 [e = _x -> 1 `i ]
-"20
-[; ;main.c: 20:     verification();
+"43
+[; ;main.c: 43:        verification();
 [e ( _verification ..  ]
-"23
-[; ;main.c: 23: }
+"45
+[; ;main.c: 45:         Movimiento();
+[e ( _Movimiento ..  ]
+"47
+[; ;main.c: 47:         char a[3];
+[v _a `uc ~T0 @X0 -> 3 `i a ]
+"48
+[; ;main.c: 48:         char b[3];
+[v _b `uc ~T0 @X0 -> 3 `i a ]
+"50
+[; ;main.c: 50:         a[0]=(CoordAntX/100)+48;
+[e = *U + &U _a * -> -> -> 0 `i `ui `ux -> -> # *U &U _a `ui `ux -> + / _CoordAntX -> -> 100 `i `ui -> -> 48 `i `ui `uc ]
+"51
+[; ;main.c: 51:         a[1]=((CoordAntX%100)/10)+48;
+[e = *U + &U _a * -> -> -> 1 `i `ui `ux -> -> # *U &U _a `ui `ux -> + / % _CoordAntX -> -> 100 `i `ui -> -> 10 `i `ui -> -> 48 `i `ui `uc ]
+"52
+[; ;main.c: 52:         a[2]=((CoordAntX%100)%10)+48;
+[e = *U + &U _a * -> -> -> 2 `i `ui `ux -> -> # *U &U _a `ui `ux -> + % % _CoordAntX -> -> 100 `i `ui -> -> 10 `i `ui -> -> 48 `i `ui `uc ]
+"54
+[; ;main.c: 54:         b[0]=(CoordAntY/100)+48;
+[e = *U + &U _b * -> -> -> 0 `i `ui `ux -> -> # *U &U _b `ui `ux -> + / _CoordAntY -> -> 100 `i `ui -> -> 48 `i `ui `uc ]
+"55
+[; ;main.c: 55:         b[1]=((CoordAntY%100)/10)+48;
+[e = *U + &U _b * -> -> -> 1 `i `ui `ux -> -> # *U &U _b `ui `ux -> + / % _CoordAntY -> -> 100 `i `ui -> -> 10 `i `ui -> -> 48 `i `ui `uc ]
+"56
+[; ;main.c: 56:         b[2]=((CoordAntY%100)%10)+48;
+[e = *U + &U _b * -> -> -> 2 `i `ui `ux -> -> # *U &U _b `ui `ux -> + % % _CoordAntY -> -> 100 `i `ui -> -> 10 `i `ui -> -> 48 `i `ui `uc ]
+"58
+[; ;main.c: 58:         for(int i=0; i<3; i++){
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $ < _i -> 3 `i 372  ]
+[e $U 373  ]
+[e :U 372 ]
+{
+"60
+[; ;main.c: 60:             UARTWrite(a[i]);
+[e ( _UARTWrite (1 *U + &U _a * -> -> _i `ui `ux -> -> # *U &U _a `ui `ux ]
+"61
+[; ;main.c: 61:         }
+}
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 3 `i 372  ]
+[e :U 373 ]
+}
+"62
+[; ;main.c: 62:         for(int i=0; i<3; i++){
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $ < _i -> 3 `i 375  ]
+[e $U 376  ]
+[e :U 375 ]
+{
+"64
+[; ;main.c: 64:             UARTWrite(b[i]);
+[e ( _UARTWrite (1 *U + &U _b * -> -> _i `ui `ux -> -> # *U &U _b `ui `ux ]
+"65
+[; ;main.c: 65:         }
+}
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 3 `i 375  ]
+[e :U 376 ]
+}
+"66
+[; ;main.c: 66:     }
+}
+[e :U 369 ]
+[e $U 370  ]
+[e :U 371 ]
+"67
+[; ;main.c: 67: }
 [e :UE 368 ]
 }

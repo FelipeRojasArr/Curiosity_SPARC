@@ -3,4 +3,5 @@ Movimiento.c  \
 PWM.h  \
 cases.h  \
 Definiciones.h  \
-Configuracion.h 
+Configuracion.h  \
+UART.h 

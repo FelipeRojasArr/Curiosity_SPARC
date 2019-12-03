@@ -5790,7 +5790,6 @@ typedef enum
  validate_Par_State,
  validate_Instruct_State,
  validate_Coord_State,
- validate_Actuator_State,
  end_State,
 
 }systemState;
@@ -5811,32 +5810,132 @@ uint8_t click;
 # 8 "main.c" 2
 
 # 1 "./Configuracion.h" 1
+# 17 "./Configuracion.h"
+#pragma config FOSC = INTOSC_EC
+#pragma config FCMEN = OFF
+#pragma config IESO = OFF
 
 
+#pragma config PWRT = OFF
+#pragma config BOR = ON
+#pragma config BORV = 3
+#pragma config VREGEN = OFF
 
 
-
-
-
-#pragma config PLLDIV = 2
-#pragma config FOSC = INTOSCIO_EC
 #pragma config WDT = OFF
-#pragma config PBADEN = OFF
-#pragma config LVP = OFF
+#pragma config WDTPS = 32768
+
+
+#pragma config CCP2MX = ON
+#pragma config PBADEN = ON
+#pragma config LPT1OSC = OFF
 #pragma config MCLRE = OFF
+
+
+#pragma config STVREN = ON
+#pragma config LVP = OFF
+#pragma config ICPRT = OFF
+#pragma config XINST = OFF
+
+
+#pragma config CP0 = OFF
+#pragma config CP1 = OFF
+#pragma config CP2 = OFF
+#pragma config CP3 = OFF
+
+
+#pragma config CPB = OFF
+#pragma config CPD = OFF
+
+
+#pragma config WRT0 = OFF
+#pragma config WRT1 = OFF
+#pragma config WRT2 = OFF
+#pragma config WRT3 = OFF
+
+
+#pragma config WRTC = OFF
+#pragma config WRTB = OFF
+#pragma config WRTD = OFF
+
+
+#pragma config EBTR0 = OFF
+#pragma config EBTR1 = OFF
+#pragma config EBTR2 = OFF
+#pragma config EBTR3 = OFF
+
+
+#pragma config EBTRB = OFF
+
+
+void Configuracion(void);
 # 9 "main.c" 2
 
+# 1 "./Interruptions.h" 1
+# 10 "main.c" 2
+
+# 1 "./PWM.h" 1
+
+void PWM(void);
+int ContarPulsos(int pasos);
+void OneShot(void);
+void ResetOneShot(void);
+int Movimiento(void);
 
 
+
+
+    unsigned int CoordAntX;
+    unsigned int CoordAntY;
+
+
+    int CoordRelatX;
+    int CoordRelatY;
+
+
+    int pasosRecorridos;
+
+
+    unsigned int PasosActuales;
+    unsigned int ons;
+
+    unsigned int PasosX;
+    unsigned int PasosY;
+    unsigned int BanderaDisX;
+    unsigned int BanderaDisY;
+# 11 "main.c" 2
+# 34 "main.c"
 void main(void) {
-    OSCCON=0x72;
-    UARTConfi(9600);
-    TRISC=0X00;
+    Configuracion();
+    CoordAntX=0;
+    CoordAntY=0;
+    PORTDbits.RD2=1;
+    PORTDbits.RD3=1;
 
+    while(1){
+        x=1;
+       verification();
 
+        Movimiento();
 
-    x=1;
-    verification();
+        char a[3];
+        char b[3];
 
+        a[0]=(CoordAntX/100)+48;
+        a[1]=((CoordAntX%100)/10)+48;
+        a[2]=((CoordAntX%100)%10)+48;
 
+        b[0]=(CoordAntY/100)+48;
+        b[1]=((CoordAntY%100)/10)+48;
+        b[2]=((CoordAntY%100)%10)+48;
+
+        for(int i=0; i<3; i++){
+
+            UARTWrite(a[i]);
+        }
+        for(int i=0; i<3; i++){
+
+            UARTWrite(b[i]);
+        }
+    }
 }

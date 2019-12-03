@@ -605,18 +605,76 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8893
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"8 ./Configuracion.h
-[p x PLLDIV = 2 ]
-"9
-[p x FOSC = INTOSCIO_EC ]
-"10
+"17 ./Configuracion.h
+[p x FOSC = INTOSC_EC ]
+"18
+[p x FCMEN = OFF ]
+"19
+[p x IESO = OFF ]
+"22
+[p x PWRT = OFF ]
+"23
+[p x BOR = ON ]
+"24
+[p x BORV = 3 ]
+"25
+[p x VREGEN = OFF ]
+"28
 [p x WDT = OFF ]
-"11
-[p x PBADEN = OFF ]
-"12
-[p x LVP = OFF ]
-"13
+"29
+[p x WDTPS = 32768 ]
+"32
+[p x CCP2MX = ON ]
+"33
+[p x PBADEN = ON ]
+"34
+[p x LPT1OSC = OFF ]
+"35
 [p x MCLRE = OFF ]
+"38
+[p x STVREN = ON ]
+"39
+[p x LVP = OFF ]
+"40
+[p x ICPRT = OFF ]
+"41
+[p x XINST = OFF ]
+"44
+[p x CP0 = OFF ]
+"45
+[p x CP1 = OFF ]
+"46
+[p x CP2 = OFF ]
+"47
+[p x CP3 = OFF ]
+"50
+[p x CPB = OFF ]
+"51
+[p x CPD = OFF ]
+"54
+[p x WRT0 = OFF ]
+"55
+[p x WRT1 = OFF ]
+"56
+[p x WRT2 = OFF ]
+"57
+[p x WRT3 = OFF ]
+"60
+[p x WRTC = OFF ]
+"61
+[p x WRTB = OFF ]
+"62
+[p x WRTD = OFF ]
+"65
+[p x EBTR0 = OFF ]
+"66
+[p x EBTR1 = OFF ]
+"67
+[p x EBTR2 = OFF ]
+"68
+[p x EBTR3 = OFF ]
+"71
+[p x EBTRB = OFF ]
 "7 UART.c
 [; ;UART.c: 7: void UARTConfi(int BAUD){
 [v _UARTConfi `(v ~T0 @X0 1 ef1`i ]

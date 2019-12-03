@@ -1,7 +1,5 @@
 /*FUNCIONES PWM*/
 void PWM(void);
-int PWMx (int distancia);
-int PWMy (int distancia);
 int ContarPulsos(int pasos);
 void OneShot(void);
 void ResetOneShot(void);
@@ -23,3 +21,8 @@ int Movimiento(void);
      /*Pasos actuales*/
     unsigned int PasosActuales;
     unsigned int ons;
+    /*extras*/
+    unsigned int PasosX;
+    unsigned int PasosY;
+    unsigned int BanderaDisX;
+    unsigned int BanderaDisY;

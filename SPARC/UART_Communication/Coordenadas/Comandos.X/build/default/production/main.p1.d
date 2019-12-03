@@ -3,4 +3,6 @@ main.c  \
 UART.h  \
 cases.h  \
 Definiciones.h  \
-Configuracion.h 
+Configuracion.h  \
+Interruptions.h  \
+PWM.h 

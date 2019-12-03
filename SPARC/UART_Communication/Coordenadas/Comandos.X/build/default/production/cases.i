@@ -5789,7 +5789,6 @@ typedef enum
  validate_Par_State,
  validate_Instruct_State,
  validate_Coord_State,
- validate_Actuator_State,
  end_State,
 
 }systemState;
@@ -5810,19 +5809,65 @@ uint8_t click;
 # 7 "cases.c" 2
 
 # 1 "./Configuracion.h" 1
+# 17 "./Configuracion.h"
+#pragma config FOSC = INTOSC_EC
+#pragma config FCMEN = OFF
+#pragma config IESO = OFF
 
 
+#pragma config PWRT = OFF
+#pragma config BOR = ON
+#pragma config BORV = 3
+#pragma config VREGEN = OFF
 
 
-
-
-
-#pragma config PLLDIV = 2
-#pragma config FOSC = INTOSCIO_EC
 #pragma config WDT = OFF
-#pragma config PBADEN = OFF
-#pragma config LVP = OFF
+#pragma config WDTPS = 32768
+
+
+#pragma config CCP2MX = ON
+#pragma config PBADEN = ON
+#pragma config LPT1OSC = OFF
 #pragma config MCLRE = OFF
+
+
+#pragma config STVREN = ON
+#pragma config LVP = OFF
+#pragma config ICPRT = OFF
+#pragma config XINST = OFF
+
+
+#pragma config CP0 = OFF
+#pragma config CP1 = OFF
+#pragma config CP2 = OFF
+#pragma config CP3 = OFF
+
+
+#pragma config CPB = OFF
+#pragma config CPD = OFF
+
+
+#pragma config WRT0 = OFF
+#pragma config WRT1 = OFF
+#pragma config WRT2 = OFF
+#pragma config WRT3 = OFF
+
+
+#pragma config WRTC = OFF
+#pragma config WRTB = OFF
+#pragma config WRTD = OFF
+
+
+#pragma config EBTR0 = OFF
+#pragma config EBTR1 = OFF
+#pragma config EBTR2 = OFF
+#pragma config EBTR3 = OFF
+
+
+#pragma config EBTRB = OFF
+
+
+void Configuracion(void);
 # 8 "cases.c" 2
 
 
@@ -5850,14 +5895,12 @@ uint8_t cmd(){
         UARTWrite(e_c[i]);
     }
     coord(&Par1,&letter,&cord_x, &cord_y, &Par2);
-    PORTC =0Xff;
     return validate_Par_State;
 }
 
 uint8_t Par_Validated(){
     PORTC=0x00;
     if(Par1==0X3C && Par2==0x3E){
-        PORTC=0X02;
         return validate_Instruct_State;
     }
     else{
@@ -5865,7 +5908,6 @@ uint8_t Par_Validated(){
         for(int i=0;i<5;i++){
             UARTWrite(Error[i]);
         }
-        PORTC= 0X04;
         return wait_cmd_State;
     }
 }

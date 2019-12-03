@@ -1,4 +1,4 @@
-# 1 "coordenadas.c"
+# 1 "Interruptions.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,7 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "coordenadas.c" 2
+# 1 "Interruptions.c" 2
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic18f4550.h" 1 3
 # 44 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic18f4550.h" 3
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\__at.h" 1 3
@@ -5462,8 +5462,7 @@ extern volatile __bit nW __attribute__((address(0x7E3A)));
 
 
 extern volatile __bit nWRITE __attribute__((address(0x7E3A)));
-# 1 "coordenadas.c" 2
-
+# 2 "Interruptions.c" 2
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -5618,8 +5617,63 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 32 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 2 3
-# 2 "coordenadas.c" 2
+# 3 "Interruptions.c" 2
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\string.h" 1 3
+# 25 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\string.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 411 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct __locale_struct * locale_t;
+# 25 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\string.h" 2 3
 
+
+void *memcpy (void *restrict, const void *restrict, size_t);
+void *memmove (void *, const void *, size_t);
+void *memset (void *, int, size_t);
+int memcmp (const void *, const void *, size_t);
+void *memchr (const void *, int, size_t);
+
+char *strcpy (char *restrict, const char *restrict);
+char *strncpy (char *restrict, const char *restrict, size_t);
+
+char *strcat (char *restrict, const char *restrict);
+char *strncat (char *restrict, const char *restrict, size_t);
+
+int strcmp (const char *, const char *);
+int strncmp (const char *, const char *, size_t);
+
+int strcoll (const char *, const char *);
+size_t strxfrm (char *restrict, const char *restrict, size_t);
+
+char *strchr (const char *, int);
+char *strrchr (const char *, int);
+
+size_t strcspn (const char *, const char *);
+size_t strspn (const char *, const char *);
+char *strpbrk (const char *, const char *);
+char *strstr (const char *, const char *);
+char *strtok (char *restrict, const char *restrict);
+
+size_t strlen (const char *);
+
+char *strerror (int);
+# 65 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\string.h" 3
+char *strtok_r (char *restrict, const char *restrict, char **restrict);
+int strerror_r (int, char *, size_t);
+char *stpcpy(char *restrict, const char *restrict);
+char *stpncpy(char *restrict, const char *restrict, size_t);
+size_t strnlen (const char *, size_t);
+char *strdup (const char *);
+char *strndup (const char *, size_t);
+char *strsignal(int);
+char *strerror_l (int, locale_t);
+int strcoll_l (const char *, const char *, locale_t);
+size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
+
+
+
+
+void *memccpy (void *restrict, const void *restrict, int, size_t);
+# 4 "Interruptions.c" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 1 3
 # 22 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 3
@@ -5704,14 +5758,12 @@ typedef int32_t int_fast32_t;
 typedef uint32_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 139 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 2 3
-# 4 "coordenadas.c" 2
-
+# 6 "Interruptions.c" 2
 # 1 "./UART.h" 1
 void UARTConfi(int Baud);
 void UARTWrite(char data);
 char UARTRead(void);
-# 5 "coordenadas.c" 2
-
+# 7 "Interruptions.c" 2
 # 1 "./cases.h" 1
 
 void verification(void);
@@ -5747,11 +5799,9 @@ void end(void);
 systemState NextState;
 
 uint8_t click;
-# 6 "coordenadas.c" 2
-
+# 8 "Interruptions.c" 2
 # 1 "./Definiciones.h" 1
-# 7 "coordenadas.c" 2
-
+# 9 "Interruptions.c" 2
 # 1 "./Configuracion.h" 1
 # 17 "./Configuracion.h"
 #pragma config FOSC = INTOSC_EC
@@ -5812,23 +5862,24 @@ uint8_t click;
 
 
 void Configuracion(void);
-# 8 "coordenadas.c" 2
+# 10 "Interruptions.c" 2
+# 1 "./Interruptions.h" 1
+# 11 "Interruptions.c" 2
+
+void interruptsConfiguration()
+{
+    RCONbits.IPEN = 0;
+    INTCONbits.GIEH = 1;
+    INTCONbits.INT0IE = 1;
+    INTCONbits.RBIE = 1;
+    INTCON2bits.INTEDG0 = 1;
+    INTCON2bits.INTEDG1 = 1;
+    INTCON2bits.INTEDG2 = 1;
+    INTCON3bits.INT2IE = 1;
+    INTCON3bits.INT1IE = 1;
 
 
 
 
-int coord(char* P1, char*L, uint16_t* x , uint16_t* y , char*P2){
-  char buffer [9];
-        char read;
-
-        for(int i=0; i<=8; i++){
-            read= UARTRead();
-            buffer[i]=read;
-        }
-        *P1= buffer[0];
-        *L= buffer[1];
-  *x = 1*(buffer[4]-48) + 10*(buffer[3]-48) + 100*(buffer[2]-48);
-  *y = 1*(buffer[7]-48) + 10*(buffer[6]-48) + 100*(buffer[5]-48);
-  *P2= buffer[8];
 
 }

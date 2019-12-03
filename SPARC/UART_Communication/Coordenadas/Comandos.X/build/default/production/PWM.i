@@ -5467,8 +5467,6 @@ extern volatile __bit nWRITE __attribute__((address(0x7E3A)));
 # 1 "./PWM.h" 1
 
 void PWM(void);
-int PWMx (int distancia);
-int PWMy (int distancia);
 int ContarPulsos(int pasos);
 void OneShot(void);
 void ResetOneShot(void);
@@ -5490,6 +5488,11 @@ int Movimiento(void);
 
     unsigned int PasosActuales;
     unsigned int ons;
+
+    unsigned int PasosX;
+    unsigned int PasosY;
+    unsigned int BanderaDisX;
+    unsigned int BanderaDisY;
 # 2 "PWM.c" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 1 3
@@ -5753,7 +5756,6 @@ typedef enum
  validate_Par_State,
  validate_Instruct_State,
  validate_Coord_State,
- validate_Actuator_State,
  end_State,
 
 }systemState;
@@ -5774,86 +5776,150 @@ uint8_t click;
 # 5 "PWM.c" 2
 
 # 1 "./Configuracion.h" 1
+# 17 "./Configuracion.h"
+#pragma config FOSC = INTOSC_EC
+#pragma config FCMEN = OFF
+#pragma config IESO = OFF
 
 
+#pragma config PWRT = OFF
+#pragma config BOR = ON
+#pragma config BORV = 3
+#pragma config VREGEN = OFF
 
 
-
-
-
-#pragma config PLLDIV = 2
-#pragma config FOSC = INTOSCIO_EC
 #pragma config WDT = OFF
-#pragma config PBADEN = OFF
-#pragma config LVP = OFF
+#pragma config WDTPS = 32768
+
+
+#pragma config CCP2MX = ON
+#pragma config PBADEN = ON
+#pragma config LPT1OSC = OFF
 #pragma config MCLRE = OFF
+
+
+#pragma config STVREN = ON
+#pragma config LVP = OFF
+#pragma config ICPRT = OFF
+#pragma config XINST = OFF
+
+
+#pragma config CP0 = OFF
+#pragma config CP1 = OFF
+#pragma config CP2 = OFF
+#pragma config CP3 = OFF
+
+
+#pragma config CPB = OFF
+#pragma config CPD = OFF
+
+
+#pragma config WRT0 = OFF
+#pragma config WRT1 = OFF
+#pragma config WRT2 = OFF
+#pragma config WRT3 = OFF
+
+
+#pragma config WRTC = OFF
+#pragma config WRTB = OFF
+#pragma config WRTD = OFF
+
+
+#pragma config EBTR0 = OFF
+#pragma config EBTR1 = OFF
+#pragma config EBTR2 = OFF
+#pragma config EBTR3 = OFF
+
+
+#pragma config EBTRB = OFF
+
+
+void Configuracion(void);
 # 6 "PWM.c" 2
-# 17 "PWM.c"
+
+# 1 "./UART.h" 1
+void UARTConfi(int Baud);
+void UARTWrite(char data);
+char UARTRead(void);
+# 7 "PWM.c" 2
+# 19 "PWM.c"
 void PWM(void){
 
-    CoordRelatX=CoordAntX-cord_x;
-    CoordRelatX=CoordAntX-cord_x;
+    BanderaDisX= 1;
+    BanderaDisY= 1;
 
 
-    pasosRecorridos=PWMx(CoordRelatX);
 
 
-    if(CoordRelatX<0) CoordAntX= CoordAntX-pasosRecorridos;
-    else{
-        if (CoordRelatX>0) CoordAntX=CoordAntX+pasosRecorridos;
-    }
+    if (CoordAntX==0) CoordRelatX=cord_x;
+        else CoordRelatX=cord_x-CoordAntX;
 
 
-    pasosRecorridos=PWMy(CoordRelatY);
-
-
-    if(CoordRelatY<0){
-        CoordAntY = CoordAntY-pasosRecorridos;
-    }
-    else{
-        if (CoordAntY>0) CoordAntY=CoordAntY+pasosRecorridos;
-    }
-    return;
-}
-
-int PWMx (int distancia){
-    if (distancia<0){
+    if (CoordRelatX<0){
         PORTDbits.RD0=0;
         PORTDbits.RD1=0;
-        distancia=distancia*(-1);
+        CoordRelatX=CoordRelatX*(-1);
+        BanderaDisX= 0;
     }
-    else {
-        PORTDbits.RD0=1;
-        PORTDbits.RD1=1;
-    }
-    int pasos= ContarPulsos(distancia);
-    return(pasos);
-}
+        else {
+            PORTDbits.RD0=1;
+            PORTDbits.RD1=1;
+            BanderaDisX= 1;
+        }
 
-int PWMy (int distancia){
-    if (distancia<0){
+    PasosX=CoordRelatX*5;
+    ContarPulsos(PasosX);
+
+
+    if(BanderaDisX= 0) CoordAntX= CoordAntX-CoordRelatX;
+    else{
+        if (BanderaDisX= 1) CoordAntX=CoordAntX+CoordRelatX;
+    }
+
+
+
+
+
+    if (CoordAntY==0) CoordRelatY=cord_y;
+        else CoordRelatY=cord_y-CoordAntY;
+
+    if (CoordRelatY<0){
         PORTDbits.RD0=0;
         PORTDbits.RD1=1;
-        distancia=distancia*(-1);
+        CoordRelatY=CoordRelatY*(-1);
+        BanderaDisY= 0;
     }
     else {
         PORTDbits.RD0=1;
         PORTDbits.RD1=1;
+         BanderaDisY= 1;
+     }
+
+    PasosY=CoordRelatY*5;
+    ContarPulsos(PasosY);
+
+
+    if(BanderaDisY= 0) CoordAntY= CoordAntY-CoordRelatY;
+    else{
+        if (BanderaDisY= 1) CoordAntY=CoordAntY+CoordRelatY;
     }
-   int pasos= ContarPulsos(distancia);
-    return(pasos);
+
+    return;
 }
 int ContarPulsos(int pasos){
     PasosActuales=0;
     ons=0;
     PORTDbits.RD2=0;
-    while(PasosActuales<= pasos)
+    PORTDbits.RD3=0;
+    while(PasosActuales< pasos)
     {
         if (PORTCbits.CCP1==1) OneShot();
         if(ons==1) ResetOneShot();
     }
 
     PORTDbits.RD2=1;
+    PORTDbits.RD3=1;
+
     return(PasosActuales);
 }
 void OneShot(void){
