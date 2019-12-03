@@ -6,6 +6,7 @@
 #include "cases.h" 
 #include "Definiciones.h" 
 #include "Configuracion.h" 
+#include "PWM.h"
  
 void Configuracion(void) { 
      
@@ -57,3 +58,31 @@ void Configuracion(void) {
      
     return; 
 } 
+void InicialX(void){ /*Movemos x hacia atrás hasta que llegue a coordenada 0*/
+    /*Dirección hacia atrás*/
+    DIR_A=0;
+    DIR_B=0;
+    /*Encendemos motores mientras la coordenada no sea 0*/    
+    do 
+    {
+    ENABLE_A=1;
+    ENABLE_B=1;
+    }while (CoordAntX!=0);
+    /*Cuando ya llegó, se apagan motores*/
+    ENABLE_A=0;
+    ENABLE_B=0;
+}
+void InicialY(void){ /*Movemos y hacia atrás hasta que llegue a coordenada 0*/
+    /*Dirección hacia atrás*/
+    DIR_A=0;
+    DIR_B=1;  
+    /*Encendemos motores mientras la coordenada no sea 0*/
+    do{
+    ENABLE_A=1;
+    ENABLE_B=1;
+    }while (CoordAntY!=0);
+    /*Cuando ya llegó, se apagan motores*/
+    ENABLE_A=0;
+    ENABLE_B=0;
+    
+}

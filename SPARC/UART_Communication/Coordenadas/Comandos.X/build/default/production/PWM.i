@@ -5467,7 +5467,7 @@ extern volatile __bit nWRITE __attribute__((address(0x7E3A)));
 # 1 "./PWM.h" 1
 
 void PWM(void);
-int ContarPulsos(int pasos);
+void ContarPulsos(int pasos);
 void OneShot(void);
 void ResetOneShot(void);
 int Movimiento(void);
@@ -5744,8 +5744,8 @@ int coord(char* P1, char* L, unsigned short* x, unsigned short* y, char* P2);
 
 char Par1;
 char letter;
-unsigned short cord_x;
-unsigned short cord_y;
+unsigned int cord_x;
+unsigned int cord_y;
 char Par2;
 
 int x;
@@ -5836,6 +5836,8 @@ uint8_t click;
 
 
 void Configuracion(void);
+void InicialX(void);
+void InicialY(void);
 # 6 "PWM.c" 2
 
 # 1 "./UART.h" 1
@@ -5872,9 +5874,9 @@ void PWM(void){
     ContarPulsos(PasosX);
 
 
-    if(BanderaDisX= 0) CoordAntX= CoordAntX-CoordRelatX;
+    if(BanderaDisX== 0) CoordAntX= CoordAntX-CoordRelatX;
     else{
-        if (BanderaDisX= 1) CoordAntX=CoordAntX+CoordRelatX;
+        if (BanderaDisX== 1) CoordAntX=CoordAntX+CoordRelatX;
     }
 
 
@@ -5900,14 +5902,14 @@ void PWM(void){
     ContarPulsos(PasosY);
 
 
-    if(BanderaDisY= 0) CoordAntY= CoordAntY-CoordRelatY;
+    if(BanderaDisY== 0) CoordAntY= CoordAntY-CoordRelatY;
     else{
-        if (BanderaDisY= 1) CoordAntY=CoordAntY+CoordRelatY;
+        if (BanderaDisY== 1) CoordAntY=CoordAntY+CoordRelatY;
     }
 
     return;
 }
-int ContarPulsos(int pasos){
+void ContarPulsos(int pasos){
     PasosActuales=0;
     ons=0;
     PORTDbits.RD2=0;
@@ -5921,7 +5923,7 @@ int ContarPulsos(int pasos){
     PORTDbits.RD2=1;
     PORTDbits.RD3=1;
 
-    return(PasosActuales);
+    return;
 }
 void OneShot(void){
     if(ons==1) return;

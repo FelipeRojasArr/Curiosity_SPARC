@@ -5777,8 +5777,8 @@ int coord(char* P1, char* L, unsigned short* x, unsigned short* y, char* P2);
 
 char Par1;
 char letter;
-unsigned short cord_x;
-unsigned short cord_y;
+unsigned int cord_x;
+unsigned int cord_y;
 char Par2;
 
 int x;
@@ -5869,6 +5869,8 @@ uint8_t click;
 
 
 void Configuracion(void);
+void InicialX(void);
+void InicialY(void);
 # 9 "main.c" 2
 
 # 1 "./Interruptions.h" 1
@@ -5877,7 +5879,7 @@ void Configuracion(void);
 # 1 "./PWM.h" 1
 
 void PWM(void);
-int ContarPulsos(int pasos);
+void ContarPulsos(int pasos);
 void OneShot(void);
 void ResetOneShot(void);
 int Movimiento(void);
@@ -5905,18 +5907,17 @@ void HaltMotors(void);
     unsigned int BanderaDisX;
     unsigned int BanderaDisY;
 # 11 "main.c" 2
-# 34 "main.c"
+# 33 "main.c"
 void main(void) {
     Configuracion();
-    CoordAntX=0;
-    CoordAntY=0;
     PORTDbits.RD2=1;
     PORTDbits.RD3=1;
+    InicialY();
+    InicialX();
 
     while(1){
         x=1;
        verification();
-
         Movimiento();
 
         char a[3];

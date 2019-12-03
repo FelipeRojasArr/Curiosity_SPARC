@@ -5467,7 +5467,7 @@ extern volatile __bit nWRITE __attribute__((address(0x7E3A)));
 # 1 "./PWM.h" 1
 
 void PWM(void);
-int ContarPulsos(int pasos);
+void ContarPulsos(int pasos);
 void OneShot(void);
 void ResetOneShot(void);
 int Movimiento(void);
@@ -5744,8 +5744,8 @@ int coord(char* P1, char* L, unsigned short* x, unsigned short* y, char* P2);
 
 char Par1;
 char letter;
-unsigned short cord_x;
-unsigned short cord_y;
+unsigned int cord_x;
+unsigned int cord_y;
 char Par2;
 
 int x;
@@ -5836,6 +5836,8 @@ uint8_t click;
 
 
 void Configuracion(void);
+void InicialX(void);
+void InicialY(void);
 # 6 "Movimiento.c" 2
 
 # 1 "./UART.h" 1

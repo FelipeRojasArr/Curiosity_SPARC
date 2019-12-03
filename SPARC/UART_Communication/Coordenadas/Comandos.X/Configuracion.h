@@ -72,3 +72,5 @@
 
 
 void Configuracion(void);
+void InicialX(void);
+void InicialY(void);

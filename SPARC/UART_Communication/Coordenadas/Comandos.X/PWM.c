@@ -44,9 +44,9 @@ void PWM(void){
     ContarPulsos(PasosX);
       
     /*ACTUALIZAMOS COORDENADA X */      
-    if(BanderaDisX= NEGATIVO) CoordAntX= CoordAntX-CoordRelatX; //Si la distancia es negativa se resta
+    if(BanderaDisX== NEGATIVO) CoordAntX= CoordAntX-CoordRelatX; //Si la distancia es negativa se resta
     else{ 
-        if (BanderaDisX= POSITIVO) CoordAntX=CoordAntX+CoordRelatX;
+        if (BanderaDisX== POSITIVO) CoordAntX=CoordAntX+CoordRelatX;
     }
         
     //*********************************************
@@ -72,14 +72,14 @@ void PWM(void){
     ContarPulsos(PasosY);
     
     /*ACTUALIZAMOS COORDENADA Y */    
-    if(BanderaDisY= NEGATIVO) CoordAntY= CoordAntY-CoordRelatY; //Si la distancia es negativa se resta
+    if(BanderaDisY== NEGATIVO) CoordAntY= CoordAntY-CoordRelatY; //Si la distancia es negativa se resta
     else{ 
-        if (BanderaDisY= POSITIVO) CoordAntY=CoordAntY+CoordRelatY;
+        if (BanderaDisY== POSITIVO) CoordAntY=CoordAntY+CoordRelatY;
     }
     
     return;
 }
-int ContarPulsos(int pasos){
+void ContarPulsos(int pasos){
     PasosActuales=0;
     ons=0;
     ENABLE_A=0;
@@ -93,7 +93,7 @@ int ContarPulsos(int pasos){
     ENABLE_A=1;
     ENABLE_B=1;
     
-    return(PasosActuales);  
+    return;  
 }
 void OneShot(void){
     if(ons==1) return;

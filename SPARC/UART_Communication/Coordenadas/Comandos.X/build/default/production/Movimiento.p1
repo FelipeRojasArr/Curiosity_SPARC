@@ -582,11 +582,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./cases.h: 7: char letter;
 [v _letter `uc ~T0 @X0 1 e ]
 "8
-[; ;./cases.h: 8: unsigned short cord_x;
-[v _cord_x `us ~T0 @X0 1 e ]
+[; ;./cases.h: 8: unsigned int cord_x;
+[v _cord_x `ui ~T0 @X0 1 e ]
 "9
-[; ;./cases.h: 9: unsigned short cord_y;
-[v _cord_y `us ~T0 @X0 1 e ]
+[; ;./cases.h: 9: unsigned int cord_y;
+[v _cord_y `ui ~T0 @X0 1 e ]
 "10
 [; ;./cases.h: 10: char Par2;
 [v _Par2 `uc ~T0 @X0 1 e ]
@@ -691,8 +691,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "14
 [; ;Movimiento.c: 14:         PORTDbits.RD7=0;
 [e = . . _PORTDbits 0 7 -> -> 0 `i `uc ]
-[v F3244 `uc ~T0 @X0 -> 5 `i s ]
-[i F3244
+[v F3246 `uc ~T0 @X0 -> 5 `i s ]
+[i F3246
 :U ..
 "15
 [; ;Movimiento.c: 15:         char loquequieras[5]="click";
@@ -704,7 +704,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _loquequieras `uc ~T0 @X0 -> 5 `i a ]
-[e = _loquequieras F3244 ]
+[e = _loquequieras F3246 ]
 "16
 [; ;Movimiento.c: 16:        for(int i=0;i<5;i++){
 {
@@ -742,8 +742,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "24
 [; ;Movimiento.c: 24:         PORTDbits.RD7=0;
 [e = . . _PORTDbits 0 7 -> -> 0 `i `uc ]
-[v F3247 `uc ~T0 @X0 -> 5 `i s ]
-[i F3247
+[v F3249 `uc ~T0 @X0 -> 5 `i s ]
+[i F3249
 :U ..
 "25
 [; ;Movimiento.c: 25:         char loquequieras2[5]="slide";
@@ -755,7 +755,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _loquequieras2 `uc ~T0 @X0 -> 5 `i a ]
-[e = _loquequieras2 F3247 ]
+[e = _loquequieras2 F3249 ]
 "26
 [; ;Movimiento.c: 26:        for(int i=0;i<5;i++){
 {

@@ -529,11 +529,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./cases.h: 7: char letter;
 [v _letter `uc ~T0 @X0 1 e ]
 "8
-[; ;./cases.h: 8: unsigned short cord_x;
-[v _cord_x `us ~T0 @X0 1 e ]
+[; ;./cases.h: 8: unsigned int cord_x;
+[v _cord_x `ui ~T0 @X0 1 e ]
 "9
-[; ;./cases.h: 9: unsigned short cord_y;
-[v _cord_y `us ~T0 @X0 1 e ]
+[; ;./cases.h: 9: unsigned int cord_y;
+[v _cord_y `ui ~T0 @X0 1 e ]
 "10
 [; ;./cases.h: 10: char Par2;
 [v _Par2 `uc ~T0 @X0 1 e ]
@@ -751,7 +751,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 "33
 [; ;cases.c: 33:     coord(&Par1,&letter,&cord_x, &cord_y, &Par2);
-[e ( _coord (4 , , , , &U _Par1 &U _letter &U _cord_x &U _cord_y &U _Par2 ]
+[e ( _coord (4 , , , , &U _Par1 &U _letter -> &U _cord_x `*us -> &U _cord_y `*us &U _Par2 ]
 "34
 [; ;cases.c: 34:     return validate_Par_State;
 [e ) -> . `E3375 2 `uc ]
@@ -918,7 +918,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _PORTC -> -> 0 `i `uc ]
 "76
 [; ;cases.c: 76:     if(cord_x<=300 && cord_y<=300){
-[e $ ! && <= -> _cord_x `ui -> -> 300 `i `ui <= -> _cord_y `ui -> -> 300 `i `ui 391  ]
+[e $ ! && <= _cord_x -> -> 300 `i `ui <= _cord_y -> -> 300 `i `ui 391  ]
 {
 "77
 [; ;cases.c: 77:         PORTC=0X02;

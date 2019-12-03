@@ -5713,8 +5713,8 @@ int coord(char* P1, char* L, unsigned short* x, unsigned short* y, char* P2);
 
 char Par1;
 char letter;
-unsigned short cord_x;
-unsigned short cord_y;
+unsigned int cord_x;
+unsigned int cord_y;
 char Par2;
 
 int x;
@@ -5805,6 +5805,8 @@ uint8_t click;
 
 
 void Configuracion(void);
+void InicialX(void);
+void InicialY(void);
 # 6 "verification.c" 2
 
 

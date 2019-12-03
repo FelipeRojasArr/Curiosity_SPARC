@@ -5689,6 +5689,8 @@ char UARTRead(void);
 
 
 void Configuracion(void);
+void InicialX(void);
+void InicialY(void);
 # 5 "UART.c" 2
 
 

@@ -25,6 +25,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2736
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 2736: extern volatile PORTDbits_t PORTDbits __attribute__((address(0xF83)));
 [v _PORTDbits `VS111 ~T0 @X0 0 e@3971 ]
+"76 ./Configuracion.h
+[v _InicialY `(v ~T0 @X0 0 ef ]
+"75
+[v _InicialX `(v ~T0 @X0 0 ef ]
 "2 ./cases.h
 [; ;./cases.h: 2: void verification(void);
 [v _verification `(v ~T0 @X0 0 ef ]
@@ -551,11 +555,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./cases.h: 7: char letter;
 [v _letter `uc ~T0 @X0 1 e ]
 "8
-[; ;./cases.h: 8: unsigned short cord_x;
-[v _cord_x `us ~T0 @X0 1 e ]
+[; ;./cases.h: 8: unsigned int cord_x;
+[v _cord_x `ui ~T0 @X0 1 e ]
 "9
-[; ;./cases.h: 9: unsigned short cord_y;
-[v _cord_y `us ~T0 @X0 1 e ]
+[; ;./cases.h: 9: unsigned int cord_y;
+[v _cord_y `ui ~T0 @X0 1 e ]
 "10
 [; ;./cases.h: 10: char Par2;
 [v _Par2 `uc ~T0 @X0 1 e ]
@@ -672,66 +676,66 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./PWM.h: 29:     unsigned int BanderaDisY;
 [v _BanderaDisY `ui ~T0 @X0 1 e ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"34 main.c
-[; ;main.c: 34: void main(void) {
+"33 main.c
+[; ;main.c: 33: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"35
-[; ;main.c: 35:     Configuracion();
+"34
+[; ;main.c: 34:     Configuracion();
 [e ( _Configuracion ..  ]
-"36
-[; ;main.c: 36:     CoordAntX=0;
-[e = _CoordAntX -> -> 0 `i `ui ]
-"37
-[; ;main.c: 37:     CoordAntY=0;
-[e = _CoordAntY -> -> 0 `i `ui ]
-"38
-[; ;main.c: 38:     PORTDbits.RD2=1;
+"35
+[; ;main.c: 35:     PORTDbits.RD2=1;
 [e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
-"39
-[; ;main.c: 39:     PORTDbits.RD3=1;
+"36
+[; ;main.c: 36:     PORTDbits.RD3=1;
 [e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
-"41
-[; ;main.c: 41:     while(1){
+"37
+[; ;main.c: 37:     InicialY();
+[e ( _InicialY ..  ]
+"38
+[; ;main.c: 38:     InicialX();
+[e ( _InicialX ..  ]
+"40
+[; ;main.c: 40:     while(1){
 [e :U 370 ]
 {
-"42
-[; ;main.c: 42:         x=1;
+"41
+[; ;main.c: 41:         x=1;
 [e = _x -> 1 `i ]
-"43
-[; ;main.c: 43:        verification();
+"42
+[; ;main.c: 42:        verification();
 [e ( _verification ..  ]
-"45
-[; ;main.c: 45:         Movimiento();
+"43
+[; ;main.c: 43:         Movimiento();
 [e ( _Movimiento ..  ]
-"47
-[; ;main.c: 47:         char a[3];
+"45
+[; ;main.c: 45:         char a[3];
 [v _a `uc ~T0 @X0 -> 3 `i a ]
-"48
-[; ;main.c: 48:         char b[3];
+"46
+[; ;main.c: 46:         char b[3];
 [v _b `uc ~T0 @X0 -> 3 `i a ]
-"50
-[; ;main.c: 50:         a[0]=(CoordAntX/100)+48;
+"48
+[; ;main.c: 48:         a[0]=(CoordAntX/100)+48;
 [e = *U + &U _a * -> -> -> 0 `i `ui `ux -> -> # *U &U _a `ui `ux -> + / _CoordAntX -> -> 100 `i `ui -> -> 48 `i `ui `uc ]
-"51
-[; ;main.c: 51:         a[1]=((CoordAntX%100)/10)+48;
+"49
+[; ;main.c: 49:         a[1]=((CoordAntX%100)/10)+48;
 [e = *U + &U _a * -> -> -> 1 `i `ui `ux -> -> # *U &U _a `ui `ux -> + / % _CoordAntX -> -> 100 `i `ui -> -> 10 `i `ui -> -> 48 `i `ui `uc ]
-"52
-[; ;main.c: 52:         a[2]=((CoordAntX%100)%10)+48;
+"50
+[; ;main.c: 50:         a[2]=((CoordAntX%100)%10)+48;
 [e = *U + &U _a * -> -> -> 2 `i `ui `ux -> -> # *U &U _a `ui `ux -> + % % _CoordAntX -> -> 100 `i `ui -> -> 10 `i `ui -> -> 48 `i `ui `uc ]
-"54
-[; ;main.c: 54:         b[0]=(CoordAntY/100)+48;
+"52
+[; ;main.c: 52:         b[0]=(CoordAntY/100)+48;
 [e = *U + &U _b * -> -> -> 0 `i `ui `ux -> -> # *U &U _b `ui `ux -> + / _CoordAntY -> -> 100 `i `ui -> -> 48 `i `ui `uc ]
-"55
-[; ;main.c: 55:         b[1]=((CoordAntY%100)/10)+48;
+"53
+[; ;main.c: 53:         b[1]=((CoordAntY%100)/10)+48;
 [e = *U + &U _b * -> -> -> 1 `i `ui `ux -> -> # *U &U _b `ui `ux -> + / % _CoordAntY -> -> 100 `i `ui -> -> 10 `i `ui -> -> 48 `i `ui `uc ]
-"56
-[; ;main.c: 56:         b[2]=((CoordAntY%100)%10)+48;
+"54
+[; ;main.c: 54:         b[2]=((CoordAntY%100)%10)+48;
 [e = *U + &U _b * -> -> -> 2 `i `ui `ux -> -> # *U &U _b `ui `ux -> + % % _CoordAntY -> -> 100 `i `ui -> -> 10 `i `ui -> -> 48 `i `ui `uc ]
-"58
-[; ;main.c: 58:         for(int i=0; i<3; i++){
+"56
+[; ;main.c: 56:         for(int i=0; i<3; i++){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -739,18 +743,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 373  ]
 [e :U 372 ]
 {
-"60
-[; ;main.c: 60:             UARTWrite(a[i]);
+"58
+[; ;main.c: 58:             UARTWrite(a[i]);
 [e ( _UARTWrite (1 *U + &U _a * -> -> _i `ui `ux -> -> # *U &U _a `ui `ux ]
-"61
-[; ;main.c: 61:         }
+"59
+[; ;main.c: 59:         }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 3 `i 372  ]
 [e :U 373 ]
 }
-"62
-[; ;main.c: 62:         for(int i=0; i<3; i++){
+"60
+[; ;main.c: 60:         for(int i=0; i<3; i++){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -758,23 +762,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 376  ]
 [e :U 375 ]
 {
-"64
-[; ;main.c: 64:             UARTWrite(b[i]);
+"62
+[; ;main.c: 62:             UARTWrite(b[i]);
 [e ( _UARTWrite (1 *U + &U _b * -> -> _i `ui `ux -> -> # *U &U _b `ui `ux ]
-"65
-[; ;main.c: 65:         }
+"63
+[; ;main.c: 63:         }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 3 `i 375  ]
 [e :U 376 ]
 }
-"66
-[; ;main.c: 66:     }
+"64
+[; ;main.c: 64:     }
 }
 [e :U 369 ]
 [e $U 370  ]
 [e :U 371 ]
-"67
-[; ;main.c: 67: }
+"65
+[; ;main.c: 65: }
 [e :UE 368 ]
 }

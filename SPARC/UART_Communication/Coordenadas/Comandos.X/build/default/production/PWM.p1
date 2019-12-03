@@ -23,8 +23,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 2736: extern volatile PORTDbits_t PORTDbits __attribute__((address(0xF83)));
 [v _PORTDbits `VS111 ~T0 @X0 0 e@3971 ]
 "3 ./PWM.h
-[; ;./PWM.h: 3: int ContarPulsos(int pasos);
-[v _ContarPulsos `(i ~T0 @X0 0 ef1`i ]
+[; ;./PWM.h: 3: void ContarPulsos(int pasos);
+[v _ContarPulsos `(v ~T0 @X0 0 ef1`i ]
 "2569 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 2569:     struct {
 [s S106 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -665,11 +665,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./cases.h: 7: char letter;
 [v _letter `uc ~T0 @X0 1 e ]
 "8
-[; ;./cases.h: 8: unsigned short cord_x;
-[v _cord_x `us ~T0 @X0 1 e ]
+[; ;./cases.h: 8: unsigned int cord_x;
+[v _cord_x `ui ~T0 @X0 1 e ]
 "9
-[; ;./cases.h: 9: unsigned short cord_y;
-[v _cord_y `us ~T0 @X0 1 e ]
+[; ;./cases.h: 9: unsigned int cord_y;
+[v _cord_y `ui ~T0 @X0 1 e ]
 "10
 [; ;./cases.h: 10: char Par2;
 [v _Par2 `uc ~T0 @X0 1 e ]
@@ -772,7 +772,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "28
 [; ;PWM.c: 28:         else CoordRelatX=cord_x-CoordAntX;
 [e :U 368 ]
-[e = _CoordRelatX -> - -> _cord_x `ui _CoordAntX `i ]
+[e = _CoordRelatX -> - _cord_x _CoordAntX `i ]
 [e :U 369 ]
 "31
 [; ;PWM.c: 31:     if (CoordRelatX<0){
@@ -818,8 +818,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;PWM.c: 44:     ContarPulsos(PasosX);
 [e ( _ContarPulsos (1 -> _PasosX `i ]
 "47
-[; ;PWM.c: 47:     if(BanderaDisX= 0) CoordAntX= CoordAntX-CoordRelatX;
-[e $ ! != = _BanderaDisX -> -> 0 `i `ui -> -> 0 `i `ui 372  ]
+[; ;PWM.c: 47:     if(BanderaDisX== 0) CoordAntX= CoordAntX-CoordRelatX;
+[e $ ! == _BanderaDisX -> -> 0 `i `ui 372  ]
 [e = _CoordAntX - _CoordAntX -> _CoordRelatX `ui ]
 [e $U 373  ]
 "48
@@ -827,8 +827,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 372 ]
 {
 "49
-[; ;PWM.c: 49:         if (BanderaDisX= 1) CoordAntX=CoordAntX+CoordRelatX;
-[e $ ! != = _BanderaDisX -> -> 1 `i `ui -> -> 0 `i `ui 374  ]
+[; ;PWM.c: 49:         if (BanderaDisX== 1) CoordAntX=CoordAntX+CoordRelatX;
+[e $ ! == _BanderaDisX -> -> 1 `i `ui 374  ]
 [e = _CoordAntX + _CoordAntX -> _CoordRelatX `ui ]
 [e :U 374 ]
 "50
@@ -843,7 +843,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "57
 [; ;PWM.c: 57:         else CoordRelatY=cord_y-CoordAntY;
 [e :U 375 ]
-[e = _CoordRelatY -> - -> _cord_y `ui _CoordAntY `i ]
+[e = _CoordRelatY -> - _cord_y _CoordAntY `i ]
 [e :U 376 ]
 "59
 [; ;PWM.c: 59:     if (CoordRelatY<0){
@@ -889,8 +889,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;PWM.c: 72:     ContarPulsos(PasosY);
 [e ( _ContarPulsos (1 -> _PasosY `i ]
 "75
-[; ;PWM.c: 75:     if(BanderaDisY= 0) CoordAntY= CoordAntY-CoordRelatY;
-[e $ ! != = _BanderaDisY -> -> 0 `i `ui -> -> 0 `i `ui 379  ]
+[; ;PWM.c: 75:     if(BanderaDisY== 0) CoordAntY= CoordAntY-CoordRelatY;
+[e $ ! == _BanderaDisY -> -> 0 `i `ui 379  ]
 [e = _CoordAntY - _CoordAntY -> _CoordRelatY `ui ]
 [e $U 380  ]
 "76
@@ -898,8 +898,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 379 ]
 {
 "77
-[; ;PWM.c: 77:         if (BanderaDisY= 1) CoordAntY=CoordAntY+CoordRelatY;
-[e $ ! != = _BanderaDisY -> -> 1 `i `ui -> -> 0 `i `ui 381  ]
+[; ;PWM.c: 77:         if (BanderaDisY== 1) CoordAntY=CoordAntY+CoordRelatY;
+[e $ ! == _BanderaDisY -> -> 1 `i `ui 381  ]
 [e = _CoordAntY + _CoordAntY -> _CoordRelatY `ui ]
 [e :U 381 ]
 "78
@@ -914,8 +914,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 367 ]
 }
 "82
-[; ;PWM.c: 82: int ContarPulsos(int pasos){
-[v _ContarPulsos `(i ~T0 @X0 1 ef1`i ]
+[; ;PWM.c: 82: void ContarPulsos(int pasos){
+[v _ContarPulsos `(v ~T0 @X0 1 ef1`i ]
 {
 [e :U _ContarPulsos ]
 [v _pasos `i ~T0 @X0 1 r1 ]
@@ -964,8 +964,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;PWM.c: 94:     PORTDbits.RD3=1;
 [e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
 "96
-[; ;PWM.c: 96:     return(PasosActuales);
-[e ) -> _PasosActuales `i ]
+[; ;PWM.c: 96:     return;
 [e $UE 382  ]
 "97
 [; ;PWM.c: 97: }

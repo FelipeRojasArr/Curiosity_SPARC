@@ -5772,8 +5772,8 @@ int coord(char* P1, char* L, unsigned short* x, unsigned short* y, char* P2);
 
 char Par1;
 char letter;
-unsigned short cord_x;
-unsigned short cord_y;
+unsigned int cord_x;
+unsigned int cord_y;
 char Par2;
 
 int x;
@@ -5862,21 +5862,24 @@ uint8_t click;
 
 
 void Configuracion(void);
+void InicialX(void);
+void InicialY(void);
 # 10 "Interruptions.c" 2
 # 1 "./Interruptions.h" 1
 # 11 "Interruptions.c" 2
 
 void interruptsConfiguration()
 {
+    INTCONbits.PEIE = 1;
     RCONbits.IPEN = 0;
-    INTCONbits.GIEH = 1;
-    INTCONbits.INT0IE = 1;
+    INTCONbits.GIE = 1;
+
     INTCONbits.RBIE = 1;
-    INTCON2bits.INTEDG0 = 1;
-    INTCON2bits.INTEDG1 = 1;
+
+
     INTCON2bits.INTEDG2 = 1;
     INTCON3bits.INT2IE = 1;
-    INTCON3bits.INT1IE = 1;
+
 
 
 

@@ -10,40 +10,38 @@
 #include "Interruptions.h"
 #include "PWM.h"
 
-/*void __interrupt() INT_ISR(void)
-{
-    if(INTCONbits.INT0IF == 1)
+//void __interrupt() INT_ISR(void)
+/*{
+    if(INTCON3bits.INT2IF == 1)
     {
-        while(INTCONbits.INT0IF == 1)
+        while(INTCON3bits.INT2IF == 1)
         {
-            HaltMotors();
-            if(STOP_SWITCH == 0)
-        {
-            __delay_ms(15);
-            if(STOP_SWITCH == 0)
+            UARTWrite(0x4B);
+            if(PORTBbits.RB2 == 0)
             {
-                INTCON3bits.INT2IF = 0;
+                __delay_ms(15);
+                if(PORTBbits.RB2 == 0)
+                {
+                    INTCON3bits.INT2IF = 0;
+                }
             }
-        }
-        }
-        
+        } 
     }
 }*/
 
    
 void main(void) {
     Configuracion();
-    CoordAntX=0;
-    CoordAntY=0;
     ENABLE_A=1;
     ENABLE_B=1;
-    
-    while(1){
+    InicialY();
+    InicialX();
+        
+    while(1){ /*Programa principal*/
         x=1;
-       verification(); 
-       
+       verification();
         Movimiento();
-       
+       /*Imprimir en serial coordenada actualizada*/
         char a[3];
         char b[3];
 

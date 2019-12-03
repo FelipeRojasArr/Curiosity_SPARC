@@ -3,4 +3,5 @@ CONFIGUR.c  \
 UART.h  \
 cases.h  \
 Definiciones.h  \
-Configuracion.h 
+Configuracion.h  \
+PWM.h 
