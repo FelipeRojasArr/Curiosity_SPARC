@@ -10,25 +10,25 @@
 #include "Interruptions.h"
 #include "PWM.h"
 
-//void __interrupt() INT_ISR(void)
-//{
-//    if(INTCON3bits.INT2IF = ON)
-//    {
-//        __delay_ms(15);
-//        while(INTCON3bits.INT2IF = ON)
-//        {
-//            HaltMotors();
-//        }
-//        if(STOP_SWITCH = OFF)
-//        {
-//            __delay_ms(15);
-//            if(STOP_SWITCH = OFF)
-//            {
-//                INTCON3bits.INT2IF = OFF;
-//            }
-//        }
-//    }
-//}
+/*void __interrupt() INT_ISR(void)
+{
+    if(INTCONbits.INT0IF == 1)
+    {
+        while(INTCONbits.INT0IF == 1)
+        {
+            HaltMotors();
+            if(STOP_SWITCH == 0)
+        {
+            __delay_ms(15);
+            if(STOP_SWITCH == 0)
+            {
+                INTCON3bits.INT2IF = 0;
+            }
+        }
+        }
+        
+    }
+}*/
 
    
 void main(void) {

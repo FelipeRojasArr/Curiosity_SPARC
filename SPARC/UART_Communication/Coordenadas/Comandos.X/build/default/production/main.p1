@@ -638,38 +638,38 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x EBTR3 = OFF ]
 "71
 [p x EBTRB = OFF ]
-"11 ./PWM.h
-[; ;./PWM.h: 11:     unsigned int CoordAntX;
+"12 ./PWM.h
+[; ;./PWM.h: 12:     unsigned int CoordAntX;
 [v _CoordAntX `ui ~T0 @X0 1 e ]
-"12
-[; ;./PWM.h: 12:     unsigned int CoordAntY;
+"13
+[; ;./PWM.h: 13:     unsigned int CoordAntY;
 [v _CoordAntY `ui ~T0 @X0 1 e ]
-"15
-[; ;./PWM.h: 15:     int CoordRelatX;
-[v _CoordRelatX `i ~T0 @X0 1 e ]
 "16
-[; ;./PWM.h: 16:     int CoordRelatY;
+[; ;./PWM.h: 16:     int CoordRelatX;
+[v _CoordRelatX `i ~T0 @X0 1 e ]
+"17
+[; ;./PWM.h: 17:     int CoordRelatY;
 [v _CoordRelatY `i ~T0 @X0 1 e ]
-"19
-[; ;./PWM.h: 19:     int pasosRecorridos;
+"20
+[; ;./PWM.h: 20:     int pasosRecorridos;
 [v _pasosRecorridos `i ~T0 @X0 1 e ]
-"22
-[; ;./PWM.h: 22:     unsigned int PasosActuales;
-[v _PasosActuales `ui ~T0 @X0 1 e ]
 "23
-[; ;./PWM.h: 23:     unsigned int ons;
+[; ;./PWM.h: 23:     unsigned int PasosActuales;
+[v _PasosActuales `ui ~T0 @X0 1 e ]
+"24
+[; ;./PWM.h: 24:     unsigned int ons;
 [v _ons `ui ~T0 @X0 1 e ]
-"25
-[; ;./PWM.h: 25:     unsigned int PasosX;
-[v _PasosX `ui ~T0 @X0 1 e ]
 "26
-[; ;./PWM.h: 26:     unsigned int PasosY;
-[v _PasosY `ui ~T0 @X0 1 e ]
+[; ;./PWM.h: 26:     unsigned int PasosX;
+[v _PasosX `ui ~T0 @X0 1 e ]
 "27
-[; ;./PWM.h: 27:     unsigned int BanderaDisX;
-[v _BanderaDisX `ui ~T0 @X0 1 e ]
+[; ;./PWM.h: 27:     unsigned int PasosY;
+[v _PasosY `ui ~T0 @X0 1 e ]
 "28
-[; ;./PWM.h: 28:     unsigned int BanderaDisY;
+[; ;./PWM.h: 28:     unsigned int BanderaDisX;
+[v _BanderaDisX `ui ~T0 @X0 1 e ]
+"29
+[; ;./PWM.h: 29:     unsigned int BanderaDisY;
 [v _BanderaDisY `ui ~T0 @X0 1 e ]
 [v $root$_main `(v ~T0 @X0 0 e ]
 "34 main.c

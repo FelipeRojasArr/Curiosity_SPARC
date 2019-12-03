@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.10 build 88905656 
-                                                                                               Mon Dec 02 20:30:32 2019
+                                                                                               Mon Dec 02 21:09:50 2019
 
 Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1 
      1                           	processor	18F4550
@@ -88,14 +88,14 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
     74  0073E5                     __pidataCOMRAM:
     75                           	opt callstack 0
     76                           
-    77                           ;initializer for Movimiento@F3246
+    77                           ;initializer for Movimiento@F3247
     78  0073E5  73                 	db	115
     79  0073E6  6C                 	db	108
     80  0073E7  69                 	db	105
     81  0073E8  64                 	db	100
     82  0073E9  65                 	db	101
     83                           
-    84                           ;initializer for Movimiento@F3243
+    84                           ;initializer for Movimiento@F3244
     85  0073EA  63                 	db	99
     86  0073EB  6C                 	db	108
     87  0073EC  69                 	db	105
@@ -312,10 +312,10 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    298                           	psect	dataCOMRAM
    299  00004A                     __pdataCOMRAM:
    300                           	opt callstack 0
-   301  00004A                     Movimiento@F3246:
+   301  00004A                     Movimiento@F3247:
    302                           	opt callstack 0
    303  00004A                     	ds	5
-   304  00004F                     Movimiento@F3243:
+   304  00004F                     Movimiento@F3244:
    305                           	opt callstack 0
    306  00004F                     	ds	5
    307  000054                     _Error:
@@ -449,7 +449,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    435                           
    436                           ; 9 bytes @ 0xE
    437  00000F                     	ds	2
-   438  000011                     _UARTConfi$1613:
+   438  000011                     _UARTConfi$1678:
    439                           	opt callstack 0
    440                           
    441                           ; 4 bytes @ 0x10
@@ -459,7 +459,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    445                           
    446                           ; 2 bytes @ 0x12
    447  000013                     	ds	2
-   448  000015                     Movimiento@i_650:
+   448  000015                     Movimiento@i_712:
    449                           	opt callstack 0
    450                           
    451                           ; 2 bytes @ 0x14
@@ -493,7 +493,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    479                           
    480                           ; 3 bytes @ 0x21
    481  000022                     	ds	3
-   482  000025                     _main$1614:
+   482  000025                     _main$1679:
    483                           	opt callstack 0
    484                           
    485                           ; 2 bytes @ 0x24
@@ -575,7 +575,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    561  007E76                     
    562                           ;main.c: 39:     PORTDbits.RD3=1;
    563  007E76  8683               	bsf	131,3,c	;volatile
-   564  007E78                     l2181:
+   564  007E78                     l2198:
    565                           
    566                           ;main.c: 42:         x=1;
    567  007E78  0E00               	movlw	0
@@ -629,12 +629,12 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    614  007ED8  C03B  F001         	movff	_CoordAntX,___lwmod@dividend
    615  007EDC  C03C  F002         	movff	_CoordAntX+1,___lwmod@dividend+1
    616  007EE0  EC2E  F03B         	call	___lwmod	;wreg free
-   617  007EE4  C001  F025         	movff	?___lwmod,_main$1614
-   618  007EE8  C002  F026         	movff	?___lwmod+1,_main$1614+1
+   617  007EE4  C001  F025         	movff	?___lwmod,_main$1679
+   618  007EE8  C002  F026         	movff	?___lwmod+1,_main$1679+1
    619  007EEC                     
    620                           ;main.c: 52:         a[2]=((CoordAntX%100)%10)+48;
-   621  007EEC  C025  F001         	movff	_main$1614,___lwmod@dividend
-   622  007EF0  C026  F002         	movff	_main$1614+1,___lwmod@dividend+1
+   621  007EEC  C025  F001         	movff	_main$1679,___lwmod@dividend
+   622  007EF0  C026  F002         	movff	_main$1679+1,___lwmod@dividend+1
    623  007EF4  0E00               	movlw	0
    624  007EF6  6E04               	movwf	(___lwmod@divisor+1)^0,c
    625  007EF8  0E0A               	movlw	10
@@ -683,12 +683,12 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    668  007F56  C039  F001         	movff	_CoordAntY,___lwmod@dividend
    669  007F5A  C03A  F002         	movff	_CoordAntY+1,___lwmod@dividend+1
    670  007F5E  EC2E  F03B         	call	___lwmod	;wreg free
-   671  007F62  C001  F025         	movff	?___lwmod,_main$1614
-   672  007F66  C002  F026         	movff	?___lwmod+1,_main$1614+1
+   671  007F62  C001  F025         	movff	?___lwmod,_main$1679
+   672  007F66  C002  F026         	movff	?___lwmod+1,_main$1679+1
    673  007F6A                     
    674                           ;main.c: 56:         b[2]=((CoordAntY%100)%10)+48;
-   675  007F6A  C025  F001         	movff	_main$1614,___lwmod@dividend
-   676  007F6E  C026  F002         	movff	_main$1614+1,___lwmod@dividend+1
+   675  007F6A  C025  F001         	movff	_main$1679,___lwmod@dividend
+   676  007F6E  C026  F002         	movff	_main$1679+1,___lwmod@dividend+1
    677  007F72  0E00               	movlw	0
    678  007F74  6E04               	movwf	(___lwmod@divisor+1)^0,c
    679  007F76  0E0A               	movlw	10
@@ -703,7 +703,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    688  007F86  6E28               	movwf	(main@i+1)^0,c
    689  007F88  0E00               	movlw	0
    690  007F8A  6E27               	movwf	main@i^0,c
-   691  007F8C                     l2209:
+   691  007F8C                     l2226:
    692                           
    693                           ;main.c: 60:             UARTWrite(a[i]);
    694  007F8C  0E1F               	movlw	low main@a
@@ -728,7 +728,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    713  007FB2  EFDD  F03F         	goto	u931
    714  007FB6  EFDF  F03F         	goto	u930
    715  007FBA                     u931:
-   716  007FBA  EFC6  F03F         	goto	l2209
+   716  007FBA  EFC6  F03F         	goto	l2226
    717  007FBE                     u930:
    718  007FBE                     
    719                           ;main.c: 62:         for(int i=0; i<3; i++){
@@ -736,7 +736,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    721  007FC0  6E2A               	movwf	(main@i_411+1)^0,c
    722  007FC2  0E00               	movlw	0
    723  007FC4  6E29               	movwf	main@i_411^0,c
-   724  007FC6                     l2221:
+   724  007FC6                     l2238:
    725                           
    726                           ;main.c: 64:             UARTWrite(b[i]);
    727  007FC6  0E22               	movlw	low main@b
@@ -761,9 +761,9 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    746  007FEC  EFFA  F03F         	goto	u941
    747  007FF0  EFFC  F03F         	goto	u940
    748  007FF4                     u941:
-   749  007FF4  EFE3  F03F         	goto	l2221
+   749  007FF4  EFE3  F03F         	goto	l2238
    750  007FF8                     u940:
-   751  007FF8  EF3C  F03F         	goto	l2181
+   751  007FF8  EF3C  F03F         	goto	l2198
    752  007FFC  EF00  F000         	goto	start
    753  008000                     __end_of_main:
    754                           	opt callstack 0
@@ -814,55 +814,55 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    799  00799A  6E3E               	movwf	_NextState^0,c
    800                           
    801                           ;verification.c: 10:     while(x==1){
-   802  00799C  EF12  F03D         	goto	l2081
-   803  0079A0                     l2065:
+   802  00799C  EF12  F03D         	goto	l2098
+   803  0079A0                     l2082:
    804                           
    805                           ;verification.c: 14:                 NextState= start();
    806  0079A0  EC5E  F03A         	call	_start	;wreg free
    807  0079A4  6E3E               	movwf	_NextState^0,c
    808                           
    809                           ;verification.c: 15:             };verification.c: 16:             break;
-   810  0079A6  EF12  F03D         	goto	l2081
-   811  0079AA                     l2067:
+   810  0079A6  EF12  F03D         	goto	l2098
+   811  0079AA                     l2084:
    812                           
    813                           ;verification.c: 18:                 NextState=cmd();
    814  0079AA  EC0C  F03C         	call	_cmd	;wreg free
    815  0079AE  6E3E               	movwf	_NextState^0,c
    816                           
    817                           ;verification.c: 19:             };verification.c: 20:             break;
-   818  0079B0  EF12  F03D         	goto	l2081
-   819  0079B4                     l2069:
+   818  0079B0  EF12  F03D         	goto	l2098
+   819  0079B4                     l2086:
    820                           
    821                           ;verification.c: 22:                 NextState=Par_Validated();
    822  0079B4  EC99  F03B         	call	_Par_Validated	;wreg free
    823  0079B8  6E3E               	movwf	_NextState^0,c
    824                           
    825                           ;verification.c: 23:             };verification.c: 24:             break;
-   826  0079BA  EF12  F03D         	goto	l2081
-   827  0079BE                     l2071:
+   826  0079BA  EF12  F03D         	goto	l2098
+   827  0079BE                     l2088:
    828                           
    829                           ;verification.c: 26:                 NextState=Ins_Validated();
    830  0079BE  EC87  F03C         	call	_Ins_Validated	;wreg free
    831  0079C2  6E3E               	movwf	_NextState^0,c
    832                           
    833                           ;verification.c: 27:             };verification.c: 28:             break;
-   834  0079C4  EF12  F03D         	goto	l2081
-   835  0079C8                     l2073:
+   834  0079C4  EF12  F03D         	goto	l2098
+   835  0079C8                     l2090:
    836                           
    837                           ;verification.c: 30:                 NextState=Coord_Validated();
    838  0079C8  EC46  F03C         	call	_Coord_Validated	;wreg free
    839  0079CC  6E3E               	movwf	_NextState^0,c
    840                           
    841                           ;verification.c: 31:             };verification.c: 32:             break;
-   842  0079CE  EF12  F03D         	goto	l2081
-   843  0079D2                     l2075:
+   842  0079CE  EF12  F03D         	goto	l2098
+   843  0079D2                     l2092:
    844                           
    845                           ;verification.c: 34:                 end();
    846  0079D2  EC81  F03A         	call	_end	;wreg free
    847                           
    848                           ;verification.c: 35:             }break;
-   849  0079D6  EF12  F03D         	goto	l2081
-   850  0079DA                     l2079:
+   849  0079D6  EF12  F03D         	goto	l2098
+   850  0079DA                     l2096:
    851  0079DA  503E               	movf	_NextState^0,w,c
    852  0079DC  6E1D               	movwf	??_verification^0,c
    853  0079DE  6A1E               	clrf	(??_verification+1)^0,c
@@ -878,9 +878,9 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    862  0079E0  501E               	movf	(??_verification+1)^0,w,c
    863  0079E2  0A00               	xorlw	0	; case 0
    864  0079E4  B4D8               	btfsc	status,2,c
-   865  0079E6  EFF7  F03C         	goto	l2231
-   866  0079EA  EF12  F03D         	goto	l2081
-   867  0079EE                     l2231:
+   865  0079E6  EFF7  F03C         	goto	l2256
+   866  0079EA  EF12  F03D         	goto	l2098
+   867  0079EE                     l2256:
    868                           
    869                           ; Switch size 1, requested type "simple"
    870                           ; Number of cases is 6, Range of values is 0 to 5
@@ -891,24 +891,24 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    875  0079EE  501D               	movf	??_verification^0,w,c
    876  0079F0  0A00               	xorlw	0	; case 0
    877  0079F2  B4D8               	btfsc	status,2,c
-   878  0079F4  EFD0  F03C         	goto	l2065
+   878  0079F4  EFD0  F03C         	goto	l2082
    879  0079F8  0A01               	xorlw	1	; case 1
    880  0079FA  B4D8               	btfsc	status,2,c
-   881  0079FC  EFD5  F03C         	goto	l2067
+   881  0079FC  EFD5  F03C         	goto	l2084
    882  007A00  0A03               	xorlw	3	; case 2
    883  007A02  B4D8               	btfsc	status,2,c
-   884  007A04  EFDA  F03C         	goto	l2069
+   884  007A04  EFDA  F03C         	goto	l2086
    885  007A08  0A01               	xorlw	1	; case 3
    886  007A0A  B4D8               	btfsc	status,2,c
-   887  007A0C  EFDF  F03C         	goto	l2071
+   887  007A0C  EFDF  F03C         	goto	l2088
    888  007A10  0A07               	xorlw	7	; case 4
    889  007A12  B4D8               	btfsc	status,2,c
-   890  007A14  EFE4  F03C         	goto	l2073
+   890  007A14  EFE4  F03C         	goto	l2090
    891  007A18  0A01               	xorlw	1	; case 5
    892  007A1A  B4D8               	btfsc	status,2,c
-   893  007A1C  EFE9  F03C         	goto	l2075
-   894  007A20  EF12  F03D         	goto	l2081
-   895  007A24                     l2081:
+   893  007A1C  EFE9  F03C         	goto	l2092
+   894  007A20  EF12  F03D         	goto	l2098
+   895  007A24                     l2098:
    896                           
    897                           ;verification.c: 10:     while(x==1){
    898  007A24  0459               	decf	_x^0,w,c
@@ -917,7 +917,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    901  007A2A  EF19  F03D         	goto	u801
    902  007A2E  EF1B  F03D         	goto	u800
    903  007A32                     u801:
-   904  007A32  EFED  F03C         	goto	l2079
+   904  007A32  EFED  F03C         	goto	l2096
    905  007A36                     u800:
    906  007A36  0012               	return		;funcret
    907  007A38                     __end_of_verification:
@@ -968,7 +968,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    952  0074C4  6E03               	movwf	(start@i+1)^0,c
    953  0074C6  0E00               	movlw	0
    954  0074C8  6E02               	movwf	start@i^0,c
-   955  0074CA                     l1803:
+   955  0074CA                     l1820:
    956                           
    957                           ;cases.c: 20:         UARTWrite(init[i]);
    958  0074CA  0E6D               	movlw	low _init
@@ -993,7 +993,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    977  0074F0  EF7C  F03A         	goto	u641
    978  0074F4  EF7E  F03A         	goto	u640
    979  0074F8                     u641:
-   980  0074F8  EF65  F03A         	goto	l1803
+   980  0074F8  EF65  F03A         	goto	l1820
    981  0074FC                     u640:
    982  0074FC                     
    983                           ;cases.c: 22:      PORTC = 0xff;
@@ -1050,7 +1050,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1034  00750A  6E03               	movwf	(end@i+1)^0,c
   1035  00750C  0E00               	movlw	0
   1036  00750E  6E02               	movwf	end@i^0,c
-  1037  007510                     l1949:
+  1037  007510                     l1966:
   1038                           
   1039                           ;cases.c: 94:             UARTWrite(gracias[i]);
   1040  007510  0E77               	movlw	low _gracias
@@ -1075,7 +1075,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1059  007536  EF9F  F03A         	goto	u751
   1060  00753A  EFA1  F03A         	goto	u750
   1061  00753E                     u751:
-  1062  00753E  EF88  F03A         	goto	l1949
+  1062  00753E  EF88  F03A         	goto	l1966
   1063  007542                     u750:
   1064  007542                     
   1065                           ;cases.c: 96:      x=0;
@@ -1137,7 +1137,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1121  007824  6E1C               	movwf	(cmd@i+1)^0,c
   1122  007826  0E00               	movlw	0
   1123  007828  6E1B               	movwf	cmd@i^0,c
-  1124  00782A                     l1823:
+  1124  00782A                     l1840:
   1125                           
   1126                           ;cases.c: 31:         UARTWrite(e_c[i]);
   1127  00782A  0E60               	movlw	low _e_c
@@ -1162,7 +1162,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1146  007850  EF2C  F03C         	goto	u651
   1147  007854  EF2E  F03C         	goto	u650
   1148  007858                     u651:
-  1149  007858  EF15  F03C         	goto	l1823
+  1149  007858  EF15  F03C         	goto	l1840
   1150  00785C                     u650:
   1151  00785C                     
   1152                           ;cases.c: 33:     coord(&Par1,&letter,&cord_x, &cord_y, &Par2);
@@ -1247,7 +1247,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1230  007A3A  6E1A               	movwf	(coord@i+1)^0,c
   1231  007A3C  0E00               	movlw	0
   1232  007A3E  6E19               	movwf	coord@i^0,c
-  1233  007A40                     l1717:
+  1233  007A40                     l1734:
   1234                           
   1235                           ;coordenadas.c: 17:             read= UARTRead();
   1236  007A40  ECFA  F039         	call	_UARTRead	;wreg free
@@ -1275,7 +1275,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1258  007A6A  EF39  F03D         	goto	u541
   1259  007A6E  EF3B  F03D         	goto	u540
   1260  007A72                     u541:
-  1261  007A72  EF20  F03D         	goto	l1717
+  1261  007A72  EF20  F03D         	goto	l1734
   1262  007A76                     u540:
   1263  007A76                     
   1264                           ;coordenadas.c: 20:         *P1= buffer[0];
@@ -1447,7 +1447,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1430  00773C  EFA2  F03B         	goto	u661
   1431  007740  EFA4  F03B         	goto	u660
   1432  007744                     u661:
-  1433  007744  EFB0  F03B         	goto	l1847
+  1433  007744  EFB0  F03B         	goto	l1864
   1434  007748                     u660:
   1435  007748  0E3E               	movlw	62
   1436  00774A  1847               	xorwf	_Par2^0,w,c
@@ -1455,13 +1455,13 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1438  00774E  EFAB  F03B         	goto	u671
   1439  007752  EFAD  F03B         	goto	u670
   1440  007756                     u671:
-  1441  007756  EFB0  F03B         	goto	l1847
+  1441  007756  EFB0  F03B         	goto	l1864
   1442  00775A                     u670:
   1443  00775A                     
   1444                           ;cases.c: 40:         return validate_Instruct_State;
   1445  00775A  0E03               	movlw	3
   1446  00775C  EFD1  F03B         	goto	l44
-  1447  007760                     l1847:
+  1447  007760                     l1864:
   1448                           
   1449                           ;cases.c: 43:         UARTWrite(13);
   1450  007760  0E0D               	movlw	13
@@ -1472,7 +1472,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1455  007768  6E03               	movwf	(Par_Validated@i+1)^0,c
   1456  00776A  0E00               	movlw	0
   1457  00776C  6E02               	movwf	Par_Validated@i^0,c
-  1458  00776E                     l1855:
+  1458  00776E                     l1872:
   1459                           
   1460                           ;cases.c: 45:             UARTWrite(Error[i]);
   1461  00776E  0E54               	movlw	low _Error
@@ -1497,7 +1497,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1480  007794  EFCE  F03B         	goto	u681
   1481  007798  EFD0  F03B         	goto	u680
   1482  00779C                     u681:
-  1483  00779C  EFB7  F03B         	goto	l1855
+  1483  00779C  EFB7  F03B         	goto	l1872
   1484  0077A0                     u680:
   1485  0077A0                     
   1486                           ;cases.c: 47:         return wait_cmd_State;
@@ -1554,7 +1554,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1537  007918  EF90  F03C         	goto	u691
   1538  00791C  EF92  F03C         	goto	u690
   1539  007920                     u691:
-  1540  007920  EF99  F03C         	goto	l1877
+  1540  007920  EF99  F03C         	goto	l1894
   1541  007924                     u690:
   1542  007924                     
   1543                           ;cases.c: 54:         PORTC=0X02;
@@ -1564,19 +1564,19 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1547                           ;cases.c: 55:         click=1;
   1548  007928  0E01               	movlw	1
   1549  00792A  6E3D               	movwf	_click^0,c
-  1550  00792C                     l1871:
+  1550  00792C                     l1888:
   1551                           
   1552                           ;cases.c: 56:         return validate_Coord_State;
   1553  00792C  0E04               	movlw	4
   1554  00792E  EFCB  F03C         	goto	l51
-  1555  007932                     l1877:
+  1555  007932                     l1894:
   1556  007932  0E53               	movlw	83
   1557  007934  1848               	xorwf	_letter^0,w,c
   1558  007936  A4D8               	btfss	status,2,c
   1559  007938  EFA0  F03C         	goto	u701
   1560  00793C  EFA2  F03C         	goto	u700
   1561  007940                     u701:
-  1562  007940  EFA8  F03C         	goto	l1887
+  1562  007940  EFA8  F03C         	goto	l1904
   1563  007944                     u700:
   1564  007944                     
   1565                           ;cases.c: 60:         PORTC=0X02;
@@ -1586,8 +1586,8 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1569                           ;cases.c: 61:         click=0;
   1570  007948  0E00               	movlw	0
   1571  00794A  6E3D               	movwf	_click^0,c
-  1572  00794C  EF96  F03C         	goto	l1871
-  1573  007950                     l1887:
+  1572  00794C  EF96  F03C         	goto	l1888
+  1573  007950                     l1904:
   1574                           
   1575                           ;cases.c: 65:         UARTWrite(13);
   1576  007950  0E0D               	movlw	13
@@ -1598,7 +1598,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1581  007958  6E03               	movwf	(Ins_Validated@i+1)^0,c
   1582  00795A  0E00               	movlw	0
   1583  00795C  6E02               	movwf	Ins_Validated@i^0,c
-  1584  00795E                     l1895:
+  1584  00795E                     l1912:
   1585                           
   1586                           ;cases.c: 67:             UARTWrite(Error[i]);
   1587  00795E  0E54               	movlw	low _Error
@@ -1623,7 +1623,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1606  007984  EFC6  F03C         	goto	u711
   1607  007988  EFC8  F03C         	goto	u710
   1608  00798C                     u711:
-  1609  00798C  EFAF  F03C         	goto	l1895
+  1609  00798C  EFAF  F03C         	goto	l1912
   1610  007990                     u710:
   1611  007990                     
   1612                           ;cases.c: 69:         PORTC= 0X04;
@@ -1686,7 +1686,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1669  00789A  EF51  F03C         	goto	u721
   1670  00789E  EF53  F03C         	goto	u720
   1671  0078A2                     u721:
-  1672  0078A2  EF63  F03C         	goto	l1921
+  1672  0078A2  EF63  F03C         	goto	l1938
   1673  0078A6                     u720:
   1674  0078A6  0E2D               	movlw	45
   1675  0078A8  5C43               	subwf	_cord_y^0,w,c
@@ -1696,7 +1696,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1679  0078B0  EF5C  F03C         	goto	u731
   1680  0078B4  EF5E  F03C         	goto	u730
   1681  0078B8                     u731:
-  1682  0078B8  EF63  F03C         	goto	l1921
+  1682  0078B8  EF63  F03C         	goto	l1938
   1683  0078BC                     u730:
   1684  0078BC                     
   1685                           ;cases.c: 77:         PORTC=0X02;
@@ -1706,7 +1706,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1689                           ;cases.c: 78:         return end_State;
   1690  0078C0  0E05               	movlw	5
   1691  0078C2  EF86  F03C         	goto	l60
-  1692  0078C6                     l1921:
+  1692  0078C6                     l1938:
   1693                           
   1694                           ;cases.c: 81:         UARTWrite(13);
   1695  0078C6  0E0D               	movlw	13
@@ -1717,7 +1717,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1700  0078CE  6E03               	movwf	(Coord_Validated@i+1)^0,c
   1701  0078D0  0E00               	movlw	0
   1702  0078D2  6E02               	movwf	Coord_Validated@i^0,c
-  1703  0078D4                     l1929:
+  1703  0078D4                     l1946:
   1704                           
   1705                           ;cases.c: 83:             UARTWrite(Error[i]);
   1706  0078D4  0E54               	movlw	low _Error
@@ -1742,7 +1742,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1725  0078FA  EF81  F03C         	goto	u741
   1726  0078FE  EF83  F03C         	goto	u740
   1727  007902                     u741:
-  1728  007902  EF6A  F03C         	goto	l1929
+  1728  007902  EF6A  F03C         	goto	l1946
   1729  007906                     u740:
   1730  007906                     
   1731                           ;cases.c: 85:         PORTC= 0X04;
@@ -1797,24 +1797,24 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1780  007662  EF35  F03B         	goto	u901
   1781  007666  EF37  F03B         	goto	u900
   1782  00766A                     u901:
-  1783  00766A  EF5B  F03B         	goto	l961
+  1783  00766A  EF5B  F03B         	goto	l970
   1784  00766E                     u900:
   1785  00766E  0E01               	movlw	1
   1786  007670  6E05               	movwf	___lwmod@counter^0,c
-  1787  007672  EF3F  F03B         	goto	l2161
-  1788  007676                     l2159:
+  1787  007672  EF3F  F03B         	goto	l2178
+  1788  007676                     l2176:
   1789  007676  90D8               	bcf	status,0,c
   1790  007678  3603               	rlcf	___lwmod@divisor^0,f,c
   1791  00767A  3604               	rlcf	(___lwmod@divisor+1)^0,f,c
   1792  00767C  2A05               	incf	___lwmod@counter^0,f,c
-  1793  00767E                     l2161:
+  1793  00767E                     l2178:
   1794  00767E  AE04               	btfss	(___lwmod@divisor+1)^0,7,c
   1795  007680  EF44  F03B         	goto	u911
   1796  007684  EF46  F03B         	goto	u910
   1797  007688                     u911:
-  1798  007688  EF3B  F03B         	goto	l2159
+  1798  007688  EF3B  F03B         	goto	l2176
   1799  00768C                     u910:
-  1800  00768C                     l2163:
+  1800  00768C                     l2180:
   1801  00768C  5003               	movf	___lwmod@divisor^0,w,c
   1802  00768E  5C01               	subwf	___lwmod@dividend^0,w,c
   1803  007690  5004               	movf	(___lwmod@divisor+1)^0,w,c
@@ -1823,19 +1823,19 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1806  007696  EF4F  F03B         	goto	u921
   1807  00769A  EF51  F03B         	goto	u920
   1808  00769E                     u921:
-  1809  00769E  EF55  F03B         	goto	l2167
+  1809  00769E  EF55  F03B         	goto	l2184
   1810  0076A2                     u920:
   1811  0076A2  5003               	movf	___lwmod@divisor^0,w,c
   1812  0076A4  5E01               	subwf	___lwmod@dividend^0,f,c
   1813  0076A6  5004               	movf	(___lwmod@divisor+1)^0,w,c
   1814  0076A8  5A02               	subwfb	(___lwmod@dividend+1)^0,f,c
-  1815  0076AA                     l2167:
+  1815  0076AA                     l2184:
   1816  0076AA  90D8               	bcf	status,0,c
   1817  0076AC  3204               	rrcf	(___lwmod@divisor+1)^0,f,c
   1818  0076AE  3203               	rrcf	___lwmod@divisor^0,f,c
   1819  0076B0  2E05               	decfsz	___lwmod@counter^0,f,c
-  1820  0076B2  EF46  F03B         	goto	l2163
-  1821  0076B6                     l961:
+  1820  0076B2  EF46  F03B         	goto	l2180
+  1821  0076B6                     l970:
   1822  0076B6  C001  F001         	movff	___lwmod@dividend,?___lwmod
   1823  0076BA  C002  F002         	movff	___lwmod@dividend+1,?___lwmod+1
   1824  0076BE  0012               	return		;funcret
@@ -1888,24 +1888,24 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1871  0077B2  EFDD  F03B         	goto	u871
   1872  0077B6  EFDF  F03B         	goto	u870
   1873  0077BA                     u871:
-  1874  0077BA  EF07  F03C         	goto	l951
+  1874  0077BA  EF07  F03C         	goto	l960
   1875  0077BE                     u870:
   1876  0077BE  0E01               	movlw	1
   1877  0077C0  6E0C               	movwf	___lwdiv@counter^0,c
-  1878  0077C2  EFE7  F03B         	goto	l2141
-  1879  0077C6                     l2139:
+  1878  0077C2  EFE7  F03B         	goto	l2158
+  1879  0077C6                     l2156:
   1880  0077C6  90D8               	bcf	status,0,c
   1881  0077C8  3608               	rlcf	___lwdiv@divisor^0,f,c
   1882  0077CA  3609               	rlcf	(___lwdiv@divisor+1)^0,f,c
   1883  0077CC  2A0C               	incf	___lwdiv@counter^0,f,c
-  1884  0077CE                     l2141:
+  1884  0077CE                     l2158:
   1885  0077CE  AE09               	btfss	(___lwdiv@divisor+1)^0,7,c
   1886  0077D0  EFEC  F03B         	goto	u881
   1887  0077D4  EFEE  F03B         	goto	u880
   1888  0077D8                     u881:
-  1889  0077D8  EFE3  F03B         	goto	l2139
+  1889  0077D8  EFE3  F03B         	goto	l2156
   1890  0077DC                     u880:
-  1891  0077DC                     l2143:
+  1891  0077DC                     l2160:
   1892  0077DC  90D8               	bcf	status,0,c
   1893  0077DE  360A               	rlcf	___lwdiv@quotient^0,f,c
   1894  0077E0  360B               	rlcf	(___lwdiv@quotient+1)^0,f,c
@@ -1917,20 +1917,20 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1900  0077EC  EFFA  F03B         	goto	u891
   1901  0077F0  EFFC  F03B         	goto	u890
   1902  0077F4                     u891:
-  1903  0077F4  EF01  F03C         	goto	l2151
+  1903  0077F4  EF01  F03C         	goto	l2168
   1904  0077F8                     u890:
   1905  0077F8  5008               	movf	___lwdiv@divisor^0,w,c
   1906  0077FA  5E06               	subwf	___lwdiv@dividend^0,f,c
   1907  0077FC  5009               	movf	(___lwdiv@divisor+1)^0,w,c
   1908  0077FE  5A07               	subwfb	(___lwdiv@dividend+1)^0,f,c
   1909  007800  800A               	bsf	___lwdiv@quotient^0,0,c
-  1910  007802                     l2151:
+  1910  007802                     l2168:
   1911  007802  90D8               	bcf	status,0,c
   1912  007804  3209               	rrcf	(___lwdiv@divisor+1)^0,f,c
   1913  007806  3208               	rrcf	___lwdiv@divisor^0,f,c
   1914  007808  2E0C               	decfsz	___lwdiv@counter^0,f,c
-  1915  00780A  EFEE  F03B         	goto	l2143
-  1916  00780E                     l951:
+  1915  00780A  EFEE  F03B         	goto	l2160
+  1916  00780E                     l960:
   1917  00780E  C00A  F006         	movff	___lwdiv@quotient,?___lwdiv
   1918  007812  C00B  F007         	movff	___lwdiv@quotient+1,?___lwdiv+1
   1919  007816  0012               	return		;funcret
@@ -1983,7 +1983,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1966  007B20  EF94  F03D         	goto	u811
   1967  007B24  EF96  F03D         	goto	u810
   1968  007B28                     u811:
-  1969  007B28  EFCE  F03D         	goto	l2111
+  1969  007B28  EFCE  F03D         	goto	l2128
   1970  007B2C                     u810:
   1971  007B2C                     
   1972                           ;Movimiento.c: 11:         PWM();
@@ -2011,7 +2011,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1994  007B4A  9E83               	bcf	131,7,c	;volatile
   1995  007B4C                     
   1996                           ;Movimiento.c: 15:         char loquequieras[5]="click";
-  1997  007B4C  EE20  F04F         	lfsr	2,Movimiento@F3243
+  1997  007B4C  EE20  F04F         	lfsr	2,Movimiento@F3244
   1998  007B50  EE10  F009         	lfsr	1,Movimiento@loquequieras
   1999  007B54  0E04               	movlw	4
   2000  007B56                     u821:
@@ -2024,7 +2024,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2007  007B60  6E14               	movwf	(Movimiento@i+1)^0,c
   2008  007B62  0E00               	movlw	0
   2009  007B64  6E13               	movwf	Movimiento@i^0,c
-  2010  007B66                     l2105:
+  2010  007B66                     l2122:
   2011                           
   2012                           ;Movimiento.c: 17:        UARTWrite(loquequieras[i]);
   2013  007B66  0E09               	movlw	low Movimiento@loquequieras
@@ -2049,16 +2049,16 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2032  007B8C  EFCA  F03D         	goto	u831
   2033  007B90  EFCC  F03D         	goto	u830
   2034  007B94                     u831:
-  2035  007B94  EFB3  F03D         	goto	l2105
+  2035  007B94  EFB3  F03D         	goto	l2122
   2036  007B98                     u830:
-  2037  007B98  EF00  F03E         	goto	l367
-  2038  007B9C                     l2111:
+  2037  007B98  EF00  F03E         	goto	l376
+  2038  007B9C                     l2128:
   2039  007B9C  503D               	movf	_click^0,w,c
   2040  007B9E  A4D8               	btfss	status,2,c
   2041  007BA0  EFD4  F03D         	goto	u841
   2042  007BA4  EFD6  F03D         	goto	u840
   2043  007BA8                     u841:
-  2044  007BA8  EF00  F03E         	goto	l367
+  2044  007BA8  EF00  F03E         	goto	l376
   2045  007BAC                     u840:
   2046  007BAC                     
   2047                           ;Movimiento.c: 22:         PORTDbits.RD7=1;
@@ -2071,7 +2071,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2054  007BB2  9E83               	bcf	131,7,c	;volatile
   2055  007BB4                     
   2056                           ;Movimiento.c: 25:         char loquequieras2[5]="slide";
-  2057  007BB4  EE20  F04A         	lfsr	2,Movimiento@F3246
+  2057  007BB4  EE20  F04A         	lfsr	2,Movimiento@F3247
   2058  007BB8  EE10  F00E         	lfsr	1,Movimiento@loquequieras2
   2059  007BBC  0E04               	movlw	4
   2060  007BBE                     u851:
@@ -2081,37 +2081,37 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2064  007BC6                     
   2065                           ;Movimiento.c: 26:        for(int i=0;i<5;i++){
   2066  007BC6  0E00               	movlw	0
-  2067  007BC8  6E16               	movwf	(Movimiento@i_650+1)^0,c
+  2067  007BC8  6E16               	movwf	(Movimiento@i_712+1)^0,c
   2068  007BCA  0E00               	movlw	0
-  2069  007BCC  6E15               	movwf	Movimiento@i_650^0,c
-  2070  007BCE                     l2127:
+  2069  007BCC  6E15               	movwf	Movimiento@i_712^0,c
+  2070  007BCE                     l2144:
   2071                           
   2072                           ;Movimiento.c: 27:        UARTWrite(loquequieras2[i]);
   2073  007BCE  0E0E               	movlw	low Movimiento@loquequieras2
-  2074  007BD0  2415               	addwf	Movimiento@i_650^0,w,c
+  2074  007BD0  2415               	addwf	Movimiento@i_712^0,w,c
   2075  007BD2  6ED9               	movwf	fsr2l,c
   2076  007BD4  0E00               	movlw	high Movimiento@loquequieras2
-  2077  007BD6  2016               	addwfc	(Movimiento@i_650+1)^0,w,c
+  2077  007BD6  2016               	addwfc	(Movimiento@i_712+1)^0,w,c
   2078  007BD8  6EDA               	movwf	fsr2h,c
   2079  007BDA  50DF               	movf	indf2,w,c
   2080  007BDC  EC03  F03A         	call	_UARTWrite
   2081  007BE0                     
   2082                           ;Movimiento.c: 28:        }
-  2083  007BE0  4A15               	infsnz	Movimiento@i_650^0,f,c
-  2084  007BE2  2A16               	incf	(Movimiento@i_650+1)^0,f,c
-  2085  007BE4  BE16               	btfsc	(Movimiento@i_650+1)^0,7,c
+  2083  007BE0  4A15               	infsnz	Movimiento@i_712^0,f,c
+  2084  007BE2  2A16               	incf	(Movimiento@i_712+1)^0,f,c
+  2085  007BE4  BE16               	btfsc	(Movimiento@i_712+1)^0,7,c
   2086  007BE6  EFFE  F03D         	goto	u861
-  2087  007BEA  5016               	movf	(Movimiento@i_650+1)^0,w,c
+  2087  007BEA  5016               	movf	(Movimiento@i_712+1)^0,w,c
   2088  007BEC  E109               	bnz	u860
   2089  007BEE  0E05               	movlw	5
-  2090  007BF0  5C15               	subwf	Movimiento@i_650^0,w,c
+  2090  007BF0  5C15               	subwf	Movimiento@i_712^0,w,c
   2091  007BF2  A0D8               	btfss	status,0,c
   2092  007BF4  EFFE  F03D         	goto	u861
   2093  007BF8  EF00  F03E         	goto	u860
   2094  007BFC                     u861:
-  2095  007BFC  EFE7  F03D         	goto	l2127
+  2095  007BFC  EFE7  F03D         	goto	l2144
   2096  007C00                     u860:
-  2097  007C00                     l367:
+  2097  007C00                     l376:
   2098  007C00  0012               	return		;funcret
   2099  007C02                     __end_of_Movimiento:
   2100                           	opt callstack 0
@@ -2149,1008 +2149,1009 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2132 ;;		_end
   2133 ;;		_main
   2134 ;;		_Movimiento
-  2135 ;; This function uses a non-reentrant model
-  2136 ;;
-  2137                           
-  2138                           	psect	text13
-  2139  007406                     __ptext13:
-  2140                           	opt callstack 0
-  2141  007406                     _UARTWrite:
-  2142                           	opt callstack 28
-  2143                           
-  2144                           ;incstack = 0
-  2145                           ;UARTWrite@data stored from wreg
-  2146  007406  6E01               	movwf	UARTWrite@data^0,c
-  2147  007408                     l90:
-  2148  007408  A89E               	btfss	158,4,c	;volatile
-  2149  00740A  EF09  F03A         	goto	u531
-  2150  00740E  EF0B  F03A         	goto	u530
-  2151  007412                     u531:
-  2152  007412  EF04  F03A         	goto	l90
-  2153  007416                     u530:
-  2154  007416                     
-  2155                           ;UART.c: 28:     TXREG= data;
-  2156  007416  C001  FFAD         	movff	UARTWrite@data,4013	;volatile
-  2157  00741A  0012               	return		;funcret
-  2158  00741C                     __end_of_UARTWrite:
-  2159                           	opt callstack 0
-  2160                           
-  2161 ;; *************** function _PWM *****************
-  2162 ;; Defined at:
-  2163 ;;		line 19 in file "PWM.c"
-  2164 ;; Parameters:    Size  Location     Type
-  2165 ;;		None
-  2166 ;; Auto vars:     Size  Location     Type
-  2167 ;;		None
-  2168 ;; Return value:  Size  Location     Type
-  2169 ;;                  1    wreg      void 
-  2170 ;; Registers used:
-  2171 ;;		wreg, status,2, status,0, prodl, prodh, cstack
-  2172 ;; Tracked objects:
-  2173 ;;		On entry : 0/0
-  2174 ;;		On exit  : 0/0
-  2175 ;;		Unchanged: 0/0
-  2176 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-  2177 ;;      Params:         0       0       0       0       0       0       0       0       0
-  2178 ;;      Locals:         0       0       0       0       0       0       0       0       0
-  2179 ;;      Temps:          0       0       0       0       0       0       0       0       0
-  2180 ;;      Totals:         0       0       0       0       0       0       0       0       0
-  2181 ;;Total ram usage:        0 bytes
-  2182 ;; Hardware stack levels used:    1
-  2183 ;; Hardware stack levels required when called:    2
-  2184 ;; This function calls:
-  2185 ;;		_ContarPulsos
-  2186 ;;		___wmul
-  2187 ;; This function is called by:
-  2188 ;;		_Movimiento
-  2189 ;; This function uses a non-reentrant model
-  2190 ;;
-  2191                           
-  2192                           	psect	text14
-  2193  007D0E                     __ptext14:
-  2194                           	opt callstack 0
-  2195  007D0E                     _PWM:
-  2196                           	opt callstack 27
-  2197  007D0E                     
-  2198                           ;PWM.c: 21:     BanderaDisX= 1;
-  2199  007D0E  0E00               	movlw	0
-  2200  007D10  6E2E               	movwf	(_BanderaDisX+1)^0,c
-  2201  007D12  0E01               	movlw	1
-  2202  007D14  6E2D               	movwf	_BanderaDisX^0,c
-  2203                           
-  2204                           ;PWM.c: 22:     BanderaDisY= 1;
-  2205  007D16  0E00               	movlw	0
-  2206  007D18  6E2C               	movwf	(_BanderaDisY+1)^0,c
-  2207  007D1A  0E01               	movlw	1
-  2208  007D1C  6E2B               	movwf	_BanderaDisY^0,c
-  2209  007D1E                     
-  2210                           ;PWM.c: 27:     if (CoordAntX==0) CoordRelatX=cord_x;
-  2211  007D1E  503B               	movf	_CoordAntX^0,w,c
-  2212  007D20  103C               	iorwf	(_CoordAntX+1)^0,w,c
-  2213  007D22  A4D8               	btfss	status,2,c
-  2214  007D24  EF96  F03E         	goto	u761
-  2215  007D28  EF98  F03E         	goto	u760
-  2216  007D2C                     u761:
-  2217  007D2C  EF9E  F03E         	goto	l1983
-  2218  007D30                     u760:
-  2219  007D30  C045  F041         	movff	_cord_x,_CoordRelatX
-  2220  007D34  C046  F042         	movff	_cord_x+1,_CoordRelatX+1
-  2221  007D38  EFA4  F03E         	goto	l234
-  2222  007D3C                     l1983:
-  2223  007D3C  503B               	movf	_CoordAntX^0,w,c
-  2224  007D3E  5C45               	subwf	_cord_x^0,w,c
-  2225  007D40  6E41               	movwf	_CoordRelatX^0,c
-  2226  007D42  503C               	movf	(_CoordAntX+1)^0,w,c
-  2227  007D44  5846               	subwfb	(_cord_x+1)^0,w,c
-  2228  007D46  6E42               	movwf	(_CoordRelatX+1)^0,c
-  2229  007D48                     l234:
-  2230                           
-  2231                           ;PWM.c: 31:     if (CoordRelatX<0){
-  2232  007D48  BE42               	btfsc	(_CoordRelatX+1)^0,7,c
-  2233  007D4A  EFAB  F03E         	goto	u770
-  2234  007D4E  EFA9  F03E         	goto	u771
-  2235  007D52                     u771:
-  2236  007D52  EFB7  F03E         	goto	l235
-  2237  007D56                     u770:
-  2238  007D56                     
-  2239                           ;PWM.c: 32:         PORTDbits.RD0=0;
-  2240  007D56  9083               	bcf	131,0,c	;volatile
-  2241                           
-  2242                           ;PWM.c: 33:         PORTDbits.RD1=0;
-  2243  007D58  9283               	bcf	131,1,c	;volatile
-  2244  007D5A                     
-  2245                           ;PWM.c: 34:         CoordRelatX=CoordRelatX*(-1);
-  2246  007D5A  6C41               	negf	_CoordRelatX^0,c
-  2247  007D5C  1E42               	comf	(_CoordRelatX+1)^0,f,c
-  2248  007D5E  B0D8               	btfsc	status,0,c
-  2249  007D60  2A42               	incf	(_CoordRelatX+1)^0,f,c
-  2250  007D62                     
-  2251                           ;PWM.c: 35:         BanderaDisX= 0;
-  2252  007D62  0E00               	movlw	0
-  2253  007D64  6E2E               	movwf	(_BanderaDisX+1)^0,c
-  2254  007D66  0E00               	movlw	0
-  2255  007D68  6E2D               	movwf	_BanderaDisX^0,c
-  2256                           
-  2257                           ;PWM.c: 36:     }
-  2258  007D6A  EFBD  F03E         	goto	l1993
-  2259  007D6E                     l235:
-  2260                           
-  2261                           ;PWM.c: 38:             PORTDbits.RD0=1;
-  2262  007D6E  8083               	bsf	131,0,c	;volatile
-  2263                           
-  2264                           ;PWM.c: 39:             PORTDbits.RD1=1;
-  2265  007D70  8283               	bsf	131,1,c	;volatile
-  2266  007D72                     
-  2267                           ;PWM.c: 40:             BanderaDisX= 1;
-  2268  007D72  0E00               	movlw	0
-  2269  007D74  6E2E               	movwf	(_BanderaDisX+1)^0,c
-  2270  007D76  0E01               	movlw	1
-  2271  007D78  6E2D               	movwf	_BanderaDisX^0,c
-  2272  007D7A                     l1993:
-  2273                           
-  2274                           ;PWM.c: 43:     PasosX=CoordRelatX*5;
-  2275  007D7A  C041  F001         	movff	_CoordRelatX,___wmul@multiplier
-  2276  007D7E  C042  F002         	movff	_CoordRelatX+1,___wmul@multiplier+1
-  2277  007D82  0E00               	movlw	0
-  2278  007D84  6E04               	movwf	(___wmul@multiplicand+1)^0,c
-  2279  007D86  0E05               	movlw	5
-  2280  007D88  6E03               	movwf	___wmul@multiplicand^0,c
-  2281  007D8A  EC1D  F03A         	call	___wmul	;wreg free
-  2282  007D8E  C001  F031         	movff	?___wmul,_PasosX
-  2283  007D92  C002  F032         	movff	?___wmul+1,_PasosX+1
-  2284  007D96                     
-  2285                           ;PWM.c: 44:     ContarPulsos(PasosX);
-  2286  007D96  C031  F001         	movff	_PasosX,ContarPulsos@pasos
-  2287  007D9A  C032  F002         	movff	_PasosX+1,ContarPulsos@pasos+1
-  2288  007D9E  ECD1  F03A         	call	_ContarPulsos	;wreg free
-  2289  007DA2                     
-  2290                           ;PWM.c: 47:     if(BanderaDisX= 0) CoordAntX= CoordAntX-CoordRelatX;
-  2291  007DA2  0E00               	movlw	0
-  2292  007DA4  6E2E               	movwf	(_BanderaDisX+1)^0,c
-  2293  007DA6  0E00               	movlw	0
-  2294  007DA8  6E2D               	movwf	_BanderaDisX^0,c
-  2295  007DAA                     
-  2296                           ;PWM.c: 49:         if (BanderaDisX= 1) CoordAntX=CoordAntX+CoordRelatX;
-  2297  007DAA  0E00               	movlw	0
-  2298  007DAC  6E2E               	movwf	(_BanderaDisX+1)^0,c
-  2299  007DAE  0E01               	movlw	1
-  2300  007DB0  6E2D               	movwf	_BanderaDisX^0,c
-  2301  007DB2  503B               	movf	_CoordAntX^0,w,c
-  2302  007DB4  2441               	addwf	_CoordRelatX^0,w,c
-  2303  007DB6  6E3B               	movwf	_CoordAntX^0,c
-  2304  007DB8  503C               	movf	(_CoordAntX+1)^0,w,c
-  2305  007DBA  2042               	addwfc	(_CoordRelatX+1)^0,w,c
-  2306  007DBC  6E3C               	movwf	(_CoordAntX+1)^0,c
-  2307  007DBE                     
-  2308                           ;PWM.c: 56:     if (CoordAntY==0) CoordRelatY=cord_y;
-  2309  007DBE  5039               	movf	_CoordAntY^0,w,c
-  2310  007DC0  103A               	iorwf	(_CoordAntY+1)^0,w,c
-  2311  007DC2  A4D8               	btfss	status,2,c
-  2312  007DC4  EFE6  F03E         	goto	u781
-  2313  007DC8  EFE8  F03E         	goto	u780
-  2314  007DCC                     u781:
-  2315  007DCC  EFEE  F03E         	goto	l2009
-  2316  007DD0                     u780:
-  2317  007DD0  C043  F03F         	movff	_cord_y,_CoordRelatY
-  2318  007DD4  C044  F040         	movff	_cord_y+1,_CoordRelatY+1
-  2319  007DD8  EFF4  F03E         	goto	l241
-  2320  007DDC                     l2009:
-  2321  007DDC  5039               	movf	_CoordAntY^0,w,c
-  2322  007DDE  5C43               	subwf	_cord_y^0,w,c
-  2323  007DE0  6E3F               	movwf	_CoordRelatY^0,c
-  2324  007DE2  503A               	movf	(_CoordAntY+1)^0,w,c
-  2325  007DE4  5844               	subwfb	(_cord_y+1)^0,w,c
-  2326  007DE6  6E40               	movwf	(_CoordRelatY+1)^0,c
-  2327  007DE8                     l241:
-  2328                           
-  2329                           ;PWM.c: 59:     if (CoordRelatY<0){
-  2330  007DE8  BE40               	btfsc	(_CoordRelatY+1)^0,7,c
-  2331  007DEA  EFFB  F03E         	goto	u790
-  2332  007DEE  EFF9  F03E         	goto	u791
-  2333  007DF2                     u791:
-  2334  007DF2  EF07  F03F         	goto	l242
-  2335  007DF6                     u790:
-  2336  007DF6                     
-  2337                           ;PWM.c: 60:         PORTDbits.RD0=0;
-  2338  007DF6  9083               	bcf	131,0,c	;volatile
-  2339                           
-  2340                           ;PWM.c: 61:         PORTDbits.RD1=1;
-  2341  007DF8  8283               	bsf	131,1,c	;volatile
-  2342  007DFA                     
-  2343                           ;PWM.c: 62:         CoordRelatY=CoordRelatY*(-1);
-  2344  007DFA  6C3F               	negf	_CoordRelatY^0,c
-  2345  007DFC  1E40               	comf	(_CoordRelatY+1)^0,f,c
-  2346  007DFE  B0D8               	btfsc	status,0,c
-  2347  007E00  2A40               	incf	(_CoordRelatY+1)^0,f,c
-  2348  007E02                     
-  2349                           ;PWM.c: 63:         BanderaDisY= 0;
-  2350  007E02  0E00               	movlw	0
-  2351  007E04  6E2C               	movwf	(_BanderaDisY+1)^0,c
-  2352  007E06  0E00               	movlw	0
-  2353  007E08  6E2B               	movwf	_BanderaDisY^0,c
-  2354                           
-  2355                           ;PWM.c: 64:     }
-  2356  007E0A  EF0D  F03F         	goto	l2019
-  2357  007E0E                     l242:
-  2358                           
-  2359                           ;PWM.c: 66:         PORTDbits.RD0=1;
-  2360  007E0E  8083               	bsf	131,0,c	;volatile
-  2361                           
-  2362                           ;PWM.c: 67:         PORTDbits.RD1=1;
-  2363  007E10  8283               	bsf	131,1,c	;volatile
-  2364  007E12                     
-  2365                           ;PWM.c: 68:          BanderaDisY= 1;
-  2366  007E12  0E00               	movlw	0
-  2367  007E14  6E2C               	movwf	(_BanderaDisY+1)^0,c
-  2368  007E16  0E01               	movlw	1
-  2369  007E18  6E2B               	movwf	_BanderaDisY^0,c
-  2370  007E1A                     l2019:
-  2371                           
-  2372                           ;PWM.c: 71:     PasosY=CoordRelatY*5;
-  2373  007E1A  C03F  F001         	movff	_CoordRelatY,___wmul@multiplier
-  2374  007E1E  C040  F002         	movff	_CoordRelatY+1,___wmul@multiplier+1
-  2375  007E22  0E00               	movlw	0
-  2376  007E24  6E04               	movwf	(___wmul@multiplicand+1)^0,c
-  2377  007E26  0E05               	movlw	5
-  2378  007E28  6E03               	movwf	___wmul@multiplicand^0,c
-  2379  007E2A  EC1D  F03A         	call	___wmul	;wreg free
-  2380  007E2E  C001  F02F         	movff	?___wmul,_PasosY
-  2381  007E32  C002  F030         	movff	?___wmul+1,_PasosY+1
-  2382  007E36                     
-  2383                           ;PWM.c: 72:     ContarPulsos(PasosY);
-  2384  007E36  C02F  F001         	movff	_PasosY,ContarPulsos@pasos
-  2385  007E3A  C030  F002         	movff	_PasosY+1,ContarPulsos@pasos+1
-  2386  007E3E  ECD1  F03A         	call	_ContarPulsos	;wreg free
-  2387  007E42                     
-  2388                           ;PWM.c: 75:     if(BanderaDisY= 0) CoordAntY= CoordAntY-CoordRelatY;
-  2389  007E42  0E00               	movlw	0
-  2390  007E44  6E2C               	movwf	(_BanderaDisY+1)^0,c
-  2391  007E46  0E00               	movlw	0
-  2392  007E48  6E2B               	movwf	_BanderaDisY^0,c
-  2393  007E4A                     
-  2394                           ;PWM.c: 77:         if (BanderaDisY= 1) CoordAntY=CoordAntY+CoordRelatY;
-  2395  007E4A  0E00               	movlw	0
-  2396  007E4C  6E2C               	movwf	(_BanderaDisY+1)^0,c
-  2397  007E4E  0E01               	movlw	1
-  2398  007E50  6E2B               	movwf	_BanderaDisY^0,c
-  2399  007E52  5039               	movf	_CoordAntY^0,w,c
-  2400  007E54  243F               	addwf	_CoordRelatY^0,w,c
-  2401  007E56  6E39               	movwf	_CoordAntY^0,c
-  2402  007E58  503A               	movf	(_CoordAntY+1)^0,w,c
-  2403  007E5A  2040               	addwfc	(_CoordRelatY+1)^0,w,c
-  2404  007E5C  6E3A               	movwf	(_CoordAntY+1)^0,c
-  2405  007E5E  0012               	return		;funcret
-  2406  007E60                     __end_of_PWM:
-  2407                           	opt callstack 0
-  2408                           
-  2409 ;; *************** function ___wmul *****************
-  2410 ;; Defined at:
-  2411 ;;		line 15 in file "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c"
-  2412 ;; Parameters:    Size  Location     Type
-  2413 ;;  multiplier      2    0[COMRAM] unsigned int 
-  2414 ;;  multiplicand    2    2[COMRAM] unsigned int 
-  2415 ;; Auto vars:     Size  Location     Type
-  2416 ;;  product         2    4[COMRAM] unsigned int 
-  2417 ;; Return value:  Size  Location     Type
-  2418 ;;                  2    0[COMRAM] unsigned int 
-  2419 ;; Registers used:
-  2420 ;;		wreg, status,2, status,0, prodl, prodh
-  2421 ;; Tracked objects:
-  2422 ;;		On entry : 0/0
-  2423 ;;		On exit  : 0/0
-  2424 ;;		Unchanged: 0/0
-  2425 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-  2426 ;;      Params:         4       0       0       0       0       0       0       0       0
-  2427 ;;      Locals:         2       0       0       0       0       0       0       0       0
-  2428 ;;      Temps:          0       0       0       0       0       0       0       0       0
-  2429 ;;      Totals:         6       0       0       0       0       0       0       0       0
-  2430 ;;Total ram usage:        6 bytes
-  2431 ;; Hardware stack levels used:    1
-  2432 ;; This function calls:
-  2433 ;;		Nothing
-  2434 ;; This function is called by:
-  2435 ;;		_PWM
-  2436 ;; This function uses a non-reentrant model
-  2437 ;;
-  2438                           
-  2439                           	psect	text15
-  2440  00743A                     __ptext15:
-  2441                           	opt callstack 0
-  2442  00743A                     ___wmul:
-  2443                           	opt callstack 28
-  2444  00743A  5001               	movf	___wmul@multiplier^0,w,c
-  2445  00743C  0203               	mulwf	___wmul@multiplicand^0,c
-  2446  00743E  CFF3 F005          	movff	prodl,___wmul@product
-  2447  007442  CFF4 F006          	movff	prodh,___wmul@product+1
-  2448  007446  5001               	movf	___wmul@multiplier^0,w,c
-  2449  007448  0204               	mulwf	(___wmul@multiplicand+1)^0,c
-  2450  00744A  50F3               	movf	243,w,c
-  2451  00744C  2606               	addwf	(___wmul@product+1)^0,f,c
-  2452  00744E  5002               	movf	(___wmul@multiplier+1)^0,w,c
-  2453  007450  0203               	mulwf	___wmul@multiplicand^0,c
-  2454  007452  50F3               	movf	243,w,c
-  2455  007454  2606               	addwf	(___wmul@product+1)^0,f,c
-  2456  007456  C005  F001         	movff	___wmul@product,?___wmul
-  2457  00745A  C006  F002         	movff	___wmul@product+1,?___wmul+1
-  2458  00745E  0012               	return		;funcret
-  2459  007460                     __end_of___wmul:
-  2460                           	opt callstack 0
-  2461                           
-  2462 ;; *************** function _ContarPulsos *****************
-  2463 ;; Defined at:
-  2464 ;;		line 82 in file "PWM.c"
-  2465 ;; Parameters:    Size  Location     Type
-  2466 ;;  pasos           2    0[COMRAM] int 
-  2467 ;; Auto vars:     Size  Location     Type
-  2468 ;;		None
-  2469 ;; Return value:  Size  Location     Type
-  2470 ;;                  2    0[COMRAM] int 
-  2471 ;; Registers used:
-  2472 ;;		wreg, status,2, status,0, cstack
-  2473 ;; Tracked objects:
-  2474 ;;		On entry : 0/0
-  2475 ;;		On exit  : 0/0
-  2476 ;;		Unchanged: 0/0
-  2477 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-  2478 ;;      Params:         2       0       0       0       0       0       0       0       0
-  2479 ;;      Locals:         0       0       0       0       0       0       0       0       0
-  2480 ;;      Temps:          0       0       0       0       0       0       0       0       0
-  2481 ;;      Totals:         2       0       0       0       0       0       0       0       0
-  2482 ;;Total ram usage:        2 bytes
-  2483 ;; Hardware stack levels used:    1
-  2484 ;; Hardware stack levels required when called:    1
-  2485 ;; This function calls:
-  2486 ;;		_OneShot
-  2487 ;;		_ResetOneShot
-  2488 ;; This function is called by:
-  2489 ;;		_PWM
-  2490 ;; This function uses a non-reentrant model
-  2491 ;;
-  2492                           
-  2493                           	psect	text16
-  2494  0075A2                     __ptext16:
-  2495                           	opt callstack 0
-  2496  0075A2                     _ContarPulsos:
-  2497                           	opt callstack 27
-  2498  0075A2                     
-  2499                           ;PWM.c: 83:     PasosActuales=0;
-  2500  0075A2  0E00               	movlw	0
-  2501  0075A4  6E36               	movwf	(_PasosActuales+1)^0,c
-  2502  0075A6  0E00               	movlw	0
-  2503  0075A8  6E35               	movwf	_PasosActuales^0,c
-  2504                           
-  2505                           ;PWM.c: 84:     ons=0;
-  2506  0075AA  0E00               	movlw	0
-  2507  0075AC  6E34               	movwf	(_ons+1)^0,c
-  2508  0075AE  0E00               	movlw	0
-  2509  0075B0  6E33               	movwf	_ons^0,c
-  2510  0075B2                     
-  2511                           ;PWM.c: 85:     PORTDbits.RD2=0;
-  2512  0075B2  9483               	bcf	131,2,c	;volatile
-  2513  0075B4                     
-  2514                           ;PWM.c: 86:     PORTDbits.RD3=0;
-  2515  0075B4  9683               	bcf	131,3,c	;volatile
-  2516                           
-  2517                           ;PWM.c: 87:     while(PasosActuales< pasos)
-  2518  0075B6  EFF1  F03A         	goto	l1743
-  2519  0075BA                     l251:
-  2520                           
-  2521                           ;PWM.c: 88:     {;PWM.c: 89:         if (PORTCbits.CCP1==1) OneShot();
-  2522  0075BA  A482               	btfss	130,2,c	;volatile
-  2523  0075BC  EFE2  F03A         	goto	u551
-  2524  0075C0  EFE4  F03A         	goto	u550
-  2525  0075C4                     u551:
-  2526  0075C4  EFE6  F03A         	goto	l1739
-  2527  0075C8                     u550:
-  2528  0075C8  EC45  F03A         	call	_OneShot	;wreg free
-  2529  0075CC                     l1739:
-  2530                           
-  2531                           ;PWM.c: 90:         if(ons==1) ResetOneShot();
-  2532  0075CC  0433               	decf	_ons^0,w,c
-  2533  0075CE  1034               	iorwf	(_ons+1)^0,w,c
-  2534  0075D0  A4D8               	btfss	status,2,c
-  2535  0075D2  EFED  F03A         	goto	u561
-  2536  0075D6  EFEF  F03A         	goto	u560
-  2537  0075DA                     u561:
-  2538  0075DA  EFF1  F03A         	goto	l1743
-  2539  0075DE                     u560:
-  2540  0075DE  EC30  F03A         	call	_ResetOneShot	;wreg free
-  2541  0075E2                     l1743:
-  2542                           
-  2543                           ;PWM.c: 87:     while(PasosActuales< pasos)
-  2544  0075E2  5001               	movf	ContarPulsos@pasos^0,w,c
-  2545  0075E4  5C35               	subwf	_PasosActuales^0,w,c
-  2546  0075E6  5002               	movf	(ContarPulsos@pasos+1)^0,w,c
-  2547  0075E8  5836               	subwfb	(_PasosActuales+1)^0,w,c
-  2548  0075EA  A0D8               	btfss	status,0,c
-  2549  0075EC  EFFA  F03A         	goto	u571
-  2550  0075F0  EFFC  F03A         	goto	u570
-  2551  0075F4                     u571:
-  2552  0075F4  EFDD  F03A         	goto	l251
-  2553  0075F8                     u570:
-  2554  0075F8                     
-  2555                           ;PWM.c: 93:     PORTDbits.RD2=1;
-  2556  0075F8  8483               	bsf	131,2,c	;volatile
-  2557                           
-  2558                           ;PWM.c: 94:     PORTDbits.RD3=1;
-  2559  0075FA  8683               	bsf	131,3,c	;volatile
-  2560  0075FC  0012               	return		;funcret
-  2561  0075FE                     __end_of_ContarPulsos:
-  2562                           	opt callstack 0
-  2563                           
-  2564 ;; *************** function _ResetOneShot *****************
-  2565 ;; Defined at:
-  2566 ;;		line 107 in file "PWM.c"
-  2567 ;; Parameters:    Size  Location     Type
-  2568 ;;		None
-  2569 ;; Auto vars:     Size  Location     Type
-  2570 ;;		None
-  2571 ;; Return value:  Size  Location     Type
-  2572 ;;                  1    wreg      void 
-  2573 ;; Registers used:
-  2574 ;;		wreg, status,2
-  2575 ;; Tracked objects:
-  2576 ;;		On entry : 0/0
-  2577 ;;		On exit  : 0/0
-  2578 ;;		Unchanged: 0/0
-  2579 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-  2580 ;;      Params:         0       0       0       0       0       0       0       0       0
-  2581 ;;      Locals:         0       0       0       0       0       0       0       0       0
-  2582 ;;      Temps:          0       0       0       0       0       0       0       0       0
-  2583 ;;      Totals:         0       0       0       0       0       0       0       0       0
-  2584 ;;Total ram usage:        0 bytes
-  2585 ;; Hardware stack levels used:    1
-  2586 ;; This function calls:
-  2587 ;;		Nothing
-  2588 ;; This function is called by:
-  2589 ;;		_ContarPulsos
-  2590 ;; This function uses a non-reentrant model
-  2591 ;;
-  2592                           
-  2593                           	psect	text17
-  2594  007460                     __ptext17:
-  2595                           	opt callstack 0
-  2596  007460                     _ResetOneShot:
-  2597                           	opt callstack 27
-  2598  007460                     
-  2599                           ;PWM.c: 108:     if(PORTCbits.CCP1==1)return;
-  2600  007460  A482               	btfss	130,2,c	;volatile
-  2601  007462  EF35  F03A         	goto	u511
-  2602  007466  EF37  F03A         	goto	u510
-  2603  00746A                     u511:
-  2604  00746A  EF39  F03A         	goto	l263
-  2605  00746E                     u510:
-  2606  00746E  EF44  F03A         	goto	l264
-  2607  007472                     l263:
-  2608                           
-  2609                           ;PWM.c: 109:     if(PORTCbits.CCP1==0)ons=0;
-  2610  007472  B482               	btfsc	130,2,c	;volatile
-  2611  007474  EF3E  F03A         	goto	u521
-  2612  007478  EF40  F03A         	goto	u520
-  2613  00747C                     u521:
-  2614  00747C  EF44  F03A         	goto	l264
-  2615  007480                     u520:
-  2616  007480  0E00               	movlw	0
-  2617  007482  6E34               	movwf	(_ons+1)^0,c
-  2618  007484  0E00               	movlw	0
-  2619  007486  6E33               	movwf	_ons^0,c
-  2620  007488                     l264:
-  2621  007488  0012               	return		;funcret
-  2622  00748A                     __end_of_ResetOneShot:
-  2623                           	opt callstack 0
-  2624                           
-  2625 ;; *************** function _OneShot *****************
-  2626 ;; Defined at:
-  2627 ;;		line 98 in file "PWM.c"
-  2628 ;; Parameters:    Size  Location     Type
-  2629 ;;		None
-  2630 ;; Auto vars:     Size  Location     Type
-  2631 ;;		None
-  2632 ;; Return value:  Size  Location     Type
-  2633 ;;                  1    wreg      void 
-  2634 ;; Registers used:
-  2635 ;;		wreg, status,2, status,0
-  2636 ;; Tracked objects:
-  2637 ;;		On entry : 0/0
-  2638 ;;		On exit  : 0/0
-  2639 ;;		Unchanged: 0/0
-  2640 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-  2641 ;;      Params:         0       0       0       0       0       0       0       0       0
-  2642 ;;      Locals:         0       0       0       0       0       0       0       0       0
-  2643 ;;      Temps:          0       0       0       0       0       0       0       0       0
-  2644 ;;      Totals:         0       0       0       0       0       0       0       0       0
-  2645 ;;Total ram usage:        0 bytes
-  2646 ;; Hardware stack levels used:    1
-  2647 ;; This function calls:
-  2648 ;;		Nothing
-  2649 ;; This function is called by:
-  2650 ;;		_ContarPulsos
-  2651 ;; This function uses a non-reentrant model
-  2652 ;;
-  2653                           
-  2654                           	psect	text18
-  2655  00748A                     __ptext18:
-  2656                           	opt callstack 0
-  2657  00748A                     _OneShot:
-  2658                           	opt callstack 27
-  2659  00748A                     
-  2660                           ;PWM.c: 99:     if(ons==1) return;
-  2661  00748A  0433               	decf	_ons^0,w,c
-  2662  00748C  1034               	iorwf	(_ons+1)^0,w,c
-  2663  00748E  A4D8               	btfss	status,2,c
-  2664  007490  EF4C  F03A         	goto	u491
-  2665  007494  EF4E  F03A         	goto	u490
-  2666  007498                     u491:
-  2667  007498  EF50  F03A         	goto	l258
-  2668  00749C                     u490:
-  2669  00749C  EF5D  F03A         	goto	l259
-  2670  0074A0                     l258:
-  2671                           
-  2672                           ;PWM.c: 100:     if(PORTCbits.CCP1==1)
-  2673  0074A0  A482               	btfss	130,2,c	;volatile
-  2674  0074A2  EF55  F03A         	goto	u501
-  2675  0074A6  EF57  F03A         	goto	u500
-  2676  0074AA                     u501:
-  2677  0074AA  EF5D  F03A         	goto	l259
-  2678  0074AE                     u500:
-  2679  0074AE                     
-  2680                           ;PWM.c: 101:     {;PWM.c: 102:         PasosActuales++;
-  2681  0074AE  4A35               	infsnz	_PasosActuales^0,f,c
-  2682  0074B0  2A36               	incf	(_PasosActuales+1)^0,f,c
-  2683  0074B2                     
-  2684                           ;PWM.c: 103:         ons=1;
-  2685  0074B2  0E00               	movlw	0
-  2686  0074B4  6E34               	movwf	(_ons+1)^0,c
-  2687  0074B6  0E01               	movlw	1
-  2688  0074B8  6E33               	movwf	_ons^0,c
-  2689  0074BA                     l259:
-  2690  0074BA  0012               	return		;funcret
-  2691  0074BC                     __end_of_OneShot:
-  2692                           	opt callstack 0
-  2693                           
-  2694 ;; *************** function _Configuracion *****************
-  2695 ;; Defined at:
-  2696 ;;		line 10 in file "CONFIGUR.c"
-  2697 ;; Parameters:    Size  Location     Type
-  2698 ;;		None
-  2699 ;; Auto vars:     Size  Location     Type
-  2700 ;;		None
-  2701 ;; Return value:  Size  Location     Type
-  2702 ;;                  1    wreg      void 
-  2703 ;; Registers used:
-  2704 ;;		wreg, status,2, status,0, cstack
-  2705 ;; Tracked objects:
-  2706 ;;		On entry : 0/0
-  2707 ;;		On exit  : 0/0
-  2708 ;;		Unchanged: 0/0
-  2709 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-  2710 ;;      Params:         0       0       0       0       0       0       0       0       0
-  2711 ;;      Locals:         0       0       0       0       0       0       0       0       0
-  2712 ;;      Temps:          0       0       0       0       0       0       0       0       0
-  2713 ;;      Totals:         0       0       0       0       0       0       0       0       0
-  2714 ;;Total ram usage:        0 bytes
-  2715 ;; Hardware stack levels used:    1
-  2716 ;; Hardware stack levels required when called:    2
-  2717 ;; This function calls:
-  2718 ;;		_UARTConfi
-  2719 ;; This function is called by:
-  2720 ;;		_main
-  2721 ;; This function uses a non-reentrant model
-  2722 ;;
-  2723                           
-  2724                           	psect	text19
-  2725  0075FE                     __ptext19:
-  2726                           	opt callstack 0
-  2727  0075FE                     _Configuracion:
-  2728                           	opt callstack 28
-  2729  0075FE                     
-  2730                           ;CONFIGUR.c: 14:     OSCCON=0x72;
-  2731  0075FE  0E72               	movlw	114
-  2732  007600  6ED3               	movwf	211,c	;volatile
-  2733  007602                     
-  2734                           ;CONFIGUR.c: 18:    CMCON = 0xFF;
-  2735  007602  68B4               	setf	180,c	;volatile
-  2736  007604                     
-  2737                           ;CONFIGUR.c: 19:    CVRCONbits.CVREN = 0;
-  2738  007604  9EB5               	bcf	181,7,c	;volatile
-  2739                           
-  2740                           ;CONFIGUR.c: 20:    ADCON1 = 0x0F;
-  2741  007606  0E0F               	movlw	15
-  2742  007608  6EC1               	movwf	193,c	;volatile
-  2743                           
-  2744                           ;CONFIGUR.c: 24:    PORTD = 0x00;
-  2745  00760A  0E00               	movlw	0
-  2746  00760C  6E83               	movwf	131,c	;volatile
-  2747                           
-  2748                           ;CONFIGUR.c: 25:    LATD = 0x00;
-  2749  00760E  0E00               	movlw	0
-  2750  007610  6E8C               	movwf	140,c	;volatile
-  2751                           
-  2752                           ;CONFIGUR.c: 26:    TRISD = 0xF0;
-  2753  007612  0EF0               	movlw	240
-  2754  007614  6E95               	movwf	149,c	;volatile
-  2755                           
-  2756                           ;CONFIGUR.c: 28:    PORTC = 0x00;
-  2757  007616  0E00               	movlw	0
-  2758  007618  6E82               	movwf	130,c	;volatile
-  2759                           
-  2760                           ;CONFIGUR.c: 29:    LATC= 0x00;
-  2761  00761A  0E00               	movlw	0
-  2762  00761C  6E8B               	movwf	139,c	;volatile
-  2763                           
-  2764                           ;CONFIGUR.c: 30:    TRISC= 0x00;
-  2765  00761E  0E00               	movlw	0
-  2766  007620  6E94               	movwf	148,c	;volatile
-  2767                           
-  2768                           ;CONFIGUR.c: 32:    PORTB = 0x00;
-  2769  007622  0E00               	movlw	0
-  2770  007624  6E81               	movwf	129,c	;volatile
-  2771                           
-  2772                           ;CONFIGUR.c: 33:    LATB= 0x00;
-  2773  007626  0E00               	movlw	0
-  2774  007628  6E8A               	movwf	138,c	;volatile
-  2775  00762A                     
-  2776                           ;CONFIGUR.c: 34:    TRISB= 0xFF;
-  2777  00762A  6893               	setf	147,c	;volatile
-  2778  00762C                     
-  2779                           ;CONFIGUR.c: 38:    UARTConfi(9600);
-  2780  00762C  0E25               	movlw	37
-  2781  00762E  6E10               	movwf	(UARTConfi@BAUD+1)^0,c
-  2782  007630  0E80               	movlw	128
-  2783  007632  6E0F               	movwf	UARTConfi@BAUD^0,c
-  2784  007634  EC60  F03B         	call	_UARTConfi	;wreg free
-  2785  007638                     
-  2786                           ;CONFIGUR.c: 39:     TRISC=0X00;
-  2787  007638  0E00               	movlw	0
-  2788  00763A  6E94               	movwf	148,c	;volatile
-  2789  00763C                     
-  2790                           ;CONFIGUR.c: 43:      PR2 = 0xF9;
-  2791  00763C  0EF9               	movlw	249
-  2792  00763E  6ECB               	movwf	203,c	;volatile
-  2793  007640                     
-  2794                           ;CONFIGUR.c: 46:     CCP1CON = 0x0C;
-  2795  007640  0E0C               	movlw	12
-  2796  007642  6EBD               	movwf	189,c	;volatile
-  2797  007644                     
-  2798                           ;CONFIGUR.c: 47:     CCPR1L = 0x7D;
-  2799  007644  0E7D               	movlw	125
-  2800  007646  6EBE               	movwf	190,c	;volatile
-  2801  007648                     
-  2802                           ;CONFIGUR.c: 50:     CCP2CON = 0x0C;
-  2803  007648  0E0C               	movlw	12
-  2804  00764A  6EBA               	movwf	186,c	;volatile
-  2805  00764C                     
-  2806                           ;CONFIGUR.c: 51:     CCPR2L = 0x7D;
-  2807  00764C  0E7D               	movlw	125
-  2808  00764E  6EBB               	movwf	187,c	;volatile
-  2809  007650                     
-  2810                           ;CONFIGUR.c: 54:     T2CON = 0x03;
-  2811  007650  0E03               	movlw	3
-  2812  007652  6ECA               	movwf	202,c	;volatile
-  2813  007654                     
-  2814                           ;CONFIGUR.c: 55:     TMR2 = 0;
-  2815  007654  0E00               	movlw	0
-  2816  007656  6ECC               	movwf	204,c	;volatile
-  2817  007658                     
-  2818                           ;CONFIGUR.c: 56:     TMR2ON = 1;
-  2819  007658  84CA               	bsf	4042,2,c	;volatile
-  2820  00765A  0012               	return		;funcret
-  2821  00765C                     __end_of_Configuracion:
-  2822                           	opt callstack 0
-  2823                           
-  2824 ;; *************** function _UARTConfi *****************
-  2825 ;; Defined at:
-  2826 ;;		line 7 in file "UART.c"
-  2827 ;; Parameters:    Size  Location     Type
-  2828 ;;  BAUD            2   14[COMRAM] int 
-  2829 ;; Auto vars:     Size  Location     Type
-  2830 ;;		None
-  2831 ;; Return value:  Size  Location     Type
-  2832 ;;                  1    wreg      void 
-  2833 ;; Registers used:
-  2834 ;;		wreg, status,2, status,0, cstack
-  2835 ;; Tracked objects:
-  2836 ;;		On entry : 0/0
-  2837 ;;		On exit  : 0/0
-  2838 ;;		Unchanged: 0/0
-  2839 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-  2840 ;;      Params:         2       0       0       0       0       0       0       0       0
-  2841 ;;      Locals:         4       0       0       0       0       0       0       0       0
-  2842 ;;      Temps:          0       0       0       0       0       0       0       0       0
-  2843 ;;      Totals:         6       0       0       0       0       0       0       0       0
-  2844 ;;Total ram usage:        6 bytes
-  2845 ;; Hardware stack levels used:    1
-  2846 ;; Hardware stack levels required when called:    1
-  2847 ;; This function calls:
-  2848 ;;		___aldiv
-  2849 ;; This function is called by:
-  2850 ;;		_Configuracion
-  2851 ;; This function uses a non-reentrant model
-  2852 ;;
-  2853                           
-  2854                           	psect	text20
-  2855  0076C0                     __ptext20:
-  2856                           	opt callstack 0
-  2857  0076C0                     _UARTConfi:
-  2858                           	opt callstack 28
-  2859  0076C0                     
-  2860                           ;UART.c: 9:     TRISCbits.RC6=0;
-  2861  0076C0  9C94               	bcf	148,6,c	;volatile
-  2862                           
-  2863                           ;UART.c: 10:     TRISCbits.RC7=1;
-  2864  0076C2  8E94               	bsf	148,7,c	;volatile
-  2865  0076C4                     
-  2866                           ;UART.c: 12:     SPBRG = (unsigned char)((8000000L/BAUD)/64)-1;
-  2867  0076C4  C00F  F005         	movff	UARTConfi@BAUD,___aldiv@divisor
-  2868  0076C8  C010  F006         	movff	UARTConfi@BAUD+1,___aldiv@divisor+1
-  2869  0076CC  0E00               	movlw	0
-  2870  0076CE  BE06               	btfsc	(___aldiv@divisor+1)^0,7,c
-  2871  0076D0  0EFF               	movlw	-1
-  2872  0076D2  6E07               	movwf	(___aldiv@divisor+2)^0,c
-  2873  0076D4  6E08               	movwf	(___aldiv@divisor+3)^0,c
-  2874  0076D6  0E00               	movlw	0
-  2875  0076D8  6E01               	movwf	___aldiv@dividend^0,c
-  2876  0076DA  0E12               	movlw	18
-  2877  0076DC  6E02               	movwf	(___aldiv@dividend+1)^0,c
-  2878  0076DE  0E7A               	movlw	122
-  2879  0076E0  6E03               	movwf	(___aldiv@dividend+2)^0,c
-  2880  0076E2  0E00               	movlw	0
-  2881  0076E4  6E04               	movwf	(___aldiv@dividend+3)^0,c
-  2882  0076E6  EC01  F03E         	call	___aldiv	;wreg free
-  2883  0076EA  C001  F011         	movff	?___aldiv,_UARTConfi$1613
-  2884  0076EE  C002  F012         	movff	?___aldiv+1,_UARTConfi$1613+1
-  2885  0076F2  C003  F013         	movff	?___aldiv+2,_UARTConfi$1613+2
-  2886  0076F6  C004  F014         	movff	?___aldiv+3,_UARTConfi$1613+3
-  2887                           
-  2888                           ;UART.c: 12:     SPBRG = (unsigned char)((8000000L/BAUD)/64)-1;
-  2889  0076FA  C011  F001         	movff	_UARTConfi$1613,___aldiv@dividend
-  2890  0076FE  C012  F002         	movff	_UARTConfi$1613+1,___aldiv@dividend+1
-  2891  007702  C013  F003         	movff	_UARTConfi$1613+2,___aldiv@dividend+2
-  2892  007706  C014  F004         	movff	_UARTConfi$1613+3,___aldiv@dividend+3
-  2893  00770A  0E40               	movlw	64
-  2894  00770C  6E05               	movwf	___aldiv@divisor^0,c
-  2895  00770E  0E00               	movlw	0
-  2896  007710  6E06               	movwf	(___aldiv@divisor+1)^0,c
-  2897  007712  0E00               	movlw	0
-  2898  007714  6E07               	movwf	(___aldiv@divisor+2)^0,c
-  2899  007716  0E00               	movlw	0
-  2900  007718  6E08               	movwf	(___aldiv@divisor+3)^0,c
-  2901  00771A  EC01  F03E         	call	___aldiv	;wreg free
-  2902  00771E  0401               	decf	?___aldiv^0,w,c
-  2903  007720  6EAF               	movwf	175,c	;volatile
-  2904  007722                     
-  2905                           ;UART.c: 13:     TXSTAbits.BRGH = 0;
-  2906  007722  94AC               	bcf	172,2,c	;volatile
-  2907  007724                     
-  2908                           ;UART.c: 14:     TXSTAbits.SYNC = 0;
-  2909  007724  98AC               	bcf	172,4,c	;volatile
-  2910  007726                     
-  2911                           ;UART.c: 15:     RCSTAbits.SPEN = 1;
-  2912  007726  8EAB               	bsf	171,7,c	;volatile
-  2913  007728                     
-  2914                           ;UART.c: 18:     TXSTAbits.TX9 = 0;
-  2915  007728  9CAC               	bcf	172,6,c	;volatile
-  2916  00772A                     
-  2917                           ;UART.c: 19:     TXSTAbits.TXEN = 1;
-  2918  00772A  8AAC               	bsf	172,5,c	;volatile
-  2919  00772C                     
-  2920                           ;UART.c: 22:     RCSTAbits.RC9 = 0;
-  2921  00772C  9CAB               	bcf	171,6,c	;volatile
-  2922  00772E                     
-  2923                           ;UART.c: 23:     RCSTAbits.CREN = 1;
-  2924  00772E  88AB               	bsf	171,4,c	;volatile
-  2925  007730  0012               	return		;funcret
-  2926  007732                     __end_of_UARTConfi:
-  2927                           	opt callstack 0
-  2928                           
-  2929 ;; *************** function ___aldiv *****************
-  2930 ;; Defined at:
-  2931 ;;		line 7 in file "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c"
-  2932 ;; Parameters:    Size  Location     Type
-  2933 ;;  dividend        4    0[COMRAM] long 
-  2934 ;;  divisor         4    4[COMRAM] long 
-  2935 ;; Auto vars:     Size  Location     Type
-  2936 ;;  quotient        4   10[COMRAM] long 
-  2937 ;;  sign            1    9[COMRAM] unsigned char 
-  2938 ;;  counter         1    8[COMRAM] unsigned char 
-  2939 ;; Return value:  Size  Location     Type
-  2940 ;;                  4    0[COMRAM] long 
-  2941 ;; Registers used:
-  2942 ;;		wreg, status,2, status,0
-  2943 ;; Tracked objects:
-  2944 ;;		On entry : 0/0
-  2945 ;;		On exit  : 0/0
-  2946 ;;		Unchanged: 0/0
-  2947 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-  2948 ;;      Params:         8       0       0       0       0       0       0       0       0
-  2949 ;;      Locals:         6       0       0       0       0       0       0       0       0
-  2950 ;;      Temps:          0       0       0       0       0       0       0       0       0
-  2951 ;;      Totals:        14       0       0       0       0       0       0       0       0
-  2952 ;;Total ram usage:       14 bytes
-  2953 ;; Hardware stack levels used:    1
-  2954 ;; This function calls:
-  2955 ;;		Nothing
-  2956 ;; This function is called by:
-  2957 ;;		_UARTConfi
-  2958 ;; This function uses a non-reentrant model
-  2959 ;;
-  2960                           
-  2961                           	psect	text21
-  2962  007C02                     __ptext21:
-  2963                           	opt callstack 0
-  2964  007C02                     ___aldiv:
-  2965                           	opt callstack 28
-  2966  007C02  0E00               	movlw	0
-  2967  007C04  6E0A               	movwf	___aldiv@sign^0,c
-  2968  007C06  BE08               	btfsc	(___aldiv@divisor+3)^0,7,c
-  2969  007C08  EF0A  F03E         	goto	u580
-  2970  007C0C  EF08  F03E         	goto	u581
-  2971  007C10                     u581:
-  2972  007C10  EF14  F03E         	goto	l1759
-  2973  007C14                     u580:
-  2974  007C14  1E08               	comf	(___aldiv@divisor+3)^0,f,c
-  2975  007C16  1E07               	comf	(___aldiv@divisor+2)^0,f,c
-  2976  007C18  1E06               	comf	(___aldiv@divisor+1)^0,f,c
-  2977  007C1A  6C05               	negf	___aldiv@divisor^0,c
-  2978  007C1C  0E00               	movlw	0
-  2979  007C1E  2206               	addwfc	(___aldiv@divisor+1)^0,f,c
-  2980  007C20  2207               	addwfc	(___aldiv@divisor+2)^0,f,c
-  2981  007C22  2208               	addwfc	(___aldiv@divisor+3)^0,f,c
-  2982  007C24  0E01               	movlw	1
-  2983  007C26  6E0A               	movwf	___aldiv@sign^0,c
-  2984  007C28                     l1759:
-  2985  007C28  BE04               	btfsc	(___aldiv@dividend+3)^0,7,c
-  2986  007C2A  EF1B  F03E         	goto	u590
-  2987  007C2E  EF19  F03E         	goto	u591
-  2988  007C32                     u591:
-  2989  007C32  EF25  F03E         	goto	l1765
-  2990  007C36                     u590:
-  2991  007C36  1E04               	comf	(___aldiv@dividend+3)^0,f,c
-  2992  007C38  1E03               	comf	(___aldiv@dividend+2)^0,f,c
-  2993  007C3A  1E02               	comf	(___aldiv@dividend+1)^0,f,c
-  2994  007C3C  6C01               	negf	___aldiv@dividend^0,c
-  2995  007C3E  0E00               	movlw	0
-  2996  007C40  2202               	addwfc	(___aldiv@dividend+1)^0,f,c
-  2997  007C42  2203               	addwfc	(___aldiv@dividend+2)^0,f,c
-  2998  007C44  2204               	addwfc	(___aldiv@dividend+3)^0,f,c
-  2999  007C46  0E01               	movlw	1
-  3000  007C48  1A0A               	xorwf	___aldiv@sign^0,f,c
-  3001  007C4A                     l1765:
-  3002  007C4A  0E00               	movlw	0
-  3003  007C4C  6E0B               	movwf	___aldiv@quotient^0,c
-  3004  007C4E  0E00               	movlw	0
-  3005  007C50  6E0C               	movwf	(___aldiv@quotient+1)^0,c
-  3006  007C52  0E00               	movlw	0
-  3007  007C54  6E0D               	movwf	(___aldiv@quotient+2)^0,c
-  3008  007C56  0E00               	movlw	0
-  3009  007C58  6E0E               	movwf	(___aldiv@quotient+3)^0,c
-  3010  007C5A  5005               	movf	___aldiv@divisor^0,w,c
-  3011  007C5C  1006               	iorwf	(___aldiv@divisor+1)^0,w,c
-  3012  007C5E  1007               	iorwf	(___aldiv@divisor+2)^0,w,c
-  3013  007C60  1008               	iorwf	(___aldiv@divisor+3)^0,w,c
-  3014  007C62  B4D8               	btfsc	status,2,c
-  3015  007C64  EF36  F03E         	goto	u601
-  3016  007C68  EF38  F03E         	goto	u600
-  3017  007C6C                     u601:
-  3018  007C6C  EF6E  F03E         	goto	l1787
-  3019  007C70                     u600:
-  3020  007C70  0E01               	movlw	1
-  3021  007C72  6E09               	movwf	___aldiv@counter^0,c
-  3022  007C74  EF42  F03E         	goto	l1773
-  3023  007C78                     l1771:
-  3024  007C78  90D8               	bcf	status,0,c
-  3025  007C7A  3605               	rlcf	___aldiv@divisor^0,f,c
-  3026  007C7C  3606               	rlcf	(___aldiv@divisor+1)^0,f,c
-  3027  007C7E  3607               	rlcf	(___aldiv@divisor+2)^0,f,c
-  3028  007C80  3608               	rlcf	(___aldiv@divisor+3)^0,f,c
-  3029  007C82  2A09               	incf	___aldiv@counter^0,f,c
-  3030  007C84                     l1773:
-  3031  007C84  AE08               	btfss	(___aldiv@divisor+3)^0,7,c
-  3032  007C86  EF47  F03E         	goto	u611
-  3033  007C8A  EF49  F03E         	goto	u610
-  3034  007C8E                     u611:
-  3035  007C8E  EF3C  F03E         	goto	l1771
-  3036  007C92                     u610:
-  3037  007C92                     l1775:
-  3038  007C92  90D8               	bcf	status,0,c
-  3039  007C94  360B               	rlcf	___aldiv@quotient^0,f,c
-  3040  007C96  360C               	rlcf	(___aldiv@quotient+1)^0,f,c
-  3041  007C98  360D               	rlcf	(___aldiv@quotient+2)^0,f,c
-  3042  007C9A  360E               	rlcf	(___aldiv@quotient+3)^0,f,c
-  3043  007C9C  5005               	movf	___aldiv@divisor^0,w,c
-  3044  007C9E  5C01               	subwf	___aldiv@dividend^0,w,c
-  3045  007CA0  5006               	movf	(___aldiv@divisor+1)^0,w,c
-  3046  007CA2  5802               	subwfb	(___aldiv@dividend+1)^0,w,c
-  3047  007CA4  5007               	movf	(___aldiv@divisor+2)^0,w,c
-  3048  007CA6  5803               	subwfb	(___aldiv@dividend+2)^0,w,c
-  3049  007CA8  5008               	movf	(___aldiv@divisor+3)^0,w,c
-  3050  007CAA  5804               	subwfb	(___aldiv@dividend+3)^0,w,c
-  3051  007CAC  A0D8               	btfss	status,0,c
-  3052  007CAE  EF5B  F03E         	goto	u621
-  3053  007CB2  EF5D  F03E         	goto	u620
-  3054  007CB6                     u621:
-  3055  007CB6  EF66  F03E         	goto	l1783
-  3056  007CBA                     u620:
-  3057  007CBA  5005               	movf	___aldiv@divisor^0,w,c
-  3058  007CBC  5E01               	subwf	___aldiv@dividend^0,f,c
-  3059  007CBE  5006               	movf	(___aldiv@divisor+1)^0,w,c
-  3060  007CC0  5A02               	subwfb	(___aldiv@dividend+1)^0,f,c
-  3061  007CC2  5007               	movf	(___aldiv@divisor+2)^0,w,c
-  3062  007CC4  5A03               	subwfb	(___aldiv@dividend+2)^0,f,c
-  3063  007CC6  5008               	movf	(___aldiv@divisor+3)^0,w,c
-  3064  007CC8  5A04               	subwfb	(___aldiv@dividend+3)^0,f,c
-  3065  007CCA  800B               	bsf	___aldiv@quotient^0,0,c
-  3066  007CCC                     l1783:
-  3067  007CCC  90D8               	bcf	status,0,c
-  3068  007CCE  3208               	rrcf	(___aldiv@divisor+3)^0,f,c
-  3069  007CD0  3207               	rrcf	(___aldiv@divisor+2)^0,f,c
-  3070  007CD2  3206               	rrcf	(___aldiv@divisor+1)^0,f,c
-  3071  007CD4  3205               	rrcf	___aldiv@divisor^0,f,c
-  3072  007CD6  2E09               	decfsz	___aldiv@counter^0,f,c
-  3073  007CD8  EF49  F03E         	goto	l1775
-  3074  007CDC                     l1787:
-  3075  007CDC  500A               	movf	___aldiv@sign^0,w,c
-  3076  007CDE  B4D8               	btfsc	status,2,c
-  3077  007CE0  EF74  F03E         	goto	u631
-  3078  007CE4  EF76  F03E         	goto	u630
-  3079  007CE8                     u631:
-  3080  007CE8  EF7E  F03E         	goto	l1791
-  3081  007CEC                     u630:
-  3082  007CEC  1E0E               	comf	(___aldiv@quotient+3)^0,f,c
-  3083  007CEE  1E0D               	comf	(___aldiv@quotient+2)^0,f,c
-  3084  007CF0  1E0C               	comf	(___aldiv@quotient+1)^0,f,c
-  3085  007CF2  6C0B               	negf	___aldiv@quotient^0,c
-  3086  007CF4  0E00               	movlw	0
-  3087  007CF6  220C               	addwfc	(___aldiv@quotient+1)^0,f,c
-  3088  007CF8  220D               	addwfc	(___aldiv@quotient+2)^0,f,c
-  3089  007CFA  220E               	addwfc	(___aldiv@quotient+3)^0,f,c
-  3090  007CFC                     l1791:
-  3091  007CFC  C00B  F001         	movff	___aldiv@quotient,?___aldiv
-  3092  007D00  C00C  F002         	movff	___aldiv@quotient+1,?___aldiv+1
-  3093  007D04  C00D  F003         	movff	___aldiv@quotient+2,?___aldiv+2
-  3094  007D08  C00E  F004         	movff	___aldiv@quotient+3,?___aldiv+3
-  3095  007D0C  0012               	return		;funcret
-  3096  007D0E                     __end_of___aldiv:
-  3097                           	opt callstack 0
-  3098  0000                     
-  3099                           	psect	rparam
-  3100  0000                     tosu	equ	0xFFF
-  3101                           tosh	equ	0xFFE
-  3102                           tosl	equ	0xFFD
-  3103                           stkptr	equ	0xFFC
-  3104                           pclatu	equ	0xFFB
-  3105                           pclath	equ	0xFFA
-  3106                           pcl	equ	0xFF9
-  3107                           tblptru	equ	0xFF8
-  3108                           tblptrh	equ	0xFF7
-  3109                           tblptrl	equ	0xFF6
-  3110                           tablat	equ	0xFF5
-  3111                           prodh	equ	0xFF4
-  3112                           prodl	equ	0xFF3
-  3113                           indf0	equ	0xFEF
-  3114                           postinc0	equ	0xFEE
-  3115                           postdec0	equ	0xFED
-  3116                           preinc0	equ	0xFEC
-  3117                           plusw0	equ	0xFEB
-  3118                           fsr0h	equ	0xFEA
-  3119                           fsr0l	equ	0xFE9
-  3120                           wreg	equ	0xFE8
-  3121                           indf1	equ	0xFE7
-  3122                           postinc1	equ	0xFE6
-  3123                           postdec1	equ	0xFE5
-  3124                           preinc1	equ	0xFE4
-  3125                           plusw1	equ	0xFE3
-  3126                           fsr1h	equ	0xFE2
-  3127                           fsr1l	equ	0xFE1
-  3128                           bsr	equ	0xFE0
-  3129                           indf2	equ	0xFDF
-  3130                           postinc2	equ	0xFDE
-  3131                           postdec2	equ	0xFDD
-  3132                           preinc2	equ	0xFDC
-  3133                           plusw2	equ	0xFDB
-  3134                           fsr2h	equ	0xFDA
-  3135                           fsr2l	equ	0xFD9
-  3136                           status	equ	0xFD8
+  2135 ;;		_HaltMotors
+  2136 ;; This function uses a non-reentrant model
+  2137 ;;
+  2138                           
+  2139                           	psect	text13
+  2140  007406                     __ptext13:
+  2141                           	opt callstack 0
+  2142  007406                     _UARTWrite:
+  2143                           	opt callstack 28
+  2144                           
+  2145                           ;incstack = 0
+  2146                           ;UARTWrite@data stored from wreg
+  2147  007406  6E01               	movwf	UARTWrite@data^0,c
+  2148  007408                     l90:
+  2149  007408  A89E               	btfss	158,4,c	;volatile
+  2150  00740A  EF09  F03A         	goto	u531
+  2151  00740E  EF0B  F03A         	goto	u530
+  2152  007412                     u531:
+  2153  007412  EF04  F03A         	goto	l90
+  2154  007416                     u530:
+  2155  007416                     
+  2156                           ;UART.c: 28:     TXREG= data;
+  2157  007416  C001  FFAD         	movff	UARTWrite@data,4013	;volatile
+  2158  00741A  0012               	return		;funcret
+  2159  00741C                     __end_of_UARTWrite:
+  2160                           	opt callstack 0
+  2161                           
+  2162 ;; *************** function _PWM *****************
+  2163 ;; Defined at:
+  2164 ;;		line 19 in file "PWM.c"
+  2165 ;; Parameters:    Size  Location     Type
+  2166 ;;		None
+  2167 ;; Auto vars:     Size  Location     Type
+  2168 ;;		None
+  2169 ;; Return value:  Size  Location     Type
+  2170 ;;                  1    wreg      void 
+  2171 ;; Registers used:
+  2172 ;;		wreg, status,2, status,0, prodl, prodh, cstack
+  2173 ;; Tracked objects:
+  2174 ;;		On entry : 0/0
+  2175 ;;		On exit  : 0/0
+  2176 ;;		Unchanged: 0/0
+  2177 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  2178 ;;      Params:         0       0       0       0       0       0       0       0       0
+  2179 ;;      Locals:         0       0       0       0       0       0       0       0       0
+  2180 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  2181 ;;      Totals:         0       0       0       0       0       0       0       0       0
+  2182 ;;Total ram usage:        0 bytes
+  2183 ;; Hardware stack levels used:    1
+  2184 ;; Hardware stack levels required when called:    2
+  2185 ;; This function calls:
+  2186 ;;		_ContarPulsos
+  2187 ;;		___wmul
+  2188 ;; This function is called by:
+  2189 ;;		_Movimiento
+  2190 ;; This function uses a non-reentrant model
+  2191 ;;
+  2192                           
+  2193                           	psect	text14
+  2194  007D0E                     __ptext14:
+  2195                           	opt callstack 0
+  2196  007D0E                     _PWM:
+  2197                           	opt callstack 27
+  2198  007D0E                     
+  2199                           ;PWM.c: 21:     BanderaDisX= 1;
+  2200  007D0E  0E00               	movlw	0
+  2201  007D10  6E2E               	movwf	(_BanderaDisX+1)^0,c
+  2202  007D12  0E01               	movlw	1
+  2203  007D14  6E2D               	movwf	_BanderaDisX^0,c
+  2204                           
+  2205                           ;PWM.c: 22:     BanderaDisY= 1;
+  2206  007D16  0E00               	movlw	0
+  2207  007D18  6E2C               	movwf	(_BanderaDisY+1)^0,c
+  2208  007D1A  0E01               	movlw	1
+  2209  007D1C  6E2B               	movwf	_BanderaDisY^0,c
+  2210  007D1E                     
+  2211                           ;PWM.c: 27:     if (CoordAntX==0) CoordRelatX=cord_x;
+  2212  007D1E  503B               	movf	_CoordAntX^0,w,c
+  2213  007D20  103C               	iorwf	(_CoordAntX+1)^0,w,c
+  2214  007D22  A4D8               	btfss	status,2,c
+  2215  007D24  EF96  F03E         	goto	u761
+  2216  007D28  EF98  F03E         	goto	u760
+  2217  007D2C                     u761:
+  2218  007D2C  EF9E  F03E         	goto	l2000
+  2219  007D30                     u760:
+  2220  007D30  C045  F041         	movff	_cord_x,_CoordRelatX
+  2221  007D34  C046  F042         	movff	_cord_x+1,_CoordRelatX+1
+  2222  007D38  EFA4  F03E         	goto	l240
+  2223  007D3C                     l2000:
+  2224  007D3C  503B               	movf	_CoordAntX^0,w,c
+  2225  007D3E  5C45               	subwf	_cord_x^0,w,c
+  2226  007D40  6E41               	movwf	_CoordRelatX^0,c
+  2227  007D42  503C               	movf	(_CoordAntX+1)^0,w,c
+  2228  007D44  5846               	subwfb	(_cord_x+1)^0,w,c
+  2229  007D46  6E42               	movwf	(_CoordRelatX+1)^0,c
+  2230  007D48                     l240:
+  2231                           
+  2232                           ;PWM.c: 31:     if (CoordRelatX<0){
+  2233  007D48  BE42               	btfsc	(_CoordRelatX+1)^0,7,c
+  2234  007D4A  EFAB  F03E         	goto	u770
+  2235  007D4E  EFA9  F03E         	goto	u771
+  2236  007D52                     u771:
+  2237  007D52  EFB7  F03E         	goto	l241
+  2238  007D56                     u770:
+  2239  007D56                     
+  2240                           ;PWM.c: 32:         PORTDbits.RD0=0;
+  2241  007D56  9083               	bcf	131,0,c	;volatile
+  2242                           
+  2243                           ;PWM.c: 33:         PORTDbits.RD1=0;
+  2244  007D58  9283               	bcf	131,1,c	;volatile
+  2245  007D5A                     
+  2246                           ;PWM.c: 34:         CoordRelatX=CoordRelatX*(-1);
+  2247  007D5A  6C41               	negf	_CoordRelatX^0,c
+  2248  007D5C  1E42               	comf	(_CoordRelatX+1)^0,f,c
+  2249  007D5E  B0D8               	btfsc	status,0,c
+  2250  007D60  2A42               	incf	(_CoordRelatX+1)^0,f,c
+  2251  007D62                     
+  2252                           ;PWM.c: 35:         BanderaDisX= 0;
+  2253  007D62  0E00               	movlw	0
+  2254  007D64  6E2E               	movwf	(_BanderaDisX+1)^0,c
+  2255  007D66  0E00               	movlw	0
+  2256  007D68  6E2D               	movwf	_BanderaDisX^0,c
+  2257                           
+  2258                           ;PWM.c: 36:     }
+  2259  007D6A  EFBD  F03E         	goto	l2010
+  2260  007D6E                     l241:
+  2261                           
+  2262                           ;PWM.c: 38:             PORTDbits.RD0=1;
+  2263  007D6E  8083               	bsf	131,0,c	;volatile
+  2264                           
+  2265                           ;PWM.c: 39:             PORTDbits.RD1=1;
+  2266  007D70  8283               	bsf	131,1,c	;volatile
+  2267  007D72                     
+  2268                           ;PWM.c: 40:             BanderaDisX= 1;
+  2269  007D72  0E00               	movlw	0
+  2270  007D74  6E2E               	movwf	(_BanderaDisX+1)^0,c
+  2271  007D76  0E01               	movlw	1
+  2272  007D78  6E2D               	movwf	_BanderaDisX^0,c
+  2273  007D7A                     l2010:
+  2274                           
+  2275                           ;PWM.c: 43:     PasosX=CoordRelatX*5;
+  2276  007D7A  C041  F001         	movff	_CoordRelatX,___wmul@multiplier
+  2277  007D7E  C042  F002         	movff	_CoordRelatX+1,___wmul@multiplier+1
+  2278  007D82  0E00               	movlw	0
+  2279  007D84  6E04               	movwf	(___wmul@multiplicand+1)^0,c
+  2280  007D86  0E05               	movlw	5
+  2281  007D88  6E03               	movwf	___wmul@multiplicand^0,c
+  2282  007D8A  EC1D  F03A         	call	___wmul	;wreg free
+  2283  007D8E  C001  F031         	movff	?___wmul,_PasosX
+  2284  007D92  C002  F032         	movff	?___wmul+1,_PasosX+1
+  2285  007D96                     
+  2286                           ;PWM.c: 44:     ContarPulsos(PasosX);
+  2287  007D96  C031  F001         	movff	_PasosX,ContarPulsos@pasos
+  2288  007D9A  C032  F002         	movff	_PasosX+1,ContarPulsos@pasos+1
+  2289  007D9E  ECD1  F03A         	call	_ContarPulsos	;wreg free
+  2290  007DA2                     
+  2291                           ;PWM.c: 47:     if(BanderaDisX= 0) CoordAntX= CoordAntX-CoordRelatX;
+  2292  007DA2  0E00               	movlw	0
+  2293  007DA4  6E2E               	movwf	(_BanderaDisX+1)^0,c
+  2294  007DA6  0E00               	movlw	0
+  2295  007DA8  6E2D               	movwf	_BanderaDisX^0,c
+  2296  007DAA                     
+  2297                           ;PWM.c: 49:         if (BanderaDisX= 1) CoordAntX=CoordAntX+CoordRelatX;
+  2298  007DAA  0E00               	movlw	0
+  2299  007DAC  6E2E               	movwf	(_BanderaDisX+1)^0,c
+  2300  007DAE  0E01               	movlw	1
+  2301  007DB0  6E2D               	movwf	_BanderaDisX^0,c
+  2302  007DB2  503B               	movf	_CoordAntX^0,w,c
+  2303  007DB4  2441               	addwf	_CoordRelatX^0,w,c
+  2304  007DB6  6E3B               	movwf	_CoordAntX^0,c
+  2305  007DB8  503C               	movf	(_CoordAntX+1)^0,w,c
+  2306  007DBA  2042               	addwfc	(_CoordRelatX+1)^0,w,c
+  2307  007DBC  6E3C               	movwf	(_CoordAntX+1)^0,c
+  2308  007DBE                     
+  2309                           ;PWM.c: 56:     if (CoordAntY==0) CoordRelatY=cord_y;
+  2310  007DBE  5039               	movf	_CoordAntY^0,w,c
+  2311  007DC0  103A               	iorwf	(_CoordAntY+1)^0,w,c
+  2312  007DC2  A4D8               	btfss	status,2,c
+  2313  007DC4  EFE6  F03E         	goto	u781
+  2314  007DC8  EFE8  F03E         	goto	u780
+  2315  007DCC                     u781:
+  2316  007DCC  EFEE  F03E         	goto	l2026
+  2317  007DD0                     u780:
+  2318  007DD0  C043  F03F         	movff	_cord_y,_CoordRelatY
+  2319  007DD4  C044  F040         	movff	_cord_y+1,_CoordRelatY+1
+  2320  007DD8  EFF4  F03E         	goto	l247
+  2321  007DDC                     l2026:
+  2322  007DDC  5039               	movf	_CoordAntY^0,w,c
+  2323  007DDE  5C43               	subwf	_cord_y^0,w,c
+  2324  007DE0  6E3F               	movwf	_CoordRelatY^0,c
+  2325  007DE2  503A               	movf	(_CoordAntY+1)^0,w,c
+  2326  007DE4  5844               	subwfb	(_cord_y+1)^0,w,c
+  2327  007DE6  6E40               	movwf	(_CoordRelatY+1)^0,c
+  2328  007DE8                     l247:
+  2329                           
+  2330                           ;PWM.c: 59:     if (CoordRelatY<0){
+  2331  007DE8  BE40               	btfsc	(_CoordRelatY+1)^0,7,c
+  2332  007DEA  EFFB  F03E         	goto	u790
+  2333  007DEE  EFF9  F03E         	goto	u791
+  2334  007DF2                     u791:
+  2335  007DF2  EF07  F03F         	goto	l248
+  2336  007DF6                     u790:
+  2337  007DF6                     
+  2338                           ;PWM.c: 60:         PORTDbits.RD0=0;
+  2339  007DF6  9083               	bcf	131,0,c	;volatile
+  2340                           
+  2341                           ;PWM.c: 61:         PORTDbits.RD1=1;
+  2342  007DF8  8283               	bsf	131,1,c	;volatile
+  2343  007DFA                     
+  2344                           ;PWM.c: 62:         CoordRelatY=CoordRelatY*(-1);
+  2345  007DFA  6C3F               	negf	_CoordRelatY^0,c
+  2346  007DFC  1E40               	comf	(_CoordRelatY+1)^0,f,c
+  2347  007DFE  B0D8               	btfsc	status,0,c
+  2348  007E00  2A40               	incf	(_CoordRelatY+1)^0,f,c
+  2349  007E02                     
+  2350                           ;PWM.c: 63:         BanderaDisY= 0;
+  2351  007E02  0E00               	movlw	0
+  2352  007E04  6E2C               	movwf	(_BanderaDisY+1)^0,c
+  2353  007E06  0E00               	movlw	0
+  2354  007E08  6E2B               	movwf	_BanderaDisY^0,c
+  2355                           
+  2356                           ;PWM.c: 64:     }
+  2357  007E0A  EF0D  F03F         	goto	l2036
+  2358  007E0E                     l248:
+  2359                           
+  2360                           ;PWM.c: 66:         PORTDbits.RD0=1;
+  2361  007E0E  8083               	bsf	131,0,c	;volatile
+  2362                           
+  2363                           ;PWM.c: 67:         PORTDbits.RD1=1;
+  2364  007E10  8283               	bsf	131,1,c	;volatile
+  2365  007E12                     
+  2366                           ;PWM.c: 68:          BanderaDisY= 1;
+  2367  007E12  0E00               	movlw	0
+  2368  007E14  6E2C               	movwf	(_BanderaDisY+1)^0,c
+  2369  007E16  0E01               	movlw	1
+  2370  007E18  6E2B               	movwf	_BanderaDisY^0,c
+  2371  007E1A                     l2036:
+  2372                           
+  2373                           ;PWM.c: 71:     PasosY=CoordRelatY*5;
+  2374  007E1A  C03F  F001         	movff	_CoordRelatY,___wmul@multiplier
+  2375  007E1E  C040  F002         	movff	_CoordRelatY+1,___wmul@multiplier+1
+  2376  007E22  0E00               	movlw	0
+  2377  007E24  6E04               	movwf	(___wmul@multiplicand+1)^0,c
+  2378  007E26  0E05               	movlw	5
+  2379  007E28  6E03               	movwf	___wmul@multiplicand^0,c
+  2380  007E2A  EC1D  F03A         	call	___wmul	;wreg free
+  2381  007E2E  C001  F02F         	movff	?___wmul,_PasosY
+  2382  007E32  C002  F030         	movff	?___wmul+1,_PasosY+1
+  2383  007E36                     
+  2384                           ;PWM.c: 72:     ContarPulsos(PasosY);
+  2385  007E36  C02F  F001         	movff	_PasosY,ContarPulsos@pasos
+  2386  007E3A  C030  F002         	movff	_PasosY+1,ContarPulsos@pasos+1
+  2387  007E3E  ECD1  F03A         	call	_ContarPulsos	;wreg free
+  2388  007E42                     
+  2389                           ;PWM.c: 75:     if(BanderaDisY= 0) CoordAntY= CoordAntY-CoordRelatY;
+  2390  007E42  0E00               	movlw	0
+  2391  007E44  6E2C               	movwf	(_BanderaDisY+1)^0,c
+  2392  007E46  0E00               	movlw	0
+  2393  007E48  6E2B               	movwf	_BanderaDisY^0,c
+  2394  007E4A                     
+  2395                           ;PWM.c: 77:         if (BanderaDisY= 1) CoordAntY=CoordAntY+CoordRelatY;
+  2396  007E4A  0E00               	movlw	0
+  2397  007E4C  6E2C               	movwf	(_BanderaDisY+1)^0,c
+  2398  007E4E  0E01               	movlw	1
+  2399  007E50  6E2B               	movwf	_BanderaDisY^0,c
+  2400  007E52  5039               	movf	_CoordAntY^0,w,c
+  2401  007E54  243F               	addwf	_CoordRelatY^0,w,c
+  2402  007E56  6E39               	movwf	_CoordAntY^0,c
+  2403  007E58  503A               	movf	(_CoordAntY+1)^0,w,c
+  2404  007E5A  2040               	addwfc	(_CoordRelatY+1)^0,w,c
+  2405  007E5C  6E3A               	movwf	(_CoordAntY+1)^0,c
+  2406  007E5E  0012               	return		;funcret
+  2407  007E60                     __end_of_PWM:
+  2408                           	opt callstack 0
+  2409                           
+  2410 ;; *************** function ___wmul *****************
+  2411 ;; Defined at:
+  2412 ;;		line 15 in file "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c"
+  2413 ;; Parameters:    Size  Location     Type
+  2414 ;;  multiplier      2    0[COMRAM] unsigned int 
+  2415 ;;  multiplicand    2    2[COMRAM] unsigned int 
+  2416 ;; Auto vars:     Size  Location     Type
+  2417 ;;  product         2    4[COMRAM] unsigned int 
+  2418 ;; Return value:  Size  Location     Type
+  2419 ;;                  2    0[COMRAM] unsigned int 
+  2420 ;; Registers used:
+  2421 ;;		wreg, status,2, status,0, prodl, prodh
+  2422 ;; Tracked objects:
+  2423 ;;		On entry : 0/0
+  2424 ;;		On exit  : 0/0
+  2425 ;;		Unchanged: 0/0
+  2426 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  2427 ;;      Params:         4       0       0       0       0       0       0       0       0
+  2428 ;;      Locals:         2       0       0       0       0       0       0       0       0
+  2429 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  2430 ;;      Totals:         6       0       0       0       0       0       0       0       0
+  2431 ;;Total ram usage:        6 bytes
+  2432 ;; Hardware stack levels used:    1
+  2433 ;; This function calls:
+  2434 ;;		Nothing
+  2435 ;; This function is called by:
+  2436 ;;		_PWM
+  2437 ;; This function uses a non-reentrant model
+  2438 ;;
+  2439                           
+  2440                           	psect	text15
+  2441  00743A                     __ptext15:
+  2442                           	opt callstack 0
+  2443  00743A                     ___wmul:
+  2444                           	opt callstack 28
+  2445  00743A  5001               	movf	___wmul@multiplier^0,w,c
+  2446  00743C  0203               	mulwf	___wmul@multiplicand^0,c
+  2447  00743E  CFF3 F005          	movff	prodl,___wmul@product
+  2448  007442  CFF4 F006          	movff	prodh,___wmul@product+1
+  2449  007446  5001               	movf	___wmul@multiplier^0,w,c
+  2450  007448  0204               	mulwf	(___wmul@multiplicand+1)^0,c
+  2451  00744A  50F3               	movf	243,w,c
+  2452  00744C  2606               	addwf	(___wmul@product+1)^0,f,c
+  2453  00744E  5002               	movf	(___wmul@multiplier+1)^0,w,c
+  2454  007450  0203               	mulwf	___wmul@multiplicand^0,c
+  2455  007452  50F3               	movf	243,w,c
+  2456  007454  2606               	addwf	(___wmul@product+1)^0,f,c
+  2457  007456  C005  F001         	movff	___wmul@product,?___wmul
+  2458  00745A  C006  F002         	movff	___wmul@product+1,?___wmul+1
+  2459  00745E  0012               	return		;funcret
+  2460  007460                     __end_of___wmul:
+  2461                           	opt callstack 0
+  2462                           
+  2463 ;; *************** function _ContarPulsos *****************
+  2464 ;; Defined at:
+  2465 ;;		line 82 in file "PWM.c"
+  2466 ;; Parameters:    Size  Location     Type
+  2467 ;;  pasos           2    0[COMRAM] int 
+  2468 ;; Auto vars:     Size  Location     Type
+  2469 ;;		None
+  2470 ;; Return value:  Size  Location     Type
+  2471 ;;                  2    0[COMRAM] int 
+  2472 ;; Registers used:
+  2473 ;;		wreg, status,2, status,0, cstack
+  2474 ;; Tracked objects:
+  2475 ;;		On entry : 0/0
+  2476 ;;		On exit  : 0/0
+  2477 ;;		Unchanged: 0/0
+  2478 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  2479 ;;      Params:         2       0       0       0       0       0       0       0       0
+  2480 ;;      Locals:         0       0       0       0       0       0       0       0       0
+  2481 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  2482 ;;      Totals:         2       0       0       0       0       0       0       0       0
+  2483 ;;Total ram usage:        2 bytes
+  2484 ;; Hardware stack levels used:    1
+  2485 ;; Hardware stack levels required when called:    1
+  2486 ;; This function calls:
+  2487 ;;		_OneShot
+  2488 ;;		_ResetOneShot
+  2489 ;; This function is called by:
+  2490 ;;		_PWM
+  2491 ;; This function uses a non-reentrant model
+  2492 ;;
+  2493                           
+  2494                           	psect	text16
+  2495  0075A2                     __ptext16:
+  2496                           	opt callstack 0
+  2497  0075A2                     _ContarPulsos:
+  2498                           	opt callstack 27
+  2499  0075A2                     
+  2500                           ;PWM.c: 83:     PasosActuales=0;
+  2501  0075A2  0E00               	movlw	0
+  2502  0075A4  6E36               	movwf	(_PasosActuales+1)^0,c
+  2503  0075A6  0E00               	movlw	0
+  2504  0075A8  6E35               	movwf	_PasosActuales^0,c
+  2505                           
+  2506                           ;PWM.c: 84:     ons=0;
+  2507  0075AA  0E00               	movlw	0
+  2508  0075AC  6E34               	movwf	(_ons+1)^0,c
+  2509  0075AE  0E00               	movlw	0
+  2510  0075B0  6E33               	movwf	_ons^0,c
+  2511  0075B2                     
+  2512                           ;PWM.c: 85:     PORTDbits.RD2=0;
+  2513  0075B2  9483               	bcf	131,2,c	;volatile
+  2514  0075B4                     
+  2515                           ;PWM.c: 86:     PORTDbits.RD3=0;
+  2516  0075B4  9683               	bcf	131,3,c	;volatile
+  2517                           
+  2518                           ;PWM.c: 87:     while(PasosActuales< pasos)
+  2519  0075B6  EFF1  F03A         	goto	l1760
+  2520  0075BA                     l257:
+  2521                           
+  2522                           ;PWM.c: 88:     {;PWM.c: 89:         if (PORTCbits.CCP1==1) OneShot();
+  2523  0075BA  A482               	btfss	130,2,c	;volatile
+  2524  0075BC  EFE2  F03A         	goto	u551
+  2525  0075C0  EFE4  F03A         	goto	u550
+  2526  0075C4                     u551:
+  2527  0075C4  EFE6  F03A         	goto	l1756
+  2528  0075C8                     u550:
+  2529  0075C8  EC45  F03A         	call	_OneShot	;wreg free
+  2530  0075CC                     l1756:
+  2531                           
+  2532                           ;PWM.c: 90:         if(ons==1) ResetOneShot();
+  2533  0075CC  0433               	decf	_ons^0,w,c
+  2534  0075CE  1034               	iorwf	(_ons+1)^0,w,c
+  2535  0075D0  A4D8               	btfss	status,2,c
+  2536  0075D2  EFED  F03A         	goto	u561
+  2537  0075D6  EFEF  F03A         	goto	u560
+  2538  0075DA                     u561:
+  2539  0075DA  EFF1  F03A         	goto	l1760
+  2540  0075DE                     u560:
+  2541  0075DE  EC30  F03A         	call	_ResetOneShot	;wreg free
+  2542  0075E2                     l1760:
+  2543                           
+  2544                           ;PWM.c: 87:     while(PasosActuales< pasos)
+  2545  0075E2  5001               	movf	ContarPulsos@pasos^0,w,c
+  2546  0075E4  5C35               	subwf	_PasosActuales^0,w,c
+  2547  0075E6  5002               	movf	(ContarPulsos@pasos+1)^0,w,c
+  2548  0075E8  5836               	subwfb	(_PasosActuales+1)^0,w,c
+  2549  0075EA  A0D8               	btfss	status,0,c
+  2550  0075EC  EFFA  F03A         	goto	u571
+  2551  0075F0  EFFC  F03A         	goto	u570
+  2552  0075F4                     u571:
+  2553  0075F4  EFDD  F03A         	goto	l257
+  2554  0075F8                     u570:
+  2555  0075F8                     
+  2556                           ;PWM.c: 93:     PORTDbits.RD2=1;
+  2557  0075F8  8483               	bsf	131,2,c	;volatile
+  2558                           
+  2559                           ;PWM.c: 94:     PORTDbits.RD3=1;
+  2560  0075FA  8683               	bsf	131,3,c	;volatile
+  2561  0075FC  0012               	return		;funcret
+  2562  0075FE                     __end_of_ContarPulsos:
+  2563                           	opt callstack 0
+  2564                           
+  2565 ;; *************** function _ResetOneShot *****************
+  2566 ;; Defined at:
+  2567 ;;		line 107 in file "PWM.c"
+  2568 ;; Parameters:    Size  Location     Type
+  2569 ;;		None
+  2570 ;; Auto vars:     Size  Location     Type
+  2571 ;;		None
+  2572 ;; Return value:  Size  Location     Type
+  2573 ;;                  1    wreg      void 
+  2574 ;; Registers used:
+  2575 ;;		wreg, status,2
+  2576 ;; Tracked objects:
+  2577 ;;		On entry : 0/0
+  2578 ;;		On exit  : 0/0
+  2579 ;;		Unchanged: 0/0
+  2580 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  2581 ;;      Params:         0       0       0       0       0       0       0       0       0
+  2582 ;;      Locals:         0       0       0       0       0       0       0       0       0
+  2583 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  2584 ;;      Totals:         0       0       0       0       0       0       0       0       0
+  2585 ;;Total ram usage:        0 bytes
+  2586 ;; Hardware stack levels used:    1
+  2587 ;; This function calls:
+  2588 ;;		Nothing
+  2589 ;; This function is called by:
+  2590 ;;		_ContarPulsos
+  2591 ;; This function uses a non-reentrant model
+  2592 ;;
+  2593                           
+  2594                           	psect	text17
+  2595  007460                     __ptext17:
+  2596                           	opt callstack 0
+  2597  007460                     _ResetOneShot:
+  2598                           	opt callstack 27
+  2599  007460                     
+  2600                           ;PWM.c: 108:     if(PORTCbits.CCP1==1)return;
+  2601  007460  A482               	btfss	130,2,c	;volatile
+  2602  007462  EF35  F03A         	goto	u511
+  2603  007466  EF37  F03A         	goto	u510
+  2604  00746A                     u511:
+  2605  00746A  EF39  F03A         	goto	l269
+  2606  00746E                     u510:
+  2607  00746E  EF44  F03A         	goto	l270
+  2608  007472                     l269:
+  2609                           
+  2610                           ;PWM.c: 109:     if(PORTCbits.CCP1==0)ons=0;
+  2611  007472  B482               	btfsc	130,2,c	;volatile
+  2612  007474  EF3E  F03A         	goto	u521
+  2613  007478  EF40  F03A         	goto	u520
+  2614  00747C                     u521:
+  2615  00747C  EF44  F03A         	goto	l270
+  2616  007480                     u520:
+  2617  007480  0E00               	movlw	0
+  2618  007482  6E34               	movwf	(_ons+1)^0,c
+  2619  007484  0E00               	movlw	0
+  2620  007486  6E33               	movwf	_ons^0,c
+  2621  007488                     l270:
+  2622  007488  0012               	return		;funcret
+  2623  00748A                     __end_of_ResetOneShot:
+  2624                           	opt callstack 0
+  2625                           
+  2626 ;; *************** function _OneShot *****************
+  2627 ;; Defined at:
+  2628 ;;		line 98 in file "PWM.c"
+  2629 ;; Parameters:    Size  Location     Type
+  2630 ;;		None
+  2631 ;; Auto vars:     Size  Location     Type
+  2632 ;;		None
+  2633 ;; Return value:  Size  Location     Type
+  2634 ;;                  1    wreg      void 
+  2635 ;; Registers used:
+  2636 ;;		wreg, status,2, status,0
+  2637 ;; Tracked objects:
+  2638 ;;		On entry : 0/0
+  2639 ;;		On exit  : 0/0
+  2640 ;;		Unchanged: 0/0
+  2641 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  2642 ;;      Params:         0       0       0       0       0       0       0       0       0
+  2643 ;;      Locals:         0       0       0       0       0       0       0       0       0
+  2644 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  2645 ;;      Totals:         0       0       0       0       0       0       0       0       0
+  2646 ;;Total ram usage:        0 bytes
+  2647 ;; Hardware stack levels used:    1
+  2648 ;; This function calls:
+  2649 ;;		Nothing
+  2650 ;; This function is called by:
+  2651 ;;		_ContarPulsos
+  2652 ;; This function uses a non-reentrant model
+  2653 ;;
+  2654                           
+  2655                           	psect	text18
+  2656  00748A                     __ptext18:
+  2657                           	opt callstack 0
+  2658  00748A                     _OneShot:
+  2659                           	opt callstack 27
+  2660  00748A                     
+  2661                           ;PWM.c: 99:     if(ons==1) return;
+  2662  00748A  0433               	decf	_ons^0,w,c
+  2663  00748C  1034               	iorwf	(_ons+1)^0,w,c
+  2664  00748E  A4D8               	btfss	status,2,c
+  2665  007490  EF4C  F03A         	goto	u491
+  2666  007494  EF4E  F03A         	goto	u490
+  2667  007498                     u491:
+  2668  007498  EF50  F03A         	goto	l264
+  2669  00749C                     u490:
+  2670  00749C  EF5D  F03A         	goto	l265
+  2671  0074A0                     l264:
+  2672                           
+  2673                           ;PWM.c: 100:     if(PORTCbits.CCP1==1)
+  2674  0074A0  A482               	btfss	130,2,c	;volatile
+  2675  0074A2  EF55  F03A         	goto	u501
+  2676  0074A6  EF57  F03A         	goto	u500
+  2677  0074AA                     u501:
+  2678  0074AA  EF5D  F03A         	goto	l265
+  2679  0074AE                     u500:
+  2680  0074AE                     
+  2681                           ;PWM.c: 101:     {;PWM.c: 102:         PasosActuales++;
+  2682  0074AE  4A35               	infsnz	_PasosActuales^0,f,c
+  2683  0074B0  2A36               	incf	(_PasosActuales+1)^0,f,c
+  2684  0074B2                     
+  2685                           ;PWM.c: 103:         ons=1;
+  2686  0074B2  0E00               	movlw	0
+  2687  0074B4  6E34               	movwf	(_ons+1)^0,c
+  2688  0074B6  0E01               	movlw	1
+  2689  0074B8  6E33               	movwf	_ons^0,c
+  2690  0074BA                     l265:
+  2691  0074BA  0012               	return		;funcret
+  2692  0074BC                     __end_of_OneShot:
+  2693                           	opt callstack 0
+  2694                           
+  2695 ;; *************** function _Configuracion *****************
+  2696 ;; Defined at:
+  2697 ;;		line 10 in file "CONFIGUR.c"
+  2698 ;; Parameters:    Size  Location     Type
+  2699 ;;		None
+  2700 ;; Auto vars:     Size  Location     Type
+  2701 ;;		None
+  2702 ;; Return value:  Size  Location     Type
+  2703 ;;                  1    wreg      void 
+  2704 ;; Registers used:
+  2705 ;;		wreg, status,2, status,0, cstack
+  2706 ;; Tracked objects:
+  2707 ;;		On entry : 0/0
+  2708 ;;		On exit  : 0/0
+  2709 ;;		Unchanged: 0/0
+  2710 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  2711 ;;      Params:         0       0       0       0       0       0       0       0       0
+  2712 ;;      Locals:         0       0       0       0       0       0       0       0       0
+  2713 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  2714 ;;      Totals:         0       0       0       0       0       0       0       0       0
+  2715 ;;Total ram usage:        0 bytes
+  2716 ;; Hardware stack levels used:    1
+  2717 ;; Hardware stack levels required when called:    2
+  2718 ;; This function calls:
+  2719 ;;		_UARTConfi
+  2720 ;; This function is called by:
+  2721 ;;		_main
+  2722 ;; This function uses a non-reentrant model
+  2723 ;;
+  2724                           
+  2725                           	psect	text19
+  2726  0075FE                     __ptext19:
+  2727                           	opt callstack 0
+  2728  0075FE                     _Configuracion:
+  2729                           	opt callstack 28
+  2730  0075FE                     
+  2731                           ;CONFIGUR.c: 14:     OSCCON=0x72;
+  2732  0075FE  0E72               	movlw	114
+  2733  007600  6ED3               	movwf	211,c	;volatile
+  2734  007602                     
+  2735                           ;CONFIGUR.c: 18:    CMCON = 0xFF;
+  2736  007602  68B4               	setf	180,c	;volatile
+  2737  007604                     
+  2738                           ;CONFIGUR.c: 19:    CVRCONbits.CVREN = 0;
+  2739  007604  9EB5               	bcf	181,7,c	;volatile
+  2740                           
+  2741                           ;CONFIGUR.c: 20:    ADCON1 = 0x0F;
+  2742  007606  0E0F               	movlw	15
+  2743  007608  6EC1               	movwf	193,c	;volatile
+  2744                           
+  2745                           ;CONFIGUR.c: 24:    PORTD = 0x00;
+  2746  00760A  0E00               	movlw	0
+  2747  00760C  6E83               	movwf	131,c	;volatile
+  2748                           
+  2749                           ;CONFIGUR.c: 25:    LATD = 0x00;
+  2750  00760E  0E00               	movlw	0
+  2751  007610  6E8C               	movwf	140,c	;volatile
+  2752                           
+  2753                           ;CONFIGUR.c: 26:    TRISD = 0xF0;
+  2754  007612  0EF0               	movlw	240
+  2755  007614  6E95               	movwf	149,c	;volatile
+  2756                           
+  2757                           ;CONFIGUR.c: 28:    PORTC = 0x00;
+  2758  007616  0E00               	movlw	0
+  2759  007618  6E82               	movwf	130,c	;volatile
+  2760                           
+  2761                           ;CONFIGUR.c: 29:    LATC= 0x00;
+  2762  00761A  0E00               	movlw	0
+  2763  00761C  6E8B               	movwf	139,c	;volatile
+  2764                           
+  2765                           ;CONFIGUR.c: 30:    TRISC= 0x00;
+  2766  00761E  0E00               	movlw	0
+  2767  007620  6E94               	movwf	148,c	;volatile
+  2768                           
+  2769                           ;CONFIGUR.c: 32:    PORTB = 0x00;
+  2770  007622  0E00               	movlw	0
+  2771  007624  6E81               	movwf	129,c	;volatile
+  2772                           
+  2773                           ;CONFIGUR.c: 33:    LATB= 0x00;
+  2774  007626  0E00               	movlw	0
+  2775  007628  6E8A               	movwf	138,c	;volatile
+  2776  00762A                     
+  2777                           ;CONFIGUR.c: 34:    TRISB= 0xFF;
+  2778  00762A  6893               	setf	147,c	;volatile
+  2779  00762C                     
+  2780                           ;CONFIGUR.c: 38:    UARTConfi(9600);
+  2781  00762C  0E25               	movlw	37
+  2782  00762E  6E10               	movwf	(UARTConfi@BAUD+1)^0,c
+  2783  007630  0E80               	movlw	128
+  2784  007632  6E0F               	movwf	UARTConfi@BAUD^0,c
+  2785  007634  EC60  F03B         	call	_UARTConfi	;wreg free
+  2786  007638                     
+  2787                           ;CONFIGUR.c: 39:     TRISC=0X00;
+  2788  007638  0E00               	movlw	0
+  2789  00763A  6E94               	movwf	148,c	;volatile
+  2790  00763C                     
+  2791                           ;CONFIGUR.c: 43:      PR2 = 0xF9;
+  2792  00763C  0EF9               	movlw	249
+  2793  00763E  6ECB               	movwf	203,c	;volatile
+  2794  007640                     
+  2795                           ;CONFIGUR.c: 46:     CCP1CON = 0x0C;
+  2796  007640  0E0C               	movlw	12
+  2797  007642  6EBD               	movwf	189,c	;volatile
+  2798  007644                     
+  2799                           ;CONFIGUR.c: 47:     CCPR1L = 0x7D;
+  2800  007644  0E7D               	movlw	125
+  2801  007646  6EBE               	movwf	190,c	;volatile
+  2802  007648                     
+  2803                           ;CONFIGUR.c: 50:     CCP2CON = 0x0C;
+  2804  007648  0E0C               	movlw	12
+  2805  00764A  6EBA               	movwf	186,c	;volatile
+  2806  00764C                     
+  2807                           ;CONFIGUR.c: 51:     CCPR2L = 0x7D;
+  2808  00764C  0E7D               	movlw	125
+  2809  00764E  6EBB               	movwf	187,c	;volatile
+  2810  007650                     
+  2811                           ;CONFIGUR.c: 54:     T2CON = 0x03;
+  2812  007650  0E03               	movlw	3
+  2813  007652  6ECA               	movwf	202,c	;volatile
+  2814  007654                     
+  2815                           ;CONFIGUR.c: 55:     TMR2 = 0;
+  2816  007654  0E00               	movlw	0
+  2817  007656  6ECC               	movwf	204,c	;volatile
+  2818  007658                     
+  2819                           ;CONFIGUR.c: 56:     TMR2ON = 1;
+  2820  007658  84CA               	bsf	4042,2,c	;volatile
+  2821  00765A  0012               	return		;funcret
+  2822  00765C                     __end_of_Configuracion:
+  2823                           	opt callstack 0
+  2824                           
+  2825 ;; *************** function _UARTConfi *****************
+  2826 ;; Defined at:
+  2827 ;;		line 7 in file "UART.c"
+  2828 ;; Parameters:    Size  Location     Type
+  2829 ;;  BAUD            2   14[COMRAM] int 
+  2830 ;; Auto vars:     Size  Location     Type
+  2831 ;;		None
+  2832 ;; Return value:  Size  Location     Type
+  2833 ;;                  1    wreg      void 
+  2834 ;; Registers used:
+  2835 ;;		wreg, status,2, status,0, cstack
+  2836 ;; Tracked objects:
+  2837 ;;		On entry : 0/0
+  2838 ;;		On exit  : 0/0
+  2839 ;;		Unchanged: 0/0
+  2840 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  2841 ;;      Params:         2       0       0       0       0       0       0       0       0
+  2842 ;;      Locals:         4       0       0       0       0       0       0       0       0
+  2843 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  2844 ;;      Totals:         6       0       0       0       0       0       0       0       0
+  2845 ;;Total ram usage:        6 bytes
+  2846 ;; Hardware stack levels used:    1
+  2847 ;; Hardware stack levels required when called:    1
+  2848 ;; This function calls:
+  2849 ;;		___aldiv
+  2850 ;; This function is called by:
+  2851 ;;		_Configuracion
+  2852 ;; This function uses a non-reentrant model
+  2853 ;;
+  2854                           
+  2855                           	psect	text20
+  2856  0076C0                     __ptext20:
+  2857                           	opt callstack 0
+  2858  0076C0                     _UARTConfi:
+  2859                           	opt callstack 28
+  2860  0076C0                     
+  2861                           ;UART.c: 9:     TRISCbits.RC6=0;
+  2862  0076C0  9C94               	bcf	148,6,c	;volatile
+  2863                           
+  2864                           ;UART.c: 10:     TRISCbits.RC7=1;
+  2865  0076C2  8E94               	bsf	148,7,c	;volatile
+  2866  0076C4                     
+  2867                           ;UART.c: 12:     SPBRG = (unsigned char)((8000000L/BAUD)/64)-1;
+  2868  0076C4  C00F  F005         	movff	UARTConfi@BAUD,___aldiv@divisor
+  2869  0076C8  C010  F006         	movff	UARTConfi@BAUD+1,___aldiv@divisor+1
+  2870  0076CC  0E00               	movlw	0
+  2871  0076CE  BE06               	btfsc	(___aldiv@divisor+1)^0,7,c
+  2872  0076D0  0EFF               	movlw	-1
+  2873  0076D2  6E07               	movwf	(___aldiv@divisor+2)^0,c
+  2874  0076D4  6E08               	movwf	(___aldiv@divisor+3)^0,c
+  2875  0076D6  0E00               	movlw	0
+  2876  0076D8  6E01               	movwf	___aldiv@dividend^0,c
+  2877  0076DA  0E12               	movlw	18
+  2878  0076DC  6E02               	movwf	(___aldiv@dividend+1)^0,c
+  2879  0076DE  0E7A               	movlw	122
+  2880  0076E0  6E03               	movwf	(___aldiv@dividend+2)^0,c
+  2881  0076E2  0E00               	movlw	0
+  2882  0076E4  6E04               	movwf	(___aldiv@dividend+3)^0,c
+  2883  0076E6  EC01  F03E         	call	___aldiv	;wreg free
+  2884  0076EA  C001  F011         	movff	?___aldiv,_UARTConfi$1678
+  2885  0076EE  C002  F012         	movff	?___aldiv+1,_UARTConfi$1678+1
+  2886  0076F2  C003  F013         	movff	?___aldiv+2,_UARTConfi$1678+2
+  2887  0076F6  C004  F014         	movff	?___aldiv+3,_UARTConfi$1678+3
+  2888                           
+  2889                           ;UART.c: 12:     SPBRG = (unsigned char)((8000000L/BAUD)/64)-1;
+  2890  0076FA  C011  F001         	movff	_UARTConfi$1678,___aldiv@dividend
+  2891  0076FE  C012  F002         	movff	_UARTConfi$1678+1,___aldiv@dividend+1
+  2892  007702  C013  F003         	movff	_UARTConfi$1678+2,___aldiv@dividend+2
+  2893  007706  C014  F004         	movff	_UARTConfi$1678+3,___aldiv@dividend+3
+  2894  00770A  0E40               	movlw	64
+  2895  00770C  6E05               	movwf	___aldiv@divisor^0,c
+  2896  00770E  0E00               	movlw	0
+  2897  007710  6E06               	movwf	(___aldiv@divisor+1)^0,c
+  2898  007712  0E00               	movlw	0
+  2899  007714  6E07               	movwf	(___aldiv@divisor+2)^0,c
+  2900  007716  0E00               	movlw	0
+  2901  007718  6E08               	movwf	(___aldiv@divisor+3)^0,c
+  2902  00771A  EC01  F03E         	call	___aldiv	;wreg free
+  2903  00771E  0401               	decf	?___aldiv^0,w,c
+  2904  007720  6EAF               	movwf	175,c	;volatile
+  2905  007722                     
+  2906                           ;UART.c: 13:     TXSTAbits.BRGH = 0;
+  2907  007722  94AC               	bcf	172,2,c	;volatile
+  2908  007724                     
+  2909                           ;UART.c: 14:     TXSTAbits.SYNC = 0;
+  2910  007724  98AC               	bcf	172,4,c	;volatile
+  2911  007726                     
+  2912                           ;UART.c: 15:     RCSTAbits.SPEN = 1;
+  2913  007726  8EAB               	bsf	171,7,c	;volatile
+  2914  007728                     
+  2915                           ;UART.c: 18:     TXSTAbits.TX9 = 0;
+  2916  007728  9CAC               	bcf	172,6,c	;volatile
+  2917  00772A                     
+  2918                           ;UART.c: 19:     TXSTAbits.TXEN = 1;
+  2919  00772A  8AAC               	bsf	172,5,c	;volatile
+  2920  00772C                     
+  2921                           ;UART.c: 22:     RCSTAbits.RC9 = 0;
+  2922  00772C  9CAB               	bcf	171,6,c	;volatile
+  2923  00772E                     
+  2924                           ;UART.c: 23:     RCSTAbits.CREN = 1;
+  2925  00772E  88AB               	bsf	171,4,c	;volatile
+  2926  007730  0012               	return		;funcret
+  2927  007732                     __end_of_UARTConfi:
+  2928                           	opt callstack 0
+  2929                           
+  2930 ;; *************** function ___aldiv *****************
+  2931 ;; Defined at:
+  2932 ;;		line 7 in file "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c"
+  2933 ;; Parameters:    Size  Location     Type
+  2934 ;;  dividend        4    0[COMRAM] long 
+  2935 ;;  divisor         4    4[COMRAM] long 
+  2936 ;; Auto vars:     Size  Location     Type
+  2937 ;;  quotient        4   10[COMRAM] long 
+  2938 ;;  sign            1    9[COMRAM] unsigned char 
+  2939 ;;  counter         1    8[COMRAM] unsigned char 
+  2940 ;; Return value:  Size  Location     Type
+  2941 ;;                  4    0[COMRAM] long 
+  2942 ;; Registers used:
+  2943 ;;		wreg, status,2, status,0
+  2944 ;; Tracked objects:
+  2945 ;;		On entry : 0/0
+  2946 ;;		On exit  : 0/0
+  2947 ;;		Unchanged: 0/0
+  2948 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  2949 ;;      Params:         8       0       0       0       0       0       0       0       0
+  2950 ;;      Locals:         6       0       0       0       0       0       0       0       0
+  2951 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  2952 ;;      Totals:        14       0       0       0       0       0       0       0       0
+  2953 ;;Total ram usage:       14 bytes
+  2954 ;; Hardware stack levels used:    1
+  2955 ;; This function calls:
+  2956 ;;		Nothing
+  2957 ;; This function is called by:
+  2958 ;;		_UARTConfi
+  2959 ;; This function uses a non-reentrant model
+  2960 ;;
+  2961                           
+  2962                           	psect	text21
+  2963  007C02                     __ptext21:
+  2964                           	opt callstack 0
+  2965  007C02                     ___aldiv:
+  2966                           	opt callstack 28
+  2967  007C02  0E00               	movlw	0
+  2968  007C04  6E0A               	movwf	___aldiv@sign^0,c
+  2969  007C06  BE08               	btfsc	(___aldiv@divisor+3)^0,7,c
+  2970  007C08  EF0A  F03E         	goto	u580
+  2971  007C0C  EF08  F03E         	goto	u581
+  2972  007C10                     u581:
+  2973  007C10  EF14  F03E         	goto	l1776
+  2974  007C14                     u580:
+  2975  007C14  1E08               	comf	(___aldiv@divisor+3)^0,f,c
+  2976  007C16  1E07               	comf	(___aldiv@divisor+2)^0,f,c
+  2977  007C18  1E06               	comf	(___aldiv@divisor+1)^0,f,c
+  2978  007C1A  6C05               	negf	___aldiv@divisor^0,c
+  2979  007C1C  0E00               	movlw	0
+  2980  007C1E  2206               	addwfc	(___aldiv@divisor+1)^0,f,c
+  2981  007C20  2207               	addwfc	(___aldiv@divisor+2)^0,f,c
+  2982  007C22  2208               	addwfc	(___aldiv@divisor+3)^0,f,c
+  2983  007C24  0E01               	movlw	1
+  2984  007C26  6E0A               	movwf	___aldiv@sign^0,c
+  2985  007C28                     l1776:
+  2986  007C28  BE04               	btfsc	(___aldiv@dividend+3)^0,7,c
+  2987  007C2A  EF1B  F03E         	goto	u590
+  2988  007C2E  EF19  F03E         	goto	u591
+  2989  007C32                     u591:
+  2990  007C32  EF25  F03E         	goto	l1782
+  2991  007C36                     u590:
+  2992  007C36  1E04               	comf	(___aldiv@dividend+3)^0,f,c
+  2993  007C38  1E03               	comf	(___aldiv@dividend+2)^0,f,c
+  2994  007C3A  1E02               	comf	(___aldiv@dividend+1)^0,f,c
+  2995  007C3C  6C01               	negf	___aldiv@dividend^0,c
+  2996  007C3E  0E00               	movlw	0
+  2997  007C40  2202               	addwfc	(___aldiv@dividend+1)^0,f,c
+  2998  007C42  2203               	addwfc	(___aldiv@dividend+2)^0,f,c
+  2999  007C44  2204               	addwfc	(___aldiv@dividend+3)^0,f,c
+  3000  007C46  0E01               	movlw	1
+  3001  007C48  1A0A               	xorwf	___aldiv@sign^0,f,c
+  3002  007C4A                     l1782:
+  3003  007C4A  0E00               	movlw	0
+  3004  007C4C  6E0B               	movwf	___aldiv@quotient^0,c
+  3005  007C4E  0E00               	movlw	0
+  3006  007C50  6E0C               	movwf	(___aldiv@quotient+1)^0,c
+  3007  007C52  0E00               	movlw	0
+  3008  007C54  6E0D               	movwf	(___aldiv@quotient+2)^0,c
+  3009  007C56  0E00               	movlw	0
+  3010  007C58  6E0E               	movwf	(___aldiv@quotient+3)^0,c
+  3011  007C5A  5005               	movf	___aldiv@divisor^0,w,c
+  3012  007C5C  1006               	iorwf	(___aldiv@divisor+1)^0,w,c
+  3013  007C5E  1007               	iorwf	(___aldiv@divisor+2)^0,w,c
+  3014  007C60  1008               	iorwf	(___aldiv@divisor+3)^0,w,c
+  3015  007C62  B4D8               	btfsc	status,2,c
+  3016  007C64  EF36  F03E         	goto	u601
+  3017  007C68  EF38  F03E         	goto	u600
+  3018  007C6C                     u601:
+  3019  007C6C  EF6E  F03E         	goto	l1804
+  3020  007C70                     u600:
+  3021  007C70  0E01               	movlw	1
+  3022  007C72  6E09               	movwf	___aldiv@counter^0,c
+  3023  007C74  EF42  F03E         	goto	l1790
+  3024  007C78                     l1788:
+  3025  007C78  90D8               	bcf	status,0,c
+  3026  007C7A  3605               	rlcf	___aldiv@divisor^0,f,c
+  3027  007C7C  3606               	rlcf	(___aldiv@divisor+1)^0,f,c
+  3028  007C7E  3607               	rlcf	(___aldiv@divisor+2)^0,f,c
+  3029  007C80  3608               	rlcf	(___aldiv@divisor+3)^0,f,c
+  3030  007C82  2A09               	incf	___aldiv@counter^0,f,c
+  3031  007C84                     l1790:
+  3032  007C84  AE08               	btfss	(___aldiv@divisor+3)^0,7,c
+  3033  007C86  EF47  F03E         	goto	u611
+  3034  007C8A  EF49  F03E         	goto	u610
+  3035  007C8E                     u611:
+  3036  007C8E  EF3C  F03E         	goto	l1788
+  3037  007C92                     u610:
+  3038  007C92                     l1792:
+  3039  007C92  90D8               	bcf	status,0,c
+  3040  007C94  360B               	rlcf	___aldiv@quotient^0,f,c
+  3041  007C96  360C               	rlcf	(___aldiv@quotient+1)^0,f,c
+  3042  007C98  360D               	rlcf	(___aldiv@quotient+2)^0,f,c
+  3043  007C9A  360E               	rlcf	(___aldiv@quotient+3)^0,f,c
+  3044  007C9C  5005               	movf	___aldiv@divisor^0,w,c
+  3045  007C9E  5C01               	subwf	___aldiv@dividend^0,w,c
+  3046  007CA0  5006               	movf	(___aldiv@divisor+1)^0,w,c
+  3047  007CA2  5802               	subwfb	(___aldiv@dividend+1)^0,w,c
+  3048  007CA4  5007               	movf	(___aldiv@divisor+2)^0,w,c
+  3049  007CA6  5803               	subwfb	(___aldiv@dividend+2)^0,w,c
+  3050  007CA8  5008               	movf	(___aldiv@divisor+3)^0,w,c
+  3051  007CAA  5804               	subwfb	(___aldiv@dividend+3)^0,w,c
+  3052  007CAC  A0D8               	btfss	status,0,c
+  3053  007CAE  EF5B  F03E         	goto	u621
+  3054  007CB2  EF5D  F03E         	goto	u620
+  3055  007CB6                     u621:
+  3056  007CB6  EF66  F03E         	goto	l1800
+  3057  007CBA                     u620:
+  3058  007CBA  5005               	movf	___aldiv@divisor^0,w,c
+  3059  007CBC  5E01               	subwf	___aldiv@dividend^0,f,c
+  3060  007CBE  5006               	movf	(___aldiv@divisor+1)^0,w,c
+  3061  007CC0  5A02               	subwfb	(___aldiv@dividend+1)^0,f,c
+  3062  007CC2  5007               	movf	(___aldiv@divisor+2)^0,w,c
+  3063  007CC4  5A03               	subwfb	(___aldiv@dividend+2)^0,f,c
+  3064  007CC6  5008               	movf	(___aldiv@divisor+3)^0,w,c
+  3065  007CC8  5A04               	subwfb	(___aldiv@dividend+3)^0,f,c
+  3066  007CCA  800B               	bsf	___aldiv@quotient^0,0,c
+  3067  007CCC                     l1800:
+  3068  007CCC  90D8               	bcf	status,0,c
+  3069  007CCE  3208               	rrcf	(___aldiv@divisor+3)^0,f,c
+  3070  007CD0  3207               	rrcf	(___aldiv@divisor+2)^0,f,c
+  3071  007CD2  3206               	rrcf	(___aldiv@divisor+1)^0,f,c
+  3072  007CD4  3205               	rrcf	___aldiv@divisor^0,f,c
+  3073  007CD6  2E09               	decfsz	___aldiv@counter^0,f,c
+  3074  007CD8  EF49  F03E         	goto	l1792
+  3075  007CDC                     l1804:
+  3076  007CDC  500A               	movf	___aldiv@sign^0,w,c
+  3077  007CDE  B4D8               	btfsc	status,2,c
+  3078  007CE0  EF74  F03E         	goto	u631
+  3079  007CE4  EF76  F03E         	goto	u630
+  3080  007CE8                     u631:
+  3081  007CE8  EF7E  F03E         	goto	l1808
+  3082  007CEC                     u630:
+  3083  007CEC  1E0E               	comf	(___aldiv@quotient+3)^0,f,c
+  3084  007CEE  1E0D               	comf	(___aldiv@quotient+2)^0,f,c
+  3085  007CF0  1E0C               	comf	(___aldiv@quotient+1)^0,f,c
+  3086  007CF2  6C0B               	negf	___aldiv@quotient^0,c
+  3087  007CF4  0E00               	movlw	0
+  3088  007CF6  220C               	addwfc	(___aldiv@quotient+1)^0,f,c
+  3089  007CF8  220D               	addwfc	(___aldiv@quotient+2)^0,f,c
+  3090  007CFA  220E               	addwfc	(___aldiv@quotient+3)^0,f,c
+  3091  007CFC                     l1808:
+  3092  007CFC  C00B  F001         	movff	___aldiv@quotient,?___aldiv
+  3093  007D00  C00C  F002         	movff	___aldiv@quotient+1,?___aldiv+1
+  3094  007D04  C00D  F003         	movff	___aldiv@quotient+2,?___aldiv+2
+  3095  007D08  C00E  F004         	movff	___aldiv@quotient+3,?___aldiv+3
+  3096  007D0C  0012               	return		;funcret
+  3097  007D0E                     __end_of___aldiv:
+  3098                           	opt callstack 0
+  3099  0000                     
+  3100                           	psect	rparam
+  3101  0000                     tosu	equ	0xFFF
+  3102                           tosh	equ	0xFFE
+  3103                           tosl	equ	0xFFD
+  3104                           stkptr	equ	0xFFC
+  3105                           pclatu	equ	0xFFB
+  3106                           pclath	equ	0xFFA
+  3107                           pcl	equ	0xFF9
+  3108                           tblptru	equ	0xFF8
+  3109                           tblptrh	equ	0xFF7
+  3110                           tblptrl	equ	0xFF6
+  3111                           tablat	equ	0xFF5
+  3112                           prodh	equ	0xFF4
+  3113                           prodl	equ	0xFF3
+  3114                           indf0	equ	0xFEF
+  3115                           postinc0	equ	0xFEE
+  3116                           postdec0	equ	0xFED
+  3117                           preinc0	equ	0xFEC
+  3118                           plusw0	equ	0xFEB
+  3119                           fsr0h	equ	0xFEA
+  3120                           fsr0l	equ	0xFE9
+  3121                           wreg	equ	0xFE8
+  3122                           indf1	equ	0xFE7
+  3123                           postinc1	equ	0xFE6
+  3124                           postdec1	equ	0xFE5
+  3125                           preinc1	equ	0xFE4
+  3126                           plusw1	equ	0xFE3
+  3127                           fsr1h	equ	0xFE2
+  3128                           fsr1l	equ	0xFE1
+  3129                           bsr	equ	0xFE0
+  3130                           indf2	equ	0xFDF
+  3131                           postinc2	equ	0xFDE
+  3132                           postdec2	equ	0xFDD
+  3133                           preinc2	equ	0xFDC
+  3134                           plusw2	equ	0xFDB
+  3135                           fsr2h	equ	0xFDA
+  3136                           fsr2l	equ	0xFD9
+  3137                           status	equ	0xFD8
 
 
 Data Sizes:
@@ -3401,7 +3402,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.10 build 88905656 
-Symbol Table                                                                                   Mon Dec 02 20:30:32 2019
+Symbol Table                                                                                   Mon Dec 02 21:09:50 2019
 
                        _x 0059                        l40 788A                        l34 74FC  
                       l51 7996                        l35 7500                        l60 790C  
@@ -3410,13 +3411,13 @@ Symbol Table                                                                    
                       l99 7404               __CFG_BOR$ON 000000       ___wmul@multiplicand 0003  
              __CFG_BORV$3 000000              __CFG_CP0$OFF 000000              __CFG_CP1$OFF 000000  
             __CFG_CP2$OFF 000000              __CFG_CP3$OFF 000000                       l122 7B1A  
-                     l241 7DE8                       l242 7E0E                       l234 7D48  
-                     l251 75BA                       l235 7D6E                       l307 7A36  
-                     l254 75F8                       l263 7472                       l255 75FC  
-                     l247 7E5E                       l264 7488                       l258 74A0  
-                     l259 74BA                       l460 745E                       l367 7C00  
-                     l457 765A                       l539 7D0C                       l951 780E  
-                     l961 76B6                       l958 7816                       l968 76BE  
+                     l240 7D48                       l241 7D6E                       l260 75F8  
+                     l316 7A36                       l261 75FC                       l253 7E5E  
+                     l270 7488                       l247 7DE8                       l264 74A0  
+                     l248 7E0E                       l265 74BA                       l257 75BA  
+                     l269 7472                       l376 7C00                       l466 765A  
+                     l548 7D0C                       l469 745E                       l960 780E  
+                     l970 76B6                       l967 7816                       l977 76BE  
             __CFG_CPB$OFF 000000                       u500 74AE                       u501 74AA  
                      u510 746E                       _PR2 000FCB                       u511 746A  
                      u600 7C70                       u520 7480                       u601 7C6C  
@@ -3452,82 +3453,82 @@ Symbol Table                                                                    
                      _PWM 7D0E            ??_ContarPulsos 0003                       _e_c 0060  
                      _cmd 7818                       _end 7502                       _ons 0033  
                      wreg 000FE8              __CFG_LVP$OFF 000000                      ?_PWM 0001  
-             coord@buffer 000F              __CFG_WDT$OFF 000000                      l2001 7DAA  
-                    l2011 7DF6                      l2003 7DB2                      l2021 7E36  
-                    l2013 7DFA                      l2005 7DBE                      l2023 7E42  
-                    l2015 7E02                      l2007 7DD0                      l2111 7B9C  
-                    l2041 762C                      l2033 75FE                      l2017 7E12  
-                    l2009 7DDC                      l2121 7BC6                      l2113 7BAC  
-                    l2105 7B66                      l2201 7F6A                      l2051 7648  
-                    l2043 7638                      l2035 7602                      l2027 7E4A  
-                    l2019 7E1A                      l2131 7BE4                      l2115 7BAE  
-                    l2107 7B78                      l2211 7F9E                      l2203 7F84  
-                    l2053 764C                      l2045 763C                      l2037 7604  
-                    l2029 7E52                      l2117 7BB2                      l2109 7B7C  
-                    l2141 77CE                      l2133 77A4                      l2221 7FC6  
-                    l2213 7FA2                      l2055 7650                      l2047 7640  
-                    l2039 762A                      l2127 7BCE                      l2119 7BB4  
-                    l2151 7802                      l2143 77DC                      l2135 77AC  
-                    l2231 79EE                      l2071 79BE                      l2063 7998  
-                    l2223 7FD8                      l2215 7FBE                      l2057 7654  
-                    l2049 7644                      l2129 7BE0                      l2153 7808  
-                    l2145 77E2                      l2137 77BE                      l2161 767E  
-                    l2073 79C8                      l2065 79A0                      l2081 7A24  
-                    l2225 7FDC                      l2209 7F8C                      ?_cmd 0001  
-                    l2059 7658                      l2091 7B30                      l2147 77F8  
-                    l2139 77C6                      l2163 768C                      l2155 765C  
-                    l2075 79D2                      l2067 79AA                      l2171 7E60  
-                    l2093 7B32                      l2149 7800                      l2165 76A2  
-                    l2157 766E                      l2069 79B4                      l2181 7E78  
-                    l2173 7E64                      l1703 7480                      l2095 7B4A  
-                    l2087 7B1C                      l2167 76AA                      l2159 7676  
-                    l1711 7A38                      l2079 79DA                      l2191 7ED0  
-                    l2183 7E80                      l2175 7E6C                      l2097 7B4C  
-                    l2089 7B2C                      l2169 76B0                      l1721 7A56  
-                    l2193 7EEC                      l2185 7E84                      l2177 7E74  
-                    l1731 75A2                      l1707 7408                      l2099 7B5E  
-                    l1723 7A5A                      l1803 74CA                      l2195 7F06  
-                    l2187 7E88                      l2179 7E76                      ?_end 0001  
-                    l1741 75DE                      l1733 75B2                      l1709 7416  
-                    l1901 7990                      l1725 7A76                      l1717 7A40  
-                    l1813 7818                      l1805 74DC                      l2197 7F20  
-                    l2189 7EA2                      l1751 7C02                      l1743 75E2  
-                    l1735 75B4                      l1911 78A6                      l1903 7994  
-                    l1727 7A8E                      l1719 7A46                      l1831 7888  
-                    l1823 782A                      l1815 781E                      l1807 74E0  
-                    l2199 7F4E                      l1761 7C36                      l1753 7C06  
-                    l1737 75C8                      l1745 743A                      l1913 78BC  
-                    l1921 78C6                      l1841 775A                      l1729 7ACE  
-                    l1825 783C                      l1817 7822                      l1809 74FE  
-                    l1771 7C78                      l1763 7C46                      l1755 7C14  
-                    l1739 75CC                      l1747 7456                      l1931 78E6  
-                    l1923 78CC                      l1915 78C0                      l1907 788C  
-                    l1835 7732                      l1683 73F4                      l1827 7840  
-                    l1781 7CCA                      l1773 7C84                      l1765 7C4A  
-                    l1757 7C24                      l1693 74AE                      l1933 78EA  
-                    l1909 7890                      l1861 77A0                      l1837 7736  
-                    l1685 7402                      l1829 785C                      l1941 7502  
-                    l1791 7CFC                      l1783 7CCC                      l1775 7C92  
-                    l1767 7C5A                      l1759 7C28                      l1695 74B2  
-                    l1935 7906                      l1871 792C                      l1855 776E  
-                    l1839 7748                      l1847 7760                      l1951 7522  
-                    l1943 7508                      l1785 7CD6                      l1777 7C9C  
-                    l1769 7C70                      l1961 76C4                      l1689 748A  
-                    l1937 790A                      l1929 78D4                      l1865 790E  
-                    l1857 7780                      l1849 7766                      l1953 7526  
-                    l1779 7CBA                      l1787 7CDC                      l1971 772A  
-                    l1963 7722                      l1699 7460                      l1867 7912  
-                    l1859 7784                      l1955 7542                      l1795 74BC  
-                    l1789 7CEC                      l1973 772C                      l1965 7724  
-                    l1981 7D30                      l1869 7924                      l1877 7932  
-                    l1949 7510                      l1797 74C2                      l1975 772E  
-                    l1967 7726                      l1959 76C0                      l1991 7D72  
-                    l1983 7D3C                      l1895 795E                      l1879 7944  
-                    l1887 7950                      l1969 7728                      l1993 7D7A  
-                    l1985 7D56                      l1977 7D0E                      l1897 7970  
-                    l1889 7956                      l1995 7D96                      l1987 7D5A  
-                    l1979 7D1E                      l1899 7974                      l1997 7DA2  
-                    l1989 7D62                      _LATB 000F8A                      _LATC 000F8B  
+             coord@buffer 000F              __CFG_WDT$OFF 000000                      l2000 7D3C  
+                    l2010 7D7A                      l2002 7D56                      l2020 7DB2  
+                    l2012 7D96                      l2004 7D5A                      l2030 7DFA  
+                    l2022 7DBE                      l2014 7DA2                      l2006 7D62  
+                    l2110 7B32                      l2040 7E42                      l2032 7E02  
+                    l2024 7DD0                      l2008 7D72                      l2112 7B4A  
+                    l2104 7B1C                      l2200 7E80                      l2050 75FE  
+                    l2034 7E12                      l2026 7DDC                      l2018 7DAA  
+                    l2130 7BAC                      l2122 7B66                      l2114 7B4C  
+                    l2106 7B2C                      l2210 7EEC                      l2202 7E84  
+                    l2060 7638                      l2052 7602                      l2044 7E4A  
+                    l2036 7E1A                      l2028 7DF6                      l2132 7BAE  
+                    l2124 7B78                      l2116 7B5E                      l2108 7B30  
+                    l2220 7F84                      l2212 7F06                      l2204 7E88  
+                    l2070 764C                      l2062 763C                      l2054 7604  
+                    l2046 7E52                      l2038 7E36                      l2134 7BB2  
+                    l2126 7B7C                      l2150 77A4                      l2230 7FA2  
+                    l2214 7F20                      l2206 7EA2                      l2072 7650  
+                    l2064 7640                      l2056 762A                      l2144 7BCE  
+                    l2136 7BB4                      l2128 7B9C                      l2160 77DC  
+                    l2152 77AC                      l2080 7998                      l2240 7FD8  
+                    l2232 7FBE                      l2216 7F4E                      l2208 7ED0  
+                    l2074 7654                      l2066 7644                      l2058 762C  
+                    l2146 7BE0                      l2138 7BC6                      l2170 7808  
+                    l2162 77E2                      l2154 77BE                      l2090 79C8  
+                    l2082 79A0                      l2242 7FDC                      l2226 7F8C  
+                    l2218 7F6A                      ?_cmd 0001                      l2076 7658  
+                    l2068 7648                      l2148 7BE4                      l2164 77F8  
+                    l2156 77C6                      l2180 768C                      l2172 765C  
+                    l1700 73F4                      l2092 79D2                      l2084 79AA  
+                    l2228 7F9E                      l1710 74AE                      l2166 7800  
+                    l2158 77CE                      l2182 76A2                      l2174 766E  
+                    l1702 7402                      l2086 79B4                      l2238 7FC6  
+                    l2190 7E64                      l1800 7CCC                      l1712 74B2  
+                    l1720 7480                      l2168 7802                      l2184 76AA  
+                    l2176 7676                      l2256 79EE                      l2096 79DA  
+                    l2088 79BE                      l2192 7E6C                      l1802 7CD6  
+                    l1706 748A                      l2186 76B0                      l2178 767E  
+                    l2098 7A24                      l2194 7E74                      l1804 7CDC  
+                    l1716 7460                      l1724 7408                      l1740 7A5A  
+                    l1820 74CA                      l1812 74BC                      l2196 7E76  
+                    l2188 7E60                      ?_end 0001                      l1806 7CEC  
+                    l1750 75B2                      l1726 7416                      l1742 7A76  
+                    l1734 7A40                      l1830 7818                      l1822 74DC  
+                    l1814 74C2                      l2198 7E78                      l1808 7CFC  
+                    l1760 75E2                      l1752 75B4                      l1920 7994  
+                    l1912 795E                      l1904 7950                      l1744 7A8E  
+                    l1736 7A46                      l1728 7A38                      l1840 782A  
+                    l1832 781E                      l1824 74E0                      l1770 7C06  
+                    l1754 75C8                      l1762 743A                      l1930 78BC  
+                    l1914 7970                      l1906 7956                      l1746 7ACE  
+                    l1738 7A56                      l1842 783C                      l1834 7822  
+                    l1826 74FE                      l1780 7C46                      l1772 7C14  
+                    l1756 75CC                      l1748 75A2                      l1764 7456  
+                    l1940 78CC                      l1932 78C0                      l1924 788C  
+                    l1916 7974                      l1852 7732                      l1844 7840  
+                    l1790 7C84                      l1782 7C4A                      l1774 7C24  
+                    l1758 75DE                      l1950 78EA                      l1926 7890  
+                    l1918 7990                      l1854 7736                      l1846 785C  
+                    l1792 7C92                      l1784 7C5A                      l1776 7C28  
+                    l1768 7C02                      l1952 7906                      l1928 78A6  
+                    l1872 776E                      l1856 7748                      l1864 7760  
+                    l1848 7888                      l1960 7508                      l1794 7C9C  
+                    l1786 7C70                      l1778 7C36                      l1954 790A  
+                    l1946 78D4                      l1938 78C6                      l1882 790E  
+                    l1874 7780                      l1866 7766                      l1858 775A  
+                    l1970 7526                      l1796 7CBA                      l1788 7C78  
+                    l1980 7722                      l1948 78E6                      l1884 7912  
+                    l1876 7784                      l1972 7542                      l1798 7CCA  
+                    l1990 772C                      l1982 7724                      l1886 7924  
+                    l1894 7932                      l1878 77A0                      l1966 7510  
+                    l1958 7502                      l1992 772E                      l1984 7726  
+                    l1976 76C0                      l1896 7944                      l1888 792C  
+                    l1968 7522                      l1986 7728                      l1978 76C4  
+                    l1994 7D0E                      l1988 772A                      l1996 7D1E  
+                    l1998 7D30                      _LATB 000F8A                      _LATC 000F8B  
                     _LATD 000F8C                      _RCIF 007CF5                      _TMR2 000FCC  
              _BanderaDisX 002D               _BanderaDisY 002B                      _Par1 0049  
                     _Par2 0047                      cmd@i 001B                      _main 7E60  
@@ -3536,14 +3537,14 @@ Symbol Table                                                                    
        ??_Coord_Validated 0002                      prodh 000FF4                      prodl 000FF3  
                     start 0000             __CFG_IESO$OFF 000000              ___param_bank 000000  
                    ??_PWM 0007           __end_of_OneShot 74BC             _Ins_Validated 790E  
-                   ??_cmd 001B                     ??_end 0002           Movimiento@F3243 004F  
-         Movimiento@F3246 004A            __CFG_CCP2MX$ON 000000           __end_of___aldiv 7D0E  
+                   ??_cmd 001B                     ??_end 0002           Movimiento@F3244 004F  
+         Movimiento@F3247 004A            __CFG_CCP2MX$ON 000000           __end_of___aldiv 7D0E  
                    ?_main 0001                     _CMCON 000FB4                     _T2CON 000FCA  
          __end_of___lwdiv 7818           __end_of___lwmod 76C0                     _RCREG 000FAE  
            _Par_Validated 7732                     _SPBRG 000FAF                     _PORTB 000F81  
                    _PORTC 000F82                     _PORTD 000F83                     _TRISB 000F93  
                    _TRISC 000F94                     _TRISD 000F95                     _TXREG 000FAD  
-         Movimiento@i_650 0015             __CFG_PWRT$OFF 000000             __CFG_WRT0$OFF 000000  
+         Movimiento@i_712 0015             __CFG_PWRT$OFF 000000             __CFG_WRT0$OFF 000000  
            __CFG_WRT1$OFF 000000             __CFG_WRT2$OFF 000000             __CFG_WRT3$OFF 000000  
       __size_of_UARTConfi 0072                     _Error 0054            __CFG_EBTR0$OFF 000000  
           __CFG_FCMEN$OFF 000000            __CFG_EBTR1$OFF 000000            __CFG_EBTR2$OFF 000000  
@@ -3571,7 +3572,7 @@ Symbol Table                                                                    
            ___rparam_used 000001           ??_Ins_Validated 0002            __pcstackCOMRAM 0001  
             __pidataBANK0 741C                 ?_UARTRead 0001             __end_of_coord 7B1C  
            __end_of_start 7502           ??_Par_Validated 0002             ?_ResetOneShot 0001  
-          _UARTConfi$1613 0011             _PasosActuales 0035           _Coord_Validated 788C  
+          _UARTConfi$1678 0011             _PasosActuales 0035           _Coord_Validated 788C  
                  ??_coord 000B                   ??_start 0002     __end_of_Configuracion 765C  
               __pnvCOMRAM 0059               ?_Movimiento 0001                   ?___wmul 0001  
               ??_UARTRead 0001                   _CCP1CON 000FBD                   _CCP2CON 000FBA  
@@ -3600,7 +3601,7 @@ Symbol Table                                                                    
             ??_Movimiento 0007     __end_of_Ins_Validated 7998                  ??___wmul 0005  
              __pdataBANK0 0060          __CFG_LPT1OSC$OFF 000000     __end_of_Par_Validated 77A4  
              __pbssCOMRAM 002B        __end_of_Movimiento 7C02                  ?_OneShot 0001  
-               _main$1614 0025          ___lwdiv@dividend 0006                  ?___aldiv 0001  
+               _main$1679 0025          ___lwdiv@dividend 0006                  ?___aldiv 0001  
                 ?___lwdiv 0006                  ?___lwmod 0001               ??_UARTConfi 0011  
              ??_UARTWrite 0001    __size_of_Configuracion 005E          ___lwdiv@quotient 000A  
           __size_of_coord 00E4     __size_of_ResetOneShot 002A            __size_of_start 0046  

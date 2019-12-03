@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.10\pic\dat\en_msgs.txt \
   -cs -h+dist/default/production\Comandos.X.production.sym \
   --cmf=dist/default/production\Comandos.X.production.cmf -z -Q18F4550 \
-  -oC:\Users\MLS\AppData\Local\Temp\saf8.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\MLS\AppData\Local\Temp\sfi8.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/Comandos.X.production.map -E1 -ver=XC8 \
   --acfsm=1493 -ASTACK=07Eh-07FFh -pstack=STACK -ACODE=00h-07FFFh \
   -ACONST=00h-07FFFh -ASMALLCONST=0800h-08FFhx120 \
@@ -23,7 +23,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\MLS\AppData\Local\Temp\saf8.o \
+  C:\Users\MLS\AppData\Local\Temp\sfi8.o \
   dist/default/production\Comandos.X.production.o 
 
 Object code version is 3.11
@@ -36,7 +36,7 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\MLS\AppData\Local\Temp\saf8.o
+C:\Users\MLS\AppData\Local\Temp\sfi8.o
                 init                                  0        0        4        0       0
                 idloc                            200000   200000        8   200000       0
                 config                           300000   300000        E   300000       0
@@ -218,10 +218,10 @@ UNUSED ADDRESS RANGES
 ContarPulsos@pasos        cstackCOMRAM 000001
 Coord_Validated@i         cstackCOMRAM 000002
 Ins_Validated@i           cstackCOMRAM 000002
-Movimiento@F3243          dataCOMRAM   00004F
-Movimiento@F3246          dataCOMRAM   00004A
+Movimiento@F3244          dataCOMRAM   00004F
+Movimiento@F3247          dataCOMRAM   00004A
 Movimiento@i              cstackCOMRAM 000013
-Movimiento@i_650          cstackCOMRAM 000015
+Movimiento@i_712          cstackCOMRAM 000015
 Movimiento@loquequieras   cstackCOMRAM 000009
 Movimiento@loquequieras2  cstackCOMRAM 00000E
 Par_Validated@i           cstackCOMRAM 000002
@@ -285,7 +285,7 @@ _TRISD                    (abs)        000F95
 _TXREG                    (abs)        000FAD
 _TXSTAbits                (abs)        000FAC
 _UARTConfi                text20       0076C0
-_UARTConfi$1613           cstackCOMRAM 000011
+_UARTConfi$1678           cstackCOMRAM 000011
 _UARTRead                 text6        0073F4
 _UARTWrite                text13       007406
 __CFG_BOR$ON              (abs)        000000
@@ -614,7 +614,7 @@ _gracias                  dataBANK0    000077
 _init                     dataBANK0    00006D
 _letter                   bssCOMRAM    000048
 _main                     text0        007E60
-_main$1614                cstackCOMRAM 000025
+_main$1679                cstackCOMRAM 000025
 _ons                      bssCOMRAM    000033
 _pasosRecorridos          bssCOMRAM    000037
 _start                    text2        0074BC
@@ -1099,6 +1099,7 @@ Total ram usage:        1 bytes
 		_end
 		_main
 		_Movimiento
+		_HaltMotors
  This function uses a non-reentrant model
 
 

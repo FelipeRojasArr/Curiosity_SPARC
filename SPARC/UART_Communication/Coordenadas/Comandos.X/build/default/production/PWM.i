@@ -5471,6 +5471,7 @@ int ContarPulsos(int pasos);
 void OneShot(void);
 void ResetOneShot(void);
 int Movimiento(void);
+void HaltMotors(void);
 
 
 
@@ -5935,4 +5936,13 @@ void ResetOneShot(void){
     if(PORTCbits.CCP1==1)return;
     if(PORTCbits.CCP1==0)ons=0;
     return;
+}
+
+void HaltMotors(void)
+{
+    PORTDbits.RD2=1;
+    PORTDbits.RD3=1;
+    UARTWrite(0x4B);
+    TXSTAbits.TXEN = 0;
+    RCSTAbits.CREN = 0;
 }

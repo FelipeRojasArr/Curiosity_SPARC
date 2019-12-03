@@ -42,7 +42,7 @@ idataBANK0 CODE 0 741C 741C 1E 1
 dataBANK0 BANK0 1 60 60 1E 1
 dataCOMRAM COMRAM 1 4A 4A F 1
 bssCOMRAM COMRAM 1 2B 2B 1F 1
-$C:\Users\MLS\AppData\Local\Temp\saf8.o
+$C:\Users\MLS\AppData\Local\Temp\sfi8.o
 idloc IDLOC 0 200000 200000 8 1
 init CODE 0 0 0 4 1
 config CONFIG 0 300000 300000 E 1
@@ -381,48 +381,48 @@ $dist/default/production\Comandos.X.production.o
 7FBE text0 CODE >62:C:\Users\MLS\Desktop\Hayde\RepoSPARC\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
 7FC6 text0 CODE >64:C:\Users\MLS\Desktop\Hayde\RepoSPARC\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
 7FD8 text0 CODE >65:C:\Users\MLS\Desktop\Hayde\RepoSPARC\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
-754C cinit CODE >3443:C:\Users\MLS\AppData\Local\Temp\saf8.s
-754C cinit CODE >3445:C:\Users\MLS\AppData\Local\Temp\saf8.s
-754C cinit CODE >3448:C:\Users\MLS\AppData\Local\Temp\saf8.s
-754C cinit CODE >3551:C:\Users\MLS\AppData\Local\Temp\saf8.s
-754E cinit CODE >3552:C:\Users\MLS\AppData\Local\Temp\saf8.s
-7550 cinit CODE >3553:C:\Users\MLS\AppData\Local\Temp\saf8.s
-7552 cinit CODE >3554:C:\Users\MLS\AppData\Local\Temp\saf8.s
-7554 cinit CODE >3555:C:\Users\MLS\AppData\Local\Temp\saf8.s
-7556 cinit CODE >3556:C:\Users\MLS\AppData\Local\Temp\saf8.s
-7558 cinit CODE >3557:C:\Users\MLS\AppData\Local\Temp\saf8.s
-755C cinit CODE >3558:C:\Users\MLS\AppData\Local\Temp\saf8.s
-7560 cinit CODE >3559:C:\Users\MLS\AppData\Local\Temp\saf8.s
-7560 cinit CODE >3560:C:\Users\MLS\AppData\Local\Temp\saf8.s
-7562 cinit CODE >3561:C:\Users\MLS\AppData\Local\Temp\saf8.s
-7566 cinit CODE >3562:C:\Users\MLS\AppData\Local\Temp\saf8.s
-7568 cinit CODE >3563:C:\Users\MLS\AppData\Local\Temp\saf8.s
-756A cinit CODE >3564:C:\Users\MLS\AppData\Local\Temp\saf8.s
-756C cinit CODE >3568:C:\Users\MLS\AppData\Local\Temp\saf8.s
-756E cinit CODE >3569:C:\Users\MLS\AppData\Local\Temp\saf8.s
-7570 cinit CODE >3570:C:\Users\MLS\AppData\Local\Temp\saf8.s
-7572 cinit CODE >3571:C:\Users\MLS\AppData\Local\Temp\saf8.s
-7574 cinit CODE >3572:C:\Users\MLS\AppData\Local\Temp\saf8.s
-7576 cinit CODE >3573:C:\Users\MLS\AppData\Local\Temp\saf8.s
-7578 cinit CODE >3574:C:\Users\MLS\AppData\Local\Temp\saf8.s
-757C cinit CODE >3575:C:\Users\MLS\AppData\Local\Temp\saf8.s
-7580 cinit CODE >3576:C:\Users\MLS\AppData\Local\Temp\saf8.s
-7580 cinit CODE >3577:C:\Users\MLS\AppData\Local\Temp\saf8.s
-7582 cinit CODE >3578:C:\Users\MLS\AppData\Local\Temp\saf8.s
-7586 cinit CODE >3579:C:\Users\MLS\AppData\Local\Temp\saf8.s
-7588 cinit CODE >3580:C:\Users\MLS\AppData\Local\Temp\saf8.s
-758A cinit CODE >3581:C:\Users\MLS\AppData\Local\Temp\saf8.s
-758C cinit CODE >3585:C:\Users\MLS\AppData\Local\Temp\saf8.s
-7590 cinit CODE >3586:C:\Users\MLS\AppData\Local\Temp\saf8.s
-7592 cinit CODE >3587:C:\Users\MLS\AppData\Local\Temp\saf8.s
-7592 cinit CODE >3588:C:\Users\MLS\AppData\Local\Temp\saf8.s
-7594 cinit CODE >3589:C:\Users\MLS\AppData\Local\Temp\saf8.s
-7596 cinit CODE >3590:C:\Users\MLS\AppData\Local\Temp\saf8.s
-7598 cinit CODE >3596:C:\Users\MLS\AppData\Local\Temp\saf8.s
-7598 cinit CODE >3599:C:\Users\MLS\AppData\Local\Temp\saf8.s
-759A cinit CODE >3600:C:\Users\MLS\AppData\Local\Temp\saf8.s
-759C cinit CODE >3601:C:\Users\MLS\AppData\Local\Temp\saf8.s
-759E cinit CODE >3602:C:\Users\MLS\AppData\Local\Temp\saf8.s
+754C cinit CODE >3443:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+754C cinit CODE >3445:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+754C cinit CODE >3448:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+754C cinit CODE >3551:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+754E cinit CODE >3552:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+7550 cinit CODE >3553:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+7552 cinit CODE >3554:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+7554 cinit CODE >3555:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+7556 cinit CODE >3556:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+7558 cinit CODE >3557:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+755C cinit CODE >3558:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+7560 cinit CODE >3559:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+7560 cinit CODE >3560:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+7562 cinit CODE >3561:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+7566 cinit CODE >3562:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+7568 cinit CODE >3563:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+756A cinit CODE >3564:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+756C cinit CODE >3568:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+756E cinit CODE >3569:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+7570 cinit CODE >3570:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+7572 cinit CODE >3571:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+7574 cinit CODE >3572:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+7576 cinit CODE >3573:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+7578 cinit CODE >3574:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+757C cinit CODE >3575:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+7580 cinit CODE >3576:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+7580 cinit CODE >3577:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+7582 cinit CODE >3578:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+7586 cinit CODE >3579:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+7588 cinit CODE >3580:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+758A cinit CODE >3581:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+758C cinit CODE >3585:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+7590 cinit CODE >3586:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+7592 cinit CODE >3587:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+7592 cinit CODE >3588:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+7594 cinit CODE >3589:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+7596 cinit CODE >3590:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+7598 cinit CODE >3596:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+7598 cinit CODE >3599:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+759A cinit CODE >3600:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+759C cinit CODE >3601:C:\Users\MLS\AppData\Local\Temp\sfi8.s
+759E cinit CODE >3602:C:\Users\MLS\AppData\Local\Temp\sfi8.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -447,7 +447,7 @@ __CFG_IESO$OFF 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __HidataBANK0 0 0 ABS 0 idataBANK0 dist/default/production\Comandos.X.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\Comandos.X.production.o
 _Configuracion 75FE 0 CODE 0 text19 dist/default/production\Comandos.X.production.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\MLS\AppData\Local\Temp\saf8.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\MLS\AppData\Local\Temp\sfi8.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\Comandos.X.production.o
 UARTConfi@BAUD F 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
 main@a 1F 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
@@ -461,12 +461,12 @@ _Par1 49 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
 _Par2 47 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
 _RCIF 7CF5 0 ABS 0 - dist/default/production\Comandos.X.production.o
 _TMR2 FCC 0 ABS 0 - dist/default/production\Comandos.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\MLS\AppData\Local\Temp\saf8.o
+___sp 0 0 STACK 2 stack C:\Users\MLS\AppData\Local\Temp\sfi8.o
 _init 6D 0 BANK0 1 dataBANK0 dist/default/production\Comandos.X.production.o
 _main 7E60 0 CODE 0 text0 dist/default/production\Comandos.X.production.o
 cmd@i 1B 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
 end@i 2 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
-start 0 0 CODE 0 init C:\Users\MLS\AppData\Local\Temp\saf8.o
+start 0 0 CODE 0 init C:\Users\MLS\AppData\Local\Temp\sfi8.o
 __size_of___aldiv 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __size_of___lwdiv 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
@@ -480,11 +480,11 @@ __LidataBANK0 0 0 ABS 0 idataBANK0 dist/default/production\Comandos.X.production
 __Hpowerup 0 0 CODE 0 powerup dist/default/production\Comandos.X.production.o
 __LnvCOMRAM 0 0 ABS 0 nvCOMRAM dist/default/production\Comandos.X.production.o
 __HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\Comandos.X.production.o
-__accesstop 60 0 ABS 0 - C:\Users\MLS\AppData\Local\Temp\saf8.o
-intlevel0 0 0 CODE 0 text C:\Users\MLS\AppData\Local\Temp\saf8.o
-intlevel1 0 0 CODE 0 text C:\Users\MLS\AppData\Local\Temp\saf8.o
-intlevel2 0 0 CODE 0 text C:\Users\MLS\AppData\Local\Temp\saf8.o
-intlevel3 0 0 CODE 0 text C:\Users\MLS\AppData\Local\Temp\saf8.o
+__accesstop 60 0 ABS 0 - C:\Users\MLS\AppData\Local\Temp\sfi8.o
+intlevel0 0 0 CODE 0 text C:\Users\MLS\AppData\Local\Temp\sfi8.o
+intlevel1 0 0 CODE 0 text C:\Users\MLS\AppData\Local\Temp\sfi8.o
+intlevel2 0 0 CODE 0 text C:\Users\MLS\AppData\Local\Temp\sfi8.o
+intlevel3 0 0 CODE 0 text C:\Users\MLS\AppData\Local\Temp\sfi8.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\Comandos.X.production.o
 ___aldiv@divisor 5 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\Comandos.X.production.o
@@ -497,16 +497,16 @@ __Hifardata 0 0 CODE 0 ifardata dist/default/production\Comandos.X.production.o
 ___aldiv@sign A 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
 _CVRCONbits FB5 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext dist/default/production\Comandos.X.production.o
-_UARTConfi$1613 11 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
+_UARTConfi$1678 11 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
 __pidataCOMRAM 73E5 0 CODE 0 idataCOMRAM dist/default/production\Comandos.X.production.o
 coord@buffer F 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
 ___wmul@multiplicand 3 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
 _ADCON1 FC1 0 ABS 0 - dist/default/production\Comandos.X.production.o
 _gracias 77 0 BANK0 1 dataBANK0 dist/default/production\Comandos.X.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\MLS\AppData\Local\Temp\saf8.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\MLS\AppData\Local\Temp\sfi8.o
 _BanderaDisX 2D 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
 _BanderaDisY 2B 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\MLS\AppData\Local\Temp\saf8.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\MLS\AppData\Local\Temp\sfi8.o
 __LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\Comandos.X.production.o
 _CCPR1L FBE 0 ABS 0 - dist/default/production\Comandos.X.production.o
 _CCPR2L FBB 0 ABS 0 - dist/default/production\Comandos.X.production.o
@@ -531,13 +531,13 @@ __size_of_coord 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production\Comandos.X.production.o
 __size_of_start 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 ContarPulsos@pasos 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
-Movimiento@F3243 4F 0 COMRAM 1 dataCOMRAM dist/default/production\Comandos.X.production.o
-Movimiento@F3246 4A 0 COMRAM 1 dataCOMRAM dist/default/production\Comandos.X.production.o
+Movimiento@F3244 4F 0 COMRAM 1 dataCOMRAM dist/default/production\Comandos.X.production.o
+Movimiento@F3247 4A 0 COMRAM 1 dataCOMRAM dist/default/production\Comandos.X.production.o
 __HnvCOMRAM 0 0 ABS 0 nvCOMRAM dist/default/production\Comandos.X.production.o
 __end_of_Configuracion 765C 0 CODE 0 text19 dist/default/production\Comandos.X.production.o
 _INTCON2bits FF1 0 ABS 0 - dist/default/production\Comandos.X.production.o
 _INTCON3bits FF0 0 ABS 0 - dist/default/production\Comandos.X.production.o
-Movimiento@i_650 15 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
+Movimiento@i_712 15 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
 ___lwmod@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
 __Lintcodelo 0 0 CODE 0 intcodelo dist/default/production\Comandos.X.production.o
 __CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
@@ -582,11 +582,11 @@ __Htext6 0 0 ABS 0 text6 dist/default/production\Comandos.X.production.o
 __Htext7 0 0 ABS 0 text7 dist/default/production\Comandos.X.production.o
 __Htext8 0 0 ABS 0 text8 dist/default/production\Comandos.X.production.o
 __Htext9 0 0 ABS 0 text9 dist/default/production\Comandos.X.production.o
-_main$1614 25 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
+_main$1679 25 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
 ___lwdiv@counter C 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\Comandos.X.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\Comandos.X.production.o
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\MLS\AppData\Local\Temp\saf8.o
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\MLS\AppData\Local\Temp\sfi8.o
 __size_of_Ins_Validated 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __Hcomram 0 0 ABS 0 comram dist/default/production\Comandos.X.production.o
 __Hconfig 30000E 0 CONFIG 0 config dist/default/production\Comandos.X.production.o
@@ -720,8 +720,8 @@ __Lfardata 0 0 FARRAM 0 fardata dist/default/production\Comandos.X.production.o
 __end_of_Par_Validated 77A4 0 CODE 0 text7 dist/default/production\Comandos.X.production.o
 Movimiento@loquequieras 9 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
 __CFG_CCP2MX$ON 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
-stackhi 7FF 0 ABS 0 - C:\Users\MLS\AppData\Local\Temp\saf8.o
-stacklo 7E 0 ABS 0 - C:\Users\MLS\AppData\Local\Temp\saf8.o
+stackhi 7FF 0 ABS 0 - C:\Users\MLS\AppData\Local\Temp\sfi8.o
+stacklo 7E 0 ABS 0 - C:\Users\MLS\AppData\Local\Temp\sfi8.o
 start@i 2 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
 __Lintcode 0 0 CODE 0 intcode dist/default/production\Comandos.X.production.o
 __Lintret 0 0 ABS 0 intret dist/default/production\Comandos.X.production.o
@@ -781,7 +781,7 @@ __Ltext19 0 0 ABS 0 text19 dist/default/production\Comandos.X.production.o
 __Ltext20 0 0 ABS 0 text20 dist/default/production\Comandos.X.production.o
 __Ltext21 0 0 ABS 0 text21 dist/default/production\Comandos.X.production.o
 _ResetOneShot 7460 0 CODE 0 text17 dist/default/production\Comandos.X.production.o
-__ramtop 800 0 RAM 0 ramtop C:\Users\MLS\AppData\Local\Temp\saf8.o
+__ramtop 800 0 RAM 0 ramtop C:\Users\MLS\AppData\Local\Temp\sfi8.o
 ___aldiv@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
 __Lpowerup 0 0 CODE 0 powerup dist/default/production\Comandos.X.production.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\Comandos.X.production.o

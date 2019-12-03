@@ -1,8 +1,8 @@
 Version 4.0 HI-TECH Software Intermediate Code
 "32 ./cases.h
 [; ;./cases.h: 32: systemState NextState;
-[c E3220 0 1 2 3 4 5 .. ]
-[n E3220 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
+[c E3221 0 1 2 3 4 5 .. ]
+[n E3221 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
 "2711 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 2711:     struct {
 [s S112 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -58,6 +58,63 @@ Version 4.0 HI-TECH Software Intermediate Code
 "5
 [; ;./PWM.h: 5: void ResetOneShot(void);
 [v _ResetOneShot `(v ~T0 @X0 0 ef ]
+"2 ./UART.h
+[; ;./UART.h: 2: void UARTWrite(char data);
+[v _UARTWrite `(v ~T0 @X0 0 ef1`uc ]
+"5157 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5157:     struct {
+[s S205 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S205 . TX9D TRMT BRGH SENDB SYNC TXEN TX9 CSRC ]
+"5167
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5167:     struct {
+[s S206 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S206 . TX9D1 TRMT1 BRGH1 SENDB1 SYNC1 TXEN1 TX91 CSRC1 ]
+"5177
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5177:     struct {
+[s S207 :6 `uc 1 :1 `uc 1 ]
+[n S207 . . TX8_9 ]
+"5181
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5181:     struct {
+[s S208 :1 `uc 1 ]
+[n S208 . TXD8 ]
+"5156
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5156: typedef union {
+[u S204 `S205 1 `S206 1 `S207 1 `S208 1 ]
+[n S204 . . . . . ]
+"5185
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5185: extern volatile TXSTAbits_t TXSTAbits __attribute__((address(0xFAC)));
+[v _TXSTAbits `VS204 ~T0 @X0 0 e@4012 ]
+"4947
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4947:     struct {
+[s S191 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S191 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
+"4957
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4957:     struct {
+[s S192 :3 `uc 1 :1 `uc 1 ]
+[n S192 . . ADEN ]
+"4961
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4961:     struct {
+[s S193 :5 `uc 1 :1 `uc 1 ]
+[n S193 . . SRENA ]
+"4965
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4965:     struct {
+[s S194 :6 `uc 1 :1 `uc 1 ]
+[n S194 . . RC8_9 ]
+"4969
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4969:     struct {
+[s S195 :6 `uc 1 :1 `uc 1 ]
+[n S195 . . RC9 ]
+"4973
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4973:     struct {
+[s S196 :1 `uc 1 ]
+[n S196 . RCD8 ]
+"4946
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4946: typedef union {
+[u S190 `S191 1 `S192 1 `S193 1 `S194 1 `S195 1 `S196 1 ]
+[n S190 . . . . . . . ]
+"4977
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4977: extern volatile RCSTAbits_t RCSTAbits __attribute__((address(0xFAB)));
+[v _RCSTAbits `VS190 ~T0 @X0 0 e@4011 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -568,38 +625,38 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8893
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"11 ./PWM.h
-[; ;./PWM.h: 11:     unsigned int CoordAntX;
+"12 ./PWM.h
+[; ;./PWM.h: 12:     unsigned int CoordAntX;
 [v _CoordAntX `ui ~T0 @X0 1 e ]
-"12
-[; ;./PWM.h: 12:     unsigned int CoordAntY;
+"13
+[; ;./PWM.h: 13:     unsigned int CoordAntY;
 [v _CoordAntY `ui ~T0 @X0 1 e ]
-"15
-[; ;./PWM.h: 15:     int CoordRelatX;
-[v _CoordRelatX `i ~T0 @X0 1 e ]
 "16
-[; ;./PWM.h: 16:     int CoordRelatY;
+[; ;./PWM.h: 16:     int CoordRelatX;
+[v _CoordRelatX `i ~T0 @X0 1 e ]
+"17
+[; ;./PWM.h: 17:     int CoordRelatY;
 [v _CoordRelatY `i ~T0 @X0 1 e ]
-"19
-[; ;./PWM.h: 19:     int pasosRecorridos;
+"20
+[; ;./PWM.h: 20:     int pasosRecorridos;
 [v _pasosRecorridos `i ~T0 @X0 1 e ]
-"22
-[; ;./PWM.h: 22:     unsigned int PasosActuales;
-[v _PasosActuales `ui ~T0 @X0 1 e ]
 "23
-[; ;./PWM.h: 23:     unsigned int ons;
+[; ;./PWM.h: 23:     unsigned int PasosActuales;
+[v _PasosActuales `ui ~T0 @X0 1 e ]
+"24
+[; ;./PWM.h: 24:     unsigned int ons;
 [v _ons `ui ~T0 @X0 1 e ]
-"25
-[; ;./PWM.h: 25:     unsigned int PasosX;
-[v _PasosX `ui ~T0 @X0 1 e ]
 "26
-[; ;./PWM.h: 26:     unsigned int PasosY;
-[v _PasosY `ui ~T0 @X0 1 e ]
+[; ;./PWM.h: 26:     unsigned int PasosX;
+[v _PasosX `ui ~T0 @X0 1 e ]
 "27
-[; ;./PWM.h: 27:     unsigned int BanderaDisX;
-[v _BanderaDisX `ui ~T0 @X0 1 e ]
+[; ;./PWM.h: 27:     unsigned int PasosY;
+[v _PasosY `ui ~T0 @X0 1 e ]
 "28
-[; ;./PWM.h: 28:     unsigned int BanderaDisY;
+[; ;./PWM.h: 28:     unsigned int BanderaDisX;
+[v _BanderaDisX `ui ~T0 @X0 1 e ]
+"29
+[; ;./PWM.h: 29:     unsigned int BanderaDisY;
 [v _BanderaDisY `ui ~T0 @X0 1 e ]
 "6 ./cases.h
 [; ;./cases.h: 6: char Par1;
@@ -621,7 +678,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _x `i ~T0 @X0 1 e ]
 "32
 [; ;./cases.h: 32: systemState NextState;
-[v _NextState `E3220 ~T0 @X0 1 e ]
+[v _NextState `E3221 ~T0 @X0 1 e ]
 "34
 [; ;./cases.h: 34: uint8_t click;
 [v _click `uc ~T0 @X0 1 e ]
@@ -970,4 +1027,31 @@ Version 4.0 HI-TECH Software Intermediate Code
 "111
 [; ;PWM.c: 111: }
 [e :UE 391 ]
+}
+"113
+[; ;PWM.c: 113: void HaltMotors(void)
+[v _HaltMotors `(v ~T0 @X0 1 ef ]
+"114
+[; ;PWM.c: 114: {
+{
+[e :U _HaltMotors ]
+[f ]
+"115
+[; ;PWM.c: 115:     PORTDbits.RD2=1;
+[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
+"116
+[; ;PWM.c: 116:     PORTDbits.RD3=1;
+[e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
+"117
+[; ;PWM.c: 117:     UARTWrite(0x4B);
+[e ( _UARTWrite (1 -> -> 75 `i `uc ]
+"118
+[; ;PWM.c: 118:     TXSTAbits.TXEN = 0;
+[e = . . _TXSTAbits 0 5 -> -> 0 `i `uc ]
+"119
+[; ;PWM.c: 119:     RCSTAbits.CREN = 0;
+[e = . . _RCSTAbits 0 4 -> -> 0 `i `uc ]
+"120
+[; ;PWM.c: 120: }
+[e :UE 394 ]
 }

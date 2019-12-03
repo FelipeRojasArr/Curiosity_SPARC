@@ -5471,6 +5471,7 @@ int ContarPulsos(int pasos);
 void OneShot(void);
 void ResetOneShot(void);
 int Movimiento(void);
+void HaltMotors(void);
 
 
 
