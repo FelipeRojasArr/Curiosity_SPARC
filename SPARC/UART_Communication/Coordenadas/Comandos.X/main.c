@@ -12,43 +12,34 @@
 
 void GoToInitialYPosition(void);
 void GoToInitialXPosition(void);
+//void PrintMyActulPosition(void)
 
 void __interrupt() INT_ISR(void)
 {
     if(INTCONbits.INT0IF == 1)
     {
-       GoToInitialXPosition();
-       /*while(INTCONbits.INT0IF == 1)
+        GoToInitialXPosition();
+        if(PORTBbits.RB0 == 0)
         {
-            __delay_ms(250);
-            //HaltMotorsY();*/
+            __delay_ms(15);
             if(PORTBbits.RB0 == 0)
             {
-                __delay_ms(15);
-                if(PORTBbits.RB0 == 0)
-                {
-                    INTCONbits.INT0IF = 0;
-                }
+                INTCONbits.INT0IF = 0;
             }
-        //}
+        }
     }
         
     if(INTCON3bits.INT1IF == 1)
     {
         GoToInitialYPosition();
-        /*while(INTCON3bits.INT1IF == 1)
+        if(PORTBbits.RB1 == 0)
         {
-            //HaltMotorsX();      //cAMBIA ESTA FUNCIÛN A LO QUE QUIERAS
-            __delay_ms(250);*/
+            __delay_ms(15);
             if(PORTBbits.RB1 == 0)
             {
-                __delay_ms(15);
-                if(PORTBbits.RB1 == 0)
-                {
-                    INTCON3bits.INT1IF = 0;
-                }
+                INTCON3bits.INT1IF = 0;
             }
-        //}
+        }
     }
 }
    
@@ -63,32 +54,23 @@ void main(void) {
     ENABLE_B=1;
     InicialX();
     InicialY();
-    GoToInitialYPosition();
     GoToInitialXPosition();
+    GoToInitialYPosition();
+    
     
     while(1){ /*Programa principal*/
         x=1;
        verification();
-        Movimiento();
-       /*Imprimir en serial coordenada actualizada*/
-        char a[3];
-        char b[3];
-
-        a[0]=(CoordAntX/100)+48;
-        a[1]=((CoordAntX%100)/10)+48;
-        a[2]=((CoordAntX%100)%10)+48;
-
-        b[0]=(CoordAntY/100)+48;
-        b[1]=((CoordAntY%100)/10)+48;
-        b[2]=((CoordAntY%100)%10)+48;
-
-        for(int i=0; i<3; i++){
-
-            UARTWrite(a[i]);
-        }
-        for(int i=0; i<3; i++){
-
-            UARTWrite(b[i]);
-        }
+       Movimiento();
     }
 }
+
+/*void GoToCero(void)
+{
+
+}*/
+
+/*void PrintMyActulPosition(void)
+{
+
+}*/

@@ -102,7 +102,7 @@ void GoToInitialXPosition(void)
     DIR_A=1;
     DIR_B=1;
     
-    ContarPulsos(50);
+    ContarPulsos(25);
 //    __delay_ms(80);
     ENABLE_A=1;
     ENABLE_B=1;
@@ -114,7 +114,7 @@ void GoToInitialYPosition(void)
     DIR_A=0;
     DIR_B=1;
     
-    ContarPulsos(50);
+    ContarPulsos(25);
 //    __delay_ms(500);
     ENABLE_A=1;
     ENABLE_B=1;

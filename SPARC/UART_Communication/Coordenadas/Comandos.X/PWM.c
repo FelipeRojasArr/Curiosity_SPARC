@@ -85,16 +85,16 @@ void PWM(){
 void ContarPulsos(int pasos){
     PasosActuales=0;
     ons=0;
-//    ENABLE_A=0;
-//    ENABLE_B=0;
+    ENABLE_A=0;
+    ENABLE_B=0;
     while(PasosActuales< pasos)
     {
         if (PORTCbits.CCP1==1) OneShot();
         if(ons==1) ResetOneShot();
     }
     
-//    ENABLE_A=1;
-//    ENABLE_B=1;
+    ENABLE_A=1;
+    ENABLE_B=1;
     
     return;  
 }

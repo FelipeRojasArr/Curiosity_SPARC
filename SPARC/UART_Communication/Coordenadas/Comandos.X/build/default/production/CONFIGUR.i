@@ -6009,7 +6009,7 @@ void GoToInitialXPosition(void)
     PORTDbits.RD0=1;
     PORTDbits.RD1=1;
 
-    ContarPulsos(50);
+    ContarPulsos(25);
 
     PORTDbits.RD2=1;
     PORTDbits.RD3=1;
@@ -6021,7 +6021,7 @@ void GoToInitialYPosition(void)
     PORTDbits.RD0=0;
     PORTDbits.RD1=1;
 
-    ContarPulsos(50);
+    ContarPulsos(25);
 
     PORTDbits.RD2=1;
     PORTDbits.RD3=1;

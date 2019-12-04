@@ -5982,16 +5982,16 @@ void PWM(){
 void ContarPulsos(int pasos){
     PasosActuales=0;
     ons=0;
-
-
+    PORTDbits.RD2=0;
+    PORTDbits.RD3=0;
     while(PasosActuales< pasos)
     {
         if (PORTCbits.CCP1==1) OneShot();
         if(ons==1) ResetOneShot();
     }
 
-
-
+    PORTDbits.RD2=1;
+    PORTDbits.RD3=1;
 
     return;
 }

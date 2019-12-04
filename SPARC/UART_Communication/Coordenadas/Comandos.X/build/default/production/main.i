@@ -5920,42 +5920,33 @@ void HaltMotors(void);
 void GoToInitialYPosition(void);
 void GoToInitialXPosition(void);
 
+
 void __attribute__((picinterrupt(("")))) INT_ISR(void)
 {
     if(INTCONbits.INT0IF == 1)
     {
-       GoToInitialXPosition();
-
-
-
-
+        GoToInitialXPosition();
+        if(PORTBbits.RB0 == 0)
+        {
+            _delay((unsigned long)((15)*(8000000L/4000.0)));
             if(PORTBbits.RB0 == 0)
             {
-                _delay((unsigned long)((15)*(8000000L/4000.0)));
-                if(PORTBbits.RB0 == 0)
-                {
-                    INTCONbits.INT0IF = 0;
-                }
+                INTCONbits.INT0IF = 0;
             }
-
+        }
     }
 
     if(INTCON3bits.INT1IF == 1)
     {
         GoToInitialYPosition();
-
-
-
-
+        if(PORTBbits.RB1 == 0)
+        {
+            _delay((unsigned long)((15)*(8000000L/4000.0)));
             if(PORTBbits.RB1 == 0)
             {
-                _delay((unsigned long)((15)*(8000000L/4000.0)));
-                if(PORTBbits.RB1 == 0)
-                {
-                    INTCON3bits.INT1IF = 0;
-                }
+                INTCON3bits.INT1IF = 0;
             }
-
+        }
     }
 }
 
@@ -5970,32 +5961,13 @@ void main(void) {
     PORTDbits.RD3=1;
     InicialX();
     InicialY();
-    GoToInitialYPosition();
     GoToInitialXPosition();
+    GoToInitialYPosition();
+
 
     while(1){
         x=1;
        verification();
-        Movimiento();
-
-        char a[3];
-        char b[3];
-
-        a[0]=(CoordAntX/100)+48;
-        a[1]=((CoordAntX%100)/10)+48;
-        a[2]=((CoordAntX%100)%10)+48;
-
-        b[0]=(CoordAntY/100)+48;
-        b[1]=((CoordAntY%100)/10)+48;
-        b[2]=((CoordAntY%100)%10)+48;
-
-        for(int i=0; i<3; i++){
-
-            UARTWrite(a[i]);
-        }
-        for(int i=0; i<3; i++){
-
-            UARTWrite(b[i]);
-        }
+       Movimiento();
     }
 }

@@ -5938,4 +5938,5 @@ int Movimiento(void) {
        UARTWrite(loquequieras2[i]);
        }
     }
+    x = 1;
 }
