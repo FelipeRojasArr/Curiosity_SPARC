@@ -10,18 +10,18 @@
 #include "Interruptions.h"
 #include "PWM.h"
 
-void UARTErrorR1(void);
-void UARTErrorR0(void);
+void GoToInitialYPosition(void);
+void GoToInitialXPosition(void);
 
 void __interrupt() INT_ISR(void)
 {
-    if(PORTBbits.RB0 == 1)
+    if(INTCONbits.INT0IF == 1)
     {
-        while(INTCON3bits.INT2IF == 1)
+       GoToInitialXPosition();
+       /*while(INTCONbits.INT0IF == 1)
         {
             __delay_ms(250);
-            UARTErrorR0();
-            //HaltMotors();
+            //HaltMotorsY();*/
             if(PORTBbits.RB0 == 0)
             {
                 __delay_ms(15);
@@ -30,15 +30,16 @@ void __interrupt() INT_ISR(void)
                     INTCONbits.INT0IF = 0;
                 }
             }
-        }
+        //}
     }
         
-    if(PORTBbits.RB1 == 1)
+    if(INTCON3bits.INT1IF == 1)
     {
-        while(INTCON3bits.INT1IF == 1)
+        GoToInitialYPosition();
+        /*while(INTCON3bits.INT1IF == 1)
         {
-            UARTErrorR1();      //cAMBIA ESTA FUNCIï¿½N A LO QUE QUIERAS
-            __delay_ms(250);
+            //HaltMotorsX();      //cAMBIA ESTA FUNCIóN A LO QUE QUIERAS
+            __delay_ms(250);*/
             if(PORTBbits.RB1 == 0)
             {
                 __delay_ms(15);
@@ -47,31 +48,24 @@ void __interrupt() INT_ISR(void)
                     INTCON3bits.INT1IF = 0;
                 }
             }
-        }
+        //}
     }
 }
    
-void UARTErrorR0()
-{
-    UARTWrite(0x45);
-}
-
-void UARTErrorR1()
-{
-    UARTWrite(0x65);
-}
 
 void main(void) {
-  
+    
     Configuracion();
     InterruptionsConfiguration();
-    CoordAntX=0;
-    CoordAntY=0;
+    CoordAntX=1;
+    CoordAntY=1;
     ENABLE_A=1;
     ENABLE_B=1;
-    InicialY();
     InicialX();
-        
+    InicialY();
+    GoToInitialYPosition();
+    GoToInitialXPosition();
+    
     while(1){ /*Programa principal*/
         x=1;
        verification();

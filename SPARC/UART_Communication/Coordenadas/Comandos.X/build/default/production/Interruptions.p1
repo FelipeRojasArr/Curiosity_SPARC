@@ -740,54 +740,34 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _InterruptionsConfiguration ]
 [f ]
-<<<<<<< HEAD
 "16
-[; ;Interruptions.c: 16:     RCONbits.IPEN = 0;
-[e = . . _RCONbits 5 7 -> -> 0 `i `uc ]
-"17
-[; ;Interruptions.c: 17:     INTCONbits.GIE = 1;
-[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-"18
-[; ;Interruptions.c: 18:     INTCONbits.INT0IF = 0;
-[e = . . _INTCONbits 0 1 -> -> 0 `i `uc ]
-"19
-[; ;Interruptions.c: 19:     INTCONbits.INT0IE = 1;
-[e = . . _INTCONbits 0 4 -> -> 1 `i `uc ]
-"21
-[; ;Interruptions.c: 21:     INTCON2bits.INTEDG0 = 1;
-[e = . . _INTCON2bits 1 6 -> -> 1 `i `uc ]
-"22
-[; ;Interruptions.c: 22:     INTCON2bits.INTEDG1 = 1;
-[e = . . _INTCON2bits 1 5 -> -> 1 `i `uc ]
-"25
-[; ;Interruptions.c: 25:     INTCON3bits.INT1IE = 1;
-[e = . . _INTCON3bits 0 3 -> -> 1 `i `uc ]
-"27
-[; ;Interruptions.c: 27:     INTCON2bits.RBPU = 0;
-[e = . . _INTCON2bits 2 3 -> -> 0 `i `uc ]
-"33
-[; ;Interruptions.c: 33: }
-=======
-"14
-[; ;Interruptions.c: 14:     INTCONbits.PEIE = 1;
+[; ;Interruptions.c: 16:     INTCONbits.PEIE = 1;
 [e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
-"15
-[; ;Interruptions.c: 15:     RCONbits.IPEN = 0;
+"17
+[; ;Interruptions.c: 17:     RCONbits.IPEN = 0;
 [e = . . _RCONbits 5 7 -> -> 0 `i `uc ]
-"16
-[; ;Interruptions.c: 16:     INTCONbits.GIE = 1;
-[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
 "18
-[; ;Interruptions.c: 18:     INTCONbits.RBIE = 1;
-[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-"21
-[; ;Interruptions.c: 21:     INTCON2bits.INTEDG2 = 1;
-[e = . . _INTCON2bits 1 4 -> -> 1 `i `uc ]
+[; ;Interruptions.c: 18:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+"19
+[; ;Interruptions.c: 19:     INTCONbits.INT0IF = 0;
+[e = . . _INTCONbits 0 1 -> -> 0 `i `uc ]
+"20
+[; ;Interruptions.c: 20:     INTCONbits.INT0IE = 1;
+[e = . . _INTCONbits 0 4 -> -> 1 `i `uc ]
 "22
-[; ;Interruptions.c: 22:     INTCON3bits.INT2IE = 1;
-[e = . . _INTCON3bits 0 4 -> -> 1 `i `uc ]
-"29
-[; ;Interruptions.c: 29: }
->>>>>>> master
+[; ;Interruptions.c: 22:     INTCON2bits.INTEDG0 = 0;
+[e = . . _INTCON2bits 1 6 -> -> 0 `i `uc ]
+"23
+[; ;Interruptions.c: 23:     INTCON2bits.INTEDG1 = 0;
+[e = . . _INTCON2bits 1 5 -> -> 0 `i `uc ]
+"26
+[; ;Interruptions.c: 26:     INTCON3bits.INT1IE = 1;
+[e = . . _INTCON3bits 0 3 -> -> 1 `i `uc ]
+"28
+[; ;Interruptions.c: 28:     INTCON2bits.RBPU = 1;
+[e = . . _INTCON2bits 2 3 -> -> 1 `i `uc ]
+"34
+[; ;Interruptions.c: 34: }
 [e :UE 368 ]
 }

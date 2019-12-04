@@ -5869,7 +5869,8 @@ uint8_t click;
 
 
 void Configuracion(void);
-<<<<<<< HEAD
+void InicialX(void);
+void InicialY(void);
 # 9 "UART.c" 2
 
 # 1 "./Interruptions.h" 1
@@ -5886,7 +5887,7 @@ void buttonInterruptionConfiguration(void);
 # 1 "./PWM.h" 1
 
 void PWM(void);
-int ContarPulsos(int pasos);
+void ContarPulsos(int pasos);
 void OneShot(void);
 void ResetOneShot(void);
 int Movimiento(void);
@@ -5915,11 +5916,6 @@ void HaltMotors(void);
     unsigned int BanderaDisY;
 # 11 "UART.c" 2
 
-=======
-void InicialX(void);
-void InicialY(void);
-# 5 "UART.c" 2
->>>>>>> master
 
 
 void UARTConfi(int BAUD){

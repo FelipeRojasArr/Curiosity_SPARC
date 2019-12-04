@@ -5869,7 +5869,8 @@ uint8_t click;
 
 
 void Configuracion(void);
-<<<<<<< HEAD
+void InicialX(void);
+void InicialY(void);
 # 9 "CONFIGUR.c" 2
 
 # 1 "./Interruptions.h" 1
@@ -5882,44 +5883,6 @@ void Configuracion(void);
 void InterruptionsConfiguration(void);
 void buttonInterruptionConfiguration(void);
 # 10 "CONFIGUR.c" 2
-
-# 1 "./PWM.h" 1
-
-void PWM(void);
-int ContarPulsos(int pasos);
-void OneShot(void);
-void ResetOneShot(void);
-int Movimiento(void);
-void HaltMotors(void);
-
-
-
-
-    unsigned int CoordAntX;
-    unsigned int CoordAntY;
-
-
-    int CoordRelatX;
-    int CoordRelatY;
-
-
-    int pasosRecorridos;
-
-
-    unsigned int PasosActuales;
-    unsigned int ons;
-
-    unsigned int PasosX;
-    unsigned int PasosY;
-    unsigned int BanderaDisX;
-    unsigned int BanderaDisY;
-# 11 "CONFIGUR.c" 2
-
-=======
-void InicialX(void);
-void InicialY(void);
-# 8 "CONFIGUR.c" 2
->>>>>>> master
 
 # 1 "./PWM.h" 1
 
@@ -5951,7 +5914,8 @@ void HaltMotors(void);
     unsigned int PasosY;
     unsigned int BanderaDisX;
     unsigned int BanderaDisY;
-# 9 "CONFIGUR.c" 2
+# 11 "CONFIGUR.c" 2
+
 
 
 void Configuracion(void) {
@@ -6009,26 +5973,57 @@ void InicialX(void){
     PORTDbits.RD0=0;
     PORTDbits.RD1=0;
 
-    do
-    {
-    PORTDbits.RD2=1;
-    PORTDbits.RD3=1;
-    }while (CoordAntX!=0);
+       while(CoordAntX!=0){
+       if(CoordAntX==0)
+       {
+        PORTDbits.RD2=1;
+        PORTDbits.RD3=1;
+       }else{
+           if(CoordAntX!=0){
 
+            PORTDbits.RD2=0;
+            PORTDbits.RD3=0;
+            }
+        }
+    }
+}
+void InicialY(void)
+{
+
+    PORTDbits.RD0=1;
+    PORTDbits.RD1=0;
+
+    do{
     PORTDbits.RD2=0;
     PORTDbits.RD3=0;
-}
-void InicialY(void){
+    }while (CoordAntY!=0);
 
+    PORTDbits.RD2=1;
+    PORTDbits.RD3=1;
+
+}
+
+void GoToInitialXPosition(void)
+{
+
+    PORTDbits.RD0=1;
+    PORTDbits.RD1=1;
+
+    ContarPulsos(50);
+
+    PORTDbits.RD2=1;
+    PORTDbits.RD3=1;
+    CoordAntX = 0;
+}
+
+void GoToInitialYPosition(void)
+{
     PORTDbits.RD0=0;
     PORTDbits.RD1=1;
 
-    do{
+    ContarPulsos(50);
+
     PORTDbits.RD2=1;
     PORTDbits.RD3=1;
-    }while (CoordAntY!=0);
-
-    PORTDbits.RD2=0;
-    PORTDbits.RD3=0;
-
+    CoordAntY = 0;
 }

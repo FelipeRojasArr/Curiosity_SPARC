@@ -5869,7 +5869,8 @@ uint8_t click;
 
 
 void Configuracion(void);
-<<<<<<< HEAD
+void InicialX(void);
+void InicialY(void);
 # 9 "coordenadas.c" 2
 
 # 1 "./Interruptions.h" 1
@@ -5886,7 +5887,7 @@ void buttonInterruptionConfiguration(void);
 # 1 "./PWM.h" 1
 
 void PWM(void);
-int ContarPulsos(int pasos);
+void ContarPulsos(int pasos);
 void OneShot(void);
 void ResetOneShot(void);
 int Movimiento(void);
@@ -5908,11 +5909,6 @@ void HaltMotors(void);
 
     unsigned int PasosActuales;
     unsigned int ons;
-=======
-void InicialX(void);
-void InicialY(void);
-# 8 "coordenadas.c" 2
->>>>>>> master
 
     unsigned int PasosX;
     unsigned int PasosY;

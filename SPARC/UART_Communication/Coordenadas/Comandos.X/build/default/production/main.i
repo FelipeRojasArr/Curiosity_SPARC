@@ -5915,20 +5915,19 @@ void HaltMotors(void);
     unsigned int BanderaDisX;
     unsigned int BanderaDisY;
 # 11 "main.c" 2
-<<<<<<< HEAD
 
 
-void UARTErrorR1(void);
-void UARTErrorR0(void);
+void GoToInitialYPosition(void);
+void GoToInitialXPosition(void);
 
 void __attribute__((picinterrupt(("")))) INT_ISR(void)
 {
-    if(PORTBbits.RB0 == 1)
+    if(INTCONbits.INT0IF == 1)
     {
-        while(INTCONbits.INT0IF == 1)
-        {
-            _delay((unsigned long)((250)*(8000000L/4000.0)));
-            UARTErrorR0();
+       GoToInitialXPosition();
+
+
+
 
             if(PORTBbits.RB0 == 0)
             {
@@ -5938,15 +5937,16 @@ void __attribute__((picinterrupt(("")))) INT_ISR(void)
                     INTCONbits.INT0IF = 0;
                 }
             }
-        }
+
     }
 
-    if(PORTBbits.RB1 == 1)
+    if(INTCON3bits.INT1IF == 1)
     {
-        while(INTCON3bits.INT1IF == 1)
-        {
-            UARTErrorR1();
-            _delay((unsigned long)((250)*(8000000L/4000.0)));
+        GoToInitialYPosition();
+
+
+
+
             if(PORTBbits.RB1 == 0)
             {
                 _delay((unsigned long)((15)*(8000000L/4000.0)));
@@ -5955,36 +5955,23 @@ void __attribute__((picinterrupt(("")))) INT_ISR(void)
                     INTCON3bits.INT1IF = 0;
                 }
             }
-        }
+
     }
 }
 
-void UARTErrorR0()
-{
-    UARTWrite(0x45);
-}
 
-void UARTErrorR1()
-{
-    UARTWrite(0x65);
-}
-
-=======
-# 33 "main.c"
->>>>>>> master
 void main(void) {
 
     Configuracion();
-<<<<<<< HEAD
     InterruptionsConfiguration();
-    CoordAntX=0;
-    CoordAntY=0;
-=======
->>>>>>> master
+    CoordAntX=1;
+    CoordAntY=1;
     PORTDbits.RD2=1;
     PORTDbits.RD3=1;
-    InicialY();
     InicialX();
+    InicialY();
+    GoToInitialYPosition();
+    GoToInitialXPosition();
 
     while(1){
         x=1;

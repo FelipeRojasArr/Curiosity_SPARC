@@ -19,13 +19,13 @@ void InterruptionsConfiguration()
     INTCONbits.INT0IF = OFF;          //External interrupt flag for INT0
     INTCONbits.INT0IE = ON;             //Enables INT0 external interruptions
    // INTCONbits.RBIE = ON;               //RB Port Change Interrupt Enable bit
-    INTCON2bits.INTEDG0 = ON;           //Rising Edge on external interrupt 0
-    INTCON2bits.INTEDG1 = ON;           //Rising Edge on external interrupt 1
+    INTCON2bits.INTEDG0 = OFF;           //Rising Edge on external interrupt 0
+    INTCON2bits.INTEDG1 = OFF;           //Rising Edge on external interrupt 1
   //  INTCON2bits.INTEDG2 = ON;           //Rising Edge on external interrupt 2
    // INTCON3bits.INT2IE = ON;            //Enables INT2 external interrupt
     INTCON3bits.INT1IE = ON;            //Enables INT1 external interrupt
     
-    INTCON2bits.RBPU = OFF;
+    INTCON2bits.RBPU = ON;
             
     // MUST BE CLEARES WHEN AN EXTERNAL INTERRUPTION HAPPENS
     

@@ -5464,41 +5464,6 @@ extern volatile __bit nW __attribute__((address(0x7E3A)));
 extern volatile __bit nWRITE __attribute__((address(0x7E3A)));
 # 1 "Movimiento.c" 2
 
-<<<<<<< HEAD
-=======
-# 1 "./PWM.h" 1
-
-void PWM(void);
-void ContarPulsos(int pasos);
-void OneShot(void);
-void ResetOneShot(void);
-int Movimiento(void);
-void HaltMotors(void);
-
-
-
-
-    unsigned int CoordAntX;
-    unsigned int CoordAntY;
-
-
-    int CoordRelatX;
-    int CoordRelatY;
-
-
-    int pasosRecorridos;
-
-
-    unsigned int PasosActuales;
-    unsigned int ons;
-
-    unsigned int PasosX;
-    unsigned int PasosY;
-    unsigned int BanderaDisX;
-    unsigned int BanderaDisY;
-# 2 "Movimiento.c" 2
-
->>>>>>> master
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -5904,13 +5869,9 @@ uint8_t click;
 
 
 void Configuracion(void);
-<<<<<<< HEAD
-# 9 "Movimiento.c" 2
-=======
 void InicialX(void);
 void InicialY(void);
-# 6 "Movimiento.c" 2
->>>>>>> master
+# 9 "Movimiento.c" 2
 
 # 1 "./Interruptions.h" 1
 
@@ -5926,7 +5887,7 @@ void buttonInterruptionConfiguration(void);
 # 1 "./PWM.h" 1
 
 void PWM(void);
-int ContarPulsos(int pasos);
+void ContarPulsos(int pasos);
 void OneShot(void);
 void ResetOneShot(void);
 int Movimiento(void);

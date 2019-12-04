@@ -782,19 +782,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ < _i -> 10 `i 373  ]
 [e :U 374 ]
 }
-<<<<<<< HEAD
 "35
 [; ;cases.c: 35:     coord(&Par1,&letter,&cord_x, &cord_y, &Par2);
 [e ( _coord (4 , , , , &U _Par1 &U _letter -> &U _cord_x `*us -> &U _cord_y `*us &U _Par2 ]
 "36
 [; ;cases.c: 36:     return validate_Par_State;
-=======
-"33
-[; ;cases.c: 33:     coord(&Par1,&letter,&cord_x, &cord_y, &Par2);
-[e ( _coord (4 , , , , &U _Par1 &U _letter -> &U _cord_x `*us -> &U _cord_y `*us &U _Par2 ]
-"34
-[; ;cases.c: 34:     return validate_Par_State;
->>>>>>> master
 [e ) -> . `E3375 2 `uc ]
 [e $UE 372  ]
 "37
@@ -957,13 +949,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "77
 [; ;cases.c: 77:     PORTC=0x00;
 [e = _PORTC -> -> 0 `i `uc ]
-<<<<<<< HEAD
 "78
 [; ;cases.c: 78:     if(cord_x<=300 && cord_y<=300){
-=======
-"76
-[; ;cases.c: 76:     if(cord_x<=300 && cord_y<=300){
->>>>>>> master
 [e $ ! && <= _cord_x -> -> 300 `i `ui <= _cord_y -> -> 300 `i `ui 391  ]
 {
 "79

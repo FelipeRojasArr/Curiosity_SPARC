@@ -5,6 +5,28 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n E3375 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
 [t ~ __interrupt . k ]
 [t T36 __interrupt ]
+"8588 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8588:     struct {
+[s S355 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S355 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
+"8598
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8598:     struct {
+[s S356 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S356 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
+"8608
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8608:     struct {
+[s S357 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S357 . . GIEL GIEH ]
+"8587
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8587: typedef union {
+[u S354 `S355 1 `S356 1 `S357 1 ]
+[n S354 . . . . ]
+"8614
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8614: extern volatile INTCONbits_t INTCONbits __attribute__((address(0xFF2)));
+[v _INTCONbits `VS354 ~T0 @X0 0 e@4082 ]
+"14 main.c
+[; ;main.c: 14: void GoToInitialXPosition(void);
+[v _GoToInitialXPosition `(v ~T0 @X0 0 ef ]
 "2459 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 2459:     struct {
 [s S102 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -28,31 +50,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "187 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18.h
 [v __delay `JF3152 ~T0 @X0 0 e ]
 [p i __delay ]
-"14 main.c
-[; ;main.c: 14: void UARTErrorR0(void);
-[v _UARTErrorR0 `(v ~T0 @X0 0 ef ]
-"8588 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8588:     struct {
-[s S355 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S355 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
-"8598
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8598:     struct {
-[s S356 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S356 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
-"8608
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8608:     struct {
-[s S357 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S357 . . GIEL GIEH ]
-"8587
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8587: typedef union {
-[u S354 `S355 1 `S356 1 `S357 1 ]
-[n S354 . . . . ]
-"8614
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8614: extern volatile INTCONbits_t INTCONbits __attribute__((address(0xFF2)));
-[v _INTCONbits `VS354 ~T0 @X0 0 e@4082 ]
-"13 main.c
-[; ;main.c: 13: void UARTErrorR1(void);
-[v _UARTErrorR1 `(v ~T0 @X0 0 ef ]
 "8419 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8419:     struct {
 [s S348 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -68,9 +65,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8440
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8440: extern volatile INTCON3bits_t INTCON3bits __attribute__((address(0xFF0)));
 [v _INTCON3bits `VS347 ~T0 @X0 0 e@4080 ]
-"2 ./UART.h
-[; ;./UART.h: 2: void UARTWrite(char data);
-[v _UARTWrite `(v ~T0 @X0 0 ef1`uc ]
+"13 main.c
+[; ;main.c: 13: void GoToInitialYPosition(void);
+[v _GoToInitialYPosition `(v ~T0 @X0 0 ef ]
 [p mainexit ]
 "74 ./Configuracion.h
 [v _Configuracion `(v ~T0 @X0 0 ef ]
@@ -96,16 +93,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2736
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 2736: extern volatile PORTDbits_t PORTDbits __attribute__((address(0xF83)));
 [v _PORTDbits `VS111 ~T0 @X0 0 e@3971 ]
-"76 ./Configuracion.h
-[v _InicialY `(v ~T0 @X0 0 ef ]
-"75
+"75 ./Configuracion.h
 [v _InicialX `(v ~T0 @X0 0 ef ]
+"76
+[v _InicialY `(v ~T0 @X0 0 ef ]
 "2 ./cases.h
 [; ;./cases.h: 2: void verification(void);
 [v _verification `(v ~T0 @X0 0 ef ]
 "6 ./PWM.h
 [; ;./PWM.h: 6: int Movimiento(void);
 [v _Movimiento `(i ~T0 @X0 0 ef ]
+"2 ./UART.h
+[; ;./UART.h: 2: void UARTWrite(char data);
+[v _UARTWrite `(v ~T0 @X0 0 ef1`uc ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -753,27 +753,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _INT_ISR ]
 [f ]
 "18
-[; ;main.c: 18:     if(PORTBbits.RB0 == 1)
-[e $ ! == -> . . _PORTBbits 0 0 `i -> 1 `i 369  ]
+[; ;main.c: 18:     if(INTCONbits.INT0IF == 1)
+[e $ ! == -> . . _INTCONbits 0 1 `i -> 1 `i 369  ]
 "19
 [; ;main.c: 19:     {
 {
 "20
-[; ;main.c: 20:         while(INTCONbits.INT0IF == 1)
-[e $U 370  ]
-[e :U 371 ]
-"21
-[; ;main.c: 21:         {
-{
-"22
-[; ;main.c: 22:             _delay((unsigned long)((250)*(8000000L/4000.0)));
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"23
-[; ;main.c: 23:             UARTErrorR0();
-[e ( _UARTErrorR0 ..  ]
+[; ;main.c: 20:        GoToInitialXPosition();
+[e ( _GoToInitialXPosition ..  ]
 "25
 [; ;main.c: 25:             if(PORTBbits.RB0 == 0)
-[e $ ! == -> . . _PORTBbits 0 0 `i -> 0 `i 373  ]
+[e $ ! == -> . . _PORTBbits 0 0 `i -> 0 `i 370  ]
 "26
 [; ;main.c: 26:             {
 {
@@ -782,7 +772,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( __delay (1 -> * -> -> 15 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "28
 [; ;main.c: 28:                 if(PORTBbits.RB0 == 0)
-[e $ ! == -> . . _PORTBbits 0 0 `i -> 0 `i 374  ]
+[e $ ! == -> . . _PORTBbits 0 0 `i -> 0 `i 371  ]
 "29
 [; ;main.c: 29:                 {
 {
@@ -792,316 +782,177 @@ Version 4.0 HI-TECH Software Intermediate Code
 "31
 [; ;main.c: 31:                 }
 }
-[e :U 374 ]
+[e :U 371 ]
 "32
 [; ;main.c: 32:             }
 }
-[e :U 373 ]
-"33
-[; ;main.c: 33:         }
-}
 [e :U 370 ]
-"20
-[; ;main.c: 20:         while(INTCONbits.INT0IF == 1)
-[e $ == -> . . _INTCONbits 0 1 `i -> 1 `i 371  ]
-[e :U 372 ]
 "34
 [; ;main.c: 34:     }
 }
 [e :U 369 ]
 "36
-[; ;main.c: 36:     if(PORTBbits.RB1 == 1)
-[e $ ! == -> . . _PORTBbits 0 1 `i -> 1 `i 375  ]
+[; ;main.c: 36:     if(INTCON3bits.INT1IF == 1)
+[e $ ! == -> . . _INTCON3bits 0 0 `i -> 1 `i 372  ]
 "37
 [; ;main.c: 37:     {
 {
 "38
-[; ;main.c: 38:         while(INTCON3bits.INT1IF == 1)
-[e $U 376  ]
-[e :U 377 ]
-"39
-[; ;main.c: 39:         {
-{
-"40
-[; ;main.c: 40:             UARTErrorR1();
-[e ( _UARTErrorR1 ..  ]
-"41
-[; ;main.c: 41:             _delay((unsigned long)((250)*(8000000L/4000.0)));
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"42
-[; ;main.c: 42:             if(PORTBbits.RB1 == 0)
-[e $ ! == -> . . _PORTBbits 0 1 `i -> 0 `i 379  ]
+[; ;main.c: 38:         GoToInitialYPosition();
+[e ( _GoToInitialYPosition ..  ]
 "43
-[; ;main.c: 43:             {
-{
+[; ;main.c: 43:             if(PORTBbits.RB1 == 0)
+[e $ ! == -> . . _PORTBbits 0 1 `i -> 0 `i 373  ]
 "44
-[; ;main.c: 44:                 _delay((unsigned long)((15)*(8000000L/4000.0)));
-[e ( __delay (1 -> * -> -> 15 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"45
-[; ;main.c: 45:                 if(PORTBbits.RB1 == 0)
-[e $ ! == -> . . _PORTBbits 0 1 `i -> 0 `i 380  ]
-"46
-[; ;main.c: 46:                 {
+[; ;main.c: 44:             {
 {
+"45
+[; ;main.c: 45:                 _delay((unsigned long)((15)*(8000000L/4000.0)));
+[e ( __delay (1 -> * -> -> 15 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"46
+[; ;main.c: 46:                 if(PORTBbits.RB1 == 0)
+[e $ ! == -> . . _PORTBbits 0 1 `i -> 0 `i 374  ]
 "47
-[; ;main.c: 47:                     INTCON3bits.INT1IF = 0;
-[e = . . _INTCON3bits 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 47:                 {
+{
 "48
-[; ;main.c: 48:                 }
-}
-[e :U 380 ]
+[; ;main.c: 48:                     INTCON3bits.INT1IF = 0;
+[e = . . _INTCON3bits 0 0 -> -> 0 `i `uc ]
 "49
-[; ;main.c: 49:             }
+[; ;main.c: 49:                 }
 }
-[e :U 379 ]
+[e :U 374 ]
 "50
-[; ;main.c: 50:         }
+[; ;main.c: 50:             }
 }
-[e :U 376 ]
-"38
-[; ;main.c: 38:         while(INTCON3bits.INT1IF == 1)
-[e $ == -> . . _INTCON3bits 0 0 `i -> 1 `i 377  ]
-[e :U 378 ]
-"51
-[; ;main.c: 51:     }
-}
-[e :U 375 ]
+[e :U 373 ]
 "52
-[; ;main.c: 52: }
+[; ;main.c: 52:     }
+}
+[e :U 372 ]
+"53
+[; ;main.c: 53: }
 [e :UE 368 ]
 }
-"54
-[; ;main.c: 54: void UARTErrorR0()
-[v _UARTErrorR0 `(v ~T0 @X0 1 ef ]
-"55
-[; ;main.c: 55: {
-{
-[e :U _UARTErrorR0 ]
-[f ]
-"56
-[; ;main.c: 56:     UARTWrite(0x45);
-[e ( _UARTWrite (1 -> -> 69 `i `uc ]
-"57
-[; ;main.c: 57: }
-[e :UE 381 ]
-}
-"59
-[; ;main.c: 59: void UARTErrorR1()
-[v _UARTErrorR1 `(v ~T0 @X0 1 ef ]
-"60
-[; ;main.c: 60: {
-{
-[e :U _UARTErrorR1 ]
-[f ]
-"61
-[; ;main.c: 61:     UARTWrite(0x65);
-[e ( _UARTWrite (1 -> -> 101 `i `uc ]
-"62
-[; ;main.c: 62: }
-[e :UE 382 ]
-}
 [v $root$_main `(v ~T0 @X0 0 e ]
-<<<<<<< HEAD
-"64
-[; ;main.c: 64: void main(void) {
-=======
-"33 main.c
-[; ;main.c: 33: void main(void) {
->>>>>>> master
+"56
+[; ;main.c: 56: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-<<<<<<< HEAD
-"66
-[; ;main.c: 66:     Configuracion();
-[e ( _Configuracion ..  ]
-"67
-[; ;main.c: 67:     InterruptionsConfiguration();
-[e ( _InterruptionsConfiguration ..  ]
-"68
-[; ;main.c: 68:     CoordAntX=0;
-[e = _CoordAntX -> -> 0 `i `ui ]
-"69
-[; ;main.c: 69:     CoordAntY=0;
-[e = _CoordAntY -> -> 0 `i `ui ]
-"70
-[; ;main.c: 70:     PORTDbits.RD2=1;
-[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
-"71
-[; ;main.c: 71:     PORTDbits.RD3=1;
-[e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
-"73
-[; ;main.c: 73:     while(1){
-[e :U 385 ]
-{
-"74
-[; ;main.c: 74:         x=1;
-[e = _x -> 1 `i ]
-"75
-[; ;main.c: 75:        verification();
-[e ( _verification ..  ]
-"77
-[; ;main.c: 77:         Movimiento();
-[e ( _Movimiento ..  ]
-"79
-[; ;main.c: 79:         char a[3];
-[v _a `uc ~T0 @X0 -> 3 `i a ]
-"80
-[; ;main.c: 80:         char b[3];
-[v _b `uc ~T0 @X0 -> 3 `i a ]
-"82
-[; ;main.c: 82:         a[0]=(CoordAntX/100)+48;
-[e = *U + &U _a * -> -> -> 0 `i `ui `ux -> -> # *U &U _a `ui `ux -> + / _CoordAntX -> -> 100 `i `ui -> -> 48 `i `ui `uc ]
-"83
-[; ;main.c: 83:         a[1]=((CoordAntX%100)/10)+48;
-[e = *U + &U _a * -> -> -> 1 `i `ui `ux -> -> # *U &U _a `ui `ux -> + / % _CoordAntX -> -> 100 `i `ui -> -> 10 `i `ui -> -> 48 `i `ui `uc ]
-"84
-[; ;main.c: 84:         a[2]=((CoordAntX%100)%10)+48;
-[e = *U + &U _a * -> -> -> 2 `i `ui `ux -> -> # *U &U _a `ui `ux -> + % % _CoordAntX -> -> 100 `i `ui -> -> 10 `i `ui -> -> 48 `i `ui `uc ]
-"86
-[; ;main.c: 86:         b[0]=(CoordAntY/100)+48;
-[e = *U + &U _b * -> -> -> 0 `i `ui `ux -> -> # *U &U _b `ui `ux -> + / _CoordAntY -> -> 100 `i `ui -> -> 48 `i `ui `uc ]
-"87
-[; ;main.c: 87:         b[1]=((CoordAntY%100)/10)+48;
-[e = *U + &U _b * -> -> -> 1 `i `ui `ux -> -> # *U &U _b `ui `ux -> + / % _CoordAntY -> -> 100 `i `ui -> -> 10 `i `ui -> -> 48 `i `ui `uc ]
-"88
-[; ;main.c: 88:         b[2]=((CoordAntY%100)%10)+48;
-[e = *U + &U _b * -> -> -> 2 `i `ui `ux -> -> # *U &U _b `ui `ux -> + % % _CoordAntY -> -> 100 `i `ui -> -> 10 `i `ui -> -> 48 `i `ui `uc ]
-"90
-[; ;main.c: 90:         for(int i=0; i<3; i++){
-=======
-"34
-[; ;main.c: 34:     Configuracion();
-[e ( _Configuracion ..  ]
-"35
-[; ;main.c: 35:     PORTDbits.RD2=1;
-[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
-"36
-[; ;main.c: 36:     PORTDbits.RD3=1;
-[e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
-"37
-[; ;main.c: 37:     InicialY();
-[e ( _InicialY ..  ]
-"38
-[; ;main.c: 38:     InicialX();
-[e ( _InicialX ..  ]
-"40
-[; ;main.c: 40:     while(1){
-[e :U 370 ]
-{
-"41
-[; ;main.c: 41:         x=1;
-[e = _x -> 1 `i ]
-"42
-[; ;main.c: 42:        verification();
-[e ( _verification ..  ]
-"43
-[; ;main.c: 43:         Movimiento();
-[e ( _Movimiento ..  ]
-"45
-[; ;main.c: 45:         char a[3];
-[v _a `uc ~T0 @X0 -> 3 `i a ]
-"46
-[; ;main.c: 46:         char b[3];
-[v _b `uc ~T0 @X0 -> 3 `i a ]
-"48
-[; ;main.c: 48:         a[0]=(CoordAntX/100)+48;
-[e = *U + &U _a * -> -> -> 0 `i `ui `ux -> -> # *U &U _a `ui `ux -> + / _CoordAntX -> -> 100 `i `ui -> -> 48 `i `ui `uc ]
-"49
-[; ;main.c: 49:         a[1]=((CoordAntX%100)/10)+48;
-[e = *U + &U _a * -> -> -> 1 `i `ui `ux -> -> # *U &U _a `ui `ux -> + / % _CoordAntX -> -> 100 `i `ui -> -> 10 `i `ui -> -> 48 `i `ui `uc ]
-"50
-[; ;main.c: 50:         a[2]=((CoordAntX%100)%10)+48;
-[e = *U + &U _a * -> -> -> 2 `i `ui `ux -> -> # *U &U _a `ui `ux -> + % % _CoordAntX -> -> 100 `i `ui -> -> 10 `i `ui -> -> 48 `i `ui `uc ]
-"52
-[; ;main.c: 52:         b[0]=(CoordAntY/100)+48;
-[e = *U + &U _b * -> -> -> 0 `i `ui `ux -> -> # *U &U _b `ui `ux -> + / _CoordAntY -> -> 100 `i `ui -> -> 48 `i `ui `uc ]
-"53
-[; ;main.c: 53:         b[1]=((CoordAntY%100)/10)+48;
-[e = *U + &U _b * -> -> -> 1 `i `ui `ux -> -> # *U &U _b `ui `ux -> + / % _CoordAntY -> -> 100 `i `ui -> -> 10 `i `ui -> -> 48 `i `ui `uc ]
-"54
-[; ;main.c: 54:         b[2]=((CoordAntY%100)%10)+48;
-[e = *U + &U _b * -> -> -> 2 `i `ui `ux -> -> # *U &U _b `ui `ux -> + % % _CoordAntY -> -> 100 `i `ui -> -> 10 `i `ui -> -> 48 `i `ui `uc ]
-"56
-[; ;main.c: 56:         for(int i=0; i<3; i++){
->>>>>>> master
-{
-[v _i `i ~T0 @X0 1 a ]
-[e = _i -> 0 `i ]
-[e $ < _i -> 3 `i 387  ]
-[e $U 388  ]
-[e :U 387 ]
-{
-<<<<<<< HEAD
-"92
-[; ;main.c: 92:             UARTWrite(a[i]);
-[e ( _UARTWrite (1 *U + &U _a * -> -> _i `ui `ux -> -> # *U &U _a `ui `ux ]
-"93
-[; ;main.c: 93:         }
-=======
 "58
-[; ;main.c: 58:             UARTWrite(a[i]);
-[e ( _UARTWrite (1 *U + &U _a * -> -> _i `ui `ux -> -> # *U &U _a `ui `ux ]
+[; ;main.c: 58:     Configuracion();
+[e ( _Configuracion ..  ]
 "59
-[; ;main.c: 59:         }
->>>>>>> master
-}
-[e ++ _i -> 1 `i ]
-[e $ < _i -> 3 `i 387  ]
-[e :U 388 ]
-}
-<<<<<<< HEAD
-"94
-[; ;main.c: 94:         for(int i=0; i<3; i++){
-=======
+[; ;main.c: 59:     InterruptionsConfiguration();
+[e ( _InterruptionsConfiguration ..  ]
 "60
-[; ;main.c: 60:         for(int i=0; i<3; i++){
->>>>>>> master
+[; ;main.c: 60:     CoordAntX=1;
+[e = _CoordAntX -> -> 1 `i `ui ]
+"61
+[; ;main.c: 61:     CoordAntY=1;
+[e = _CoordAntY -> -> 1 `i `ui ]
+"62
+[; ;main.c: 62:     PORTDbits.RD2=1;
+[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
+"63
+[; ;main.c: 63:     PORTDbits.RD3=1;
+[e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
+"64
+[; ;main.c: 64:     InicialX();
+[e ( _InicialX ..  ]
+"65
+[; ;main.c: 65:     InicialY();
+[e ( _InicialY ..  ]
+"66
+[; ;main.c: 66:     GoToInitialYPosition();
+[e ( _GoToInitialYPosition ..  ]
+"67
+[; ;main.c: 67:     GoToInitialXPosition();
+[e ( _GoToInitialXPosition ..  ]
+"69
+[; ;main.c: 69:     while(1){
+[e :U 377 ]
+{
+"70
+[; ;main.c: 70:         x=1;
+[e = _x -> 1 `i ]
+"71
+[; ;main.c: 71:        verification();
+[e ( _verification ..  ]
+"72
+[; ;main.c: 72:         Movimiento();
+[e ( _Movimiento ..  ]
+"74
+[; ;main.c: 74:         char a[3];
+[v _a `uc ~T0 @X0 -> 3 `i a ]
+"75
+[; ;main.c: 75:         char b[3];
+[v _b `uc ~T0 @X0 -> 3 `i a ]
+"77
+[; ;main.c: 77:         a[0]=(CoordAntX/100)+48;
+[e = *U + &U _a * -> -> -> 0 `i `ui `ux -> -> # *U &U _a `ui `ux -> + / _CoordAntX -> -> 100 `i `ui -> -> 48 `i `ui `uc ]
+"78
+[; ;main.c: 78:         a[1]=((CoordAntX%100)/10)+48;
+[e = *U + &U _a * -> -> -> 1 `i `ui `ux -> -> # *U &U _a `ui `ux -> + / % _CoordAntX -> -> 100 `i `ui -> -> 10 `i `ui -> -> 48 `i `ui `uc ]
+"79
+[; ;main.c: 79:         a[2]=((CoordAntX%100)%10)+48;
+[e = *U + &U _a * -> -> -> 2 `i `ui `ux -> -> # *U &U _a `ui `ux -> + % % _CoordAntX -> -> 100 `i `ui -> -> 10 `i `ui -> -> 48 `i `ui `uc ]
+"81
+[; ;main.c: 81:         b[0]=(CoordAntY/100)+48;
+[e = *U + &U _b * -> -> -> 0 `i `ui `ux -> -> # *U &U _b `ui `ux -> + / _CoordAntY -> -> 100 `i `ui -> -> 48 `i `ui `uc ]
+"82
+[; ;main.c: 82:         b[1]=((CoordAntY%100)/10)+48;
+[e = *U + &U _b * -> -> -> 1 `i `ui `ux -> -> # *U &U _b `ui `ux -> + / % _CoordAntY -> -> 100 `i `ui -> -> 10 `i `ui -> -> 48 `i `ui `uc ]
+"83
+[; ;main.c: 83:         b[2]=((CoordAntY%100)%10)+48;
+[e = *U + &U _b * -> -> -> 2 `i `ui `ux -> -> # *U &U _b `ui `ux -> + % % _CoordAntY -> -> 100 `i `ui -> -> 10 `i `ui -> -> 48 `i `ui `uc ]
+"85
+[; ;main.c: 85:         for(int i=0; i<3; i++){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $ < _i -> 3 `i 390  ]
-[e $U 391  ]
-[e :U 390 ]
+[e $ < _i -> 3 `i 379  ]
+[e $U 380  ]
+[e :U 379 ]
 {
-<<<<<<< HEAD
-"96
-[; ;main.c: 96:             UARTWrite(b[i]);
-[e ( _UARTWrite (1 *U + &U _b * -> -> _i `ui `ux -> -> # *U &U _b `ui `ux ]
-"97
-[; ;main.c: 97:         }
-=======
-"62
-[; ;main.c: 62:             UARTWrite(b[i]);
-[e ( _UARTWrite (1 *U + &U _b * -> -> _i `ui `ux -> -> # *U &U _b `ui `ux ]
-"63
-[; ;main.c: 63:         }
->>>>>>> master
+"87
+[; ;main.c: 87:             UARTWrite(a[i]);
+[e ( _UARTWrite (1 *U + &U _a * -> -> _i `ui `ux -> -> # *U &U _a `ui `ux ]
+"88
+[; ;main.c: 88:         }
 }
 [e ++ _i -> 1 `i ]
-[e $ < _i -> 3 `i 390  ]
-[e :U 391 ]
+[e $ < _i -> 3 `i 379  ]
+[e :U 380 ]
 }
-<<<<<<< HEAD
-"98
-[; ;main.c: 98:     }
+"89
+[; ;main.c: 89:         for(int i=0; i<3; i++){
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $ < _i -> 3 `i 382  ]
+[e $U 383  ]
+[e :U 382 ]
+{
+"91
+[; ;main.c: 91:             UARTWrite(b[i]);
+[e ( _UARTWrite (1 *U + &U _b * -> -> _i `ui `ux -> -> # *U &U _b `ui `ux ]
+"92
+[; ;main.c: 92:         }
 }
-[e :U 384 ]
-[e $U 385  ]
-[e :U 386 ]
-"99
-[; ;main.c: 99: }
-[e :UE 383 ]
-=======
-"64
-[; ;main.c: 64:     }
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 3 `i 382  ]
+[e :U 383 ]
 }
-[e :U 369 ]
-[e $U 370  ]
-[e :U 371 ]
-"65
-[; ;main.c: 65: }
-[e :UE 368 ]
->>>>>>> master
+"93
+[; ;main.c: 93:     }
+}
+[e :U 376 ]
+[e $U 377  ]
+[e :U 378 ]
+"94
+[; ;main.c: 94: }
+[e :UE 375 ]
 }
