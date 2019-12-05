@@ -50,7 +50,6 @@ void main(void) {
     
     while(1)
     { 
-        TURN_ON_RECEIVER
         ControlFlagVerification = ON;
         verification();
         PrintMyActulPosition();

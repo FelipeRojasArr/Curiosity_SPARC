@@ -3,13 +3,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./cases.h: 53: systemState NextState;
 [c E3375 0 1 2 3 4 5 .. ]
 [n E3375 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
-"20 coordenadas.c
-[; ;coordenadas.c: 20:         for(int i=StartCommandCharacter; i<(EndCommandCharacter+1); i++){
-[c E3383 0 1 2 3 4 5 6 7 8 .. ]
-[n E3383 CharactersOfASCII StartCommandCharacter InstructionCharacter CharacterX1 CharacterX2 CharacterX3 CharacterY1 CharacterY2 CharacterY3 EndCommandCharacter  ]
-"7 ./UART.h
-[; ;./UART.h: 7: char UARTRead(void);
-[v _UARTRead `(uc ~T0 @X0 0 ef ]
 "4947 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4947:     struct {
 [s S191 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -41,6 +34,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "4977
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4977: extern volatile RCSTAbits_t RCSTAbits __attribute__((address(0xFAB)));
 [v _RCSTAbits `VS190 ~T0 @X0 0 e@4011 ]
+"22 coordenadas.c
+[; ;coordenadas.c: 22:         for(int i=StartCommandCharacter; i<(EndCommandCharacter+1); i++){
+[c E3383 0 1 2 3 4 5 6 7 8 .. ]
+[n E3383 CharactersOfASCII StartCommandCharacter InstructionCharacter CharacterX1 CharacterX2 CharacterX3 CharacterY1 CharacterY2 CharacterY3 EndCommandCharacter  ]
+"7 ./UART.h
+[; ;./UART.h: 7: char UARTRead(void);
+[v _UARTRead `(uc ~T0 @X0 0 ef ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -704,7 +704,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _counterRevision `uc ~T0 @X0 1 a ]
 [e = _counterRevision -> -> 0 `i `uc ]
 "20
-[; ;coordenadas.c: 20:         for(int i=StartCommandCharacter; i<(EndCommandCharacter+1); i++){
+[; ;coordenadas.c: 20:         RCSTAbits.CREN = 1;
+[e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
+"22
+[; ;coordenadas.c: 22:         for(int i=StartCommandCharacter; i<(EndCommandCharacter+1); i++){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> . `E3383 0 `i ]
@@ -712,120 +715,120 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 370  ]
 [e :U 369 ]
 {
-"21
-[; ;coordenadas.c: 21:             read= UARTRead();
-[e = _read ( _UARTRead ..  ]
-"22
-[; ;coordenadas.c: 22:             buffer[i]=read;
-[e = *U + &U _buffer * -> -> _i `ui `ux -> -> # *U &U _buffer `ui `ux _read ]
-"24
-[; ;coordenadas.c: 24:             if(i == (EndCommandCharacter+1))
+"23
+[; ;coordenadas.c: 23:             if(i == (EndCommandCharacter+1))
 [e $ ! == _i + -> . `E3383 8 `i -> 1 `i 372  ]
-"25
-[; ;coordenadas.c: 25:             {
+"24
+[; ;coordenadas.c: 24:             {
 {
-"26
-[; ;coordenadas.c: 26:                 RCSTAbits.CREN = 0;
+"25
+[; ;coordenadas.c: 25:                 RCSTAbits.CREN = 0;
 [e = . . _RCSTAbits 0 4 -> -> 0 `i `uc ]
-"27
-[; ;coordenadas.c: 27:             }
+"26
+[; ;coordenadas.c: 26:             }
 }
 [e :U 372 ]
 "28
-[; ;coordenadas.c: 28:         }
+[; ;coordenadas.c: 28:             read= UARTRead();
+[e = _read ( _UARTRead ..  ]
+"29
+[; ;coordenadas.c: 29:             buffer[i]=read;
+[e = *U + &U _buffer * -> -> _i `ui `ux -> -> # *U &U _buffer `ui `ux _read ]
+"31
+[; ;coordenadas.c: 31:         }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i + -> . `E3383 8 `i -> 1 `i 369  ]
 [e :U 370 ]
 }
-"30
-[; ;coordenadas.c: 30:         *P1= buffer[StartCommandCharacter];
+"33
+[; ;coordenadas.c: 33:         *P1= buffer[StartCommandCharacter];
 [e = *U _P1 *U + &U _buffer * -> . `E3383 0 `ux -> -> # *U &U _buffer `ui `ux ]
-"31
-[; ;coordenadas.c: 31:         *L= buffer[InstructionCharacter];
-[e = *U _L *U + &U _buffer * -> . `E3383 1 `ux -> -> # *U &U _buffer `ui `ux ]
-"32
-[; ;coordenadas.c: 32:         *P2= buffer[EndCommandCharacter];
-[e = *U _P2 *U + &U _buffer * -> . `E3383 8 `ux -> -> # *U &U _buffer `ui `ux ]
 "34
-[; ;coordenadas.c: 34:         for(char n=CharacterX1; n<(CharacterY3+1); n++)
+[; ;coordenadas.c: 34:         *L= buffer[InstructionCharacter];
+[e = *U _L *U + &U _buffer * -> . `E3383 1 `ux -> -> # *U &U _buffer `ui `ux ]
+"35
+[; ;coordenadas.c: 35:         *P2= buffer[EndCommandCharacter];
+[e = *U _P2 *U + &U _buffer * -> . `E3383 8 `ux -> -> # *U &U _buffer `ui `ux ]
+"37
+[; ;coordenadas.c: 37:         for(char n=CharacterX1; n<(CharacterY3+1); n++)
 {
 [v _n `uc ~T0 @X0 1 a ]
 [e = _n -> . `E3383 2 `uc ]
 [e $ < -> _n `i + -> . `E3383 7 `i -> 1 `i 373  ]
 [e $U 374  ]
 [e :U 373 ]
-"35
-[; ;coordenadas.c: 35:         {
-{
-"36
-[; ;coordenadas.c: 36:             if(buffer[n] <= 57 && buffer[n] >= 48)
-[e $ ! && <= -> *U + &U _buffer * -> _n `ux -> -> # *U &U _buffer `ui `ux `i -> 57 `i >= -> *U + &U _buffer * -> _n `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i 376  ]
-"37
-[; ;coordenadas.c: 37:             {
-{
 "38
-[; ;coordenadas.c: 38:                 counterRevision++;
-[e ++ _counterRevision -> -> 1 `i `uc ]
+[; ;coordenadas.c: 38:         {
+{
 "39
-[; ;coordenadas.c: 39:             }
+[; ;coordenadas.c: 39:             if(buffer[n] <= 57 && buffer[n] >= 48)
+[e $ ! && <= -> *U + &U _buffer * -> _n `ux -> -> # *U &U _buffer `ui `ux `i -> 57 `i >= -> *U + &U _buffer * -> _n `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i 376  ]
+"40
+[; ;coordenadas.c: 40:             {
+{
+"41
+[; ;coordenadas.c: 41:                 counterRevision++;
+[e ++ _counterRevision -> -> 1 `i `uc ]
+"42
+[; ;coordenadas.c: 42:             }
 }
 [e :U 376 ]
-"40
-[; ;coordenadas.c: 40:         }
+"43
+[; ;coordenadas.c: 43:         }
 }
 [e ++ _n -> -> 1 `i `uc ]
 [e $ < -> _n `i + -> . `E3383 7 `i -> 1 `i 373  ]
 [e :U 374 ]
 }
-"41
-[; ;coordenadas.c: 41:             if(counterRevision == 6)
-[e $ ! == -> _counterRevision `i -> 6 `i 377  ]
-"42
-[; ;coordenadas.c: 42:             {
-{
-"43
-[; ;coordenadas.c: 43:                 flagBuffer = 1;
-[e = _flagBuffer -> -> 1 `i `uc ]
 "44
-[; ;coordenadas.c: 44:             }
+[; ;coordenadas.c: 44:             if(counterRevision == 6)
+[e $ ! == -> _counterRevision `i -> 6 `i 377  ]
+"45
+[; ;coordenadas.c: 45:             {
+{
+"46
+[; ;coordenadas.c: 46:                 flagBuffer = 1;
+[e = _flagBuffer -> -> 1 `i `uc ]
+"47
+[; ;coordenadas.c: 47:             }
 }
 [e $U 378  ]
-"46
-[; ;coordenadas.c: 46:             else
+"49
+[; ;coordenadas.c: 49:             else
 [e :U 377 ]
-"47
-[; ;coordenadas.c: 47:             {
+"50
+[; ;coordenadas.c: 50:             {
 {
-"48
-[; ;coordenadas.c: 48:                 return 0;
+"51
+[; ;coordenadas.c: 51:                 return 0;
 [e ) -> 0 `i ]
 [e $UE 368  ]
-"49
-[; ;coordenadas.c: 49:             }
+"52
+[; ;coordenadas.c: 52:             }
 }
 [e :U 378 ]
-"51
-[; ;coordenadas.c: 51:         if(flagBuffer == 1)
-[e $ ! == -> _flagBuffer `i -> 1 `i 379  ]
-"52
-[; ;coordenadas.c: 52:         {
-{
-"53
-[; ;coordenadas.c: 53:             *x = 1*(buffer[CharacterX3]-48) + 10*(buffer[CharacterX2]-48) + 100*(buffer[CharacterX1]-48);
-[e = *U _x -> + + * -> 1 `i - -> *U + &U _buffer * -> . `E3383 4 `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 10 `i - -> *U + &U _buffer * -> . `E3383 3 `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 100 `i - -> *U + &U _buffer * -> . `E3383 2 `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i `us ]
 "54
-[; ;coordenadas.c: 54:             *y = 1*(buffer[CharacterY3]-48) + 10*(buffer[CharacterY2]-48) + 100*(buffer[CharacterY1]-48);
-[e = *U _y -> + + * -> 1 `i - -> *U + &U _buffer * -> . `E3383 7 `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 10 `i - -> *U + &U _buffer * -> . `E3383 6 `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 100 `i - -> *U + &U _buffer * -> . `E3383 5 `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i `us ]
+[; ;coordenadas.c: 54:         if(flagBuffer == 1)
+[e $ ! == -> _flagBuffer `i -> 1 `i 379  ]
 "55
-[; ;coordenadas.c: 55:         return 1;
+[; ;coordenadas.c: 55:         {
+{
+"56
+[; ;coordenadas.c: 56:             *x = 1*(buffer[CharacterX3]-48) + 10*(buffer[CharacterX2]-48) + 100*(buffer[CharacterX1]-48);
+[e = *U _x -> + + * -> 1 `i - -> *U + &U _buffer * -> . `E3383 4 `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 10 `i - -> *U + &U _buffer * -> . `E3383 3 `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 100 `i - -> *U + &U _buffer * -> . `E3383 2 `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i `us ]
+"57
+[; ;coordenadas.c: 57:             *y = 1*(buffer[CharacterY3]-48) + 10*(buffer[CharacterY2]-48) + 100*(buffer[CharacterY1]-48);
+[e = *U _y -> + + * -> 1 `i - -> *U + &U _buffer * -> . `E3383 7 `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 10 `i - -> *U + &U _buffer * -> . `E3383 6 `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 100 `i - -> *U + &U _buffer * -> . `E3383 5 `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i `us ]
+"58
+[; ;coordenadas.c: 58:         return 1;
 [e ) -> 1 `i ]
 [e $UE 368  ]
-"56
-[; ;coordenadas.c: 56:         }
+"59
+[; ;coordenadas.c: 59:         }
 }
 [e :U 379 ]
-"57
-[; ;coordenadas.c: 57: }
+"60
+[; ;coordenadas.c: 60: }
 [e :UE 368 ]
 }

@@ -5982,7 +5982,6 @@ void main(void) {
 
     while(1)
     {
-        RCSTAbits.CREN = 1;
         ControlFlagVerification = 1;
         verification();
         PrintMyActulPosition();

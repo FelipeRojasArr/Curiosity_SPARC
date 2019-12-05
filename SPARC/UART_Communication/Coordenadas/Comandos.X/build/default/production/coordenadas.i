@@ -5941,14 +5941,17 @@ int coord(char* P1, char*L, uint16_t* x , uint16_t* y , char*P2){
         char flagBuffer = 0;
         char counterRevision = 0;
 
-        for(int i=StartCommandCharacter; i<(EndCommandCharacter+1); i++){
-            read= UARTRead();
-            buffer[i]=read;
+        RCSTAbits.CREN = 1;
 
+        for(int i=StartCommandCharacter; i<(EndCommandCharacter+1); i++){
             if(i == (EndCommandCharacter+1))
             {
                 RCSTAbits.CREN = 0;
             }
+
+            read= UARTRead();
+            buffer[i]=read;
+
         }
 
         *P1= buffer[StartCommandCharacter];

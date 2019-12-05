@@ -28,7 +28,7 @@ validate_Instruct_State 3
 validate_Coord_State 4
 end_State 5
 ]
-"20 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
+"22 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
 [e E3383 CharactersOfASCII `uc
 StartCommandCharacter 0
 InstructionCharacter 1
@@ -149,7 +149,7 @@ end_State 5
 [v _INT_ISR INT_ISR `IIH(v  1 e 1 0 ]
 "45
 [v _main main `(v  1 e 1 0 ]
-"81
+"80
 [v _PrintMyActulPosition PrintMyActulPosition `(v  1 e 1 0 ]
 "14 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
 [v _Movimiento Movimiento `(i  1 e 2 0 ]
@@ -235,7 +235,7 @@ end_State 5
 [v _PORTBbits PORTBbits `VES609  1 e 1 @3969 ]
 "2563
 [v _PORTC PORTC `VEuc  1 e 1 @3970 ]
-[s S888 . 1 `uc 1 RC0 1 0 :1:0 
+[s S857 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -245,32 +245,32 @@ end_State 5
 `uc 1 RC7 1 0 :1:7 
 ]
 "2605
-[s S897 . 1 `uc 1 T1OSO 1 0 :1:0 
+[s S866 . 1 `uc 1 T1OSO 1 0 :1:0 
 `uc 1 T1OSI 1 0 :1:1 
 `uc 1 CCP1 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 TX 1 0 :1:6 
 `uc 1 RX 1 0 :1:7 
 ]
-[s S904 . 1 `uc 1 T13CKI 1 0 :1:0 
+[s S873 . 1 `uc 1 T13CKI 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 P1A 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 CK 1 0 :1:6 
 `uc 1 DT 1 0 :1:7 
 ]
-[s S911 . 1 `uc 1 . 1 0 :1:0 
+[s S880 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 CCP2 1 0 :1:1 
 `uc 1 PA1 1 0 :1:2 
 ]
-[s S915 . 1 `uc 1 . 1 0 :1:0 
+[s S884 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 PA2 1 0 :1:1 
 ]
-[u S918 . 1 `S888 1 . 1 0 `S897 1 . 1 0 `S904 1 . 1 0 `S911 1 . 1 0 `S915 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES918  1 e 1 @3970 ]
+[u S887 . 1 `S857 1 . 1 0 `S866 1 . 1 0 `S873 1 . 1 0 `S880 1 . 1 0 `S884 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES887  1 e 1 @3970 ]
 "2705
 [v _PORTD PORTD `VEuc  1 e 1 @3971 ]
-[s S727 . 1 `uc 1 RD0 1 0 :1:0 
+[s S696 . 1 `uc 1 RD0 1 0 :1:0 
 `uc 1 RD1 1 0 :1:1 
 `uc 1 RD2 1 0 :1:2 
 `uc 1 RD3 1 0 :1:3 
@@ -280,7 +280,7 @@ end_State 5
 `uc 1 RD7 1 0 :1:7 
 ]
 "2736
-[s S736 . 1 `uc 1 SPP0 1 0 :1:0 
+[s S705 . 1 `uc 1 SPP0 1 0 :1:0 
 `uc 1 SPP1 1 0 :1:1 
 `uc 1 SPP2 1 0 :1:2 
 `uc 1 SPP3 1 0 :1:3 
@@ -289,11 +289,11 @@ end_State 5
 `uc 1 SPP6 1 0 :1:6 
 `uc 1 SPP7 1 0 :1:7 
 ]
-[s S745 . 1 `uc 1 . 1 0 :7:0 
+[s S714 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 SS2 1 0 :1:7 
 ]
-[u S748 . 1 `S727 1 . 1 0 `S736 1 . 1 0 `S745 1 . 1 0 ]
-[v _PORTDbits PORTDbits `VES748  1 e 1 @3971 ]
+[u S717 . 1 `S696 1 . 1 0 `S705 1 . 1 0 `S714 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES717  1 e 1 @3971 ]
 "3073
 [v _LATB LATB `VEuc  1 e 1 @3978 ]
 "3185
@@ -405,24 +405,24 @@ end_State 5
 [v _SPBRG SPBRG `VEuc  1 e 1 @4015 ]
 "5587
 [v _CMCON CMCON `VEuc  1 e 1 @4020 ]
-[s S1326 . 1 `uc 1 CVR 1 0 :4:0 
+[s S1295 . 1 `uc 1 CVR 1 0 :4:0 
 `uc 1 CVRSS 1 0 :1:4 
 `uc 1 CVRR 1 0 :1:5 
 `uc 1 CVROE 1 0 :1:6 
 `uc 1 CVREN 1 0 :1:7 
 ]
 "5702
-[s S1332 . 1 `uc 1 CVR0 1 0 :1:0 
+[s S1301 . 1 `uc 1 CVR0 1 0 :1:0 
 `uc 1 CVR1 1 0 :1:1 
 `uc 1 CVR2 1 0 :1:2 
 `uc 1 CVR3 1 0 :1:3 
 `uc 1 CVREF 1 0 :1:4 
 ]
-[s S1338 . 1 `uc 1 . 1 0 :6:0 
+[s S1307 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 CVROEN 1 0 :1:6 
 ]
-[u S1341 . 1 `S1326 1 . 1 0 `S1332 1 . 1 0 `S1338 1 . 1 0 ]
-[v _CVRCONbits CVRCONbits `VES1341  1 e 1 @4021 ]
+[u S1310 . 1 `S1295 1 . 1 0 `S1301 1 . 1 0 `S1307 1 . 1 0 ]
+[v _CVRCONbits CVRCONbits `VES1310  1 e 1 @4021 ]
 "6242
 [v _CCP2CON CCP2CON `VEuc  1 e 1 @4026 ]
 "6313
@@ -439,22 +439,22 @@ end_State 5
 [v _PR2 PR2 `VEuc  1 e 1 @4043 ]
 "7408
 [v _TMR2 TMR2 `VEuc  1 e 1 @4044 ]
-[s S1130 . 1 `uc 1 NOT_BOR 1 0 :1:0 
+[s S1099 . 1 `uc 1 NOT_BOR 1 0 :1:0 
 ]
 "7588
-[s S1132 . 1 `uc 1 . 1 0 :1:0 
+[s S1101 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 NOT_POR 1 0 :1:1 
 ]
-[s S1135 . 1 `uc 1 . 1 0 :2:0 
+[s S1104 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_PD 1 0 :1:2 
 ]
-[s S1138 . 1 `uc 1 . 1 0 :3:0 
+[s S1107 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 NOT_TO 1 0 :1:3 
 ]
-[s S1141 . 1 `uc 1 . 1 0 :4:0 
+[s S1110 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 NOT_RI 1 0 :1:4 
 ]
-[s S1144 . 1 `uc 1 nBOR 1 0 :1:0 
+[s S1113 . 1 `uc 1 nBOR 1 0 :1:0 
 `uc 1 nPOR 1 0 :1:1 
 `uc 1 nPD 1 0 :1:2 
 `uc 1 nTO 1 0 :1:3 
@@ -463,10 +463,10 @@ end_State 5
 `uc 1 SBOREN 1 0 :1:6 
 `uc 1 IPEN 1 0 :1:7 
 ]
-[s S1153 . 1 `uc 1 . 1 0 :7:0 
+[s S1122 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 NOT_IPEN 1 0 :1:7 
 ]
-[s S1156 . 1 `uc 1 BOR 1 0 :1:0 
+[s S1125 . 1 `uc 1 BOR 1 0 :1:0 
 `uc 1 POR 1 0 :1:1 
 `uc 1 PD 1 0 :1:2 
 `uc 1 TO 1 0 :1:3 
@@ -474,8 +474,8 @@ end_State 5
 `uc 1 . 1 0 :2:5 
 `uc 1 nIPEN 1 0 :1:7 
 ]
-[u S1164 . 1 `S1130 1 . 1 0 `S1132 1 . 1 0 `S1135 1 . 1 0 `S1138 1 . 1 0 `S1141 1 . 1 0 `S1144 1 . 1 0 `S1153 1 . 1 0 `S1156 1 . 1 0 ]
-[v _RCONbits RCONbits `VES1164  1 e 1 @4048 ]
+[u S1133 . 1 `S1099 1 . 1 0 `S1101 1 . 1 0 `S1104 1 . 1 0 `S1107 1 . 1 0 `S1110 1 . 1 0 `S1113 1 . 1 0 `S1122 1 . 1 0 `S1125 1 . 1 0 ]
+[v _RCONbits RCONbits `VES1133  1 e 1 @4048 ]
 "7986
 [v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
 [s S636 . 1 `uc 1 INT1IF 1 0 :1:0 
@@ -499,11 +499,11 @@ end_State 5
 ]
 [u S654 . 1 `S636 1 . 1 0 `S645 1 . 1 0 ]
 [v _INTCON3bits INTCON3bits `VES654  1 e 1 @4080 ]
-[s S1208 . 1 `uc 1 . 1 0 :7:0 
+[s S1177 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 NOT_RBPU 1 0 :1:7 
 ]
 "8532
-[s S1211 . 1 `uc 1 RBIP 1 0 :1:0 
+[s S1180 . 1 `uc 1 RBIP 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 TMR0IP 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -512,13 +512,13 @@ end_State 5
 `uc 1 INTEDG0 1 0 :1:6 
 `uc 1 nRBPU 1 0 :1:7 
 ]
-[s S1220 . 1 `uc 1 . 1 0 :2:0 
+[s S1189 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T0IP 1 0 :1:2 
 `uc 1 . 1 0 :4:3 
 `uc 1 RBPU 1 0 :1:7 
 ]
-[u S1225 . 1 `S1208 1 . 1 0 `S1211 1 . 1 0 `S1220 1 . 1 0 ]
-[v _INTCON2bits INTCON2bits `VES1225  1 e 1 @4081 ]
+[u S1194 . 1 `S1177 1 . 1 0 `S1180 1 . 1 0 `S1189 1 . 1 0 ]
+[v _INTCON2bits INTCON2bits `VES1194  1 e 1 @4081 ]
 [s S536 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
@@ -557,7 +557,7 @@ end_State 5
 "45 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"67
+"66
 } 0
 "15 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
 [v _verification verification `(v  1 e 1 0 ]
@@ -590,9 +590,9 @@ end_State 5
 "14 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
 [v _coord coord `(i  1 e 2 0 ]
 {
-"34
+"37
 [v coord@n n `uc  1 a 1 32 ]
-"20
+"22
 [v coord@i i `i  1 a 2 30 ]
 "15
 [v coord@buffer buffer `[9]uc  1 a 9 18 ]
@@ -606,7 +606,7 @@ end_State 5
 [v coord@x x `*.39us  1 p 2 8 ]
 [v coord@y y `*.39us  1 p 2 10 ]
 [v coord@P2 P2 `*.39uc  1 p 2 12 ]
-"57
+"60
 } 0
 "40 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
 [v _UARTRead UARTRead `(uc  1 e 1 0 ]
@@ -636,18 +636,18 @@ end_State 5
 [v Coord_Validated@i i `i  1 a 2 4 ]
 "105
 } 0
-"81 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+"80 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
 [v _PrintMyActulPosition PrintMyActulPosition `(v  1 e 1 0 ]
 {
-"99
-[v PrintMyActulPosition@i_849 i `i  1 a 2 25 ]
-"95
+"98
+[v PrintMyActulPosition@i_818 i `i  1 a 2 25 ]
+"94
 [v PrintMyActulPosition@i i `i  1 a 2 23 ]
-"85
-[v PrintMyActulPosition@b b `[3]uc  1 a 3 18 ]
 "84
+[v PrintMyActulPosition@b b `[3]uc  1 a 3 18 ]
+"83
 [v PrintMyActulPosition@a a `[3]uc  1 a 3 15 ]
-"103
+"102
 } 0
 "7 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwmod.c
 [v ___lwmod __lwmod `(ui  1 e 2 0 ]
@@ -675,7 +675,7 @@ end_State 5
 [v _Movimiento Movimiento `(i  1 e 2 0 ]
 {
 "33
-[v Movimiento@i_1095 i `i  1 a 2 23 ]
+[v Movimiento@i_1064 i `i  1 a 2 23 ]
 "23
 [v Movimiento@i i `i  1 a 2 21 ]
 "32

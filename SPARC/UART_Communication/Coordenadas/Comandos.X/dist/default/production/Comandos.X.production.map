@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.10\pic\dat\en_msgs.txt \
   -cs -h+dist/default/production\Comandos.X.production.sym \
   --cmf=dist/default/production\Comandos.X.production.cmf -z -Q18F4550 \
-  -oC:\Users\felix\AppData\Local\Temp\s1lo.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\felix\AppData\Local\Temp\sf7c.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/Comandos.X.production.map -E1 -ver=XC8 \
   --acfsm=1493 -ASTACK=07Bh-07FFh -pstack=STACK -ACODE=00h-07FFFh \
   -ACONST=00h-07FFFh -ASMALLCONST=0800h-08FFhx120 \
@@ -23,7 +23,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\felix\AppData\Local\Temp\s1lo.o \
+  C:\Users\felix\AppData\Local\Temp\sf7c.o \
   dist/default/production\Comandos.X.production.o 
 
 Object code version is 3.11
@@ -36,7 +36,7 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\felix\AppData\Local\Temp\s1lo.o
+C:\Users\felix\AppData\Local\Temp\sf7c.o
                 init                                  E        E        4        4       0
                 reset_vec                             0        0        4        0       0
                 idloc                            200000   200000        8   200000       0
@@ -44,41 +44,41 @@ C:\Users\felix\AppData\Local\Temp\s1lo.o
 dist/default/production\Comandos.X.production.o
                 intcode                               8        8        6        4       0
                 temp                                 5B       5B        1        1       1
-                text28                              D9E      D9E       32        4       0
-                text27                              DFA      DFA       2A        4       0
-                text26                              BF0      BF0       5C        4       0
+                text28                              DA0      DA0       32        4       0
+                text27                              DFC      DFC       2A        4       0
+                text26                              BF2      BF2       5C        4       0
                 text25                              E8E      E8E       1E        4       0
                 text24                              E70      E70       1E        4       0
-                intcode_body                        808      808       86        4       0
-                text22                              496      496      10C        4       0
-                text21                              9F2      9F2       72        4       0
-                text20                              B36      B36       5E        4       0
-                text19                              D6C      D6C       32        4       0
-                text18                              DD0      DD0       2A        4       0
-                text17                              B94      B94       5C        4       0
-                text16                              E4A      E4A       26        4       0
+                intcode_body                        80A      80A       86        4       0
+                text22                              498      498      10C        4       0
+                text21                              9F4      9F4       72        4       0
+                text20                              B38      B38       5E        4       0
+                text19                              D6E      D6E       32        4       0
+                text18                              DD2      DD2       2A        4       0
+                text17                              B96      B96       5C        4       0
+                text16                              E26      E26       26        4       0
                 text15                               12       12      19A        4       0
                 text14                              EDA      EDA       16      76D       0
-                text13                              5A2      5A2       EE        4       0
-                text12                              97E      97E       74        4       0
-                text11                              AD2      AD2       64        4       0
-                text10                              324      324      172        4       0
-                text9                               908      908       76        4       0
-                text8                               88E      88E       7A        4       0
-                text7                               A64      A64       6E        4       0
-                text6                               D34      D34       38        4       0
-                text5                               1AC      1AC      178        4       0
-                text4                               690      690       D0        4       0
-                text3                               CA6      CA6       4A        4       0
-                text2                               CF0      CF0       44        4       0
-                text1                               760      760       A8        4       0
-                text0                               E24      E24       26        4       0
+                text13                              5A4      5A4       EE        4       0
+                text12                              980      980       74        4       0
+                text11                              AD4      AD4       64        4       0
+                text10                              326      326      172        4       0
+                text9                               90A      90A       76        4       0
+                text8                               890      890       7A        4       0
+                text7                               A66      A66       6E        4       0
+                text6                               D36      D36       38        4       0
+                text5                               1AC      1AC      17A        4       0
+                text4                               692      692       D0        4       0
+                text3                               CA8      CA8       4A        4       0
+                text2                               CF2      CF2       44        4       0
+                text1                               762      762       A8        4       0
+                text0                               E4C      E4C       24        4       0
                 cstackCOMRAM                          1        1       23        1       1
                 cstackBANK0                          77       77        4       60       1
                 dataBANK0                            60       60       17       60       1
                 dataCOMRAM                           43       43       16        1       1
                 bssCOMRAM                            24       24       1F        1       1
-                cinit                               C4C      C4C       5A        4       0
+                cinit                               C4E      C4E       5A        4       0
                 nvCOMRAM                             59       59        2        1       1
                 idataBANK0                          EAC      EAC       17        4       0
                 idataCOMRAM                         EC3      EC3       16        4       0
@@ -90,36 +90,36 @@ TOTAL           Name                               Link     Load   Length     Sp
                 intcode                               8        8        6         0
                 init                                  E        E        4         0
                 reset_vec                             0        0        4         0
-                text28                              D9E      D9E       32         0
-                text27                              DFA      DFA       2A         0
-                text26                              BF0      BF0       5C         0
+                text28                              DA0      DA0       32         0
+                text27                              DFC      DFC       2A         0
+                text26                              BF2      BF2       5C         0
                 text25                              E8E      E8E       1E         0
                 text24                              E70      E70       1E         0
-                intcode_body                        808      808       86         0
-                text22                              496      496      10C         0
-                text21                              9F2      9F2       72         0
-                text20                              B36      B36       5E         0
-                text19                              D6C      D6C       32         0
-                text18                              DD0      DD0       2A         0
-                text17                              B94      B94       5C         0
-                text16                              E4A      E4A       26         0
+                intcode_body                        80A      80A       86         0
+                text22                              498      498      10C         0
+                text21                              9F4      9F4       72         0
+                text20                              B38      B38       5E         0
+                text19                              D6E      D6E       32         0
+                text18                              DD2      DD2       2A         0
+                text17                              B96      B96       5C         0
+                text16                              E26      E26       26         0
                 text15                               12       12      19A         0
                 text14                              EDA      EDA       16         0
-                text13                              5A2      5A2       EE         0
-                text12                              97E      97E       74         0
-                text11                              AD2      AD2       64         0
-                text10                              324      324      172         0
-                text9                               908      908       76         0
-                text8                               88E      88E       7A         0
-                text7                               A64      A64       6E         0
-                text6                               D34      D34       38         0
-                text5                               1AC      1AC      178         0
-                text4                               690      690       D0         0
-                text3                               CA6      CA6       4A         0
-                text2                               CF0      CF0       44         0
-                text1                               760      760       A8         0
-                text0                               E24      E24       26         0
-                cinit                               C4C      C4C       5A         0
+                text13                              5A4      5A4       EE         0
+                text12                              980      980       74         0
+                text11                              AD4      AD4       64         0
+                text10                              326      326      172         0
+                text9                               90A      90A       76         0
+                text8                               890      890       7A         0
+                text7                               A66      A66       6E         0
+                text6                               D36      D36       38         0
+                text5                               1AC      1AC      17A         0
+                text4                               692      692       D0         0
+                text3                               CA8      CA8       4A         0
+                text2                               CF2      CF2       44         0
+                text1                               762      762       A8         0
+                text0                               E4C      E4C       24         0
+                cinit                               C4E      C4E       5A         0
                 idataBANK0                          EAC      EAC       17         0
                 idataCOMRAM                         EC3      EC3       16         0
 
@@ -227,14 +227,14 @@ Ins_Validated@i                cstackCOMRAM 000005
 Movimiento@F3429               dataCOMRAM   00004F
 Movimiento@F3432               dataCOMRAM   00004A
 Movimiento@i                   cstackCOMRAM 000016
-Movimiento@i_1095              cstackCOMRAM 000018
+Movimiento@i_1064              cstackCOMRAM 000018
 Movimiento@loquequieras        cstackCOMRAM 00000C
 Movimiento@loquequieras2       cstackCOMRAM 000011
 Par_Validated@i                cstackCOMRAM 000005
 PrintMyActulPosition@a         cstackCOMRAM 000010
 PrintMyActulPosition@b         cstackCOMRAM 000013
 PrintMyActulPosition@i         cstackCOMRAM 000018
-PrintMyActulPosition@i_849     cstackCOMRAM 00001A
+PrintMyActulPosition@i_818     cstackCOMRAM 00001A
 UARTConfi@BAUD                 cstackCOMRAM 000012
 UARTRead@Lecture               cstackCOMRAM 000004
 UARTWrite@data                 cstackCOMRAM 000004
@@ -247,14 +247,14 @@ _CCPR1L                        (abs)        000FBE
 _CCPR2L                        (abs)        000FBB
 _CMCON                         (abs)        000FB4
 _CVRCONbits                    (abs)        000FB5
-_Configuracion                 text20       000B36
-_ContarPulsos                  text17       000B94
+_Configuracion                 text20       000B38
+_ContarPulsos                  text17       000B96
 _ControlFlagVerification       nvCOMRAM     000059
 _CoordAntX                     bssCOMRAM    000034
 _CoordAntY                     bssCOMRAM    000032
 _CoordRelatX                   bssCOMRAM    00003A
 _CoordRelatY                   bssCOMRAM    000038
-_Coord_Validated               text9        000908
+_Coord_Validated               text9        00090A
 _Error                         dataCOMRAM   000054
 _GoToInitialXPosition          text25       000E8E
 _GoToInitialYPosition          text24       000E70
@@ -262,14 +262,14 @@ _INTCON2bits                   (abs)        000FF1
 _INTCON3bits                   (abs)        000FF0
 _INTCONbits                    (abs)        000FF2
 _INT_ISR                       intcode      000008
-_Ins_Validated                 text8        00088E
+_Ins_Validated                 text8        000890
 _LATB                          (abs)        000F8A
 _LATC                          (abs)        000F8B
 _LATD                          (abs)        000F8C
-_Movimiento                    text13       0005A2
+_Movimiento                    text13       0005A4
 _NextState                     bssCOMRAM    000037
 _OSCCON                        (abs)        000FD3
-_OneShot                       text19       000D6C
+_OneShot                       text19       000D6E
 _PIR1bits                      (abs)        000F9E
 _PORTB                         (abs)        000F81
 _PORTBbits                     (abs)        000F81
@@ -281,17 +281,17 @@ _PR2                           (abs)        000FCB
 _PWM                           text15       000012
 _Par1                          bssCOMRAM    000042
 _Par2                          bssCOMRAM    000040
-_Par_Validated                 text7        000A64
+_Par_Validated                 text7        000A66
 _PasosActuales                 bssCOMRAM    00002E
 _PasosX                        bssCOMRAM    00002A
 _PasosY                        bssCOMRAM    000028
-_PrintMyActulPosition          text10       000324
-_PrintMyActulPosition$2071     cstackCOMRAM 000016
+_PrintMyActulPosition          text10       000326
+_PrintMyActulPosition$2040     cstackCOMRAM 000016
 _RCONbits                      (abs)        000FD0
 _RCREG                         (abs)        000FAE
 _RCSTA1bits                    (abs)        000FAB
 _RCSTAbits                     (abs)        000FAB
-_ResetOneShot                  text18       000DD0
+_ResetOneShot                  text18       000DD2
 _SPBRG                         (abs)        000FAF
 _T2CON                         (abs)        000FCA
 _TMR2                          (abs)        000FCC
@@ -303,9 +303,9 @@ _TRISD                         (abs)        000F95
 _TXREG                         (abs)        000FAD
 _TXSTA1bits                    (abs)        000FAC
 _TXSTAbits                     (abs)        000FAC
-_UARTConfi                     text21       0009F2
-_UARTConfi$2070                cstackCOMRAM 000014
-_UARTRead                      text6        000D34
+_UARTConfi                     text21       0009F4
+_UARTConfi$2039                cstackCOMRAM 000014
+_UARTRead                      text6        000D36
 _UARTWrite                     text14       000EDA
 __CFG_BOR$ON                   (abs)        000000
 __CFG_BORV$3                   (abs)        000000
@@ -531,7 +531,7 @@ __Ltext9                       text9        000000
 __S0                           (abs)        30000E
 __S1                           (abs)        00007B
 __S2                           (abs)        000000
-___aldiv                       text22       000496
+___aldiv                       text22       000498
 ___aldiv@counter               cstackCOMRAM 00000C
 ___aldiv@dividend              cstackCOMRAM 000004
 ___aldiv@divisor               cstackCOMRAM 000008
@@ -539,58 +539,58 @@ ___aldiv@quotient              cstackCOMRAM 00000E
 ___aldiv@sign                  cstackCOMRAM 00000D
 ___inthi_sp                    stack        000000
 ___intlo_sp                    stack        000000
-___lwdiv                       text12       00097E
+___lwdiv                       text12       000980
 ___lwdiv@counter               cstackCOMRAM 00000F
 ___lwdiv@dividend              cstackCOMRAM 000009
 ___lwdiv@divisor               cstackCOMRAM 00000B
 ___lwdiv@quotient              cstackCOMRAM 00000D
-___lwmod                       text11       000AD2
+___lwmod                       text11       000AD4
 ___lwmod@counter               cstackCOMRAM 000008
 ___lwmod@dividend              cstackCOMRAM 000004
 ___lwmod@divisor               cstackCOMRAM 000006
 ___param_bank                  (abs)        000000
 ___rparam_used                 (abs)        000001
 ___sp                          stack        000000
-___wmul                        text16       000E4A
+___wmul                        text16       000E26
 ___wmul@multiplicand           cstackCOMRAM 000006
 ___wmul@multiplier             cstackCOMRAM 000004
 ___wmul@product                cstackCOMRAM 000008
 __accesstop                    (abs)        000060
 __activetblptr                 (abs)        000002
-__end_of_Configuracion         text20       000B94
-__end_of_ContarPulsos          text17       000BF0
-__end_of_Coord_Validated       text9        00097E
+__end_of_Configuracion         text20       000B96
+__end_of_ContarPulsos          text17       000BF2
+__end_of_Coord_Validated       text9        000980
 __end_of_GoToInitialXPosition  text25       000EAC
 __end_of_GoToInitialYPosition  text24       000E8E
-__end_of_INT_ISR               intcode_body 00088E
-__end_of_Ins_Validated         text8        000908
-__end_of_Movimiento            text13       000690
-__end_of_OneShot               text19       000D9E
+__end_of_INT_ISR               intcode_body 000890
+__end_of_Ins_Validated         text8        00090A
+__end_of_Movimiento            text13       000692
+__end_of_OneShot               text19       000DA0
 __end_of_PWM                   text15       0001AC
-__end_of_Par_Validated         text7        000AD2
-__end_of_PrintMyActulPosition  text10       000496
-__end_of_ResetOneShot          text18       000DFA
-__end_of_UARTConfi             text21       000A64
-__end_of_UARTRead              text6        000D6C
+__end_of_Par_Validated         text7        000AD4
+__end_of_PrintMyActulPosition  text10       000498
+__end_of_ResetOneShot          text18       000DFC
+__end_of_UARTConfi             text21       000A66
+__end_of_UARTRead              text6        000D6E
 __end_of_UARTWrite             text14       000EF0
-__end_of___aldiv               text22       0005A2
-__end_of___lwdiv               text12       0009F2
-__end_of___lwmod               text11       000B36
-__end_of___wmul                text16       000E70
-__end_of__initialization       cinit        000C98
-__end_of_cmd                   text4        000760
-__end_of_coord                 text5        000324
-__end_of_end                   text3        000CF0
-__end_of_main                  text0        000E4A
-__end_of_start                 text2        000D34
-__end_of_verification          text1        000808
-__end_ofi2_ContarPulsos        text26       000C4C
-__end_ofi2_OneShot             text28       000DD0
-__end_ofi2_ResetOneShot        text27       000E24
-__initialization               cinit        000C4C
+__end_of___aldiv               text22       0005A4
+__end_of___lwdiv               text12       0009F4
+__end_of___lwmod               text11       000B38
+__end_of___wmul                text16       000E4C
+__end_of__initialization       cinit        000C9A
+__end_of_cmd                   text4        000762
+__end_of_coord                 text5        000326
+__end_of_end                   text3        000CF2
+__end_of_main                  text0        000E70
+__end_of_start                 text2        000D36
+__end_of_verification          text1        00080A
+__end_ofi2_ContarPulsos        text26       000C4E
+__end_ofi2_OneShot             text28       000DD2
+__end_ofi2_ResetOneShot        text27       000E26
+__initialization               cinit        000C4E
 __mediumconst                  mediumconst  000000
 __pbssCOMRAM                   bssCOMRAM    000024
-__pcinit                       cinit        000C4C
+__pcinit                       cinit        000C4E
 __pcstackBANK0                 cstackBANK0  000077
 __pcstackCOMRAM                cstackCOMRAM 000001
 __pdataBANK0                   dataBANK0    000060
@@ -598,36 +598,36 @@ __pdataCOMRAM                  dataCOMRAM   000043
 __pidataBANK0                  idataBANK0   000EAC
 __pidataCOMRAM                 idataCOMRAM  000EC3
 __pintcode                     intcode      000008
-__pintcode_body                intcode_body 000808
+__pintcode_body                intcode_body 00080A
 __pnvCOMRAM                    nvCOMRAM     000059
-__ptext0                       text0        000E24
-__ptext1                       text1        000760
-__ptext10                      text10       000324
-__ptext11                      text11       000AD2
-__ptext12                      text12       00097E
-__ptext13                      text13       0005A2
+__ptext0                       text0        000E4C
+__ptext1                       text1        000762
+__ptext10                      text10       000326
+__ptext11                      text11       000AD4
+__ptext12                      text12       000980
+__ptext13                      text13       0005A4
 __ptext14                      text14       000EDA
 __ptext15                      text15       000012
-__ptext16                      text16       000E4A
-__ptext17                      text17       000B94
-__ptext18                      text18       000DD0
-__ptext19                      text19       000D6C
-__ptext2                       text2        000CF0
-__ptext20                      text20       000B36
-__ptext21                      text21       0009F2
-__ptext22                      text22       000496
+__ptext16                      text16       000E26
+__ptext17                      text17       000B96
+__ptext18                      text18       000DD2
+__ptext19                      text19       000D6E
+__ptext2                       text2        000CF2
+__ptext20                      text20       000B38
+__ptext21                      text21       0009F4
+__ptext22                      text22       000498
 __ptext24                      text24       000E70
 __ptext25                      text25       000E8E
-__ptext26                      text26       000BF0
-__ptext27                      text27       000DFA
-__ptext28                      text28       000D9E
-__ptext3                       text3        000CA6
-__ptext4                       text4        000690
+__ptext26                      text26       000BF2
+__ptext27                      text27       000DFC
+__ptext28                      text28       000DA0
+__ptext3                       text3        000CA8
+__ptext4                       text4        000692
 __ptext5                       text5        0001AC
-__ptext6                       text6        000D34
-__ptext7                       text7        000A64
-__ptext8                       text8        00088E
-__ptext9                       text9        000908
+__ptext6                       text6        000D36
+__ptext7                       text7        000A66
+__ptext8                       text8        000890
+__ptext9                       text9        00090A
 __ramtop                       ramtop       000800
 __size_of_Configuracion        (abs)        000000
 __size_of_ContarPulsos         (abs)        000000
@@ -660,20 +660,20 @@ __size_ofi2_OneShot            (abs)        000000
 __size_ofi2_ResetOneShot       (abs)        000000
 __smallconst                   smallconst   000000
 _click                         bssCOMRAM    000036
-_cmd                           text4        000690
+_cmd                           text4        000692
 _coord                         text5        0001AC
 _cord_x                        bssCOMRAM    00003E
 _cord_y                        bssCOMRAM    00003C
 _e_c                           dataBANK0    000060
-_end                           text3        000CA6
+_end                           text3        000CA8
 _gracias                       dataCOMRAM   000043
 _init                          dataBANK0    00006D
 _letter                        bssCOMRAM    000041
-_main                          text0        000E24
+_main                          text0        000E4C
 _ons                           bssCOMRAM    00002C
 _pasosRecorridos               bssCOMRAM    000030
-_start                         text2        000CF0
-_verification                  text1        000760
+_start                         text2        000CF2
+_verification                  text1        000762
 btemp                          temp         00005B
 cmd@i                          cstackBANK0  000077
 cmd@i_72                       cstackBANK0  000079
@@ -688,13 +688,13 @@ coord@read                     cstackCOMRAM 00001C
 coord@x                        cstackCOMRAM 000009
 coord@y                        cstackCOMRAM 00000B
 end@i                          cstackCOMRAM 000005
-end_of_initialization          cinit        000C98
+end_of_initialization          cinit        000C9A
 i2ContarPulsos@pasos           cstackCOMRAM 000001
-i2_ContarPulsos                text26       000BF0
-i2_OneShot                     text28       000D9E
-i2_ResetOneShot                text27       000DFA
+i2_ContarPulsos                text26       000BF2
+i2_OneShot                     text28       000DA0
+i2_ResetOneShot                text27       000DFC
 int$flags                      temp         00005B
-int_func                       intcode_body 000808
+int_func                       intcode_body 00080A
 intlevel0                      text         000000
 intlevel1                      text         000000
 intlevel2                      text         000000
@@ -703,7 +703,7 @@ stackhi                        (abs)        0007FF
 stacklo                        (abs)        00007B
 start                          init         00000E
 start@i                        cstackCOMRAM 000005
-start_initialization           cinit        000C4C
+start_initialization           cinit        000C4E
 ttemp5                         temp         00005C
 ttemp6                         temp         00005F
 ttemp7                         temp         000063
@@ -1037,7 +1037,7 @@ Total ram usage:        2 bytes
 
  *************** function _PrintMyActulPosition *****************
  Defined at:
-		line 81 in file "main.c"
+		line 80 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1144,7 +1144,7 @@ Total ram usage:        7 bytes
   loquequieras    5   16[COMRAM] unsigned char [5]
   loquequieras    5   11[COMRAM] unsigned char [5]
  Return value:  Size  Location     Type
-                  2  242[None  ] int 
+                  2  240[None  ] int 
  Registers used:
 		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, prodl, prodh, cstack
  Tracked objects:
@@ -1638,29 +1638,29 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 UART.c
-		_UARTConfi     		CODE           	09F2	0000	115
+		_UARTConfi     		CODE           	09F4	0000	115
 		_UARTWrite     		CODE           	0EDA	0000	23
-		_UARTRead      		CODE           	0D34	0000	57
+		_UARTRead      		CODE           	0D36	0000	57
 
 UART.c estimated size: 195
 
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
-		___lwdiv       		CODE           	097E	0000	117
+		___lwdiv       		CODE           	0980	0000	117
 
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c estimated size: 117
 
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-		___aldiv       		CODE           	0496	0000	269
+		___aldiv       		CODE           	0498	0000	269
 
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c estimated size: 269
 
 verification.c
-		_verification  		CODE           	0760	0000	169
+		_verification  		CODE           	0762	0000	169
 
 verification.c estimated size: 169
 
 CONFIGUR.c
-		_Configuracion 		CODE           	0B36	0000	95
+		_Configuracion 		CODE           	0B38	0000	95
 		_GoToInitialXPosition		CODE           	0E8E	0000	31
 		_GoToInitialYPosition		CODE           	0E70	0000	31
 
@@ -1668,54 +1668,54 @@ CONFIGUR.c estimated size: 157
 
 PWM.c
 		_PWM           		CODE           	0012	0000	411
-		_ResetOneShot  		CODE           	0DD0	0000	43
-		_OneShot       		CODE           	0D6C	0000	51
-		_ContarPulsos  		CODE           	0B94	0000	93
+		_ResetOneShot  		CODE           	0DD2	0000	43
+		_OneShot       		CODE           	0D6E	0000	51
+		_ContarPulsos  		CODE           	0B96	0000	93
 
 PWM.c estimated size: 598
 
 shared
-		i2_OneShot     		CODE           	0D9E	0000	51
-		__initialization		CODE           	0C4C	0000	77
-		i2_ResetOneShot		CODE           	0DFA	0000	43
-		i2_ContarPulsos		CODE           	0BF0	0000	93
+		i2_OneShot     		CODE           	0DA0	0000	51
+		__initialization		CODE           	0C4E	0000	77
+		i2_ResetOneShot		CODE           	0DFC	0000	43
+		i2_ContarPulsos		CODE           	0BF2	0000	93
 
 shared estimated size: 264
 
 coordenadas.c
-		_coord         		CODE           	01AC	0000	377
+		_coord         		CODE           	01AC	0000	379
 
-coordenadas.c estimated size: 377
+coordenadas.c estimated size: 379
 
 cases.c
-		_Coord_Validated		CODE           	0908	0000	119
-		_Par_Validated 		CODE           	0A64	0000	111
-		_start         		CODE           	0CF0	0000	69
-		_cmd           		CODE           	0690	0000	209
-		_end           		CODE           	0CA6	0000	75
-		_Ins_Validated 		CODE           	088E	0000	123
+		_Coord_Validated		CODE           	090A	0000	119
+		_Par_Validated 		CODE           	0A66	0000	111
+		_start         		CODE           	0CF2	0000	69
+		_cmd           		CODE           	0692	0000	209
+		_end           		CODE           	0CA8	0000	75
+		_Ins_Validated 		CODE           	0890	0000	123
 
 cases.c estimated size: 706
 
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
-		___wmul        		CODE           	0E4A	0000	39
+		___wmul        		CODE           	0E26	0000	39
 
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c estimated size: 39
 
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwmod.c
-		___lwmod       		CODE           	0AD2	0000	101
+		___lwmod       		CODE           	0AD4	0000	101
 
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwmod.c estimated size: 101
 
 Movimiento.c
-		_Movimiento    		CODE           	05A2	0000	239
+		_Movimiento    		CODE           	05A4	0000	239
 
 Movimiento.c estimated size: 239
 
 main.c
-		_main          		CODE           	0E24	0000	39
+		_main          		CODE           	0E4C	0000	37
 		_INT_ISR       		CODE           	0008	0000	141
-		_PrintMyActulPosition		CODE           	0324	0000	371
+		_PrintMyActulPosition		CODE           	0326	0000	371
 
-main.c estimated size: 551
+main.c estimated size: 549
 
