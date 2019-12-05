@@ -1,10 +1,10 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"32 ./cases.h
-[; ;./cases.h: 32: systemState NextState;
-[c E3375 0 1 2 3 4 5 .. ]
-[n E3375 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
-"2 ./PWM.h
-[; ;./PWM.h: 2: void PWM(void);
+"53 ./cases.h
+[; ;./cases.h: 53: systemState NextState;
+[c E3379 0 1 2 3 4 5 .. ]
+[n E3379 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
+"3 ./PWM.h
+[; ;./PWM.h: 3: void PWM(void);
 [v _PWM `(v ~T0 @X0 0 ef ]
 "2711 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 2711:     struct {
@@ -29,8 +29,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "187 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18.h
 [v __delay `JF3152 ~T0 @X0 0 e ]
 [p i __delay ]
-"2 ./UART.h
-[; ;./UART.h: 2: void UARTWrite(char data);
+"6 ./UART.h
+[; ;./UART.h: 6: void UARTWrite(char data);
 [v _UARTWrite `(v ~T0 @X0 0 ef1`uc ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
@@ -542,160 +542,162 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8893
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"6 ./cases.h
-[; ;./cases.h: 6: char Par1;
+"15 ./cases.h
+[; ;./cases.h: 15: char Par1;
 [v _Par1 `uc ~T0 @X0 1 e ]
-"7
-[; ;./cases.h: 7: char letter;
-[v _letter `uc ~T0 @X0 1 e ]
-"8
-[; ;./cases.h: 8: unsigned int cord_x;
-[v _cord_x `ui ~T0 @X0 1 e ]
-"9
-[; ;./cases.h: 9: unsigned int cord_y;
-[v _cord_y `ui ~T0 @X0 1 e ]
-"10
-[; ;./cases.h: 10: char Par2;
-[v _Par2 `uc ~T0 @X0 1 e ]
-"12
-[; ;./cases.h: 12: int x;
-[v _x `i ~T0 @X0 1 e ]
-"32
-[; ;./cases.h: 32: systemState NextState;
-[v _NextState `E3375 ~T0 @X0 1 e ]
-"34
-[; ;./cases.h: 34: uint8_t click;
-[v _click `uc ~T0 @X0 1 e ]
-"17 ./Configuracion.h
-[p x FOSC = INTOSC_EC ]
-"18
-[p x FCMEN = OFF ]
-"19
-[p x IESO = OFF ]
-"22
-[p x PWRT = OFF ]
-"23
-[p x BOR = ON ]
-"24
-[p x BORV = 3 ]
-"25
-[p x VREGEN = OFF ]
-"28
-[p x WDT = OFF ]
-"29
-[p x WDTPS = 32768 ]
-"32
-[p x CCP2MX = ON ]
-"33
-[p x PBADEN = ON ]
-"34
-[p x LPT1OSC = OFF ]
-"35
-[p x MCLRE = OFF ]
-"38
-[p x STVREN = ON ]
-"39
-[p x LVP = OFF ]
-"40
-[p x ICPRT = OFF ]
-"41
-[p x XINST = OFF ]
-"44
-[p x CP0 = OFF ]
-"45
-[p x CP1 = OFF ]
-"46
-[p x CP2 = OFF ]
-"47
-[p x CP3 = OFF ]
-"50
-[p x CPB = OFF ]
-"51
-[p x CPD = OFF ]
-"54
-[p x WRT0 = OFF ]
-"55
-[p x WRT1 = OFF ]
-"56
-[p x WRT2 = OFF ]
-"57
-[p x WRT3 = OFF ]
-"60
-[p x WRTC = OFF ]
-"61
-[p x WRTB = OFF ]
-"62
-[p x WRTD = OFF ]
-"65
-[p x EBTR0 = OFF ]
-"66
-[p x EBTR1 = OFF ]
-"67
-[p x EBTR2 = OFF ]
-"68
-[p x EBTR3 = OFF ]
-"71
-[p x EBTRB = OFF ]
-"12 ./PWM.h
-[; ;./PWM.h: 12:     unsigned int CoordAntX;
-[v _CoordAntX `ui ~T0 @X0 1 e ]
-"13
-[; ;./PWM.h: 13:     unsigned int CoordAntY;
-[v _CoordAntY `ui ~T0 @X0 1 e ]
 "16
-[; ;./PWM.h: 16:     int CoordRelatX;
-[v _CoordRelatX `i ~T0 @X0 1 e ]
+[; ;./cases.h: 16: char letter;
+[v _letter `uc ~T0 @X0 1 e ]
 "17
-[; ;./PWM.h: 17:     int CoordRelatY;
-[v _CoordRelatY `i ~T0 @X0 1 e ]
+[; ;./cases.h: 17: unsigned int cord_x;
+[v _cord_x `ui ~T0 @X0 1 e ]
+"18
+[; ;./cases.h: 18: unsigned int cord_y;
+[v _cord_y `ui ~T0 @X0 1 e ]
+"19
+[; ;./cases.h: 19: char Par2;
+[v _Par2 `uc ~T0 @X0 1 e ]
+"21
+[; ;./cases.h: 21: int ControlFlagVerification;
+[v _ControlFlagVerification `i ~T0 @X0 1 e ]
+"53
+[; ;./cases.h: 53: systemState NextState;
+[v _NextState `E3379 ~T0 @X0 1 e ]
+"55
+[; ;./cases.h: 55: uint8_t click;
+[v _click `uc ~T0 @X0 1 e ]
+"14 ./Configuracion.h
+[p x FOSC = INTOSC_EC ]
+"15
+[p x FCMEN = OFF ]
+"16
+[p x IESO = OFF ]
+"19
+[p x PWRT = OFF ]
 "20
-[; ;./PWM.h: 20:     int pasosRecorridos;
-[v _pasosRecorridos `i ~T0 @X0 1 e ]
-"23
-[; ;./PWM.h: 23:     unsigned int PasosActuales;
-[v _PasosActuales `ui ~T0 @X0 1 e ]
-"24
-[; ;./PWM.h: 24:     unsigned int ons;
-[v _ons `ui ~T0 @X0 1 e ]
+[p x BOR = ON ]
+"21
+[p x BORV = 3 ]
+"22
+[p x VREGEN = OFF ]
+"25
+[p x WDT = OFF ]
 "26
-[; ;./PWM.h: 26:     unsigned int PasosX;
-[v _PasosX `ui ~T0 @X0 1 e ]
-"27
-[; ;./PWM.h: 27:     unsigned int PasosY;
-[v _PasosY `ui ~T0 @X0 1 e ]
-"28
-[; ;./PWM.h: 28:     unsigned int BanderaDisX;
-[v _BanderaDisX `ui ~T0 @X0 1 e ]
+[p x WDTPS = 32768 ]
 "29
-[; ;./PWM.h: 29:     unsigned int BanderaDisY;
+[p x CCP2MX = ON ]
+"30
+[p x PBADEN = ON ]
+"31
+[p x LPT1OSC = OFF ]
+"32
+[p x MCLRE = OFF ]
+"35
+[p x STVREN = ON ]
+"36
+[p x LVP = OFF ]
+"37
+[p x ICPRT = OFF ]
+"38
+[p x XINST = OFF ]
+"41
+[p x CP0 = OFF ]
+"42
+[p x CP1 = OFF ]
+"43
+[p x CP2 = OFF ]
+"44
+[p x CP3 = OFF ]
+"47
+[p x CPB = OFF ]
+"48
+[p x CPD = OFF ]
+"51
+[p x WRT0 = OFF ]
+"52
+[p x WRT1 = OFF ]
+"53
+[p x WRT2 = OFF ]
+"54
+[p x WRT3 = OFF ]
+"57
+[p x WRTC = OFF ]
+"58
+[p x WRTB = OFF ]
+"59
+[p x WRTD = OFF ]
+"62
+[p x EBTR0 = OFF ]
+"63
+[p x EBTR1 = OFF ]
+"64
+[p x EBTR2 = OFF ]
+"65
+[p x EBTR3 = OFF ]
+"68
+[p x EBTRB = OFF ]
+"13 ./PWM.h
+[; ;./PWM.h: 13:     unsigned int CoordAntX;
+[v _CoordAntX `ui ~T0 @X0 1 e ]
+"14
+[; ;./PWM.h: 14:     unsigned int CoordAntY;
+[v _CoordAntY `ui ~T0 @X0 1 e ]
+"17
+[; ;./PWM.h: 17:     int CoordRelatX;
+[v _CoordRelatX `i ~T0 @X0 1 e ]
+"18
+[; ;./PWM.h: 18:     int CoordRelatY;
+[v _CoordRelatY `i ~T0 @X0 1 e ]
+"21
+[; ;./PWM.h: 21:     int pasosRecorridos;
+[v _pasosRecorridos `i ~T0 @X0 1 e ]
+"24
+[; ;./PWM.h: 24:     unsigned int PasosActuales;
+[v _PasosActuales `ui ~T0 @X0 1 e ]
+"25
+[; ;./PWM.h: 25:     unsigned int ons;
+[v _ons `ui ~T0 @X0 1 e ]
+"27
+[; ;./PWM.h: 27:     unsigned int PasosX;
+[v _PasosX `ui ~T0 @X0 1 e ]
+"28
+[; ;./PWM.h: 28:     unsigned int PasosY;
+[v _PasosY `ui ~T0 @X0 1 e ]
+"29
+[; ;./PWM.h: 29:     unsigned int BanderaDisX;
+[v _BanderaDisX `ui ~T0 @X0 1 e ]
+"30
+[; ;./PWM.h: 30:     unsigned int BanderaDisY;
 [v _BanderaDisY `ui ~T0 @X0 1 e ]
-"13 Movimiento.c
-[; ;Movimiento.c: 13: int Movimiento(void) {
+"14 Movimiento.c
+[; ;Movimiento.c: 14: int Movimiento(void)
 [v _Movimiento `(i ~T0 @X0 1 ef ]
+"15
+[; ;Movimiento.c: 15: {
 {
 [e :U _Movimiento ]
 [f ]
-"14
-[; ;Movimiento.c: 14:     if(click==1){
+"17
+[; ;Movimiento.c: 17:     if(click == 1){
 [e $ ! == -> _click `i -> 1 `i 369  ]
 {
-"15
-[; ;Movimiento.c: 15:         PWM();
-[e ( _PWM ..  ]
-"16
-[; ;Movimiento.c: 16:         PORTDbits.RD7=1;
-[e = . . _PORTDbits 0 7 -> -> 1 `i `uc ]
-"17
-[; ;Movimiento.c: 17:         _delay((unsigned long)((100)*(8000000L/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "18
-[; ;Movimiento.c: 18:         PORTDbits.RD7=0;
-[e = . . _PORTDbits 0 7 -> -> 0 `i `uc ]
-[v F3415 `uc ~T0 @X0 -> 5 `i s ]
-[i F3415
-:U ..
+[; ;Movimiento.c: 18:         PWM();
+[e ( _PWM ..  ]
 "19
-[; ;Movimiento.c: 19:         char loquequieras[5]="click";
+[; ;Movimiento.c: 19:         PORTDbits.RD7=1;
+[e = . . _PORTDbits 0 7 -> -> 1 `i `uc ]
+"20
+[; ;Movimiento.c: 20:         _delay((unsigned long)((100)*(8000000L/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"21
+[; ;Movimiento.c: 21:         PORTDbits.RD7=0;
+[e = . . _PORTDbits 0 7 -> -> 0 `i `uc ]
+[v F3429 `uc ~T0 @X0 -> 5 `i s ]
+[i F3429
+:U ..
+"22
+[; ;Movimiento.c: 22:         char loquequieras[5]="click";
 -> 99 `c
 -> 108 `c
 -> 105 `c
@@ -704,9 +706,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _loquequieras `uc ~T0 @X0 -> 5 `i a ]
-[e = _loquequieras F3415 ]
-"20
-[; ;Movimiento.c: 20:        for(int i=0;i<5;i++){
+[e = _loquequieras F3429 ]
+"23
+[; ;Movimiento.c: 23:        for(int i=0;i<5;i++){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -714,39 +716,39 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 371  ]
 [e :U 370 ]
 {
-"21
-[; ;Movimiento.c: 21:        UARTWrite(loquequieras[i]);
+"24
+[; ;Movimiento.c: 24:        UARTWrite(loquequieras[i]);
 [e ( _UARTWrite (1 *U + &U _loquequieras * -> -> _i `ui `ux -> -> # *U &U _loquequieras `ui `ux ]
-"22
-[; ;Movimiento.c: 22:        }
+"25
+[; ;Movimiento.c: 25:        }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 5 `i 370  ]
 [e :U 371 ]
 }
-"24
-[; ;Movimiento.c: 24:     }
+"27
+[; ;Movimiento.c: 27:     }
 }
 [e $U 373  ]
-"25
-[; ;Movimiento.c: 25:     else if(click==0){
+"28
+[; ;Movimiento.c: 28:     else if(click == 0){
 [e :U 369 ]
 [e $ ! == -> _click `i -> 0 `i 374  ]
 {
-"26
-[; ;Movimiento.c: 26:         PORTDbits.RD7=1;
-[e = . . _PORTDbits 0 7 -> -> 1 `i `uc ]
-"27
-[; ;Movimiento.c: 27:         PWM();
-[e ( _PWM ..  ]
-"28
-[; ;Movimiento.c: 28:         PORTDbits.RD7=0;
-[e = . . _PORTDbits 0 7 -> -> 0 `i `uc ]
-[v F3418 `uc ~T0 @X0 -> 5 `i s ]
-[i F3418
-:U ..
 "29
-[; ;Movimiento.c: 29:         char loquequieras2[5]="slide";
+[; ;Movimiento.c: 29:         PORTDbits.RD7=1;
+[e = . . _PORTDbits 0 7 -> -> 1 `i `uc ]
+"30
+[; ;Movimiento.c: 30:         PWM();
+[e ( _PWM ..  ]
+"31
+[; ;Movimiento.c: 31:         PORTDbits.RD7=0;
+[e = . . _PORTDbits 0 7 -> -> 0 `i `uc ]
+[v F3432 `uc ~T0 @X0 -> 5 `i s ]
+[i F3432
+:U ..
+"32
+[; ;Movimiento.c: 32:         char loquequieras2[5]="slide";
 -> 115 `c
 -> 108 `c
 -> 105 `c
@@ -755,9 +757,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _loquequieras2 `uc ~T0 @X0 -> 5 `i a ]
-[e = _loquequieras2 F3418 ]
-"30
-[; ;Movimiento.c: 30:        for(int i=0;i<5;i++){
+[e = _loquequieras2 F3432 ]
+"33
+[; ;Movimiento.c: 33:        for(int i=0;i<5;i++){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -765,25 +767,29 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 376  ]
 [e :U 375 ]
 {
-"31
-[; ;Movimiento.c: 31:        UARTWrite(loquequieras2[i]);
+"34
+[; ;Movimiento.c: 34:        UARTWrite(loquequieras2[i]);
 [e ( _UARTWrite (1 *U + &U _loquequieras2 * -> -> _i `ui `ux -> -> # *U &U _loquequieras2 `ui `ux ]
-"32
-[; ;Movimiento.c: 32:        }
+"35
+[; ;Movimiento.c: 35:        }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 5 `i 375  ]
 [e :U 376 ]
 }
-"33
-[; ;Movimiento.c: 33:     }
+"36
+[; ;Movimiento.c: 36:     }
 }
 [e :U 374 ]
 [e :U 373 ]
-"34
-[; ;Movimiento.c: 34:     x = 1;
-[e = _x -> 1 `i ]
-"35
-[; ;Movimiento.c: 35: }
+"38
+[; ;Movimiento.c: 38:     ControlFlagVerification = 1;
+[e = _ControlFlagVerification -> 1 `i ]
+"40
+[; ;Movimiento.c: 40:     return ControlFlagVerification;
+[e ) _ControlFlagVerification ]
+[e $UE 368  ]
+"41
+[; ;Movimiento.c: 41: }
 [e :UE 368 ]
 }

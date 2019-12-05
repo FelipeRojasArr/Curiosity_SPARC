@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include "main.h"
 #include "UART.h"
 #include "cases.h"
 #include "Definiciones.h"
@@ -11,11 +12,12 @@
 #include "PWM.h"
 
  
-void Configuracion(void) { 
+void Configuracion(void)
+{ 
      
    //CLOCK FREQUENCY CONFIGURATION 
    //============================ 
-    OSCCON=0x72; /* Set internal clock to 8MHz */ 
+   OSCCON=0x72; /* Set internal clock to 8MHz */ 
      
    //DISABLE PORT's ANALOG FUNCTIONS 
    //=============================== 
@@ -61,36 +63,36 @@ void Configuracion(void) {
      
     return; 
 } 
-void InicialX(void){ /*Movemos x hacia atr�s hasta que llegue a coordenada 0*/
-    /*Direcci�n hacia limit switch*/
+
+void InicialX(void)
+{
     DIR_A=0;
     DIR_B=0;
-    /*Encendemos motores mientras la coordenada no sea 0*/    
-       while(CoordAntX!=0){
-       if(CoordAntX==0)
-       {
-        ENABLE_A=1;
-        ENABLE_B=1;
-       }else{ 
-           if(CoordAntX!=0){
-            /*Cuando ya lleg�, se apagan motores*/
-            ENABLE_A=0;
-            ENABLE_B=0; 
+    while(CoordAntX!=0){
+        if(CoordAntX==0)
+        {
+            ENABLE_A=1;
+            ENABLE_B=1;
+        }else{ 
+            if(CoordAntX!=0)
+            {
+                ENABLE_A=0;
+                ENABLE_B=0; 
             }
         }
     }
 }
-void InicialY(void)     /*Movemos y hacia atr�s hasta que llegue a coordenada 0*/
+
+void InicialY(void)
 { 
-    /*Direcci�n hacia limit switch*/
     DIR_A=1;
     DIR_B=0;  
-    /*Encendemos motores mientras la coordenada no sea 0*/
+    
     do{
     ENABLE_A=0;
     ENABLE_B=0;
-    }while (CoordAntY!=0);
-    /*Cuando ya lleg�, se apagan motores*/
+    }while(CoordAntY!=0);
+    
     ENABLE_A=1;
     ENABLE_B=1;
     
@@ -98,12 +100,9 @@ void InicialY(void)     /*Movemos y hacia atr�s hasta que llegue a coordenada 
 
 void GoToInitialXPosition(void)
 {
-    /*Direcci�n hacia atr�s*/
     DIR_A=1;
     DIR_B=1;
-    
     ContarPulsos(25);
-//    __delay_ms(80);
     ENABLE_A=1;
     ENABLE_B=1;
     CoordAntX = 0;
@@ -112,10 +111,8 @@ void GoToInitialXPosition(void)
 void GoToInitialYPosition(void)
 {
     DIR_A=0;
-    DIR_B=1;
-    
+    DIR_B=1; 
     ContarPulsos(25);
-//    __delay_ms(500);
     ENABLE_A=1;
     ENABLE_B=1;
     CoordAntY = 0;

@@ -3,12 +3,14 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include "main.h"
 #include "UART.h"
 #include "cases.h"
 #include "Definiciones.h"
 #include "Configuracion.h"
 #include "Interruptions.h"
 #include "PWM.h"
+
 
 /*
   La función de PWM:
@@ -112,12 +114,3 @@ void ResetOneShot(void){
     if(PORTCbits.CCP1==0)ons=0;
     return;
 }
-
-/*void HaltMotors(void)
-{
-    ENABLE_A=1;
-    ENABLE_B=1;
-    UARTWrite(0x4B);
-    TXSTAbits.TXEN = 0;
-    RCSTAbits.CREN = 0;
-}*/

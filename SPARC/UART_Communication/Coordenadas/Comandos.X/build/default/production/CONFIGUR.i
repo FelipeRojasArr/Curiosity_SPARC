@@ -5763,14 +5763,27 @@ typedef uint32_t uint_fast32_t;
 # 139 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 2 3
 # 5 "CONFIGUR.c" 2
 
+# 1 "./main.h" 1
+
+
+void GoToCero(void);
+void GoToInitialYPosition(void);
+void GoToInitialXPosition(void);
+void PrintMyActulPosition(void);
+# 6 "CONFIGUR.c" 2
+
 # 1 "./UART.h" 1
+
+
+
+
 void UARTConfi(int Baud);
 void UARTWrite(char data);
 char UARTRead(void);
-# 6 "CONFIGUR.c" 2
+# 7 "CONFIGUR.c" 2
 
 # 1 "./cases.h" 1
-
+# 11 "./cases.h"
 void verification(void);
 
 int coord(char* P1, char* L, unsigned short* x, unsigned short* y, char* P2);
@@ -5781,7 +5794,7 @@ unsigned int cord_x;
 unsigned int cord_y;
 char Par2;
 
-int x;
+int ControlFlagVerification;
 
 typedef enum
 {
@@ -5789,10 +5802,22 @@ typedef enum
  wait_cmd_State,
  validate_Par_State,
  validate_Instruct_State,
- validate_Coord_State,
+    validate_Coord_State,
  end_State,
 
 }systemState;
+
+enum CharactersOfASCII{
+    StartCommandCharacter = 0,
+    InstructionCharacter,
+    CharacterX1,
+    CharacterX2,
+    CharacterX3,
+    CharacterY1,
+    CharacterY2,
+    CharacterY3,
+    EndCommandCharacter
+};
 
 uint8_t start(void);
 uint8_t cmd(void);
@@ -5804,13 +5829,13 @@ void end(void);
 systemState NextState;
 
 uint8_t click;
-# 7 "CONFIGUR.c" 2
-
-# 1 "./Definiciones.h" 1
 # 8 "CONFIGUR.c" 2
 
+# 1 "./Definiciones.h" 1
+# 9 "CONFIGUR.c" 2
+
 # 1 "./Configuracion.h" 1
-# 17 "./Configuracion.h"
+# 14 "./Configuracion.h"
 #pragma config FOSC = INTOSC_EC
 #pragma config FCMEN = OFF
 #pragma config IESO = OFF
@@ -5871,7 +5896,7 @@ uint8_t click;
 void Configuracion(void);
 void InicialX(void);
 void InicialY(void);
-# 9 "CONFIGUR.c" 2
+# 10 "CONFIGUR.c" 2
 
 # 1 "./Interruptions.h" 1
 
@@ -5882,9 +5907,10 @@ void InicialY(void);
 
 void InterruptionsConfiguration(void);
 void buttonInterruptionConfiguration(void);
-# 10 "CONFIGUR.c" 2
+# 11 "CONFIGUR.c" 2
 
 # 1 "./PWM.h" 1
+
 
 void PWM(void);
 void ContarPulsos(int pasos);
@@ -5914,15 +5940,16 @@ void HaltMotors(void);
     unsigned int PasosY;
     unsigned int BanderaDisX;
     unsigned int BanderaDisY;
-# 11 "CONFIGUR.c" 2
+# 12 "CONFIGUR.c" 2
 
 
 
-void Configuracion(void) {
+void Configuracion(void)
+{
 
 
 
-    OSCCON=0x72;
+   OSCCON=0x72;
 
 
 
@@ -5968,35 +5995,35 @@ void Configuracion(void) {
 
     return;
 }
-void InicialX(void){
 
+void InicialX(void)
+{
     PORTDbits.RD0=0;
     PORTDbits.RD1=0;
-
-       while(CoordAntX!=0){
-       if(CoordAntX==0)
-       {
-        PORTDbits.RD2=1;
-        PORTDbits.RD3=1;
-       }else{
-           if(CoordAntX!=0){
-
-            PORTDbits.RD2=0;
-            PORTDbits.RD3=0;
+    while(CoordAntX!=0){
+        if(CoordAntX==0)
+        {
+            PORTDbits.RD2=1;
+            PORTDbits.RD3=1;
+        }else{
+            if(CoordAntX!=0)
+            {
+                PORTDbits.RD2=0;
+                PORTDbits.RD3=0;
             }
         }
     }
 }
+
 void InicialY(void)
 {
-
     PORTDbits.RD0=1;
     PORTDbits.RD1=0;
 
     do{
     PORTDbits.RD2=0;
     PORTDbits.RD3=0;
-    }while (CoordAntY!=0);
+    }while(CoordAntY!=0);
 
     PORTDbits.RD2=1;
     PORTDbits.RD3=1;
@@ -6005,12 +6032,9 @@ void InicialY(void)
 
 void GoToInitialXPosition(void)
 {
-
     PORTDbits.RD0=1;
     PORTDbits.RD1=1;
-
     ContarPulsos(25);
-
     PORTDbits.RD2=1;
     PORTDbits.RD3=1;
     CoordAntX = 0;
@@ -6020,9 +6044,7 @@ void GoToInitialYPosition(void)
 {
     PORTDbits.RD0=0;
     PORTDbits.RD1=1;
-
     ContarPulsos(25);
-
     PORTDbits.RD2=1;
     PORTDbits.RD3=1;
     CoordAntY = 0;

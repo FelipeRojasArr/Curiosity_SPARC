@@ -1,11 +1,46 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"32 ./cases.h
-[; ;./cases.h: 32: systemState NextState;
+"53 ./cases.h
+[; ;./cases.h: 53: systemState NextState;
 [c E3375 0 1 2 3 4 5 .. ]
 [n E3375 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
-"3 ./UART.h
-[; ;./UART.h: 3: char UARTRead(void);
+"20 coordenadas.c
+[; ;coordenadas.c: 20:         for(int i=StartCommandCharacter; i<(EndCommandCharacter+1); i++){
+[c E3383 0 1 2 3 4 5 6 7 8 .. ]
+[n E3383 CharactersOfASCII StartCommandCharacter InstructionCharacter CharacterX1 CharacterX2 CharacterX3 CharacterY1 CharacterY2 CharacterY3 EndCommandCharacter  ]
+"7 ./UART.h
+[; ;./UART.h: 7: char UARTRead(void);
 [v _UARTRead `(uc ~T0 @X0 0 ef ]
+"4947 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4947:     struct {
+[s S191 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S191 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
+"4957
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4957:     struct {
+[s S192 :3 `uc 1 :1 `uc 1 ]
+[n S192 . . ADEN ]
+"4961
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4961:     struct {
+[s S193 :5 `uc 1 :1 `uc 1 ]
+[n S193 . . SRENA ]
+"4965
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4965:     struct {
+[s S194 :6 `uc 1 :1 `uc 1 ]
+[n S194 . . RC8_9 ]
+"4969
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4969:     struct {
+[s S195 :6 `uc 1 :1 `uc 1 ]
+[n S195 . . RC9 ]
+"4973
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4973:     struct {
+[s S196 :1 `uc 1 ]
+[n S196 . RCD8 ]
+"4946
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4946: typedef union {
+[u S190 `S191 1 `S192 1 `S193 1 `S194 1 `S195 1 `S196 1 ]
+[n S190 . . . . . . . ]
+"4977
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4977: extern volatile RCSTAbits_t RCSTAbits __attribute__((address(0xFAB)));
+[v _RCSTAbits `VS190 ~T0 @X0 0 e@4011 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -516,132 +551,132 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8893
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"6 ./cases.h
-[; ;./cases.h: 6: char Par1;
+"15 ./cases.h
+[; ;./cases.h: 15: char Par1;
 [v _Par1 `uc ~T0 @X0 1 e ]
-"7
-[; ;./cases.h: 7: char letter;
-[v _letter `uc ~T0 @X0 1 e ]
-"8
-[; ;./cases.h: 8: unsigned int cord_x;
-[v _cord_x `ui ~T0 @X0 1 e ]
-"9
-[; ;./cases.h: 9: unsigned int cord_y;
-[v _cord_y `ui ~T0 @X0 1 e ]
-"10
-[; ;./cases.h: 10: char Par2;
-[v _Par2 `uc ~T0 @X0 1 e ]
-"12
-[; ;./cases.h: 12: int x;
-[v _x `i ~T0 @X0 1 e ]
-"32
-[; ;./cases.h: 32: systemState NextState;
-[v _NextState `E3375 ~T0 @X0 1 e ]
-"34
-[; ;./cases.h: 34: uint8_t click;
-[v _click `uc ~T0 @X0 1 e ]
-"17 ./Configuracion.h
-[p x FOSC = INTOSC_EC ]
-"18
-[p x FCMEN = OFF ]
-"19
-[p x IESO = OFF ]
-"22
-[p x PWRT = OFF ]
-"23
-[p x BOR = ON ]
-"24
-[p x BORV = 3 ]
-"25
-[p x VREGEN = OFF ]
-"28
-[p x WDT = OFF ]
-"29
-[p x WDTPS = 32768 ]
-"32
-[p x CCP2MX = ON ]
-"33
-[p x PBADEN = ON ]
-"34
-[p x LPT1OSC = OFF ]
-"35
-[p x MCLRE = OFF ]
-"38
-[p x STVREN = ON ]
-"39
-[p x LVP = OFF ]
-"40
-[p x ICPRT = OFF ]
-"41
-[p x XINST = OFF ]
-"44
-[p x CP0 = OFF ]
-"45
-[p x CP1 = OFF ]
-"46
-[p x CP2 = OFF ]
-"47
-[p x CP3 = OFF ]
-"50
-[p x CPB = OFF ]
-"51
-[p x CPD = OFF ]
-"54
-[p x WRT0 = OFF ]
-"55
-[p x WRT1 = OFF ]
-"56
-[p x WRT2 = OFF ]
-"57
-[p x WRT3 = OFF ]
-"60
-[p x WRTC = OFF ]
-"61
-[p x WRTB = OFF ]
-"62
-[p x WRTD = OFF ]
-"65
-[p x EBTR0 = OFF ]
-"66
-[p x EBTR1 = OFF ]
-"67
-[p x EBTR2 = OFF ]
-"68
-[p x EBTR3 = OFF ]
-"71
-[p x EBTRB = OFF ]
-"12 ./PWM.h
-[; ;./PWM.h: 12:     unsigned int CoordAntX;
-[v _CoordAntX `ui ~T0 @X0 1 e ]
-"13
-[; ;./PWM.h: 13:     unsigned int CoordAntY;
-[v _CoordAntY `ui ~T0 @X0 1 e ]
 "16
-[; ;./PWM.h: 16:     int CoordRelatX;
-[v _CoordRelatX `i ~T0 @X0 1 e ]
+[; ;./cases.h: 16: char letter;
+[v _letter `uc ~T0 @X0 1 e ]
 "17
-[; ;./PWM.h: 17:     int CoordRelatY;
-[v _CoordRelatY `i ~T0 @X0 1 e ]
+[; ;./cases.h: 17: unsigned int cord_x;
+[v _cord_x `ui ~T0 @X0 1 e ]
+"18
+[; ;./cases.h: 18: unsigned int cord_y;
+[v _cord_y `ui ~T0 @X0 1 e ]
+"19
+[; ;./cases.h: 19: char Par2;
+[v _Par2 `uc ~T0 @X0 1 e ]
+"21
+[; ;./cases.h: 21: int ControlFlagVerification;
+[v _ControlFlagVerification `i ~T0 @X0 1 e ]
+"53
+[; ;./cases.h: 53: systemState NextState;
+[v _NextState `E3375 ~T0 @X0 1 e ]
+"55
+[; ;./cases.h: 55: uint8_t click;
+[v _click `uc ~T0 @X0 1 e ]
+"14 ./Configuracion.h
+[p x FOSC = INTOSC_EC ]
+"15
+[p x FCMEN = OFF ]
+"16
+[p x IESO = OFF ]
+"19
+[p x PWRT = OFF ]
 "20
-[; ;./PWM.h: 20:     int pasosRecorridos;
-[v _pasosRecorridos `i ~T0 @X0 1 e ]
-"23
-[; ;./PWM.h: 23:     unsigned int PasosActuales;
-[v _PasosActuales `ui ~T0 @X0 1 e ]
-"24
-[; ;./PWM.h: 24:     unsigned int ons;
-[v _ons `ui ~T0 @X0 1 e ]
+[p x BOR = ON ]
+"21
+[p x BORV = 3 ]
+"22
+[p x VREGEN = OFF ]
+"25
+[p x WDT = OFF ]
 "26
-[; ;./PWM.h: 26:     unsigned int PasosX;
-[v _PasosX `ui ~T0 @X0 1 e ]
-"27
-[; ;./PWM.h: 27:     unsigned int PasosY;
-[v _PasosY `ui ~T0 @X0 1 e ]
-"28
-[; ;./PWM.h: 28:     unsigned int BanderaDisX;
-[v _BanderaDisX `ui ~T0 @X0 1 e ]
+[p x WDTPS = 32768 ]
 "29
-[; ;./PWM.h: 29:     unsigned int BanderaDisY;
+[p x CCP2MX = ON ]
+"30
+[p x PBADEN = ON ]
+"31
+[p x LPT1OSC = OFF ]
+"32
+[p x MCLRE = OFF ]
+"35
+[p x STVREN = ON ]
+"36
+[p x LVP = OFF ]
+"37
+[p x ICPRT = OFF ]
+"38
+[p x XINST = OFF ]
+"41
+[p x CP0 = OFF ]
+"42
+[p x CP1 = OFF ]
+"43
+[p x CP2 = OFF ]
+"44
+[p x CP3 = OFF ]
+"47
+[p x CPB = OFF ]
+"48
+[p x CPD = OFF ]
+"51
+[p x WRT0 = OFF ]
+"52
+[p x WRT1 = OFF ]
+"53
+[p x WRT2 = OFF ]
+"54
+[p x WRT3 = OFF ]
+"57
+[p x WRTC = OFF ]
+"58
+[p x WRTB = OFF ]
+"59
+[p x WRTD = OFF ]
+"62
+[p x EBTR0 = OFF ]
+"63
+[p x EBTR1 = OFF ]
+"64
+[p x EBTR2 = OFF ]
+"65
+[p x EBTR3 = OFF ]
+"68
+[p x EBTRB = OFF ]
+"13 ./PWM.h
+[; ;./PWM.h: 13:     unsigned int CoordAntX;
+[v _CoordAntX `ui ~T0 @X0 1 e ]
+"14
+[; ;./PWM.h: 14:     unsigned int CoordAntY;
+[v _CoordAntY `ui ~T0 @X0 1 e ]
+"17
+[; ;./PWM.h: 17:     int CoordRelatX;
+[v _CoordRelatX `i ~T0 @X0 1 e ]
+"18
+[; ;./PWM.h: 18:     int CoordRelatY;
+[v _CoordRelatY `i ~T0 @X0 1 e ]
+"21
+[; ;./PWM.h: 21:     int pasosRecorridos;
+[v _pasosRecorridos `i ~T0 @X0 1 e ]
+"24
+[; ;./PWM.h: 24:     unsigned int PasosActuales;
+[v _PasosActuales `ui ~T0 @X0 1 e ]
+"25
+[; ;./PWM.h: 25:     unsigned int ons;
+[v _ons `ui ~T0 @X0 1 e ]
+"27
+[; ;./PWM.h: 27:     unsigned int PasosX;
+[v _PasosX `ui ~T0 @X0 1 e ]
+"28
+[; ;./PWM.h: 28:     unsigned int PasosY;
+[v _PasosY `ui ~T0 @X0 1 e ]
+"29
+[; ;./PWM.h: 29:     unsigned int BanderaDisX;
+[v _BanderaDisX `ui ~T0 @X0 1 e ]
+"30
+[; ;./PWM.h: 30:     unsigned int BanderaDisY;
 [v _BanderaDisY `ui ~T0 @X0 1 e ]
 "14 coordenadas.c
 [; ;coordenadas.c: 14: int coord(char* P1, char*L, uint16_t* x , uint16_t* y , char*P2){
@@ -660,48 +695,137 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16
 [; ;coordenadas.c: 16:         char read;
 [v _read `uc ~T0 @X0 1 a ]
+"17
+[; ;coordenadas.c: 17:         char flagBuffer = 0;
+[v _flagBuffer `uc ~T0 @X0 1 a ]
+[e = _flagBuffer -> -> 0 `i `uc ]
 "18
-[; ;coordenadas.c: 18:         for(int i=0; i<=8; i++){
+[; ;coordenadas.c: 18:         char counterRevision = 0;
+[v _counterRevision `uc ~T0 @X0 1 a ]
+[e = _counterRevision -> -> 0 `i `uc ]
+"20
+[; ;coordenadas.c: 20:         for(int i=StartCommandCharacter; i<(EndCommandCharacter+1); i++){
 {
 [v _i `i ~T0 @X0 1 a ]
-[e = _i -> 0 `i ]
-[e $ <= _i -> 8 `i 369  ]
+[e = _i -> . `E3383 0 `i ]
+[e $ < _i + -> . `E3383 8 `i -> 1 `i 369  ]
 [e $U 370  ]
 [e :U 369 ]
 {
-"19
-[; ;coordenadas.c: 19:             read= UARTRead();
-[e = _read ( _UARTRead ..  ]
-"20
-[; ;coordenadas.c: 20:             buffer[i]=read;
-[e = *U + &U _buffer * -> -> _i `ui `ux -> -> # *U &U _buffer `ui `ux _read ]
 "21
-[; ;coordenadas.c: 21:         }
+[; ;coordenadas.c: 21:             read= UARTRead();
+[e = _read ( _UARTRead ..  ]
+"22
+[; ;coordenadas.c: 22:             buffer[i]=read;
+[e = *U + &U _buffer * -> -> _i `ui `ux -> -> # *U &U _buffer `ui `ux _read ]
+"24
+[; ;coordenadas.c: 24:             if(i == (EndCommandCharacter+1))
+[e $ ! == _i + -> . `E3383 8 `i -> 1 `i 372  ]
+"25
+[; ;coordenadas.c: 25:             {
+{
+"26
+[; ;coordenadas.c: 26:                 RCSTAbits.CREN = 0;
+[e = . . _RCSTAbits 0 4 -> -> 0 `i `uc ]
+"27
+[; ;coordenadas.c: 27:             }
+}
+[e :U 372 ]
+"28
+[; ;coordenadas.c: 28:         }
 }
 [e ++ _i -> 1 `i ]
-[e $ <= _i -> 8 `i 369  ]
+[e $ < _i + -> . `E3383 8 `i -> 1 `i 369  ]
 [e :U 370 ]
 }
-"22
-[; ;coordenadas.c: 22:         *P1= buffer[0];
-[e = *U _P1 *U + &U _buffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _buffer `ui `ux ]
-"23
-[; ;coordenadas.c: 23:         *L= buffer[1];
-[e = *U _L *U + &U _buffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _buffer `ui `ux ]
-"24
-[; ;coordenadas.c: 24:   *x = 1*(buffer[4]-48) + 10*(buffer[3]-48) + 100*(buffer[2]-48);
-[e = *U _x -> + + * -> 1 `i - -> *U + &U _buffer * -> -> -> 4 `i `ui `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 10 `i - -> *U + &U _buffer * -> -> -> 3 `i `ui `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 100 `i - -> *U + &U _buffer * -> -> -> 2 `i `ui `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i `us ]
-"25
-[; ;coordenadas.c: 25:   *y = 1*(buffer[7]-48) + 10*(buffer[6]-48) + 100*(buffer[5]-48);
-[e = *U _y -> + + * -> 1 `i - -> *U + &U _buffer * -> -> -> 7 `i `ui `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 10 `i - -> *U + &U _buffer * -> -> -> 6 `i `ui `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 100 `i - -> *U + &U _buffer * -> -> -> 5 `i `ui `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i `us ]
-"26
-[; ;coordenadas.c: 26:   *P2= buffer[8];
-[e = *U _P2 *U + &U _buffer * -> -> -> 8 `i `ui `ux -> -> # *U &U _buffer `ui `ux ]
-"28
-[; ;coordenadas.c: 28:         return 0;
+"30
+[; ;coordenadas.c: 30:         *P1= buffer[StartCommandCharacter];
+[e = *U _P1 *U + &U _buffer * -> . `E3383 0 `ux -> -> # *U &U _buffer `ui `ux ]
+"31
+[; ;coordenadas.c: 31:         *L= buffer[InstructionCharacter];
+[e = *U _L *U + &U _buffer * -> . `E3383 1 `ux -> -> # *U &U _buffer `ui `ux ]
+"32
+[; ;coordenadas.c: 32:         *P2= buffer[EndCommandCharacter];
+[e = *U _P2 *U + &U _buffer * -> . `E3383 8 `ux -> -> # *U &U _buffer `ui `ux ]
+"34
+[; ;coordenadas.c: 34:         for(char n=CharacterX1; n<(CharacterY3+1); n++)
+{
+[v _n `uc ~T0 @X0 1 a ]
+[e = _n -> . `E3383 2 `uc ]
+[e $ < -> _n `i + -> . `E3383 7 `i -> 1 `i 373  ]
+[e $U 374  ]
+[e :U 373 ]
+"35
+[; ;coordenadas.c: 35:         {
+{
+"36
+[; ;coordenadas.c: 36:             if(buffer[n] <= 57 && buffer[n] >= 48)
+[e $ ! && <= -> *U + &U _buffer * -> _n `ux -> -> # *U &U _buffer `ui `ux `i -> 57 `i >= -> *U + &U _buffer * -> _n `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i 376  ]
+"37
+[; ;coordenadas.c: 37:             {
+{
+"38
+[; ;coordenadas.c: 38:                 counterRevision++;
+[e ++ _counterRevision -> -> 1 `i `uc ]
+"39
+[; ;coordenadas.c: 39:             }
+}
+[e :U 376 ]
+"40
+[; ;coordenadas.c: 40:         }
+}
+[e ++ _n -> -> 1 `i `uc ]
+[e $ < -> _n `i + -> . `E3383 7 `i -> 1 `i 373  ]
+[e :U 374 ]
+}
+"41
+[; ;coordenadas.c: 41:             if(counterRevision == 6)
+[e $ ! == -> _counterRevision `i -> 6 `i 377  ]
+"42
+[; ;coordenadas.c: 42:             {
+{
+"43
+[; ;coordenadas.c: 43:                 flagBuffer = 1;
+[e = _flagBuffer -> -> 1 `i `uc ]
+"44
+[; ;coordenadas.c: 44:             }
+}
+[e $U 378  ]
+"46
+[; ;coordenadas.c: 46:             else
+[e :U 377 ]
+"47
+[; ;coordenadas.c: 47:             {
+{
+"48
+[; ;coordenadas.c: 48:                 return 0;
 [e ) -> 0 `i ]
 [e $UE 368  ]
-"29
-[; ;coordenadas.c: 29: }
+"49
+[; ;coordenadas.c: 49:             }
+}
+[e :U 378 ]
+"51
+[; ;coordenadas.c: 51:         if(flagBuffer == 1)
+[e $ ! == -> _flagBuffer `i -> 1 `i 379  ]
+"52
+[; ;coordenadas.c: 52:         {
+{
+"53
+[; ;coordenadas.c: 53:             *x = 1*(buffer[CharacterX3]-48) + 10*(buffer[CharacterX2]-48) + 100*(buffer[CharacterX1]-48);
+[e = *U _x -> + + * -> 1 `i - -> *U + &U _buffer * -> . `E3383 4 `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 10 `i - -> *U + &U _buffer * -> . `E3383 3 `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 100 `i - -> *U + &U _buffer * -> . `E3383 2 `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i `us ]
+"54
+[; ;coordenadas.c: 54:             *y = 1*(buffer[CharacterY3]-48) + 10*(buffer[CharacterY2]-48) + 100*(buffer[CharacterY1]-48);
+[e = *U _y -> + + * -> 1 `i - -> *U + &U _buffer * -> . `E3383 7 `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 10 `i - -> *U + &U _buffer * -> . `E3383 6 `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 100 `i - -> *U + &U _buffer * -> . `E3383 5 `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i `us ]
+"55
+[; ;coordenadas.c: 55:         return 1;
+[e ) -> 1 `i ]
+[e $UE 368  ]
+"56
+[; ;coordenadas.c: 56:         }
+}
+[e :U 379 ]
+"57
+[; ;coordenadas.c: 57: }
 [e :UE 368 ]
 }

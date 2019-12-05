@@ -5764,13 +5764,17 @@ typedef uint32_t uint_fast32_t;
 # 5 "Interruptions.c" 2
 
 # 1 "./UART.h" 1
+
+
+
+
 void UARTConfi(int Baud);
 void UARTWrite(char data);
 char UARTRead(void);
 # 6 "Interruptions.c" 2
 
 # 1 "./cases.h" 1
-
+# 11 "./cases.h"
 void verification(void);
 
 int coord(char* P1, char* L, unsigned short* x, unsigned short* y, char* P2);
@@ -5781,7 +5785,7 @@ unsigned int cord_x;
 unsigned int cord_y;
 char Par2;
 
-int x;
+int ControlFlagVerification;
 
 typedef enum
 {
@@ -5789,10 +5793,22 @@ typedef enum
  wait_cmd_State,
  validate_Par_State,
  validate_Instruct_State,
- validate_Coord_State,
+    validate_Coord_State,
  end_State,
 
 }systemState;
+
+enum CharactersOfASCII{
+    StartCommandCharacter = 0,
+    InstructionCharacter,
+    CharacterX1,
+    CharacterX2,
+    CharacterX3,
+    CharacterY1,
+    CharacterY2,
+    CharacterY3,
+    EndCommandCharacter
+};
 
 uint8_t start(void);
 uint8_t cmd(void);
@@ -5810,7 +5826,7 @@ uint8_t click;
 # 8 "Interruptions.c" 2
 
 # 1 "./Configuracion.h" 1
-# 17 "./Configuracion.h"
+# 14 "./Configuracion.h"
 #pragma config FOSC = INTOSC_EC
 #pragma config FCMEN = OFF
 #pragma config IESO = OFF
@@ -5885,6 +5901,7 @@ void buttonInterruptionConfiguration(void);
 # 10 "Interruptions.c" 2
 
 # 1 "./PWM.h" 1
+
 
 void PWM(void);
 void ContarPulsos(int pasos);

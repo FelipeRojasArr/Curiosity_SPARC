@@ -5763,14 +5763,27 @@ typedef uint32_t uint_fast32_t;
 # 139 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 2 3
 # 5 "main.c" 2
 
+# 1 "./main.h" 1
+
+
+void GoToCero(void);
+void GoToInitialYPosition(void);
+void GoToInitialXPosition(void);
+void PrintMyActulPosition(void);
+# 6 "main.c" 2
+
 # 1 "./UART.h" 1
+
+
+
+
 void UARTConfi(int Baud);
 void UARTWrite(char data);
 char UARTRead(void);
-# 6 "main.c" 2
+# 7 "main.c" 2
 
 # 1 "./cases.h" 1
-
+# 11 "./cases.h"
 void verification(void);
 
 int coord(char* P1, char* L, unsigned short* x, unsigned short* y, char* P2);
@@ -5781,7 +5794,7 @@ unsigned int cord_x;
 unsigned int cord_y;
 char Par2;
 
-int x;
+int ControlFlagVerification;
 
 typedef enum
 {
@@ -5789,10 +5802,22 @@ typedef enum
  wait_cmd_State,
  validate_Par_State,
  validate_Instruct_State,
- validate_Coord_State,
+    validate_Coord_State,
  end_State,
 
 }systemState;
+
+enum CharactersOfASCII{
+    StartCommandCharacter = 0,
+    InstructionCharacter,
+    CharacterX1,
+    CharacterX2,
+    CharacterX3,
+    CharacterY1,
+    CharacterY2,
+    CharacterY3,
+    EndCommandCharacter
+};
 
 uint8_t start(void);
 uint8_t cmd(void);
@@ -5804,13 +5829,13 @@ void end(void);
 systemState NextState;
 
 uint8_t click;
-# 7 "main.c" 2
-
-# 1 "./Definiciones.h" 1
 # 8 "main.c" 2
 
+# 1 "./Definiciones.h" 1
+# 9 "main.c" 2
+
 # 1 "./Configuracion.h" 1
-# 17 "./Configuracion.h"
+# 14 "./Configuracion.h"
 #pragma config FOSC = INTOSC_EC
 #pragma config FCMEN = OFF
 #pragma config IESO = OFF
@@ -5871,7 +5896,7 @@ uint8_t click;
 void Configuracion(void);
 void InicialX(void);
 void InicialY(void);
-# 9 "main.c" 2
+# 10 "main.c" 2
 
 # 1 "./Interruptions.h" 1
 
@@ -5882,9 +5907,10 @@ void InicialY(void);
 
 void InterruptionsConfiguration(void);
 void buttonInterruptionConfiguration(void);
-# 10 "main.c" 2
+# 11 "main.c" 2
 
 # 1 "./PWM.h" 1
+
 
 void PWM(void);
 void ContarPulsos(int pasos);
@@ -5914,11 +5940,8 @@ void HaltMotors(void);
     unsigned int PasosY;
     unsigned int BanderaDisX;
     unsigned int BanderaDisY;
-# 11 "main.c" 2
+# 12 "main.c" 2
 
-
-void GoToInitialYPosition(void);
-void GoToInitialXPosition(void);
 
 
 void __attribute__((picinterrupt(("")))) INT_ISR(void)
@@ -5954,7 +5977,29 @@ void __attribute__((picinterrupt(("")))) INT_ISR(void)
 void main(void) {
 
     Configuracion();
-    InterruptionsConfiguration();
+
+
+
+    while(1)
+    {
+        RCSTAbits.CREN = 1;
+        ControlFlagVerification = 1;
+        verification();
+        PrintMyActulPosition();
+        Movimiento();
+
+
+
+
+
+
+        PrintMyActulPosition();
+
+    }
+}
+
+void GoToCero(void)
+{
     CoordAntX=1;
     CoordAntY=1;
     PORTDbits.RD2=1;
@@ -5963,11 +6008,28 @@ void main(void) {
     InicialY();
     GoToInitialXPosition();
     GoToInitialYPosition();
+}
 
+void PrintMyActulPosition(void)
+{
 
-    while(1){
-        x=1;
-       verification();
-       Movimiento();
-    }
+        char a[3];
+        char b[3];
+
+        a[0]=(CoordAntX/100)+48;
+        a[1]=((CoordAntX%100)/10)+48;
+        a[2]=((CoordAntX%100)%10)+48;
+
+        b[0]=(CoordAntY/100)+48;
+        b[1]=((CoordAntY%100)/10)+48;
+        b[2]=((CoordAntY%100)%10)+48;
+
+        for(int i=0; i<3; i++){
+
+            UARTWrite(a[i]);
+        }
+        for(int i=0; i<3; i++){
+
+            UARTWrite(b[i]);
+        }
 }

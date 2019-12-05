@@ -10,6 +10,7 @@
       <itemPath>Definiciones.h</itemPath>
       <itemPath>Configuracion.h</itemPath>
       <itemPath>Interruptions.h</itemPath>
+      <itemPath>main.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"

@@ -5764,13 +5764,17 @@ typedef uint32_t uint_fast32_t;
 # 5 "coordenadas.c" 2
 
 # 1 "./UART.h" 1
+
+
+
+
 void UARTConfi(int Baud);
 void UARTWrite(char data);
 char UARTRead(void);
 # 6 "coordenadas.c" 2
 
 # 1 "./cases.h" 1
-
+# 11 "./cases.h"
 void verification(void);
 
 int coord(char* P1, char* L, unsigned short* x, unsigned short* y, char* P2);
@@ -5781,7 +5785,7 @@ unsigned int cord_x;
 unsigned int cord_y;
 char Par2;
 
-int x;
+int ControlFlagVerification;
 
 typedef enum
 {
@@ -5789,10 +5793,22 @@ typedef enum
  wait_cmd_State,
  validate_Par_State,
  validate_Instruct_State,
- validate_Coord_State,
+    validate_Coord_State,
  end_State,
 
 }systemState;
+
+enum CharactersOfASCII{
+    StartCommandCharacter = 0,
+    InstructionCharacter,
+    CharacterX1,
+    CharacterX2,
+    CharacterX3,
+    CharacterY1,
+    CharacterY2,
+    CharacterY3,
+    EndCommandCharacter
+};
 
 uint8_t start(void);
 uint8_t cmd(void);
@@ -5810,7 +5826,7 @@ uint8_t click;
 # 8 "coordenadas.c" 2
 
 # 1 "./Configuracion.h" 1
-# 17 "./Configuracion.h"
+# 14 "./Configuracion.h"
 #pragma config FOSC = INTOSC_EC
 #pragma config FCMEN = OFF
 #pragma config IESO = OFF
@@ -5886,6 +5902,7 @@ void buttonInterruptionConfiguration(void);
 
 # 1 "./PWM.h" 1
 
+
 void PWM(void);
 void ContarPulsos(int pasos);
 void OneShot(void);
@@ -5921,16 +5938,44 @@ void HaltMotors(void);
 int coord(char* P1, char*L, uint16_t* x , uint16_t* y , char*P2){
   char buffer [9];
         char read;
+        char flagBuffer = 0;
+        char counterRevision = 0;
 
-        for(int i=0; i<=8; i++){
+        for(int i=StartCommandCharacter; i<(EndCommandCharacter+1); i++){
             read= UARTRead();
             buffer[i]=read;
-        }
-        *P1= buffer[0];
-        *L= buffer[1];
-  *x = 1*(buffer[4]-48) + 10*(buffer[3]-48) + 100*(buffer[2]-48);
-  *y = 1*(buffer[7]-48) + 10*(buffer[6]-48) + 100*(buffer[5]-48);
-  *P2= buffer[8];
 
-        return 0;
+            if(i == (EndCommandCharacter+1))
+            {
+                RCSTAbits.CREN = 0;
+            }
+        }
+
+        *P1= buffer[StartCommandCharacter];
+        *L= buffer[InstructionCharacter];
+        *P2= buffer[EndCommandCharacter];
+
+        for(char n=CharacterX1; n<(CharacterY3+1); n++)
+        {
+            if(buffer[n] <= 57 && buffer[n] >= 48)
+            {
+                counterRevision++;
+            }
+        }
+            if(counterRevision == 6)
+            {
+                flagBuffer = 1;
+            }
+
+            else
+            {
+                return 0;
+            }
+
+        if(flagBuffer == 1)
+        {
+            *x = 1*(buffer[CharacterX3]-48) + 10*(buffer[CharacterX2]-48) + 100*(buffer[CharacterX1]-48);
+            *y = 1*(buffer[CharacterY3]-48) + 10*(buffer[CharacterY2]-48) + 100*(buffer[CharacterY1]-48);
+        return 1;
+        }
 }

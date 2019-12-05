@@ -11,62 +11,61 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\felix\AppData\Local\Temp\se48.o
+$C:\Users\felix\AppData\Local\Temp\s1lo.o
 idloc IDLOC 0 200000 200000 8 1
 init CODE 0 E E 4 1
 reset_vec CODE 0 0 0 4 1
 config CONFIG 0 300000 300000 E 1
 $dist/default/production\Comandos.X.production.o
-cinit CODE 0 92A 92A 5A 1
-intcode_body CODE 0 5B4 5B4 86 1
-text0 CODE 0 A60 A60 44 1
-text1 CODE 0 48A 48A A0 1
-text2 CODE 0 A1A A1A 46 1
-text3 CODE 0 9D0 9D0 4A 1
-text4 CODE 0 6BC 6BC 74 1
-text5 CODE 0 3A6 3A6 E4 1
-text6 CODE 0 C72 C72 12 1
-text7 CODE 0 730 730 72 1
-text8 CODE 0 52A 52A 8A 1
-text9 CODE 0 63A 63A 82 1
-nvCOMRAM COMRAM 1 55 55 4 1
-text10 CODE 0 2B8 2B8 EE 1
-text11 CODE 0 C48 C48 16 1
-text12 CODE 0 12 12 19A 1
-text13 CODE 0 B5C B5C 26 1
-text14 CODE 0 C5E C5E 14 1
-text15 CODE 0 B82 B82 20 1
-text16 CODE 0 984 984 4C 1
-text17 CODE 0 BA2 BA2 1E 1
-text18 CODE 0 BC0 BC0 1E 1
-text19 CODE 0 872 872 5C 1
-text20 CODE 0 B08 B08 2A 1
-text21 CODE 0 AA4 AA4 32 1
-text22 CODE 0 814 814 5E 1
-text23 CODE 0 7A2 7A2 72 1
-text24 CODE 0 1AC 1AC 10C 1
-text26 CODE 0 BDE BDE 1E 1
-text27 CODE 0 BFC BFC 1E 1
-text28 CODE 0 8CE 8CE 5C 1
-text29 CODE 0 B32 B32 2A 1
-text30 CODE 0 AD6 AD6 32 1
-idataCOMRAM CODE 0 C31 C31 16 1
-cstackCOMRAM COMRAM 1 1 1 21 1
-temp COMRAM 1 59 59 1 1
+cinit CODE 0 C4C C4C 5A 1
+intcode_body CODE 0 808 808 86 1
+text0 CODE 0 E24 E24 26 1
+text1 CODE 0 760 760 A8 1
+text2 CODE 0 CF0 CF0 44 1
+text3 CODE 0 CA6 CA6 4A 1
+text4 CODE 0 690 690 D0 1
+text5 CODE 0 1AC 1AC 178 1
+text6 CODE 0 D34 D34 38 1
+text7 CODE 0 A64 A64 6E 1
+text8 CODE 0 88E 88E 7A 1
+text9 CODE 0 908 908 76 1
+nvCOMRAM COMRAM 1 59 59 2 1
+text10 CODE 0 324 324 172 1
+text11 CODE 0 AD2 AD2 64 1
+text12 CODE 0 97E 97E 74 1
+text13 CODE 0 5A2 5A2 EE 1
+text14 CODE 0 EDA EDA 16 1
+text15 CODE 0 12 12 19A 1
+text16 CODE 0 E4A E4A 26 1
+text17 CODE 0 B94 B94 5C 1
+text18 CODE 0 DD0 DD0 2A 1
+text19 CODE 0 D6C D6C 32 1
+text20 CODE 0 B36 B36 5E 1
+text21 CODE 0 9F2 9F2 72 1
+text22 CODE 0 496 496 10C 1
+text24 CODE 0 E70 E70 1E 1
+text25 CODE 0 E8E E8E 1E 1
+text26 CODE 0 BF0 BF0 5C 1
+text27 CODE 0 DFA DFA 2A 1
+text28 CODE 0 D9E D9E 32 1
+idataCOMRAM CODE 0 EC3 EC3 16 1
+cstackCOMRAM COMRAM 1 1 1 23 1
+cstackBANK0 BANK0 1 77 77 4 1
+temp COMRAM 1 5B 5B 1 1
 intcode CODE 0 8 8 6 1
-idataBANK0 CODE 0 C1A C1A 17 1
+idataBANK0 CODE 0 EAC EAC 17 1
 dataBANK0 BANK0 1 60 60 17 1
-dataCOMRAM COMRAM 1 3F 3F 16 1
-bssCOMRAM COMRAM 1 22 22 1D 1
+dataCOMRAM COMRAM 1 43 43 16 1
+bssCOMRAM COMRAM 1 24 24 1F 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 77-7FF 1
+RAM 7B-7FF 1
 SFR F60-FFF 1
-BANK0 77-FF 1
+BANK0 7B-FF 1
 BANK1 100-1FF 1
 BANK2 200-2FF 1
 BANK3 300-3FF 1
@@ -75,20 +74,20 @@ BANK5 500-5FF 1
 BANK6 600-6FF 1
 BANK7 700-7FF 1
 CONST 4-7 1
-CONST C47-C47 1
-CONST C84-7FFF 1
-STACK 77-7FF 1
-SMALLCONST C47-C47 1
-SMALLCONST C84-7FFF 1
+CONST ED9-ED9 1
+CONST EF0-7FFF 1
+STACK 7B-7FF 1
+SMALLCONST ED9-ED9 1
+SMALLCONST EF0-7FFF 1
 CODE 4-7 1
-CODE C47-C47 1
-CODE C84-7FFF 1
-BIGRAM 5A-5F 1
-BIGRAM 77-7FF 1
-COMRAM 5A-5F 1
+CODE ED9-ED9 1
+CODE EF0-7FFF 1
+BIGRAM 5C-5F 1
+BIGRAM 7B-7FF 1
+COMRAM 5C-5F 1
 EEDATA F00000-F000FF 1
-MEDIUMCONST C47-C47 1
-MEDIUMCONST C84-7FFF 1
+MEDIUMCONST ED9-ED9 1
+MEDIUMCONST EF0-7FFF 1
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -103,415 +102,424 @@ MEDIUMCONST C84-7FFF 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Comandos.X.production.o
-8 intcode CODE >7657:C:\Users\felix\AppData\Local\Temp\se48.s
-8 intcode CODE >17:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
-AD6 text30 CODE >101:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-AD6 text30 CODE >102:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-AEC text30 CODE >103:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-AFA text30 CODE >105:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-AFE text30 CODE >106:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-B06 text30 CODE >109:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-B32 text29 CODE >110:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-B32 text29 CODE >111:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-B44 text29 CODE >112:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-B5A text29 CODE >114:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-8CE text28 CODE >85:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-8CE text28 CODE >86:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-8D6 text28 CODE >87:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-8DE text28 CODE >88:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-8E0 text28 CODE >89:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-8E2 text28 CODE >90:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-8E6 text28 CODE >92:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-8F8 text28 CODE >93:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-90E text28 CODE >90:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-924 text28 CODE >96:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-926 text28 CODE >97:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-928 text28 CODE >100:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-BFC text27 CODE >99:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-BFC text27 CODE >102:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-BFE text27 CODE >103:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-C00 text27 CODE >105:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-C0C text27 CODE >107:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-C0E text27 CODE >108:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-C10 text27 CODE >109:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-C18 text27 CODE >110:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-BDE text26 CODE >112:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-BDE text26 CODE >114:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-BE0 text26 CODE >115:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-BE2 text26 CODE >117:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-BEE text26 CODE >119:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-BF0 text26 CODE >120:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-BF2 text26 CODE >121:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-BFA text26 CODE >122:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-5B4 intcode_body CODE >17:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
-5B6 intcode_body CODE >19:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
-5C4 intcode_body CODE >21:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
-5C8 intcode_body CODE >22:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
-5D6 intcode_body CODE >24:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
-5E6 intcode_body CODE >25:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
-5F4 intcode_body CODE >27:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
-5F6 intcode_body CODE >30:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
-5F6 intcode_body CODE >32:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
-604 intcode_body CODE >34:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
-608 intcode_body CODE >35:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
-616 intcode_body CODE >37:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
-626 intcode_body CODE >38:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
-634 intcode_body CODE >40:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
-636 intcode_body CODE >44:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
-1AC text24 CODE >7:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-1AC text24 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-1B0 text24 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-1BE text24 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-1CE text24 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-1D2 text24 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-1E0 text24 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-1F0 text24 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-1F4 text24 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-204 text24 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-21A text24 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-21E text24 CODE >25:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-222 text24 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-22C text24 CODE >27:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-22E text24 CODE >25:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-23C text24 CODE >30:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-246 text24 CODE >31:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-264 text24 CODE >32:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-274 text24 CODE >33:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-276 text24 CODE >35:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-280 text24 CODE >36:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-286 text24 CODE >38:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-296 text24 CODE >39:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-2A6 text24 CODE >40:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-2B6 text24 CODE >41:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-7A2 text23 CODE >14:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
-7A2 text23 CODE >16:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
-7A4 text23 CODE >17:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
-7A6 text23 CODE >19:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
-804 text23 CODE >20:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
-806 text23 CODE >21:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
-808 text23 CODE >22:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
-80A text23 CODE >25:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
-80C text23 CODE >26:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
-80E text23 CODE >29:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
-810 text23 CODE >30:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
-812 text23 CODE >31:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
-814 text22 CODE >14:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-814 text22 CODE >18:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-818 text22 CODE >22:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-81A text22 CODE >23:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-81C text22 CODE >24:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-820 text22 CODE >28:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-824 text22 CODE >29:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-828 text22 CODE >30:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-82C text22 CODE >32:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-830 text22 CODE >33:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-834 text22 CODE >34:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-838 text22 CODE >36:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-83C text22 CODE >37:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-840 text22 CODE >38:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-842 text22 CODE >42:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-84E text22 CODE >43:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-852 text22 CODE >47:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-856 text22 CODE >50:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-85A text22 CODE >51:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-85E text22 CODE >54:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-862 text22 CODE >55:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-866 text22 CODE >58:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-86A text22 CODE >59:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-86E text22 CODE >60:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-870 text22 CODE >63:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-AA4 text21 CODE >101:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-AA4 text21 CODE >102:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-ABA text21 CODE >103:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-AC8 text21 CODE >105:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-ACC text21 CODE >106:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-AD4 text21 CODE >109:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-B08 text20 CODE >110:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-B08 text20 CODE >111:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-B1A text20 CODE >112:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-B30 text20 CODE >114:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-872 text19 CODE >85:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-872 text19 CODE >86:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-87A text19 CODE >87:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-882 text19 CODE >88:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-884 text19 CODE >89:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-886 text19 CODE >90:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-88A text19 CODE >92:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-89C text19 CODE >93:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-8B2 text19 CODE >90:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-8C8 text19 CODE >96:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-8CA text19 CODE >97:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-8CC text19 CODE >100:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-BC0 text18 CODE >99:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-BC0 text18 CODE >102:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-BC2 text18 CODE >103:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-BC4 text18 CODE >105:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-BD0 text18 CODE >107:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-BD2 text18 CODE >108:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-BD4 text18 CODE >109:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-BDC text18 CODE >110:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-BA2 text17 CODE >112:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-BA2 text17 CODE >114:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-BA4 text17 CODE >115:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-BA6 text17 CODE >117:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-BB2 text17 CODE >119:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-BB4 text17 CODE >120:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-BB6 text17 CODE >121:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-BBE text17 CODE >122:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-984 text16 CODE >64:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-984 text16 CODE >66:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-986 text16 CODE >67:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-988 text16 CODE >69:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-98C text16 CODE >70:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-99E text16 CODE >72:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-9A0 text16 CODE >73:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-9A2 text16 CODE >74:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-9A6 text16 CODE >75:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-9B8 text16 CODE >77:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-9BA text16 CODE >78:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-9BC text16 CODE >69:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-9CE text16 CODE >82:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-B82 text15 CODE >83:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-B82 text15 CODE >86:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-B84 text15 CODE >87:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-B86 text15 CODE >89:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-B86 text15 CODE >90:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-B88 text15 CODE >91:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-B8A text15 CODE >92:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-B9C text15 CODE >94:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-B9E text15 CODE >95:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-BA0 text15 CODE >97:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
-C5E text14 CODE >14:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Interruptions.c
-C5E text14 CODE >16:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Interruptions.c
-C60 text14 CODE >17:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Interruptions.c
-C62 text14 CODE >18:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Interruptions.c
-C64 text14 CODE >19:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Interruptions.c
-C66 text14 CODE >20:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Interruptions.c
-C68 text14 CODE >22:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Interruptions.c
-C6A text14 CODE >23:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Interruptions.c
-C6C text14 CODE >26:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Interruptions.c
-C6E text14 CODE >28:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Interruptions.c
-C70 text14 CODE >34:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Interruptions.c
-B5C text13 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
-B5C text13 CODE >37:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
-B68 text13 CODE >38:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
-B70 text13 CODE >39:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
-B78 text13 CODE >52:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
-B80 text13 CODE >53:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
-12 text12 CODE >22:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-12 text12 CODE >24:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-1A text12 CODE >25:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-22 text12 CODE >30:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-40 text12 CODE >31:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-4C text12 CODE >34:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-5A text12 CODE >35:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-5C text12 CODE >36:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-5E text12 CODE >37:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-66 text12 CODE >38:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-6E text12 CODE >39:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-72 text12 CODE >40:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-72 text12 CODE >41:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-74 text12 CODE >42:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-76 text12 CODE >43:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-7E text12 CODE >46:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-9A text12 CODE >47:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-A6 text12 CODE >50:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-C8 text12 CODE >52:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-E6 text12 CODE >53:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-E6 text12 CODE >59:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-104 text12 CODE >60:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-110 text12 CODE >62:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-11E text12 CODE >63:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-120 text12 CODE >64:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-122 text12 CODE >65:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-12A text12 CODE >66:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-132 text12 CODE >67:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-136 text12 CODE >68:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-136 text12 CODE >69:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-138 text12 CODE >70:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-13A text12 CODE >71:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-142 text12 CODE >74:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-15E text12 CODE >75:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-16A text12 CODE >78:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-18C text12 CODE >80:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-1AA text12 CODE >84:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-C48 text11 CODE >33:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
-C4A text11 CODE >34:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
-C58 text11 CODE >35:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
-C5C text11 CODE >37:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
-2B8 text10 CODE >13:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
-2B8 text10 CODE >14:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
-2C8 text10 CODE >15:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
-2CC text10 CODE >16:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
-2CE text10 CODE >17:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
-2E6 text10 CODE >18:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
-2E8 text10 CODE >19:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
-2FA text10 CODE >20:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
-302 text10 CODE >21:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
-314 text10 CODE >22:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
-338 text10 CODE >25:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
-348 text10 CODE >26:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
-34A text10 CODE >27:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
-34E text10 CODE >28:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
-350 text10 CODE >29:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
-362 text10 CODE >30:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
-36A text10 CODE >31:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
-37C text10 CODE >32:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
-39C text10 CODE >34:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
-3A4 text10 CODE >35:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
-63A text9 CODE >76:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-63A text9 CODE >77:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-63E text9 CODE >78:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-66A text9 CODE >79:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-66E text9 CODE >80:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-674 text9 CODE >83:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-67A text9 CODE >84:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-682 text9 CODE >85:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-694 text9 CODE >86:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-6B4 text9 CODE >87:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-6B8 text9 CODE >88:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-6BA text9 CODE >91:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-52A text8 CODE >53:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-52A text8 CODE >54:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-52E text8 CODE >55:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-540 text8 CODE >56:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-544 text8 CODE >57:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-548 text8 CODE >58:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-54E text8 CODE >61:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-560 text8 CODE >62:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-564 text8 CODE >63:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-56C text8 CODE >67:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-572 text8 CODE >68:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-57A text8 CODE >69:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-58C text8 CODE >70:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-5AC text8 CODE >71:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-5B0 text8 CODE >72:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-5B2 text8 CODE >74:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-730 text7 CODE >39:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-730 text7 CODE >40:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-734 text7 CODE >41:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-758 text7 CODE >42:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-75E text7 CODE >45:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-764 text7 CODE >46:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-76C text7 CODE >47:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-77E text7 CODE >48:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-79E text7 CODE >49:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-7A0 text7 CODE >51:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-C72 text6 CODE >39:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
-C72 text6 CODE >40:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
-C80 text6 CODE >41:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
-C82 text6 CODE >42:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
-3A6 text5 CODE >14:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
-3A6 text5 CODE >18:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
-3AE text5 CODE >19:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
-3B4 text5 CODE >20:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
-3C4 text5 CODE >21:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
-3E4 text5 CODE >22:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
-3F0 text5 CODE >23:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
-3FC text5 CODE >24:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
-43C text5 CODE >25:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
-47C text5 CODE >26:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
-488 text5 CODE >29:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
-6BC text4 CODE >29:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-6BC text4 CODE >30:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-6C2 text4 CODE >31:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-6C6 text4 CODE >32:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-6CE text4 CODE >33:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-6E0 text4 CODE >34:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-700 text4 CODE >35:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-72C text4 CODE >36:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-72E text4 CODE >37:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-9D0 text3 CODE >93:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-9D0 text3 CODE >94:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-9D6 text3 CODE >95:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-9DE text3 CODE >96:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-9F0 text3 CODE >97:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-A10 text3 CODE >98:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-A18 text3 CODE >100:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-A1A text2 CODE >19:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-A1A text2 CODE >20:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-A20 text2 CODE >21:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-A28 text2 CODE >22:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-A3A text2 CODE >23:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-A5A text2 CODE >24:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-A5C text2 CODE >25:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-A5E text2 CODE >26:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
-48A text1 CODE >13:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
-48A text1 CODE >14:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
-48E text1 CODE >15:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
-492 text1 CODE >19:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
-498 text1 CODE >21:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
-49C text1 CODE >23:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
-4A2 text1 CODE >25:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
-4A6 text1 CODE >27:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
-4AC text1 CODE >29:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
-4B0 text1 CODE >31:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
-4B6 text1 CODE >33:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
-4BA text1 CODE >35:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
-4C0 text1 CODE >37:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
-4C4 text1 CODE >39:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
-4C8 text1 CODE >40:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
-4CC text1 CODE >42:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
-516 text1 CODE >15:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
-528 text1 CODE >44:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
-A60 text0 CODE >47:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
-A60 text0 CODE >49:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
-A64 text0 CODE >50:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
-A68 text0 CODE >51:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
-A70 text0 CODE >52:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
-A78 text0 CODE >53:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
-A7A text0 CODE >54:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
-A7C text0 CODE >55:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
-A80 text0 CODE >56:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
-A84 text0 CODE >57:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
-A88 text0 CODE >58:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
-A8C text0 CODE >62:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
-A94 text0 CODE >63:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
-A98 text0 CODE >64:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
-92A cinit CODE >3462:C:\Users\felix\AppData\Local\Temp\se48.s
-92A cinit CODE >3464:C:\Users\felix\AppData\Local\Temp\se48.s
-92A cinit CODE >3467:C:\Users\felix\AppData\Local\Temp\se48.s
-92A cinit CODE >3567:C:\Users\felix\AppData\Local\Temp\se48.s
-92C cinit CODE >3568:C:\Users\felix\AppData\Local\Temp\se48.s
-92E cinit CODE >3569:C:\Users\felix\AppData\Local\Temp\se48.s
-930 cinit CODE >3570:C:\Users\felix\AppData\Local\Temp\se48.s
-932 cinit CODE >3571:C:\Users\felix\AppData\Local\Temp\se48.s
-934 cinit CODE >3572:C:\Users\felix\AppData\Local\Temp\se48.s
-936 cinit CODE >3573:C:\Users\felix\AppData\Local\Temp\se48.s
-93A cinit CODE >3574:C:\Users\felix\AppData\Local\Temp\se48.s
-93E cinit CODE >3575:C:\Users\felix\AppData\Local\Temp\se48.s
-93E cinit CODE >3576:C:\Users\felix\AppData\Local\Temp\se48.s
-940 cinit CODE >3577:C:\Users\felix\AppData\Local\Temp\se48.s
-944 cinit CODE >3578:C:\Users\felix\AppData\Local\Temp\se48.s
-946 cinit CODE >3579:C:\Users\felix\AppData\Local\Temp\se48.s
-948 cinit CODE >3580:C:\Users\felix\AppData\Local\Temp\se48.s
-94A cinit CODE >3584:C:\Users\felix\AppData\Local\Temp\se48.s
-94C cinit CODE >3585:C:\Users\felix\AppData\Local\Temp\se48.s
-94E cinit CODE >3586:C:\Users\felix\AppData\Local\Temp\se48.s
-950 cinit CODE >3587:C:\Users\felix\AppData\Local\Temp\se48.s
-952 cinit CODE >3588:C:\Users\felix\AppData\Local\Temp\se48.s
-954 cinit CODE >3589:C:\Users\felix\AppData\Local\Temp\se48.s
-956 cinit CODE >3590:C:\Users\felix\AppData\Local\Temp\se48.s
-95A cinit CODE >3591:C:\Users\felix\AppData\Local\Temp\se48.s
-95E cinit CODE >3592:C:\Users\felix\AppData\Local\Temp\se48.s
-95E cinit CODE >3593:C:\Users\felix\AppData\Local\Temp\se48.s
-960 cinit CODE >3594:C:\Users\felix\AppData\Local\Temp\se48.s
-964 cinit CODE >3595:C:\Users\felix\AppData\Local\Temp\se48.s
-966 cinit CODE >3596:C:\Users\felix\AppData\Local\Temp\se48.s
-968 cinit CODE >3597:C:\Users\felix\AppData\Local\Temp\se48.s
-96A cinit CODE >3601:C:\Users\felix\AppData\Local\Temp\se48.s
-96E cinit CODE >3602:C:\Users\felix\AppData\Local\Temp\se48.s
-970 cinit CODE >3603:C:\Users\felix\AppData\Local\Temp\se48.s
-970 cinit CODE >3604:C:\Users\felix\AppData\Local\Temp\se48.s
-972 cinit CODE >3605:C:\Users\felix\AppData\Local\Temp\se48.s
-974 cinit CODE >3606:C:\Users\felix\AppData\Local\Temp\se48.s
-976 cinit CODE >3612:C:\Users\felix\AppData\Local\Temp\se48.s
-976 cinit CODE >3614:C:\Users\felix\AppData\Local\Temp\se48.s
-978 cinit CODE >3615:C:\Users\felix\AppData\Local\Temp\se48.s
-97A cinit CODE >3617:C:\Users\felix\AppData\Local\Temp\se48.s
-97C cinit CODE >3618:C:\Users\felix\AppData\Local\Temp\se48.s
-97E cinit CODE >3619:C:\Users\felix\AppData\Local\Temp\se48.s
-980 cinit CODE >3620:C:\Users\felix\AppData\Local\Temp\se48.s
+8 intcode CODE >7915:C:\Users\felix\AppData\Local\Temp\s1lo.s
+8 intcode CODE >15:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+D9E text28 CODE >103:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+D9E text28 CODE >104:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+DB4 text28 CODE >105:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+DC2 text28 CODE >107:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+DC6 text28 CODE >108:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+DCE text28 CODE >111:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+DFA text27 CODE >112:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+DFA text27 CODE >113:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+E0C text27 CODE >114:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+E22 text27 CODE >116:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+BF0 text26 CODE >87:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+BF0 text26 CODE >88:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+BF8 text26 CODE >89:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+C00 text26 CODE >90:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+C02 text26 CODE >91:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+C04 text26 CODE >92:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+C08 text26 CODE >94:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+C1A text26 CODE >95:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+C30 text26 CODE >92:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+C46 text26 CODE >98:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+C48 text26 CODE >99:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+C4A text26 CODE >102:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+E8E text25 CODE >101:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+E8E text25 CODE >103:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+E90 text25 CODE >104:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+E92 text25 CODE >105:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+E9E text25 CODE >106:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+EA0 text25 CODE >107:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+EA2 text25 CODE >108:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+EAA text25 CODE >109:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+E70 text24 CODE >111:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+E70 text24 CODE >113:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+E72 text24 CODE >114:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+E74 text24 CODE >115:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+E80 text24 CODE >116:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+E82 text24 CODE >117:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+E84 text24 CODE >118:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+E8C text24 CODE >119:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+808 intcode_body CODE >15:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+80A intcode_body CODE >17:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+818 intcode_body CODE >19:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+81C intcode_body CODE >20:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+82A intcode_body CODE >22:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+83A intcode_body CODE >23:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+848 intcode_body CODE >25:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+84A intcode_body CODE >28:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+84A intcode_body CODE >30:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+858 intcode_body CODE >32:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+85C intcode_body CODE >33:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+86A intcode_body CODE >35:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+87A intcode_body CODE >36:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+888 intcode_body CODE >38:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+88A intcode_body CODE >42:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+496 text22 CODE >7:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+496 text22 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+49A text22 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+4A8 text22 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+4B8 text22 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+4BC text22 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+4CA text22 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+4DA text22 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+4DE text22 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+4EE text22 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+504 text22 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+508 text22 CODE >25:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+50C text22 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+516 text22 CODE >27:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+518 text22 CODE >25:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+526 text22 CODE >30:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+530 text22 CODE >31:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+54E text22 CODE >32:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+55E text22 CODE >33:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+560 text22 CODE >35:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+56A text22 CODE >36:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+570 text22 CODE >38:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+580 text22 CODE >39:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+590 text22 CODE >40:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+5A0 text22 CODE >41:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+9F2 text21 CODE >15:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
+9F2 text21 CODE >17:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
+9F4 text21 CODE >18:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
+9F6 text21 CODE >20:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
+A54 text21 CODE >21:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
+A56 text21 CODE >22:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
+A58 text21 CODE >23:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
+A5A text21 CODE >26:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
+A5C text21 CODE >27:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
+A5E text21 CODE >30:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
+A60 text21 CODE >31:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
+A62 text21 CODE >32:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
+B36 text20 CODE >15:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+B36 text20 CODE >20:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+B3A text20 CODE >24:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+B3C text20 CODE >25:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+B3E text20 CODE >26:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+B42 text20 CODE >30:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+B46 text20 CODE >31:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+B4A text20 CODE >32:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+B4E text20 CODE >34:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+B52 text20 CODE >35:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+B56 text20 CODE >36:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+B5A text20 CODE >38:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+B5E text20 CODE >39:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+B62 text20 CODE >40:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+B64 text20 CODE >44:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+B70 text20 CODE >45:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+B74 text20 CODE >49:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+B78 text20 CODE >52:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+B7C text20 CODE >53:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+B80 text20 CODE >56:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+B84 text20 CODE >57:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+B88 text20 CODE >60:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+B8C text20 CODE >61:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+B90 text20 CODE >62:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+B92 text20 CODE >65:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+D6C text19 CODE >103:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+D6C text19 CODE >104:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+D82 text19 CODE >105:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+D90 text19 CODE >107:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+D94 text19 CODE >108:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+D9C text19 CODE >111:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+DD0 text18 CODE >112:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+DD0 text18 CODE >113:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+DE2 text18 CODE >114:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+DF8 text18 CODE >116:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+B94 text17 CODE >87:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+B94 text17 CODE >88:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+B9C text17 CODE >89:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+BA4 text17 CODE >90:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+BA6 text17 CODE >91:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+BA8 text17 CODE >92:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+BAC text17 CODE >94:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+BBE text17 CODE >95:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+BD4 text17 CODE >92:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+BEA text17 CODE >98:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+BEC text17 CODE >99:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+BEE text17 CODE >102:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+E4A text16 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
+E4A text16 CODE >37:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
+E56 text16 CODE >38:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
+E5E text16 CODE >39:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
+E66 text16 CODE >52:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
+E6E text16 CODE >53:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
+12 text15 CODE >24:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+12 text15 CODE >26:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+1A text15 CODE >27:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+22 text15 CODE >32:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+40 text15 CODE >33:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+4C text15 CODE >36:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+5A text15 CODE >37:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+5C text15 CODE >38:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+5E text15 CODE >39:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+66 text15 CODE >40:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+6E text15 CODE >41:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+72 text15 CODE >42:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+72 text15 CODE >43:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+74 text15 CODE >44:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+76 text15 CODE >45:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+7E text15 CODE >48:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+9A text15 CODE >49:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+A6 text15 CODE >52:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+C8 text15 CODE >54:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+E6 text15 CODE >55:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+E6 text15 CODE >61:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+104 text15 CODE >62:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+110 text15 CODE >64:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+11E text15 CODE >65:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+120 text15 CODE >66:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+122 text15 CODE >67:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+12A text15 CODE >68:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+132 text15 CODE >69:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+136 text15 CODE >70:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+136 text15 CODE >71:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+138 text15 CODE >72:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+13A text15 CODE >73:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+142 text15 CODE >76:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+15E text15 CODE >77:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+16A text15 CODE >80:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+18C text15 CODE >82:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+1AA text15 CODE >86:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+EDA text14 CODE >34:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
+EDC text14 CODE >35:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
+EEA text14 CODE >36:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
+EEE text14 CODE >38:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
+5A2 text13 CODE >14:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
+5A2 text13 CODE >17:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
+5B2 text13 CODE >18:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
+5B6 text13 CODE >19:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
+5B8 text13 CODE >20:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
+5D0 text13 CODE >21:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
+5D2 text13 CODE >22:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
+5E4 text13 CODE >23:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
+5EC text13 CODE >24:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
+5FE text13 CODE >25:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
+622 text13 CODE >28:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
+632 text13 CODE >29:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
+634 text13 CODE >30:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
+638 text13 CODE >31:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
+63A text13 CODE >32:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
+64C text13 CODE >33:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
+654 text13 CODE >34:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
+666 text13 CODE >35:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
+686 text13 CODE >38:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
+68E text13 CODE >41:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
+97E text12 CODE >7:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+97E text12 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+986 text12 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+998 text12 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+99C text12 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+9A0 text12 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+9A6 text12 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+9A8 text12 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+9B6 text12 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+9BC text12 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+9D2 text12 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+9DA text12 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+9DC text12 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+9E2 text12 CODE >27:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+9E8 text12 CODE >28:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+9E8 text12 CODE >29:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+9F0 text12 CODE >30:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+AD2 text11 CODE >7:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwmod.c
+AD2 text11 CODE >12:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwmod.c
+AE4 text11 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwmod.c
+AE8 text11 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwmod.c
+AEC text11 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwmod.c
+AF2 text11 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwmod.c
+AF4 text11 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwmod.c
+B02 text11 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwmod.c
+B18 text11 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwmod.c
+B20 text11 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwmod.c
+B26 text11 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwmod.c
+B2C text11 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwmod.c
+B2C text11 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwmod.c
+B34 text11 CODE >25:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwmod.c
+324 text10 CODE >81:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+324 text10 CODE >87:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+33E text10 CODE >88:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+36C text10 CODE >89:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+3A2 text10 CODE >91:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+3BC text10 CODE >92:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+3EA text10 CODE >93:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+420 text10 CODE >95:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+428 text10 CODE >97:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+43A text10 CODE >98:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+45A text10 CODE >99:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+462 text10 CODE >101:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+474 text10 CODE >102:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+494 text10 CODE >103:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+908 text9 CODE >91:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+908 text9 CODE >93:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+934 text9 CODE >95:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+93A text9 CODE >99:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+940 text9 CODE >100:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+948 text9 CODE >101:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+95A text9 CODE >102:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+97A text9 CODE >103:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+97C text9 CODE >105:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+88E text8 CODE >68:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+88E text8 CODE >70:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+8A0 text8 CODE >72:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+8A4 text8 CODE >73:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+8AA text8 CODE >76:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+8BC text8 CODE >78:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+8C4 text8 CODE >83:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+8CA text8 CODE >84:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+8D2 text8 CODE >85:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+8E4 text8 CODE >86:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+904 text8 CODE >87:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+906 text8 CODE >89:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+A64 text7 CODE >52:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+A64 text7 CODE >54:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+A88 text7 CODE >56:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+A8E text7 CODE >60:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+A94 text7 CODE >61:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+A9C text7 CODE >62:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+AAE text7 CODE >63:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+ACE text7 CODE >64:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+AD0 text7 CODE >66:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+D34 text6 CODE >40:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
+D34 text6 CODE >42:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
+D42 text6 CODE >44:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
+D44 text6 CODE >45:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
+D46 text6 CODE >46:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
+D4E text6 CODE >47:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
+D50 text6 CODE >48:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
+D52 text6 CODE >51:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
+D60 text6 CODE >53:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
+D64 text6 CODE >54:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
+D68 text6 CODE >55:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
+D6A text6 CODE >56:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
+1AC text5 CODE >14:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
+1AC text5 CODE >17:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
+1AC text5 CODE >18:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
+1B0 text5 CODE >20:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
+1B8 text5 CODE >21:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
+1BE text5 CODE >22:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
+1CE text5 CODE >24:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
+1E2 text5 CODE >26:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
+1E4 text5 CODE >28:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
+204 text5 CODE >30:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
+210 text5 CODE >31:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
+21C text5 CODE >32:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
+228 text5 CODE >34:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
+22C text5 CODE >36:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
+264 text5 CODE >38:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
+266 text5 CODE >39:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
+266 text5 CODE >40:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
+278 text5 CODE >41:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
+28A text5 CODE >43:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
+28A text5 CODE >44:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
+28E text5 CODE >48:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
+29A text5 CODE >51:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
+29A text5 CODE >53:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
+2DA text5 CODE >54:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
+31A text5 CODE >55:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
+322 text5 CODE >57:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
+690 text4 CODE >30:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+690 text4 CODE >32:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+696 text4 CODE >34:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+6A0 text4 CODE >35:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+6B2 text4 CODE >36:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+6D4 text4 CODE >38:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+712 text4 CODE >40:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+718 text4 CODE >44:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+71E text4 CODE >45:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+728 text4 CODE >46:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+73A text4 CODE >47:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+75C text4 CODE >48:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+75E text4 CODE >50:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+CA6 text3 CODE >107:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+CA6 text3 CODE >109:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+CAC text3 CODE >110:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+CB4 text3 CODE >112:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+CC6 text3 CODE >113:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+CE6 text3 CODE >114:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+CEE text3 CODE >116:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+CF0 text2 CODE >20:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+CF0 text2 CODE >22:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+CF6 text2 CODE >23:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+CFE text2 CODE >24:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+D10 text2 CODE >25:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+D30 text2 CODE >27:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+D32 text2 CODE >28:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+760 text1 CODE >15:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
+760 text1 CODE >17:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
+764 text1 CODE >18:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
+768 text1 CODE >23:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
+76E text1 CODE >25:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
+772 text1 CODE >28:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
+778 text1 CODE >30:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
+77C text1 CODE >33:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
+782 text1 CODE >35:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
+786 text1 CODE >38:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
+78C text1 CODE >40:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
+790 text1 CODE >43:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
+796 text1 CODE >45:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
+79A text1 CODE >48:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
+79E text1 CODE >50:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
+7A2 text1 CODE >53:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
+7A6 text1 CODE >55:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
+7AA text1 CODE >56:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
+7F4 text1 CODE >18:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
+806 text1 CODE >58:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
+E24 text0 CODE >45:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+E24 text0 CODE >47:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+E28 text0 CODE >53:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+E2A text0 CODE >54:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+E32 text0 CODE >55:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+E36 text0 CODE >56:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+E3A text0 CODE >57:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+E3E text0 CODE >64:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+C4C cinit CODE >3458:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C4C cinit CODE >3460:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C4C cinit CODE >3463:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C4C cinit CODE >3566:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C4E cinit CODE >3567:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C50 cinit CODE >3568:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C52 cinit CODE >3569:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C54 cinit CODE >3570:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C56 cinit CODE >3571:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C58 cinit CODE >3572:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C5C cinit CODE >3573:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C60 cinit CODE >3574:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C60 cinit CODE >3575:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C62 cinit CODE >3576:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C66 cinit CODE >3577:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C68 cinit CODE >3578:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C6A cinit CODE >3579:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C6C cinit CODE >3583:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C6E cinit CODE >3584:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C70 cinit CODE >3585:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C72 cinit CODE >3586:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C74 cinit CODE >3587:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C76 cinit CODE >3588:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C78 cinit CODE >3589:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C7C cinit CODE >3590:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C80 cinit CODE >3591:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C80 cinit CODE >3592:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C82 cinit CODE >3593:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C86 cinit CODE >3594:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C88 cinit CODE >3595:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C8A cinit CODE >3596:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C8C cinit CODE >3600:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C90 cinit CODE >3601:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C92 cinit CODE >3602:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C92 cinit CODE >3603:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C94 cinit CODE >3604:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C96 cinit CODE >3605:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C98 cinit CODE >3611:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C98 cinit CODE >3613:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C9A cinit CODE >3614:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C9C cinit CODE >3616:C:\Users\felix\AppData\Local\Temp\s1lo.s
+C9E cinit CODE >3617:C:\Users\felix\AppData\Local\Temp\s1lo.s
+CA0 cinit CODE >3618:C:\Users\felix\AppData\Local\Temp\s1lo.s
+CA2 cinit CODE >3619:C:\Users\felix\AppData\Local\Temp\s1lo.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -524,66 +532,66 @@ A98 text0 CODE >64:C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\
 # was defined in a psect then <psect> will be "-". File-name
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
-_x 30 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
+___lwmod@counter 8 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
 __LdataBANK0 0 0 ABS 0 dataBANK0 dist/default/production\Comandos.X.production.o
 __Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\Comandos.X.production.o
-_pasosRecorridos 2E 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
+_pasosRecorridos 30 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
 __Hspace_0 30000E 0 ABS 0 - dist/default/production\Comandos.X.production.o
-__Hspace_1 77 0 ABS 0 - dist/default/production\Comandos.X.production.o
+__Hspace_1 7B 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __Hspace_2 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __CFG_IESO$OFF 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __HidataBANK0 0 0 ABS 0 idataBANK0 dist/default/production\Comandos.X.production.o
-__end_ofi2_OneShot B08 0 CODE 0 text30 dist/default/production\Comandos.X.production.o
+__end_ofi2_OneShot DD0 0 CODE 0 text28 dist/default/production\Comandos.X.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\Comandos.X.production.o
-_Configuracion 814 0 CODE 0 text22 dist/default/production\Comandos.X.production.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\felix\AppData\Local\Temp\se48.o
+_Configuracion B36 0 CODE 0 text20 dist/default/production\Comandos.X.production.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\felix\AppData\Local\Temp\s1lo.o
 __size_ofi2_OneShot 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\Comandos.X.production.o
 UARTConfi@BAUD 12 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
-__size_ofi2_GoToInitialXPosition 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __size_ofi2_ResetOneShot 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\Comandos.X.production.o
 _LATB F8A 0 ABS 0 - dist/default/production\Comandos.X.production.o
 _LATC F8B 0 ABS 0 - dist/default/production\Comandos.X.production.o
 _LATD F8C 0 ABS 0 - dist/default/production\Comandos.X.production.o
-_Par1 3E 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
-_Par2 3C 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
-_RCIF 7CF5 0 ABS 0 - dist/default/production\Comandos.X.production.o
+_Par1 42 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
+_Par2 40 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
 _TMR2 FCC 0 ABS 0 - dist/default/production\Comandos.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\felix\AppData\Local\Temp\se48.o
+___sp 0 0 STACK 2 stack C:\Users\felix\AppData\Local\Temp\s1lo.o
 _init 6D 0 BANK0 1 dataBANK0 dist/default/production\Comandos.X.production.o
-_main A60 0 CODE 0 text0 dist/default/production\Comandos.X.production.o
-btemp 59 0 COMRAM 1 temp dist/default/production\Comandos.X.production.o
-cmd@i 1E 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
+_main E24 0 CODE 0 text0 dist/default/production\Comandos.X.production.o
+btemp 5B 0 COMRAM 1 temp dist/default/production\Comandos.X.production.o
+cmd@i 77 0 BANK0 1 cstackBANK0 dist/default/production\Comandos.X.production.o
 end@i 5 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
-start E 0 CODE 0 init C:\Users\felix\AppData\Local\Temp\se48.o
+start E 0 CODE 0 init C:\Users\felix\AppData\Local\Temp\s1lo.o
 __size_of___aldiv 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
+__size_of___lwdiv 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
+__size_of___lwmod 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __size_of_Movimiento 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\Comandos.X.production.o
-i2_OneShot AD6 0 CODE 0 text30 dist/default/production\Comandos.X.production.o
-_CoordAntX 57 0 COMRAM 1 nvCOMRAM dist/default/production\Comandos.X.production.o
-_CoordAntY 55 0 COMRAM 1 nvCOMRAM dist/default/production\Comandos.X.production.o
+i2_OneShot D9E 0 CODE 0 text28 dist/default/production\Comandos.X.production.o
+_CoordAntX 34 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
+_CoordAntY 32 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
 __size_of_GoToInitialYPosition 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 ?___wmul 4 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
-_GoToInitialXPosition BC0 0 CODE 0 text18 dist/default/production\Comandos.X.production.o
+_GoToInitialXPosition E8E 0 CODE 0 text25 dist/default/production\Comandos.X.production.o
 __LidataBANK0 0 0 ABS 0 idataBANK0 dist/default/production\Comandos.X.production.o
 __Hpowerup E 0 CODE 0 powerup dist/default/production\Comandos.X.production.o
-ttemp5 5A 0 COMRAM 1 temp dist/default/production\Comandos.X.production.o
-ttemp6 5D 0 COMRAM 1 temp dist/default/production\Comandos.X.production.o
-ttemp7 61 0 COMRAM 1 temp dist/default/production\Comandos.X.production.o
+ttemp5 5C 0 COMRAM 1 temp dist/default/production\Comandos.X.production.o
+ttemp6 5F 0 COMRAM 1 temp dist/default/production\Comandos.X.production.o
+ttemp7 63 0 COMRAM 1 temp dist/default/production\Comandos.X.production.o
 __LnvCOMRAM 0 0 ABS 0 nvCOMRAM dist/default/production\Comandos.X.production.o
 __HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\Comandos.X.production.o
-__end_of_GoToInitialYPosition BC0 0 CODE 0 text17 dist/default/production\Comandos.X.production.o
-__accesstop 60 0 ABS 0 - C:\Users\felix\AppData\Local\Temp\se48.o
-intlevel0 0 0 CODE 0 text C:\Users\felix\AppData\Local\Temp\se48.o
-intlevel1 0 0 CODE 0 text C:\Users\felix\AppData\Local\Temp\se48.o
-intlevel2 0 0 CODE 0 text C:\Users\felix\AppData\Local\Temp\se48.o
-intlevel3 0 0 CODE 0 text C:\Users\felix\AppData\Local\Temp\se48.o
+__end_of_GoToInitialYPosition E8E 0 CODE 0 text24 dist/default/production\Comandos.X.production.o
+__accesstop 60 0 ABS 0 - C:\Users\felix\AppData\Local\Temp\s1lo.o
+intlevel0 0 0 CODE 0 text C:\Users\felix\AppData\Local\Temp\s1lo.o
+intlevel1 0 0 CODE 0 text C:\Users\felix\AppData\Local\Temp\s1lo.o
+intlevel2 0 0 CODE 0 text C:\Users\felix\AppData\Local\Temp\s1lo.o
+intlevel3 0 0 CODE 0 text C:\Users\felix\AppData\Local\Temp\s1lo.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\Comandos.X.production.o
 ___aldiv@divisor 8 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\Comandos.X.production.o
-wtemp8 5A 0 COMRAM 1 temp dist/default/production\Comandos.X.production.o
+wtemp8 5C 0 COMRAM 1 temp dist/default/production\Comandos.X.production.o
 __CFG_EBTR0$OFF 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __CFG_EBTR1$OFF 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __CFG_EBTR2$OFF 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
@@ -592,64 +600,73 @@ __CFG_EBTRB$OFF 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __Hifardata 0 0 CODE 0 ifardata dist/default/production\Comandos.X.production.o
 ___aldiv@sign D 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
 _CVRCONbits FB5 0 ABS 0 - dist/default/production\Comandos.X.production.o
+Movimiento@i_1095 18 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext dist/default/production\Comandos.X.production.o
-_UARTConfi$1858 14 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
-__pidataCOMRAM C31 0 CODE 0 idataCOMRAM dist/default/production\Comandos.X.production.o
-coord@buffer 12 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
+_UARTConfi$2070 14 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
+__pidataCOMRAM EC3 0 CODE 0 idataCOMRAM dist/default/production\Comandos.X.production.o
+coord@buffer 13 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
 ___wmul@multiplicand 6 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
-__end_ofi2_GoToInitialYPosition BFC 0 CODE 0 text26 dist/default/production\Comandos.X.production.o
+_PrintMyActulPosition 324 0 CODE 0 text10 dist/default/production\Comandos.X.production.o
 _ADCON1 FC1 0 ABS 0 - dist/default/production\Comandos.X.production.o
-_gracias 3F 0 COMRAM 1 dataCOMRAM dist/default/production\Comandos.X.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\felix\AppData\Local\Temp\se48.o
-_BanderaDisX 24 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
-_BanderaDisY 22 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\felix\AppData\Local\Temp\se48.o
+_gracias 43 0 COMRAM 1 dataCOMRAM dist/default/production\Comandos.X.production.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\felix\AppData\Local\Temp\s1lo.o
+_BanderaDisX 26 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
+_BanderaDisY 24 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\felix\AppData\Local\Temp\s1lo.o
 __LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\Comandos.X.production.o
 _CCPR1L FBE 0 ABS 0 - dist/default/production\Comandos.X.production.o
 _CCPR2L FBB 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\Comandos.X.production.o
-__end_of___wmul B82 0 CODE 0 text13 dist/default/production\Comandos.X.production.o
-_PasosActuales 2C 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
-_Ins_Validated 52A 0 CODE 0 text8 dist/default/production\Comandos.X.production.o
+__end_of___wmul E70 0 CODE 0 text16 dist/default/production\Comandos.X.production.o
+_PasosActuales 2E 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
+_Ins_Validated 88E 0 CODE 0 text8 dist/default/production\Comandos.X.production.o
 __size_of_Configuracion 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\Comandos.X.production.o
+_TXSTA1bits FAC 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\Comandos.X.production.o
 __Hintcodelo E 0 CODE 0 intcodelo dist/default/production\Comandos.X.production.o
-__end_of___aldiv 2B8 0 CODE 0 text24 dist/default/production\Comandos.X.production.o
-coord@P1 4 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
-coord@P2 C 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
-_verification 48A 0 CODE 0 text1 dist/default/production\Comandos.X.production.o
+___lwmod@divisor 6 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
+__end_of___aldiv 5A2 0 CODE 0 text22 dist/default/production\Comandos.X.production.o
+__end_of___lwdiv 9F2 0 CODE 0 text12 dist/default/production\Comandos.X.production.o
+__end_of___lwmod B36 0 CODE 0 text11 dist/default/production\Comandos.X.production.o
+coord@P1 5 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
+coord@P2 D 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
+_verification 760 0 CODE 0 text1 dist/default/production\Comandos.X.production.o
 UARTWrite@data 4 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
+___lwdiv@quotient D 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
 __size_of_coord 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production\Comandos.X.production.o
 __size_of_INT_ISR 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __size_of_start 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 ContarPulsos@pasos 4 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
-Movimiento@F3415 4B 0 COMRAM 1 dataCOMRAM dist/default/production\Comandos.X.production.o
-Movimiento@F3418 46 0 COMRAM 1 dataCOMRAM dist/default/production\Comandos.X.production.o
+Movimiento@F3429 4F 0 COMRAM 1 dataCOMRAM dist/default/production\Comandos.X.production.o
+Movimiento@F3432 4A 0 COMRAM 1 dataCOMRAM dist/default/production\Comandos.X.production.o
 __HnvCOMRAM 0 0 ABS 0 nvCOMRAM dist/default/production\Comandos.X.production.o
-__end_of_Configuracion 872 0 CODE 0 text22 dist/default/production\Comandos.X.production.o
+__end_of_Configuracion B94 0 CODE 0 text20 dist/default/production\Comandos.X.production.o
 _INTCON2bits FF1 0 ABS 0 - dist/default/production\Comandos.X.production.o
 _INTCON3bits FF0 0 ABS 0 - dist/default/production\Comandos.X.production.o
-Movimiento@i_889 18 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
+___lwmod@dividend 4 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
 __Lintcodelo E 0 CODE 0 intcodelo dist/default/production\Comandos.X.production.o
-i2_ContarPulsos 8CE 0 CODE 0 text28 dist/default/production\Comandos.X.production.o
+i2_ContarPulsos BF0 0 CODE 0 text26 dist/default/production\Comandos.X.production.o
 __CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __CFG_MCLRE$OFF 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
-start_initialization 92A 0 CODE 0 cinit dist/default/production\Comandos.X.production.o
+start_initialization C4C 0 CODE 0 cinit dist/default/production\Comandos.X.production.o
+PrintMyActulPosition@a 10 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
+PrintMyActulPosition@b 13 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
+PrintMyActulPosition@i 18 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
 __CFG_PBADEN$ON 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 _OSCCON FD3 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\Comandos.X.production.o
 _TRISCbits F94 0 ABS 0 - dist/default/production\Comandos.X.production.o
 ___aldiv@quotient E 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
-_PasosX 28 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
-_PasosY 26 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
-__end_of_InterruptionsConfiguration C72 0 CODE 0 text14 dist/default/production\Comandos.X.production.o
+_PasosX 2A 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
+_PasosY 28 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
 ___rparam_used 1 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __CFG_WDTPS$32768 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
+__pcstackBANK0 77 0 BANK0 1 cstackBANK0 dist/default/production\Comandos.X.production.o
 _TMR2ON 7E52 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __size_of_verification 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
-_Par_Validated 730 0 CODE 0 text7 dist/default/production\Comandos.X.production.o
+_Par_Validated A64 0 CODE 0 text7 dist/default/production\Comandos.X.production.o
 __size_of_OneShot 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __Hbank0 0 0 ABS 0 bank0 dist/default/production\Comandos.X.production.o
 __Hbank1 0 0 ABS 0 bank1 dist/default/production\Comandos.X.production.o
@@ -677,15 +694,16 @@ __Htext6 0 0 ABS 0 text6 dist/default/production\Comandos.X.production.o
 __Htext7 0 0 ABS 0 text7 dist/default/production\Comandos.X.production.o
 __Htext8 0 0 ABS 0 text8 dist/default/production\Comandos.X.production.o
 __Htext9 0 0 ABS 0 text9 dist/default/production\Comandos.X.production.o
+___lwdiv@counter F 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
+_ControlFlagVerification 59 0 COMRAM 1 nvCOMRAM dist/default/production\Comandos.X.production.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\Comandos.X.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\Comandos.X.production.o
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\felix\AppData\Local\Temp\se48.o
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\felix\AppData\Local\Temp\s1lo.o
 __size_of_Ins_Validated 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
-__end_ofi2_ContarPulsos 92A 0 CODE 0 text28 dist/default/production\Comandos.X.production.o
+__end_ofi2_ContarPulsos C4C 0 CODE 0 text26 dist/default/production\Comandos.X.production.o
 __Hcomram 0 0 ABS 0 comram dist/default/production\Comandos.X.production.o
 __Hconfig 30000E 0 CONFIG 0 config dist/default/production\Comandos.X.production.o
-i2_GoToInitialXPosition BFC 0 CODE 0 text27 dist/default/production\Comandos.X.production.o
-__end_of_verification 52A 0 CODE 0 text1 dist/default/production\Comandos.X.production.o
+__end_of_verification 808 0 CODE 0 text1 dist/default/production\Comandos.X.production.o
 __CFG_LPT1OSC$OFF 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __Lbank0 0 0 ABS 0 bank0 dist/default/production\Comandos.X.production.o
 __Lbank1 0 0 ABS 0 bank1 dist/default/production\Comandos.X.production.o
@@ -724,58 +742,59 @@ __Hdata 0 0 ABS 0 data dist/default/production\Comandos.X.production.o
 __Hinit 12 0 CODE 0 init dist/default/production\Comandos.X.production.o
 __Hrbit 0 0 COMRAM 1 rbit dist/default/production\Comandos.X.production.o
 __Hrbss 0 0 COMRAM 1 rbss dist/default/production\Comandos.X.production.o
-__Htemp 5A 0 COMRAM 1 temp dist/default/production\Comandos.X.production.o
+__Htemp 5C 0 COMRAM 1 temp dist/default/production\Comandos.X.production.o
 __Htext 0 0 ABS 0 text dist/default/production\Comandos.X.production.o
 __Labs1 0 0 ABS 0 abs1 dist/default/production\Comandos.X.production.o
 __Ldata 0 0 ABS 0 data dist/default/production\Comandos.X.production.o
 __Linit E 0 CODE 0 init dist/default/production\Comandos.X.production.o
 __Lrbit 0 0 COMRAM 1 rbit dist/default/production\Comandos.X.production.o
 __Lrbss 0 0 COMRAM 1 rbss dist/default/production\Comandos.X.production.o
-__Ltemp 59 0 COMRAM 1 temp dist/default/production\Comandos.X.production.o
+__Ltemp 5B 0 COMRAM 1 temp dist/default/production\Comandos.X.production.o
 __Ltext 0 0 ABS 0 text dist/default/production\Comandos.X.production.o
 __CFG_XINST$OFF 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
-___wmul B5C 0 CODE 0 text13 dist/default/production\Comandos.X.production.o
-int$flags 59 0 COMRAM 1 temp dist/default/production\Comandos.X.production.o
-__end_of_INT_ISR 63A 0 CODE 0 intcode_body dist/default/production\Comandos.X.production.o
+UARTRead@Lecture 4 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
+___wmul E4A 0 CODE 0 text16 dist/default/production\Comandos.X.production.o
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production\Comandos.X.production.o
+int$flags 5B 0 COMRAM 1 temp dist/default/production\Comandos.X.production.o
+__end_of_INT_ISR 88E 0 CODE 0 intcode_body dist/default/production\Comandos.X.production.o
 __HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\Comandos.X.production.o
-__size_of_InicialX 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
-__size_of_InicialY 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __Hintret 0 0 ABS 0 intret dist/default/production\Comandos.X.production.o
 __Hirdata 0 0 CODE 0 irdata dist/default/production\Comandos.X.production.o
 _PR2 FCB 0 ABS 0 - dist/default/production\Comandos.X.production.o
-_PWM 12 0 CODE 0 text12 dist/default/production\Comandos.X.production.o
+_PWM 12 0 CODE 0 text15 dist/default/production\Comandos.X.production.o
 __S0 30000E 0 ABS 0 - dist/default/production\Comandos.X.production.o
-__S1 77 0 ABS 0 - dist/default/production\Comandos.X.production.o
+__S1 7B 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __S2 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
-_cmd 6BC 0 CODE 0 text4 dist/default/production\Comandos.X.production.o
+_cmd 690 0 CODE 0 text4 dist/default/production\Comandos.X.production.o
 _e_c 60 0 BANK0 1 dataBANK0 dist/default/production\Comandos.X.production.o
-_end 9D0 0 CODE 0 text3 dist/default/production\Comandos.X.production.o
-_ons 2A 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
+_end CA6 0 CODE 0 text3 dist/default/production\Comandos.X.production.o
+_ons 2C 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
 __CFG_VREGEN$OFF 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
-__end_of_Coord_Validated 6BC 0 CODE 0 text9 dist/default/production\Comandos.X.production.o
-__end_of_Ins_Validated 5B4 0 CODE 0 text8 dist/default/production\Comandos.X.production.o
-i2_ResetOneShot B32 0 CODE 0 text29 dist/default/production\Comandos.X.production.o
-__pnvCOMRAM 55 0 COMRAM 1 nvCOMRAM dist/default/production\Comandos.X.production.o
-__size_ofi2_GoToInitialYPosition 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
-_cord_x 3A 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
-_cord_y 38 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
+__end_of_Coord_Validated 97E 0 CODE 0 text9 dist/default/production\Comandos.X.production.o
+__end_of_Ins_Validated 908 0 CODE 0 text8 dist/default/production\Comandos.X.production.o
+i2_ResetOneShot DFA 0 CODE 0 text27 dist/default/production\Comandos.X.production.o
+__pnvCOMRAM 59 0 COMRAM 1 nvCOMRAM dist/default/production\Comandos.X.production.o
+_cord_x 3E 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
+_cord_y 3C 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
 __HidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production\Comandos.X.production.o
 __Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\Comandos.X.production.o
 __Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\Comandos.X.production.o
-__end_of_PWM 1AC 0 CODE 0 text12 dist/default/production\Comandos.X.production.o
-__end_of_cmd 730 0 CODE 0 text4 dist/default/production\Comandos.X.production.o
-__end_of_end A1A 0 CODE 0 text3 dist/default/production\Comandos.X.production.o
-int_func 5B4 0 CODE 0 intcode_body dist/default/production\Comandos.X.production.o
-_GoToInitialYPosition BA2 0 CODE 0 text17 dist/default/production\Comandos.X.production.o
+__end_of_PWM 1AC 0 CODE 0 text15 dist/default/production\Comandos.X.production.o
+__end_of_cmd 760 0 CODE 0 text4 dist/default/production\Comandos.X.production.o
+__end_of_end CF0 0 CODE 0 text3 dist/default/production\Comandos.X.production.o
+int_func 808 0 CODE 0 intcode_body dist/default/production\Comandos.X.production.o
+coord@counterRevision 1E 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
+_GoToInitialYPosition E70 0 CODE 0 text24 dist/default/production\Comandos.X.production.o
+cmd@i_72 79 0 BANK0 1 cstackBANK0 dist/default/production\Comandos.X.production.o
 __Lintentry 0 0 ABS 0 intentry dist/default/production\Comandos.X.production.o
 __Hramtop 800 0 RAM 0 ramtop dist/default/production\Comandos.X.production.o
 __Hrparam 0 0 COMRAM 1 rparam dist/default/production\Comandos.X.production.o
 __pdataBANK0 60 0 BANK0 1 dataBANK0 dist/default/production\Comandos.X.production.o
 __activetblptr 2 0 ABS 0 - dist/default/production\Comandos.X.production.o
-_NextState 33 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
+_NextState 37 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
 __Hstruct 0 0 COMRAM 1 struct dist/default/production\Comandos.X.production.o
 __size_of___wmul 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
-__end_of_OneShot AD6 0 CODE 0 text21 dist/default/production\Comandos.X.production.o
+__end_of_OneShot D9E 0 CODE 0 text19 dist/default/production\Comandos.X.production.o
 __Htext10 0 0 ABS 0 text10 dist/default/production\Comandos.X.production.o
 __Htext11 0 0 ABS 0 text11 dist/default/production\Comandos.X.production.o
 __Htext12 0 0 ABS 0 text12 dist/default/production\Comandos.X.production.o
@@ -789,64 +808,59 @@ __Htext19 0 0 ABS 0 text19 dist/default/production\Comandos.X.production.o
 __Htext20 0 0 ABS 0 text20 dist/default/production\Comandos.X.production.o
 __Htext21 0 0 ABS 0 text21 dist/default/production\Comandos.X.production.o
 __Htext22 0 0 ABS 0 text22 dist/default/production\Comandos.X.production.o
-__Htext23 0 0 ABS 0 text23 dist/default/production\Comandos.X.production.o
 __Htext24 0 0 ABS 0 text24 dist/default/production\Comandos.X.production.o
+__Htext25 0 0 ABS 0 text25 dist/default/production\Comandos.X.production.o
 __Htext26 0 0 ABS 0 text26 dist/default/production\Comandos.X.production.o
 __Htext27 0 0 ABS 0 text27 dist/default/production\Comandos.X.production.o
 __Htext28 0 0 ABS 0 text28 dist/default/production\Comandos.X.production.o
-__Htext29 0 0 ABS 0 text29 dist/default/production\Comandos.X.production.o
-__Htext30 0 0 ABS 0 text30 dist/default/production\Comandos.X.production.o
 __size_of_Par_Validated 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
-_letter 3D 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
-_ContarPulsos 872 0 CODE 0 text19 dist/default/production\Comandos.X.production.o
+_letter 41 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
+_ContarPulsos B94 0 CODE 0 text17 dist/default/production\Comandos.X.production.o
 _RCSTAbits FAB 0 ABS 0 - dist/default/production\Comandos.X.production.o
-_InicialX 984 0 CODE 0 text16 dist/default/production\Comandos.X.production.o
-_InicialY B82 0 CODE 0 text15 dist/default/production\Comandos.X.production.o
-__ptext10 2B8 0 CODE 0 text10 dist/default/production\Comandos.X.production.o
-__ptext11 C48 0 CODE 0 text11 dist/default/production\Comandos.X.production.o
-__ptext12 12 0 CODE 0 text12 dist/default/production\Comandos.X.production.o
-__ptext13 B5C 0 CODE 0 text13 dist/default/production\Comandos.X.production.o
-__ptext14 C5E 0 CODE 0 text14 dist/default/production\Comandos.X.production.o
-__ptext15 B82 0 CODE 0 text15 dist/default/production\Comandos.X.production.o
-__ptext16 984 0 CODE 0 text16 dist/default/production\Comandos.X.production.o
-__ptext17 BA2 0 CODE 0 text17 dist/default/production\Comandos.X.production.o
-__ptext18 BC0 0 CODE 0 text18 dist/default/production\Comandos.X.production.o
-__ptext19 872 0 CODE 0 text19 dist/default/production\Comandos.X.production.o
-__ptext20 B08 0 CODE 0 text20 dist/default/production\Comandos.X.production.o
-__ptext21 AA4 0 CODE 0 text21 dist/default/production\Comandos.X.production.o
-__ptext22 814 0 CODE 0 text22 dist/default/production\Comandos.X.production.o
-__ptext23 7A2 0 CODE 0 text23 dist/default/production\Comandos.X.production.o
-__ptext24 1AC 0 CODE 0 text24 dist/default/production\Comandos.X.production.o
-__ptext26 BDE 0 CODE 0 text26 dist/default/production\Comandos.X.production.o
-__ptext27 BFC 0 CODE 0 text27 dist/default/production\Comandos.X.production.o
-__ptext28 8CE 0 CODE 0 text28 dist/default/production\Comandos.X.production.o
-__ptext29 B32 0 CODE 0 text29 dist/default/production\Comandos.X.production.o
-__ptext30 AD6 0 CODE 0 text30 dist/default/production\Comandos.X.production.o
-_Coord_Validated 63A 0 CODE 0 text9 dist/default/production\Comandos.X.production.o
-__size_of_InterruptionsConfiguration 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
-___aldiv 1AC 0 CODE 0 text24 dist/default/production\Comandos.X.production.o
-__pintcode_body 5B4 0 CODE 0 intcode_body dist/default/production\Comandos.X.production.o
-__end_ofi2_ResetOneShot B5C 0 CODE 0 text29 dist/default/production\Comandos.X.production.o
+__ptext10 324 0 CODE 0 text10 dist/default/production\Comandos.X.production.o
+__ptext11 AD2 0 CODE 0 text11 dist/default/production\Comandos.X.production.o
+__ptext12 97E 0 CODE 0 text12 dist/default/production\Comandos.X.production.o
+__ptext13 5A2 0 CODE 0 text13 dist/default/production\Comandos.X.production.o
+__ptext14 EDA 0 CODE 0 text14 dist/default/production\Comandos.X.production.o
+__ptext15 12 0 CODE 0 text15 dist/default/production\Comandos.X.production.o
+__ptext16 E4A 0 CODE 0 text16 dist/default/production\Comandos.X.production.o
+__ptext17 B94 0 CODE 0 text17 dist/default/production\Comandos.X.production.o
+__ptext18 DD0 0 CODE 0 text18 dist/default/production\Comandos.X.production.o
+__ptext19 D6C 0 CODE 0 text19 dist/default/production\Comandos.X.production.o
+__ptext20 B36 0 CODE 0 text20 dist/default/production\Comandos.X.production.o
+__ptext21 9F2 0 CODE 0 text21 dist/default/production\Comandos.X.production.o
+__ptext22 496 0 CODE 0 text22 dist/default/production\Comandos.X.production.o
+__ptext24 E70 0 CODE 0 text24 dist/default/production\Comandos.X.production.o
+__ptext25 E8E 0 CODE 0 text25 dist/default/production\Comandos.X.production.o
+__ptext26 BF0 0 CODE 0 text26 dist/default/production\Comandos.X.production.o
+__ptext27 DFA 0 CODE 0 text27 dist/default/production\Comandos.X.production.o
+__ptext28 D9E 0 CODE 0 text28 dist/default/production\Comandos.X.production.o
+_Coord_Validated 908 0 CODE 0 text9 dist/default/production\Comandos.X.production.o
+___aldiv 496 0 CODE 0 text22 dist/default/production\Comandos.X.production.o
+__pintcode_body 808 0 CODE 0 intcode_body dist/default/production\Comandos.X.production.o
+___lwdiv 97E 0 CODE 0 text12 dist/default/production\Comandos.X.production.o
+___lwmod AD2 0 CODE 0 text11 dist/default/production\Comandos.X.production.o
+__end_ofi2_ResetOneShot E24 0 CODE 0 text27 dist/default/production\Comandos.X.production.o
 __Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production\Comandos.X.production.o
 __Lbigram 0 0 ABS 0 bigram dist/default/production\Comandos.X.production.o
 __CFG_BOR$ON 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __CFG_BORV$3 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __size_of_GoToInitialXPosition 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
-_Movimiento 2B8 0 CODE 0 text10 dist/default/production\Comandos.X.production.o
+_Movimiento 5A2 0 CODE 0 text13 dist/default/production\Comandos.X.production.o
 __Lcomram 0 0 ABS 0 comram dist/default/production\Comandos.X.production.o
 __Lconfig 300000 0 CONFIG 0 config dist/default/production\Comandos.X.production.o
-__end_of_InicialX 9D0 0 CODE 0 text16 dist/default/production\Comandos.X.production.o
-__end_of_InicialY BA2 0 CODE 0 text15 dist/default/production\Comandos.X.production.o
 ___wmul@multiplier 4 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
 Movimiento@i 16 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
+_RCSTA1bits FAB 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\Comandos.X.production.o
+___lwdiv@divisor B 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\Comandos.X.production.o
-__end_of_Par_Validated 7A2 0 CODE 0 text7 dist/default/production\Comandos.X.production.o
+__end_of_Par_Validated AD2 0 CODE 0 text7 dist/default/production\Comandos.X.production.o
 Movimiento@loquequieras C 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
-__end_of_GoToInitialXPosition BDE 0 CODE 0 text18 dist/default/production\Comandos.X.production.o
+__end_of_GoToInitialXPosition EAC 0 CODE 0 text25 dist/default/production\Comandos.X.production.o
 __CFG_CCP2MX$ON 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
-stackhi 7FF 0 ABS 0 - C:\Users\felix\AppData\Local\Temp\se48.o
-stacklo 77 0 ABS 0 - C:\Users\felix\AppData\Local\Temp\se48.o
+stackhi 7FF 0 ABS 0 - C:\Users\felix\AppData\Local\Temp\s1lo.o
+stacklo 7B 0 ABS 0 - C:\Users\felix\AppData\Local\Temp\s1lo.o
 start@i 5 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
 __Lintcode 8 0 CODE 0 intcode dist/default/production\Comandos.X.production.o
 __Lintret 0 0 ABS 0 intret dist/default/production\Comandos.X.production.o
@@ -857,40 +871,45 @@ __CFG_ICPRT$OFF 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __Lspace_0 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __Lspace_1 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __Lspace_2 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
-__pbssCOMRAM 22 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
+__pbssCOMRAM 24 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production\Comandos.X.production.o
 _PIR1bits F9E 0 ABS 0 - dist/default/production\Comandos.X.production.o
+__size_of_PrintMyActulPosition 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\Comandos.X.production.o
 __CFG_FOSC$INTOSC_EC 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
-_InterruptionsConfiguration C5E 0 CODE 0 text14 dist/default/production\Comandos.X.production.o
-_CoordRelatX 36 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
-_CoordRelatY 34 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
-end_of_initialization 976 0 CODE 0 cinit dist/default/production\Comandos.X.production.o
-__end_ofi2_GoToInitialXPosition C1A 0 CODE 0 text27 dist/default/production\Comandos.X.production.o
+_CoordRelatX 3A 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
+_CoordRelatY 38 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
+end_of_initialization C98 0 CODE 0 cinit dist/default/production\Comandos.X.production.o
 __Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\Comandos.X.production.o
 __Hintentry 0 0 ABS 0 intentry dist/default/production\Comandos.X.production.o
 __CFG_STVREN$ON 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 _RCONbits FD0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 ?___aldiv 4 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
+PrintMyActulPosition@i_849 1A 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
+___lwdiv@dividend 9 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
+?___lwdiv 9 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
+?___lwmod 4 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
 __Hreset_vec 4 0 CODE 0 reset_vec dist/default/production\Comandos.X.production.o
-__end_of_ContarPulsos 8CE 0 CODE 0 text19 dist/default/production\Comandos.X.production.o
-__end_of_UARTConfi 814 0 CODE 0 text23 dist/default/production\Comandos.X.production.o
-__end_of_Movimiento 3A6 0 CODE 0 text10 dist/default/production\Comandos.X.production.o
-__end_of_UARTWrite C5E 0 CODE 0 text11 dist/default/production\Comandos.X.production.o
+__end_of_ContarPulsos BF0 0 CODE 0 text17 dist/default/production\Comandos.X.production.o
+__end_of_UARTConfi A64 0 CODE 0 text21 dist/default/production\Comandos.X.production.o
+__end_of_Movimiento 690 0 CODE 0 text13 dist/default/production\Comandos.X.production.o
+__end_of_UARTWrite EF0 0 CODE 0 text14 dist/default/production\Comandos.X.production.o
+__end_of_PrintMyActulPosition 496 0 CODE 0 text10 dist/default/production\Comandos.X.production.o
 __Lramtop 800 0 RAM 0 ramtop dist/default/production\Comandos.X.production.o
 __size_of_UARTConfi 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __Lrparam 0 0 COMRAM 1 rparam dist/default/production\Comandos.X.production.o
-__pcinit 92A 0 CODE 0 cinit dist/default/production\Comandos.X.production.o
+__pcinit C4C 0 CODE 0 cinit dist/default/production\Comandos.X.production.o
 __size_of_UARTWrite 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
-__ptext0 A60 0 CODE 0 text0 dist/default/production\Comandos.X.production.o
-__ptext1 48A 0 CODE 0 text1 dist/default/production\Comandos.X.production.o
-__ptext2 A1A 0 CODE 0 text2 dist/default/production\Comandos.X.production.o
-__ptext3 9D0 0 CODE 0 text3 dist/default/production\Comandos.X.production.o
-__ptext4 6BC 0 CODE 0 text4 dist/default/production\Comandos.X.production.o
-__ptext5 3A6 0 CODE 0 text5 dist/default/production\Comandos.X.production.o
-__ptext6 C72 0 CODE 0 text6 dist/default/production\Comandos.X.production.o
-__ptext7 730 0 CODE 0 text7 dist/default/production\Comandos.X.production.o
-__ptext8 52A 0 CODE 0 text8 dist/default/production\Comandos.X.production.o
-__ptext9 63A 0 CODE 0 text9 dist/default/production\Comandos.X.production.o
+__ptext0 E24 0 CODE 0 text0 dist/default/production\Comandos.X.production.o
+__ptext1 760 0 CODE 0 text1 dist/default/production\Comandos.X.production.o
+__ptext2 CF0 0 CODE 0 text2 dist/default/production\Comandos.X.production.o
+__ptext3 CA6 0 CODE 0 text3 dist/default/production\Comandos.X.production.o
+__ptext4 690 0 CODE 0 text4 dist/default/production\Comandos.X.production.o
+__ptext5 1AC 0 CODE 0 text5 dist/default/production\Comandos.X.production.o
+__ptext6 D34 0 CODE 0 text6 dist/default/production\Comandos.X.production.o
+__ptext7 A64 0 CODE 0 text7 dist/default/production\Comandos.X.production.o
+__ptext8 88E 0 CODE 0 text8 dist/default/production\Comandos.X.production.o
+__ptext9 908 0 CODE 0 text9 dist/default/production\Comandos.X.production.o
 __Lstruct 0 0 COMRAM 1 struct dist/default/production\Comandos.X.production.o
 __Ltext10 0 0 ABS 0 text10 dist/default/production\Comandos.X.production.o
 __Ltext11 0 0 ABS 0 text11 dist/default/production\Comandos.X.production.o
@@ -905,32 +924,31 @@ __Ltext19 0 0 ABS 0 text19 dist/default/production\Comandos.X.production.o
 __Ltext20 0 0 ABS 0 text20 dist/default/production\Comandos.X.production.o
 __Ltext21 0 0 ABS 0 text21 dist/default/production\Comandos.X.production.o
 __Ltext22 0 0 ABS 0 text22 dist/default/production\Comandos.X.production.o
-__Ltext23 0 0 ABS 0 text23 dist/default/production\Comandos.X.production.o
 __Ltext24 0 0 ABS 0 text24 dist/default/production\Comandos.X.production.o
+__Ltext25 0 0 ABS 0 text25 dist/default/production\Comandos.X.production.o
 __Ltext26 0 0 ABS 0 text26 dist/default/production\Comandos.X.production.o
 __Ltext27 0 0 ABS 0 text27 dist/default/production\Comandos.X.production.o
 __Ltext28 0 0 ABS 0 text28 dist/default/production\Comandos.X.production.o
-__Ltext29 0 0 ABS 0 text29 dist/default/production\Comandos.X.production.o
-__Ltext30 0 0 ABS 0 text30 dist/default/production\Comandos.X.production.o
-_ResetOneShot B08 0 CODE 0 text20 dist/default/production\Comandos.X.production.o
-__ramtop 800 0 RAM 0 ramtop C:\Users\felix\AppData\Local\Temp\se48.o
+_ResetOneShot DD0 0 CODE 0 text18 dist/default/production\Comandos.X.production.o
+__ramtop 800 0 RAM 0 ramtop C:\Users\felix\AppData\Local\Temp\s1lo.o
 ___aldiv@dividend 4 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
 __Lpowerup E 0 CODE 0 powerup dist/default/production\Comandos.X.production.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\Comandos.X.production.o
 Ins_Validated@i 5 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
 __size_of_Coord_Validated 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __size_of_UARTRead 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
-_UARTConfi 7A2 0 CODE 0 text23 dist/default/production\Comandos.X.production.o
+_UARTConfi 9F2 0 CODE 0 text21 dist/default/production\Comandos.X.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\Comandos.X.production.o
-_UARTWrite C48 0 CODE 0 text11 dist/default/production\Comandos.X.production.o
-coord@L 6 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
-coord@i 1C 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
-coord@x 8 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
-coord@y A 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
+_UARTWrite EDA 0 CODE 0 text14 dist/default/production\Comandos.X.production.o
+coord@L 7 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
+coord@i 1F 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
+coord@n 21 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
+coord@x 9 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
+coord@y B 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
 ___param_bank 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __CFG_WDT$OFF 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\Comandos.X.production.o
-__end_of__initialization 976 0 CODE 0 cinit dist/default/production\Comandos.X.production.o
+__end_of__initialization C98 0 CODE 0 cinit dist/default/production\Comandos.X.production.o
 _INT_ISR 8 0 CODE 0 intcode dist/default/production\Comandos.X.production.o
 __CFG_WRT0$OFF 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __CFG_WRT1$OFF 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
@@ -941,21 +959,22 @@ __Libigdata 0 0 CODE 0 ibigdata dist/default/production\Comandos.X.production.o
 __CFG_WRTC$OFF 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __CFG_WRTD$OFF 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 i2ContarPulsos@pasos 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
-__pidataBANK0 C1A 0 CODE 0 idataBANK0 dist/default/production\Comandos.X.production.o
+?_coord 5 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
+__pidataBANK0 EAC 0 CODE 0 idataBANK0 dist/default/production\Comandos.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext dist/default/production\Comandos.X.production.o
 __size_ofi2_ContarPulsos 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __CFG_PWRT$OFF 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
 __size_of_ResetOneShot 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 _TXSTAbits FAC 0 ABS 0 - dist/default/production\Comandos.X.production.o
-i2_GoToInitialYPosition BDE 0 CODE 0 text26 dist/default/production\Comandos.X.production.o
 ___aldiv@counter C 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
-__end_of_main AA4 0 CODE 0 text0 dist/default/production\Comandos.X.production.o
+_PrintMyActulPosition$2071 16 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
+__end_of_main E4A 0 CODE 0 text0 dist/default/production\Comandos.X.production.o
 __pintcode 8 0 CODE 0 intcode dist/default/production\Comandos.X.production.o
 Coord_Validated@i 5 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
 _CMCON FB4 0 ABS 0 - dist/default/production\Comandos.X.production.o
-_Error 50 0 COMRAM 1 dataCOMRAM dist/default/production\Comandos.X.production.o
-__end_of_coord 48A 0 CODE 0 text5 dist/default/production\Comandos.X.production.o
+_Error 54 0 COMRAM 1 dataCOMRAM dist/default/production\Comandos.X.production.o
+__end_of_coord 324 0 CODE 0 text5 dist/default/production\Comandos.X.production.o
 _PORTB F81 0 ABS 0 - dist/default/production\Comandos.X.production.o
 _PORTC F82 0 ABS 0 - dist/default/production\Comandos.X.production.o
 _PORTD F83 0 ABS 0 - dist/default/production\Comandos.X.production.o
@@ -966,7 +985,7 @@ _TRISB F93 0 ABS 0 - dist/default/production\Comandos.X.production.o
 _TRISC F94 0 ABS 0 - dist/default/production\Comandos.X.production.o
 _TRISD F95 0 ABS 0 - dist/default/production\Comandos.X.production.o
 _TXREG FAD 0 ABS 0 - dist/default/production\Comandos.X.production.o
-__end_of_start A60 0 CODE 0 text2 dist/default/production\Comandos.X.production.o
+__end_of_start D34 0 CODE 0 text2 dist/default/production\Comandos.X.production.o
 __CFG_CP0$OFF 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __CFG_CP1$OFF 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __HRAM 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
@@ -979,25 +998,25 @@ __Lram 0 0 ABS 0 ram dist/default/production\Comandos.X.production.o
 __Lsfr 0 0 ABS 0 sfr dist/default/production\Comandos.X.production.o
 __CFG_CP2$OFF 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __CFG_CP3$OFF 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
-_click 32 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
-_coord 3A6 0 CODE 0 text5 dist/default/production\Comandos.X.production.o
+_click 36 0 COMRAM 1 bssCOMRAM dist/default/production\Comandos.X.production.o
+_coord 1AC 0 CODE 0 text5 dist/default/production\Comandos.X.production.o
 __CFG_CPB$OFF 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
-coord@read 1B 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
-_start A1A 0 CODE 0 text2 dist/default/production\Comandos.X.production.o
-_UARTRead C72 0 CODE 0 text6 dist/default/production\Comandos.X.production.o
+coord@read 1C 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
+_start CF0 0 CODE 0 text2 dist/default/production\Comandos.X.production.o
+_UARTRead D34 0 CODE 0 text6 dist/default/production\Comandos.X.production.o
 _CCP1CON FBD 0 ABS 0 - dist/default/production\Comandos.X.production.o
 _CCP2CON FBA 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __size_of_PWM 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __size_of_cmd 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
 __size_of_end 0 0 ABS 0 - dist/default/production\Comandos.X.production.o
-_OneShot AA4 0 CODE 0 text21 dist/default/production\Comandos.X.production.o
+_OneShot D6C 0 CODE 0 text19 dist/default/production\Comandos.X.production.o
 __HdataBANK0 0 0 ABS 0 dataBANK0 dist/default/production\Comandos.X.production.o
-__end_of_ResetOneShot B32 0 CODE 0 text20 dist/default/production\Comandos.X.production.o
+__end_of_ResetOneShot DFA 0 CODE 0 text18 dist/default/production\Comandos.X.production.o
 Par_Validated@i 5 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
-__initialization 92A 0 CODE 0 cinit dist/default/production\Comandos.X.production.o
-__pdataCOMRAM 3F 0 COMRAM 1 dataCOMRAM dist/default/production\Comandos.X.production.o
-__end_of_UARTRead C84 0 CODE 0 text6 dist/default/production\Comandos.X.production.o
+__initialization C4C 0 CODE 0 cinit dist/default/production\Comandos.X.production.o
+__pdataCOMRAM 43 0 COMRAM 1 dataCOMRAM dist/default/production\Comandos.X.production.o
+__end_of_UARTRead D6C 0 CODE 0 text6 dist/default/production\Comandos.X.production.o
 Movimiento@loquequieras2 11 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
 __Hfardata 0 0 FARRAM 0 fardata dist/default/production\Comandos.X.production.o
 ___wmul@product 8 0 COMRAM 1 cstackCOMRAM dist/default/production\Comandos.X.production.o
@@ -1030,11 +1049,11 @@ __Hintcode E 0 CODE 0 intcode dist/default/production\Comandos.X.production.o
 # All other numeric quantities are in decimal.
 %SEGMENTS
 idloc 0 200000 200000 8 1
-text11 0 C48 C48 3C 1
-cstackCOMRAM 1 1 1 59 1
+text14 0 EDA EDA 16 1
+cstackCOMRAM 1 1 1 5B 1
 reset_vec 0 0 0 4 1
-intcode 0 8 8 C3F 1
-dataBANK0 1 60 60 17 1
+intcode 0 8 8 ED1 1
+dataBANK0 1 60 60 1B 1
 config 0 300000 300000 E 1
 # OTES Section
 # This section contains data of all the note-psects.  The beginning of the section

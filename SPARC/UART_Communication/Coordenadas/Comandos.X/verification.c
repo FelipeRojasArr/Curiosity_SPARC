@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include "main.h"
 #include "UART.h"
 #include "cases.h"
 #include "Definiciones.h"
@@ -10,35 +11,48 @@
 #include "Interruptions.h"
 #include "PWM.h"
 
-void verification(void){ 
+
+void verification(void)
+{ 
     NextState = iddle_State;
-    while(x==1){
-    switch(NextState)
-		{
+    while(ControlFlagVerification == ON)
+    {
+        switch(NextState)
+        {
             case iddle_State:{
                 NextState= start();
             }
-            break;
+                break;
+
             case wait_cmd_State:{
                 NextState=cmd();
             }
-            break;
+                break;
+
             case validate_Par_State:{
                 NextState=Par_Validated();
             }
-            break;            
+                break;            
+
             case validate_Instruct_State:{
                 NextState=Ins_Validated();
             }
-            break;
+                break;
+
             case validate_Coord_State:{
                 NextState=Coord_Validated();
             }
-            break;
+                break;
+            
             case end_State:{
                 end();
-            }break;
-            
+            }
+                break;
+
+            default:{
+                NextState = wait_cmd_State;
+            }
+                break;
         }
     }
 }

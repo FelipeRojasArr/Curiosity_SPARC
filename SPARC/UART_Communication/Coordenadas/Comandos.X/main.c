@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include "main.h"
 #include "UART.h"
 #include "cases.h"
 #include "Definiciones.h"
@@ -10,9 +11,6 @@
 #include "Interruptions.h"
 #include "PWM.h"
 
-void GoToInitialYPosition(void);
-void GoToInitialXPosition(void);
-//void PrintMyActulPosition(void)
 
 void __interrupt() INT_ISR(void)
 {
@@ -47,7 +45,29 @@ void __interrupt() INT_ISR(void)
 void main(void) {
     
     Configuracion();
-    InterruptionsConfiguration();
+    //InterruptionsConfiguration();
+    //GoToCero();
+    
+    while(1)
+    { 
+        TURN_ON_RECEIVER
+        ControlFlagVerification = ON;
+        verification();
+        PrintMyActulPosition();
+        Movimiento();
+        /*if(x == 0)
+        {
+            TXSTAbits.TXEN = 0;
+            Movimiento();
+        }        
+        RCSTAbits.CREN = 1;*/
+        PrintMyActulPosition();
+        
+    }
+}
+
+void GoToCero(void)
+{
     CoordAntX=1;
     CoordAntY=1;
     ENABLE_A=1;
@@ -56,21 +76,29 @@ void main(void) {
     InicialY();
     GoToInitialXPosition();
     GoToInitialYPosition();
-    
-    
-    while(1){ /*Programa principal*/
-        x=1;
-       verification();
-       Movimiento();
-    }
 }
 
-/*void GoToCero(void)
+void PrintMyActulPosition(void)
 {
+/*Imprimir en serial coordenada actualizada*/
+        char a[3];
+        char b[3];
 
-}*/
+        a[0]=(CoordAntX/100)+48;
+        a[1]=((CoordAntX%100)/10)+48;
+        a[2]=((CoordAntX%100)%10)+48;
 
-/*void PrintMyActulPosition(void)
-{
+        b[0]=(CoordAntY/100)+48;
+        b[1]=((CoordAntY%100)/10)+48;
+        b[2]=((CoordAntY%100)%10)+48;
 
-}*/
+        for(int i=0; i<3; i++){
+
+            UARTWrite(a[i]);
+        }
+        for(int i=0; i<3; i++){
+
+            UARTWrite(b[i]);
+        }
+}
+

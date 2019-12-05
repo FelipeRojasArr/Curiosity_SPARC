@@ -1,3 +1,4 @@
+#ifndef PWM_HEADER
 /*FUNCIONES PWM*/
 void PWM(void);
 void ContarPulsos(int pasos);
@@ -27,3 +28,5 @@ void HaltMotors(void);
     unsigned int PasosY;
     unsigned int BanderaDisX;
     unsigned int BanderaDisY;
+    
+#endif //PWM_HEADER

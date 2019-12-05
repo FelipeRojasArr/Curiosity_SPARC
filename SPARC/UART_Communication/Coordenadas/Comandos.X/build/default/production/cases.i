@@ -5763,14 +5763,27 @@ typedef uint32_t uint_fast32_t;
 # 139 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 2 3
 # 5 "cases.c" 2
 
+# 1 "./main.h" 1
+
+
+void GoToCero(void);
+void GoToInitialYPosition(void);
+void GoToInitialXPosition(void);
+void PrintMyActulPosition(void);
+# 6 "cases.c" 2
+
 # 1 "./UART.h" 1
+
+
+
+
 void UARTConfi(int Baud);
 void UARTWrite(char data);
 char UARTRead(void);
-# 6 "cases.c" 2
+# 7 "cases.c" 2
 
 # 1 "./cases.h" 1
-
+# 11 "./cases.h"
 void verification(void);
 
 int coord(char* P1, char* L, unsigned short* x, unsigned short* y, char* P2);
@@ -5781,7 +5794,7 @@ unsigned int cord_x;
 unsigned int cord_y;
 char Par2;
 
-int x;
+int ControlFlagVerification;
 
 typedef enum
 {
@@ -5789,10 +5802,22 @@ typedef enum
  wait_cmd_State,
  validate_Par_State,
  validate_Instruct_State,
- validate_Coord_State,
+    validate_Coord_State,
  end_State,
 
 }systemState;
+
+enum CharactersOfASCII{
+    StartCommandCharacter = 0,
+    InstructionCharacter,
+    CharacterX1,
+    CharacterX2,
+    CharacterX3,
+    CharacterY1,
+    CharacterY2,
+    CharacterY3,
+    EndCommandCharacter
+};
 
 uint8_t start(void);
 uint8_t cmd(void);
@@ -5804,13 +5829,13 @@ void end(void);
 systemState NextState;
 
 uint8_t click;
-# 7 "cases.c" 2
-
-# 1 "./Definiciones.h" 1
 # 8 "cases.c" 2
 
+# 1 "./Definiciones.h" 1
+# 9 "cases.c" 2
+
 # 1 "./Configuracion.h" 1
-# 17 "./Configuracion.h"
+# 14 "./Configuracion.h"
 #pragma config FOSC = INTOSC_EC
 #pragma config FCMEN = OFF
 #pragma config IESO = OFF
@@ -5871,7 +5896,7 @@ uint8_t click;
 void Configuracion(void);
 void InicialX(void);
 void InicialY(void);
-# 9 "cases.c" 2
+# 10 "cases.c" 2
 
 # 1 "./Interruptions.h" 1
 
@@ -5882,9 +5907,10 @@ void InicialY(void);
 
 void InterruptionsConfiguration(void);
 void buttonInterruptionConfiguration(void);
-# 10 "cases.c" 2
+# 11 "cases.c" 2
 
 # 1 "./PWM.h" 1
+
 
 void PWM(void);
 void ContarPulsos(int pasos);
@@ -5914,7 +5940,8 @@ void HaltMotors(void);
     unsigned int PasosY;
     unsigned int BanderaDisX;
     unsigned int BanderaDisY;
-# 11 "cases.c" 2
+# 12 "cases.c" 2
+
 
 
 char init[10]="Waiting...";
@@ -5922,33 +5949,30 @@ char e_c[13]="Enter_command";
 char Error[5]="Error";
 char gracias[7]="Gracias" ;
 
-
-uint8_t start(){
-     UARTWrite(13);
-     for(int i=0;i<10;i++){
+uint8_t start()
+{
+    UARTWrite(13);
+    for(int i=0;i<10;i++){
         UARTWrite(init[i]);
     }
-     PORTC = 0xff;
-     return wait_cmd_State;
+
+    return wait_cmd_State;
 }
 
-
-uint8_t cmd(){
+uint8_t cmd()
+{
     UARTWrite(13);
-    PORTC = 0x00;
+
     for(int i=0;i<10;i++){
         UARTWrite(e_c[i]);
     }
-    coord(&Par1,&letter,&cord_x, &cord_y, &Par2);
-    return validate_Par_State;
-}
 
-uint8_t Par_Validated(){
-    PORTC=0x00;
-    if(Par1==0X3C && Par2==0x3E){
-        return validate_Instruct_State;
+    if(coord(&Par1,&letter,&cord_x, &cord_y, &Par2) == 1)
+    {
+        return validate_Par_State;
     }
-    else{
+    else
+    {
         UARTWrite(13);
         for(int i=0;i<5;i++){
             UARTWrite(Error[i]);
@@ -5957,51 +5981,68 @@ uint8_t Par_Validated(){
     }
 }
 
-uint8_t Ins_Validated(){
-    PORTC=0x00;
-    if(letter==0x43){
-        PORTC=0X02;
+uint8_t Par_Validated()
+{
+    if(Par1==0X3C && Par2==0x3E)
+    {
+        return validate_Instruct_State;
+    }
+    else
+    {
+        UARTWrite(13);
+        for(int i=0;i<5;i++){
+            UARTWrite(Error[i]);
+        }
+        return wait_cmd_State;
+    }
+}
+
+uint8_t Ins_Validated()
+{
+    if(letter == 0x43)
+    {
         click=1;
         return validate_Coord_State;
-
     }
-    else if(letter== 0x53){
-        PORTC=0X02;
+
+    else if(letter== 0x53)
+    {
         click=0;
         return validate_Coord_State;
     }
-    else{
+    else
+    {
         UARTWrite(13);
         for(int i=0;i<5;i++){
             UARTWrite(Error[i]);
         }
-        PORTC= 0X04;
         return wait_cmd_State;
     }
 }
 
-uint8_t Coord_Validated(){
-    PORTC=0x00;
-    if(cord_x<=300 && cord_y<=300){
-        PORTC=0X02;
+uint8_t Coord_Validated()
+{
+    if(cord_x<=300 && cord_y<=300)
+    {
         return end_State;
     }
-    else{
+    else
+    {
         UARTWrite(13);
         for(int i=0;i<5;i++){
             UARTWrite(Error[i]);
         }
-        PORTC= 0X04;
-       return wait_cmd_State;
+        return wait_cmd_State;
     }
-
 }
 
-void end(){
+void end()
+{
     UARTWrite(13);
-    for(int i=0;i<7;i++){
-            UARTWrite(gracias[i]);
+    for(int i=0;i<7;i++)
+    {
+        UARTWrite(gracias[i]);
     }
-     x=0;
+    ControlFlagVerification = 0;
     return;
 }

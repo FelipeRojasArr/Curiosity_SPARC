@@ -1,4 +1,4 @@
-
+#ifndef DEFINICIONES_HEADER
 /****************PUERTOS*******************/
 
 /*PWM*/
@@ -24,13 +24,24 @@
 /*Solenoide*/
 # define SOLENOIDE PORTDbits.RD7  
 
+/*Turn on/off comunication*/
+#define TURN_OFF_RECEIVER  RCSTAbits.CREN = 0;
+#define TURN_ON_RECEIVER   RCSTAbits.CREN = 1;
+
 /**********DEFINICIONES GLOBALES*************/
-# define HIGH 1
-# define LOW 0
-# define INPUT 1
-# define OUTPUT 0
-# define OFF 0
-# define ON 1
+# define HIGH               1
+# define LOW                0
+# define INPUT              1
+# define OUTPUT             0
+# define OFF                0
+# define ON                 1
+# define TRUE               1
+# define FALSE              0
+# define HUNDRED            100
+# define TEN                10
+# define UNIT               1
+# define FIRST_ASCII_NUMBER 48
+# define ALL_COORDINATES    6
 
 /******************PWM***********************/
 
@@ -63,3 +74,5 @@
 // CCPR1L= 625 --> 0001 1111 0100
 // 0000 0111 1101 00
 //CCPR1L= 0x7D hex
+
+#endif //DEFINICIONES_HEADER

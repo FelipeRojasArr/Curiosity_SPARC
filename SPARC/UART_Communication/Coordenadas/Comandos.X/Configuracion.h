@@ -1,9 +1,6 @@
+#ifndef CONFIGURATION_HEADER
+
 /**************CONFIGURACION***************/
-#define _XTAL_FREQ 8000000L
-#define INITIAL_FRAME 0X3C
-#define ENDING_FRAME 0x3E
-#define LETTER_C   0x43
-#define LETTER_S   0x53
 
 //#pragma config PLLDIV = 2
 //#pragma config FOSC = INTOSCIO_EC
@@ -74,3 +71,5 @@
 void Configuracion(void);
 void InicialX(void);
 void InicialY(void);
+
+#endif //CONFIGURATION_HEADER

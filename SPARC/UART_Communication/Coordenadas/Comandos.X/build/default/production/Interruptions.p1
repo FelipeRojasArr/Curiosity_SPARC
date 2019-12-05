@@ -1,6 +1,6 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"32 ./cases.h
-[; ;./cases.h: 32: systemState NextState;
+"53 ./cases.h
+[; ;./cases.h: 53: systemState NextState;
 [c E3375 0 1 2 3 4 5 .. ]
 [n E3375 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
 "8588 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
@@ -605,132 +605,132 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8893
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"6 ./cases.h
-[; ;./cases.h: 6: char Par1;
+"15 ./cases.h
+[; ;./cases.h: 15: char Par1;
 [v _Par1 `uc ~T0 @X0 1 e ]
-"7
-[; ;./cases.h: 7: char letter;
-[v _letter `uc ~T0 @X0 1 e ]
-"8
-[; ;./cases.h: 8: unsigned int cord_x;
-[v _cord_x `ui ~T0 @X0 1 e ]
-"9
-[; ;./cases.h: 9: unsigned int cord_y;
-[v _cord_y `ui ~T0 @X0 1 e ]
-"10
-[; ;./cases.h: 10: char Par2;
-[v _Par2 `uc ~T0 @X0 1 e ]
-"12
-[; ;./cases.h: 12: int x;
-[v _x `i ~T0 @X0 1 e ]
-"32
-[; ;./cases.h: 32: systemState NextState;
-[v _NextState `E3375 ~T0 @X0 1 e ]
-"34
-[; ;./cases.h: 34: uint8_t click;
-[v _click `uc ~T0 @X0 1 e ]
-"17 ./Configuracion.h
-[p x FOSC = INTOSC_EC ]
-"18
-[p x FCMEN = OFF ]
-"19
-[p x IESO = OFF ]
-"22
-[p x PWRT = OFF ]
-"23
-[p x BOR = ON ]
-"24
-[p x BORV = 3 ]
-"25
-[p x VREGEN = OFF ]
-"28
-[p x WDT = OFF ]
-"29
-[p x WDTPS = 32768 ]
-"32
-[p x CCP2MX = ON ]
-"33
-[p x PBADEN = ON ]
-"34
-[p x LPT1OSC = OFF ]
-"35
-[p x MCLRE = OFF ]
-"38
-[p x STVREN = ON ]
-"39
-[p x LVP = OFF ]
-"40
-[p x ICPRT = OFF ]
-"41
-[p x XINST = OFF ]
-"44
-[p x CP0 = OFF ]
-"45
-[p x CP1 = OFF ]
-"46
-[p x CP2 = OFF ]
-"47
-[p x CP3 = OFF ]
-"50
-[p x CPB = OFF ]
-"51
-[p x CPD = OFF ]
-"54
-[p x WRT0 = OFF ]
-"55
-[p x WRT1 = OFF ]
-"56
-[p x WRT2 = OFF ]
-"57
-[p x WRT3 = OFF ]
-"60
-[p x WRTC = OFF ]
-"61
-[p x WRTB = OFF ]
-"62
-[p x WRTD = OFF ]
-"65
-[p x EBTR0 = OFF ]
-"66
-[p x EBTR1 = OFF ]
-"67
-[p x EBTR2 = OFF ]
-"68
-[p x EBTR3 = OFF ]
-"71
-[p x EBTRB = OFF ]
-"12 ./PWM.h
-[; ;./PWM.h: 12:     unsigned int CoordAntX;
-[v _CoordAntX `ui ~T0 @X0 1 e ]
-"13
-[; ;./PWM.h: 13:     unsigned int CoordAntY;
-[v _CoordAntY `ui ~T0 @X0 1 e ]
 "16
-[; ;./PWM.h: 16:     int CoordRelatX;
-[v _CoordRelatX `i ~T0 @X0 1 e ]
+[; ;./cases.h: 16: char letter;
+[v _letter `uc ~T0 @X0 1 e ]
 "17
-[; ;./PWM.h: 17:     int CoordRelatY;
-[v _CoordRelatY `i ~T0 @X0 1 e ]
+[; ;./cases.h: 17: unsigned int cord_x;
+[v _cord_x `ui ~T0 @X0 1 e ]
+"18
+[; ;./cases.h: 18: unsigned int cord_y;
+[v _cord_y `ui ~T0 @X0 1 e ]
+"19
+[; ;./cases.h: 19: char Par2;
+[v _Par2 `uc ~T0 @X0 1 e ]
+"21
+[; ;./cases.h: 21: int ControlFlagVerification;
+[v _ControlFlagVerification `i ~T0 @X0 1 e ]
+"53
+[; ;./cases.h: 53: systemState NextState;
+[v _NextState `E3375 ~T0 @X0 1 e ]
+"55
+[; ;./cases.h: 55: uint8_t click;
+[v _click `uc ~T0 @X0 1 e ]
+"14 ./Configuracion.h
+[p x FOSC = INTOSC_EC ]
+"15
+[p x FCMEN = OFF ]
+"16
+[p x IESO = OFF ]
+"19
+[p x PWRT = OFF ]
 "20
-[; ;./PWM.h: 20:     int pasosRecorridos;
-[v _pasosRecorridos `i ~T0 @X0 1 e ]
-"23
-[; ;./PWM.h: 23:     unsigned int PasosActuales;
-[v _PasosActuales `ui ~T0 @X0 1 e ]
-"24
-[; ;./PWM.h: 24:     unsigned int ons;
-[v _ons `ui ~T0 @X0 1 e ]
+[p x BOR = ON ]
+"21
+[p x BORV = 3 ]
+"22
+[p x VREGEN = OFF ]
+"25
+[p x WDT = OFF ]
 "26
-[; ;./PWM.h: 26:     unsigned int PasosX;
-[v _PasosX `ui ~T0 @X0 1 e ]
-"27
-[; ;./PWM.h: 27:     unsigned int PasosY;
-[v _PasosY `ui ~T0 @X0 1 e ]
-"28
-[; ;./PWM.h: 28:     unsigned int BanderaDisX;
-[v _BanderaDisX `ui ~T0 @X0 1 e ]
+[p x WDTPS = 32768 ]
 "29
-[; ;./PWM.h: 29:     unsigned int BanderaDisY;
+[p x CCP2MX = ON ]
+"30
+[p x PBADEN = ON ]
+"31
+[p x LPT1OSC = OFF ]
+"32
+[p x MCLRE = OFF ]
+"35
+[p x STVREN = ON ]
+"36
+[p x LVP = OFF ]
+"37
+[p x ICPRT = OFF ]
+"38
+[p x XINST = OFF ]
+"41
+[p x CP0 = OFF ]
+"42
+[p x CP1 = OFF ]
+"43
+[p x CP2 = OFF ]
+"44
+[p x CP3 = OFF ]
+"47
+[p x CPB = OFF ]
+"48
+[p x CPD = OFF ]
+"51
+[p x WRT0 = OFF ]
+"52
+[p x WRT1 = OFF ]
+"53
+[p x WRT2 = OFF ]
+"54
+[p x WRT3 = OFF ]
+"57
+[p x WRTC = OFF ]
+"58
+[p x WRTB = OFF ]
+"59
+[p x WRTD = OFF ]
+"62
+[p x EBTR0 = OFF ]
+"63
+[p x EBTR1 = OFF ]
+"64
+[p x EBTR2 = OFF ]
+"65
+[p x EBTR3 = OFF ]
+"68
+[p x EBTRB = OFF ]
+"13 ./PWM.h
+[; ;./PWM.h: 13:     unsigned int CoordAntX;
+[v _CoordAntX `ui ~T0 @X0 1 e ]
+"14
+[; ;./PWM.h: 14:     unsigned int CoordAntY;
+[v _CoordAntY `ui ~T0 @X0 1 e ]
+"17
+[; ;./PWM.h: 17:     int CoordRelatX;
+[v _CoordRelatX `i ~T0 @X0 1 e ]
+"18
+[; ;./PWM.h: 18:     int CoordRelatY;
+[v _CoordRelatY `i ~T0 @X0 1 e ]
+"21
+[; ;./PWM.h: 21:     int pasosRecorridos;
+[v _pasosRecorridos `i ~T0 @X0 1 e ]
+"24
+[; ;./PWM.h: 24:     unsigned int PasosActuales;
+[v _PasosActuales `ui ~T0 @X0 1 e ]
+"25
+[; ;./PWM.h: 25:     unsigned int ons;
+[v _ons `ui ~T0 @X0 1 e ]
+"27
+[; ;./PWM.h: 27:     unsigned int PasosX;
+[v _PasosX `ui ~T0 @X0 1 e ]
+"28
+[; ;./PWM.h: 28:     unsigned int PasosY;
+[v _PasosY `ui ~T0 @X0 1 e ]
+"29
+[; ;./PWM.h: 29:     unsigned int BanderaDisX;
+[v _BanderaDisX `ui ~T0 @X0 1 e ]
+"30
+[; ;./PWM.h: 30:     unsigned int BanderaDisY;
 [v _BanderaDisY `ui ~T0 @X0 1 e ]
 "14 Interruptions.c
 [; ;Interruptions.c: 14: void InterruptionsConfiguration()

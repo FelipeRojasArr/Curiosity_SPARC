@@ -1,16 +1,13 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"32 ./cases.h
-[; ;./cases.h: 32: systemState NextState;
-[c E3375 0 1 2 3 4 5 .. ]
-[n E3375 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
-"2 ./UART.h
-[; ;./UART.h: 2: void UARTWrite(char data);
+"53 ./cases.h
+[; ;./cases.h: 53: systemState NextState;
+[c E3379 0 1 2 3 4 5 .. ]
+[n E3379 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
+"6 ./UART.h
+[; ;./UART.h: 6: void UARTWrite(char data);
 [v _UARTWrite `(v ~T0 @X0 0 ef1`uc ]
-"2563 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 2563: extern volatile unsigned char PORTC __attribute__((address(0xF82)));
-[v _PORTC `Vuc ~T0 @X0 0 e@3970 ]
-"4 ./cases.h
-[; ;./cases.h: 4: int coord(char* P1, char* L, unsigned short* x, unsigned short* y, char* P2);
+"13 ./cases.h
+[; ;./cases.h: 13: int coord(char* P1, char* L, unsigned short* x, unsigned short* y, char* P2);
 [v _coord `(i ~T0 @X0 0 ef5`*uc`*uc`*us`*us`*uc ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
@@ -522,135 +519,135 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8893
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"6 ./cases.h
-[; ;./cases.h: 6: char Par1;
+"15 ./cases.h
+[; ;./cases.h: 15: char Par1;
 [v _Par1 `uc ~T0 @X0 1 e ]
-"7
-[; ;./cases.h: 7: char letter;
-[v _letter `uc ~T0 @X0 1 e ]
-"8
-[; ;./cases.h: 8: unsigned int cord_x;
-[v _cord_x `ui ~T0 @X0 1 e ]
-"9
-[; ;./cases.h: 9: unsigned int cord_y;
-[v _cord_y `ui ~T0 @X0 1 e ]
-"10
-[; ;./cases.h: 10: char Par2;
-[v _Par2 `uc ~T0 @X0 1 e ]
-"12
-[; ;./cases.h: 12: int x;
-[v _x `i ~T0 @X0 1 e ]
-"32
-[; ;./cases.h: 32: systemState NextState;
-[v _NextState `E3375 ~T0 @X0 1 e ]
-"34
-[; ;./cases.h: 34: uint8_t click;
-[v _click `uc ~T0 @X0 1 e ]
-"17 ./Configuracion.h
-[p x FOSC = INTOSC_EC ]
-"18
-[p x FCMEN = OFF ]
-"19
-[p x IESO = OFF ]
-"22
-[p x PWRT = OFF ]
-"23
-[p x BOR = ON ]
-"24
-[p x BORV = 3 ]
-"25
-[p x VREGEN = OFF ]
-"28
-[p x WDT = OFF ]
-"29
-[p x WDTPS = 32768 ]
-"32
-[p x CCP2MX = ON ]
-"33
-[p x PBADEN = ON ]
-"34
-[p x LPT1OSC = OFF ]
-"35
-[p x MCLRE = OFF ]
-"38
-[p x STVREN = ON ]
-"39
-[p x LVP = OFF ]
-"40
-[p x ICPRT = OFF ]
-"41
-[p x XINST = OFF ]
-"44
-[p x CP0 = OFF ]
-"45
-[p x CP1 = OFF ]
-"46
-[p x CP2 = OFF ]
-"47
-[p x CP3 = OFF ]
-"50
-[p x CPB = OFF ]
-"51
-[p x CPD = OFF ]
-"54
-[p x WRT0 = OFF ]
-"55
-[p x WRT1 = OFF ]
-"56
-[p x WRT2 = OFF ]
-"57
-[p x WRT3 = OFF ]
-"60
-[p x WRTC = OFF ]
-"61
-[p x WRTB = OFF ]
-"62
-[p x WRTD = OFF ]
-"65
-[p x EBTR0 = OFF ]
-"66
-[p x EBTR1 = OFF ]
-"67
-[p x EBTR2 = OFF ]
-"68
-[p x EBTR3 = OFF ]
-"71
-[p x EBTRB = OFF ]
-"12 ./PWM.h
-[; ;./PWM.h: 12:     unsigned int CoordAntX;
-[v _CoordAntX `ui ~T0 @X0 1 e ]
-"13
-[; ;./PWM.h: 13:     unsigned int CoordAntY;
-[v _CoordAntY `ui ~T0 @X0 1 e ]
 "16
-[; ;./PWM.h: 16:     int CoordRelatX;
-[v _CoordRelatX `i ~T0 @X0 1 e ]
+[; ;./cases.h: 16: char letter;
+[v _letter `uc ~T0 @X0 1 e ]
 "17
-[; ;./PWM.h: 17:     int CoordRelatY;
-[v _CoordRelatY `i ~T0 @X0 1 e ]
+[; ;./cases.h: 17: unsigned int cord_x;
+[v _cord_x `ui ~T0 @X0 1 e ]
+"18
+[; ;./cases.h: 18: unsigned int cord_y;
+[v _cord_y `ui ~T0 @X0 1 e ]
+"19
+[; ;./cases.h: 19: char Par2;
+[v _Par2 `uc ~T0 @X0 1 e ]
+"21
+[; ;./cases.h: 21: int ControlFlagVerification;
+[v _ControlFlagVerification `i ~T0 @X0 1 e ]
+"53
+[; ;./cases.h: 53: systemState NextState;
+[v _NextState `E3379 ~T0 @X0 1 e ]
+"55
+[; ;./cases.h: 55: uint8_t click;
+[v _click `uc ~T0 @X0 1 e ]
+"14 ./Configuracion.h
+[p x FOSC = INTOSC_EC ]
+"15
+[p x FCMEN = OFF ]
+"16
+[p x IESO = OFF ]
+"19
+[p x PWRT = OFF ]
 "20
-[; ;./PWM.h: 20:     int pasosRecorridos;
-[v _pasosRecorridos `i ~T0 @X0 1 e ]
-"23
-[; ;./PWM.h: 23:     unsigned int PasosActuales;
-[v _PasosActuales `ui ~T0 @X0 1 e ]
-"24
-[; ;./PWM.h: 24:     unsigned int ons;
-[v _ons `ui ~T0 @X0 1 e ]
+[p x BOR = ON ]
+"21
+[p x BORV = 3 ]
+"22
+[p x VREGEN = OFF ]
+"25
+[p x WDT = OFF ]
 "26
-[; ;./PWM.h: 26:     unsigned int PasosX;
-[v _PasosX `ui ~T0 @X0 1 e ]
-"27
-[; ;./PWM.h: 27:     unsigned int PasosY;
-[v _PasosY `ui ~T0 @X0 1 e ]
-"28
-[; ;./PWM.h: 28:     unsigned int BanderaDisX;
-[v _BanderaDisX `ui ~T0 @X0 1 e ]
+[p x WDTPS = 32768 ]
 "29
-[; ;./PWM.h: 29:     unsigned int BanderaDisY;
+[p x CCP2MX = ON ]
+"30
+[p x PBADEN = ON ]
+"31
+[p x LPT1OSC = OFF ]
+"32
+[p x MCLRE = OFF ]
+"35
+[p x STVREN = ON ]
+"36
+[p x LVP = OFF ]
+"37
+[p x ICPRT = OFF ]
+"38
+[p x XINST = OFF ]
+"41
+[p x CP0 = OFF ]
+"42
+[p x CP1 = OFF ]
+"43
+[p x CP2 = OFF ]
+"44
+[p x CP3 = OFF ]
+"47
+[p x CPB = OFF ]
+"48
+[p x CPD = OFF ]
+"51
+[p x WRT0 = OFF ]
+"52
+[p x WRT1 = OFF ]
+"53
+[p x WRT2 = OFF ]
+"54
+[p x WRT3 = OFF ]
+"57
+[p x WRTC = OFF ]
+"58
+[p x WRTB = OFF ]
+"59
+[p x WRTD = OFF ]
+"62
+[p x EBTR0 = OFF ]
+"63
+[p x EBTR1 = OFF ]
+"64
+[p x EBTR2 = OFF ]
+"65
+[p x EBTR3 = OFF ]
+"68
+[p x EBTRB = OFF ]
+"13 ./PWM.h
+[; ;./PWM.h: 13:     unsigned int CoordAntX;
+[v _CoordAntX `ui ~T0 @X0 1 e ]
+"14
+[; ;./PWM.h: 14:     unsigned int CoordAntY;
+[v _CoordAntY `ui ~T0 @X0 1 e ]
+"17
+[; ;./PWM.h: 17:     int CoordRelatX;
+[v _CoordRelatX `i ~T0 @X0 1 e ]
+"18
+[; ;./PWM.h: 18:     int CoordRelatY;
+[v _CoordRelatY `i ~T0 @X0 1 e ]
+"21
+[; ;./PWM.h: 21:     int pasosRecorridos;
+[v _pasosRecorridos `i ~T0 @X0 1 e ]
+"24
+[; ;./PWM.h: 24:     unsigned int PasosActuales;
+[v _PasosActuales `ui ~T0 @X0 1 e ]
+"25
+[; ;./PWM.h: 25:     unsigned int ons;
+[v _ons `ui ~T0 @X0 1 e ]
+"27
+[; ;./PWM.h: 27:     unsigned int PasosX;
+[v _PasosX `ui ~T0 @X0 1 e ]
+"28
+[; ;./PWM.h: 28:     unsigned int PasosY;
+[v _PasosY `ui ~T0 @X0 1 e ]
+"29
+[; ;./PWM.h: 29:     unsigned int BanderaDisX;
+[v _BanderaDisX `ui ~T0 @X0 1 e ]
+"30
+[; ;./PWM.h: 30:     unsigned int BanderaDisY;
 [v _BanderaDisY `ui ~T0 @X0 1 e ]
-"13 cases.c
-[; ;cases.c: 13: char init[10]="Waiting...";
+"15 cases.c
+[; ;cases.c: 15: char init[10]="Waiting...";
 [v _init `uc ~T0 @X0 -> 10 `i e ]
 [i _init
 :U ..
@@ -666,8 +663,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 46 `c
 ..
 ]
-"14
-[; ;cases.c: 14: char e_c[13]="Enter_command";
+"16
+[; ;cases.c: 16: char e_c[13]="Enter_command";
 [v _e_c `uc ~T0 @X0 -> 13 `i e ]
 [i _e_c
 :U ..
@@ -686,8 +683,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 100 `c
 ..
 ]
-"15
-[; ;cases.c: 15: char Error[5]="Error";
+"17
+[; ;cases.c: 17: char Error[5]="Error";
 [v _Error `uc ~T0 @X0 -> 5 `i e ]
 [i _Error
 :U ..
@@ -698,8 +695,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 114 `c
 ..
 ]
-"16
-[; ;cases.c: 16: char gracias[7]="Gracias" ;
+"18
+[; ;cases.c: 18: char gracias[7]="Gracias" ;
 [v _gracias `uc ~T0 @X0 -> 7 `i e ]
 [i _gracias
 :U ..
@@ -712,17 +709,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 115 `c
 ..
 ]
-"19
-[; ;cases.c: 19: uint8_t start(){
+"20
+[; ;cases.c: 20: uint8_t start()
 [v _start `(uc ~T0 @X0 1 ef ]
+"21
+[; ;cases.c: 21: {
 {
 [e :U _start ]
 [f ]
-"20
-[; ;cases.c: 20:      UARTWrite(13);
+"22
+[; ;cases.c: 22:     UARTWrite(13);
 [e ( _UARTWrite (1 -> -> 13 `i `uc ]
-"21
-[; ;cases.c: 21:      for(int i=0;i<10;i++){
+"23
+[; ;cases.c: 23:     for(int i=0;i<10;i++){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -730,41 +729,37 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 370  ]
 [e :U 369 ]
 {
-"22
-[; ;cases.c: 22:         UARTWrite(init[i]);
+"24
+[; ;cases.c: 24:         UARTWrite(init[i]);
 [e ( _UARTWrite (1 *U + &U _init * -> -> _i `ui `ux -> -> # *U &U _init `ui `ux ]
-"23
-[; ;cases.c: 23:     }
+"25
+[; ;cases.c: 25:     }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 10 `i 369  ]
 [e :U 370 ]
 }
-"24
-[; ;cases.c: 24:      PORTC = 0xff;
-[e = _PORTC -> -> 255 `i `uc ]
-"25
-[; ;cases.c: 25:      return wait_cmd_State;
-[e ) -> . `E3375 1 `uc ]
+"27
+[; ;cases.c: 27:     return wait_cmd_State;
+[e ) -> . `E3379 1 `uc ]
 [e $UE 368  ]
-"26
-[; ;cases.c: 26: }
+"28
+[; ;cases.c: 28: }
 [e :UE 368 ]
 }
-"29
-[; ;cases.c: 29: uint8_t cmd(){
+"30
+[; ;cases.c: 30: uint8_t cmd()
 [v _cmd `(uc ~T0 @X0 1 ef ]
+"31
+[; ;cases.c: 31: {
 {
 [e :U _cmd ]
 [f ]
-"30
-[; ;cases.c: 30:     UARTWrite(13);
-[e ( _UARTWrite (1 -> -> 13 `i `uc ]
-"31
-[; ;cases.c: 31:     PORTC = 0x00;
-[e = _PORTC -> -> 0 `i `uc ]
 "32
-[; ;cases.c: 32:     for(int i=0;i<10;i++){
+[; ;cases.c: 32:     UARTWrite(13);
+[e ( _UARTWrite (1 -> -> 13 `i `uc ]
+"34
+[; ;cases.c: 34:     for(int i=0;i<10;i++){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -772,201 +767,180 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 374  ]
 [e :U 373 ]
 {
-"33
-[; ;cases.c: 33:         UARTWrite(e_c[i]);
+"35
+[; ;cases.c: 35:         UARTWrite(e_c[i]);
 [e ( _UARTWrite (1 *U + &U _e_c * -> -> _i `ui `ux -> -> # *U &U _e_c `ui `ux ]
-"34
-[; ;cases.c: 34:     }
+"36
+[; ;cases.c: 36:     }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 10 `i 373  ]
 [e :U 374 ]
 }
-"35
-[; ;cases.c: 35:     coord(&Par1,&letter,&cord_x, &cord_y, &Par2);
-[e ( _coord (4 , , , , &U _Par1 &U _letter -> &U _cord_x `*us -> &U _cord_y `*us &U _Par2 ]
-"36
-[; ;cases.c: 36:     return validate_Par_State;
-[e ) -> . `E3375 2 `uc ]
+"38
+[; ;cases.c: 38:     if(coord(&Par1,&letter,&cord_x, &cord_y, &Par2) == 1)
+[e $ ! == ( _coord (4 , , , , &U _Par1 &U _letter -> &U _cord_x `*us -> &U _cord_y `*us &U _Par2 -> 1 `i 376  ]
+"39
+[; ;cases.c: 39:     {
+{
+"40
+[; ;cases.c: 40:         return validate_Par_State;
+[e ) -> . `E3379 2 `uc ]
 [e $UE 372  ]
-"37
-[; ;cases.c: 37: }
+"41
+[; ;cases.c: 41:     }
+}
+[e $U 377  ]
+"42
+[; ;cases.c: 42:     else
+[e :U 376 ]
+"43
+[; ;cases.c: 43:     {
+{
+"44
+[; ;cases.c: 44:         UARTWrite(13);
+[e ( _UARTWrite (1 -> -> 13 `i `uc ]
+"45
+[; ;cases.c: 45:         for(int i=0;i<5;i++){
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $ < _i -> 5 `i 378  ]
+[e $U 379  ]
+[e :U 378 ]
+{
+"46
+[; ;cases.c: 46:             UARTWrite(Error[i]);
+[e ( _UARTWrite (1 *U + &U _Error * -> -> _i `ui `ux -> -> # *U &U _Error `ui `ux ]
+"47
+[; ;cases.c: 47:         }
+}
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 5 `i 378  ]
+[e :U 379 ]
+}
+"48
+[; ;cases.c: 48:         return wait_cmd_State;
+[e ) -> . `E3379 1 `uc ]
+[e $UE 372  ]
+"49
+[; ;cases.c: 49:     }
+}
+[e :U 377 ]
+"50
+[; ;cases.c: 50: }
 [e :UE 372 ]
 }
-"39
-[; ;cases.c: 39: uint8_t Par_Validated(){
+"52
+[; ;cases.c: 52: uint8_t Par_Validated()
 [v _Par_Validated `(uc ~T0 @X0 1 ef ]
+"53
+[; ;cases.c: 53: {
 {
 [e :U _Par_Validated ]
 [f ]
-"40
-[; ;cases.c: 40:     PORTC=0x00;
-[e = _PORTC -> -> 0 `i `uc ]
-"41
-[; ;cases.c: 41:     if(Par1==0X3C && Par2==0x3E){
-[e $ ! && == -> _Par1 `i -> 60 `i == -> _Par2 `i -> 62 `i 377  ]
+"54
+[; ;cases.c: 54:     if(Par1==0X3C && Par2==0x3E)
+[e $ ! && == -> _Par1 `i -> 60 `i == -> _Par2 `i -> 62 `i 382  ]
+"55
+[; ;cases.c: 55:     {
 {
-"42
-[; ;cases.c: 42:         return validate_Instruct_State;
-[e ) -> . `E3375 3 `uc ]
-[e $UE 376  ]
-"43
-[; ;cases.c: 43:     }
+"56
+[; ;cases.c: 56:         return validate_Instruct_State;
+[e ) -> . `E3379 3 `uc ]
+[e $UE 381  ]
+"57
+[; ;cases.c: 57:     }
 }
-[e $U 378  ]
-"44
-[; ;cases.c: 44:     else{
-[e :U 377 ]
+[e $U 383  ]
+"58
+[; ;cases.c: 58:     else
+[e :U 382 ]
+"59
+[; ;cases.c: 59:     {
 {
-"45
-[; ;cases.c: 45:         UARTWrite(13);
+"60
+[; ;cases.c: 60:         UARTWrite(13);
 [e ( _UARTWrite (1 -> -> 13 `i `uc ]
-"46
-[; ;cases.c: 46:         for(int i=0;i<5;i++){
+"61
+[; ;cases.c: 61:         for(int i=0;i<5;i++){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $ < _i -> 5 `i 379  ]
-[e $U 380  ]
-[e :U 379 ]
-{
-"47
-[; ;cases.c: 47:             UARTWrite(Error[i]);
-[e ( _UARTWrite (1 *U + &U _Error * -> -> _i `ui `ux -> -> # *U &U _Error `ui `ux ]
-"48
-[; ;cases.c: 48:         }
-}
-[e ++ _i -> 1 `i ]
-[e $ < _i -> 5 `i 379  ]
-[e :U 380 ]
-}
-"49
-[; ;cases.c: 49:         return wait_cmd_State;
-[e ) -> . `E3375 1 `uc ]
-[e $UE 376  ]
-"50
-[; ;cases.c: 50:     }
-}
-[e :U 378 ]
-"51
-[; ;cases.c: 51: }
-[e :UE 376 ]
-}
-"53
-[; ;cases.c: 53: uint8_t Ins_Validated(){
-[v _Ins_Validated `(uc ~T0 @X0 1 ef ]
-{
-[e :U _Ins_Validated ]
-[f ]
-"54
-[; ;cases.c: 54:     PORTC=0x00;
-[e = _PORTC -> -> 0 `i `uc ]
-"55
-[; ;cases.c: 55:     if(letter==0x43){
-[e $ ! == -> _letter `i -> 67 `i 383  ]
-{
-"56
-[; ;cases.c: 56:         PORTC=0X02;
-[e = _PORTC -> -> 2 `i `uc ]
-"57
-[; ;cases.c: 57:         click=1;
-[e = _click -> -> 1 `i `uc ]
-"58
-[; ;cases.c: 58:         return validate_Coord_State;
-[e ) -> . `E3375 4 `uc ]
-[e $UE 382  ]
-"60
-[; ;cases.c: 60:     }
-}
-[e $U 384  ]
-"61
-[; ;cases.c: 61:     else if(letter== 0x53){
-[e :U 383 ]
-[e $ ! == -> _letter `i -> 83 `i 385  ]
+[e $ < _i -> 5 `i 384  ]
+[e $U 385  ]
+[e :U 384 ]
 {
 "62
-[; ;cases.c: 62:         PORTC=0X02;
-[e = _PORTC -> -> 2 `i `uc ]
+[; ;cases.c: 62:             UARTWrite(Error[i]);
+[e ( _UARTWrite (1 *U + &U _Error * -> -> _i `ui `ux -> -> # *U &U _Error `ui `ux ]
 "63
-[; ;cases.c: 63:         click=0;
-[e = _click -> -> 0 `i `uc ]
+[; ;cases.c: 63:         }
+}
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 5 `i 384  ]
+[e :U 385 ]
+}
 "64
-[; ;cases.c: 64:         return validate_Coord_State;
-[e ) -> . `E3375 4 `uc ]
-[e $UE 382  ]
+[; ;cases.c: 64:         return wait_cmd_State;
+[e ) -> . `E3379 1 `uc ]
+[e $UE 381  ]
 "65
 [; ;cases.c: 65:     }
 }
-[e $U 386  ]
+[e :U 383 ]
 "66
-[; ;cases.c: 66:     else{
-[e :U 385 ]
-{
-"67
-[; ;cases.c: 67:         UARTWrite(13);
-[e ( _UARTWrite (1 -> -> 13 `i `uc ]
+[; ;cases.c: 66: }
+[e :UE 381 ]
+}
 "68
-[; ;cases.c: 68:         for(int i=0;i<5;i++){
-{
-[v _i `i ~T0 @X0 1 a ]
-[e = _i -> 0 `i ]
-[e $ < _i -> 5 `i 387  ]
-[e $U 388  ]
-[e :U 387 ]
-{
+[; ;cases.c: 68: uint8_t Ins_Validated()
+[v _Ins_Validated `(uc ~T0 @X0 1 ef ]
 "69
-[; ;cases.c: 69:             UARTWrite(Error[i]);
-[e ( _UARTWrite (1 *U + &U _Error * -> -> _i `ui `ux -> -> # *U &U _Error `ui `ux ]
-"70
-[; ;cases.c: 70:         }
-}
-[e ++ _i -> 1 `i ]
-[e $ < _i -> 5 `i 387  ]
-[e :U 388 ]
-}
-"71
-[; ;cases.c: 71:         PORTC= 0X04;
-[e = _PORTC -> -> 4 `i `uc ]
-"72
-[; ;cases.c: 72:         return wait_cmd_State;
-[e ) -> . `E3375 1 `uc ]
-[e $UE 382  ]
-"73
-[; ;cases.c: 73:     }
-}
-[e :U 386 ]
-[e :U 384 ]
-"74
-[; ;cases.c: 74: }
-[e :UE 382 ]
-}
-"76
-[; ;cases.c: 76: uint8_t Coord_Validated(){
-[v _Coord_Validated `(uc ~T0 @X0 1 ef ]
+[; ;cases.c: 69: {
 {
-[e :U _Coord_Validated ]
+[e :U _Ins_Validated ]
 [f ]
-"77
-[; ;cases.c: 77:     PORTC=0x00;
-[e = _PORTC -> -> 0 `i `uc ]
-"78
-[; ;cases.c: 78:     if(cord_x<=300 && cord_y<=300){
-[e $ ! && <= _cord_x -> -> 300 `i `ui <= _cord_y -> -> 300 `i `ui 391  ]
+"70
+[; ;cases.c: 70:     if(letter == 0x43)
+[e $ ! == -> _letter `i -> 67 `i 388  ]
+"71
+[; ;cases.c: 71:     {
 {
-"79
-[; ;cases.c: 79:         PORTC=0X02;
-[e = _PORTC -> -> 2 `i `uc ]
-"80
-[; ;cases.c: 80:         return end_State;
-[e ) -> . `E3375 5 `uc ]
-[e $UE 390  ]
-"81
-[; ;cases.c: 81:     }
+"72
+[; ;cases.c: 72:         click=1;
+[e = _click -> -> 1 `i `uc ]
+"73
+[; ;cases.c: 73:         return validate_Coord_State;
+[e ) -> . `E3379 4 `uc ]
+[e $UE 387  ]
+"74
+[; ;cases.c: 74:     }
 }
-[e $U 392  ]
+[e $U 389  ]
+"76
+[; ;cases.c: 76:     else if(letter== 0x53)
+[e :U 388 ]
+[e $ ! == -> _letter `i -> 83 `i 390  ]
+"77
+[; ;cases.c: 77:     {
+{
+"78
+[; ;cases.c: 78:         click=0;
+[e = _click -> -> 0 `i `uc ]
+"79
+[; ;cases.c: 79:         return validate_Coord_State;
+[e ) -> . `E3379 4 `uc ]
+[e $UE 387  ]
+"80
+[; ;cases.c: 80:     }
+}
+[e $U 391  ]
+"81
+[; ;cases.c: 81:     else
+[e :U 390 ]
 "82
-[; ;cases.c: 82:     else{
-[e :U 391 ]
+[; ;cases.c: 82:     {
 {
 "83
 [; ;cases.c: 83:         UARTWrite(13);
@@ -976,9 +950,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $ < _i -> 5 `i 393  ]
-[e $U 394  ]
-[e :U 393 ]
+[e $ < _i -> 5 `i 392  ]
+[e $U 393  ]
+[e :U 392 ]
 {
 "85
 [; ;cases.c: 85:             UARTWrite(Error[i]);
@@ -987,59 +961,123 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;cases.c: 86:         }
 }
 [e ++ _i -> 1 `i ]
-[e $ < _i -> 5 `i 393  ]
-[e :U 394 ]
+[e $ < _i -> 5 `i 392  ]
+[e :U 393 ]
 }
 "87
-[; ;cases.c: 87:         PORTC= 0X04;
-[e = _PORTC -> -> 4 `i `uc ]
+[; ;cases.c: 87:         return wait_cmd_State;
+[e ) -> . `E3379 1 `uc ]
+[e $UE 387  ]
 "88
-[; ;cases.c: 88:        return wait_cmd_State;
-[e ) -> . `E3375 1 `uc ]
-[e $UE 390  ]
+[; ;cases.c: 88:     }
+}
+[e :U 391 ]
+[e :U 389 ]
 "89
-[; ;cases.c: 89:     }
+[; ;cases.c: 89: }
+[e :UE 387 ]
 }
-[e :U 392 ]
 "91
-[; ;cases.c: 91: }
-[e :UE 390 ]
-}
-"93
-[; ;cases.c: 93: void end(){
-[v _end `(v ~T0 @X0 1 ef ]
+[; ;cases.c: 91: uint8_t Coord_Validated()
+[v _Coord_Validated `(uc ~T0 @X0 1 ef ]
+"92
+[; ;cases.c: 92: {
 {
-[e :U _end ]
+[e :U _Coord_Validated ]
 [f ]
+"93
+[; ;cases.c: 93:     if(cord_x<=300 && cord_y<=300)
+[e $ ! && <= _cord_x -> -> 300 `i `ui <= _cord_y -> -> 300 `i `ui 396  ]
 "94
-[; ;cases.c: 94:     UARTWrite(13);
-[e ( _UARTWrite (1 -> -> 13 `i `uc ]
+[; ;cases.c: 94:     {
+{
 "95
-[; ;cases.c: 95:     for(int i=0;i<7;i++){
+[; ;cases.c: 95:         return end_State;
+[e ) -> . `E3379 5 `uc ]
+[e $UE 395  ]
+"96
+[; ;cases.c: 96:     }
+}
+[e $U 397  ]
+"97
+[; ;cases.c: 97:     else
+[e :U 396 ]
+"98
+[; ;cases.c: 98:     {
+{
+"99
+[; ;cases.c: 99:         UARTWrite(13);
+[e ( _UARTWrite (1 -> -> 13 `i `uc ]
+"100
+[; ;cases.c: 100:         for(int i=0;i<5;i++){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $ < _i -> 7 `i 397  ]
-[e $U 398  ]
-[e :U 397 ]
+[e $ < _i -> 5 `i 398  ]
+[e $U 399  ]
+[e :U 398 ]
 {
-"96
-[; ;cases.c: 96:             UARTWrite(gracias[i]);
-[e ( _UARTWrite (1 *U + &U _gracias * -> -> _i `ui `ux -> -> # *U &U _gracias `ui `ux ]
-"97
-[; ;cases.c: 97:     }
+"101
+[; ;cases.c: 101:             UARTWrite(Error[i]);
+[e ( _UARTWrite (1 *U + &U _Error * -> -> _i `ui `ux -> -> # *U &U _Error `ui `ux ]
+"102
+[; ;cases.c: 102:         }
 }
 [e ++ _i -> 1 `i ]
-[e $ < _i -> 7 `i 397  ]
-[e :U 398 ]
+[e $ < _i -> 5 `i 398  ]
+[e :U 399 ]
 }
-"98
-[; ;cases.c: 98:      x=0;
-[e = _x -> 0 `i ]
-"99
-[; ;cases.c: 99:     return;
-[e $UE 396  ]
-"100
-[; ;cases.c: 100: }
-[e :UE 396 ]
+"103
+[; ;cases.c: 103:         return wait_cmd_State;
+[e ) -> . `E3379 1 `uc ]
+[e $UE 395  ]
+"104
+[; ;cases.c: 104:     }
+}
+[e :U 397 ]
+"105
+[; ;cases.c: 105: }
+[e :UE 395 ]
+}
+"107
+[; ;cases.c: 107: void end()
+[v _end `(v ~T0 @X0 1 ef ]
+"108
+[; ;cases.c: 108: {
+{
+[e :U _end ]
+[f ]
+"109
+[; ;cases.c: 109:     UARTWrite(13);
+[e ( _UARTWrite (1 -> -> 13 `i `uc ]
+"110
+[; ;cases.c: 110:     for(int i=0;i<7;i++)
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $ < _i -> 7 `i 402  ]
+[e $U 403  ]
+[e :U 402 ]
+"111
+[; ;cases.c: 111:     {
+{
+"112
+[; ;cases.c: 112:         UARTWrite(gracias[i]);
+[e ( _UARTWrite (1 *U + &U _gracias * -> -> _i `ui `ux -> -> # *U &U _gracias `ui `ux ]
+"113
+[; ;cases.c: 113:     }
+}
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 7 `i 402  ]
+[e :U 403 ]
+}
+"114
+[; ;cases.c: 114:     ControlFlagVerification = 0;
+[e = _ControlFlagVerification -> 0 `i ]
+"115
+[; ;cases.c: 115:     return;
+[e $UE 401  ]
+"116
+[; ;cases.c: 116: }
+[e :UE 401 ]
 }

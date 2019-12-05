@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include "main.h"
 #include "UART.h"
 #include "cases.h"
 #include "Definiciones.h"
@@ -10,8 +11,10 @@
 #include "Interruptions.h"
 #include "PWM.h"
 
-int Movimiento(void) {
-    if(click==1){
+int Movimiento(void)
+{
+
+    if(click == ON){
         PWM();
         SOLENOIDE=HIGH;
         __delay_ms(100);
@@ -22,7 +25,7 @@ int Movimiento(void) {
        }
         
     }
-    else if(click==0){
+    else if(click == OFF){
         SOLENOIDE=HIGH;
         PWM();
         SOLENOIDE=LOW;
@@ -31,5 +34,8 @@ int Movimiento(void) {
        UARTWrite(loquequieras2[i]);
        }
     }
-    x = 1;
+    
+    ControlFlagVerification = ON;
+    
+    return ControlFlagVerification;
 }
