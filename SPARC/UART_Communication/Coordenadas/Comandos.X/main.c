@@ -45,7 +45,14 @@ void main(void) {
     
     Configuracion();
     InterruptionsConfiguration();
-    GoToCero();
+    CoordAntX=1;
+    CoordAntY=1;
+    ENABLE_A=DISABLE_STEPPER_MOTORS;
+    ENABLE_B=DISABLE_STEPPER_MOTORS;
+    InicialX();
+    InicialY();
+    GoToInitialXPosition();
+    GoToInitialYPosition();
     
     while(1)
     { 
@@ -55,18 +62,6 @@ void main(void) {
         Movimiento();
         PrintMyActulPosition();
     }
-}
-
-void GoToCero(void)
-{
-    CoordAntX=1;
-    CoordAntY=1;
-    ENABLE_A=1;
-    ENABLE_B=1;
-    InicialX();
-    InicialY();
-    GoToInitialXPosition();
-    GoToInitialYPosition();
 }
 
 void PrintMyActulPosition(void)

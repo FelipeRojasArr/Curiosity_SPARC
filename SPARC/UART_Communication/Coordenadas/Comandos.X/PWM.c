@@ -11,9 +11,6 @@
 #include "Interruptions.h"
 #include "PWM.h"
 
-#define ENABLE_STEPPER_MOTORS   0
-#define DISABLE_STEPPER_MOTORS   1
-
 /*
   La función de PWM:
   - Obtiene la distancia total a recorrer.
@@ -36,14 +33,14 @@ void PWM(){
         
     /*Definimos las direcciones de los motores para x*/
     if (CoordRelatX<0){
-        DIR_A=0;
-        DIR_B=0;
+        DIR_A= ANTICLOCKWISE_TURN;
+        DIR_B= ANTICLOCKWISE_TURN;
         CoordRelatX=CoordRelatX*(-1);
         BanderaDisX= NEGATIVO;
     }
         else {
-            DIR_A=1;
-            DIR_B=1;
+            DIR_A= CLOCKWISE_TURN;
+            DIR_B= CLOCKWISE_TURN;
             BanderaDisX= POSITIVO;
         } 
         
@@ -64,14 +61,14 @@ void PWM(){
         else CoordRelatY=cord_y-CoordAntY;
     
     if (CoordRelatY<0){
-        DIR_A=1;
-        DIR_B=0;
+        DIR_A= CLOCKWISE_TURN;
+        DIR_B= ANTICLOCKWISE_TURN;
         CoordRelatY=CoordRelatY*(-1);
         BanderaDisY= NEGATIVO;
     }
     else {
-        DIR_A=0;
-        DIR_B=1;
+        DIR_A= ANTICLOCKWISE_TURN;
+        DIR_B= CLOCKWISE_TURN;
          BanderaDisY= POSITIVO;  
      } 
    
@@ -89,16 +86,16 @@ void PWM(){
 void ContarPulsos(int pasos){
     PasosActuales=0;
     ons=0;
-    ENABLE_A=0;
-    ENABLE_B=0;
+    ENABLE_A= ENABLE_STEPPER_MOTORS;
+    ENABLE_B= ENABLE_STEPPER_MOTORS;
     while(PasosActuales< pasos)
     {
         if (PORTCbits.CCP1==1) OneShot();
         if(ons==1) ResetOneShot();
     }
     
-    ENABLE_A=1;
-    ENABLE_B=1;
+    ENABLE_A= DISABLE_STEPPER_MOTORS;
+    ENABLE_B= DISABLE_STEPPER_MOTORS;
     
     return;  
 }
@@ -116,3 +113,59 @@ void ResetOneShot(void){
     if(PORTCbits.CCP1==0)ons=0;
     return;
 }
+
+
+void InicialX(void)
+{
+    DIR_A= ANTICLOCKWISE_TURN;
+    DIR_B= ANTICLOCKWISE_TURN;
+    while(CoordAntX!=0){
+        if(CoordAntX==0)
+        {
+            ENABLE_A= DISABLE_STEPPER_MOTORS;
+            ENABLE_B= DISABLE_STEPPER_MOTORS;
+        }else{ 
+            if(CoordAntX!=0)
+            {
+                ENABLE_A= ENABLE_STEPPER_MOTORS;
+                ENABLE_B= ENABLE_STEPPER_MOTORS; 
+            }
+        }
+    }
+}
+
+void InicialY(void)
+{ 
+    DIR_A= CLOCKWISE_TURN;
+    DIR_B= ANTICLOCKWISE_TURN;  
+    
+    do{
+    ENABLE_A= ENABLE_STEPPER_MOTORS;
+    ENABLE_B= ENABLE_STEPPER_MOTORS;
+    }while(CoordAntY!=0);
+    
+    ENABLE_A= DISABLE_STEPPER_MOTORS;
+    ENABLE_B= DISABLE_STEPPER_MOTORS;
+    
+}
+
+void GoToInitialXPosition(void)
+{
+    DIR_A= CLOCKWISE_TURN;
+    DIR_B= CLOCKWISE_TURN;
+    ContarPulsos(25);
+    ENABLE_A= DISABLE_STEPPER_MOTORS;
+    ENABLE_B= DISABLE_STEPPER_MOTORS;
+    CoordAntX = 0;
+}
+
+void GoToInitialYPosition(void)
+{
+    DIR_A= ANTICLOCKWISE_TURN;
+    DIR_B= CLOCKWISE_TURN; 
+    ContarPulsos(25);
+    ENABLE_A= DISABLE_STEPPER_MOTORS;
+    ENABLE_B= DISABLE_STEPPER_MOTORS;
+    CoordAntY = 0;
+}
+

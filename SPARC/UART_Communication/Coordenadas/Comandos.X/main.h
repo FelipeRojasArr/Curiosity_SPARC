@@ -17,7 +17,7 @@
 #define ENTER                       0x0D
 #define Y_LIMITS                    300
 #define X_LIMITS                    300
-void GoToCero(void);
+
 void GoToInitialYPosition(void);
 void GoToInitialXPosition(void);
 void PrintMyActulPosition(void);

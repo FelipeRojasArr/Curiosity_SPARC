@@ -5764,8 +5764,7 @@ typedef uint32_t uint_fast32_t;
 # 5 "Movimiento.c" 2
 
 # 1 "./main.h" 1
-# 20 "./main.h"
-void GoToCero(void);
+# 21 "./main.h"
 void GoToInitialYPosition(void);
 void GoToInitialXPosition(void);
 void PrintMyActulPosition(void);

@@ -5764,8 +5764,7 @@ typedef uint32_t uint_fast32_t;
 # 5 "PWM.c" 2
 
 # 1 "./main.h" 1
-# 20 "./main.h"
-void GoToCero(void);
+# 21 "./main.h"
 void GoToInitialYPosition(void);
 void GoToInitialXPosition(void);
 void PrintMyActulPosition(void);
@@ -5941,7 +5940,7 @@ void HaltMotors(void);
     unsigned int BanderaDisX;
     unsigned int BanderaDisY;
 # 12 "PWM.c" 2
-# 26 "PWM.c"
+# 23 "PWM.c"
 void PWM(){
 
     BanderaDisX= 1;
@@ -5955,14 +5954,14 @@ void PWM(){
 
 
     if (CoordRelatX<0){
-        PORTDbits.RD0=0;
-        PORTDbits.RD1=0;
+        PORTDbits.RD0= 1;
+        PORTDbits.RD1= 1;
         CoordRelatX=CoordRelatX*(-1);
         BanderaDisX= 0;
     }
         else {
-            PORTDbits.RD0=1;
-            PORTDbits.RD1=1;
+            PORTDbits.RD0= 0;
+            PORTDbits.RD1= 0;
             BanderaDisX= 1;
         }
 
@@ -5983,14 +5982,14 @@ void PWM(){
         else CoordRelatY=cord_y-CoordAntY;
 
     if (CoordRelatY<0){
-        PORTDbits.RD0=1;
-        PORTDbits.RD1=0;
+        PORTDbits.RD0= 0;
+        PORTDbits.RD1= 1;
         CoordRelatY=CoordRelatY*(-1);
         BanderaDisY= 0;
     }
     else {
-        PORTDbits.RD0=0;
-        PORTDbits.RD1=1;
+        PORTDbits.RD0= 1;
+        PORTDbits.RD1= 0;
          BanderaDisY= 1;
      }
 
@@ -6008,16 +6007,16 @@ void PWM(){
 void ContarPulsos(int pasos){
     PasosActuales=0;
     ons=0;
-    PORTDbits.RD2=0;
-    PORTDbits.RD3=0;
+    PORTDbits.RD2= 0;
+    PORTDbits.RD3= 0;
     while(PasosActuales< pasos)
     {
         if (PORTCbits.CCP1==1) OneShot();
         if(ons==1) ResetOneShot();
     }
 
-    PORTDbits.RD2=1;
-    PORTDbits.RD3=1;
+    PORTDbits.RD2= 1;
+    PORTDbits.RD3= 1;
 
     return;
 }
@@ -6034,4 +6033,59 @@ void ResetOneShot(void){
     if(PORTCbits.CCP1==1)return;
     if(PORTCbits.CCP1==0)ons=0;
     return;
+}
+
+
+void InicialX(void)
+{
+    PORTDbits.RD0= 1;
+    PORTDbits.RD1= 1;
+    while(CoordAntX!=0){
+        if(CoordAntX==0)
+        {
+            PORTDbits.RD2= 1;
+            PORTDbits.RD3= 1;
+        }else{
+            if(CoordAntX!=0)
+            {
+                PORTDbits.RD2= 0;
+                PORTDbits.RD3= 0;
+            }
+        }
+    }
+}
+
+void InicialY(void)
+{
+    PORTDbits.RD0= 0;
+    PORTDbits.RD1= 1;
+
+    do{
+    PORTDbits.RD2= 0;
+    PORTDbits.RD3= 0;
+    }while(CoordAntY!=0);
+
+    PORTDbits.RD2= 1;
+    PORTDbits.RD3= 1;
+
+}
+
+void GoToInitialXPosition(void)
+{
+    PORTDbits.RD0= 0;
+    PORTDbits.RD1= 0;
+    ContarPulsos(25);
+    PORTDbits.RD2= 1;
+    PORTDbits.RD3= 1;
+    CoordAntX = 0;
+}
+
+void GoToInitialYPosition(void)
+{
+    PORTDbits.RD0= 1;
+    PORTDbits.RD1= 0;
+    ContarPulsos(25);
+    PORTDbits.RD2= 1;
+    PORTDbits.RD3= 1;
+    CoordAntY = 0;
 }

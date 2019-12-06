@@ -5764,8 +5764,7 @@ typedef uint32_t uint_fast32_t;
 # 5 "main.c" 2
 
 # 1 "./main.h" 1
-# 20 "./main.h"
-void GoToCero(void);
+# 21 "./main.h"
 void GoToInitialYPosition(void);
 void GoToInitialXPosition(void);
 void PrintMyActulPosition(void);
@@ -5977,7 +5976,14 @@ void main(void) {
 
     Configuracion();
     InterruptionsConfiguration();
-    GoToCero();
+    CoordAntX=1;
+    CoordAntY=1;
+    PORTDbits.RD2=1;
+    PORTDbits.RD3=1;
+    InicialX();
+    InicialY();
+    GoToInitialXPosition();
+    GoToInitialYPosition();
 
     while(1)
     {
@@ -5987,18 +5993,6 @@ void main(void) {
         Movimiento();
         PrintMyActulPosition();
     }
-}
-
-void GoToCero(void)
-{
-    CoordAntX=1;
-    CoordAntY=1;
-    PORTDbits.RD2=1;
-    PORTDbits.RD3=1;
-    InicialX();
-    InicialY();
-    GoToInitialXPosition();
-    GoToInitialYPosition();
 }
 
 void PrintMyActulPosition(void)
