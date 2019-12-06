@@ -1,8 +1,8 @@
 Version 4.0 HI-TECH Software Intermediate Code
 "53 ./cases.h
 [; ;./cases.h: 53: systemState NextState;
-[c E3379 0 1 2 3 4 5 .. ]
-[n E3379 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
+[c E3381 0 1 2 3 4 5 .. ]
+[n E3381 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
 "46
 [; ;./cases.h: 46: uint8_t start(void);
 [v _start `(uc ~T0 @X0 0 ef ]
@@ -551,7 +551,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _ControlFlagVerification `i ~T0 @X0 1 e ]
 "53
 [; ;./cases.h: 53: systemState NextState;
-[v _NextState `E3379 ~T0 @X0 1 e ]
+[v _NextState `E3381 ~T0 @X0 1 e ]
 "55
 [; ;./cases.h: 55: uint8_t click;
 [v _click `uc ~T0 @X0 1 e ]
@@ -580,7 +580,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "31
 [p x LPT1OSC = OFF ]
 "32
-[p x MCLRE = OFF ]
+[p x MCLRE = ON ]
 "35
 [p x STVREN = ON ]
 "36
@@ -668,7 +668,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "17
 [; ;verification.c: 17:     NextState = iddle_State;
-[e = _NextState . `E3379 0 ]
+[e = _NextState . `E3381 0 ]
 "18
 [; ;verification.c: 18:     while(ControlFlagVerification == 1)
 [e $U 369  ]
@@ -688,7 +688,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "23
 [; ;verification.c: 23:                 NextState= start();
-[e = _NextState -> ( _start ..  `E3379 ]
+[e = _NextState -> ( _start ..  `E3381 ]
 "24
 [; ;verification.c: 24:             }
 }
@@ -701,7 +701,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "28
 [; ;verification.c: 28:                 NextState=cmd();
-[e = _NextState -> ( _cmd ..  `E3379 ]
+[e = _NextState -> ( _cmd ..  `E3381 ]
 "29
 [; ;verification.c: 29:             }
 }
@@ -714,7 +714,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "33
 [; ;verification.c: 33:                 NextState=Par_Validated();
-[e = _NextState -> ( _Par_Validated ..  `E3379 ]
+[e = _NextState -> ( _Par_Validated ..  `E3381 ]
 "34
 [; ;verification.c: 34:             }
 }
@@ -727,7 +727,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "38
 [; ;verification.c: 38:                 NextState=Ins_Validated();
-[e = _NextState -> ( _Ins_Validated ..  `E3379 ]
+[e = _NextState -> ( _Ins_Validated ..  `E3381 ]
 "39
 [; ;verification.c: 39:             }
 }
@@ -740,7 +740,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "43
 [; ;verification.c: 43:                 NextState=Coord_Validated();
-[e = _NextState -> ( _Coord_Validated ..  `E3379 ]
+[e = _NextState -> ( _Coord_Validated ..  `E3381 ]
 "44
 [; ;verification.c: 44:             }
 }
@@ -766,7 +766,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "53
 [; ;verification.c: 53:                 NextState = wait_cmd_State;
-[e = _NextState . `E3379 1 ]
+[e = _NextState . `E3381 1 ]
 "54
 [; ;verification.c: 54:             }
 }
@@ -778,12 +778,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 372  ]
 [e :U 373 ]
-[e [\ -> _NextState `ui , $ -> . `E3379 0 `ui 374
- , $ -> . `E3379 1 `ui 375
- , $ -> . `E3379 2 `ui 376
- , $ -> . `E3379 3 `ui 377
- , $ -> . `E3379 4 `ui 378
- , $ -> . `E3379 5 `ui 379
+[e [\ -> _NextState `ui , $ -> . `E3381 0 `ui 374
+ , $ -> . `E3381 1 `ui 375
+ , $ -> . `E3381 2 `ui 376
+ , $ -> . `E3381 3 `ui 377
+ , $ -> . `E3381 4 `ui 378
+ , $ -> . `E3381 5 `ui 379
  380 ]
 [e :U 372 ]
 "57

@@ -5845,7 +5845,7 @@ uint8_t click;
 #pragma config CCP2MX = ON
 #pragma config PBADEN = ON
 #pragma config LPT1OSC = OFF
-#pragma config MCLRE = OFF
+#pragma config MCLRE = ON
 
 
 #pragma config STVREN = ON

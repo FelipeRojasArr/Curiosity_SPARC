@@ -47,7 +47,6 @@ char UARTRead(void){
         TXSTA1bits.TXEN = ON;
         RCSTA1bits.CREN = ON;
     }
-    
     while (PIR1bits.RCIF == 0);          // Mientras RCRGEG1 este vacio has nada hasta                
  
     Lecture = RCREG; // se guarda lo que llego de RCREG1 en viene

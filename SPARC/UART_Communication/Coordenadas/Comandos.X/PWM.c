@@ -11,6 +11,8 @@
 #include "Interruptions.h"
 #include "PWM.h"
 
+#define ENABLE_STEPPER_MOTORS   0
+#define DISABLE_STEPPER_MOTORS   1
 
 /*
   La función de PWM:

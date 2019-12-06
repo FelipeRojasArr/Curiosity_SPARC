@@ -654,7 +654,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "31
 [p x LPT1OSC = OFF ]
 "32
-[p x MCLRE = OFF ]
+[p x MCLRE = ON ]
 "35
 [p x STVREN = ON ]
 "36

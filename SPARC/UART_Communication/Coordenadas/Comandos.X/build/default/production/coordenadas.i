@@ -5845,7 +5845,7 @@ uint8_t click;
 #pragma config CCP2MX = ON
 #pragma config PBADEN = ON
 #pragma config LPT1OSC = OFF
-#pragma config MCLRE = OFF
+#pragma config MCLRE = ON
 
 
 #pragma config STVREN = ON
@@ -5936,7 +5936,7 @@ void HaltMotors(void);
 
 
 int coord(char* P1, char*L, uint16_t* x , uint16_t* y , char*P2){
-  char buffer [9];
+  char buffer[EndCommandCharacter+1];
         char read;
         char flagBuffer = 0;
         char counterRevision = 0;
@@ -5944,13 +5944,22 @@ int coord(char* P1, char*L, uint16_t* x , uint16_t* y , char*P2){
         RCSTAbits.CREN = 1;
 
         for(int i=StartCommandCharacter; i<(EndCommandCharacter+1); i++){
-            if(i == (EndCommandCharacter+1))
+            read= UARTRead();
+            buffer[i]=read;
+
+            if(i == EndCommandCharacter)
             {
                 RCSTAbits.CREN = 0;
             }
+        }
 
-            read= UARTRead();
-            buffer[i]=read;
+        if(RCSTAbits.OERR == 1)
+        {
+            TXSTA1bits.TXEN = 0;
+            RCSTA1bits.CREN = 0;
+            _delay((unsigned long)((15)*(8000000L/4000.0)));
+            TXSTA1bits.TXEN = 1;
+            RCSTA1bits.CREN = 1;
 
         }
 
@@ -5979,6 +5988,7 @@ int coord(char* P1, char*L, uint16_t* x , uint16_t* y , char*P2){
         {
             *x = 1*(buffer[CharacterX3]-48) + 10*(buffer[CharacterX2]-48) + 100*(buffer[CharacterX1]-48);
             *y = 1*(buffer[CharacterY3]-48) + 10*(buffer[CharacterY2]-48) + 100*(buffer[CharacterY1]-48);
-        return 1;
+
+            return 1;
         }
 }

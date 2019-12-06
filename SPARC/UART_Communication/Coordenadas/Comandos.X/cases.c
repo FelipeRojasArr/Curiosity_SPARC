@@ -12,28 +12,17 @@
 #include "PWM.h"
 
 
-char init[10]="Waiting...";
-char e_c[13]="Enter_command";
-char Error[5]="Error";
-char gracias[7]="Gracias" ;
-
 uint8_t start()
 {
-    UARTWrite(13);
-    for(int i=0;i<10;i++){
-        UARTWrite(init[i]);
-    }
-     
+    UARTWrite(ENTER);
+    myPrintf("Waiting...");     
     return wait_cmd_State;
 }
 
 uint8_t cmd()
 {
-    UARTWrite(13);
-    
-    for(int i=0;i<10;i++){
-        UARTWrite(e_c[i]);
-    }
+    UARTWrite(ENTER);
+    myPrintf("Enter command");     
     
     if(coord(&Par1,&letter,&cord_x, &cord_y, &Par2) == TRUE)
     {
@@ -41,10 +30,13 @@ uint8_t cmd()
     }
     else
     {
-        UARTWrite(13);
-        for(int i=0;i<5;i++){
-            UARTWrite(Error[i]);
-        }
+#ifdef DEBUG
+        myPrintf("Commands were not recognized");
+        UARTWrite(SALTO_RENGLON);
+#else
+        UARTWrite(COMMAND_ERROR);
+        UARTWrite(SALTO_RENGLON);
+#endif //DEBUG
         return wait_cmd_State;
     }
 }
@@ -57,10 +49,15 @@ uint8_t Par_Validated()
     }
     else
     {
-        UARTWrite(13);
-        for(int i=0;i<5;i++){
-            UARTWrite(Error[i]);
-        }
+#ifdef DEBUG
+        myPrintf("Frames are not inserted correctly");
+        UARTWrite(SALTO_RENGLON);
+#else
+        UARTWrite(FRAME_ERROR);
+        UARTWrite(SALTO_RENGLON);
+#endif //DEBUG
+        
+        
         return wait_cmd_State;
     } 
 }
@@ -80,37 +77,47 @@ uint8_t Ins_Validated()
     }
     else
     {
-        UARTWrite(13);
-        for(int i=0;i<5;i++){
-            UARTWrite(Error[i]);
-        }
+
+#ifdef DEBUG
+        myPrintf("Touch Instrucction is not recognized");
+        UARTWrite(SALTO_RENGLON);
+#else
+        UARTWrite(TYPE_OF_TOUCH_ERROR);
+        UARTWrite(SALTO_RENGLON);
+#endif //DEBUG
         return wait_cmd_State;
     }
 }
 
 uint8_t Coord_Validated()
 {
-    if(cord_x<=300 && cord_y<=300)
+    if(cord_x<=X_LIMITS && cord_y<=Y_LIMITS)
     {
         return end_State;
     }
     else
     {
-        UARTWrite(13);
-        for(int i=0;i<5;i++){
-            UARTWrite(Error[i]);
-        }
+#ifdef DEBUG
+        myPrintf("Surpasses coordinates size");
+        UARTWrite(SALTO_RENGLON);
+#else
+        UARTWrite(TYPE_OF_TOUCH_ERROR);
+        UARTWrite(SALTO_RENGLON);
+#endif //DEBUG
         return wait_cmd_State;
     }
 }
 
 void end()
 {
-    UARTWrite(13);
-    for(int i=0;i<7;i++)
-    {
-        UARTWrite(gracias[i]);
-    }
+    UARTWrite(ENTER);
+#ifdef DEBUG
+        myPrintf("Verify Completed");
+        UARTWrite(SALTO_RENGLON);
+#else
+        UARTWrite(TYPE_OF_TOUCH_ERROR);
+        UARTWrite(SALTO_RENGLON);
+#endif //DEBUG
     ControlFlagVerification = OFF;
     return;
 }

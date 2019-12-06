@@ -5764,12 +5764,12 @@ typedef uint32_t uint_fast32_t;
 # 5 "UART.c" 2
 
 # 1 "./main.h" 1
-
-
+# 20 "./main.h"
 void GoToCero(void);
 void GoToInitialYPosition(void);
 void GoToInitialXPosition(void);
 void PrintMyActulPosition(void);
+void myPrintf(unsigned char *PointString);
 # 6 "UART.c" 2
 
 # 1 "./UART.h" 1
@@ -5854,7 +5854,7 @@ uint8_t click;
 #pragma config CCP2MX = ON
 #pragma config PBADEN = ON
 #pragma config LPT1OSC = OFF
-#pragma config MCLRE = OFF
+#pragma config MCLRE = ON
 
 
 #pragma config STVREN = ON
@@ -5979,7 +5979,6 @@ char UARTRead(void){
         TXSTA1bits.TXEN = 1;
         RCSTA1bits.CREN = 1;
     }
-
     while (PIR1bits.RCIF == 0);
 
     Lecture = RCREG;

@@ -5764,12 +5764,12 @@ typedef uint32_t uint_fast32_t;
 # 5 "PWM.c" 2
 
 # 1 "./main.h" 1
-
-
+# 20 "./main.h"
 void GoToCero(void);
 void GoToInitialYPosition(void);
 void GoToInitialXPosition(void);
 void PrintMyActulPosition(void);
+void myPrintf(unsigned char *PointString);
 # 6 "PWM.c" 2
 
 # 1 "./UART.h" 1
@@ -5854,7 +5854,7 @@ uint8_t click;
 #pragma config CCP2MX = ON
 #pragma config PBADEN = ON
 #pragma config LPT1OSC = OFF
-#pragma config MCLRE = OFF
+#pragma config MCLRE = ON
 
 
 #pragma config STVREN = ON
@@ -5941,7 +5941,7 @@ void HaltMotors(void);
     unsigned int BanderaDisX;
     unsigned int BanderaDisY;
 # 12 "PWM.c" 2
-# 24 "PWM.c"
+# 26 "PWM.c"
 void PWM(){
 
     BanderaDisX= 1;

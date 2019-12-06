@@ -12,7 +12,7 @@
 
 
 int coord(char* P1, char*L, uint16_t* x , uint16_t* y , char*P2){
-		char buffer [9];
+		char buffer[EndCommandCharacter+1];
         char read;
         char flagBuffer = OFF;
         char counterRevision = 0;
@@ -20,14 +20,23 @@ int coord(char* P1, char*L, uint16_t* x , uint16_t* y , char*P2){
         TURN_ON_RECEIVER
         
         for(int i=StartCommandCharacter; i<(EndCommandCharacter+1); i++){
-            if(i == (EndCommandCharacter+1))
-            {
-                TURN_OFF_RECEIVER
-            }
-            
             read= UARTRead(); 
             buffer[i]=read;
             
+            if(i == EndCommandCharacter)
+            {
+                TURN_OFF_RECEIVER
+            }
+        }
+        
+        if(RCSTAbits.OERR == ON)                    //Error has ocurred
+        {
+            TXSTA1bits.TXEN = OFF;
+            RCSTA1bits.CREN = OFF;
+            __delay_ms(15);
+            TXSTA1bits.TXEN = ON;
+            RCSTA1bits.CREN = ON;
+                
         }
         
         *P1= buffer[StartCommandCharacter];
@@ -55,6 +64,7 @@ int coord(char* P1, char*L, uint16_t* x , uint16_t* y , char*P2){
         {
             *x = UNIT*(buffer[CharacterX3]-FIRST_ASCII_NUMBER) + TEN*(buffer[CharacterX2]-FIRST_ASCII_NUMBER) + HUNDRED*(buffer[CharacterX1]-FIRST_ASCII_NUMBER);
             *y = UNIT*(buffer[CharacterY3]-FIRST_ASCII_NUMBER) + TEN*(buffer[CharacterY2]-FIRST_ASCII_NUMBER) + HUNDRED*(buffer[CharacterY1]-FIRST_ASCII_NUMBER);
-        return TRUE;
+            
+            return TRUE;
         }  
 }

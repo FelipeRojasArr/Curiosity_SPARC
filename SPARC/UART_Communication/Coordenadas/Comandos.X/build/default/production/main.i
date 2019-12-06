@@ -5764,12 +5764,12 @@ typedef uint32_t uint_fast32_t;
 # 5 "main.c" 2
 
 # 1 "./main.h" 1
-
-
+# 20 "./main.h"
 void GoToCero(void);
 void GoToInitialYPosition(void);
 void GoToInitialXPosition(void);
 void PrintMyActulPosition(void);
+void myPrintf(unsigned char *PointString);
 # 6 "main.c" 2
 
 # 1 "./UART.h" 1
@@ -5854,7 +5854,7 @@ uint8_t click;
 #pragma config CCP2MX = ON
 #pragma config PBADEN = ON
 #pragma config LPT1OSC = OFF
-#pragma config MCLRE = OFF
+#pragma config MCLRE = ON
 
 
 #pragma config STVREN = ON
@@ -5943,7 +5943,6 @@ void HaltMotors(void);
 # 12 "main.c" 2
 
 
-
 void __attribute__((picinterrupt(("")))) INT_ISR(void)
 {
     if(INTCONbits.INT0IF == 1)
@@ -5977,8 +5976,8 @@ void __attribute__((picinterrupt(("")))) INT_ISR(void)
 void main(void) {
 
     Configuracion();
-
-
+    InterruptionsConfiguration();
+    GoToCero();
 
     while(1)
     {
@@ -5986,14 +5985,7 @@ void main(void) {
         verification();
         PrintMyActulPosition();
         Movimiento();
-
-
-
-
-
-
         PrintMyActulPosition();
-
     }
 }
 
@@ -6027,8 +6019,19 @@ void PrintMyActulPosition(void)
 
             UARTWrite(a[i]);
         }
+        UARTWrite(0x2C);
         for(int i=0; i<3; i++){
 
             UARTWrite(b[i]);
         }
+}
+
+void myPrintf(unsigned char *PointString)
+{
+    for (unsigned char i = 0; i < 255; i++) {
+        if (PointString[i] == ((void*)0)) {
+            break;
+        } else
+            UARTWrite(PointString[i]);
+    }
 }

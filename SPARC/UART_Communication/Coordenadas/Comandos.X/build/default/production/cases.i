@@ -5764,12 +5764,12 @@ typedef uint32_t uint_fast32_t;
 # 5 "cases.c" 2
 
 # 1 "./main.h" 1
-
-
+# 20 "./main.h"
 void GoToCero(void);
 void GoToInitialYPosition(void);
 void GoToInitialXPosition(void);
 void PrintMyActulPosition(void);
+void myPrintf(unsigned char *PointString);
 # 6 "cases.c" 2
 
 # 1 "./UART.h" 1
@@ -5854,7 +5854,7 @@ uint8_t click;
 #pragma config CCP2MX = ON
 #pragma config PBADEN = ON
 #pragma config LPT1OSC = OFF
-#pragma config MCLRE = OFF
+#pragma config MCLRE = ON
 
 
 #pragma config STVREN = ON
@@ -5944,28 +5944,17 @@ void HaltMotors(void);
 
 
 
-char init[10]="Waiting...";
-char e_c[13]="Enter_command";
-char Error[5]="Error";
-char gracias[7]="Gracias" ;
-
 uint8_t start()
 {
-    UARTWrite(13);
-    for(int i=0;i<10;i++){
-        UARTWrite(init[i]);
-    }
-
+    UARTWrite(0x0D);
+    myPrintf("Waiting...");
     return wait_cmd_State;
 }
 
 uint8_t cmd()
 {
-    UARTWrite(13);
-
-    for(int i=0;i<10;i++){
-        UARTWrite(e_c[i]);
-    }
+    UARTWrite(0x0D);
+    myPrintf("Enter command");
 
     if(coord(&Par1,&letter,&cord_x, &cord_y, &Par2) == 1)
     {
@@ -5973,10 +5962,13 @@ uint8_t cmd()
     }
     else
     {
-        UARTWrite(13);
-        for(int i=0;i<5;i++){
-            UARTWrite(Error[i]);
-        }
+
+        myPrintf("Commands were not recognized");
+        UARTWrite(0x0A);
+
+
+
+
         return wait_cmd_State;
     }
 }
@@ -5989,10 +5981,15 @@ uint8_t Par_Validated()
     }
     else
     {
-        UARTWrite(13);
-        for(int i=0;i<5;i++){
-            UARTWrite(Error[i]);
-        }
+
+        myPrintf("Frames are not inserted correctly");
+        UARTWrite(0x0A);
+
+
+
+
+
+
         return wait_cmd_State;
     }
 }
@@ -6012,10 +6009,14 @@ uint8_t Ins_Validated()
     }
     else
     {
-        UARTWrite(13);
-        for(int i=0;i<5;i++){
-            UARTWrite(Error[i]);
-        }
+
+
+        myPrintf("Touch Instrucction is not recognized");
+        UARTWrite(0x0A);
+
+
+
+
         return wait_cmd_State;
     }
 }
@@ -6028,21 +6029,27 @@ uint8_t Coord_Validated()
     }
     else
     {
-        UARTWrite(13);
-        for(int i=0;i<5;i++){
-            UARTWrite(Error[i]);
-        }
+
+        myPrintf("Surpasses coordinates size");
+        UARTWrite(0x0A);
+
+
+
+
         return wait_cmd_State;
     }
 }
 
 void end()
 {
-    UARTWrite(13);
-    for(int i=0;i<7;i++)
-    {
-        UARTWrite(gracias[i]);
-    }
+    UARTWrite(0x0D);
+
+        myPrintf("Verify Completed");
+        UARTWrite(0x0A);
+
+
+
+
     ControlFlagVerification = 0;
     return;
 }
