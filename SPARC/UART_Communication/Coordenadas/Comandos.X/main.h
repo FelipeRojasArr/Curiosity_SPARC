@@ -2,6 +2,7 @@
 
 #define DEBUG
 
+#define MAX_SIZE_OF_UCHAR           255
 #define NUMBER_OF_ASCII_COORDINATES 3
 #define HUNDRED_NUMBER_POISITION    0
 #define TENS_NUMBER_POISITION       1

@@ -36,8 +36,7 @@ int coord(char* P1, char*L, uint16_t* x , uint16_t* y , char*P2){
             RCSTA1bits.CREN = OFF;
             __delay_ms(15);
             TXSTA1bits.TXEN = ON;
-            RCSTA1bits.CREN = ON;
-                
+            RCSTA1bits.CREN = ON;     
         }
         
         *P1= buffer[StartCommandCharacter];
@@ -69,3 +68,4 @@ int coord(char* P1, char*L, uint16_t* x , uint16_t* y , char*P2){
             return TRUE;
         }  
 }
+

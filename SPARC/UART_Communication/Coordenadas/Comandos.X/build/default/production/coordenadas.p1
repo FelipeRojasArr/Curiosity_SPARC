@@ -1,6 +1,6 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"53 ./cases.h
-[; ;./cases.h: 53: systemState NextState;
+"54 ./cases.h
+[; ;./cases.h: 54: systemState NextState;
 [c E3375 0 1 2 3 4 5 .. ]
 [n E3375 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
 "4947 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
@@ -609,29 +609,29 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8893
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"15 ./cases.h
-[; ;./cases.h: 15: char Par1;
+"16 ./cases.h
+[; ;./cases.h: 16: char Par1;
 [v _Par1 `uc ~T0 @X0 1 e ]
-"16
-[; ;./cases.h: 16: char letter;
-[v _letter `uc ~T0 @X0 1 e ]
 "17
-[; ;./cases.h: 17: unsigned int cord_x;
-[v _cord_x `ui ~T0 @X0 1 e ]
+[; ;./cases.h: 17: char letter;
+[v _letter `uc ~T0 @X0 1 e ]
 "18
-[; ;./cases.h: 18: unsigned int cord_y;
-[v _cord_y `ui ~T0 @X0 1 e ]
+[; ;./cases.h: 18: unsigned int cord_x;
+[v _cord_x `ui ~T0 @X0 1 e ]
 "19
-[; ;./cases.h: 19: char Par2;
+[; ;./cases.h: 19: unsigned int cord_y;
+[v _cord_y `ui ~T0 @X0 1 e ]
+"20
+[; ;./cases.h: 20: char Par2;
 [v _Par2 `uc ~T0 @X0 1 e ]
-"21
-[; ;./cases.h: 21: int ControlFlagVerification;
+"22
+[; ;./cases.h: 22: int ControlFlagVerification;
 [v _ControlFlagVerification `i ~T0 @X0 1 e ]
-"53
-[; ;./cases.h: 53: systemState NextState;
+"54
+[; ;./cases.h: 54: systemState NextState;
 [v _NextState `E3375 ~T0 @X0 1 e ]
-"55
-[; ;./cases.h: 55: uint8_t click;
+"56
+[; ;./cases.h: 56: uint8_t click;
 [v _click `uc ~T0 @X0 1 e ]
 "14 ./Configuracion.h
 [p x FOSC = INTOSC_EC ]
@@ -703,39 +703,36 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x EBTR3 = OFF ]
 "68
 [p x EBTRB = OFF ]
-"13 ./PWM.h
-[; ;./PWM.h: 13:     unsigned int CoordAntX;
+"15 ./PWM.h
+[; ;./PWM.h: 15:     unsigned int CoordAntX;
 [v _CoordAntX `ui ~T0 @X0 1 e ]
-"14
-[; ;./PWM.h: 14:     unsigned int CoordAntY;
+"16
+[; ;./PWM.h: 16:     unsigned int CoordAntY;
 [v _CoordAntY `ui ~T0 @X0 1 e ]
-"17
-[; ;./PWM.h: 17:     int CoordRelatX;
+"19
+[; ;./PWM.h: 19:     int CoordRelatX;
 [v _CoordRelatX `i ~T0 @X0 1 e ]
-"18
-[; ;./PWM.h: 18:     int CoordRelatY;
+"20
+[; ;./PWM.h: 20:     int CoordRelatY;
 [v _CoordRelatY `i ~T0 @X0 1 e ]
-"21
-[; ;./PWM.h: 21:     int pasosRecorridos;
-[v _pasosRecorridos `i ~T0 @X0 1 e ]
+"23
+[; ;./PWM.h: 23:     unsigned int ActualSteps;
+[v _ActualSteps `ui ~T0 @X0 1 e ]
 "24
-[; ;./PWM.h: 24:     unsigned int PasosActuales;
-[v _PasosActuales `ui ~T0 @X0 1 e ]
-"25
-[; ;./PWM.h: 25:     unsigned int ons;
+[; ;./PWM.h: 24:     unsigned int ons;
 [v _ons `ui ~T0 @X0 1 e ]
 "27
-[; ;./PWM.h: 27:     unsigned int PasosX;
-[v _PasosX `ui ~T0 @X0 1 e ]
+[; ;./PWM.h: 27:     unsigned int StepsOnX;
+[v _StepsOnX `ui ~T0 @X0 1 e ]
 "28
-[; ;./PWM.h: 28:     unsigned int PasosY;
-[v _PasosY `ui ~T0 @X0 1 e ]
+[; ;./PWM.h: 28:     unsigned int StepsOnY;
+[v _StepsOnY `ui ~T0 @X0 1 e ]
 "29
-[; ;./PWM.h: 29:     unsigned int BanderaDisX;
-[v _BanderaDisX `ui ~T0 @X0 1 e ]
+[; ;./PWM.h: 29:     unsigned int FlagDirectionX;
+[v _FlagDirectionX `ui ~T0 @X0 1 e ]
 "30
-[; ;./PWM.h: 30:     unsigned int BanderaDisY;
-[v _BanderaDisY `ui ~T0 @X0 1 e ]
+[; ;./PWM.h: 30:     unsigned int FlagDirectionY;
+[v _FlagDirectionY `ui ~T0 @X0 1 e ]
 "14 coordenadas.c
 [; ;coordenadas.c: 14: int coord(char* P1, char*L, uint16_t* x , uint16_t* y , char*P2){
 [v _coord `(i ~T0 @X0 1 ef5`*uc`*uc`*us`*us`*uc ]
@@ -820,98 +817,98 @@ Version 4.0 HI-TECH Software Intermediate Code
 "39
 [; ;coordenadas.c: 39:             RCSTA1bits.CREN = 1;
 [e = . . _RCSTA1bits 0 4 -> -> 1 `i `uc ]
-"41
-[; ;coordenadas.c: 41:         }
+"40
+[; ;coordenadas.c: 40:         }
 }
 [e :U 373 ]
-"43
-[; ;coordenadas.c: 43:         *P1= buffer[StartCommandCharacter];
+"42
+[; ;coordenadas.c: 42:         *P1= buffer[StartCommandCharacter];
 [e = *U _P1 *U + &U _buffer * -> . `E3383 0 `ux -> -> # *U &U _buffer `ui `ux ]
-"44
-[; ;coordenadas.c: 44:         *L= buffer[InstructionCharacter];
+"43
+[; ;coordenadas.c: 43:         *L= buffer[InstructionCharacter];
 [e = *U _L *U + &U _buffer * -> . `E3383 1 `ux -> -> # *U &U _buffer `ui `ux ]
-"45
-[; ;coordenadas.c: 45:         *P2= buffer[EndCommandCharacter];
+"44
+[; ;coordenadas.c: 44:         *P2= buffer[EndCommandCharacter];
 [e = *U _P2 *U + &U _buffer * -> . `E3383 8 `ux -> -> # *U &U _buffer `ui `ux ]
-"47
-[; ;coordenadas.c: 47:         for(char n=CharacterX1; n<(CharacterY3+1); n++)
+"46
+[; ;coordenadas.c: 46:         for(char n=CharacterX1; n<(CharacterY3+1); n++)
 {
 [v _n `uc ~T0 @X0 1 a ]
 [e = _n -> . `E3383 2 `uc ]
 [e $ < -> _n `i + -> . `E3383 7 `i -> 1 `i 374  ]
 [e $U 375  ]
 [e :U 374 ]
+"47
+[; ;coordenadas.c: 47:         {
+{
 "48
-[; ;coordenadas.c: 48:         {
-{
-"49
-[; ;coordenadas.c: 49:             if(buffer[n] <= 57 && buffer[n] >= 48)
+[; ;coordenadas.c: 48:             if(buffer[n] <= 57 && buffer[n] >= 48)
 [e $ ! && <= -> *U + &U _buffer * -> _n `ux -> -> # *U &U _buffer `ui `ux `i -> 57 `i >= -> *U + &U _buffer * -> _n `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i 377  ]
-"50
-[; ;coordenadas.c: 50:             {
+"49
+[; ;coordenadas.c: 49:             {
 {
-"51
-[; ;coordenadas.c: 51:                 counterRevision++;
+"50
+[; ;coordenadas.c: 50:                 counterRevision++;
 [e ++ _counterRevision -> -> 1 `i `uc ]
-"52
-[; ;coordenadas.c: 52:             }
+"51
+[; ;coordenadas.c: 51:             }
 }
 [e :U 377 ]
-"53
-[; ;coordenadas.c: 53:         }
+"52
+[; ;coordenadas.c: 52:         }
 }
 [e ++ _n -> -> 1 `i `uc ]
 [e $ < -> _n `i + -> . `E3383 7 `i -> 1 `i 374  ]
 [e :U 375 ]
 }
-"54
-[; ;coordenadas.c: 54:             if(counterRevision == 6)
+"53
+[; ;coordenadas.c: 53:             if(counterRevision == 6)
 [e $ ! == -> _counterRevision `i -> 6 `i 378  ]
-"55
-[; ;coordenadas.c: 55:             {
+"54
+[; ;coordenadas.c: 54:             {
 {
-"56
-[; ;coordenadas.c: 56:                 flagBuffer = 1;
+"55
+[; ;coordenadas.c: 55:                 flagBuffer = 1;
 [e = _flagBuffer -> -> 1 `i `uc ]
-"57
-[; ;coordenadas.c: 57:             }
+"56
+[; ;coordenadas.c: 56:             }
 }
 [e $U 379  ]
-"59
-[; ;coordenadas.c: 59:             else
+"58
+[; ;coordenadas.c: 58:             else
 [e :U 378 ]
-"60
-[; ;coordenadas.c: 60:             {
+"59
+[; ;coordenadas.c: 59:             {
 {
-"61
-[; ;coordenadas.c: 61:                 return 0;
+"60
+[; ;coordenadas.c: 60:                 return 0;
 [e ) -> 0 `i ]
 [e $UE 368  ]
-"62
-[; ;coordenadas.c: 62:             }
+"61
+[; ;coordenadas.c: 61:             }
 }
 [e :U 379 ]
-"64
-[; ;coordenadas.c: 64:         if(flagBuffer == 1)
+"63
+[; ;coordenadas.c: 63:         if(flagBuffer == 1)
 [e $ ! == -> _flagBuffer `i -> 1 `i 380  ]
-"65
-[; ;coordenadas.c: 65:         {
+"64
+[; ;coordenadas.c: 64:         {
 {
-"66
-[; ;coordenadas.c: 66:             *x = 1*(buffer[CharacterX3]-48) + 10*(buffer[CharacterX2]-48) + 100*(buffer[CharacterX1]-48);
+"65
+[; ;coordenadas.c: 65:             *x = 1*(buffer[CharacterX3]-48) + 10*(buffer[CharacterX2]-48) + 100*(buffer[CharacterX1]-48);
 [e = *U _x -> + + * -> 1 `i - -> *U + &U _buffer * -> . `E3383 4 `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 10 `i - -> *U + &U _buffer * -> . `E3383 3 `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 100 `i - -> *U + &U _buffer * -> . `E3383 2 `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i `us ]
-"67
-[; ;coordenadas.c: 67:             *y = 1*(buffer[CharacterY3]-48) + 10*(buffer[CharacterY2]-48) + 100*(buffer[CharacterY1]-48);
+"66
+[; ;coordenadas.c: 66:             *y = 1*(buffer[CharacterY3]-48) + 10*(buffer[CharacterY2]-48) + 100*(buffer[CharacterY1]-48);
 [e = *U _y -> + + * -> 1 `i - -> *U + &U _buffer * -> . `E3383 7 `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 10 `i - -> *U + &U _buffer * -> . `E3383 6 `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 100 `i - -> *U + &U _buffer * -> . `E3383 5 `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i `us ]
-"69
-[; ;coordenadas.c: 69:             return 1;
+"68
+[; ;coordenadas.c: 68:             return 1;
 [e ) -> 1 `i ]
 [e $UE 368  ]
-"70
-[; ;coordenadas.c: 70:         }
+"69
+[; ;coordenadas.c: 69:         }
 }
 [e :U 380 ]
-"71
-[; ;coordenadas.c: 71: }
+"70
+[; ;coordenadas.c: 70: }
 [e :UE 368 ]
 }

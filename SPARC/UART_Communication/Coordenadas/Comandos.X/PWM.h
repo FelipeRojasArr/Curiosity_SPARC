@@ -1,32 +1,32 @@
 #ifndef PWM_HEADER
+
+#define MOVE_5MM 25
+
 /*FUNCIONES PWM*/
-void PWM(void);
-void ContarPulsos(int pasos);
-void OneShot(void);
-void ResetOneShot(void);
-int Movimiento(void);
-void HaltMotors(void);
+    void PWM(void);
+    void ContarPulsos(int pasos);
+    void OneShot(void);
+    void ResetOneShot(void);
+    int Movement(void);
+
 
 /* DECLARACION DE VARIABLES */
-
-    /*Coordenadas anteriores*/
+    /*Prior Coordinates*/
     unsigned int CoordAntX;
     unsigned int CoordAntY;
     
-    /*Coordenadas relativas*/
+    /*Relative Coordinates*/
     int CoordRelatX;
     int CoordRelatY;
-    
-    /*Contador de pasos recorridos*/
-    int pasosRecorridos;
-    
-     /*Pasos actuales*/
-    unsigned int PasosActuales;
+        
+    /*Actual Steps*/
+    unsigned int ActualSteps;
     unsigned int ons;
-    /*extras*/
-    unsigned int PasosX;
-    unsigned int PasosY;
-    unsigned int BanderaDisX;
-    unsigned int BanderaDisY;
+    
+    /*Flags*/
+    unsigned int StepsOnX;
+    unsigned int StepsOnY;
+    unsigned int FlagDirectionX;
+    unsigned int FlagDirectionY;
     
 #endif //PWM_HEADER

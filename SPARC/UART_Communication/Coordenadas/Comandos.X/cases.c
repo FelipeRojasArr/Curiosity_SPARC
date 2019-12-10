@@ -66,13 +66,13 @@ uint8_t Ins_Validated()
 {
     if(letter == CLICK_INSTRUCCTION)
     {
-        click=1;
+        click=TOUCH;
         return validate_Coord_State;
     }
     
     else if(letter== SLIDE_INSTRUCCTION)
     {
-        click=0;
+        click=SLIDE;
         return validate_Coord_State;
     }
     else

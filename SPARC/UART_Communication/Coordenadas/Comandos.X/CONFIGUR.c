@@ -14,7 +14,6 @@
  
 void Configuracion(void)
 { 
-     
    //CLOCK FREQUENCY CONFIGURATION 
    //============================ 
    OSCCON=0x72; /* Set internal clock to 8MHz */ 
@@ -22,7 +21,7 @@ void Configuracion(void)
    //DISABLE PORT's ANALOG FUNCTIONS 
    //=============================== 
    CMCON = 0xFF;                        // Comparators OFF, to use PORT_Ds LSN 
-   CVRCONbits.CVREN = 0;                // Comparator Voltge Reference Module OFF 
+   CVRCONbits.CVREN = OFF;                // Comparator Voltge Reference Module OFF 
    ADCON1 = 0x0F;                       // All ports as DIGITAL I/O 
     
    // PORT DEFINITIONS  

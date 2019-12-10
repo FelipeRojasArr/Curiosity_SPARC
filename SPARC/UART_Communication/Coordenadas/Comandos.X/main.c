@@ -42,9 +42,8 @@ void __interrupt() INT_ISR(void)
     }
 }
    
-
-void main(void) {
-    
+void main(void)
+{    
     Configuracion();
     //InterruptionsConfiguration();
     CoordAntX=1;
@@ -61,7 +60,7 @@ void main(void) {
         ControlFlagVerification = ON;
         verification();
         PrintMyActulPosition();
-        Movimiento();
+        Movement();
         PrintMyActulPosition();
     }
 }
@@ -93,10 +92,11 @@ void PrintMyActulPosition(void)
 
 void myPrintf(unsigned char *PointString)
 {
-    for (unsigned char i = 0; i < 255; i++) {
+    for (unsigned char i = 0; i < MAX_SIZE_OF_UCHAR; i++) {
         if (PointString[i] == NULL) {
             break;
         } else
             UARTWrite(PointString[i]);
     }
 }
+

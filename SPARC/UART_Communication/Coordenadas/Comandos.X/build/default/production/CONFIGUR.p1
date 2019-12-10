@@ -1,6 +1,6 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"53 ./cases.h
-[; ;./cases.h: 53: systemState NextState;
+"54 ./cases.h
+[; ;./cases.h: 54: systemState NextState;
 [c E3380 0 1 2 3 4 5 .. ]
 [n E3380 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
 "7986 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
@@ -595,29 +595,29 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8893
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"15 ./cases.h
-[; ;./cases.h: 15: char Par1;
+"16 ./cases.h
+[; ;./cases.h: 16: char Par1;
 [v _Par1 `uc ~T0 @X0 1 e ]
-"16
-[; ;./cases.h: 16: char letter;
-[v _letter `uc ~T0 @X0 1 e ]
 "17
-[; ;./cases.h: 17: unsigned int cord_x;
-[v _cord_x `ui ~T0 @X0 1 e ]
+[; ;./cases.h: 17: char letter;
+[v _letter `uc ~T0 @X0 1 e ]
 "18
-[; ;./cases.h: 18: unsigned int cord_y;
-[v _cord_y `ui ~T0 @X0 1 e ]
+[; ;./cases.h: 18: unsigned int cord_x;
+[v _cord_x `ui ~T0 @X0 1 e ]
 "19
-[; ;./cases.h: 19: char Par2;
+[; ;./cases.h: 19: unsigned int cord_y;
+[v _cord_y `ui ~T0 @X0 1 e ]
+"20
+[; ;./cases.h: 20: char Par2;
 [v _Par2 `uc ~T0 @X0 1 e ]
-"21
-[; ;./cases.h: 21: int ControlFlagVerification;
+"22
+[; ;./cases.h: 22: int ControlFlagVerification;
 [v _ControlFlagVerification `i ~T0 @X0 1 e ]
-"53
-[; ;./cases.h: 53: systemState NextState;
+"54
+[; ;./cases.h: 54: systemState NextState;
 [v _NextState `E3380 ~T0 @X0 1 e ]
-"55
-[; ;./cases.h: 55: uint8_t click;
+"56
+[; ;./cases.h: 56: uint8_t click;
 [v _click `uc ~T0 @X0 1 e ]
 "14 ./Configuracion.h
 [p x FOSC = INTOSC_EC ]
@@ -689,39 +689,36 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x EBTR3 = OFF ]
 "68
 [p x EBTRB = OFF ]
-"13 ./PWM.h
-[; ;./PWM.h: 13:     unsigned int CoordAntX;
+"15 ./PWM.h
+[; ;./PWM.h: 15:     unsigned int CoordAntX;
 [v _CoordAntX `ui ~T0 @X0 1 e ]
-"14
-[; ;./PWM.h: 14:     unsigned int CoordAntY;
+"16
+[; ;./PWM.h: 16:     unsigned int CoordAntY;
 [v _CoordAntY `ui ~T0 @X0 1 e ]
-"17
-[; ;./PWM.h: 17:     int CoordRelatX;
+"19
+[; ;./PWM.h: 19:     int CoordRelatX;
 [v _CoordRelatX `i ~T0 @X0 1 e ]
-"18
-[; ;./PWM.h: 18:     int CoordRelatY;
+"20
+[; ;./PWM.h: 20:     int CoordRelatY;
 [v _CoordRelatY `i ~T0 @X0 1 e ]
-"21
-[; ;./PWM.h: 21:     int pasosRecorridos;
-[v _pasosRecorridos `i ~T0 @X0 1 e ]
+"23
+[; ;./PWM.h: 23:     unsigned int ActualSteps;
+[v _ActualSteps `ui ~T0 @X0 1 e ]
 "24
-[; ;./PWM.h: 24:     unsigned int PasosActuales;
-[v _PasosActuales `ui ~T0 @X0 1 e ]
-"25
-[; ;./PWM.h: 25:     unsigned int ons;
+[; ;./PWM.h: 24:     unsigned int ons;
 [v _ons `ui ~T0 @X0 1 e ]
 "27
-[; ;./PWM.h: 27:     unsigned int PasosX;
-[v _PasosX `ui ~T0 @X0 1 e ]
+[; ;./PWM.h: 27:     unsigned int StepsOnX;
+[v _StepsOnX `ui ~T0 @X0 1 e ]
 "28
-[; ;./PWM.h: 28:     unsigned int PasosY;
-[v _PasosY `ui ~T0 @X0 1 e ]
+[; ;./PWM.h: 28:     unsigned int StepsOnY;
+[v _StepsOnY `ui ~T0 @X0 1 e ]
 "29
-[; ;./PWM.h: 29:     unsigned int BanderaDisX;
-[v _BanderaDisX `ui ~T0 @X0 1 e ]
+[; ;./PWM.h: 29:     unsigned int FlagDirectionX;
+[v _FlagDirectionX `ui ~T0 @X0 1 e ]
 "30
-[; ;./PWM.h: 30:     unsigned int BanderaDisY;
-[v _BanderaDisY `ui ~T0 @X0 1 e ]
+[; ;./PWM.h: 30:     unsigned int FlagDirectionY;
+[v _FlagDirectionY `ui ~T0 @X0 1 e ]
 "15 CONFIGUR.c
 [; ;CONFIGUR.c: 15: void Configuracion(void)
 [v _Configuracion `(v ~T0 @X0 1 ef ]
@@ -730,79 +727,79 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _Configuracion ]
 [f ]
-"20
-[; ;CONFIGUR.c: 20:    OSCCON=0x72;
+"19
+[; ;CONFIGUR.c: 19:    OSCCON=0x72;
 [e = _OSCCON -> -> 114 `i `uc ]
-"24
-[; ;CONFIGUR.c: 24:    CMCON = 0xFF;
+"23
+[; ;CONFIGUR.c: 23:    CMCON = 0xFF;
 [e = _CMCON -> -> 255 `i `uc ]
-"25
-[; ;CONFIGUR.c: 25:    CVRCONbits.CVREN = 0;
+"24
+[; ;CONFIGUR.c: 24:    CVRCONbits.CVREN = 0;
 [e = . . _CVRCONbits 0 4 -> -> 0 `i `uc ]
-"26
-[; ;CONFIGUR.c: 26:    ADCON1 = 0x0F;
+"25
+[; ;CONFIGUR.c: 25:    ADCON1 = 0x0F;
 [e = _ADCON1 -> -> 15 `i `uc ]
-"30
-[; ;CONFIGUR.c: 30:    PORTD = 0x00;
+"29
+[; ;CONFIGUR.c: 29:    PORTD = 0x00;
 [e = _PORTD -> -> 0 `i `uc ]
-"31
-[; ;CONFIGUR.c: 31:    LATD = 0x00;
+"30
+[; ;CONFIGUR.c: 30:    LATD = 0x00;
 [e = _LATD -> -> 0 `i `uc ]
-"32
-[; ;CONFIGUR.c: 32:    TRISD = 0x00;
+"31
+[; ;CONFIGUR.c: 31:    TRISD = 0x00;
 [e = _TRISD -> -> 0 `i `uc ]
-"34
-[; ;CONFIGUR.c: 34:    PORTC = 0x00;
+"33
+[; ;CONFIGUR.c: 33:    PORTC = 0x00;
 [e = _PORTC -> -> 0 `i `uc ]
-"35
-[; ;CONFIGUR.c: 35:    LATC= 0x00;
+"34
+[; ;CONFIGUR.c: 34:    LATC= 0x00;
 [e = _LATC -> -> 0 `i `uc ]
-"36
-[; ;CONFIGUR.c: 36:    TRISC= 0x00;
+"35
+[; ;CONFIGUR.c: 35:    TRISC= 0x00;
 [e = _TRISC -> -> 0 `i `uc ]
-"38
-[; ;CONFIGUR.c: 38:    PORTB = 0x00;
+"37
+[; ;CONFIGUR.c: 37:    PORTB = 0x00;
 [e = _PORTB -> -> 0 `i `uc ]
-"39
-[; ;CONFIGUR.c: 39:    LATB= 0x00;
+"38
+[; ;CONFIGUR.c: 38:    LATB= 0x00;
 [e = _LATB -> -> 0 `i `uc ]
-"40
-[; ;CONFIGUR.c: 40:    TRISB= 0xFF;
+"39
+[; ;CONFIGUR.c: 39:    TRISB= 0xFF;
 [e = _TRISB -> -> 255 `i `uc ]
-"44
-[; ;CONFIGUR.c: 44:    UARTConfi(9600);
+"43
+[; ;CONFIGUR.c: 43:    UARTConfi(9600);
 [e ( _UARTConfi (1 -> 9600 `i ]
-"45
-[; ;CONFIGUR.c: 45:     TRISC=0X00;
+"44
+[; ;CONFIGUR.c: 44:     TRISC=0X00;
 [e = _TRISC -> -> 0 `i `uc ]
-"49
-[; ;CONFIGUR.c: 49:      PR2 = 0xF9;
+"48
+[; ;CONFIGUR.c: 48:      PR2 = 0xF9;
 [e = _PR2 -> -> 249 `i `uc ]
-"52
-[; ;CONFIGUR.c: 52:     CCP1CON = 0x0C;
+"51
+[; ;CONFIGUR.c: 51:     CCP1CON = 0x0C;
 [e = _CCP1CON -> -> 12 `i `uc ]
-"53
-[; ;CONFIGUR.c: 53:     CCPR1L = 0x7D;
+"52
+[; ;CONFIGUR.c: 52:     CCPR1L = 0x7D;
 [e = _CCPR1L -> -> 125 `i `uc ]
-"56
-[; ;CONFIGUR.c: 56:     CCP2CON = 0x0C;
+"55
+[; ;CONFIGUR.c: 55:     CCP2CON = 0x0C;
 [e = _CCP2CON -> -> 12 `i `uc ]
-"57
-[; ;CONFIGUR.c: 57:     CCPR2L = 0x7D;
+"56
+[; ;CONFIGUR.c: 56:     CCPR2L = 0x7D;
 [e = _CCPR2L -> -> 125 `i `uc ]
-"60
-[; ;CONFIGUR.c: 60:     T2CON = 0x03;
+"59
+[; ;CONFIGUR.c: 59:     T2CON = 0x03;
 [e = _T2CON -> -> 3 `i `uc ]
-"61
-[; ;CONFIGUR.c: 61:     TMR2 = 0;
+"60
+[; ;CONFIGUR.c: 60:     TMR2 = 0;
 [e = _TMR2 -> -> 0 `i `uc ]
-"62
-[; ;CONFIGUR.c: 62:     TMR2ON = 1;
+"61
+[; ;CONFIGUR.c: 61:     TMR2ON = 1;
 [e = _TMR2ON -> -> 1 `i `b ]
-"64
-[; ;CONFIGUR.c: 64:     return;
+"63
+[; ;CONFIGUR.c: 63:     return;
 [e $UE 368  ]
-"65
-[; ;CONFIGUR.c: 65: }
+"64
+[; ;CONFIGUR.c: 64: }
 [e :UE 368 ]
 }

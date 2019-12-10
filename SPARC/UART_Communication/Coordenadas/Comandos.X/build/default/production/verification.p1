@@ -1,25 +1,25 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"53 ./cases.h
-[; ;./cases.h: 53: systemState NextState;
+"54 ./cases.h
+[; ;./cases.h: 54: systemState NextState;
 [c E3380 0 1 2 3 4 5 .. ]
 [n E3380 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
-"46
-[; ;./cases.h: 46: uint8_t start(void);
-[v _start `(uc ~T0 @X0 0 ef ]
 "47
-[; ;./cases.h: 47: uint8_t cmd(void);
-[v _cmd `(uc ~T0 @X0 0 ef ]
+[; ;./cases.h: 47: uint8_t start(void);
+[v _start `(uc ~T0 @X0 0 ef ]
 "48
-[; ;./cases.h: 48: uint8_t Par_Validated(void);
-[v _Par_Validated `(uc ~T0 @X0 0 ef ]
+[; ;./cases.h: 48: uint8_t cmd(void);
+[v _cmd `(uc ~T0 @X0 0 ef ]
 "49
-[; ;./cases.h: 49: uint8_t Ins_Validated(void);
-[v _Ins_Validated `(uc ~T0 @X0 0 ef ]
+[; ;./cases.h: 49: uint8_t Par_Validated(void);
+[v _Par_Validated `(uc ~T0 @X0 0 ef ]
 "50
-[; ;./cases.h: 50: uint8_t Coord_Validated(void);
-[v _Coord_Validated `(uc ~T0 @X0 0 ef ]
+[; ;./cases.h: 50: uint8_t Ins_Validated(void);
+[v _Ins_Validated `(uc ~T0 @X0 0 ef ]
 "51
-[; ;./cases.h: 51: void end(void);
+[; ;./cases.h: 51: uint8_t Coord_Validated(void);
+[v _Coord_Validated `(uc ~T0 @X0 0 ef ]
+"52
+[; ;./cases.h: 52: void end(void);
 [v _end `(v ~T0 @X0 0 ef ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
@@ -531,29 +531,29 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8893
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"15 ./cases.h
-[; ;./cases.h: 15: char Par1;
+"16 ./cases.h
+[; ;./cases.h: 16: char Par1;
 [v _Par1 `uc ~T0 @X0 1 e ]
-"16
-[; ;./cases.h: 16: char letter;
-[v _letter `uc ~T0 @X0 1 e ]
 "17
-[; ;./cases.h: 17: unsigned int cord_x;
-[v _cord_x `ui ~T0 @X0 1 e ]
+[; ;./cases.h: 17: char letter;
+[v _letter `uc ~T0 @X0 1 e ]
 "18
-[; ;./cases.h: 18: unsigned int cord_y;
-[v _cord_y `ui ~T0 @X0 1 e ]
+[; ;./cases.h: 18: unsigned int cord_x;
+[v _cord_x `ui ~T0 @X0 1 e ]
 "19
-[; ;./cases.h: 19: char Par2;
+[; ;./cases.h: 19: unsigned int cord_y;
+[v _cord_y `ui ~T0 @X0 1 e ]
+"20
+[; ;./cases.h: 20: char Par2;
 [v _Par2 `uc ~T0 @X0 1 e ]
-"21
-[; ;./cases.h: 21: int ControlFlagVerification;
+"22
+[; ;./cases.h: 22: int ControlFlagVerification;
 [v _ControlFlagVerification `i ~T0 @X0 1 e ]
-"53
-[; ;./cases.h: 53: systemState NextState;
+"54
+[; ;./cases.h: 54: systemState NextState;
 [v _NextState `E3380 ~T0 @X0 1 e ]
-"55
-[; ;./cases.h: 55: uint8_t click;
+"56
+[; ;./cases.h: 56: uint8_t click;
 [v _click `uc ~T0 @X0 1 e ]
 "14 ./Configuracion.h
 [p x FOSC = INTOSC_EC ]
@@ -625,39 +625,36 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x EBTR3 = OFF ]
 "68
 [p x EBTRB = OFF ]
-"13 ./PWM.h
-[; ;./PWM.h: 13:     unsigned int CoordAntX;
+"15 ./PWM.h
+[; ;./PWM.h: 15:     unsigned int CoordAntX;
 [v _CoordAntX `ui ~T0 @X0 1 e ]
-"14
-[; ;./PWM.h: 14:     unsigned int CoordAntY;
+"16
+[; ;./PWM.h: 16:     unsigned int CoordAntY;
 [v _CoordAntY `ui ~T0 @X0 1 e ]
-"17
-[; ;./PWM.h: 17:     int CoordRelatX;
+"19
+[; ;./PWM.h: 19:     int CoordRelatX;
 [v _CoordRelatX `i ~T0 @X0 1 e ]
-"18
-[; ;./PWM.h: 18:     int CoordRelatY;
+"20
+[; ;./PWM.h: 20:     int CoordRelatY;
 [v _CoordRelatY `i ~T0 @X0 1 e ]
-"21
-[; ;./PWM.h: 21:     int pasosRecorridos;
-[v _pasosRecorridos `i ~T0 @X0 1 e ]
+"23
+[; ;./PWM.h: 23:     unsigned int ActualSteps;
+[v _ActualSteps `ui ~T0 @X0 1 e ]
 "24
-[; ;./PWM.h: 24:     unsigned int PasosActuales;
-[v _PasosActuales `ui ~T0 @X0 1 e ]
-"25
-[; ;./PWM.h: 25:     unsigned int ons;
+[; ;./PWM.h: 24:     unsigned int ons;
 [v _ons `ui ~T0 @X0 1 e ]
 "27
-[; ;./PWM.h: 27:     unsigned int PasosX;
-[v _PasosX `ui ~T0 @X0 1 e ]
+[; ;./PWM.h: 27:     unsigned int StepsOnX;
+[v _StepsOnX `ui ~T0 @X0 1 e ]
 "28
-[; ;./PWM.h: 28:     unsigned int PasosY;
-[v _PasosY `ui ~T0 @X0 1 e ]
+[; ;./PWM.h: 28:     unsigned int StepsOnY;
+[v _StepsOnY `ui ~T0 @X0 1 e ]
 "29
-[; ;./PWM.h: 29:     unsigned int BanderaDisX;
-[v _BanderaDisX `ui ~T0 @X0 1 e ]
+[; ;./PWM.h: 29:     unsigned int FlagDirectionX;
+[v _FlagDirectionX `ui ~T0 @X0 1 e ]
 "30
-[; ;./PWM.h: 30:     unsigned int BanderaDisY;
-[v _BanderaDisY `ui ~T0 @X0 1 e ]
+[; ;./PWM.h: 30:     unsigned int FlagDirectionY;
+[v _FlagDirectionY `ui ~T0 @X0 1 e ]
 "15 verification.c
 [; ;verification.c: 15: void verification(void)
 [v _verification `(v ~T0 @X0 1 ef ]

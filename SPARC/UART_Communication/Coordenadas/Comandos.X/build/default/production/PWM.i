@@ -5764,7 +5764,7 @@ typedef uint32_t uint_fast32_t;
 # 5 "PWM.c" 2
 
 # 1 "./main.h" 1
-# 21 "./main.h"
+# 22 "./main.h"
 void GoToInitialYPosition(void);
 void GoToInitialXPosition(void);
 void PrintMyActulPosition(void);
@@ -5783,7 +5783,7 @@ char UARTRead(void);
 # 7 "PWM.c" 2
 
 # 1 "./cases.h" 1
-# 11 "./cases.h"
+# 12 "./cases.h"
 void verification(void);
 
 int coord(char* P1, char* L, unsigned short* x, unsigned short* y, char* P2);
@@ -5912,12 +5912,14 @@ void buttonInterruptionConfiguration(void);
 # 1 "./PWM.h" 1
 
 
-void PWM(void);
-void ContarPulsos(int pasos);
-void OneShot(void);
-void ResetOneShot(void);
-int Movimiento(void);
-void HaltMotors(void);
+
+
+
+    void PWM(void);
+    void ContarPulsos(int pasos);
+    void OneShot(void);
+    void ResetOneShot(void);
+    int Movement(void);
 
 
 
@@ -5930,90 +5932,113 @@ void HaltMotors(void);
     int CoordRelatY;
 
 
-    int pasosRecorridos;
-
-
-    unsigned int PasosActuales;
+    unsigned int ActualSteps;
     unsigned int ons;
 
-    unsigned int PasosX;
-    unsigned int PasosY;
-    unsigned int BanderaDisX;
-    unsigned int BanderaDisY;
+
+    unsigned int StepsOnX;
+    unsigned int StepsOnY;
+    unsigned int FlagDirectionX;
+    unsigned int FlagDirectionY;
 # 12 "PWM.c" 2
 # 23 "PWM.c"
-void PWM(){
-
-    BanderaDisX= 1;
-    BanderaDisY= 1;
-
-
+void PWM()
+{
+    FlagDirectionX= 1;
+    FlagDirectionY= 1;
 
 
-    if (CoordAntX==0) CoordRelatX=cord_x;
-        else CoordRelatX=cord_x-CoordAntX;
+    if(CoordAntX==0)
+    {
+        CoordRelatX=cord_x;
+    }else{
+        CoordRelatX=cord_x-CoordAntX;
+    }
 
 
-    if (CoordRelatX<0){
+    if (CoordRelatX<0)
+    {
         PORTDbits.RD0= 1;
         PORTDbits.RD1= 1;
         CoordRelatX=CoordRelatX*(-1);
-        BanderaDisX= 0;
+        FlagDirectionX= 0;
     }
         else {
             PORTDbits.RD0= 0;
             PORTDbits.RD1= 0;
-            BanderaDisX= 1;
+            FlagDirectionX= 1;
         }
 
-    PasosX=CoordRelatX*5;
-    ContarPulsos(PasosX);
+    StepsOnX=CoordRelatX*5;
+    ContarPulsos(StepsOnX);
 
 
-    if(BanderaDisX== 0) CoordAntX= CoordAntX-CoordRelatX;
+    if(FlagDirectionX==0)
+    {
+        CoordAntX= CoordAntX-CoordRelatX;
+    }
     else{
-        if (BanderaDisX== 1) CoordAntX=CoordAntX+CoordRelatX;
+        if(FlagDirectionX== 1)
+        {
+            CoordAntX=CoordAntX+CoordRelatX;
+        }
     }
 
 
 
-
-
-    if (CoordAntY==0) CoordRelatY=cord_y;
-        else CoordRelatY=cord_y-CoordAntY;
-
-    if (CoordRelatY<0){
+    if(CoordAntY==0)
+    {
+        CoordRelatY=cord_y;
+    }
+    else{
+            CoordRelatY=cord_y-CoordAntY;
+    }
+    if(CoordRelatY<0)
+    {
         PORTDbits.RD0= 0;
         PORTDbits.RD1= 1;
         CoordRelatY=CoordRelatY*(-1);
-        BanderaDisY= 0;
+        FlagDirectionY= 0;
     }
-    else {
+    else{
         PORTDbits.RD0= 1;
         PORTDbits.RD1= 0;
-         BanderaDisY= 1;
+        FlagDirectionY= 1;
      }
 
-    PasosY=CoordRelatY*5;
-    ContarPulsos(PasosY);
+    StepsOnY=CoordRelatY*5;
+    ContarPulsos(StepsOnY);
 
 
-    if(BanderaDisY== 0) CoordAntY= CoordAntY-CoordRelatY;
-    else{
-        if (BanderaDisY== 1) CoordAntY=CoordAntY+CoordRelatY;
+    if(FlagDirectionY== 0)
+    {
+        CoordAntY= CoordAntY-CoordRelatY;
     }
+    else{
+            if(FlagDirectionY==1)
+            {
+                CoordAntY=CoordAntY+CoordRelatY;
+            }
+        }
 
     return;
 }
-void ContarPulsos(int pasos){
-    PasosActuales=0;
+void ContarPulsos(int pasos)
+{
+    ActualSteps=0;
     ons=0;
     PORTDbits.RD2= 0;
     PORTDbits.RD3= 0;
-    while(PasosActuales< pasos)
+    while(ActualSteps< pasos)
     {
-        if (PORTCbits.CCP1==1) OneShot();
-        if(ons==1) ResetOneShot();
+        if (PORTCbits.CCP1==1)
+        {
+            OneShot();
+        }
+        if(ons==1)
+        {
+            ResetOneShot();
+        }
     }
 
     PORTDbits.RD2= 1;
@@ -6021,21 +6046,33 @@ void ContarPulsos(int pasos){
 
     return;
 }
-void OneShot(void){
-    if(ons==1) return;
+
+void OneShot(void)
+{
+    if(ons==1)
+    {
+        return;
+    }
     if(PORTCbits.CCP1==1)
     {
-        PasosActuales++;
+        ActualSteps++;
         ons=1;
     }
     return;
 }
-void ResetOneShot(void){
-    if(PORTCbits.CCP1==1)return;
-    if(PORTCbits.CCP1==0)ons=0;
+
+void ResetOneShot(void)
+{
+    if(PORTCbits.CCP1==1)
+    {
+        return;
+    }
+    if(PORTCbits.CCP1==0)
+    {
+        ons=0;
+    }
     return;
 }
-
 
 void InicialX(void)
 {

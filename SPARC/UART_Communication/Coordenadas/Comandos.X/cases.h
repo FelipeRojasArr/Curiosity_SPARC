@@ -6,7 +6,8 @@
 #define SLIDE_INSTRUCCTION   0x53
 #define MAXIMAL_ASCII_NUMBER 57
 #define MINIMAL_ASCII_NUMBER 48
-
+#define TOUCH 1
+#define SLIDE 0
 
 void verification(void);
 

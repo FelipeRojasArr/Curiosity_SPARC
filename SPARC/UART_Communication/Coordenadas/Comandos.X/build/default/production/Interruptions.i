@@ -5775,7 +5775,7 @@ char UARTRead(void);
 # 6 "Interruptions.c" 2
 
 # 1 "./cases.h" 1
-# 11 "./cases.h"
+# 12 "./cases.h"
 void verification(void);
 
 int coord(char* P1, char* L, unsigned short* x, unsigned short* y, char* P2);
@@ -5904,12 +5904,14 @@ void buttonInterruptionConfiguration(void);
 # 1 "./PWM.h" 1
 
 
-void PWM(void);
-void ContarPulsos(int pasos);
-void OneShot(void);
-void ResetOneShot(void);
-int Movimiento(void);
-void HaltMotors(void);
+
+
+
+    void PWM(void);
+    void ContarPulsos(int pasos);
+    void OneShot(void);
+    void ResetOneShot(void);
+    int Movement(void);
 
 
 
@@ -5922,16 +5924,14 @@ void HaltMotors(void);
     int CoordRelatY;
 
 
-    int pasosRecorridos;
-
-
-    unsigned int PasosActuales;
+    unsigned int ActualSteps;
     unsigned int ons;
 
-    unsigned int PasosX;
-    unsigned int PasosY;
-    unsigned int BanderaDisX;
-    unsigned int BanderaDisY;
+
+    unsigned int StepsOnX;
+    unsigned int StepsOnY;
+    unsigned int FlagDirectionX;
+    unsigned int FlagDirectionY;
 # 11 "Interruptions.c" 2
 
 

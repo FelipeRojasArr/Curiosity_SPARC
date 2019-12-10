@@ -12,86 +12,111 @@
 #include "PWM.h"
 
 /*
-  La función de PWM:
-  - Obtiene la distancia total a recorrer.
-  - Determina la dirección de los motores.
-  - Activa los enables.
-  - Cuenta los pasos.
-  - Actualiza las coordenadas.
- */
+ PWM function:
+ -Get distance to travel
+ -Determine turn direction for motors
+ -Activates enable
+ -Count steps
+ -Update coordinates
+*/
 
-void PWM(){
+void PWM()
+{
+    FlagDirectionX= POSITIVE;
+    FlagDirectionY= POSITIVE;
     
-    BanderaDisX= POSITIVO;
-    BanderaDisY= POSITIVO;
+    // Get reltive coordenates //
+    if(CoordAntX==ZERO_POSITION)
+    {
+        CoordRelatX=cord_x;                                                     //if prior X coordinate equals 0, input coordinate must be equal to relative
+    }else{
+        CoordRelatX=cord_x-CoordAntX;
+    }
     
-    // Obtenemos coordenadas relativas //
-    
-    /*Si la coordenada X anterior es cero la coordenada deseada es igual a la relativa*/
-    if (CoordAntX==0) CoordRelatX=cord_x;
-        else CoordRelatX=cord_x-CoordAntX;
-        
-    /*Definimos las direcciones de los motores para x*/
-    if (CoordRelatX<0){
+    /*Motor direcctions for X movement*/
+    if (CoordRelatX<ZERO_POSITION)
+    {
         DIR_A= ANTICLOCKWISE_TURN;
         DIR_B= ANTICLOCKWISE_TURN;
-        CoordRelatX=CoordRelatX*(-1);
-        BanderaDisX= NEGATIVO;
+        CoordRelatX=CoordRelatX*CONSTANT_TO_ABSOLUTE_VALUE;                     //Absolute vale for relative coordinate X 
+        FlagDirectionX= NEGATIVE;
     }
         else {
             DIR_A= CLOCKWISE_TURN;
             DIR_B= CLOCKWISE_TURN;
-            BanderaDisX= POSITIVO;
+            FlagDirectionX= POSITIVE;
         } 
         
-    PasosX=CoordRelatX*NUM_PASOS;                   //Relación 1mm a 5 pasos
-    ContarPulsos(PasosX);
+    StepsOnX=CoordRelatX*STEPS_PER_1MM;                                         //5 steps per 1mm ratio
+    ContarPulsos(StepsOnX);
       
-    /*ACTUALIZAMOS COORDENADA X */      
-    if(BanderaDisX== NEGATIVO) CoordAntX= CoordAntX-CoordRelatX; //Si la distancia es negativa se resta
-    else{ 
-        if (BanderaDisX== POSITIVO) CoordAntX=CoordAntX+CoordRelatX;
+    /*X coordinate actualization*/      
+    if(FlagDirectionX==NEGATIVE)
+    {
+        CoordAntX= CoordAntX-CoordRelatX;                                       //if distance is negative, it substracts
     }
-        
-    //*********************************************
-                         /* Y */
+    else{ 
+        if(FlagDirectionX== POSITIVE)
+        {
+            CoordAntX=CoordAntX+CoordRelatX;
+        }
+    }
     
-    /*Si la coordenada Y anterior es cero la coordenada deseada es igual a la relativa*/
-    if (CoordAntY==0) CoordRelatY=cord_y;
-        else CoordRelatY=cord_y-CoordAntY;
-    
-    if (CoordRelatY<0){
+                         /* Y axis movement */
+    /*if prior Y coordinate equals 0, input coordinate must be equal to relative*/
+    if(CoordAntY==ZERO_POSITION)
+    {
+        CoordRelatY=cord_y;
+    }
+    else{
+            CoordRelatY=cord_y-CoordAntY;
+    }
+    if(CoordRelatY<ZERO_POSITION)
+    {
         DIR_A= CLOCKWISE_TURN;
         DIR_B= ANTICLOCKWISE_TURN;
-        CoordRelatY=CoordRelatY*(-1);
-        BanderaDisY= NEGATIVO;
+        CoordRelatY=CoordRelatY*CONSTANT_TO_ABSOLUTE_VALUE;
+        FlagDirectionY= NEGATIVE;
     }
-    else {
+    else{
         DIR_A= ANTICLOCKWISE_TURN;
         DIR_B= CLOCKWISE_TURN;
-         BanderaDisY= POSITIVO;  
+        FlagDirectionY= POSITIVE;  
      } 
    
-    PasosY=CoordRelatY*NUM_PASOS;
-    ContarPulsos(PasosY);
+    StepsOnY=CoordRelatY*STEPS_PER_1MM;
+    ContarPulsos(StepsOnY);
     
     /*ACTUALIZAMOS COORDENADA Y */    
-    if(BanderaDisY== NEGATIVO) CoordAntY= CoordAntY-CoordRelatY; //Si la distancia es negativa se resta
-    else{ 
-        if (BanderaDisY== POSITIVO) CoordAntY=CoordAntY+CoordRelatY;
+    if(FlagDirectionY== NEGATIVE)
+    {
+        CoordAntY= CoordAntY-CoordRelatY; //If distance is less than 0, it substracts
     }
+    else{
+            if(FlagDirectionY==POSITIVE)
+            {
+                CoordAntY=CoordAntY+CoordRelatY;
+            }
+        }
     
     return;
 }
-void ContarPulsos(int pasos){
-    PasosActuales=0;
-    ons=0;
+void ContarPulsos(int pasos)
+{
+    ActualSteps=ZERO;
+    ons=OFF;
     ENABLE_A= ENABLE_STEPPER_MOTORS;
     ENABLE_B= ENABLE_STEPPER_MOTORS;
-    while(PasosActuales< pasos)
+    while(ActualSteps< pasos)
     {
-        if (PORTCbits.CCP1==1) OneShot();
-        if(ons==1) ResetOneShot();
+        if (PORTCbits.CCP1==ON)
+        {
+            OneShot();
+        }
+        if(ons==ON)
+        {
+            ResetOneShot();
+        }
     }
     
     ENABLE_A= DISABLE_STEPPER_MOTORS;
@@ -99,33 +124,45 @@ void ContarPulsos(int pasos){
     
     return;  
 }
-void OneShot(void){
-    if(ons==1) return;
-    if(PORTCbits.CCP1==1)
+
+void OneShot(void)
+{
+    if(ons==ON)
     {
-        PasosActuales++;
-        ons=1;
+        return;
+    }
+    if(PORTCbits.CCP1==ON)
+    {
+        ActualSteps++;
+        ons=ON;
     }
     return;
 }
-void ResetOneShot(void){
-    if(PORTCbits.CCP1==1)return;
-    if(PORTCbits.CCP1==0)ons=0;
+
+void ResetOneShot(void)
+{
+    if(PORTCbits.CCP1==ON)
+    {
+        return; 
+    }
+    if(PORTCbits.CCP1==OFF)
+    {
+        ons=OFF;
+    }
     return;
 }
-
 
 void InicialX(void)
 {
     DIR_A= ANTICLOCKWISE_TURN;
     DIR_B= ANTICLOCKWISE_TURN;
-    while(CoordAntX!=0){
-        if(CoordAntX==0)
+    while(CoordAntX!=ZERO_POSITION){
+        if(CoordAntX==ZERO_POSITION)
         {
             ENABLE_A= DISABLE_STEPPER_MOTORS;
             ENABLE_B= DISABLE_STEPPER_MOTORS;
         }else{ 
-            if(CoordAntX!=0)
+            if(CoordAntX!=ZERO_POSITION)
             {
                 ENABLE_A= ENABLE_STEPPER_MOTORS;
                 ENABLE_B= ENABLE_STEPPER_MOTORS; 
@@ -142,7 +179,7 @@ void InicialY(void)
     do{
     ENABLE_A= ENABLE_STEPPER_MOTORS;
     ENABLE_B= ENABLE_STEPPER_MOTORS;
-    }while(CoordAntY!=0);
+    }while(CoordAntY!=ZERO_POSITION);
     
     ENABLE_A= DISABLE_STEPPER_MOTORS;
     ENABLE_B= DISABLE_STEPPER_MOTORS;
@@ -153,19 +190,19 @@ void GoToInitialXPosition(void)
 {
     DIR_A= CLOCKWISE_TURN;
     DIR_B= CLOCKWISE_TURN;
-    ContarPulsos(25);
+    ContarPulsos(MOVE_5MM);
     ENABLE_A= DISABLE_STEPPER_MOTORS;
     ENABLE_B= DISABLE_STEPPER_MOTORS;
-    CoordAntX = 0;
+    CoordAntX = ZERO_POSITION;
 }
 
 void GoToInitialYPosition(void)
 {
     DIR_A= ANTICLOCKWISE_TURN;
     DIR_B= CLOCKWISE_TURN; 
-    ContarPulsos(25);
+    ContarPulsos(MOVE_5MM);
     ENABLE_A= DISABLE_STEPPER_MOTORS;
     ENABLE_B= DISABLE_STEPPER_MOTORS;
-    CoordAntY = 0;
+    CoordAntY = ZERO_POSITION;
 }
 

@@ -11,28 +11,23 @@
 #include "Interruptions.h"
 #include "PWM.h"
 
-int Movimiento(void)
+int Movement(void)
 {
-
     if(click == ON){
         PWM();
         SOLENOIDE=HIGH;
         __delay_ms(1200);
         SOLENOIDE=LOW;
-        char loquequieras[5]="click";
-       for(int i=0;i<5;i++){
-       UARTWrite(loquequieras[i]);
-       }
-        
+        myPrintf("Click");
     }
-    else if(click == OFF){
-        SOLENOIDE=HIGH;
-        PWM();
-        SOLENOIDE=LOW;
-        char loquequieras2[5]="slide";
-       for(int i=0;i<5;i++){
-       UARTWrite(loquequieras2[i]);
-       }
+    else{
+        if(click == OFF)
+        {
+            SOLENOIDE=HIGH;
+            PWM();
+            SOLENOIDE=LOW;
+            myPrintf("Slide");
+        }
     }
     
     ControlFlagVerification = ON;

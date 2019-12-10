@@ -1,6 +1,6 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"53 ./cases.h
-[; ;./cases.h: 53: systemState NextState;
+"54 ./cases.h
+[; ;./cases.h: 54: systemState NextState;
 [c E3380 0 1 2 3 4 5 .. ]
 [n E3380 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
 [t ~ __interrupt . k ]
@@ -27,8 +27,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "7 ./UART.h
 [; ;./UART.h: 7: void UARTWrite(char data);
 [v _UARTWrite `(v ~T0 @X0 0 ef1`uc ]
-"22 ./main.h
-[; ;./main.h: 22: void GoToInitialXPosition(void);
+"23 ./main.h
+[; ;./main.h: 23: void GoToInitialXPosition(void);
 [v _GoToInitialXPosition `(v ~T0 @X0 0 ef ]
 "2459 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 2459:     struct {
@@ -68,8 +68,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8440
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8440: extern volatile INTCON3bits_t INTCON3bits __attribute__((address(0xFF0)));
 [v _INTCON3bits `VS347 ~T0 @X0 0 e@4080 ]
-"21 ./main.h
-[; ;./main.h: 21: void GoToInitialYPosition(void);
+"22 ./main.h
+[; ;./main.h: 22: void GoToInitialYPosition(void);
 [v _GoToInitialYPosition `(v ~T0 @X0 0 ef ]
 [p mainexit ]
 "71 ./Configuracion.h
@@ -93,15 +93,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2736
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 2736: extern volatile PORTDbits_t PORTDbits __attribute__((address(0xF83)));
 [v _PORTDbits `VS111 ~T0 @X0 0 e@3971 ]
-"11 ./cases.h
-[; ;./cases.h: 11: void verification(void);
+"12 ./cases.h
+[; ;./cases.h: 12: void verification(void);
 [v _verification `(v ~T0 @X0 0 ef ]
-"23 ./main.h
-[; ;./main.h: 23: void PrintMyActulPosition(void);
+"24 ./main.h
+[; ;./main.h: 24: void PrintMyActulPosition(void);
 [v _PrintMyActulPosition `(v ~T0 @X0 0 ef ]
-"7 ./PWM.h
-[; ;./PWM.h: 7: int Movimiento(void);
-[v _Movimiento `(i ~T0 @X0 0 ef ]
+"10 ./PWM.h
+[; ;./PWM.h: 10:     int Movement(void);
+[v _Movement `(i ~T0 @X0 0 ef ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -612,29 +612,29 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8893
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"15 ./cases.h
-[; ;./cases.h: 15: char Par1;
+"16 ./cases.h
+[; ;./cases.h: 16: char Par1;
 [v _Par1 `uc ~T0 @X0 1 e ]
-"16
-[; ;./cases.h: 16: char letter;
-[v _letter `uc ~T0 @X0 1 e ]
 "17
-[; ;./cases.h: 17: unsigned int cord_x;
-[v _cord_x `ui ~T0 @X0 1 e ]
+[; ;./cases.h: 17: char letter;
+[v _letter `uc ~T0 @X0 1 e ]
 "18
-[; ;./cases.h: 18: unsigned int cord_y;
-[v _cord_y `ui ~T0 @X0 1 e ]
+[; ;./cases.h: 18: unsigned int cord_x;
+[v _cord_x `ui ~T0 @X0 1 e ]
 "19
-[; ;./cases.h: 19: char Par2;
+[; ;./cases.h: 19: unsigned int cord_y;
+[v _cord_y `ui ~T0 @X0 1 e ]
+"20
+[; ;./cases.h: 20: char Par2;
 [v _Par2 `uc ~T0 @X0 1 e ]
-"21
-[; ;./cases.h: 21: int ControlFlagVerification;
+"22
+[; ;./cases.h: 22: int ControlFlagVerification;
 [v _ControlFlagVerification `i ~T0 @X0 1 e ]
-"53
-[; ;./cases.h: 53: systemState NextState;
+"54
+[; ;./cases.h: 54: systemState NextState;
 [v _NextState `E3380 ~T0 @X0 1 e ]
-"55
-[; ;./cases.h: 55: uint8_t click;
+"56
+[; ;./cases.h: 56: uint8_t click;
 [v _click `uc ~T0 @X0 1 e ]
 "14 ./Configuracion.h
 [p x FOSC = INTOSC_EC ]
@@ -706,39 +706,36 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x EBTR3 = OFF ]
 "68
 [p x EBTRB = OFF ]
-"13 ./PWM.h
-[; ;./PWM.h: 13:     unsigned int CoordAntX;
+"15 ./PWM.h
+[; ;./PWM.h: 15:     unsigned int CoordAntX;
 [v _CoordAntX `ui ~T0 @X0 1 e ]
-"14
-[; ;./PWM.h: 14:     unsigned int CoordAntY;
+"16
+[; ;./PWM.h: 16:     unsigned int CoordAntY;
 [v _CoordAntY `ui ~T0 @X0 1 e ]
-"17
-[; ;./PWM.h: 17:     int CoordRelatX;
+"19
+[; ;./PWM.h: 19:     int CoordRelatX;
 [v _CoordRelatX `i ~T0 @X0 1 e ]
-"18
-[; ;./PWM.h: 18:     int CoordRelatY;
+"20
+[; ;./PWM.h: 20:     int CoordRelatY;
 [v _CoordRelatY `i ~T0 @X0 1 e ]
-"21
-[; ;./PWM.h: 21:     int pasosRecorridos;
-[v _pasosRecorridos `i ~T0 @X0 1 e ]
+"23
+[; ;./PWM.h: 23:     unsigned int ActualSteps;
+[v _ActualSteps `ui ~T0 @X0 1 e ]
 "24
-[; ;./PWM.h: 24:     unsigned int PasosActuales;
-[v _PasosActuales `ui ~T0 @X0 1 e ]
-"25
-[; ;./PWM.h: 25:     unsigned int ons;
+[; ;./PWM.h: 24:     unsigned int ons;
 [v _ons `ui ~T0 @X0 1 e ]
 "27
-[; ;./PWM.h: 27:     unsigned int PasosX;
-[v _PasosX `ui ~T0 @X0 1 e ]
+[; ;./PWM.h: 27:     unsigned int StepsOnX;
+[v _StepsOnX `ui ~T0 @X0 1 e ]
 "28
-[; ;./PWM.h: 28:     unsigned int PasosY;
-[v _PasosY `ui ~T0 @X0 1 e ]
+[; ;./PWM.h: 28:     unsigned int StepsOnY;
+[v _StepsOnY `ui ~T0 @X0 1 e ]
 "29
-[; ;./PWM.h: 29:     unsigned int BanderaDisX;
-[v _BanderaDisX `ui ~T0 @X0 1 e ]
+[; ;./PWM.h: 29:     unsigned int FlagDirectionX;
+[v _FlagDirectionX `ui ~T0 @X0 1 e ]
 "30
-[; ;./PWM.h: 30:     unsigned int BanderaDisY;
-[v _BanderaDisY `ui ~T0 @X0 1 e ]
+[; ;./PWM.h: 30:     unsigned int FlagDirectionY;
+[v _FlagDirectionY `ui ~T0 @X0 1 e ]
 [v $root$_INT_ISR `(v ~T0 @X0 0 e ]
 "14 main.c
 [; ;main.c: 14: void __attribute__((picinterrupt(("")))) INT_ISR(void)
@@ -837,92 +834,94 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 368 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"46
-[; ;main.c: 46: void main(void) {
+"45
+[; ;main.c: 45: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
+"46
+[; ;main.c: 46: {
 {
 [e :U _main ]
 [f ]
-"48
-[; ;main.c: 48:     Configuracion();
+"47
+[; ;main.c: 47:     Configuracion();
 [e ( _Configuracion ..  ]
-"50
-[; ;main.c: 50:     CoordAntX=1;
+"49
+[; ;main.c: 49:     CoordAntX=1;
 [e = _CoordAntX -> -> 1 `i `ui ]
-"51
-[; ;main.c: 51:     CoordAntY=1;
+"50
+[; ;main.c: 50:     CoordAntY=1;
 [e = _CoordAntY -> -> 1 `i `ui ]
-"52
-[; ;main.c: 52:     PORTDbits.RD2=1;
+"51
+[; ;main.c: 51:     PORTDbits.RD2=1;
 [e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
-"53
-[; ;main.c: 53:     PORTDbits.RD3=1;
+"52
+[; ;main.c: 52:     PORTDbits.RD3=1;
 [e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
-"59
-[; ;main.c: 59:     while(1)
+"58
+[; ;main.c: 58:     while(1)
 [e :U 377 ]
-"60
-[; ;main.c: 60:     {
+"59
+[; ;main.c: 59:     {
 {
-"61
-[; ;main.c: 61:         ControlFlagVerification = 1;
+"60
+[; ;main.c: 60:         ControlFlagVerification = 1;
 [e = _ControlFlagVerification -> 1 `i ]
-"62
-[; ;main.c: 62:         verification();
+"61
+[; ;main.c: 61:         verification();
 [e ( _verification ..  ]
+"62
+[; ;main.c: 62:         PrintMyActulPosition();
+[e ( _PrintMyActulPosition ..  ]
 "63
-[; ;main.c: 63:         PrintMyActulPosition();
-[e ( _PrintMyActulPosition ..  ]
+[; ;main.c: 63:         Movement();
+[e ( _Movement ..  ]
 "64
-[; ;main.c: 64:         Movimiento();
-[e ( _Movimiento ..  ]
-"65
-[; ;main.c: 65:         PrintMyActulPosition();
+[; ;main.c: 64:         PrintMyActulPosition();
 [e ( _PrintMyActulPosition ..  ]
-"66
-[; ;main.c: 66:     }
+"65
+[; ;main.c: 65:     }
 }
 [e :U 376 ]
 [e $U 377  ]
 [e :U 378 ]
-"67
-[; ;main.c: 67: }
+"66
+[; ;main.c: 66: }
 [e :UE 375 ]
 }
-"69
-[; ;main.c: 69: void PrintMyActulPosition(void)
+"68
+[; ;main.c: 68: void PrintMyActulPosition(void)
 [v _PrintMyActulPosition `(v ~T0 @X0 1 ef ]
-"70
-[; ;main.c: 70: {
+"69
+[; ;main.c: 69: {
 {
 [e :U _PrintMyActulPosition ]
 [f ]
-"72
-[; ;main.c: 72:         char a[3];
+"71
+[; ;main.c: 71:         char a[3];
 [v _a `uc ~T0 @X0 -> 3 `i a ]
-"73
-[; ;main.c: 73:         char b[3];
+"72
+[; ;main.c: 72:         char b[3];
 [v _b `uc ~T0 @X0 -> 3 `i a ]
-"75
-[; ;main.c: 75:         a[0]=(CoordAntX/100)+48;
+"74
+[; ;main.c: 74:         a[0]=(CoordAntX/100)+48;
 [e = *U + &U _a * -> -> -> 0 `i `ui `ux -> -> # *U &U _a `ui `ux -> + / _CoordAntX -> -> 100 `i `ui -> -> 48 `i `ui `uc ]
-"76
-[; ;main.c: 76:         a[1]=((CoordAntX%100)/10)+48;
+"75
+[; ;main.c: 75:         a[1]=((CoordAntX%100)/10)+48;
 [e = *U + &U _a * -> -> -> 1 `i `ui `ux -> -> # *U &U _a `ui `ux -> + / % _CoordAntX -> -> 100 `i `ui -> -> 10 `i `ui -> -> 48 `i `ui `uc ]
-"77
-[; ;main.c: 77:         a[2]=((CoordAntX%100)%10)+48;
+"76
+[; ;main.c: 76:         a[2]=((CoordAntX%100)%10)+48;
 [e = *U + &U _a * -> -> -> 2 `i `ui `ux -> -> # *U &U _a `ui `ux -> + % % _CoordAntX -> -> 100 `i `ui -> -> 10 `i `ui -> -> 48 `i `ui `uc ]
-"79
-[; ;main.c: 79:         b[0]=(CoordAntY/100)+48;
+"78
+[; ;main.c: 78:         b[0]=(CoordAntY/100)+48;
 [e = *U + &U _b * -> -> -> 0 `i `ui `ux -> -> # *U &U _b `ui `ux -> + / _CoordAntY -> -> 100 `i `ui -> -> 48 `i `ui `uc ]
-"80
-[; ;main.c: 80:         b[1]=((CoordAntY%100)/10)+48;
+"79
+[; ;main.c: 79:         b[1]=((CoordAntY%100)/10)+48;
 [e = *U + &U _b * -> -> -> 1 `i `ui `ux -> -> # *U &U _b `ui `ux -> + / % _CoordAntY -> -> 100 `i `ui -> -> 10 `i `ui -> -> 48 `i `ui `uc ]
-"81
-[; ;main.c: 81:         b[2]=((CoordAntY%100)%10)+48;
+"80
+[; ;main.c: 80:         b[2]=((CoordAntY%100)%10)+48;
 [e = *U + &U _b * -> -> -> 2 `i `ui `ux -> -> # *U &U _b `ui `ux -> + % % _CoordAntY -> -> 100 `i `ui -> -> 10 `i `ui -> -> 48 `i `ui `uc ]
-"83
-[; ;main.c: 83:         for(int i=0; i<3; i++){
+"82
+[; ;main.c: 82:         for(int i=0; i<3; i++){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -930,21 +929,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 381  ]
 [e :U 380 ]
 {
-"85
-[; ;main.c: 85:             UARTWrite(a[i]);
+"84
+[; ;main.c: 84:             UARTWrite(a[i]);
 [e ( _UARTWrite (1 *U + &U _a * -> -> _i `ui `ux -> -> # *U &U _a `ui `ux ]
-"86
-[; ;main.c: 86:         }
+"85
+[; ;main.c: 85:         }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 3 `i 380  ]
 [e :U 381 ]
 }
-"87
-[; ;main.c: 87:         UARTWrite(0x2C);
+"86
+[; ;main.c: 86:         UARTWrite(0x2C);
 [e ( _UARTWrite (1 -> -> 44 `i `uc ]
-"88
-[; ;main.c: 88:         for(int i=0; i<3; i++){
+"87
+[; ;main.c: 87:         for(int i=0; i<3; i++){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -952,35 +951,35 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 384  ]
 [e :U 383 ]
 {
-"90
-[; ;main.c: 90:             UARTWrite(b[i]);
+"89
+[; ;main.c: 89:             UARTWrite(b[i]);
 [e ( _UARTWrite (1 *U + &U _b * -> -> _i `ui `ux -> -> # *U &U _b `ui `ux ]
-"91
-[; ;main.c: 91:         }
+"90
+[; ;main.c: 90:         }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 3 `i 383  ]
 [e :U 384 ]
 }
-"92
-[; ;main.c: 92: }
+"91
+[; ;main.c: 91: }
 [e :UE 379 ]
 }
-"94
-[; ;main.c: 94: void myPrintf(unsigned char *PointString)
+"93
+[; ;main.c: 93: void myPrintf(unsigned char *PointString)
 [v _myPrintf `(v ~T0 @X0 1 ef1`*uc ]
-"95
-[; ;main.c: 95: {
+"94
+[; ;main.c: 94: {
 {
 [e :U _myPrintf ]
-"94
-[; ;main.c: 94: void myPrintf(unsigned char *PointString)
+"93
+[; ;main.c: 93: void myPrintf(unsigned char *PointString)
 [v _PointString `*uc ~T0 @X0 1 r1 ]
-"95
-[; ;main.c: 95: {
+"94
+[; ;main.c: 94: {
 [f ]
-"96
-[; ;main.c: 96:     for (unsigned char i = 0; i < 255; i++) {
+"95
+[; ;main.c: 95:     for (unsigned char i = 0; i < 255; i++) {
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
@@ -988,30 +987,30 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 388  ]
 [e :U 387 ]
 {
-"97
-[; ;main.c: 97:         if (PointString[i] == ((void*)0)) {
+"96
+[; ;main.c: 96:         if (PointString[i] == ((void*)0)) {
 [e $ ! == -> -> *U + _PointString * -> _i `ux -> -> # *U _PointString `ui `ux `i `*v -> -> 0 `i `*v 390  ]
 {
-"98
-[; ;main.c: 98:             break;
+"97
+[; ;main.c: 97:             break;
 [e $U 388  ]
-"99
-[; ;main.c: 99:         } else
+"98
+[; ;main.c: 98:         } else
 }
 [e $U 391  ]
 [e :U 390 ]
-"100
-[; ;main.c: 100:             UARTWrite(PointString[i]);
+"99
+[; ;main.c: 99:             UARTWrite(PointString[i]);
 [e ( _UARTWrite (1 -> *U + _PointString * -> _i `ux -> -> # *U _PointString `ui `ux `uc ]
 [e :U 391 ]
-"101
-[; ;main.c: 101:     }
+"100
+[; ;main.c: 100:     }
 }
 [e ++ _i -> -> 1 `i `uc ]
 [e $ < -> _i `i -> 255 `i 387  ]
 [e :U 388 ]
 }
-"102
-[; ;main.c: 102: }
+"101
+[; ;main.c: 101: }
 [e :UE 386 ]
 }
