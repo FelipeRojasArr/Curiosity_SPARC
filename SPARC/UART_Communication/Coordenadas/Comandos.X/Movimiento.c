@@ -17,7 +17,7 @@ int Movimiento(void)
     if(click == ON){
         PWM();
         SOLENOIDE=HIGH;
-        __delay_ms(100);
+        __delay_ms(1200);
         SOLENOIDE=LOW;
         char loquequieras[5]="click";
        for(int i=0;i<5;i++){

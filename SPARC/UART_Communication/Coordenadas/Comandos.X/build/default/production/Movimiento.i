@@ -5764,8 +5764,7 @@ typedef uint32_t uint_fast32_t;
 # 5 "Movimiento.c" 2
 
 # 1 "./main.h" 1
-# 20 "./main.h"
-void GoToCero(void);
+# 21 "./main.h"
 void GoToInitialYPosition(void);
 void GoToInitialXPosition(void);
 void PrintMyActulPosition(void);
@@ -5773,6 +5772,7 @@ void myPrintf(unsigned char *PointString);
 # 6 "Movimiento.c" 2
 
 # 1 "./UART.h" 1
+
 
 
 
@@ -5949,7 +5949,7 @@ int Movimiento(void)
     if(click == 1){
         PWM();
         PORTDbits.RD7=1;
-        _delay((unsigned long)((100)*(8000000L/4000.0)));
+        _delay((unsigned long)((1200)*(8000000L/4000.0)));
         PORTDbits.RD7=0;
         char loquequieras[5]="click";
        for(int i=0;i<5;i++){

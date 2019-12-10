@@ -1,8 +1,8 @@
 Version 4.0 HI-TECH Software Intermediate Code
 "53 ./cases.h
 [; ;./cases.h: 53: systemState NextState;
-[c E3381 0 1 2 3 4 5 .. ]
-[n E3381 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
+[c E3380 0 1 2 3 4 5 .. ]
+[n E3380 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
 "3 ./PWM.h
 [; ;./PWM.h: 3: void PWM(void);
 [v _PWM `(v ~T0 @X0 0 ef ]
@@ -29,8 +29,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "187 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18.h
 [v __delay `JF3152 ~T0 @X0 0 e ]
 [p i __delay ]
-"6 ./UART.h
-[; ;./UART.h: 6: void UARTWrite(char data);
+"7 ./UART.h
+[; ;./UART.h: 7: void UARTWrite(char data);
 [v _UARTWrite `(v ~T0 @X0 0 ef1`uc ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
@@ -562,7 +562,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _ControlFlagVerification `i ~T0 @X0 1 e ]
 "53
 [; ;./cases.h: 53: systemState NextState;
-[v _NextState `E3381 ~T0 @X0 1 e ]
+[v _NextState `E3380 ~T0 @X0 1 e ]
 "55
 [; ;./cases.h: 55: uint8_t click;
 [v _click `uc ~T0 @X0 1 e ]
@@ -688,13 +688,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Movimiento.c: 19:         PORTDbits.RD7=1;
 [e = . . _PORTDbits 0 7 -> -> 1 `i `uc ]
 "20
-[; ;Movimiento.c: 20:         _delay((unsigned long)((100)*(8000000L/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;Movimiento.c: 20:         _delay((unsigned long)((1200)*(8000000L/4000.0)));
+[e ( __delay (1 -> * -> -> 1200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "21
 [; ;Movimiento.c: 21:         PORTDbits.RD7=0;
 [e = . . _PORTDbits 0 7 -> -> 0 `i `uc ]
-[v F3431 `uc ~T0 @X0 -> 5 `i s ]
-[i F3431
+[v F3430 `uc ~T0 @X0 -> 5 `i s ]
+[i F3430
 :U ..
 "22
 [; ;Movimiento.c: 22:         char loquequieras[5]="click";
@@ -706,7 +706,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _loquequieras `uc ~T0 @X0 -> 5 `i a ]
-[e = _loquequieras F3431 ]
+[e = _loquequieras F3430 ]
 "23
 [; ;Movimiento.c: 23:        for(int i=0;i<5;i++){
 {
@@ -744,8 +744,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "31
 [; ;Movimiento.c: 31:         PORTDbits.RD7=0;
 [e = . . _PORTDbits 0 7 -> -> 0 `i `uc ]
-[v F3434 `uc ~T0 @X0 -> 5 `i s ]
-[i F3434
+[v F3433 `uc ~T0 @X0 -> 5 `i s ]
+[i F3433
 :U ..
 "32
 [; ;Movimiento.c: 32:         char loquequieras2[5]="slide";
@@ -757,7 +757,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _loquequieras2 `uc ~T0 @X0 -> 5 `i a ]
-[e = _loquequieras2 F3434 ]
+[e = _loquequieras2 F3433 ]
 "33
 [; ;Movimiento.c: 33:        for(int i=0;i<5;i++){
 {

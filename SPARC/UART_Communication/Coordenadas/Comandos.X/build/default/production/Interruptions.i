@@ -5768,6 +5768,7 @@ typedef uint32_t uint_fast32_t;
 
 
 
+
 void UARTConfi(int Baud);
 void UARTWrite(char data);
 char UARTRead(void);

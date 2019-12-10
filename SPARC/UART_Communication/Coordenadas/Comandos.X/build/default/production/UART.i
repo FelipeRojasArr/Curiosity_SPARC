@@ -5764,8 +5764,7 @@ typedef uint32_t uint_fast32_t;
 # 5 "UART.c" 2
 
 # 1 "./main.h" 1
-# 20 "./main.h"
-void GoToCero(void);
+# 21 "./main.h"
 void GoToInitialYPosition(void);
 void GoToInitialXPosition(void);
 void PrintMyActulPosition(void);
@@ -5773,6 +5772,7 @@ void myPrintf(unsigned char *PointString);
 # 6 "UART.c" 2
 
 # 1 "./UART.h" 1
+
 
 
 
@@ -5971,14 +5971,7 @@ void UARTWrite(char data){
 
 char UARTRead(void){
     unsigned char Lecture;
-    if(RCSTAbits.OERR == 1)
-    {
-        TXSTA1bits.TXEN = 0;
-        RCSTA1bits.CREN = 0;
-        _delay((unsigned long)((500)*(8000000L/4000000.0)));
-        TXSTA1bits.TXEN = 1;
-        RCSTA1bits.CREN = 1;
-    }
+# 50 "UART.c"
     while (PIR1bits.RCIF == 0);
 
     Lecture = RCREG;

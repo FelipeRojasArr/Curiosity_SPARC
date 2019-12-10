@@ -1,8 +1,8 @@
 Version 4.0 HI-TECH Software Intermediate Code
 "53 ./cases.h
 [; ;./cases.h: 53: systemState NextState;
-[c E3381 0 1 2 3 4 5 .. ]
-[n E3381 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
+[c E3380 0 1 2 3 4 5 .. ]
+[n E3380 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
 "7986 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 7986: extern volatile unsigned char OSCCON __attribute__((address(0xFD3)));
 [v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
@@ -58,8 +58,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3625
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 3625: extern volatile unsigned char TRISB __attribute__((address(0xF93)));
 [v _TRISB `Vuc ~T0 @X0 0 e@3987 ]
-"5 ./UART.h
-[; ;./UART.h: 5: void UARTConfi(int Baud);
+"6 ./UART.h
+[; ;./UART.h: 6: void UARTConfi(int Baud);
 [v _UARTConfi `(v ~T0 @X0 0 ef1`i ]
 "7298 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 7298: extern volatile unsigned char PR2 __attribute__((address(0xFCB)));
@@ -85,28 +85,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "10848
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 10848: extern volatile __bit TMR2ON __attribute__((address(0x7E52)));
 [v _TMR2ON `Vb ~T0 @X0 0 e@32338 ]
-"2711
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 2711:     struct {
-[s S112 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S112 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
-"2721
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 2721:     struct {
-[s S113 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S113 . SPP0 SPP1 SPP2 SPP3 SPP4 SPP5 SPP6 SPP7 ]
-"2731
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 2731:     struct {
-[s S114 :7 `uc 1 :1 `uc 1 ]
-[n S114 . . SS2 ]
-"2710
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 2710: typedef union {
-[u S111 `S112 1 `S113 1 `S114 1 ]
-[n S111 . . . . ]
-"2736
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 2736: extern volatile PORTDbits_t PORTDbits __attribute__((address(0xF83)));
-[v _PORTDbits `VS111 ~T0 @X0 0 e@3971 ]
-"4 ./PWM.h
-[; ;./PWM.h: 4: void ContarPulsos(int pasos);
-[v _ContarPulsos `(v ~T0 @X0 0 ef1`i ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -637,7 +615,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _ControlFlagVerification `i ~T0 @X0 1 e ]
 "53
 [; ;./cases.h: 53: systemState NextState;
-[v _NextState `E3381 ~T0 @X0 1 e ]
+[v _NextState `E3380 ~T0 @X0 1 e ]
 "55
 [; ;./cases.h: 55: uint8_t click;
 [v _click `uc ~T0 @X0 1 e ]
@@ -771,8 +749,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;CONFIGUR.c: 31:    LATD = 0x00;
 [e = _LATD -> -> 0 `i `uc ]
 "32
-[; ;CONFIGUR.c: 32:    TRISD = 0xF0;
-[e = _TRISD -> -> 240 `i `uc ]
+[; ;CONFIGUR.c: 32:    TRISD = 0x00;
+[e = _TRISD -> -> 0 `i `uc ]
 "34
 [; ;CONFIGUR.c: 34:    PORTC = 0x00;
 [e = _PORTC -> -> 0 `i `uc ]
@@ -827,172 +805,4 @@ Version 4.0 HI-TECH Software Intermediate Code
 "65
 [; ;CONFIGUR.c: 65: }
 [e :UE 368 ]
-}
-"67
-[; ;CONFIGUR.c: 67: void InicialX(void)
-[v _InicialX `(v ~T0 @X0 1 ef ]
-"68
-[; ;CONFIGUR.c: 68: {
-{
-[e :U _InicialX ]
-[f ]
-"69
-[; ;CONFIGUR.c: 69:     PORTDbits.RD0=0;
-[e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
-"70
-[; ;CONFIGUR.c: 70:     PORTDbits.RD1=0;
-[e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
-"71
-[; ;CONFIGUR.c: 71:     while(CoordAntX!=0){
-[e $U 370  ]
-[e :U 371 ]
-{
-"72
-[; ;CONFIGUR.c: 72:         if(CoordAntX==0)
-[e $ ! == _CoordAntX -> -> 0 `i `ui 373  ]
-"73
-[; ;CONFIGUR.c: 73:         {
-{
-"74
-[; ;CONFIGUR.c: 74:             PORTDbits.RD2=1;
-[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
-"75
-[; ;CONFIGUR.c: 75:             PORTDbits.RD3=1;
-[e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
-"76
-[; ;CONFIGUR.c: 76:         }else{
-}
-[e $U 374  ]
-[e :U 373 ]
-{
-"77
-[; ;CONFIGUR.c: 77:             if(CoordAntX!=0)
-[e $ ! != _CoordAntX -> -> 0 `i `ui 375  ]
-"78
-[; ;CONFIGUR.c: 78:             {
-{
-"79
-[; ;CONFIGUR.c: 79:                 PORTDbits.RD2=0;
-[e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
-"80
-[; ;CONFIGUR.c: 80:                 PORTDbits.RD3=0;
-[e = . . _PORTDbits 0 3 -> -> 0 `i `uc ]
-"81
-[; ;CONFIGUR.c: 81:             }
-}
-[e :U 375 ]
-"82
-[; ;CONFIGUR.c: 82:         }
-}
-[e :U 374 ]
-"83
-[; ;CONFIGUR.c: 83:     }
-}
-[e :U 370 ]
-"71
-[; ;CONFIGUR.c: 71:     while(CoordAntX!=0){
-[e $ != _CoordAntX -> -> 0 `i `ui 371  ]
-[e :U 372 ]
-"84
-[; ;CONFIGUR.c: 84: }
-[e :UE 369 ]
-}
-"86
-[; ;CONFIGUR.c: 86: void InicialY(void)
-[v _InicialY `(v ~T0 @X0 1 ef ]
-"87
-[; ;CONFIGUR.c: 87: {
-{
-[e :U _InicialY ]
-[f ]
-"88
-[; ;CONFIGUR.c: 88:     PORTDbits.RD0=1;
-[e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
-"89
-[; ;CONFIGUR.c: 89:     PORTDbits.RD1=0;
-[e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
-"91
-[; ;CONFIGUR.c: 91:     do{
-[e :U 379 ]
-{
-"92
-[; ;CONFIGUR.c: 92:     PORTDbits.RD2=0;
-[e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
-"93
-[; ;CONFIGUR.c: 93:     PORTDbits.RD3=0;
-[e = . . _PORTDbits 0 3 -> -> 0 `i `uc ]
-"94
-[; ;CONFIGUR.c: 94:     }while(CoordAntY!=0);
-}
-[e $ != _CoordAntY -> -> 0 `i `ui 379  ]
-[e :U 378 ]
-"96
-[; ;CONFIGUR.c: 96:     PORTDbits.RD2=1;
-[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
-"97
-[; ;CONFIGUR.c: 97:     PORTDbits.RD3=1;
-[e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
-"99
-[; ;CONFIGUR.c: 99: }
-[e :UE 376 ]
-}
-"101
-[; ;CONFIGUR.c: 101: void GoToInitialXPosition(void)
-[v _GoToInitialXPosition `(v ~T0 @X0 1 ef ]
-"102
-[; ;CONFIGUR.c: 102: {
-{
-[e :U _GoToInitialXPosition ]
-[f ]
-"103
-[; ;CONFIGUR.c: 103:     PORTDbits.RD0=1;
-[e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
-"104
-[; ;CONFIGUR.c: 104:     PORTDbits.RD1=1;
-[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
-"105
-[; ;CONFIGUR.c: 105:     ContarPulsos(25);
-[e ( _ContarPulsos (1 -> 25 `i ]
-"106
-[; ;CONFIGUR.c: 106:     PORTDbits.RD2=1;
-[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
-"107
-[; ;CONFIGUR.c: 107:     PORTDbits.RD3=1;
-[e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
-"108
-[; ;CONFIGUR.c: 108:     CoordAntX = 0;
-[e = _CoordAntX -> -> 0 `i `ui ]
-"109
-[; ;CONFIGUR.c: 109: }
-[e :UE 380 ]
-}
-"111
-[; ;CONFIGUR.c: 111: void GoToInitialYPosition(void)
-[v _GoToInitialYPosition `(v ~T0 @X0 1 ef ]
-"112
-[; ;CONFIGUR.c: 112: {
-{
-[e :U _GoToInitialYPosition ]
-[f ]
-"113
-[; ;CONFIGUR.c: 113:     PORTDbits.RD0=0;
-[e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
-"114
-[; ;CONFIGUR.c: 114:     PORTDbits.RD1=1;
-[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
-"115
-[; ;CONFIGUR.c: 115:     ContarPulsos(25);
-[e ( _ContarPulsos (1 -> 25 `i ]
-"116
-[; ;CONFIGUR.c: 116:     PORTDbits.RD2=1;
-[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
-"117
-[; ;CONFIGUR.c: 117:     PORTDbits.RD3=1;
-[e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
-"118
-[; ;CONFIGUR.c: 118:     CoordAntY = 0;
-[e = _CoordAntY -> -> 0 `i `ui ]
-"119
-[; ;CONFIGUR.c: 119: }
-[e :UE 381 ]
 }

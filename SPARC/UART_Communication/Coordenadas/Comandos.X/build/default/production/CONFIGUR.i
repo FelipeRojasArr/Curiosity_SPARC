@@ -5764,8 +5764,7 @@ typedef uint32_t uint_fast32_t;
 # 5 "CONFIGUR.c" 2
 
 # 1 "./main.h" 1
-# 20 "./main.h"
-void GoToCero(void);
+# 21 "./main.h"
 void GoToInitialYPosition(void);
 void GoToInitialXPosition(void);
 void PrintMyActulPosition(void);
@@ -5773,6 +5772,7 @@ void myPrintf(unsigned char *PointString);
 # 6 "CONFIGUR.c" 2
 
 # 1 "./UART.h" 1
+
 
 
 
@@ -5961,7 +5961,7 @@ void Configuracion(void)
 
    PORTD = 0x00;
    LATD = 0x00;
-   TRISD = 0xF0;
+   TRISD = 0x00;
 
    PORTC = 0x00;
    LATC= 0x00;
@@ -5994,58 +5994,4 @@ void Configuracion(void)
     TMR2ON = 1;
 
     return;
-}
-
-void InicialX(void)
-{
-    PORTDbits.RD0=0;
-    PORTDbits.RD1=0;
-    while(CoordAntX!=0){
-        if(CoordAntX==0)
-        {
-            PORTDbits.RD2=1;
-            PORTDbits.RD3=1;
-        }else{
-            if(CoordAntX!=0)
-            {
-                PORTDbits.RD2=0;
-                PORTDbits.RD3=0;
-            }
-        }
-    }
-}
-
-void InicialY(void)
-{
-    PORTDbits.RD0=1;
-    PORTDbits.RD1=0;
-
-    do{
-    PORTDbits.RD2=0;
-    PORTDbits.RD3=0;
-    }while(CoordAntY!=0);
-
-    PORTDbits.RD2=1;
-    PORTDbits.RD3=1;
-
-}
-
-void GoToInitialXPosition(void)
-{
-    PORTDbits.RD0=1;
-    PORTDbits.RD1=1;
-    ContarPulsos(25);
-    PORTDbits.RD2=1;
-    PORTDbits.RD3=1;
-    CoordAntX = 0;
-}
-
-void GoToInitialYPosition(void)
-{
-    PORTDbits.RD0=0;
-    PORTDbits.RD1=1;
-    ContarPulsos(25);
-    PORTDbits.RD2=1;
-    PORTDbits.RD3=1;
-    CoordAntY = 0;
 }

@@ -29,19 +29,27 @@
 #define TURN_ON_RECEIVER   RCSTAbits.CREN = 1;
 
 /**********DEFINICIONES GLOBALES*************/
-# define HIGH               1
-# define LOW                0
-# define INPUT              1
-# define OUTPUT             0
-# define OFF                0
-# define ON                 1
-# define TRUE               1
-# define FALSE              0
-# define HUNDRED            100
-# define TEN                10
-# define UNIT               1
-# define FIRST_ASCII_NUMBER 48
-# define ALL_COORDINATES    6
+# define HIGH                       1
+# define LOW                        0
+# define INPUT                      1
+# define OUTPUT                     0
+# define OFF                        0
+# define ON                         1
+# define TRUE                       1
+# define FALSE                      0
+# define HUNDRED                    100
+# define TEN                        10
+# define UNIT                       1
+# define FIRST_ASCII_NUMBER         48
+# define ALL_COORDINATES            6
+
+/******************Motores***********************/
+
+# define ENABLE_STEPPER_MOTORS      0
+# define DISABLE_STEPPER_MOTORS     1
+
+# define ANTICLOCKWISE_TURN         1
+# define CLOCKWISE_TURN             0
 
 /******************PWM***********************/
 

@@ -5768,6 +5768,7 @@ typedef uint32_t uint_fast32_t;
 
 
 
+
 void UARTConfi(int Baud);
 void UARTWrite(char data);
 char UARTRead(void);
@@ -5947,7 +5948,8 @@ int coord(char* P1, char*L, uint16_t* x , uint16_t* y , char*P2){
             read= UARTRead();
             buffer[i]=read;
 
-            if(i == EndCommandCharacter)
+
+            if(i == (EndCommandCharacter))
             {
                 RCSTAbits.CREN = 0;
             }

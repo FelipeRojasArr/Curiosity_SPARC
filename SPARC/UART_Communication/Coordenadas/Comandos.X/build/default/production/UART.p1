@@ -1,8 +1,8 @@
 Version 4.0 HI-TECH Software Intermediate Code
 "53 ./cases.h
 [; ;./cases.h: 53: systemState NextState;
-[c E3381 0 1 2 3 4 5 .. ]
-[n E3381 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
+[c E3380 0 1 2 3 4 5 .. ]
+[n E3380 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
 "3858 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 3858:     struct {
 [s S149 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -93,65 +93,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "5402
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5402: extern volatile unsigned char TXREG __attribute__((address(0xFAD)));
 [v _TXREG `Vuc ~T0 @X0 0 e@4013 ]
-"5279
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5279:     struct {
-[s S210 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S210 . TX9D TRMT BRGH SENDB SYNC TXEN TX9 CSRC ]
-"5289
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5289:     struct {
-[s S211 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S211 . TX9D1 TRMT1 BRGH1 SENDB1 SYNC1 TXEN1 TX91 CSRC1 ]
-"5299
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5299:     struct {
-[s S212 :6 `uc 1 :1 `uc 1 ]
-[n S212 . . TX8_9 ]
-"5303
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5303:     struct {
-[s S213 :1 `uc 1 ]
-[n S213 . TXD8 ]
-"5278
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5278: typedef union {
-[u S209 `S210 1 `S211 1 `S212 1 `S213 1 ]
-[n S209 . . . . . ]
-"5307
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5307: extern volatile TXSTA1bits_t TXSTA1bits __attribute__((address(0xFAC)));
-[v _TXSTA1bits `VS209 ~T0 @X0 0 e@4012 ]
-"5046
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5046:     struct {
-[s S198 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S198 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
-"5056
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5056:     struct {
-[s S199 :3 `uc 1 :1 `uc 1 ]
-[n S199 . . ADEN ]
-"5060
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5060:     struct {
-[s S200 :5 `uc 1 :1 `uc 1 ]
-[n S200 . . SRENA ]
-"5064
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5064:     struct {
-[s S201 :6 `uc 1 :1 `uc 1 ]
-[n S201 . . RC8_9 ]
-"5068
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5068:     struct {
-[s S202 :6 `uc 1 :1 `uc 1 ]
-[n S202 . . RC9 ]
-"5072
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5072:     struct {
-[s S203 :1 `uc 1 ]
-[n S203 . RCD8 ]
-"5045
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5045: typedef union {
-[u S197 `S198 1 `S199 1 `S200 1 `S201 1 `S202 1 `S203 1 ]
-[n S197 . . . . . . . ]
-"5076
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5076: extern volatile RCSTA1bits_t RCSTA1bits __attribute__((address(0xFAB)));
-[v _RCSTA1bits `VS197 ~T0 @X0 0 e@4011 ]
-[v F3152 `(v ~T0 @X0 1 tf1`ul ]
-"187 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18.h
-[v __delay `JF3152 ~T0 @X0 0 e ]
-[p i __delay ]
-"5414 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
+"5414
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5414: extern volatile unsigned char RCREG __attribute__((address(0xFAE)));
 [v _RCREG `Vuc ~T0 @X0 0 e@4014 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
@@ -684,7 +626,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _ControlFlagVerification `i ~T0 @X0 1 e ]
 "53
 [; ;./cases.h: 53: systemState NextState;
-[v _NextState `E3381 ~T0 @X0 1 e ]
+[v _NextState `E3380 ~T0 @X0 1 e ]
 "55
 [; ;./cases.h: 55: uint8_t click;
 [v _click `uc ~T0 @X0 1 e ]
@@ -862,38 +804,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "41
 [; ;UART.c: 41:     unsigned char Lecture;
 [v _Lecture `uc ~T0 @X0 1 a ]
-"42
-[; ;UART.c: 42:     if(RCSTAbits.OERR == 1)
-[e $ ! == -> . . _RCSTAbits 0 1 `i -> 1 `i 374  ]
-"43
-[; ;UART.c: 43:     {
-{
-"44
-[; ;UART.c: 44:         TXSTA1bits.TXEN = 0;
-[e = . . _TXSTA1bits 0 5 -> -> 0 `i `uc ]
-"45
-[; ;UART.c: 45:         RCSTA1bits.CREN = 0;
-[e = . . _RCSTA1bits 0 4 -> -> 0 `i `uc ]
-"46
-[; ;UART.c: 46:         _delay((unsigned long)((500)*(8000000L/4000000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
-"47
-[; ;UART.c: 47:         TXSTA1bits.TXEN = 1;
-[e = . . _TXSTA1bits 0 5 -> -> 1 `i `uc ]
-"48
-[; ;UART.c: 48:         RCSTA1bits.CREN = 1;
-[e = . . _RCSTA1bits 0 4 -> -> 1 `i `uc ]
-"49
-[; ;UART.c: 49:     }
-}
-[e :U 374 ]
 "50
 [; ;UART.c: 50:     while (PIR1bits.RCIF == 0);
-[e $U 375  ]
-[e :U 376 ]
+[e $U 374  ]
 [e :U 375 ]
-[e $ == -> . . _PIR1bits 0 5 `i -> 0 `i 376  ]
-[e :U 377 ]
+[e :U 374 ]
+[e $ == -> . . _PIR1bits 0 5 `i -> 0 `i 375  ]
+[e :U 376 ]
 "52
 [; ;UART.c: 52:     Lecture = RCREG;
 [e = _Lecture _RCREG ]

@@ -29,7 +29,7 @@ void Configuracion(void)
    //=============================== 
    PORTD = 0x00;                         
    LATD = 0x00;                          
-   TRISD = 0xF0;                        // PORTD as Input 
+   TRISD = 0x00;                        // PORTD as Output 
     
    PORTC = 0x00;                         
    LATC= 0x00;                          
@@ -63,58 +63,3 @@ void Configuracion(void)
      
     return; 
 } 
-
-void InicialX(void)
-{
-    DIR_A=0;
-    DIR_B=0;
-    while(CoordAntX!=0){
-        if(CoordAntX==0)
-        {
-            ENABLE_A=1;
-            ENABLE_B=1;
-        }else{ 
-            if(CoordAntX!=0)
-            {
-                ENABLE_A=0;
-                ENABLE_B=0; 
-            }
-        }
-    }
-}
-
-void InicialY(void)
-{ 
-    DIR_A=1;
-    DIR_B=0;  
-    
-    do{
-    ENABLE_A=0;
-    ENABLE_B=0;
-    }while(CoordAntY!=0);
-    
-    ENABLE_A=1;
-    ENABLE_B=1;
-    
-}
-
-void GoToInitialXPosition(void)
-{
-    DIR_A=1;
-    DIR_B=1;
-    ContarPulsos(25);
-    ENABLE_A=1;
-    ENABLE_B=1;
-    CoordAntX = 0;
-}
-
-void GoToInitialYPosition(void)
-{
-    DIR_A=0;
-    DIR_B=1; 
-    ContarPulsos(25);
-    ENABLE_A=1;
-    ENABLE_B=1;
-    CoordAntY = 0;
-}
-

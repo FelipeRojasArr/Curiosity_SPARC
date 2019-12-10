@@ -5764,8 +5764,7 @@ typedef uint32_t uint_fast32_t;
 # 5 "main.c" 2
 
 # 1 "./main.h" 1
-# 20 "./main.h"
-void GoToCero(void);
+# 21 "./main.h"
 void GoToInitialYPosition(void);
 void GoToInitialXPosition(void);
 void PrintMyActulPosition(void);
@@ -5773,6 +5772,7 @@ void myPrintf(unsigned char *PointString);
 # 6 "main.c" 2
 
 # 1 "./UART.h" 1
+
 
 
 
@@ -5947,6 +5947,7 @@ void __attribute__((picinterrupt(("")))) INT_ISR(void)
 {
     if(INTCONbits.INT0IF == 1)
     {
+        UARTWrite(0x45);
         GoToInitialXPosition();
         if(PORTBbits.RB0 == 0)
         {
@@ -5960,6 +5961,7 @@ void __attribute__((picinterrupt(("")))) INT_ISR(void)
 
     if(INTCON3bits.INT1IF == 1)
     {
+        UARTWrite(0x65);
         GoToInitialYPosition();
         if(PORTBbits.RB1 == 0)
         {
@@ -5976,8 +5978,15 @@ void __attribute__((picinterrupt(("")))) INT_ISR(void)
 void main(void) {
 
     Configuracion();
-    InterruptionsConfiguration();
-    GoToCero();
+
+    CoordAntX=1;
+    CoordAntY=1;
+    PORTDbits.RD2=1;
+    PORTDbits.RD3=1;
+
+
+
+
 
     while(1)
     {
@@ -5987,18 +5996,6 @@ void main(void) {
         Movimiento();
         PrintMyActulPosition();
     }
-}
-
-void GoToCero(void)
-{
-    CoordAntX=1;
-    CoordAntY=1;
-    PORTDbits.RD2=1;
-    PORTDbits.RD3=1;
-    InicialX();
-    InicialY();
-    GoToInitialXPosition();
-    GoToInitialYPosition();
 }
 
 void PrintMyActulPosition(void)

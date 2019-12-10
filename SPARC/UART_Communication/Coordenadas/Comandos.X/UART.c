@@ -39,14 +39,14 @@ void UARTWrite(char data){
 
 char UARTRead(void){
     unsigned char Lecture;
-    if(RCSTAbits.OERR == ON)                    //Error has ocurred
+    /*if(RCSTAbits.OERR == ON)                    //Error has ocurred
     {
         TXSTA1bits.TXEN = OFF;
         RCSTA1bits.CREN = OFF;
         __delay_us(500);
         TXSTA1bits.TXEN = ON;
         RCSTA1bits.CREN = ON;
-    }
+    }*/
     while (PIR1bits.RCIF == 0);          // Mientras RCRGEG1 este vacio has nada hasta                
  
     Lecture = RCREG; // se guarda lo que llego de RCREG1 en viene
