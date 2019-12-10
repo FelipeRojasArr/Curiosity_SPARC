@@ -5776,6 +5776,7 @@ void myPrintf(unsigned char *PointString);
 
 
 
+
 void UARTConfi(int Baud);
 void UARTWrite(char data);
 char UARTRead(void);
@@ -5948,7 +5949,7 @@ int Movimiento(void)
     if(click == 1){
         PWM();
         PORTDbits.RD7=1;
-        _delay((unsigned long)((100)*(8000000L/4000.0)));
+        _delay((unsigned long)((1200)*(8000000L/4000.0)));
         PORTDbits.RD7=0;
         char loquequieras[5]="click";
        for(int i=0;i<5;i++){

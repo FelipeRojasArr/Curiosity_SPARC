@@ -15,6 +15,7 @@ void __interrupt() INT_ISR(void)
 {
     if(INTCONbits.INT0IF == ON)
     {
+        UARTWrite(0x45);
         GoToInitialXPosition();
         if(PORTBbits.RB0 == OFF)
         {
@@ -28,6 +29,7 @@ void __interrupt() INT_ISR(void)
         
     if(INTCON3bits.INT1IF == ON)
     {
+        UARTWrite(0x65);
         GoToInitialYPosition();
         if(PORTBbits.RB1 == OFF)
         {
@@ -44,15 +46,15 @@ void __interrupt() INT_ISR(void)
 void main(void) {
     
     Configuracion();
-    InterruptionsConfiguration();
+    //InterruptionsConfiguration();
     CoordAntX=1;
     CoordAntY=1;
     ENABLE_A=DISABLE_STEPPER_MOTORS;
     ENABLE_B=DISABLE_STEPPER_MOTORS;
-    InicialX();
+    /*InicialX();
     InicialY();
     GoToInitialXPosition();
-    GoToInitialYPosition();
+    GoToInitialYPosition();*/
     
     while(1)
     { 

@@ -29,7 +29,7 @@ void Configuracion(void)
    //=============================== 
    PORTD = 0x00;                         
    LATD = 0x00;                          
-   TRISD = 0xF0;                        // PORTD as Input 
+   TRISD = 0x00;                        // PORTD as Output 
     
    PORTC = 0x00;                         
    LATC= 0x00;                          

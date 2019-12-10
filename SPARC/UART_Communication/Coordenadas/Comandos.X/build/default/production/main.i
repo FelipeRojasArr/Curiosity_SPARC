@@ -5776,6 +5776,7 @@ void myPrintf(unsigned char *PointString);
 
 
 
+
 void UARTConfi(int Baud);
 void UARTWrite(char data);
 char UARTRead(void);
@@ -5946,6 +5947,7 @@ void __attribute__((picinterrupt(("")))) INT_ISR(void)
 {
     if(INTCONbits.INT0IF == 1)
     {
+        UARTWrite(0x45);
         GoToInitialXPosition();
         if(PORTBbits.RB0 == 0)
         {
@@ -5959,6 +5961,7 @@ void __attribute__((picinterrupt(("")))) INT_ISR(void)
 
     if(INTCON3bits.INT1IF == 1)
     {
+        UARTWrite(0x65);
         GoToInitialYPosition();
         if(PORTBbits.RB1 == 0)
         {
@@ -5975,15 +5978,15 @@ void __attribute__((picinterrupt(("")))) INT_ISR(void)
 void main(void) {
 
     Configuracion();
-    InterruptionsConfiguration();
+
     CoordAntX=1;
     CoordAntY=1;
     PORTDbits.RD2=1;
     PORTDbits.RD3=1;
-    InicialX();
-    InicialY();
-    GoToInitialXPosition();
-    GoToInitialYPosition();
+
+
+
+
 
     while(1)
     {

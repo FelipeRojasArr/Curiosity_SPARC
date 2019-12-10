@@ -22,8 +22,9 @@ int coord(char* P1, char*L, uint16_t* x , uint16_t* y , char*P2){
         for(int i=StartCommandCharacter; i<(EndCommandCharacter+1); i++){
             read= UARTRead(); 
             buffer[i]=read;
+        
             
-            if(i == EndCommandCharacter)
+            if(i == (EndCommandCharacter))
             {
                 TURN_OFF_RECEIVER
             }

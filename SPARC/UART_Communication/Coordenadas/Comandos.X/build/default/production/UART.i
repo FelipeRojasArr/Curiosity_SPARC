@@ -5776,6 +5776,7 @@ void myPrintf(unsigned char *PointString);
 
 
 
+
 void UARTConfi(int Baud);
 void UARTWrite(char data);
 char UARTRead(void);
@@ -5970,14 +5971,7 @@ void UARTWrite(char data){
 
 char UARTRead(void){
     unsigned char Lecture;
-    if(RCSTAbits.OERR == 1)
-    {
-        TXSTA1bits.TXEN = 0;
-        RCSTA1bits.CREN = 0;
-        _delay((unsigned long)((500)*(8000000L/4000000.0)));
-        TXSTA1bits.TXEN = 1;
-        RCSTA1bits.CREN = 1;
-    }
+# 50 "UART.c"
     while (PIR1bits.RCIF == 0);
 
     Lecture = RCREG;

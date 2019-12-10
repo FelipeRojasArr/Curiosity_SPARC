@@ -5776,6 +5776,7 @@ void myPrintf(unsigned char *PointString);
 
 
 
+
 void UARTConfi(int Baud);
 void UARTWrite(char data);
 char UARTRead(void);
@@ -5960,7 +5961,7 @@ void Configuracion(void)
 
    PORTD = 0x00;
    LATD = 0x00;
-   TRISD = 0xF0;
+   TRISD = 0x00;
 
    PORTC = 0x00;
    LATC= 0x00;

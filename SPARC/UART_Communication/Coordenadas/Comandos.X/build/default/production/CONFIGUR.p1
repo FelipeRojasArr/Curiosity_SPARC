@@ -58,8 +58,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3625
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 3625: extern volatile unsigned char TRISB __attribute__((address(0xF93)));
 [v _TRISB `Vuc ~T0 @X0 0 e@3987 ]
-"5 ./UART.h
-[; ;./UART.h: 5: void UARTConfi(int Baud);
+"6 ./UART.h
+[; ;./UART.h: 6: void UARTConfi(int Baud);
 [v _UARTConfi `(v ~T0 @X0 0 ef1`i ]
 "7298 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 7298: extern volatile unsigned char PR2 __attribute__((address(0xFCB)));
@@ -749,8 +749,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;CONFIGUR.c: 31:    LATD = 0x00;
 [e = _LATD -> -> 0 `i `uc ]
 "32
-[; ;CONFIGUR.c: 32:    TRISD = 0xF0;
-[e = _TRISD -> -> 240 `i `uc ]
+[; ;CONFIGUR.c: 32:    TRISD = 0x00;
+[e = _TRISD -> -> 0 `i `uc ]
 "34
 [; ;CONFIGUR.c: 34:    PORTC = 0x00;
 [e = _PORTC -> -> 0 `i `uc ]
