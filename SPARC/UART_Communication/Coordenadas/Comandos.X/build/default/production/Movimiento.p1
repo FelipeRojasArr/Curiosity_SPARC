@@ -1,8 +1,8 @@
 Version 4.0 HI-TECH Software Intermediate Code
 "55 ./cases.h
 [; ;./cases.h: 55: systemState NextState;
-[c E3381 0 1 2 3 4 5 .. ]
-[n E3381 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
+[c E3382 0 1 2 3 4 5 .. ]
+[n E3382 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
 "6 ./PWM.h
 [; ;./PWM.h: 6:     void PWM(void);
 [v _PWM `(v ~T0 @X0 0 ef ]
@@ -29,8 +29,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "187 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18.h
 [v __delay `JF3152 ~T0 @X0 0 e ]
 [p i __delay ]
-"25 ./main.h
-[; ;./main.h: 25: void myPrintf(unsigned char *PointString);
+"27 ./main.h
+[; ;./main.h: 27: void myPrintf(unsigned char *PointString);
 [v _myPrintf `(v ~T0 @X0 0 ef1`*uc ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
@@ -562,7 +562,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _ControlFlagVerification `i ~T0 @X0 1 e ]
 "55
 [; ;./cases.h: 55: systemState NextState;
-[v _NextState `E3381 ~T0 @X0 1 e ]
+[v _NextState `E3382 ~T0 @X0 1 e ]
 "57
 [; ;./cases.h: 57: uint8_t click;
 [v _click `uc ~T0 @X0 1 e ]
@@ -666,76 +666,76 @@ Version 4.0 HI-TECH Software Intermediate Code
 "30
 [; ;./PWM.h: 30:     unsigned int FlagDirectionY;
 [v _FlagDirectionY `ui ~T0 @X0 1 e ]
-"14 Movimiento.c
-[; ;Movimiento.c: 14: int Movement(void)
+"13 Movimiento.c
+[; ;Movimiento.c: 13: int Movement(void)
 [v _Movement `(i ~T0 @X0 1 ef ]
-"15
-[; ;Movimiento.c: 15: {
+"14
+[; ;Movimiento.c: 14: {
 {
 [e :U _Movement ]
 [f ]
-"16
-[; ;Movimiento.c: 16:     if(click == 1){
+"15
+[; ;Movimiento.c: 15:     if(click == 1){
 [e $ ! == -> _click `i -> 1 `i 369  ]
 {
-"17
-[; ;Movimiento.c: 17:         PWM();
+"16
+[; ;Movimiento.c: 16:         PWM();
 [e ( _PWM ..  ]
-"18
-[; ;Movimiento.c: 18:         PORTDbits.RD7=1;
+"17
+[; ;Movimiento.c: 17:         PORTDbits.RD7=1;
 [e = . . _PORTDbits 0 7 -> -> 1 `i `uc ]
-"19
-[; ;Movimiento.c: 19:         _delay((unsigned long)((1200)*(8000000L/4000.0)));
+"18
+[; ;Movimiento.c: 18:         _delay((unsigned long)((1200)*(8000000L/4000.0)));
 [e ( __delay (1 -> * -> -> 1200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"20
-[; ;Movimiento.c: 20:         PORTDbits.RD7=0;
+"19
+[; ;Movimiento.c: 19:         PORTDbits.RD7=0;
 [e = . . _PORTDbits 0 7 -> -> 0 `i `uc ]
-"21
-[; ;Movimiento.c: 21:         myPrintf("Click");
+"20
+[; ;Movimiento.c: 20:         myPrintf("Click");
 [e ( _myPrintf (1 :s 1C ]
-"22
-[; ;Movimiento.c: 22:     }
+"21
+[; ;Movimiento.c: 21:     }
 }
 [e $U 370  ]
-"23
-[; ;Movimiento.c: 23:     else{
+"22
+[; ;Movimiento.c: 22:     else{
 [e :U 369 ]
 {
-"24
-[; ;Movimiento.c: 24:         if(click == 0)
+"23
+[; ;Movimiento.c: 23:         if(click == 0)
 [e $ ! == -> _click `i -> 0 `i 371  ]
-"25
-[; ;Movimiento.c: 25:         {
+"24
+[; ;Movimiento.c: 24:         {
 {
-"26
-[; ;Movimiento.c: 26:             PORTDbits.RD7=1;
+"25
+[; ;Movimiento.c: 25:             PORTDbits.RD7=1;
 [e = . . _PORTDbits 0 7 -> -> 1 `i `uc ]
-"27
-[; ;Movimiento.c: 27:             PWM();
+"26
+[; ;Movimiento.c: 26:             PWM();
 [e ( _PWM ..  ]
-"28
-[; ;Movimiento.c: 28:             PORTDbits.RD7=0;
+"27
+[; ;Movimiento.c: 27:             PORTDbits.RD7=0;
 [e = . . _PORTDbits 0 7 -> -> 0 `i `uc ]
-"29
-[; ;Movimiento.c: 29:             myPrintf("Slide");
+"28
+[; ;Movimiento.c: 28:             myPrintf("Slide");
 [e ( _myPrintf (1 :s 2C ]
-"30
-[; ;Movimiento.c: 30:         }
+"29
+[; ;Movimiento.c: 29:         }
 }
 [e :U 371 ]
-"31
-[; ;Movimiento.c: 31:     }
+"30
+[; ;Movimiento.c: 30:     }
 }
 [e :U 370 ]
-"33
-[; ;Movimiento.c: 33:     ControlFlagVerification = 1;
+"32
+[; ;Movimiento.c: 32:     ControlFlagVerification = 1;
 [e = _ControlFlagVerification -> 1 `i ]
-"35
-[; ;Movimiento.c: 35:     return ControlFlagVerification;
+"34
+[; ;Movimiento.c: 34:     return ControlFlagVerification;
 [e ) _ControlFlagVerification ]
 [e $UE 368  ]
-"36
-[; ;Movimiento.c: 36: }
+"35
+[; ;Movimiento.c: 35: }
 [e :UE 368 ]
 }
 [a 1C 67 108 105 99 107 0 ]

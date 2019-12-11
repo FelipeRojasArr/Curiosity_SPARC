@@ -1,8 +1,8 @@
 Version 4.0 HI-TECH Software Intermediate Code
 "55 ./cases.h
 [; ;./cases.h: 55: systemState NextState;
-[c E3381 0 1 2 3 4 5 .. ]
-[n E3381 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
+[c E3382 0 1 2 3 4 5 .. ]
+[n E3382 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
 "48
 [; ;./cases.h: 48: uint8_t start(void);
 [v _start `(uc ~T0 @X0 0 ef ]
@@ -551,7 +551,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _ControlFlagVerification `i ~T0 @X0 1 e ]
 "55
 [; ;./cases.h: 55: systemState NextState;
-[v _NextState `E3381 ~T0 @X0 1 e ]
+[v _NextState `E3382 ~T0 @X0 1 e ]
 "57
 [; ;./cases.h: 57: uint8_t click;
 [v _click `uc ~T0 @X0 1 e ]
@@ -655,143 +655,143 @@ Version 4.0 HI-TECH Software Intermediate Code
 "30
 [; ;./PWM.h: 30:     unsigned int FlagDirectionY;
 [v _FlagDirectionY `ui ~T0 @X0 1 e ]
-"15 verification.c
-[; ;verification.c: 15: void verification(void)
+"14 verification.c
+[; ;verification.c: 14: void verification(void)
 [v _verification `(v ~T0 @X0 1 ef ]
-"16
-[; ;verification.c: 16: {
+"15
+[; ;verification.c: 15: {
 {
 [e :U _verification ]
 [f ]
+"16
+[; ;verification.c: 16:     NextState = iddle_State;
+[e = _NextState . `E3382 0 ]
 "17
-[; ;verification.c: 17:     NextState = iddle_State;
-[e = _NextState . `E3381 0 ]
-"18
-[; ;verification.c: 18:     while(ControlFlagVerification == 1)
+[; ;verification.c: 17:     while(ControlFlagVerification == 1)
 [e $U 369  ]
 [e :U 370 ]
+"18
+[; ;verification.c: 18:     {
+{
 "19
-[; ;verification.c: 19:     {
-{
-"20
-[; ;verification.c: 20:         switch(NextState)
+[; ;verification.c: 19:         switch(NextState)
 [e $U 373  ]
-"21
-[; ;verification.c: 21:         {
+"20
+[; ;verification.c: 20:         {
 {
-"22
-[; ;verification.c: 22:             case iddle_State:{
+"21
+[; ;verification.c: 21:             case iddle_State:{
 [e :U 374 ]
 {
+"22
+[; ;verification.c: 22:                 NextState= start();
+[e = _NextState -> ( _start ..  `E3382 ]
 "23
-[; ;verification.c: 23:                 NextState= start();
-[e = _NextState -> ( _start ..  `E3381 ]
-"24
-[; ;verification.c: 24:             }
+[; ;verification.c: 23:             }
 }
-"25
-[; ;verification.c: 25:                 break;
+"24
+[; ;verification.c: 24:                 break;
 [e $U 372  ]
-"27
-[; ;verification.c: 27:             case wait_cmd_State:{
+"26
+[; ;verification.c: 26:             case wait_cmd_State:{
 [e :U 375 ]
 {
+"27
+[; ;verification.c: 27:                 NextState=cmd();
+[e = _NextState -> ( _cmd ..  `E3382 ]
 "28
-[; ;verification.c: 28:                 NextState=cmd();
-[e = _NextState -> ( _cmd ..  `E3381 ]
-"29
-[; ;verification.c: 29:             }
+[; ;verification.c: 28:             }
 }
-"30
-[; ;verification.c: 30:                 break;
+"29
+[; ;verification.c: 29:                 break;
 [e $U 372  ]
-"32
-[; ;verification.c: 32:             case validate_Par_State:{
+"31
+[; ;verification.c: 31:             case validate_Par_State:{
 [e :U 376 ]
 {
+"32
+[; ;verification.c: 32:                 NextState=Par_Validated();
+[e = _NextState -> ( _Par_Validated ..  `E3382 ]
 "33
-[; ;verification.c: 33:                 NextState=Par_Validated();
-[e = _NextState -> ( _Par_Validated ..  `E3381 ]
-"34
-[; ;verification.c: 34:             }
+[; ;verification.c: 33:             }
 }
-"35
-[; ;verification.c: 35:                 break;
+"34
+[; ;verification.c: 34:                 break;
 [e $U 372  ]
-"37
-[; ;verification.c: 37:             case validate_Instruct_State:{
+"36
+[; ;verification.c: 36:             case validate_Instruct_State:{
 [e :U 377 ]
 {
+"37
+[; ;verification.c: 37:                 NextState=Ins_Validated();
+[e = _NextState -> ( _Ins_Validated ..  `E3382 ]
 "38
-[; ;verification.c: 38:                 NextState=Ins_Validated();
-[e = _NextState -> ( _Ins_Validated ..  `E3381 ]
-"39
-[; ;verification.c: 39:             }
+[; ;verification.c: 38:             }
 }
-"40
-[; ;verification.c: 40:                 break;
+"39
+[; ;verification.c: 39:                 break;
 [e $U 372  ]
-"42
-[; ;verification.c: 42:             case validate_Coord_State:{
+"41
+[; ;verification.c: 41:             case validate_Coord_State:{
 [e :U 378 ]
 {
+"42
+[; ;verification.c: 42:                 NextState=Coord_Validated();
+[e = _NextState -> ( _Coord_Validated ..  `E3382 ]
 "43
-[; ;verification.c: 43:                 NextState=Coord_Validated();
-[e = _NextState -> ( _Coord_Validated ..  `E3381 ]
-"44
-[; ;verification.c: 44:             }
+[; ;verification.c: 43:             }
 }
-"45
-[; ;verification.c: 45:                 break;
+"44
+[; ;verification.c: 44:                 break;
 [e $U 372  ]
-"47
-[; ;verification.c: 47:             case end_State:{
+"46
+[; ;verification.c: 46:             case end_State:{
 [e :U 379 ]
 {
-"48
-[; ;verification.c: 48:                 end();
+"47
+[; ;verification.c: 47:                 end();
 [e ( _end ..  ]
-"49
-[; ;verification.c: 49:             }
+"48
+[; ;verification.c: 48:             }
 }
-"50
-[; ;verification.c: 50:                 break;
+"49
+[; ;verification.c: 49:                 break;
 [e $U 372  ]
-"52
-[; ;verification.c: 52:             default:{
+"51
+[; ;verification.c: 51:             default:{
 [e :U 380 ]
 {
+"52
+[; ;verification.c: 52:                 NextState = wait_cmd_State;
+[e = _NextState . `E3382 1 ]
 "53
-[; ;verification.c: 53:                 NextState = wait_cmd_State;
-[e = _NextState . `E3381 1 ]
-"54
-[; ;verification.c: 54:             }
+[; ;verification.c: 53:             }
 }
-"55
-[; ;verification.c: 55:                 break;
+"54
+[; ;verification.c: 54:                 break;
 [e $U 372  ]
-"56
-[; ;verification.c: 56:         }
+"55
+[; ;verification.c: 55:         }
 }
 [e $U 372  ]
 [e :U 373 ]
-[e [\ -> _NextState `ui , $ -> . `E3381 0 `ui 374
- , $ -> . `E3381 1 `ui 375
- , $ -> . `E3381 2 `ui 376
- , $ -> . `E3381 3 `ui 377
- , $ -> . `E3381 4 `ui 378
- , $ -> . `E3381 5 `ui 379
+[e [\ -> _NextState `ui , $ -> . `E3382 0 `ui 374
+ , $ -> . `E3382 1 `ui 375
+ , $ -> . `E3382 2 `ui 376
+ , $ -> . `E3382 3 `ui 377
+ , $ -> . `E3382 4 `ui 378
+ , $ -> . `E3382 5 `ui 379
  380 ]
 [e :U 372 ]
-"57
-[; ;verification.c: 57:     }
+"56
+[; ;verification.c: 56:     }
 }
 [e :U 369 ]
-"18
-[; ;verification.c: 18:     while(ControlFlagVerification == 1)
+"17
+[; ;verification.c: 17:     while(ControlFlagVerification == 1)
 [e $ == _ControlFlagVerification -> 1 `i 370  ]
 [e :U 371 ]
-"58
-[; ;verification.c: 58: }
+"57
+[; ;verification.c: 57: }
 [e :UE 368 ]
 }

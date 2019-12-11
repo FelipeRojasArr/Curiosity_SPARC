@@ -5764,7 +5764,8 @@ typedef uint32_t uint_fast32_t;
 # 5 "Movimiento.c" 2
 
 # 1 "./main.h" 1
-# 22 "./main.h"
+# 23 "./main.h"
+void GoToZero(void);
 void GoToInitialYPosition(void);
 void GoToInitialXPosition(void);
 void PrintMyActulPosition(void);
@@ -5895,20 +5896,7 @@ uint8_t click;
 
 
 void Configuracion(void);
-void InicialX(void);
-void InicialY(void);
 # 10 "Movimiento.c" 2
-
-# 1 "./Interruptions.h" 1
-
-
-
-
-
-
-void InterruptionsConfiguration(void);
-void buttonInterruptionConfiguration(void);
-# 11 "Movimiento.c" 2
 
 # 1 "./PWM.h" 1
 
@@ -5941,7 +5929,7 @@ void buttonInterruptionConfiguration(void);
     unsigned int StepsOnY;
     unsigned int FlagDirectionX;
     unsigned int FlagDirectionY;
-# 12 "Movimiento.c" 2
+# 11 "Movimiento.c" 2
 
 
 int Movement(void)

@@ -5764,7 +5764,8 @@ typedef uint32_t uint_fast32_t;
 # 5 "main.c" 2
 
 # 1 "./main.h" 1
-# 22 "./main.h"
+# 23 "./main.h"
+void GoToZero(void);
 void GoToInitialYPosition(void);
 void GoToInitialXPosition(void);
 void PrintMyActulPosition(void);
@@ -5895,20 +5896,7 @@ uint8_t click;
 
 
 void Configuracion(void);
-void InicialX(void);
-void InicialY(void);
 # 10 "main.c" 2
-
-# 1 "./Interruptions.h" 1
-
-
-
-
-
-
-void InterruptionsConfiguration(void);
-void buttonInterruptionConfiguration(void);
-# 11 "main.c" 2
 
 # 1 "./PWM.h" 1
 
@@ -5941,39 +5929,8 @@ void buttonInterruptionConfiguration(void);
     unsigned int StepsOnY;
     unsigned int FlagDirectionX;
     unsigned int FlagDirectionY;
-# 12 "main.c" 2
+# 11 "main.c" 2
 
-
-void __attribute__((picinterrupt(("")))) INT_ISR(void)
-{
-    if(INTCONbits.INT0IF == 1)
-    {
-        UARTWrite(0x45);
-        GoToInitialXPosition();
-        if(PORTBbits.RB0 == 0)
-        {
-            _delay((unsigned long)((15)*(8000000L/4000.0)));
-            if(PORTBbits.RB0 == 0)
-            {
-                INTCONbits.INT0IF = 0;
-            }
-        }
-    }
-
-    if(INTCON3bits.INT1IF == 1)
-    {
-        UARTWrite(0x65);
-        GoToInitialYPosition();
-        if(PORTBbits.RB1 == 0)
-        {
-            _delay((unsigned long)((15)*(8000000L/4000.0)));
-            if(PORTBbits.RB1 == 0)
-            {
-                INTCON3bits.INT1IF = 0;
-            }
-        }
-    }
-}
 
 void main(void)
 {
@@ -5987,41 +5944,7 @@ void main(void)
     PORTDbits.RD2=1;
     PORTDbits.RD3=1;
 
-
-    PORTDbits.RD0= 1;
-    PORTDbits.RD1= 1;
-
-
-    while(PORTBbits.RB1==0)
-    {
-        PORTDbits.RD2=0;
-        PORTDbits.RD3=0;
-        myPrintf("Si entro a x");
-    }
-     PORTDbits.RD2=1;
-     PORTDbits.RD3=1;
-     if(PORTBbits.RB1==1){
-     CoordAntX=0;
-     myPrintf("Salio de x");
-     }
-
-
-    PORTDbits.RD0= 0;
-    PORTDbits.RD1= 1;
-
-    while(PORTBbits.RB0==0)
-    {
-        PORTDbits.RD2=0;
-        PORTDbits.RD3=0;
-        myPrintf("Si entro a y");
-    }
-
-     PORTDbits.RD2=1;
-     PORTDbits.RD3=1;
-     if(PORTBbits.RB0==1) {
-         CoordAntY=0;
-         myPrintf("Salio de y");
-     }
+    GoToZero();
 
     while(1)
     {
@@ -6067,4 +5990,41 @@ void myPrintf(unsigned char *PointString)
         } else
             UARTWrite(PointString[i]);
     }
+}
+
+void GoToZero(void)
+{
+
+    PORTDbits.RD0= 1;
+    PORTDbits.RD1= 1;
+
+
+    while(PORTBbits.RB1==0)
+    {
+        PORTDbits.RD2=0;
+        PORTDbits.RD3=0;
+    }
+     PORTDbits.RD2=1;
+     PORTDbits.RD3=1;
+     if(PORTBbits.RB1==1){
+     CoordAntX=0;
+     }
+
+
+    PORTDbits.RD0= 0;
+    PORTDbits.RD1= 1;
+
+    while(PORTBbits.RB0==0)
+    {
+        PORTDbits.RD2=0;
+        PORTDbits.RD3=0;
+    }
+
+     PORTDbits.RD2=1;
+     PORTDbits.RD3=1;
+
+     if(PORTBbits.RB0==1)
+     {
+         CoordAntY=0;
+     }
 }

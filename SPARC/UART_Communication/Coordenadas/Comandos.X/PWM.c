@@ -8,7 +8,6 @@
 #include "cases.h"
 #include "Definiciones.h"
 #include "Configuracion.h"
-#include "Interruptions.h"
 #include "PWM.h"
 
 /*
@@ -150,59 +149,5 @@ void ResetOneShot(void)
         ons=OFF;
     }
     return;
-}
-
-void InicialX(void)
-{
-    DIR_A= ANTICLOCKWISE_TURN;
-    DIR_B= ANTICLOCKWISE_TURN;
-    while(CoordAntX!=ZERO_POSITION){
-        if(CoordAntX==ZERO_POSITION)
-        {
-            ENABLE_A= DISABLE_STEPPER_MOTORS;
-            ENABLE_B= DISABLE_STEPPER_MOTORS;
-        }else{ 
-            if(CoordAntX!=ZERO_POSITION)
-            {
-                ENABLE_A= ENABLE_STEPPER_MOTORS;
-                ENABLE_B= ENABLE_STEPPER_MOTORS; 
-            }
-        }
-    }
-}
-
-void InicialY(void)
-{ 
-    DIR_A= CLOCKWISE_TURN;
-    DIR_B= ANTICLOCKWISE_TURN;  
-    
-    do{
-    ENABLE_A= ENABLE_STEPPER_MOTORS;
-    ENABLE_B= ENABLE_STEPPER_MOTORS;
-    }while(CoordAntY!=ZERO_POSITION);
-    
-    ENABLE_A= DISABLE_STEPPER_MOTORS;
-    ENABLE_B= DISABLE_STEPPER_MOTORS;
-    
-}
-
-void GoToInitialXPosition(void)
-{
-    DIR_A= CLOCKWISE_TURN;
-    DIR_B= CLOCKWISE_TURN;
-    ContarPulsos(MOVE_5MM);
-    ENABLE_A= DISABLE_STEPPER_MOTORS;
-    ENABLE_B= DISABLE_STEPPER_MOTORS;
-    CoordAntX = ZERO_POSITION;
-}
-
-void GoToInitialYPosition(void)
-{
-    DIR_A= ANTICLOCKWISE_TURN;
-    DIR_B= CLOCKWISE_TURN; 
-    ContarPulsos(MOVE_5MM);
-    ENABLE_A= DISABLE_STEPPER_MOTORS;
-    ENABLE_B= DISABLE_STEPPER_MOTORS;
-    CoordAntY = ZERO_POSITION;
 }
 

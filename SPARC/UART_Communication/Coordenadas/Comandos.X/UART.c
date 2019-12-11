@@ -8,9 +8,7 @@
 #include "cases.h"
 #include "Definiciones.h"
 #include "Configuracion.h"
-#include "Interruptions.h"
 #include "PWM.h"
-
 
 void UARTConfi(int BAUD){
     //Configuracion de pines

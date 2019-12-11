@@ -8,9 +8,7 @@
 #include "cases.h"
 #include "Definiciones.h"
 #include "Configuracion.h"
-#include "Interruptions.h"
 #include "PWM.h"
-
 
 uint8_t start()
 {
@@ -102,7 +100,7 @@ uint8_t Coord_Validated()
         myPrintf("Surpasses coordinates size");
         UARTWrite(SALTO_RENGLON);
 #else
-        UARTWrite(TYPE_OF_TOUCH_ERROR);
+        UARTWrite(COORDINATES_SURPASS_SIZE_ERROR);
         UARTWrite(SALTO_RENGLON);
 #endif //DEBUG
         LEDerror();
@@ -113,13 +111,8 @@ uint8_t Coord_Validated()
 void end()
 {
     UARTWrite(ENTER);
-#ifdef DEBUG
-        myPrintf("Verify Completed");
-        UARTWrite(SALTO_RENGLON);
-#else
-        UARTWrite(TYPE_OF_TOUCH_ERROR);
-        UARTWrite(SALTO_RENGLON);
-#endif //DEBUG
+    myPrintf("Verify Completed");
+    UARTWrite(SALTO_RENGLON);
     ControlFlagVerification = OFF;
     return;
 }

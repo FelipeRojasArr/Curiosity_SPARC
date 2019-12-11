@@ -4,7 +4,7 @@
 [d chip 18F4550 ]
 [d frameptr 4065 ]
 "55 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X/cases.h
-[e E3381 . `uc
+[e E3382 . `uc
 iddle_State 0
 wait_cmd_State 1
 validate_Par_State 2
@@ -12,7 +12,7 @@ validate_Instruct_State 3
 validate_Coord_State 4
 end_State 5
 ]
-[e E3381 . `uc
+[e E3382 . `uc
 iddle_State 0
 wait_cmd_State 1
 validate_Par_State 2
@@ -20,7 +20,7 @@ validate_Instruct_State 3
 validate_Coord_State 4
 end_State 5
 ]
-[e E3376 . `uc
+[e E3382 . `uc
 iddle_State 0
 wait_cmd_State 1
 validate_Par_State 2
@@ -29,7 +29,7 @@ validate_Coord_State 4
 end_State 5
 ]
 "22 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
-[e E3384 CharactersOfASCII `uc
+[e E3390 CharactersOfASCII `uc
 StartCommandCharacter 0
 InstructionCharacter 1
 CharacterX1 2
@@ -41,7 +41,7 @@ CharacterY3 7
 EndCommandCharacter 8
 ]
 "55 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X/cases.h
-[e E3381 . `uc
+[e E3382 . `uc
 iddle_State 0
 wait_cmd_State 1
 validate_Par_State 2
@@ -49,7 +49,7 @@ validate_Instruct_State 3
 validate_Coord_State 4
 end_State 5
 ]
-[e E3381 . `uc
+[e E3382 . `uc
 iddle_State 0
 wait_cmd_State 1
 validate_Par_State 2
@@ -57,7 +57,7 @@ validate_Instruct_State 3
 validate_Coord_State 4
 end_State 5
 ]
-[e E3381 . `uc
+[e E3382 . `uc
 iddle_State 0
 wait_cmd_State 1
 validate_Par_State 2
@@ -65,7 +65,7 @@ validate_Instruct_State 3
 validate_Coord_State 4
 end_State 5
 ]
-[e E3381 . `uc
+[e E3382 . `uc
 iddle_State 0
 wait_cmd_State 1
 validate_Par_State 2
@@ -73,15 +73,7 @@ validate_Instruct_State 3
 validate_Coord_State 4
 end_State 5
 ]
-[e E3376 . `uc
-iddle_State 0
-wait_cmd_State 1
-validate_Par_State 2
-validate_Instruct_State 3
-validate_Coord_State 4
-end_State 5
-]
-[e E3381 . `uc
+[e E3382 . `uc
 iddle_State 0
 wait_cmd_State 1
 validate_Par_State 2
@@ -121,57 +113,49 @@ end_State 5
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"15 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+"13 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
 [v _start start `(uc  1 e 1 0 ]
-"22
+"20
 [v _cmd cmd `(uc  1 e 1 0 ]
-"45
+"43
 [v _Par_Validated Par_Validated `(uc  1 e 1 0 ]
-"65
+"63
 [v _Ins_Validated Ins_Validated `(uc  1 e 1 0 ]
-"93
+"91
 [v _Coord_Validated Coord_Validated `(uc  1 e 1 0 ]
-"113
+"111
 [v _end end `(v  1 e 1 0 ]
-"127
+"120
 [v _LEDerror LEDerror `(v  1 e 1 0 ]
-"15 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+"14 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
 [v _Configuracion Configuracion `(v  1 e 1 0 ]
 "14 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
 [v _coord coord `(i  1 e 2 0 ]
-"14 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
-[v _INT_ISR INT_ISR `IIH(v  1 e 1 0 ]
-"45
+"13 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"104
+"38
 [v _PrintMyActulPosition PrintMyActulPosition `(v  1 e 1 0 ]
-"129
+"63
 [v _myPrintf myPrintf `(v  1 e 1 0 ]
-"14 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
+"73
+[v _GoToZero GoToZero `(v  1 e 1 0 ]
+"13 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
 [v _Movement Movement `(i  1 e 2 0 ]
-"23 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+"22 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
 [v _PWM PWM `(v  1 e 1 0 ]
-"104
+"103
 [v _ContarPulsos ContarPulsos `(v  1 e 1 0 ]
-[v i2_ContarPulsos ContarPulsos `(v  1 e 1 0 ]
-"128
+"127
 [v _OneShot OneShot `(v  1 e 1 0 ]
-[v i2_OneShot OneShot `(v  1 e 1 0 ]
-"142
+"141
 [v _ResetOneShot ResetOneShot `(v  1 e 1 0 ]
-[v i2_ResetOneShot ResetOneShot `(v  1 e 1 0 ]
-"189
-[v _GoToInitialXPosition GoToInitialXPosition `(v  1 e 1 0 ]
-"199
-[v _GoToInitialYPosition GoToInitialYPosition `(v  1 e 1 0 ]
-"15 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
+"13 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
 [v _UARTConfi UARTConfi `(v  1 e 1 0 ]
-"34
+"32
 [v _UARTWrite UARTWrite `(v  1 e 1 0 ]
-[v i2_UARTWrite UARTWrite `(v  1 e 1 0 ]
-"40
+"38
 [v _UARTRead UARTRead `(uc  1 e 1 0 ]
-"15 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
+"14 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
 [v _verification verification `(v  1 e 1 0 ]
 "17 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X/cases.h
 [v _Par1 Par1 `uc  1 e 1 0 ]
@@ -186,7 +170,7 @@ end_State 5
 "23
 [v _ControlFlagVerification ControlFlagVerification `i  1 e 2 0 ]
 "55
-[v _NextState NextState `E3381  1 e 1 0 ]
+[v _NextState NextState `E3382  1 e 1 0 ]
 "57
 [v _click click `uc  1 e 1 0 ]
 "15 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X/PWM.h
@@ -211,7 +195,7 @@ end_State 5
 [v _FlagDirectionY FlagDirectionY `ui  1 e 2 0 ]
 "2453 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [v _PORTB PORTB `VEuc  1 e 1 @3969 ]
-[s S676 . 1 `uc 1 RB0 1 0 :1:0 
+[s S669 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
 `uc 1 RB3 1 0 :1:3 
@@ -221,7 +205,7 @@ end_State 5
 `uc 1 RB7 1 0 :1:7 
 ]
 "2483
-[s S685 . 1 `uc 1 INT0 1 0 :1:0 
+[s S678 . 1 `uc 1 INT0 1 0 :1:0 
 `uc 1 INT1 1 0 :1:1 
 `uc 1 INT2 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
@@ -229,14 +213,14 @@ end_State 5
 `uc 1 PGC 1 0 :1:6 
 `uc 1 PGD 1 0 :1:7 
 ]
-[s S693 . 1 `uc 1 . 1 0 :3:0 
+[s S686 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 CCP2_PA2 1 0 :1:3 
 ]
-[u S696 . 1 `S676 1 . 1 0 `S685 1 . 1 0 `S693 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES696  1 e 1 @3969 ]
+[u S689 . 1 `S669 1 . 1 0 `S678 1 . 1 0 `S686 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES689  1 e 1 @3969 ]
 "2563
 [v _PORTC PORTC `VEuc  1 e 1 @3970 ]
-[s S914 . 1 `uc 1 RC0 1 0 :1:0 
+[s S794 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -246,29 +230,29 @@ end_State 5
 `uc 1 RC7 1 0 :1:7 
 ]
 "2605
-[s S923 . 1 `uc 1 T1OSO 1 0 :1:0 
+[s S803 . 1 `uc 1 T1OSO 1 0 :1:0 
 `uc 1 T1OSI 1 0 :1:1 
 `uc 1 CCP1 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 TX 1 0 :1:6 
 `uc 1 RX 1 0 :1:7 
 ]
-[s S930 . 1 `uc 1 T13CKI 1 0 :1:0 
+[s S810 . 1 `uc 1 T13CKI 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 P1A 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 CK 1 0 :1:6 
 `uc 1 DT 1 0 :1:7 
 ]
-[s S937 . 1 `uc 1 . 1 0 :1:0 
+[s S817 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 CCP2 1 0 :1:1 
 `uc 1 PA1 1 0 :1:2 
 ]
-[s S941 . 1 `uc 1 . 1 0 :1:0 
+[s S821 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 PA2 1 0 :1:1 
 ]
-[u S944 . 1 `S914 1 . 1 0 `S923 1 . 1 0 `S930 1 . 1 0 `S937 1 . 1 0 `S941 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES944  1 e 1 @3970 ]
+[u S824 . 1 `S794 1 . 1 0 `S803 1 . 1 0 `S810 1 . 1 0 `S817 1 . 1 0 `S821 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES824  1 e 1 @3970 ]
 "2705
 [v _PORTD PORTD `VEuc  1 e 1 @3971 ]
 [s S54 . 1 `uc 1 RD0 1 0 :1:0 
@@ -406,24 +390,24 @@ end_State 5
 [v _SPBRG SPBRG `VEuc  1 e 1 @4015 ]
 "5587
 [v _CMCON CMCON `VEuc  1 e 1 @4020 ]
-[s S1348 . 1 `uc 1 CVR 1 0 :4:0 
+[s S1004 . 1 `uc 1 CVR 1 0 :4:0 
 `uc 1 CVRSS 1 0 :1:4 
 `uc 1 CVRR 1 0 :1:5 
 `uc 1 CVROE 1 0 :1:6 
 `uc 1 CVREN 1 0 :1:7 
 ]
 "5702
-[s S1354 . 1 `uc 1 CVR0 1 0 :1:0 
+[s S1010 . 1 `uc 1 CVR0 1 0 :1:0 
 `uc 1 CVR1 1 0 :1:1 
 `uc 1 CVR2 1 0 :1:2 
 `uc 1 CVR3 1 0 :1:3 
 `uc 1 CVREF 1 0 :1:4 
 ]
-[s S1360 . 1 `uc 1 . 1 0 :6:0 
+[s S1016 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 CVROEN 1 0 :1:6 
 ]
-[u S1363 . 1 `S1348 1 . 1 0 `S1354 1 . 1 0 `S1360 1 . 1 0 ]
-[v _CVRCONbits CVRCONbits `VES1363  1 e 1 @4021 ]
+[u S1019 . 1 `S1004 1 . 1 0 `S1010 1 . 1 0 `S1016 1 . 1 0 ]
+[v _CVRCONbits CVRCONbits `VES1019  1 e 1 @4021 ]
 "6242
 [v _CCP2CON CCP2CON `VEuc  1 e 1 @4026 ]
 "6313
@@ -440,334 +424,197 @@ end_State 5
 [v _PR2 PR2 `VEuc  1 e 1 @4043 ]
 "7408
 [v _TMR2 TMR2 `VEuc  1 e 1 @4044 ]
-[s S1153 . 1 `uc 1 NOT_BOR 1 0 :1:0 
-]
-"7588
-[s S1155 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 NOT_POR 1 0 :1:1 
-]
-[s S1158 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 NOT_PD 1 0 :1:2 
-]
-[s S1161 . 1 `uc 1 . 1 0 :3:0 
-`uc 1 NOT_TO 1 0 :1:3 
-]
-[s S1164 . 1 `uc 1 . 1 0 :4:0 
-`uc 1 NOT_RI 1 0 :1:4 
-]
-[s S1167 . 1 `uc 1 nBOR 1 0 :1:0 
-`uc 1 nPOR 1 0 :1:1 
-`uc 1 nPD 1 0 :1:2 
-`uc 1 nTO 1 0 :1:3 
-`uc 1 nRI 1 0 :1:4 
-`uc 1 . 1 0 :1:5 
-`uc 1 SBOREN 1 0 :1:6 
-`uc 1 IPEN 1 0 :1:7 
-]
-[s S1176 . 1 `uc 1 . 1 0 :7:0 
-`uc 1 NOT_IPEN 1 0 :1:7 
-]
-[s S1179 . 1 `uc 1 BOR 1 0 :1:0 
-`uc 1 POR 1 0 :1:1 
-`uc 1 PD 1 0 :1:2 
-`uc 1 TO 1 0 :1:3 
-`uc 1 RI 1 0 :1:4 
-`uc 1 . 1 0 :2:5 
-`uc 1 nIPEN 1 0 :1:7 
-]
-[u S1187 . 1 `S1153 1 . 1 0 `S1155 1 . 1 0 `S1158 1 . 1 0 `S1161 1 . 1 0 `S1164 1 . 1 0 `S1167 1 . 1 0 `S1176 1 . 1 0 `S1179 1 . 1 0 ]
-[v _RCONbits RCONbits `VES1187  1 e 1 @4048 ]
 "7986
 [v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
-[s S723 . 1 `uc 1 INT1IF 1 0 :1:0 
-`uc 1 INT2IF 1 0 :1:1 
-`uc 1 . 1 0 :1:2 
-`uc 1 INT1IE 1 0 :1:3 
-`uc 1 INT2IE 1 0 :1:4 
-`uc 1 . 1 0 :1:5 
-`uc 1 INT1IP 1 0 :1:6 
-`uc 1 INT2IP 1 0 :1:7 
-]
-"8440
-[s S732 . 1 `uc 1 INT1F 1 0 :1:0 
-`uc 1 INT2F 1 0 :1:1 
-`uc 1 . 1 0 :1:2 
-`uc 1 INT1E 1 0 :1:3 
-`uc 1 INT2E 1 0 :1:4 
-`uc 1 . 1 0 :1:5 
-`uc 1 INT1P 1 0 :1:6 
-`uc 1 INT2P 1 0 :1:7 
-]
-[u S741 . 1 `S723 1 . 1 0 `S732 1 . 1 0 ]
-[v _INTCON3bits INTCON3bits `VES741  1 e 1 @4080 ]
-[s S1231 . 1 `uc 1 . 1 0 :7:0 
-`uc 1 NOT_RBPU 1 0 :1:7 
-]
-"8532
-[s S1234 . 1 `uc 1 RBIP 1 0 :1:0 
-`uc 1 . 1 0 :1:1 
-`uc 1 TMR0IP 1 0 :1:2 
-`uc 1 . 1 0 :1:3 
-`uc 1 INTEDG2 1 0 :1:4 
-`uc 1 INTEDG1 1 0 :1:5 
-`uc 1 INTEDG0 1 0 :1:6 
-`uc 1 nRBPU 1 0 :1:7 
-]
-[s S1243 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 T0IP 1 0 :1:2 
-`uc 1 . 1 0 :4:3 
-`uc 1 RBPU 1 0 :1:7 
-]
-[u S1248 . 1 `S1231 1 . 1 0 `S1234 1 . 1 0 `S1243 1 . 1 0 ]
-[v _INTCON2bits INTCON2bits `VES1248  1 e 1 @4081 ]
-[s S622 . 1 `uc 1 RBIF 1 0 :1:0 
-`uc 1 INT0IF 1 0 :1:1 
-`uc 1 TMR0IF 1 0 :1:2 
-`uc 1 RBIE 1 0 :1:3 
-`uc 1 INT0IE 1 0 :1:4 
-`uc 1 TMR0IE 1 0 :1:5 
-`uc 1 PEIE_GIEL 1 0 :1:6 
-`uc 1 GIE_GIEH 1 0 :1:7 
-]
-"8614
-[s S631 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 INT0F 1 0 :1:1 
-`uc 1 T0IF 1 0 :1:2 
-`uc 1 . 1 0 :1:3 
-`uc 1 INT0E 1 0 :1:4 
-`uc 1 T0IE 1 0 :1:5 
-`uc 1 PEIE 1 0 :1:6 
-`uc 1 GIE 1 0 :1:7 
-]
-[s S640 . 1 `uc 1 . 1 0 :6:0 
-`uc 1 GIEL 1 0 :1:6 
-`uc 1 GIEH 1 0 :1:7 
-]
-[u S644 . 1 `S622 1 . 1 0 `S631 1 . 1 0 `S640 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES644  1 e 1 @4082 ]
 "10848
 [v _TMR2ON TMR2ON `VEb  1 e 0 @32338 ]
-"45 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+"13 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"102
+"36
 } 0
-"15 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
+"14 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
 [v _verification verification `(v  1 e 1 0 ]
 {
-"58
+"57
 } 0
-"15 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+"13 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
 [v _start start `(uc  1 e 1 0 ]
 {
-"20
+"18
 } 0
-"113
+"111
 [v _end end `(v  1 e 1 0 ]
 {
-"125
+"118
 } 0
-"22
+"20
 [v _cmd cmd `(uc  1 e 1 0 ]
 {
-"43
+"41
 } 0
 "14 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
 [v _coord coord `(i  1 e 2 0 ]
 {
 "47
-[v coord@n n `uc  1 a 1 32 ]
+[v coord@n n `uc  1 a 1 29 ]
 "22
-[v coord@i i `i  1 a 2 30 ]
+[v coord@i i `i  1 a 2 27 ]
 "15
-[v coord@buffer buffer `[9]uc  1 a 9 18 ]
+[v coord@buffer buffer `[9]uc  1 a 9 15 ]
 "18
-[v coord@counterRevision counterRevision `uc  1 a 1 29 ]
+[v coord@counterRevision counterRevision `uc  1 a 1 26 ]
 "16
-[v coord@read read `uc  1 a 1 27 ]
+[v coord@read read `uc  1 a 1 24 ]
 "14
-[v coord@P1 P1 `*.39uc  1 p 2 4 ]
-[v coord@L L `*.39uc  1 p 2 6 ]
-[v coord@x x `*.39us  1 p 2 8 ]
-[v coord@y y `*.39us  1 p 2 10 ]
-[v coord@P2 P2 `*.39uc  1 p 2 12 ]
+[v coord@P1 P1 `*.39uc  1 p 2 1 ]
+[v coord@L L `*.39uc  1 p 2 3 ]
+[v coord@x x `*.39us  1 p 2 5 ]
+[v coord@y y `*.39us  1 p 2 7 ]
+[v coord@P2 P2 `*.39uc  1 p 2 9 ]
 "71
 } 0
-"40 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
+"38 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
 [v _UARTRead UARTRead `(uc  1 e 1 0 ]
 {
-"41
-[v UARTRead@Lecture Lecture `uc  1 a 1 3 ]
-"55
+"39
+[v UARTRead@Lecture Lecture `uc  1 a 1 0 ]
+"53
 } 0
-"45 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
+"43 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\cases.c
 [v _Par_Validated Par_Validated `(uc  1 e 1 0 ]
 {
-"63
+"61
 } 0
-"65
+"63
 [v _Ins_Validated Ins_Validated `(uc  1 e 1 0 ]
 {
-"91
+"89
 } 0
-"93
+"91
 [v _Coord_Validated Coord_Validated `(uc  1 e 1 0 ]
 {
-"111
+"109
 } 0
-"127
+"120
 [v _LEDerror LEDerror `(v  1 e 1 0 ]
 {
-"134
+"127
 } 0
-"104 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+"38 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
 [v _PrintMyActulPosition PrintMyActulPosition `(v  1 e 1 0 ]
 {
-"123
-[v PrintMyActulPosition@i_870 i `i  1 a 2 25 ]
-"118
-[v PrintMyActulPosition@i i `i  1 a 2 23 ]
-"108
-[v PrintMyActulPosition@b b `[3]uc  1 a 3 18 ]
-"107
-[v PrintMyActulPosition@a a `[3]uc  1 a 3 15 ]
-"127
+"57
+[v PrintMyActulPosition@i_741 i `i  1 a 2 22 ]
+"52
+[v PrintMyActulPosition@i i `i  1 a 2 20 ]
+"42
+[v PrintMyActulPosition@b b `[3]uc  1 a 3 15 ]
+"41
+[v PrintMyActulPosition@a a `[3]uc  1 a 3 12 ]
+"61
 } 0
 "7 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwmod.c
 [v ___lwmod __lwmod `(ui  1 e 2 0 ]
 {
 "10
-[v ___lwmod@counter counter `uc  1 a 1 7 ]
+[v ___lwmod@counter counter `uc  1 a 1 4 ]
 "7
-[v ___lwmod@dividend dividend `ui  1 p 2 3 ]
-[v ___lwmod@divisor divisor `ui  1 p 2 5 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 0 ]
+[v ___lwmod@divisor divisor `ui  1 p 2 2 ]
 "25
 } 0
 "7 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
 [v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
 {
 "10
-[v ___lwdiv@quotient quotient `ui  1 a 2 12 ]
+[v ___lwdiv@quotient quotient `ui  1 a 2 9 ]
 "11
-[v ___lwdiv@counter counter `uc  1 a 1 14 ]
+[v ___lwdiv@counter counter `uc  1 a 1 11 ]
 "7
-[v ___lwdiv@dividend dividend `ui  1 p 2 8 ]
-[v ___lwdiv@divisor divisor `ui  1 p 2 10 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 5 ]
+[v ___lwdiv@divisor divisor `ui  1 p 2 7 ]
 "30
 } 0
-"14 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
+"13 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
 [v _Movement Movement `(i  1 e 2 0 ]
 {
-"36
+"35
 } 0
-"129 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+"63 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
 [v _myPrintf myPrintf `(v  1 e 1 0 ]
 {
-"131
-[v myPrintf@i i `uc  1 a 1 8 ]
-"129
-[v myPrintf@PointString PointString `*.25uc  1 p 2 4 ]
-"137
+"65
+[v myPrintf@i i `uc  1 a 1 5 ]
+"63
+[v myPrintf@PointString PointString `*.25uc  1 p 2 1 ]
+"71
 } 0
-"34 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
+"32 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
 [v _UARTWrite UARTWrite `(v  1 e 1 0 ]
 {
 [v UARTWrite@data data `uc  1 a 1 wreg ]
 [v UARTWrite@data data `uc  1 a 1 wreg ]
-[v UARTWrite@data data `uc  1 a 1 3 ]
-"38
+[v UARTWrite@data data `uc  1 a 1 0 ]
+"36
 } 0
-"23 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+"22 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
 [v _PWM PWM `(v  1 e 1 0 ]
 {
-"103
+"102
 } 0
 "15 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
 {
 "17
-[v ___wmul@product product `ui  1 a 2 7 ]
+[v ___wmul@product product `ui  1 a 2 4 ]
 "15
-[v ___wmul@multiplier multiplier `ui  1 p 2 3 ]
-[v ___wmul@multiplicand multiplicand `ui  1 p 2 5 ]
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
 "53
 } 0
-"104 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
+"103 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
 [v _ContarPulsos ContarPulsos `(v  1 e 1 0 ]
 {
-[v ContarPulsos@pasos pasos `i  1 p 2 3 ]
-"126
+[v ContarPulsos@pasos pasos `i  1 p 2 0 ]
+"125
 } 0
-"142
+"141
 [v _ResetOneShot ResetOneShot `(v  1 e 1 0 ]
 {
-"153
+"152
 } 0
-"128
+"127
 [v _OneShot OneShot `(v  1 e 1 0 ]
 {
-"140
+"139
 } 0
-"15 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
+"73 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+[v _GoToZero GoToZero `(v  1 e 1 0 ]
+{
+"108
+} 0
+"14 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
 [v _Configuracion Configuracion `(v  1 e 1 0 ]
 {
-"64
+"63
 } 0
-"15 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
+"13 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
 [v _UARTConfi UARTConfi `(v  1 e 1 0 ]
 {
-[v UARTConfi@BAUD BAUD `i  1 p 2 17 ]
-"32
+[v UARTConfi@BAUD BAUD `i  1 p 2 14 ]
+"30
 } 0
 "7 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
 [v ___aldiv __aldiv `(l  1 e 4 0 ]
 {
 "10
-[v ___aldiv@quotient quotient `l  1 a 4 13 ]
+[v ___aldiv@quotient quotient `l  1 a 4 10 ]
 "11
-[v ___aldiv@sign sign `uc  1 a 1 12 ]
-[v ___aldiv@counter counter `uc  1 a 1 11 ]
+[v ___aldiv@sign sign `uc  1 a 1 9 ]
+[v ___aldiv@counter counter `uc  1 a 1 8 ]
 "7
-[v ___aldiv@dividend dividend `l  1 p 4 3 ]
-[v ___aldiv@divisor divisor `l  1 p 4 7 ]
+[v ___aldiv@dividend dividend `l  1 p 4 0 ]
+[v ___aldiv@divisor divisor `l  1 p 4 4 ]
 "41
-} 0
-"14 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
-[v _INT_ISR INT_ISR `IIH(v  1 e 1 0 ]
-{
-"43
-} 0
-"34 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
-[v i2_UARTWrite UARTWrite `(v  1 e 1 0 ]
-{
-[v i2UARTWrite@data data `uc  1 a 1 wreg ]
-[v i2UARTWrite@data data `uc  1 a 1 wreg ]
-[v i2UARTWrite@data data `uc  1 a 1 0 ]
-"38
-} 0
-"199 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\PWM.c
-[v _GoToInitialYPosition GoToInitialYPosition `(v  1 e 1 0 ]
-{
-"207
-} 0
-"189
-[v _GoToInitialXPosition GoToInitialXPosition `(v  1 e 1 0 ]
-{
-"197
-} 0
-"104
-[v i2_ContarPulsos ContarPulsos `(v  1 e 1 0 ]
-{
-[v i2ContarPulsos@pasos pasos `i  1 p 2 0 ]
-"126
-} 0
-"142
-[v i2_ResetOneShot ResetOneShot `(v  1 e 1 0 ]
-{
-"153
-} 0
-"128
-[v i2_OneShot OneShot `(v  1 e 1 0 ]
-{
-"140
 } 0

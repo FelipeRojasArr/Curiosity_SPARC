@@ -15,10 +15,12 @@
 #define COMMAND_ERROR               0x26
 #define FRAME_ERROR                 0x21
 #define TYPE_OF_TOUCH_ERROR         0x2B
+#define COORDINATES_SURPASS_SIZE_ERROR 0x25
 #define ENTER                       0x0D
 #define Y_LIMITS                    300
 #define X_LIMITS                    300
 
+void GoToZero(void);
 void GoToInitialYPosition(void);
 void GoToInitialXPosition(void);
 void PrintMyActulPosition(void);

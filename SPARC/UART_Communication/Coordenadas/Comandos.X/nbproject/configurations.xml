@@ -9,7 +9,6 @@
       <itemPath>PWM.h</itemPath>
       <itemPath>Definiciones.h</itemPath>
       <itemPath>Configuracion.h</itemPath>
-      <itemPath>Interruptions.h</itemPath>
       <itemPath>main.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
@@ -26,7 +25,6 @@
       <itemPath>PWM.c</itemPath>
       <itemPath>verification.c</itemPath>
       <itemPath>Movimiento.c</itemPath>
-      <itemPath>Interruptions.c</itemPath>
       <itemPath>CONFIGUR.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"

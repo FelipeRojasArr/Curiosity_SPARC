@@ -1,13 +1,13 @@
 Version 4.0 HI-TECH Software Intermediate Code
 "55 ./cases.h
 [; ;./cases.h: 55: systemState NextState;
-[c E3381 0 1 2 3 4 5 .. ]
-[n E3381 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
+[c E3382 0 1 2 3 4 5 .. ]
+[n E3382 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
 "7 ./UART.h
 [; ;./UART.h: 7: void UARTWrite(char data);
 [v _UARTWrite `(v ~T0 @X0 0 ef1`uc ]
-"25 ./main.h
-[; ;./main.h: 25: void myPrintf(unsigned char *PointString);
+"27 ./main.h
+[; ;./main.h: 27: void myPrintf(unsigned char *PointString);
 [v _myPrintf `(v ~T0 @X0 0 ef1`*uc ]
 "15 ./cases.h
 [; ;./cases.h: 15: int coord(char* P1, char* L, unsigned short* x, unsigned short* y, char* P2);
@@ -568,7 +568,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _ControlFlagVerification `i ~T0 @X0 1 e ]
 "55
 [; ;./cases.h: 55: systemState NextState;
-[v _NextState `E3381 ~T0 @X0 1 e ]
+[v _NextState `E3382 ~T0 @X0 1 e ]
 "57
 [; ;./cases.h: 57: uint8_t click;
 [v _click `uc ~T0 @X0 1 e ]
@@ -672,304 +672,304 @@ Version 4.0 HI-TECH Software Intermediate Code
 "30
 [; ;./PWM.h: 30:     unsigned int FlagDirectionY;
 [v _FlagDirectionY `ui ~T0 @X0 1 e ]
-"15 cases.c
-[; ;cases.c: 15: uint8_t start()
+"13 cases.c
+[; ;cases.c: 13: uint8_t start()
 [v _start `(uc ~T0 @X0 1 ef ]
-"16
-[; ;cases.c: 16: {
+"14
+[; ;cases.c: 14: {
 {
 [e :U _start ]
 [f ]
-"17
-[; ;cases.c: 17:     UARTWrite(0x0D);
+"15
+[; ;cases.c: 15:     UARTWrite(0x0D);
 [e ( _UARTWrite (1 -> -> 13 `i `uc ]
-"18
-[; ;cases.c: 18:     myPrintf("Waiting...");
+"16
+[; ;cases.c: 16:     myPrintf("Waiting...");
 [e ( _myPrintf (1 :s 1C ]
-"19
-[; ;cases.c: 19:     return wait_cmd_State;
-[e ) -> . `E3381 1 `uc ]
+"17
+[; ;cases.c: 17:     return wait_cmd_State;
+[e ) -> . `E3382 1 `uc ]
 [e $UE 368  ]
-"20
-[; ;cases.c: 20: }
+"18
+[; ;cases.c: 18: }
 [e :UE 368 ]
 }
-"22
-[; ;cases.c: 22: uint8_t cmd()
+"20
+[; ;cases.c: 20: uint8_t cmd()
 [v _cmd `(uc ~T0 @X0 1 ef ]
-"23
-[; ;cases.c: 23: {
+"21
+[; ;cases.c: 21: {
 {
 [e :U _cmd ]
 [f ]
-"24
-[; ;cases.c: 24:     UARTWrite(0x0D);
+"22
+[; ;cases.c: 22:     UARTWrite(0x0D);
 [e ( _UARTWrite (1 -> -> 13 `i `uc ]
-"25
-[; ;cases.c: 25:     myPrintf("Enter command");
+"23
+[; ;cases.c: 23:     myPrintf("Enter command");
 [e ( _myPrintf (1 :s 2C ]
-"27
-[; ;cases.c: 27:     if(coord(&Par1,&letter,&cord_x, &cord_y, &Par2) == 1)
+"25
+[; ;cases.c: 25:     if(coord(&Par1,&letter,&cord_x, &cord_y, &Par2) == 1)
 [e $ ! == ( _coord (4 , , , , &U _Par1 &U _letter -> &U _cord_x `*us -> &U _cord_y `*us &U _Par2 -> 1 `i 370  ]
-"28
-[; ;cases.c: 28:     {
+"26
+[; ;cases.c: 26:     {
 {
-"29
-[; ;cases.c: 29:         return validate_Par_State;
-[e ) -> . `E3381 2 `uc ]
+"27
+[; ;cases.c: 27:         return validate_Par_State;
+[e ) -> . `E3382 2 `uc ]
 [e $UE 369  ]
-"30
-[; ;cases.c: 30:     }
+"28
+[; ;cases.c: 28:     }
 }
 [e $U 371  ]
-"31
-[; ;cases.c: 31:     else
+"29
+[; ;cases.c: 29:     else
 [e :U 370 ]
-"32
-[; ;cases.c: 32:     {
+"30
+[; ;cases.c: 30:     {
 {
-"34
-[; ;cases.c: 34:         myPrintf("Commands were not recognized");
+"32
+[; ;cases.c: 32:         myPrintf("Commands were not recognized");
 [e ( _myPrintf (1 :s 3C ]
-"35
-[; ;cases.c: 35:         UARTWrite(0x0A);
+"33
+[; ;cases.c: 33:         UARTWrite(0x0A);
 [e ( _UARTWrite (1 -> -> 10 `i `uc ]
-"40
-[; ;cases.c: 40:         LEDerror();
+"38
+[; ;cases.c: 38:         LEDerror();
 [e ( _LEDerror ..  ]
-"41
-[; ;cases.c: 41:         return wait_cmd_State;
-[e ) -> . `E3381 1 `uc ]
+"39
+[; ;cases.c: 39:         return wait_cmd_State;
+[e ) -> . `E3382 1 `uc ]
 [e $UE 369  ]
-"42
-[; ;cases.c: 42:     }
+"40
+[; ;cases.c: 40:     }
 }
 [e :U 371 ]
-"43
-[; ;cases.c: 43: }
+"41
+[; ;cases.c: 41: }
 [e :UE 369 ]
 }
-"45
-[; ;cases.c: 45: uint8_t Par_Validated()
+"43
+[; ;cases.c: 43: uint8_t Par_Validated()
 [v _Par_Validated `(uc ~T0 @X0 1 ef ]
-"46
-[; ;cases.c: 46: {
+"44
+[; ;cases.c: 44: {
 {
 [e :U _Par_Validated ]
 [f ]
-"47
-[; ;cases.c: 47:     if(Par1==0X3C && Par2==0x3E)
+"45
+[; ;cases.c: 45:     if(Par1==0X3C && Par2==0x3E)
 [e $ ! && == -> _Par1 `i -> 60 `i == -> _Par2 `i -> 62 `i 373  ]
-"48
-[; ;cases.c: 48:     {
+"46
+[; ;cases.c: 46:     {
 {
-"49
-[; ;cases.c: 49:         return validate_Instruct_State;
-[e ) -> . `E3381 3 `uc ]
+"47
+[; ;cases.c: 47:         return validate_Instruct_State;
+[e ) -> . `E3382 3 `uc ]
 [e $UE 372  ]
-"50
-[; ;cases.c: 50:     }
+"48
+[; ;cases.c: 48:     }
 }
 [e $U 374  ]
-"51
-[; ;cases.c: 51:     else
+"49
+[; ;cases.c: 49:     else
 [e :U 373 ]
-"52
-[; ;cases.c: 52:     {
+"50
+[; ;cases.c: 50:     {
 {
-"54
-[; ;cases.c: 54:         myPrintf("Frames are not inserted correctly");
+"52
+[; ;cases.c: 52:         myPrintf("Frames are not inserted correctly");
 [e ( _myPrintf (1 :s 4C ]
-"55
-[; ;cases.c: 55:         UARTWrite(0x0A);
+"53
+[; ;cases.c: 53:         UARTWrite(0x0A);
 [e ( _UARTWrite (1 -> -> 10 `i `uc ]
-"60
-[; ;cases.c: 60:         LEDerror();
+"58
+[; ;cases.c: 58:         LEDerror();
 [e ( _LEDerror ..  ]
-"61
-[; ;cases.c: 61:         return wait_cmd_State;
-[e ) -> . `E3381 1 `uc ]
+"59
+[; ;cases.c: 59:         return wait_cmd_State;
+[e ) -> . `E3382 1 `uc ]
 [e $UE 372  ]
-"62
-[; ;cases.c: 62:     }
+"60
+[; ;cases.c: 60:     }
 }
 [e :U 374 ]
-"63
-[; ;cases.c: 63: }
+"61
+[; ;cases.c: 61: }
 [e :UE 372 ]
 }
-"65
-[; ;cases.c: 65: uint8_t Ins_Validated()
+"63
+[; ;cases.c: 63: uint8_t Ins_Validated()
 [v _Ins_Validated `(uc ~T0 @X0 1 ef ]
-"66
-[; ;cases.c: 66: {
+"64
+[; ;cases.c: 64: {
 {
 [e :U _Ins_Validated ]
 [f ]
-"67
-[; ;cases.c: 67:     if(letter == 0x43)
+"65
+[; ;cases.c: 65:     if(letter == 0x43)
 [e $ ! == -> _letter `i -> 67 `i 376  ]
-"68
-[; ;cases.c: 68:     {
+"66
+[; ;cases.c: 66:     {
 {
-"69
-[; ;cases.c: 69:         click=1;
+"67
+[; ;cases.c: 67:         click=1;
 [e = _click -> -> 1 `i `uc ]
-"70
-[; ;cases.c: 70:         return validate_Coord_State;
-[e ) -> . `E3381 4 `uc ]
+"68
+[; ;cases.c: 68:         return validate_Coord_State;
+[e ) -> . `E3382 4 `uc ]
 [e $UE 375  ]
-"71
-[; ;cases.c: 71:     }
+"69
+[; ;cases.c: 69:     }
 }
 [e $U 377  ]
-"73
-[; ;cases.c: 73:     else if(letter== 0x53)
+"71
+[; ;cases.c: 71:     else if(letter== 0x53)
 [e :U 376 ]
 [e $ ! == -> _letter `i -> 83 `i 378  ]
-"74
-[; ;cases.c: 74:     {
+"72
+[; ;cases.c: 72:     {
 {
-"75
-[; ;cases.c: 75:         click=0;
+"73
+[; ;cases.c: 73:         click=0;
 [e = _click -> -> 0 `i `uc ]
-"76
-[; ;cases.c: 76:         return validate_Coord_State;
-[e ) -> . `E3381 4 `uc ]
+"74
+[; ;cases.c: 74:         return validate_Coord_State;
+[e ) -> . `E3382 4 `uc ]
 [e $UE 375  ]
-"77
-[; ;cases.c: 77:     }
+"75
+[; ;cases.c: 75:     }
 }
 [e $U 379  ]
-"78
-[; ;cases.c: 78:     else
+"76
+[; ;cases.c: 76:     else
 [e :U 378 ]
-"79
-[; ;cases.c: 79:     {
+"77
+[; ;cases.c: 77:     {
 {
-"82
-[; ;cases.c: 82:         myPrintf("Touch Instrucction is not recognized");
+"80
+[; ;cases.c: 80:         myPrintf("Touch Instrucction is not recognized");
 [e ( _myPrintf (1 :s 5C ]
-"83
-[; ;cases.c: 83:         UARTWrite(0x0A);
+"81
+[; ;cases.c: 81:         UARTWrite(0x0A);
 [e ( _UARTWrite (1 -> -> 10 `i `uc ]
-"88
-[; ;cases.c: 88:         LEDerror();
+"86
+[; ;cases.c: 86:         LEDerror();
 [e ( _LEDerror ..  ]
-"89
-[; ;cases.c: 89:         return wait_cmd_State;
-[e ) -> . `E3381 1 `uc ]
+"87
+[; ;cases.c: 87:         return wait_cmd_State;
+[e ) -> . `E3382 1 `uc ]
 [e $UE 375  ]
-"90
-[; ;cases.c: 90:     }
+"88
+[; ;cases.c: 88:     }
 }
 [e :U 379 ]
 [e :U 377 ]
-"91
-[; ;cases.c: 91: }
+"89
+[; ;cases.c: 89: }
 [e :UE 375 ]
 }
-"93
-[; ;cases.c: 93: uint8_t Coord_Validated()
+"91
+[; ;cases.c: 91: uint8_t Coord_Validated()
 [v _Coord_Validated `(uc ~T0 @X0 1 ef ]
-"94
-[; ;cases.c: 94: {
+"92
+[; ;cases.c: 92: {
 {
 [e :U _Coord_Validated ]
 [f ]
-"95
-[; ;cases.c: 95:     if(cord_x<=300 && cord_y<=300)
+"93
+[; ;cases.c: 93:     if(cord_x<=300 && cord_y<=300)
 [e $ ! && <= _cord_x -> -> 300 `i `ui <= _cord_y -> -> 300 `i `ui 381  ]
-"96
-[; ;cases.c: 96:     {
+"94
+[; ;cases.c: 94:     {
 {
-"97
-[; ;cases.c: 97:         return end_State;
-[e ) -> . `E3381 5 `uc ]
+"95
+[; ;cases.c: 95:         return end_State;
+[e ) -> . `E3382 5 `uc ]
 [e $UE 380  ]
-"98
-[; ;cases.c: 98:     }
+"96
+[; ;cases.c: 96:     }
 }
 [e $U 382  ]
-"99
-[; ;cases.c: 99:     else
+"97
+[; ;cases.c: 97:     else
 [e :U 381 ]
-"100
-[; ;cases.c: 100:     {
+"98
+[; ;cases.c: 98:     {
 {
-"102
-[; ;cases.c: 102:         myPrintf("Surpasses coordinates size");
+"100
+[; ;cases.c: 100:         myPrintf("Surpasses coordinates size");
 [e ( _myPrintf (1 :s 6C ]
-"103
-[; ;cases.c: 103:         UARTWrite(0x0A);
+"101
+[; ;cases.c: 101:         UARTWrite(0x0A);
 [e ( _UARTWrite (1 -> -> 10 `i `uc ]
-"108
-[; ;cases.c: 108:         LEDerror();
+"106
+[; ;cases.c: 106:         LEDerror();
 [e ( _LEDerror ..  ]
-"109
-[; ;cases.c: 109:         return wait_cmd_State;
-[e ) -> . `E3381 1 `uc ]
+"107
+[; ;cases.c: 107:         return wait_cmd_State;
+[e ) -> . `E3382 1 `uc ]
 [e $UE 380  ]
-"110
-[; ;cases.c: 110:     }
+"108
+[; ;cases.c: 108:     }
 }
 [e :U 382 ]
-"111
-[; ;cases.c: 111: }
+"109
+[; ;cases.c: 109: }
 [e :UE 380 ]
 }
-"113
-[; ;cases.c: 113: void end()
+"111
+[; ;cases.c: 111: void end()
 [v _end `(v ~T0 @X0 1 ef ]
-"114
-[; ;cases.c: 114: {
+"112
+[; ;cases.c: 112: {
 {
 [e :U _end ]
 [f ]
-"115
-[; ;cases.c: 115:     UARTWrite(0x0D);
+"113
+[; ;cases.c: 113:     UARTWrite(0x0D);
 [e ( _UARTWrite (1 -> -> 13 `i `uc ]
-"117
-[; ;cases.c: 117:         myPrintf("Verify Completed");
+"114
+[; ;cases.c: 114:     myPrintf("Verify Completed");
 [e ( _myPrintf (1 :s 7C ]
-"118
-[; ;cases.c: 118:         UARTWrite(0x0A);
+"115
+[; ;cases.c: 115:     UARTWrite(0x0A);
 [e ( _UARTWrite (1 -> -> 10 `i `uc ]
-"123
-[; ;cases.c: 123:     ControlFlagVerification = 0;
+"116
+[; ;cases.c: 116:     ControlFlagVerification = 0;
 [e = _ControlFlagVerification -> 0 `i ]
-"124
-[; ;cases.c: 124:     return;
+"117
+[; ;cases.c: 117:     return;
 [e $UE 383  ]
-"125
-[; ;cases.c: 125: }
+"118
+[; ;cases.c: 118: }
 [e :UE 383 ]
 }
-"127
-[; ;cases.c: 127: void LEDerror(void)
+"120
+[; ;cases.c: 120: void LEDerror(void)
 [v _LEDerror `(v ~T0 @X0 1 ef ]
-"128
-[; ;cases.c: 128: {
+"121
+[; ;cases.c: 121: {
 {
 [e :U _LEDerror ]
 [f ]
-"129
-[; ;cases.c: 129:     PORTDbits.RD6 = 1;
+"122
+[; ;cases.c: 122:     PORTDbits.RD6 = 1;
 [e = . . _PORTDbits 0 6 -> -> 1 `i `uc ]
-"130
-[; ;cases.c: 130:     PORTDbits.RD5 = 0;
+"123
+[; ;cases.c: 123:     PORTDbits.RD5 = 0;
 [e = . . _PORTDbits 0 5 -> -> 0 `i `uc ]
-"131
-[; ;cases.c: 131:     _delay((unsigned long)((600)*(8000000L/4000.0)));
+"124
+[; ;cases.c: 124:     _delay((unsigned long)((600)*(8000000L/4000.0)));
 [e ( __delay (1 -> * -> -> 600 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"132
-[; ;cases.c: 132:     PORTDbits.RD6 = 0;
+"125
+[; ;cases.c: 125:     PORTDbits.RD6 = 0;
 [e = . . _PORTDbits 0 6 -> -> 0 `i `uc ]
-"133
-[; ;cases.c: 133:     PORTDbits.RD5 = 1;
+"126
+[; ;cases.c: 126:     PORTDbits.RD5 = 1;
 [e = . . _PORTDbits 0 5 -> -> 1 `i `uc ]
-"134
-[; ;cases.c: 134: }
+"127
+[; ;cases.c: 127: }
 [e :UE 384 ]
 }
 [a 4C 70 114 97 109 101 115 32 97 114 101 32 110 111 116 32 105 110 115 101 114 116 101 100 32 99 111 114 114 101 99 116 108 121 0 ]

@@ -5763,6 +5763,15 @@ typedef uint32_t uint_fast32_t;
 # 139 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 2 3
 # 5 "coordenadas.c" 2
 
+# 1 "./main.h" 1
+# 23 "./main.h"
+void GoToZero(void);
+void GoToInitialYPosition(void);
+void GoToInitialXPosition(void);
+void PrintMyActulPosition(void);
+void myPrintf(unsigned char *PointString);
+# 6 "coordenadas.c" 2
+
 # 1 "./UART.h" 1
 
 
@@ -5772,7 +5781,7 @@ typedef uint32_t uint_fast32_t;
 void UARTConfi(int Baud);
 void UARTWrite(char data);
 char UARTRead(void);
-# 6 "coordenadas.c" 2
+# 7 "coordenadas.c" 2
 
 # 1 "./cases.h" 1
 # 12 "./cases.h"
@@ -5822,10 +5831,10 @@ void end(void);
 systemState NextState;
 
 uint8_t click;
-# 7 "coordenadas.c" 2
+# 8 "coordenadas.c" 2
 
 # 1 "./Definiciones.h" 1
-# 8 "coordenadas.c" 2
+# 9 "coordenadas.c" 2
 
 # 1 "./Configuracion.h" 1
 # 14 "./Configuracion.h"
@@ -5887,19 +5896,6 @@ uint8_t click;
 
 
 void Configuracion(void);
-void InicialX(void);
-void InicialY(void);
-# 9 "coordenadas.c" 2
-
-# 1 "./Interruptions.h" 1
-
-
-
-
-
-
-void InterruptionsConfiguration(void);
-void buttonInterruptionConfiguration(void);
 # 10 "coordenadas.c" 2
 
 # 1 "./PWM.h" 1

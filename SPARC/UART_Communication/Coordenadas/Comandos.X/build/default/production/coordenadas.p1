@@ -1,8 +1,8 @@
 Version 4.0 HI-TECH Software Intermediate Code
 "55 ./cases.h
 [; ;./cases.h: 55: systemState NextState;
-[c E3376 0 1 2 3 4 5 .. ]
-[n E3376 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
+[c E3382 0 1 2 3 4 5 .. ]
+[n E3382 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
 "4947 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4947:     struct {
 [s S191 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -36,8 +36,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _RCSTAbits `VS190 ~T0 @X0 0 e@4011 ]
 "22 coordenadas.c
 [; ;coordenadas.c: 22:         for(int i=StartCommandCharacter; i<(EndCommandCharacter+1); i++){
-[c E3384 0 1 2 3 4 5 6 7 8 .. ]
-[n E3384 CharactersOfASCII StartCommandCharacter InstructionCharacter CharacterX1 CharacterX2 CharacterX3 CharacterY1 CharacterY2 CharacterY3 EndCommandCharacter  ]
+[c E3390 0 1 2 3 4 5 6 7 8 .. ]
+[n E3390 CharactersOfASCII StartCommandCharacter InstructionCharacter CharacterX1 CharacterX2 CharacterX3 CharacterY1 CharacterY2 CharacterY3 EndCommandCharacter  ]
 "8 ./UART.h
 [; ;./UART.h: 8: char UARTRead(void);
 [v _UARTRead `(uc ~T0 @X0 0 ef ]
@@ -648,7 +648,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _ControlFlagVerification `i ~T0 @X0 1 e ]
 "55
 [; ;./cases.h: 55: systemState NextState;
-[v _NextState `E3376 ~T0 @X0 1 e ]
+[v _NextState `E3382 ~T0 @X0 1 e ]
 "57
 [; ;./cases.h: 57: uint8_t click;
 [v _click `uc ~T0 @X0 1 e ]
@@ -784,8 +784,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;coordenadas.c: 22:         for(int i=StartCommandCharacter; i<(EndCommandCharacter+1); i++){
 {
 [v _i `i ~T0 @X0 1 a ]
-[e = _i -> . `E3384 0 `i ]
-[e $ < _i + -> . `E3384 8 `i -> 1 `i 369  ]
+[e = _i -> . `E3390 0 `i ]
+[e $ < _i + -> . `E3390 8 `i -> 1 `i 369  ]
 [e $U 370  ]
 [e :U 369 ]
 {
@@ -797,7 +797,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = *U + &U _buffer * -> -> _i `ui `ux -> -> # *U &U _buffer `ui `ux _read ]
 "27
 [; ;coordenadas.c: 27:             if(i == (EndCommandCharacter))
-[e $ ! == _i -> . `E3384 8 `i 372  ]
+[e $ ! == _i -> . `E3390 8 `i 372  ]
 "28
 [; ;coordenadas.c: 28:             {
 {
@@ -815,7 +815,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;coordenadas.c: 32:         }
 }
 [e ++ _i -> 1 `i ]
-[e $ < _i + -> . `E3384 8 `i -> 1 `i 369  ]
+[e $ < _i + -> . `E3390 8 `i -> 1 `i 369  ]
 [e :U 370 ]
 }
 "34
@@ -845,19 +845,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 373 ]
 "43
 [; ;coordenadas.c: 43:         *P1= buffer[StartCommandCharacter];
-[e = *U _P1 *U + &U _buffer * -> . `E3384 0 `ux -> -> # *U &U _buffer `ui `ux ]
+[e = *U _P1 *U + &U _buffer * -> . `E3390 0 `ux -> -> # *U &U _buffer `ui `ux ]
 "44
 [; ;coordenadas.c: 44:         *L= buffer[InstructionCharacter];
-[e = *U _L *U + &U _buffer * -> . `E3384 1 `ux -> -> # *U &U _buffer `ui `ux ]
+[e = *U _L *U + &U _buffer * -> . `E3390 1 `ux -> -> # *U &U _buffer `ui `ux ]
 "45
 [; ;coordenadas.c: 45:         *P2= buffer[EndCommandCharacter];
-[e = *U _P2 *U + &U _buffer * -> . `E3384 8 `ux -> -> # *U &U _buffer `ui `ux ]
+[e = *U _P2 *U + &U _buffer * -> . `E3390 8 `ux -> -> # *U &U _buffer `ui `ux ]
 "47
 [; ;coordenadas.c: 47:         for(char n=CharacterX1; n<(CharacterY3+1); n++)
 {
 [v _n `uc ~T0 @X0 1 a ]
-[e = _n -> . `E3384 2 `uc ]
-[e $ < -> _n `i + -> . `E3384 7 `i -> 1 `i 374  ]
+[e = _n -> . `E3390 2 `uc ]
+[e $ < -> _n `i + -> . `E3390 7 `i -> 1 `i 374  ]
 [e $U 375  ]
 [e :U 374 ]
 "48
@@ -880,7 +880,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;coordenadas.c: 53:         }
 }
 [e ++ _n -> -> 1 `i `uc ]
-[e $ < -> _n `i + -> . `E3384 7 `i -> 1 `i 374  ]
+[e $ < -> _n `i + -> . `E3390 7 `i -> 1 `i 374  ]
 [e :U 375 ]
 }
 "54
@@ -918,10 +918,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "66
 [; ;coordenadas.c: 66:             *x = 1*(buffer[CharacterX3]-48) + 10*(buffer[CharacterX2]-48) + 100*(buffer[CharacterX1]-48);
-[e = *U _x -> + + * -> 1 `i - -> *U + &U _buffer * -> . `E3384 4 `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 10 `i - -> *U + &U _buffer * -> . `E3384 3 `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 100 `i - -> *U + &U _buffer * -> . `E3384 2 `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i `us ]
+[e = *U _x -> + + * -> 1 `i - -> *U + &U _buffer * -> . `E3390 4 `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 10 `i - -> *U + &U _buffer * -> . `E3390 3 `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 100 `i - -> *U + &U _buffer * -> . `E3390 2 `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i `us ]
 "67
 [; ;coordenadas.c: 67:             *y = 1*(buffer[CharacterY3]-48) + 10*(buffer[CharacterY2]-48) + 100*(buffer[CharacterY1]-48);
-[e = *U _y -> + + * -> 1 `i - -> *U + &U _buffer * -> . `E3384 7 `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 10 `i - -> *U + &U _buffer * -> . `E3384 6 `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 100 `i - -> *U + &U _buffer * -> . `E3384 5 `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i `us ]
+[e = *U _y -> + + * -> 1 `i - -> *U + &U _buffer * -> . `E3390 7 `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 10 `i - -> *U + &U _buffer * -> . `E3390 6 `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i * -> 100 `i - -> *U + &U _buffer * -> . `E3390 5 `ux -> -> # *U &U _buffer `ui `ux `i -> 48 `i `us ]
 "69
 [; ;coordenadas.c: 69:             return 1;
 [e ) -> 1 `i ]

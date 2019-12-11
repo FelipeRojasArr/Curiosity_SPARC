@@ -1,8 +1,8 @@
 Version 4.0 HI-TECH Software Intermediate Code
 "55 ./cases.h
 [; ;./cases.h: 55: systemState NextState;
-[c E3381 0 1 2 3 4 5 .. ]
-[n E3381 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
+[c E3382 0 1 2 3 4 5 .. ]
+[n E3382 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
 "7986 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 7986: extern volatile unsigned char OSCCON __attribute__((address(0xFD3)));
 [v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
@@ -615,7 +615,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _ControlFlagVerification `i ~T0 @X0 1 e ]
 "55
 [; ;./cases.h: 55: systemState NextState;
-[v _NextState `E3381 ~T0 @X0 1 e ]
+[v _NextState `E3382 ~T0 @X0 1 e ]
 "57
 [; ;./cases.h: 57: uint8_t click;
 [v _click `uc ~T0 @X0 1 e ]
@@ -719,87 +719,87 @@ Version 4.0 HI-TECH Software Intermediate Code
 "30
 [; ;./PWM.h: 30:     unsigned int FlagDirectionY;
 [v _FlagDirectionY `ui ~T0 @X0 1 e ]
-"15 CONFIGUR.c
-[; ;CONFIGUR.c: 15: void Configuracion(void)
+"14 CONFIGUR.c
+[; ;CONFIGUR.c: 14: void Configuracion(void)
 [v _Configuracion `(v ~T0 @X0 1 ef ]
-"16
-[; ;CONFIGUR.c: 16: {
+"15
+[; ;CONFIGUR.c: 15: {
 {
 [e :U _Configuracion ]
 [f ]
-"19
-[; ;CONFIGUR.c: 19:    OSCCON=0x72;
+"18
+[; ;CONFIGUR.c: 18:    OSCCON=0x72;
 [e = _OSCCON -> -> 114 `i `uc ]
-"23
-[; ;CONFIGUR.c: 23:    CMCON = 0xFF;
+"22
+[; ;CONFIGUR.c: 22:    CMCON = 0xFF;
 [e = _CMCON -> -> 255 `i `uc ]
-"24
-[; ;CONFIGUR.c: 24:    CVRCONbits.CVREN = 0;
+"23
+[; ;CONFIGUR.c: 23:    CVRCONbits.CVREN = 0;
 [e = . . _CVRCONbits 0 4 -> -> 0 `i `uc ]
-"25
-[; ;CONFIGUR.c: 25:    ADCON1 = 0x0F;
+"24
+[; ;CONFIGUR.c: 24:    ADCON1 = 0x0F;
 [e = _ADCON1 -> -> 15 `i `uc ]
-"29
-[; ;CONFIGUR.c: 29:    PORTD = 0x00;
+"28
+[; ;CONFIGUR.c: 28:    PORTD = 0x00;
 [e = _PORTD -> -> 0 `i `uc ]
-"30
-[; ;CONFIGUR.c: 30:    LATD = 0x00;
+"29
+[; ;CONFIGUR.c: 29:    LATD = 0x00;
 [e = _LATD -> -> 0 `i `uc ]
-"31
-[; ;CONFIGUR.c: 31:    TRISD = 0x00;
+"30
+[; ;CONFIGUR.c: 30:    TRISD = 0x00;
 [e = _TRISD -> -> 0 `i `uc ]
-"33
-[; ;CONFIGUR.c: 33:    PORTC = 0x00;
+"32
+[; ;CONFIGUR.c: 32:    PORTC = 0x00;
 [e = _PORTC -> -> 0 `i `uc ]
-"34
-[; ;CONFIGUR.c: 34:    LATC= 0x00;
+"33
+[; ;CONFIGUR.c: 33:    LATC= 0x00;
 [e = _LATC -> -> 0 `i `uc ]
-"35
-[; ;CONFIGUR.c: 35:    TRISC= 0x00;
+"34
+[; ;CONFIGUR.c: 34:    TRISC= 0x00;
 [e = _TRISC -> -> 0 `i `uc ]
-"37
-[; ;CONFIGUR.c: 37:    PORTB = 0x00;
+"36
+[; ;CONFIGUR.c: 36:    PORTB = 0x00;
 [e = _PORTB -> -> 0 `i `uc ]
-"38
-[; ;CONFIGUR.c: 38:    LATB= 0x00;
+"37
+[; ;CONFIGUR.c: 37:    LATB= 0x00;
 [e = _LATB -> -> 0 `i `uc ]
-"39
-[; ;CONFIGUR.c: 39:    TRISB= 0xFF;
+"38
+[; ;CONFIGUR.c: 38:    TRISB= 0xFF;
 [e = _TRISB -> -> 255 `i `uc ]
-"43
-[; ;CONFIGUR.c: 43:    UARTConfi(9600);
+"42
+[; ;CONFIGUR.c: 42:    UARTConfi(9600);
 [e ( _UARTConfi (1 -> 9600 `i ]
-"44
-[; ;CONFIGUR.c: 44:     TRISC=0X00;
+"43
+[; ;CONFIGUR.c: 43:     TRISC=0X00;
 [e = _TRISC -> -> 0 `i `uc ]
-"48
-[; ;CONFIGUR.c: 48:      PR2 = 0xF9;
+"47
+[; ;CONFIGUR.c: 47:      PR2 = 0xF9;
 [e = _PR2 -> -> 249 `i `uc ]
-"51
-[; ;CONFIGUR.c: 51:     CCP1CON = 0x0C;
+"50
+[; ;CONFIGUR.c: 50:     CCP1CON = 0x0C;
 [e = _CCP1CON -> -> 12 `i `uc ]
-"52
-[; ;CONFIGUR.c: 52:     CCPR1L = 0x7D;
+"51
+[; ;CONFIGUR.c: 51:     CCPR1L = 0x7D;
 [e = _CCPR1L -> -> 125 `i `uc ]
-"55
-[; ;CONFIGUR.c: 55:     CCP2CON = 0x0C;
+"54
+[; ;CONFIGUR.c: 54:     CCP2CON = 0x0C;
 [e = _CCP2CON -> -> 12 `i `uc ]
-"56
-[; ;CONFIGUR.c: 56:     CCPR2L = 0x7D;
+"55
+[; ;CONFIGUR.c: 55:     CCPR2L = 0x7D;
 [e = _CCPR2L -> -> 125 `i `uc ]
-"59
-[; ;CONFIGUR.c: 59:     T2CON = 0x03;
+"58
+[; ;CONFIGUR.c: 58:     T2CON = 0x03;
 [e = _T2CON -> -> 3 `i `uc ]
-"60
-[; ;CONFIGUR.c: 60:     TMR2 = 0;
+"59
+[; ;CONFIGUR.c: 59:     TMR2 = 0;
 [e = _TMR2 -> -> 0 `i `uc ]
-"61
-[; ;CONFIGUR.c: 61:     TMR2ON = 1;
+"60
+[; ;CONFIGUR.c: 60:     TMR2ON = 1;
 [e = _TMR2ON -> -> 1 `i `b ]
-"63
-[; ;CONFIGUR.c: 63:     return;
+"62
+[; ;CONFIGUR.c: 62:     return;
 [e $UE 368  ]
-"64
-[; ;CONFIGUR.c: 64: }
+"63
+[; ;CONFIGUR.c: 63: }
 [e :UE 368 ]
 }

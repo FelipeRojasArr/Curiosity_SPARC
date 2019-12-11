@@ -5764,7 +5764,8 @@ typedef uint32_t uint_fast32_t;
 # 5 "PWM.c" 2
 
 # 1 "./main.h" 1
-# 22 "./main.h"
+# 23 "./main.h"
+void GoToZero(void);
 void GoToInitialYPosition(void);
 void GoToInitialXPosition(void);
 void PrintMyActulPosition(void);
@@ -5895,20 +5896,7 @@ uint8_t click;
 
 
 void Configuracion(void);
-void InicialX(void);
-void InicialY(void);
 # 10 "PWM.c" 2
-
-# 1 "./Interruptions.h" 1
-
-
-
-
-
-
-void InterruptionsConfiguration(void);
-void buttonInterruptionConfiguration(void);
-# 11 "PWM.c" 2
 
 # 1 "./PWM.h" 1
 
@@ -5941,8 +5929,8 @@ void buttonInterruptionConfiguration(void);
     unsigned int StepsOnY;
     unsigned int FlagDirectionX;
     unsigned int FlagDirectionY;
-# 12 "PWM.c" 2
-# 23 "PWM.c"
+# 11 "PWM.c" 2
+# 22 "PWM.c"
 void PWM()
 {
     FlagDirectionX= 1;
@@ -6073,58 +6061,4 @@ void ResetOneShot(void)
         ons=0;
     }
     return;
-}
-
-void InicialX(void)
-{
-    PORTDbits.RD0= 1;
-    PORTDbits.RD1= 1;
-    while(CoordAntX!=0){
-        if(CoordAntX==0)
-        {
-            PORTDbits.RD2= 1;
-            PORTDbits.RD3= 1;
-        }else{
-            if(CoordAntX!=0)
-            {
-                PORTDbits.RD2= 0;
-                PORTDbits.RD3= 0;
-            }
-        }
-    }
-}
-
-void InicialY(void)
-{
-    PORTDbits.RD0= 0;
-    PORTDbits.RD1= 1;
-
-    do{
-    PORTDbits.RD2= 0;
-    PORTDbits.RD3= 0;
-    }while(CoordAntY!=0);
-
-    PORTDbits.RD2= 1;
-    PORTDbits.RD3= 1;
-
-}
-
-void GoToInitialXPosition(void)
-{
-    PORTDbits.RD0= 0;
-    PORTDbits.RD1= 0;
-    ContarPulsos(25);
-    PORTDbits.RD2= 1;
-    PORTDbits.RD3= 1;
-    CoordAntX = 0;
-}
-
-void GoToInitialYPosition(void)
-{
-    PORTDbits.RD0= 1;
-    PORTDbits.RD1= 0;
-    ContarPulsos(25);
-    PORTDbits.RD2= 1;
-    PORTDbits.RD3= 1;
-    CoordAntY = 0;
 }
