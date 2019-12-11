@@ -869,6 +869,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "87
 [; ;PWM.c: 87:     ons=0;
 [e = _ons -> -> 0 `i `ui ]
+"88
+[; ;PWM.c: 88:     PORTDbits.RD2=0;
+[e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
+"89
+[; ;PWM.c: 89:     PORTDbits.RD3=0;
+[e = . . _PORTDbits 0 3 -> -> 0 `i `uc ]
 "90
 [; ;PWM.c: 90:     while(PasosActuales< pasos)
 [e $U 384  ]
@@ -894,6 +900,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;PWM.c: 90:     while(PasosActuales< pasos)
 [e $ < _PasosActuales -> _pasos `ui 385  ]
 [e :U 386 ]
+"96
+[; ;PWM.c: 96:     PORTDbits.RD2=1;
+[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
+"97
+[; ;PWM.c: 97:     PORTDbits.RD3=1;
+[e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
 "99
 [; ;PWM.c: 99:     return;
 [e $UE 383  ]

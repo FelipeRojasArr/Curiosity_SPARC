@@ -945,8 +945,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;CONFIGUR.c: 103:     PORTDbits.RD1=1;
 [e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
 "105
-[; ;CONFIGUR.c: 105:     ContarPulsos(50);
-[e ( _ContarPulsos (1 -> 50 `i ]
+[; ;CONFIGUR.c: 105:     ContarPulsos(25);
+[e ( _ContarPulsos (1 -> 25 `i ]
 "107
 [; ;CONFIGUR.c: 107:     PORTDbits.RD2=1;
 [e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
@@ -975,8 +975,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;CONFIGUR.c: 115:     PORTDbits.RD1=1;
 [e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
 "117
-[; ;CONFIGUR.c: 117:     ContarPulsos(50);
-[e ( _ContarPulsos (1 -> 50 `i ]
+[; ;CONFIGUR.c: 117:     ContarPulsos(25);
+[e ( _ContarPulsos (1 -> 25 `i ]
 "119
 [; ;CONFIGUR.c: 119:     PORTDbits.RD2=1;
 [e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]

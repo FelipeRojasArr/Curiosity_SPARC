@@ -781,6 +781,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 374 ]
 [e :U 373 ]
 "34
-[; ;Movimiento.c: 34: }
+[; ;Movimiento.c: 34:     x = 1;
+[e = _x -> 1 `i ]
+"35
+[; ;Movimiento.c: 35: }
 [e :UE 368 ]
 }
