@@ -37,6 +37,7 @@ uint8_t cmd()
         UARTWrite(COMMAND_ERROR);
         UARTWrite(SALTO_RENGLON);
 #endif //DEBUG
+        //LEDerror();
         return wait_cmd_State;
     }
 }
@@ -56,8 +57,7 @@ uint8_t Par_Validated()
         UARTWrite(FRAME_ERROR);
         UARTWrite(SALTO_RENGLON);
 #endif //DEBUG
-        
-        
+      //  LEDerror();
         return wait_cmd_State;
     } 
 }
@@ -85,6 +85,7 @@ uint8_t Ins_Validated()
         UARTWrite(TYPE_OF_TOUCH_ERROR);
         UARTWrite(SALTO_RENGLON);
 #endif //DEBUG
+    //    LEDerror();
         return wait_cmd_State;
     }
 }
@@ -104,6 +105,7 @@ uint8_t Coord_Validated()
         UARTWrite(TYPE_OF_TOUCH_ERROR);
         UARTWrite(SALTO_RENGLON);
 #endif //DEBUG
+  //      LEDerror();
         return wait_cmd_State;
     }
 }
@@ -122,3 +124,11 @@ void end()
     return;
 }
 
+/*void LEDerror(void)
+{
+    TURN_ON_RED_LED
+    TURN_OFF_GREEN_LED
+    __delay_ms(600);
+    TURN_OFF_RED_LED
+    TURN_ON_GREEN_LED
+}*/

@@ -5776,6 +5776,7 @@ char UARTRead(void);
 
 # 1 "./cases.h" 1
 # 12 "./cases.h"
+void LEDerror(void);
 void verification(void);
 
 int coord(char* P1, char* L, unsigned short* x, unsigned short* y, char* P2);
@@ -5952,6 +5953,7 @@ int coord(char* P1, char*L, uint16_t* x , uint16_t* y , char*P2){
             if(i == (EndCommandCharacter))
             {
                 RCSTAbits.CREN = 0;
+
             }
         }
 

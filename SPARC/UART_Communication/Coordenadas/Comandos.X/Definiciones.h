@@ -17,9 +17,16 @@
 #define STOP_SWITCH  PORTBbits.RB2
 
 /*LED's*/
-#define RED_LED PORTDbits.RD4 
+#define RED_LED PORTDbits.RD6 
 #define GREEN_LED PORTDbits.RD5
-#define BLUE_LED PORTDbits.RD6
+#define BLUE_LED PORTDbits.RD4
+
+#define TURN_ON_RED_LED PORTDbits.RD6 = 1;
+#define TURN_ON_GREEN_LED PORTDbits.RD5 = 1;
+#define TURN_ON_BLUE_LED PORTDbits.RD4 = 1;
+
+#define TURN_OFF_RED_LED PORTDbits.RD6 = 0;
+#define TURN_OFF_GREEN_LED PORTDbits.RD5 = 0;
 
 /*Solenoide*/
 #define SOLENOIDE PORTDbits.RD7  

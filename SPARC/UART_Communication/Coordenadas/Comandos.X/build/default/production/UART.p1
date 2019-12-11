@@ -1,8 +1,8 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"54 ./cases.h
-[; ;./cases.h: 54: systemState NextState;
-[c E3380 0 1 2 3 4 5 .. ]
-[n E3380 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
+"55 ./cases.h
+[; ;./cases.h: 55: systemState NextState;
+[c E3381 0 1 2 3 4 5 .. ]
+[n E3381 . iddle_State wait_cmd_State validate_Par_State validate_Instruct_State validate_Coord_State end_State  ]
 "3858 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 3858:     struct {
 [s S149 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -606,29 +606,29 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8893
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"16 ./cases.h
-[; ;./cases.h: 16: char Par1;
+"17 ./cases.h
+[; ;./cases.h: 17: char Par1;
 [v _Par1 `uc ~T0 @X0 1 e ]
-"17
-[; ;./cases.h: 17: char letter;
-[v _letter `uc ~T0 @X0 1 e ]
 "18
-[; ;./cases.h: 18: unsigned int cord_x;
-[v _cord_x `ui ~T0 @X0 1 e ]
+[; ;./cases.h: 18: char letter;
+[v _letter `uc ~T0 @X0 1 e ]
 "19
-[; ;./cases.h: 19: unsigned int cord_y;
-[v _cord_y `ui ~T0 @X0 1 e ]
+[; ;./cases.h: 19: unsigned int cord_x;
+[v _cord_x `ui ~T0 @X0 1 e ]
 "20
-[; ;./cases.h: 20: char Par2;
+[; ;./cases.h: 20: unsigned int cord_y;
+[v _cord_y `ui ~T0 @X0 1 e ]
+"21
+[; ;./cases.h: 21: char Par2;
 [v _Par2 `uc ~T0 @X0 1 e ]
-"22
-[; ;./cases.h: 22: int ControlFlagVerification;
+"23
+[; ;./cases.h: 23: int ControlFlagVerification;
 [v _ControlFlagVerification `i ~T0 @X0 1 e ]
-"54
-[; ;./cases.h: 54: systemState NextState;
-[v _NextState `E3380 ~T0 @X0 1 e ]
-"56
-[; ;./cases.h: 56: uint8_t click;
+"55
+[; ;./cases.h: 55: systemState NextState;
+[v _NextState `E3381 ~T0 @X0 1 e ]
+"57
+[; ;./cases.h: 57: uint8_t click;
 [v _click `uc ~T0 @X0 1 e ]
 "14 ./Configuracion.h
 [p x FOSC = INTOSC_EC ]

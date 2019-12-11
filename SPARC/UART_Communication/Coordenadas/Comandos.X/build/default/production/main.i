@@ -5784,6 +5784,7 @@ char UARTRead(void);
 
 # 1 "./cases.h" 1
 # 12 "./cases.h"
+void LEDerror(void);
 void verification(void);
 
 int coord(char* P1, char* L, unsigned short* x, unsigned short* y, char* P2);
@@ -5978,17 +5979,52 @@ void main(void)
 {
     Configuracion();
 
+
     CoordAntX=1;
     CoordAntY=1;
+
     PORTDbits.RD2=1;
     PORTDbits.RD3=1;
 
 
+    PORTDbits.RD0= 1;
+    PORTDbits.RD1= 1;
 
 
+    while(PORTBbits.RB1==0)
+    {
+        PORTDbits.RD2=0;
+        PORTDbits.RD3=0;
+        myPrintf("Si entro a x");
+    }
+     PORTDbits.RD2=1;
+     PORTDbits.RD3=1;
+     if(PORTBbits.RB1==1){
+     CoordAntX=0;
+     myPrintf("Salio de x");
+     }
+
+
+    PORTDbits.RD0= 0;
+    PORTDbits.RD1= 1;
+
+    while(PORTBbits.RB0==0)
+    {
+        PORTDbits.RD2=0;
+        PORTDbits.RD3=0;
+        myPrintf("Si entro a y");
+    }
+
+     PORTDbits.RD2=1;
+     PORTDbits.RD3=1;
+     if(PORTBbits.RB0==1) {
+         CoordAntY=0;
+         myPrintf("Salio de y");
+     }
 
     while(1)
     {
+
         ControlFlagVerification = 1;
         verification();
         PrintMyActulPosition();

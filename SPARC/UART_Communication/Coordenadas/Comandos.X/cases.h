@@ -9,6 +9,7 @@
 #define TOUCH 1
 #define SLIDE 0
 
+void LEDerror(void);
 void verification(void);
 
 int coord(char* P1, char* L, unsigned short* x, unsigned short* y, char* P2);

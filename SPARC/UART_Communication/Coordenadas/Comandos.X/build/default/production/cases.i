@@ -5784,6 +5784,7 @@ char UARTRead(void);
 
 # 1 "./cases.h" 1
 # 12 "./cases.h"
+void LEDerror(void);
 void verification(void);
 
 int coord(char* P1, char* L, unsigned short* x, unsigned short* y, char* P2);
@@ -5969,6 +5970,7 @@ uint8_t cmd()
 
 
 
+
         return wait_cmd_State;
     }
 }
@@ -5984,7 +5986,6 @@ uint8_t Par_Validated()
 
         myPrintf("Frames are not inserted correctly");
         UARTWrite(0x0A);
-
 
 
 
@@ -6017,6 +6018,7 @@ uint8_t Ins_Validated()
 
 
 
+
         return wait_cmd_State;
     }
 }
@@ -6032,6 +6034,7 @@ uint8_t Coord_Validated()
 
         myPrintf("Surpasses coordinates size");
         UARTWrite(0x0A);
+
 
 
 

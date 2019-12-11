@@ -46,17 +46,52 @@ void main(void)
 {    
     Configuracion();
     //InterruptionsConfiguration();
+    
     CoordAntX=1;
     CoordAntY=1;
+    
     ENABLE_A=DISABLE_STEPPER_MOTORS;
     ENABLE_B=DISABLE_STEPPER_MOTORS;
-    /*InicialX();
-    InicialY();
-    GoToInitialXPosition();
-    GoToInitialYPosition();*/
     
+    //PRIMERO SE MUEVE EN X
+    DIR_A= ANTICLOCKWISE_TURN;
+    DIR_B= ANTICLOCKWISE_TURN;
+    
+    
+    while(LIMIT_SWITCH_2==0)
+    {
+        ENABLE_A=ENABLE_STEPPER_MOTORS;
+        ENABLE_B=ENABLE_STEPPER_MOTORS;
+        myPrintf("Si entro a x");
+    }
+     ENABLE_A=DISABLE_STEPPER_MOTORS;
+     ENABLE_B=DISABLE_STEPPER_MOTORS;
+     if(LIMIT_SWITCH_2==1){
+     CoordAntX=0;
+     myPrintf("Salio de x");
+     }
+     
+     // CAMBIA DIRECCION PARA MOVER Y
+    DIR_A= CLOCKWISE_TURN;
+    DIR_B= ANTICLOCKWISE_TURN; 
+    
+    while(LIMIT_SWITCH_1==0)
+    {
+        ENABLE_A=ENABLE_STEPPER_MOTORS;
+        ENABLE_B=ENABLE_STEPPER_MOTORS;
+        myPrintf("Si entro a y");
+    }
+    
+     ENABLE_A=DISABLE_STEPPER_MOTORS;
+     ENABLE_B=DISABLE_STEPPER_MOTORS;
+     if(LIMIT_SWITCH_1==1) {
+         CoordAntY=0;
+         myPrintf("Salio de y");
+     }
+         
     while(1)
     { 
+        //TURN_ON_GREEN_LED
         ControlFlagVerification = ON;
         verification();
         PrintMyActulPosition();

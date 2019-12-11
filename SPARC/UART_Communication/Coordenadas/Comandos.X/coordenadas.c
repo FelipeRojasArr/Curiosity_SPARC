@@ -27,6 +27,7 @@ int coord(char* P1, char*L, uint16_t* x , uint16_t* y , char*P2){
             if(i == (EndCommandCharacter))
             {
                 TURN_OFF_RECEIVER
+                //TURN_OFF_GREEN_LED
             }
         }
         
