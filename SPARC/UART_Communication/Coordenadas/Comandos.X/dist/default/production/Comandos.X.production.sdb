@@ -133,6 +133,8 @@ end_State 5
 [v _Coord_Validated Coord_Validated `(uc  1 e 1 0 ]
 "113
 [v _end end `(v  1 e 1 0 ]
+"127
+[v _LEDerror LEDerror `(v  1 e 1 0 ]
 "15 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\CONFIGUR.c
 [v _Configuracion Configuracion `(v  1 e 1 0 ]
 "14 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\coordenadas.c
@@ -141,9 +143,9 @@ end_State 5
 [v _INT_ISR INT_ISR `IIH(v  1 e 1 0 ]
 "45
 [v _main main `(v  1 e 1 0 ]
-"103
+"104
 [v _PrintMyActulPosition PrintMyActulPosition `(v  1 e 1 0 ]
-"128
+"129
 [v _myPrintf myPrintf `(v  1 e 1 0 ]
 "14 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\Movimiento.c
 [v _Movement Movement `(i  1 e 2 0 ]
@@ -209,7 +211,7 @@ end_State 5
 [v _FlagDirectionY FlagDirectionY `ui  1 e 2 0 ]
 "2453 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [v _PORTB PORTB `VEuc  1 e 1 @3969 ]
-[s S588 . 1 `uc 1 RB0 1 0 :1:0 
+[s S676 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
 `uc 1 RB3 1 0 :1:3 
@@ -219,7 +221,7 @@ end_State 5
 `uc 1 RB7 1 0 :1:7 
 ]
 "2483
-[s S597 . 1 `uc 1 INT0 1 0 :1:0 
+[s S685 . 1 `uc 1 INT0 1 0 :1:0 
 `uc 1 INT1 1 0 :1:1 
 `uc 1 INT2 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
@@ -227,14 +229,14 @@ end_State 5
 `uc 1 PGC 1 0 :1:6 
 `uc 1 PGD 1 0 :1:7 
 ]
-[s S605 . 1 `uc 1 . 1 0 :3:0 
+[s S693 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 CCP2_PA2 1 0 :1:3 
 ]
-[u S608 . 1 `S588 1 . 1 0 `S597 1 . 1 0 `S605 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES608  1 e 1 @3969 ]
+[u S696 . 1 `S676 1 . 1 0 `S685 1 . 1 0 `S693 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES696  1 e 1 @3969 ]
 "2563
 [v _PORTC PORTC `VEuc  1 e 1 @3970 ]
-[s S855 . 1 `uc 1 RC0 1 0 :1:0 
+[s S914 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -244,32 +246,32 @@ end_State 5
 `uc 1 RC7 1 0 :1:7 
 ]
 "2605
-[s S864 . 1 `uc 1 T1OSO 1 0 :1:0 
+[s S923 . 1 `uc 1 T1OSO 1 0 :1:0 
 `uc 1 T1OSI 1 0 :1:1 
 `uc 1 CCP1 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 TX 1 0 :1:6 
 `uc 1 RX 1 0 :1:7 
 ]
-[s S871 . 1 `uc 1 T13CKI 1 0 :1:0 
+[s S930 . 1 `uc 1 T13CKI 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 P1A 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 CK 1 0 :1:6 
 `uc 1 DT 1 0 :1:7 
 ]
-[s S878 . 1 `uc 1 . 1 0 :1:0 
+[s S937 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 CCP2 1 0 :1:1 
 `uc 1 PA1 1 0 :1:2 
 ]
-[s S882 . 1 `uc 1 . 1 0 :1:0 
+[s S941 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 PA2 1 0 :1:1 
 ]
-[u S885 . 1 `S855 1 . 1 0 `S864 1 . 1 0 `S871 1 . 1 0 `S878 1 . 1 0 `S882 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES885  1 e 1 @3970 ]
+[u S944 . 1 `S914 1 . 1 0 `S923 1 . 1 0 `S930 1 . 1 0 `S937 1 . 1 0 `S941 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES944  1 e 1 @3970 ]
 "2705
 [v _PORTD PORTD `VEuc  1 e 1 @3971 ]
-[s S683 . 1 `uc 1 RD0 1 0 :1:0 
+[s S54 . 1 `uc 1 RD0 1 0 :1:0 
 `uc 1 RD1 1 0 :1:1 
 `uc 1 RD2 1 0 :1:2 
 `uc 1 RD3 1 0 :1:3 
@@ -279,7 +281,7 @@ end_State 5
 `uc 1 RD7 1 0 :1:7 
 ]
 "2736
-[s S692 . 1 `uc 1 SPP0 1 0 :1:0 
+[s S63 . 1 `uc 1 SPP0 1 0 :1:0 
 `uc 1 SPP1 1 0 :1:1 
 `uc 1 SPP2 1 0 :1:2 
 `uc 1 SPP3 1 0 :1:3 
@@ -288,11 +290,11 @@ end_State 5
 `uc 1 SPP6 1 0 :1:6 
 `uc 1 SPP7 1 0 :1:7 
 ]
-[s S701 . 1 `uc 1 . 1 0 :7:0 
+[s S72 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 SS2 1 0 :1:7 
 ]
-[u S704 . 1 `S683 1 . 1 0 `S692 1 . 1 0 `S701 1 . 1 0 ]
-[v _PORTDbits PORTDbits `VES704  1 e 1 @3971 ]
+[u S75 . 1 `S54 1 . 1 0 `S63 1 . 1 0 `S72 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES75  1 e 1 @3971 ]
 "3073
 [v _LATB LATB `VEuc  1 e 1 @3978 ]
 "3185
@@ -303,7 +305,7 @@ end_State 5
 [v _TRISB TRISB `VEuc  1 e 1 @3987 ]
 "3847
 [v _TRISC TRISC `VEuc  1 e 1 @3988 ]
-[s S88 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S154 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
@@ -311,18 +313,18 @@ end_State 5
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "3875
-[s S95 . 1 `uc 1 RC0 1 0 :1:0 
+[s S161 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 RC6 1 0 :1:6 
 `uc 1 RC7 1 0 :1:7 
 ]
-[u S102 . 1 `S88 1 . 1 0 `S95 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES102  1 e 1 @3988 ]
+[u S168 . 1 `S154 1 . 1 0 `S161 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES168  1 e 1 @3988 ]
 "4001
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
-[s S227 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[s S293 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 SSPIF 1 0 :1:3 
@@ -332,15 +334,15 @@ end_State 5
 `uc 1 SPPIF 1 0 :1:7 
 ]
 "4492
-[s S236 . 1 `uc 1 . 1 0 :4:0 
+[s S302 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TX1IF 1 0 :1:4 
 `uc 1 RC1IF 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 PSPIF 1 0 :1:7 
 ]
-[u S242 . 1 `S227 1 . 1 0 `S236 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES242  1 e 1 @3998 ]
-[s S173 . 1 `uc 1 RX9D 1 0 :1:0 
+[u S308 . 1 `S293 1 . 1 0 `S302 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES308  1 e 1 @3998 ]
+[s S239 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -350,25 +352,25 @@ end_State 5
 `uc 1 SPEN 1 0 :1:7 
 ]
 "4977
-[s S182 . 1 `uc 1 . 1 0 :3:0 
+[s S248 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 ADEN 1 0 :1:3 
 ]
-[s S185 . 1 `uc 1 . 1 0 :5:0 
+[s S251 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 SRENA 1 0 :1:5 
 ]
-[s S188 . 1 `uc 1 . 1 0 :6:0 
+[s S254 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC8_9 1 0 :1:6 
 ]
-[s S191 . 1 `uc 1 . 1 0 :6:0 
+[s S257 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC9 1 0 :1:6 
 ]
-[s S194 . 1 `uc 1 RCD8 1 0 :1:0 
+[s S260 . 1 `uc 1 RCD8 1 0 :1:0 
 ]
-[u S196 . 1 `S173 1 . 1 0 `S182 1 . 1 0 `S185 1 . 1 0 `S188 1 . 1 0 `S191 1 . 1 0 `S194 1 . 1 0 ]
-[v _RCSTAbits RCSTAbits `VES196  1 e 1 @4011 ]
+[u S262 . 1 `S239 1 . 1 0 `S248 1 . 1 0 `S251 1 . 1 0 `S254 1 . 1 0 `S257 1 . 1 0 `S260 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES262  1 e 1 @4011 ]
 "5076
-[v _RCSTA1bits RCSTA1bits `VES196  1 e 1 @4011 ]
-[s S121 . 1 `uc 1 TX9D 1 0 :1:0 
+[v _RCSTA1bits RCSTA1bits `VES262  1 e 1 @4011 ]
+[s S187 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -378,7 +380,7 @@ end_State 5
 `uc 1 CSRC 1 0 :1:7 
 ]
 "5185
-[s S130 . 1 `uc 1 TX9D1 1 0 :1:0 
+[s S196 . 1 `uc 1 TX9D1 1 0 :1:0 
 `uc 1 TRMT1 1 0 :1:1 
 `uc 1 BRGH1 1 0 :1:2 
 `uc 1 SENDB1 1 0 :1:3 
@@ -387,15 +389,15 @@ end_State 5
 `uc 1 TX91 1 0 :1:6 
 `uc 1 CSRC1 1 0 :1:7 
 ]
-[s S139 . 1 `uc 1 . 1 0 :6:0 
+[s S205 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TX8_9 1 0 :1:6 
 ]
-[s S142 . 1 `uc 1 TXD8 1 0 :1:0 
+[s S208 . 1 `uc 1 TXD8 1 0 :1:0 
 ]
-[u S144 . 1 `S121 1 . 1 0 `S130 1 . 1 0 `S139 1 . 1 0 `S142 1 . 1 0 ]
-[v _TXSTAbits TXSTAbits `VES144  1 e 1 @4012 ]
+[u S210 . 1 `S187 1 . 1 0 `S196 1 . 1 0 `S205 1 . 1 0 `S208 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES210  1 e 1 @4012 ]
 "5307
-[v _TXSTA1bits TXSTA1bits `VES144  1 e 1 @4012 ]
+[v _TXSTA1bits TXSTA1bits `VES210  1 e 1 @4012 ]
 "5402
 [v _TXREG TXREG `VEuc  1 e 1 @4013 ]
 "5414
@@ -404,24 +406,24 @@ end_State 5
 [v _SPBRG SPBRG `VEuc  1 e 1 @4015 ]
 "5587
 [v _CMCON CMCON `VEuc  1 e 1 @4020 ]
-[s S1289 . 1 `uc 1 CVR 1 0 :4:0 
+[s S1348 . 1 `uc 1 CVR 1 0 :4:0 
 `uc 1 CVRSS 1 0 :1:4 
 `uc 1 CVRR 1 0 :1:5 
 `uc 1 CVROE 1 0 :1:6 
 `uc 1 CVREN 1 0 :1:7 
 ]
 "5702
-[s S1295 . 1 `uc 1 CVR0 1 0 :1:0 
+[s S1354 . 1 `uc 1 CVR0 1 0 :1:0 
 `uc 1 CVR1 1 0 :1:1 
 `uc 1 CVR2 1 0 :1:2 
 `uc 1 CVR3 1 0 :1:3 
 `uc 1 CVREF 1 0 :1:4 
 ]
-[s S1301 . 1 `uc 1 . 1 0 :6:0 
+[s S1360 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 CVROEN 1 0 :1:6 
 ]
-[u S1304 . 1 `S1289 1 . 1 0 `S1295 1 . 1 0 `S1301 1 . 1 0 ]
-[v _CVRCONbits CVRCONbits `VES1304  1 e 1 @4021 ]
+[u S1363 . 1 `S1348 1 . 1 0 `S1354 1 . 1 0 `S1360 1 . 1 0 ]
+[v _CVRCONbits CVRCONbits `VES1363  1 e 1 @4021 ]
 "6242
 [v _CCP2CON CCP2CON `VEuc  1 e 1 @4026 ]
 "6313
@@ -438,22 +440,22 @@ end_State 5
 [v _PR2 PR2 `VEuc  1 e 1 @4043 ]
 "7408
 [v _TMR2 TMR2 `VEuc  1 e 1 @4044 ]
-[s S1094 . 1 `uc 1 NOT_BOR 1 0 :1:0 
+[s S1153 . 1 `uc 1 NOT_BOR 1 0 :1:0 
 ]
 "7588
-[s S1096 . 1 `uc 1 . 1 0 :1:0 
+[s S1155 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 NOT_POR 1 0 :1:1 
 ]
-[s S1099 . 1 `uc 1 . 1 0 :2:0 
+[s S1158 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_PD 1 0 :1:2 
 ]
-[s S1102 . 1 `uc 1 . 1 0 :3:0 
+[s S1161 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 NOT_TO 1 0 :1:3 
 ]
-[s S1105 . 1 `uc 1 . 1 0 :4:0 
+[s S1164 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 NOT_RI 1 0 :1:4 
 ]
-[s S1108 . 1 `uc 1 nBOR 1 0 :1:0 
+[s S1167 . 1 `uc 1 nBOR 1 0 :1:0 
 `uc 1 nPOR 1 0 :1:1 
 `uc 1 nPD 1 0 :1:2 
 `uc 1 nTO 1 0 :1:3 
@@ -462,10 +464,10 @@ end_State 5
 `uc 1 SBOREN 1 0 :1:6 
 `uc 1 IPEN 1 0 :1:7 
 ]
-[s S1117 . 1 `uc 1 . 1 0 :7:0 
+[s S1176 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 NOT_IPEN 1 0 :1:7 
 ]
-[s S1120 . 1 `uc 1 BOR 1 0 :1:0 
+[s S1179 . 1 `uc 1 BOR 1 0 :1:0 
 `uc 1 POR 1 0 :1:1 
 `uc 1 PD 1 0 :1:2 
 `uc 1 TO 1 0 :1:3 
@@ -473,11 +475,11 @@ end_State 5
 `uc 1 . 1 0 :2:5 
 `uc 1 nIPEN 1 0 :1:7 
 ]
-[u S1128 . 1 `S1094 1 . 1 0 `S1096 1 . 1 0 `S1099 1 . 1 0 `S1102 1 . 1 0 `S1105 1 . 1 0 `S1108 1 . 1 0 `S1117 1 . 1 0 `S1120 1 . 1 0 ]
-[v _RCONbits RCONbits `VES1128  1 e 1 @4048 ]
+[u S1187 . 1 `S1153 1 . 1 0 `S1155 1 . 1 0 `S1158 1 . 1 0 `S1161 1 . 1 0 `S1164 1 . 1 0 `S1167 1 . 1 0 `S1176 1 . 1 0 `S1179 1 . 1 0 ]
+[v _RCONbits RCONbits `VES1187  1 e 1 @4048 ]
 "7986
 [v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
-[s S635 . 1 `uc 1 INT1IF 1 0 :1:0 
+[s S723 . 1 `uc 1 INT1IF 1 0 :1:0 
 `uc 1 INT2IF 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 INT1IE 1 0 :1:3 
@@ -487,7 +489,7 @@ end_State 5
 `uc 1 INT2IP 1 0 :1:7 
 ]
 "8440
-[s S644 . 1 `uc 1 INT1F 1 0 :1:0 
+[s S732 . 1 `uc 1 INT1F 1 0 :1:0 
 `uc 1 INT2F 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 INT1E 1 0 :1:3 
@@ -496,13 +498,13 @@ end_State 5
 `uc 1 INT1P 1 0 :1:6 
 `uc 1 INT2P 1 0 :1:7 
 ]
-[u S653 . 1 `S635 1 . 1 0 `S644 1 . 1 0 ]
-[v _INTCON3bits INTCON3bits `VES653  1 e 1 @4080 ]
-[s S1172 . 1 `uc 1 . 1 0 :7:0 
+[u S741 . 1 `S723 1 . 1 0 `S732 1 . 1 0 ]
+[v _INTCON3bits INTCON3bits `VES741  1 e 1 @4080 ]
+[s S1231 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 NOT_RBPU 1 0 :1:7 
 ]
 "8532
-[s S1175 . 1 `uc 1 RBIP 1 0 :1:0 
+[s S1234 . 1 `uc 1 RBIP 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 TMR0IP 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -511,14 +513,14 @@ end_State 5
 `uc 1 INTEDG0 1 0 :1:6 
 `uc 1 nRBPU 1 0 :1:7 
 ]
-[s S1184 . 1 `uc 1 . 1 0 :2:0 
+[s S1243 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T0IP 1 0 :1:2 
 `uc 1 . 1 0 :4:3 
 `uc 1 RBPU 1 0 :1:7 
 ]
-[u S1189 . 1 `S1172 1 . 1 0 `S1175 1 . 1 0 `S1184 1 . 1 0 ]
-[v _INTCON2bits INTCON2bits `VES1189  1 e 1 @4081 ]
-[s S534 . 1 `uc 1 RBIF 1 0 :1:0 
+[u S1248 . 1 `S1231 1 . 1 0 `S1234 1 . 1 0 `S1243 1 . 1 0 ]
+[v _INTCON2bits INTCON2bits `VES1248  1 e 1 @4081 ]
+[s S622 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -528,7 +530,7 @@ end_State 5
 `uc 1 GIE_GIEH 1 0 :1:7 
 ]
 "8614
-[s S543 . 1 `uc 1 . 1 0 :1:0 
+[s S631 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 INT0F 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -537,18 +539,18 @@ end_State 5
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
-[s S552 . 1 `uc 1 . 1 0 :6:0 
+[s S640 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 GIEL 1 0 :1:6 
 `uc 1 GIEH 1 0 :1:7 
 ]
-[u S556 . 1 `S534 1 . 1 0 `S543 1 . 1 0 `S552 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES556  1 e 1 @4082 ]
+[u S644 . 1 `S622 1 . 1 0 `S631 1 . 1 0 `S640 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES644  1 e 1 @4082 ]
 "10848
 [v _TMR2ON TMR2ON `VEb  1 e 0 @32338 ]
 "45 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"101
+"102
 } 0
 "15 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\verification.c
 [v _verification verification `(v  1 e 1 0 ]
@@ -613,18 +615,23 @@ end_State 5
 {
 "111
 } 0
-"103 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+"127
+[v _LEDerror LEDerror `(v  1 e 1 0 ]
+{
+"134
+} 0
+"104 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
 [v _PrintMyActulPosition PrintMyActulPosition `(v  1 e 1 0 ]
 {
-"122
-[v PrintMyActulPosition@i_811 i `i  1 a 2 25 ]
-"117
+"123
+[v PrintMyActulPosition@i_870 i `i  1 a 2 25 ]
+"118
 [v PrintMyActulPosition@i i `i  1 a 2 23 ]
-"107
+"108
 [v PrintMyActulPosition@b b `[3]uc  1 a 3 18 ]
-"106
+"107
 [v PrintMyActulPosition@a a `[3]uc  1 a 3 15 ]
-"126
+"127
 } 0
 "7 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwmod.c
 [v ___lwmod __lwmod `(ui  1 e 2 0 ]
@@ -653,14 +660,14 @@ end_State 5
 {
 "36
 } 0
-"128 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
+"129 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\main.c
 [v _myPrintf myPrintf `(v  1 e 1 0 ]
 {
-"130
+"131
 [v myPrintf@i i `uc  1 a 1 8 ]
-"128
+"129
 [v myPrintf@PointString PointString `*.25uc  1 p 2 4 ]
-"136
+"137
 } 0
 "34 C:\Users\felix\Documents\GitHub Repositorios\Curiosity_SPARC\SPARC\UART_Communication\Coordenadas\Comandos.X\UART.c
 [v _UARTWrite UARTWrite `(v  1 e 1 0 ]

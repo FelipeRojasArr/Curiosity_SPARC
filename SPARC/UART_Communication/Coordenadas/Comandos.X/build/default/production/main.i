@@ -5980,6 +5980,7 @@ void main(void)
     Configuracion();
 
 
+    PORTDbits.RD4 = 1;
     CoordAntX=1;
     CoordAntY=1;
 
@@ -6024,7 +6025,7 @@ void main(void)
 
     while(1)
     {
-
+        PORTDbits.RD5 = 1;
         ControlFlagVerification = 1;
         verification();
         PrintMyActulPosition();

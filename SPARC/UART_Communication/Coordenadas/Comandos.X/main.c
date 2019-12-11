@@ -47,6 +47,7 @@ void main(void)
     Configuracion();
     //InterruptionsConfiguration();
     
+    TURN_ON_BLUE_LED
     CoordAntX=1;
     CoordAntY=1;
     
@@ -91,7 +92,7 @@ void main(void)
          
     while(1)
     { 
-        //TURN_ON_GREEN_LED
+        TURN_ON_GREEN_LED
         ControlFlagVerification = ON;
         verification();
         PrintMyActulPosition();

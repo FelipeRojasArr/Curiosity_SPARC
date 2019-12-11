@@ -5970,7 +5970,7 @@ uint8_t cmd()
 
 
 
-
+        LEDerror();
         return wait_cmd_State;
     }
 }
@@ -5990,7 +5990,7 @@ uint8_t Par_Validated()
 
 
 
-
+        LEDerror();
         return wait_cmd_State;
     }
 }
@@ -6018,7 +6018,7 @@ uint8_t Ins_Validated()
 
 
 
-
+        LEDerror();
         return wait_cmd_State;
     }
 }
@@ -6038,7 +6038,7 @@ uint8_t Coord_Validated()
 
 
 
-
+        LEDerror();
         return wait_cmd_State;
     }
 }
@@ -6055,4 +6055,13 @@ void end()
 
     ControlFlagVerification = 0;
     return;
+}
+
+void LEDerror(void)
+{
+    PORTDbits.RD6 = 1;
+    PORTDbits.RD5 = 0;
+    _delay((unsigned long)((600)*(8000000L/4000.0)));
+    PORTDbits.RD6 = 0;
+    PORTDbits.RD5 = 1;
 }

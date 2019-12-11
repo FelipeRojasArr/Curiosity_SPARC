@@ -12,6 +12,32 @@ Version 4.0 HI-TECH Software Intermediate Code
 "15 ./cases.h
 [; ;./cases.h: 15: int coord(char* P1, char* L, unsigned short* x, unsigned short* y, char* P2);
 [v _coord `(i ~T0 @X0 0 ef5`*uc`*uc`*us`*us`*uc ]
+"12
+[; ;./cases.h: 12: void LEDerror(void);
+[v _LEDerror `(v ~T0 @X0 0 ef ]
+"2711 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 2711:     struct {
+[s S112 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S112 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
+"2721
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 2721:     struct {
+[s S113 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S113 . SPP0 SPP1 SPP2 SPP3 SPP4 SPP5 SPP6 SPP7 ]
+"2731
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 2731:     struct {
+[s S114 :7 `uc 1 :1 `uc 1 ]
+[n S114 . . SS2 ]
+"2710
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 2710: typedef union {
+[u S111 `S112 1 `S113 1 `S114 1 ]
+[n S111 . . . . ]
+"2736
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 2736: extern volatile PORTDbits_t PORTDbits __attribute__((address(0xF83)));
+[v _PORTDbits `VS111 ~T0 @X0 0 e@3971 ]
+[v F3152 `(v ~T0 @X0 1 tf1`ul ]
+"187 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18.h
+[v __delay `JF3152 ~T0 @X0 0 e ]
+[p i __delay ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -708,6 +734,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "35
 [; ;cases.c: 35:         UARTWrite(0x0A);
 [e ( _UARTWrite (1 -> -> 10 `i `uc ]
+"40
+[; ;cases.c: 40:         LEDerror();
+[e ( _LEDerror ..  ]
 "41
 [; ;cases.c: 41:         return wait_cmd_State;
 [e ) -> . `E3381 1 `uc ]
@@ -754,6 +783,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "55
 [; ;cases.c: 55:         UARTWrite(0x0A);
 [e ( _UARTWrite (1 -> -> 10 `i `uc ]
+"60
+[; ;cases.c: 60:         LEDerror();
+[e ( _LEDerror ..  ]
 "61
 [; ;cases.c: 61:         return wait_cmd_State;
 [e ) -> . `E3381 1 `uc ]
@@ -821,6 +853,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "83
 [; ;cases.c: 83:         UARTWrite(0x0A);
 [e ( _UARTWrite (1 -> -> 10 `i `uc ]
+"88
+[; ;cases.c: 88:         LEDerror();
+[e ( _LEDerror ..  ]
 "89
 [; ;cases.c: 89:         return wait_cmd_State;
 [e ) -> . `E3381 1 `uc ]
@@ -868,6 +903,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "103
 [; ;cases.c: 103:         UARTWrite(0x0A);
 [e ( _UARTWrite (1 -> -> 10 `i `uc ]
+"108
+[; ;cases.c: 108:         LEDerror();
+[e ( _LEDerror ..  ]
 "109
 [; ;cases.c: 109:         return wait_cmd_State;
 [e ) -> . `E3381 1 `uc ]
@@ -906,6 +944,33 @@ Version 4.0 HI-TECH Software Intermediate Code
 "125
 [; ;cases.c: 125: }
 [e :UE 383 ]
+}
+"127
+[; ;cases.c: 127: void LEDerror(void)
+[v _LEDerror `(v ~T0 @X0 1 ef ]
+"128
+[; ;cases.c: 128: {
+{
+[e :U _LEDerror ]
+[f ]
+"129
+[; ;cases.c: 129:     PORTDbits.RD6 = 1;
+[e = . . _PORTDbits 0 6 -> -> 1 `i `uc ]
+"130
+[; ;cases.c: 130:     PORTDbits.RD5 = 0;
+[e = . . _PORTDbits 0 5 -> -> 0 `i `uc ]
+"131
+[; ;cases.c: 131:     _delay((unsigned long)((600)*(8000000L/4000.0)));
+[e ( __delay (1 -> * -> -> 600 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"132
+[; ;cases.c: 132:     PORTDbits.RD6 = 0;
+[e = . . _PORTDbits 0 6 -> -> 0 `i `uc ]
+"133
+[; ;cases.c: 133:     PORTDbits.RD5 = 1;
+[e = . . _PORTDbits 0 5 -> -> 1 `i `uc ]
+"134
+[; ;cases.c: 134: }
+[e :UE 384 ]
 }
 [a 4C 70 114 97 109 101 115 32 97 114 101 32 110 111 116 32 105 110 115 101 114 116 101 100 32 99 111 114 114 101 99 116 108 121 0 ]
 [a 6C 83 117 114 112 97 115 115 101 115 32 99 111 111 114 100 105 110 97 116 101 115 32 115 105 122 101 0 ]

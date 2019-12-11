@@ -5953,7 +5953,7 @@ int coord(char* P1, char*L, uint16_t* x , uint16_t* y , char*P2){
             if(i == (EndCommandCharacter))
             {
                 RCSTAbits.CREN = 0;
-
+                PORTDbits.RD5 = 0;
             }
         }
 
